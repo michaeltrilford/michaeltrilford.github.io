@@ -1,0 +1,21 @@
+/* Install autoprefixer */
+
+[class*="col-"] > * > img
+  width: 100%
+  margin-bottom: 1.5em
+
+@media only screen and (min-width: 31.25em)
+  [class*="col-"]
+    > *
+      float: left
+      margin: 0 1.5em
+    transform: translate(-1.5em, 0)
+    display: flex
+    .csscalc &
+      width: calc( 100% + 3em )
+  .col-2 > *
+    width: calc( (100% / 2) - 3em )
+  .col-3 > *
+    width: calc( (100% / 3) - 3em )
+  .col-4 > *
+    width: calc( (100% / 4) - 3em )
