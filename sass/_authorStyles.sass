@@ -9,42 +9,30 @@ main.wrapper--fluid
   padding: 3em 0
 
 
-.comingSoon
+.headingGroup
   @include cf
   @include floatLeft
   width: auto
-  position: relative
   z-index: 100000000000
-  height: calc((96 / 16) * 1em)
-  &:after
-    content: ""
-    width: calc((70 / 16) * 1em)
-    height: 2px
-    background: black
-    transform: rotate(-45deg)
-    position: absolute
-    right: calc((58 / 16) * 1em)
-    bottom: calc((48 / 16) * 1em)
-  &:before
-    content: ""
-    width: calc((70 / 16) * 1em)
-    height: calc((4 / 16) * 1em)
-    background: white
-    transform: rotate(-45deg)
-    position: absolute
-    right: calc(((68 / 16) * 1em) - ((10 / 16) * 1em))
-    bottom: calc((45 / 16) * 1em)
+  position: relative
+  font-family: 'Chivo', sans-serif
   h1, p
-    @include floatLeft
     @include noMargin
-    width: auto
-  p
-    margin-top: calc((48 / 16) * 1em)
-    text-indent: calc((-10 / 16) * 1em)
+  .comingSoon
+    @include noMargin
     position: relative
-    font-weight: 400
-    font-style: italic
-    font-family: 'Chivo', sans-serif
+    p
+      font-weight: 400
+      color: #888
+    &:after
+      content: ""
+      height: 2px
+      width: calc(100% - ((175 / 16) * 1em))
+      position: absolute
+      top: calc(50% - 1px)
+      right: 0
+      background: #888
+    
   
 
 

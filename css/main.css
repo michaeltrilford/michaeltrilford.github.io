@@ -1100,47 +1100,34 @@ main.wrapper--fluid {
   main.wrapper--fluid:after {
     clear: both; }
 
-.comingSoon {
+.headingGroup {
   *zoom: 1;
   float: left;
   width: auto;
-  position: relative;
   z-index: 100000000000;
-  height: calc((96 / 16) * 1em); }
-  .comingSoon:before, .comingSoon:after {
+  position: relative;
+  font-family: "Chivo", sans-serif; }
+  .headingGroup:before, .headingGroup:after {
     content: " ";
     display: block; }
-  .comingSoon:after {
+  .headingGroup:after {
     clear: both; }
-  .comingSoon:after {
-    content: "";
-    width: calc((70 / 16) * 1em);
-    height: 2px;
-    background: black;
-    transform: rotate(-45deg);
-    position: absolute;
-    right: calc((58 / 16) * 1em);
-    bottom: calc((48 / 16) * 1em); }
-  .comingSoon:before {
-    content: "";
-    width: calc((70 / 16) * 1em);
-    height: calc((4 / 16) * 1em);
-    background: white;
-    transform: rotate(-45deg);
-    position: absolute;
-    right: calc(((68 / 16) * 1em) - ((10 / 16) * 1em));
-    bottom: calc((45 / 16) * 1em); }
-  .comingSoon h1, .comingSoon p {
-    float: left;
+  .headingGroup h1, .headingGroup p {
+    margin: 0; }
+  .headingGroup .comingSoon {
     margin: 0;
-    width: auto; }
-  .comingSoon p {
-    margin-top: calc((48 / 16) * 1em);
-    text-indent: calc((-10 / 16) * 1em);
-    position: relative;
-    font-weight: 400;
-    font-style: italic;
-    font-family: "Chivo", sans-serif; }
+    position: relative; }
+    .headingGroup .comingSoon p {
+      font-weight: 400;
+      color: #888; }
+    .headingGroup .comingSoon:after {
+      content: "";
+      height: 2px;
+      width: calc(100% - ((175 / 16) * 1em));
+      position: absolute;
+      top: calc(50% - 1px);
+      right: 0;
+      background: #888; }
 
 .lg-type {
   font-size: 40em;
