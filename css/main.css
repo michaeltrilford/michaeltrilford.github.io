@@ -1119,7 +1119,8 @@ main.wrapper--fluid {
     position: relative; }
     .headingGroup .comingSoon p {
       font-weight: 400;
-      color: #888; }
+      color: #888;
+      text-shadow: 0 0 5px white; }
     .headingGroup .comingSoon:after {
       content: "";
       height: 2px;
