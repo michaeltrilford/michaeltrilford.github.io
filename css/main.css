@@ -1090,19 +1090,24 @@ body,
 main {
   height: 100%; }
 
-main.wrapper--fluid {
+body {
+  font-family: "Chivo", sans-serif;
+  background: #15967D;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.08); }
+
+.wrapper--fluid {
   *zoom: 1;
   width: calc( 100% - 6em );
-  padding: 3em 0; }
-  main.wrapper--fluid:before, main.wrapper--fluid:after {
+  padding: 3em 0;
+  height: 100vh; }
+  .wrapper--fluid:before, .wrapper--fluid:after {
     content: " ";
     display: block; }
-  main.wrapper--fluid:after {
+  .wrapper--fluid:after {
     clear: both; }
 
 .headingGroup {
   *zoom: 1;
-  float: left;
   width: auto;
   z-index: 100000000000;
   position: relative;
@@ -1112,23 +1117,13 @@ main.wrapper--fluid {
     display: block; }
   .headingGroup:after {
     clear: both; }
-  .headingGroup h1, .headingGroup p {
+  .headingGroup h1 {
     margin: 0; }
-  .headingGroup .comingSoon {
-    margin: 0;
-    position: relative; }
-    .headingGroup .comingSoon p {
-      font-weight: 400;
-      color: #888;
-      text-shadow: 0 0 5px white; }
-    .headingGroup .comingSoon:after {
-      content: "";
-      height: 2px;
-      width: calc(100% - ((175 / 16) * 1em));
-      position: absolute;
-      top: calc(50% - 1px);
-      right: 0;
-      background: #888; }
+  .headingGroup > *:last-child {
+    color: white; }
+
+hr:before {
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.22), 0 1px 0px 0 rgba(255, 255, 255, 0.19); }
 
 .lg-type {
   font-size: 40em;
@@ -1139,6 +1134,32 @@ main.wrapper--fluid {
   margin-bottom: 0;
   line-height: 1;
   font-family: "Chivo", sans-serif; }
+
+article {
+  max-width: 26em; }
+  article p {
+    color: black; }
+
+.actions {
+  *zoom: 1; }
+  .actions:before, .actions:after {
+    content: " ";
+    display: block; }
+  .actions:after {
+    clear: both; }
+  .actions .left {
+    float: left;
+    width: auto; }
+  .actions .social-wrap {
+    float: right;
+    width: auto; }
+    .actions .social-wrap .circleButton {
+      width: 3em;
+      padding: 0px; }
+      .actions .social-wrap .circleButton svg {
+        width: 100%;
+        height: 100%;
+        fill: white; }
 
 /* No Margin top or bottom */
 .nmb {
