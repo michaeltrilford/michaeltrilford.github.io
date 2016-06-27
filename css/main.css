@@ -1133,7 +1133,8 @@ hr:before {
   width: auto;
   margin-bottom: 0;
   line-height: 1;
-  font-family: "Chivo", sans-serif; }
+  font-family: "Chivo", sans-serif;
+  z-index: -1; }
 
 article {
   max-width: 26em; }
@@ -1147,12 +1148,41 @@ article {
     display: block; }
   .actions:after {
     clear: both; }
-  .actions .left {
-    float: left;
-    width: auto; }
+  .actions .nav-items {
+    *zoom: 1;
+    margin-bottom: 0.375em; }
+    .actions .nav-items:before, .actions .nav-items:after {
+      content: " ";
+      display: block; }
+    .actions .nav-items:after {
+      clear: both; }
+    @media (min-width: 53.125em) {
+      .actions .nav-items {
+        float: left;
+        width: auto;
+        margin: 0; } }
+    .actions .nav-items a {
+      float: left;
+      margin-left: 0.375em; }
+      .actions .nav-items a:first-child {
+        margin: 0; }
   .actions .social-wrap {
-    float: right;
-    width: auto; }
+    *zoom: 1; }
+    .actions .social-wrap:before, .actions .social-wrap:after {
+      content: " ";
+      display: block; }
+    .actions .social-wrap:after {
+      clear: both; }
+    @media (min-width: 53.125em) {
+      .actions .social-wrap {
+        float: right;
+        width: auto;
+        margin: 0; } }
+    .actions .social-wrap a {
+      float: left;
+      margin-left: 0.375em; }
+      .actions .social-wrap a:first-child {
+        margin: 0; }
     .actions .social-wrap .circleButton {
       width: 3em;
       padding: 0px; }

@@ -40,6 +40,7 @@ hr:before
   margin-bottom: 0
   line-height: 1
   font-family: 'Chivo', sans-serif
+  z-index: -1
 
 
 article
@@ -50,12 +51,31 @@ article
 
 .actions
   @include cf
-  .left
-    @include floatLeft
-    width: auto
+  @media (min-width: 53.125em)
+
+  .nav-items
+    @include cf
+    margin-bottom: 0.375em
+    @media (min-width: 53.125em)
+      @include floatLeft
+      width: auto
+      @include noMargin
+    a
+      @include floatLeft
+      margin-left: 0.375em
+      &:first-child
+        margin: 0
   .social-wrap
-    @include floatRight
-    width: auto
+    @include cf
+    @media (min-width: 53.125em)
+      @include floatRight
+      width: auto
+      @include noMargin
+    a
+      @include floatLeft
+      margin-left: 0.375em
+      &:first-child
+        margin: 0
     .circleButton
       width: 3em
       padding: 0px
