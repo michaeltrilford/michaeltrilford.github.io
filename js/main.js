@@ -1,86 +1,169 @@
-// KEY
+// Remember to delete comments / minify this document. Remove what you don't want.
 
-// m-i = More info
-// a-c = Author Content
-// l-i = Less info
-// sH = scrollHeader
-// t = title
-// tg = Toggle
-// fO = FadeOut
-// fI = FadeIn
-// a = Author
 
-// ID Selector
-var $ = function( id ) { return document.getElementById( id ); };
+/* B. TRANSFORMICONS SIMPLIFIED
+------------------------------------------------------------------- */
+$("a.tIcons").click(function(){
+  $(this).toggleClass('toggle');
+  return false;
+});
 
-  // Create and append button
-  var a = document.createElement('a');
-  // Add <a> and add toogle id
-  $('author-info').appendChild(a).id = "tg";
 
-  // Create content for toggle
-  var span1 = document.createElement('span');
-  var span2 = document.createElement('span');
-  	// Add Id
-  	$('tg').appendChild(span1).id = "m-i";
-  	$('tg').appendChild(span2).id = "l-i";
-  	// Add span content
-  	$('m-i').innerHTML = 'More info';
-  	$('l-i').innerHTML = 'Less info';
-  	$('l-i').className = "h";
-
-  // Get original height of element to hide
-  var objectHeight = document.getElementById('a-c').clientHeight;
-
-  // Hide Author Content
-  // Add fadeOut
-  $('a-c').className = "fO";
-  $('a-c').style.maxHeight=0;
-  // Reveal Author Content 
-  $('m-i').onclick = function() {
-    $('a-c').className = "fO fI";
-    $('a-c').style.maxHeight= objectHeight+"px";
-    $('m-i').className = "h";
-    $('l-i').className = "s";
+/* C. SCROLL NAV
+------------------------------------------------------------------- */
+$(window).scroll(function() {
+  if( $(this).scrollTop() > 81 ) {
+    $(".navScroll").addClass("scrollEnabled");
   }
-  // Hide Author Content 
-  $('l-i').onclick = function() {
-    $('a-c').className = "fO";
-    $('a-c').style.maxHeight=0;
-    $('m-i').className = "s";
-    $('l-i').className = "h";
+  else {
+    $(".navScroll").removeClass("scrollEnabled");
   }
-
-  // Create Scroll Header
-  var sH = document.getElementsByClassName('a');
-  sH.id = "sH";
-  var title = document.createElement('strong');
-  var rule = document.createElement('hr');
-  $('sH').appendChild(title).id = "t";
-  $('t').innerHTML = 'Tips for Your First 10K';
-  $('t').className = "nmb";
+});
 
 
-  // On Scroll Header
-  function add_class_on_scroll() {
-  		$('sH').className = "cf nmb a scrolled";
+/* D. No SVG support
+------------------------------------------------------------------- */
+$(".no-svg svg").remove();
+// Example Code to add alternative image
+$(".no-svg .logo-wrap a").append("<img src='http://placehold.it/150x50'>");
+
+
+/*---------------------------------------------------
+  E. INJECT UI FOR ALT VIEWPORTS - http://codepen.io/trilm/pen/xGLVGM
+---------------------------------------------------*/
+function injectQuery () {
+  
+  
+  /*---------------------------------------------------
+  #1 - ITEMS FOR INJECTING
+  ---------------------------------------------------*/
+
+  
+      // A: ADD SKELETON MARKUP
+  
+            // Empty Base Elements
+            function baseInject () {
+              // $("main").append("<div class='inject'></div>");
+            }    
+            // Add Empty Base Elements
+            baseInject();
+  
+  
+      // B: INSERT BASIC ELEMENTS ( SMALL FEATURES )       
+
+      // Basic elements need the class="refresh"
+
+            // Basic Smartphone
+            function basicSmartphone () {
+     
+            }
+            // Basic Tablet
+            function basicTablet () {
+              
+            }
+            // Basic Desktop
+            function basicDesktop () {
+              $('#element').append("<h1 class='refresh'>Hello</h1>");
+
+            }
+     
+      // C: INSERT ADVANCED ELEMENTS ( LARGER FEATURES - AJAX )
+          
+            // AJAX ITEMS
+            function advancedDesktop () {
+              $('#ajax').load('path.html');
+            } 
+  
+  /*---------------------------------------------------
+  #2 - FIND BREAKPOINTS
+  // Code from: https://www.lullabot.com/blog/article/importing-css-breakpoints-javascript
+  ---------------------------------------------------*/
+  var breakpoint = {};
+  breakpoint.refreshValue = function () {
+    this.value = window.getComputedStyle(
+      document.querySelector('body'), ':before'
+    ).getPropertyValue('content').replace(/['"]+/g, '')
+  };
+  
+  /*---------------------------------------------------
+  #3 - ON RESIZE: ADD BASIC ELEMENTS
+  ---------------------------------------------------*/
+  $(window).resize(function(){
+    
+    var elementRefresh = function () { $(".refresh").remove(); }
+    // Discover Breakpoint
+    breakpoint.refreshValue();
+    
+    // Needed for appended items
+    elementRefresh();
+    
+    // Example of how to use - Run Certain functions by adding in a class to run the function.
+    /*    if ((breakpoint.value == 'smartphone') || (breakpoint.value == 'tablet')) {
+          basicSmartphone();
+          $("header").addClass('scrollHeader');
+        } else {
+          $(".scrollHeader").removeClass('scrollHeader');
+        }*/
+
+    // Smartphone
+    if (breakpoint.value == 'smartphone') {
+      basicSmartphone();
+    } else {}
+    
+    // Tablet
+    if (breakpoint.value == 'tablet') {
+      basicTablet();
+    } else {}
+
+    // Desktop
+    if (breakpoint.value == 'desktop') {
+      basicDesktop();
+    } else {} 
+    
+  }).resize();
+
+
+  /*---------------------------------------------------
+  #4 - ON LOAD: ADD AJAX ITEMS
+  ---------------------------------------------------*/  
+  function injectLoad () {
+    
+    // Desktop
+    if (breakpoint.value == 'desktop') {
+      advancedDesktop();
+    } else {}
+    
   }
-  function remove_class_on_scroll() {
-  		$('sH').className = "cf nmb a";
-  }
-  // Get original height of element to hide
-  var hHeight = document.getElementById('header').clientHeight;
-  window.addEventListener('scroll', function(){ 
-      scrollpos = window.scrollY;
-      if(scrollpos > hHeight){
-          add_class_on_scroll();
-      }
-      else {
-          remove_class_on_scroll();
-      }
-      console.log(scrollpos);
-  });
+  // INITIALISE: ON LOAD
+  injectLoad(); 
+  
+}
+
+// 7. RUN FUNCTION
+injectQuery();
 
 
 
+
+// E. Baseline Grid
+$('.baselineGridSetup').append('<div class="baselineGrid"></div>');
+var baselineGrid = $(".baselineGrid");
+var count = 24;
+for (var i=0; i<count; i++) {
+   baselineGrid.append("<div>");
+}
+
+
+
+
+//
+$('.skills-wrapper').addClass('animated');
+
+$("#my-skills").click(function(){
+  $('.skills-wrapper').addClass('fadeIn');
+});
+
+$("aside a").click(function(){
+  $('.skills-wrapper').addClass('fadeOut').removeClass('fadeIn');
+});
 
