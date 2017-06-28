@@ -1,6 +1,5 @@
 <!doctype html>
-<!-- <html class="no-js baselineGridSetup" lang=""> -->
-<html class="no-js" lang="">
+<html class="no-js baselineGridSetup" lang="">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,6 +11,9 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="css/main.css">
         <script src="js/modernizr.js"></script>
+        <link rel="stylesheet" href="css/monokai-sublime.css">
+        <script src="js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -19,46 +21,68 @@
         <![endif]-->
         <nav>
           <div class="wrapper">
-            <a href="headings.html">Headings</a>
-            <a href="headingGroup.html">Heading Group</a>
-            <a href="paragraphLink.html">Paragraph &amp; Link</a>
-            <a href="listStyles.html" class="active">List styles</a>
-            <a href="descriptionList.html">Description List</a>
-            <a href="table.html">Table</a>
+            <a href="index.html">🐮</a>
+            <a href="typography.html">Typography</a>
+            <a href="lists.html" class="active">Lists</a>
             <a href="mark.html">Mark</a>
-            <a href="figure.html">Figure</a>
+            <a href="images.html">Images</a>
             <a href="detailsSummary.html">Details &amp; Summary</a>
             <a href="transformicons.html">Transformicons</a>
-            <a href="autoColumn.html">Auto Column</a>
-            <a href="columns.html">Columns</a>
             <a href="formalize.html">Formalize</a>
+            <a href="columns.html">Columns</a>
+            <a href="table.html">Table</a>
           </div>
         </nav>
 
         <main class="wrapper--small">
           
           <section>
-            <h1>List styles</h1>
+            <h1>Lists</h1>
             <hr>
-            <h5>Ordered List</h5>
+            <h3>Ordered List</h3>
+            <hr>
             <ol>
               <li>Coffee</li>
               <li>Tea</li>
               <li>Milk</li>
             </ol>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;ol&gt;
+    &lt;li&gt;Coffee&lt;/li&gt;
+    &lt;li&gt;Tea&lt;/li&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+  &lt;/ol&gt;
+              </code>
+            </pre>
           </section>
+
           <hr>
+
           <section>
-            <h5>Unordered List</h5>
+            <h3>Unordered List</h3>
+            <hr>
             <ul>
               <li>Coffee</li>
               <li>Tea</li>
               <li>Milk</li>
             </ul>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;ul&gt;
+    &lt;li&gt;Coffee&lt;/li&gt;
+    &lt;li&gt;Tea&lt;/li&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+  &lt;/ul&gt;
+              </code>
+            </pre>
           </section>
+
           <hr>
+
           <section>
-            <h5>Nested Unordered List</h5>
+            <h3>Nested Unordered List</h3>
+            <hr>
             <ul>
               <li>Coffee</li>
               <li>Tea
@@ -69,19 +93,46 @@
               </li>
               <li>Milk</li>
             </ul>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;ul&gt;
+    &lt;li&gt;Tea
+      &lt;ul&gt;
+        &lt;li&gt;Black tea&lt;/li&gt;
+        &lt;li&gt;Green tea&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+              </code>
+            </pre>
           </section>
+
           <hr>
+
           <section>
-            <h5>Fancy List</h5>
+            <h3>Fancy List</h3>
+            <hr>
             <ul class="fancyList">
               <li>Coffee</li>
               <li>Tea</li>
               <li>Milk</li>
             </ul>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;ul class="fancyList"&gt;
+    &lt;li&gt;Coffee&lt;/li&gt;
+    &lt;li&gt;Tea&lt;/li&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+  &lt;/ul&gt;
+              </code>
+            </pre>
           </section>
+
           <hr>
+
           <section>
-            <h5>Nested Fancy List</h5>
+            <h3>Nested Fancy List</h3>
+            <hr>
             <ul class="fancyList nested">
               <li>Coffee</li>
               <li>Tea
@@ -92,7 +143,42 @@
               </li>
               <li>Milk</li>
             </ul>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;ul class="fancyList"&gt;
+    &lt;li&gt;Tea
+      &lt;ul&gt;
+        &lt;li&gt;Black tea&lt;/li&gt;
+        &lt;li&gt;Green tea&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+              </code>
+            </pre>
           </section>
+
+          <hr>
+
+          <section>
+            <h3>Description List</h3>
+            <hr>
+            <dl>
+              <dt>Dolor Commodo</dt>
+              <dd>Sed posuere consectetur est at lobortis.</dd>
+
+              <dt>Adipiscing Inceptos</dt>
+              <dd>Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</dd>
+            </dl>
+            <pre class="highlight-code">
+              <code class="html">
+  &lt;dl&gt;
+    &lt;dt&gt;Dolor Commodo&lt;/dt&gt;
+    &lt;dd&gt;Sed posuere consectetur est at lobortis.&lt;/dd&gt;
+  &lt;/dl&gt;
+              </code>
+            </pre>
+          </section>
+
 
         </main>
 
