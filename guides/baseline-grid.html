@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js mui-baselineGridSetup" lang="" data-grid-count="55">
+<html class="no-js mui-js-baselineSetup" lang="" data-grid-count="55">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -9,44 +9,54 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/modernizr.js"></script>
-        <link rel="stylesheet" href="css/monokai-sublime.css">
-        <script src="js/highlight.pack.js"></script>
+        <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/modernizr.js"></script>
+        <link rel="stylesheet" href="../css/monokai-sublime.css">
+        <script src="../js/highlight.pack.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
     </head>
     <body>
         <!--[if lt IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="mui-c-browserUpgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Menu -->
         <nav class="mui-mfn-nav mui-mainHead" role='navigation'>
           <ul class="nmb">
-            <li><a href="index.html">michaeltrilford.mui</a></li>
+            <li><a href="../index.html">michaeltrilford.mui</a></li>
 
             <li class="mui-subHead">Guides</li>
-            <li><a href="baseline-grid-overlay.html" class="mui-mfn-active">Baseline Grid</a></li>
+            <li><a href="../guides/baseline-grid.html" class="mui-mfn-active">Baseline</a></li>
+
+            <li class="mui-subHead">Objects</li>
+            <li><a href="../objects/static-icons.html">Static Icons</a></li>
+            <li><a href="../objects/transformicons.html">Transformicons</a></li>
+
+            <li class="mui-subHead">Tokens</li>
+            <li><a href="../tokens/variables.html">Variables</a></li>
+            <li><a href="../tokens/mixins.html">Mixins</a></li>
+            <li><a href="../tokens/floats.html">Floats</a></li>
+            <li><a href="../tokens/typography.html">Headings</a></li>
 
             <li class="mui-subHead">Base</li>
-            <li><a href="resets.html">Resets</a></li>
-            <li><a href="baseline-grid.html">Baseline</a></li>
-            <li><a href="typography.html">Typography</a></li>
-            <li><a href="formalize.html">Formalize</a></li>
-            <li><a href="lists.html">Lists</a></li>
-            <li><a href="images.html">Images</a></li>
-            <li><a href="accordion.html">Accordion</a></li>
-            <li><a href="table.html">Table</a></li>
-            <li><a href="buttons.html">Buttons</a></li>
+            <li><a href="../base/resets.html">Resets</a></li>
+            <li><a href="../base/baseline-grid.html">Baseline</a></li>
+            <li><a href="../base/typography.html">Typography</a></li>
+            <li><a href="../base/formalize.html">Formalize</a></li>
+            <li><a href="../base/lists.html">Lists</a></li>
+            <li><a href="../base/images.html">Images</a></li>
+            <li><a href="../base/accordion.html">Accordion</a></li>
+            <li><a href="../base/table.html">Table</a></li>
 
             <li class="mui-subHead">Layout</li>
-            <li><a href="columns.html">Columns</a></li>
-            <li><a href="css-grid.html">CSS Grid</a></li>
-            <li><a href="wrapper.html">Wrappers</a></li>
+            <li><a href="../layout/columns.html">Columns</a></li>
+            <li><a href="../layout/css-grid.html">CSS Grid</a></li>
+            <li><a href="../layout/wrapper.html">Wrappers</a></li>
 
             <li class="mui-subHead">Components</li>
-            <li><a href="browser-upgrade.html">Browser Upgrade</a></li>
-            <li><a href="navigation.html">Navigation</a></li>
-            <li><a href="transformicons.html">Transformicons</a></li>
+            <li><a href="../components/accordion.html">Accordion</a></li>
+            <li><a href="../components/buttons.html">Buttons</a></li>
+            <li><a href="../components/browser-upgrade.html">Browser Upgrade</a></li>
+            <li><a href="../components/navigation.html">Navigation</a></li>
           </ul>
         </nav>
 
@@ -68,31 +78,31 @@
         </aside>
 
         <main class="mui-mfn-offset-wrapper">
-          <article class="wrapper--medium">
+          <article class="mui-l-wrapper">
 
             <div class="header mt-24 mb-48">
-              <h1 class="large">Baseline Grid</h1>
+              <h1 class="large">Baseline</h1>
               <hr>
             </div>
 
             <section class="mb-48">
 
               <div class="highlight-wrapper">
-                <div class="autoColumn nmb menu">
-                  <button class="active">Baseline Grid</button>
+                <div class="mui-l-autoColumn nmb menu">
+                  <button class="active">Baseline</button>
                   <button>Outline</button>
                 </div>
                 <div class="codeSnippet nmb">
                   <pre class="highlight-code">
                     <code class="html">
-  &lt;html class="mui-baselineGridSetup" data-grid-count="55"&gt;
+  &lt;html class="mui-js-baselineSetup" data-grid-count="55"&gt;
     ...
   &lt;/html&gt;
                     </code>
                   </pre>
                   <pre class="highlight-code">
                     <code class="html">
-  &lt;section class="mui-outline"&gt;
+  &lt;section class="mui-g-outline"&gt;
     &lt;&excl;-- Children elements will inherit an outline --&gt;
   &lt;/section&gt;
                     </code>
@@ -101,14 +111,14 @@
               </div>
             </section>
 
-            <section class="mui-outline">
-              <div class="headingGroup mui-outline">
+            <section class="mui-g-outline">
+              <div class="headingGroup mui-g-outline">
                 <h3>Baseline</h3>
                 <h4>Sub title</h4>
               </div>
               <hr>
               <p>The following content is on the baseline grid</p>
-              <ul class="mui-outline">
+              <ul class="mui-g-outline">
                 <li>Venenatis Purus</li>
                 <li>Risus Lorem</li>
               </ul>
@@ -118,7 +128,7 @@
                 <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
               </details>
               <hr>
-              <form action="#" class="mui-outline">
+              <form action="#" class="mui-g-outline">
                 <label for="first-name">First name:</label>
                 <input type="text" name="first-name" id="first-name" placeholder="Hank...">
                 <label for="last-name">Last name:</label>
@@ -133,8 +143,8 @@
         <!-- Grid Overlay -->
         <!-- <div class="grid"></div> -->
 
-        <script src="js/vendor/umbrella.js"></script>
-        <script src="js/main.js"></script>
+        <script src="../js/vendor/umbrella.js"></script>
+        <script src="../js/main.js"></script>
 
     </body>
 </html>

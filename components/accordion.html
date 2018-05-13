@@ -1,0 +1,208 @@
+<!doctype html>
+<html class="no-js mui-js-baselineSetup" lang="" data-grid-count="30">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="../css/main.css">
+        <script src="../js/modernizr.js"></script>
+        <link rel="stylesheet" href="../css/monokai-sublime.css">
+        <script src="../js/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="mui-c-browserUpgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- Menu -->
+        <nav class="mui-mfn-nav mui-mainHead" role='navigation'>
+          <ul class="nmb">
+            <li><a href="../index.html">michaeltrilford.mui</a></li>
+
+            <li class="mui-subHead">Guides</li>
+            <li><a href="../guides/baseline-grid.html">Baseline</a></li>
+
+            <li class="mui-subHead">Tokens</li>
+            <li><a href="../tokens/variables.html">Variables</a></li>
+            <li><a href="../tokens/mixins.html">Mixins</a></li>
+            <li><a href="../tokens/floats.html">Floats</a></li>
+            <li><a href="../tokens/typography.html">Headings</a></li>
+
+            <li class="mui-subHead">Utilities</li>
+            <li><a href="../utilities/floats.html">Floats</a></li>
+
+            <li class="mui-subHead">Base</li>
+            <li><a href="../base/resets.html">Resets</a></li>
+            <li><a href="../base/baseline-grid.html">Baseline</a></li>
+            <li><a href="../base/typography.html">Typography</a></li>
+            <li><a href="../base/formalize.html">Formalize</a></li>
+            <li><a href="../base/lists.html">Lists</a></li>
+            <li><a href="../base/images.html">Images</a></li>
+            <li><a href="../base/accordion.html">Accordion</a></li>
+            <li><a href="../base/table.html">Table</a></li>
+
+            <li class="mui-subHead">Layout</li>
+            <li><a href="../layout/columns.html">Columns</a></li>
+            <li><a href="../layout/css-grid.html">CSS Grid</a></li>
+            <li><a href="../layout/wrapper.html">Wrappers</a></li>
+
+            <li class="mui-subHead">Components</li>
+            <li><a href="../components/accordion.html" class="mui-mfn-active">Accordion</a></li>
+            <li><a href="../components/buttons.html">Buttons</a></li>
+            <li><a href="../components/browser-upgrade.html">Browser Upgrade</a></li>
+            <li><a href="../components/navigation.html">Navigation</a></li>
+          </ul>
+        </nav>
+
+        <!-- Navigation Bar -->
+        <aside class="mui-mfn-navigation-bar nmb">
+          <a id="mui-mfn-menu-toggle" class="bounceIn mui-mfn-menu-toggle tIcons" href="#" aria-hidden="true">
+            <!-- Menu Icon -->
+            <svg viewBox="0 0 36 30">
+              <rect width="36" height="6" />
+              <rect y="24" width="36" height="6" />
+              <rect y="12" width="36" height="6" />
+            </svg>
+            <!-- Close Icon -->
+            <svg viewBox="0 0 36 30">
+              <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 " />
+            </svg>
+          </a>
+          <div class="bounceIn mui-mfn-website-name nmb">michaeltrilford.mui</div>
+        </aside>
+
+        <main class="mui-mfn-offset-wrapper">
+          <article class="mui-l-wrapper">
+            
+            <div class="header mt-24 mb-48">
+              <h1 class="large">Accordion</h1>
+              <hr>
+            </div>
+
+            <section class="mb-72">
+              <h3>Simple Accordion</h3>
+              <div class="card">
+                <div class="mui-simple-accordion">
+                  <div class="mui-sa-summary mui-js-summary-trigger">
+                    <svg class="mui-o-chevronRight" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 18 18"><path fill-rule="evenodd" d="M6.315 3.28c-.404.385-.415 1.017-.022 1.412L10.557 9l-4.27 4.307c-.392.396-.38 1.03.023 1.412.405.382 1.05.373 1.444-.024l4.958-5c.384-.39.384-1.003 0-1.39l-4.953-5C7.56 3.1 7.292 3 7.025 3c-.255 0-.512.094-.71.28z"></path></svg>
+                    <h5 class="mui-sa-summary__title">Ridiculus Inceptos</h5>
+                  </div> 
+                  <div class="mui-sa-detail mui-is-contracted">
+                    <div class="mui-sa-detail__inner">
+                      <h6>Sollicitudin Elit</h6>  
+                      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;div class="mui-simple-accordion"&gt;
+      &lt;div class="mui-sa-summary mui-js-summary-trigger"&gt;
+        &lt;svg class="mui-o-chevronRight" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 18 18">...&lt;/svg&gt;
+        &lt;h5 class="mui-sa-summary__title">Ridiculus Inceptos&lt;/h5&gt;
+      &lt;/div&gt; 
+      &lt;div class="mui-sa-detail mui-is-contracted"&gt;
+        &lt;div class="mui-sa-detail__inner"&gt;
+          ...
+        &lt;/div&gt;
+      &lt;/div&gt; 
+    &lt;/div&gt;
+
+                </code>
+              </pre>
+            </section>
+
+            <section class="mb-72">
+              <h3>Tree Accordion</h3>
+              <div class="card">
+
+                <aside class="acc-group-wrapper">
+
+
+                  <ul class="acc-class-group">
+                    
+                    <li class="acc__sub-group">
+                      <span class="classification mui-js-accordion-trigger">Group 1</span>
+                      <div class="accordion mui-is-contracted mui-is-expanded">
+                        <ul>
+                          <li class="acc__sub-group"><span class="mui-js-accordion-trigger">Group 2</span>
+                            <div class="accordion mui-is-contracted">
+                              <ul>
+                                <li class="acc__item"><span>Item 1</span></li>
+                                <li class="acc__item"><span>Item 2</span></li>
+                                <li class="acc__item"><span>Item 3</span></li>
+                                <li class="acc__sub-group"><span class="mui-js-accordion-trigger">Group 3</span>
+                                  <div class="accordion mui-is-contracted mui-is-expanded">
+                                    <ul>
+                                      <li class="acc__item"><span>Item 1</span></li>
+                                      <li class="acc__item"><span>Item 1</span></li>
+                                      <li class="acc__item"><span>Item 1</span></li>
+                                    </ul>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="acc__sub-group"><span>Item 1</span></li>
+                          <li class="acc__sub-group"><span>Item 2</span></li>
+                          <li class="acc__sub-group"><span>Item 3</span></li>
+                        </ul>
+                      </div>
+                    </li>
+                    
+                  </ul>
+
+                  <ul class="acc-class-group">
+                    
+                    <li class="acc__sub-group">
+                      <span class="classification mui-js-accordion-trigger">Group 1</span>
+                      <div class="accordion mui-is-contracted mui-is-expanded">
+                        <ul>
+                          <li id="drag1" class="acc__item"><span>Item 1</span></li>
+                          <li id="drag2" class="acc__item"><span>Item 2</span></li>
+                          <li id="drag3" class="acc__item"><span>Item 3</span></li>
+                        </ul>
+                      </div>
+                    </li>
+                    
+                  </ul>
+                </aside>
+
+
+
+              </div>
+              <pre class="highlight-code">
+                <code class="html">
+    &lt;div class="mui-simple-accordion"&gt;
+      &lt;div class="mui-sa-summary"&gt;
+        &lt;svg class="svg-icon svg-icon--rightChevron" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" viewBox="0 0 18 18">...&lt;/svg&gt;
+        &lt;h5 class="mui-sa-summary__title">Ridiculus Inceptos&lt;/h5&gt;
+      &lt;/div&gt; 
+      &lt;div class="mui-sa-detail mui-is-contracted"&gt;
+        &lt;div class="mui-sa-detail__inner"&gt;
+          ...
+        &lt;/div&gt;
+      &lt;/div&gt; 
+    &lt;/div&gt;
+
+                </code>
+              </pre>
+            </section>
+
+          </article>
+        </main>
+
+        <!-- Grid Overlay -->
+        <!-- <div class="grid"></div> -->
+
+        <script src="../js/vendor/umbrella.js"></script>
+        <script src="../js/main.js"></script>
+
+    </body>
+</html>
