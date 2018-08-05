@@ -128,75 +128,47 @@ define(["exports","meta","require"],function(_exports,meta,_require){"use strict
       </style>
 
       <slot></slot>
-    `}}customElements.define("mui-container",muiContainer);class muiNav extends PolymerElement{static get template(){return html`
+    `}}customElements.define("mui-container",muiContainer);class muiTransformiconMenuToClose extends PolymerElement{static get properties(){return{rotate:Boolean,color:String}}static get template(){return html`
       <style include="shared-styles">
-        :host {
-          background: #e5e5e5;
-          display: flex;
-          flex-flow: row wrap;
-          padding: 0.375em;
-        }
-        :host a {
-          padding: 0.75em 1.5em;
-          margin: 0.375em;
-          border-bottom: none;
-          width: 100%;
-          background: white;
-          text-decoration: none; 
-        }
-        @media only screen and (min-width: 31.25em) {
-          :host a {
-            padding: 0.375em 0.75em;
-            width: auto;
-          }
-        }
-        :host a.active {
-          background: black;
-          color: white; 
-        }
-
-
+        :host { display: inline-block; }
       </style>
 
-      <slot></slot>
-      
-    `}}customElements.define("mui-nav",muiNav);const $_documentContainer=document.createElement("template");$_documentContainer.innerHTML=`<dom-module id="shared-styles">
+      <a class$="tIcons {{rotate}}" on-click="transformIcon">
+        <!-- Menu Icon -->
+        <svg viewBox="0 0 36 30" style$="fill: {{color}};">
+          <rect width="36" height="6"/>
+          <rect y="24" width="36" height="6"/>
+          <rect y="12" width="36" height="6"/>
+        </svg>
+        <!-- Close Icon -->
+        <svg viewBox="0 0 36 30" style$="fill: {{color}};">
+          <polygon points="32.8,4.4 28.6,0.2 18,10.8 7.4,0.2 3.2,4.4 13.8,15 3.2,25.6 7.4,29.8 18,19.2 28.6,29.8 32.8,25.6 22.2,15 "/>
+        </svg>
+      </a>
+    `}transformIcon(){this.shadowRoot.querySelector("a.tIcons").classList.toggle("toggle")}ready(){super.ready();this.shadowRoot.querySelector("a.true").classList.add("rotate");this.shadowRoot.querySelector("a.rotate").classList.remove("true")}}customElements.define("mui-transformicon",muiTransformiconMenuToClose);const $_documentContainer=document.createElement("template");$_documentContainer.innerHTML=`<dom-module id="shared-styles">
   <template>
     <style>
 
-    /*  0 - Polymer plugins:
-    =======================================================================================*/
-    iron-selector {
-      background: var(--grey-bg-color);
-      display: flex;
-      flex-flow: row wrap;
-      color: var(--link-color);
-      padding: var(--spacing-tiny); }
-      iron-selector a {
-        border-bottom: none;
-        width: 100%;
-        text-decoration: none;
-        padding: var(--spacing-tiny) var(--spacing-x-small);
-        margin: var(--spacing-tiny);
-        background: var(--button-secondary-background);
-        color: var(--link-color);
-      }
-      @media only screen and (min-width: 31.25em) {
-        iron-selector a { padding: var(--spacing-tiny) var(--spacing-x-small); width: auto; } 
-      }
-      iron-selector a.iron-selected,
-      iron-selector a.iron-selected:hover { background: var(--button-primary-background); color: var(--link-color-reverse); }
+      /*  RESET - Normalize:               */
+      /*  RESET - HTML Boilerplate:        */ 
+      /*  RESET - Box sizing:              */ 
+      /*  C - Baseline scale:              */ 
+      /*  D - Typography:                  */ 
+      /*  E - Focus state:                 */ 
+      /*  F - Horizontal rule:             */ 
+      /*  G - Transformicons:              */
+      /*  H - Lists:                       */ 
+      
 
-      /*  A - Normalize:               */ 
-      /*  B - Box sizing:              */ 
-      /*  C - Baseline scale:          */ 
-      /*  D - Typography:              */ 
-
-      /*  A - Normalize:
+      /*  RESET - Normalize:
       =======================================================================================*/
       html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}
 
-      /*  B - Box sizing: 
+      /*  RESET - HTML 5 - Boilerplate 
+      =======================================================================================*/
+      article,aside,details,figcaption,figure,footer,header,hgroup,hr,main,nav,section,summary{display:block}button,html,input,select,textarea{font-family:sans-serif}audio,canvas,mark,video{display:inline-block}dl,hr,menu,ol,p,pre,ul{margin:1em 0}hr,img,legend{border:0}hr,legend{padding:0}button,html,input,select,textarea{color:#222}html{line-height:1.4;font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}::-moz-selection,::selection{background:#b3d4fc;text-shadow:none}hr{border-top:1px solid #ccc;-moz-box-sizing:content-box;box-sizing:content-box;height:0}audio,canvas,img,video{vertical-align:middle}audio:not([controls]){display:none;height:0}[hidden]{display:none}body,figure,form{margin:0}a:focus{outline:dotted thin}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:after,q:before{content:"";content:none}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ol,nav ul{list-style:none}img{-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{white-space:normal}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline}button,input{line-height:normal}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{resize:vertical;overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+      /*  RESET - Box sizing: 
       =======================================================================================*/
       * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
       *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
@@ -227,34 +199,374 @@ define(["exports","meta","require"],function(_exports,meta,_require){"use strict
       a:hover { color: var(--link-color); }
       a:focus { color: var(--link-color); }
 
-      /* E - Horizontal rule:
+      /* E - Focus state:
       =======================================================================================*/
-      hr {
-        border: none;
-        border-top: var(--border-thin);
-        margin-bottom: calc(1.5rem - 1px); }
-      
+      button:focus, input:focus, textarea:focus, select:focus, a:focus, summary:focus {
+        outline-style: ridge;
+        outline-width: thick;
+        outline-color: #333; }
+
+      /* F - Horizontal rule:
+      =======================================================================================*/
+      hr { border: none; border-top: var(--border-thin); margin-bottom: calc(1.5rem - 1px); }
+
+      /* G - Transformicons:
+      =======================================================================================*/
+        
+        .tIcons.toggle svg:first-child { transform: scale(0); } 
+        .tIcons.toggle svg:last-child { transform: scale(1); }
+        .tIcons.rotate svg:last-child { transform: scale(0) rotate(0deg); } 
+        .tIcons.toggle.rotate svg:last-child { transform: scale(1) rotate(-360deg); }
+        .tIcons { display: block; width: 1.75em; height: 1.5em; position: relative; border-bottom: none; }
+        .tIcons svg { width: 100%; display: block; position: absolute; }
+        .tIcons svg:first-child { transform-origin: 50% 50%; transition: 0.2s ease-in-out; }
+        .tIcons svg:last-child { transform-origin: 50% 50%; transition: 0.2s ease-in-out; transform: scale(0); }
+
+      /* H - Lists:
+      =======================================================================================*/
+        ul, ol { padding: 0; list-style-position: inside; }
+        ul li ul { margin-top: 0.85714em; margin-bottom: 1.71429em; color: #777; font-size: 0.875em; }
+        ul li ul li { line-height: 1.71429; margin-bottom: 0.85714em; }
+        li { padding-left: 1em; text-indent: -1em; margin-bottom: 0.75em; }
+
+      /* H - Nav:
+      =======================================================================================*/ 
+      nav a { text-decoration: none; }
+
+      /* H - Selection:
+      =======================================================================================*/       
+        ::-moz-selection, ::selection { background: #333; color: white; text-shadow: none; }
+
+      /* H - Figure
+      =======================================================================================*/  
+        figure { background: #eee; }
+        figure img { width: 100%; height: auto; }
+        figure figcaption { padding: 1.5em; text-align: center; }
+
+      /* H - Description list
+      =======================================================================================*/
+        dt { font-weight: bold; }
+
+      /* H - Details
+      =======================================================================================*/ 
+        summary { background: #ffffff; padding: 0.75em; }
+        details { box-shadow: 0 0 0 1px #ccc; }
+        details[open] summary { box-shadow: inset 0 -1px 0 0 #ccc; }
+        summary::-webkit-details-marker { display: none; }
+        summary:before { content: "+"; padding-right: 0.75em; display: block; float: left; width: 1.5em; } 
+        details[open] summary:before { content: "-"; }
+        details p { padding: 1.5em; background: white; }
+
+      /* H - Table:
+      =======================================================================================*/  
+        table { width: 100%; border-collapse: collapse; background: white; }
+        @media only screen and (min-width: 53.125em) { table { box-shadow: 0 0 0 1px #cccccc; } }
+
+        thead { display: none; }
+        @media only screen and (min-width: 53.125em) { thead { display: table-header-group; } }
+        thead tr { font-weight: bold; }
+        
+        td, th { padding: 1.5em; }
+        @media only screen and (min-width: 31.25em) { td, th { padding: 0.75em 1.5em; } }
+        
+        td { box-shadow: inset 0 -1px 0 0 #e6e6e6; display: flex; justify-content: space-between; }
+        td:before { content: attr(data-label); float: left; width: auto; font-weight: bold; }
+        @media only screen and (min-width: 31.25em) { td:before { width: auto; padding-right: 3em; } }
+        @media only screen and (min-width: 53.125em) { td { box-shadow: 0 -1px 0 0 #e6e6e6; display: table-cell; text-align: left; } td:before { display: none; } }
+        
+        tr { display: block; margin-bottom: 1.5em; box-shadow: inset 0 0 0 1px #e6e6e6; }
+        @media only screen and (min-width: 53.125em) { tr { display: table-row; vertical-align: top; text-align: left; margin-bottom: 0; } }  
+        
+
+      /* H - Formalize:
+      =======================================================================================*/  
+        label { display: block; margin-bottom: 0.375em; }
+        
+        input, textarea { -webkit-appearance: none; border-radius: 0; }
+        
+        input[type="radio"] { -webkit-appearance: radio; }
+        input[type="checkbox"] { -webkit-appearance: checkbox; }
+        input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="search"], input[type="range"] {
+          height: 2.625em; padding: 0 1em; }
+        input[type="text"], input[type="email"], input[type="number"], input[type="password"], input[type="file"], input[type="search"], input[type="range"] {
+          border: none; box-shadow: inset 0 0 0 1px #e5e5e5; }
+        
+        input[type="search"] { box-sizing: border-box; }
+        
+        textarea, fieldset { border: none; box-shadow: inset 0 0 0 1px #e5e5e5; }
+        
+        /* Buttons */
+        input[type="button"], input[type="submit"], input[type="reset"] {
+          border: none;
+          display: inline-block;
+          padding: 0 1em;
+          cursor: pointer;
+          line-height: 2.25;
+          background: #333;
+          color: white;
+          width: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          background-color: #333333;
+          color: white;
+          border-color: #333333; }
+        input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover { background: white; color: white; }
+        
+        button {
+          border: none;
+          display: inline-block;
+          padding: 0 1em;
+          cursor: pointer;
+          line-height: 2.25;
+          background: #333;
+          color: white;
+          width: auto;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          background-color: #333333;
+          color: white;
+          border-color: #333333; }
+        button:hover { background: white; color: white; }
+        
+        /* HoverButton */
+        input[type="button"]:hover, input[type="submit"]:hover, input[type="reset"]:hover { background: #444; }
+        button:hover { background: #444; }
+        
+        /* ActiveButton */
+        input[type="button"]:active, input[type="submit"]:active, input[type="reset"]:active { background: #555; }
+        
+        button:active { background: #555; }
+        
+        /* Textarea styles */
+        textarea { padding: 1em; height: calc(6em + 0.375em); }
+        
+        /* Legend */
+        legend { font-weight: bold; padding: 0 0.5em; margin-left: -0.5em; background: white; }
+        
+        /* Fieldset styles & File Upload style */
+        fieldset { border-radius: 0.3125em; padding: 0.75em 1.5em; padding-bottom: 0; }
+        fieldset ul { list-style: none; margin-bottom: 0; }
+        fieldset ul label { margin-bottom: 0; }
+        fieldset li { margin-bottom: 1em; }
+        
+        /* Select */
+        select { height: 1.875em; }
+        
+        /* Radio & Checklist Styles */
+        input[type="checkbox"], input[type="radio"] { width: auto; margin: 0 0.5em 0 0; }
+        input[type="file"] { font-size: 0.75em; padding: 1.75em 2em; margin-bottom: 2em; }
+        
+        /* Upload File Text */
+        button:focus, input:focus, textarea:focus, select:focus, a:focus, summary:focus {
+          outline-style: ridge;
+          outline-width: thick;
+          outline-color: #333; }
+        
+        button:focus, input[type="submit"]:focus { box-shadow: inset 0 0 0 1px white; }
+        
     </style>
   </template>
 </dom-module>`;document.head.appendChild($_documentContainer.content);setPassiveTouchGestures(!0);setRootPath(MyAppGlobals.rootPath);class MyApp extends PolymerElement{static get template(){return html`
       <style include="shared-styles">
         :host { display: block; }
+
+
+        /* Disable Background Scroll
+        =======================================================================================*/
+        .mui-mfn-fixed-background { 
+          overflow: hidden; }
+          @media (min-width: 60rem) { 
+            .mui-mfn-fixed-background { 
+              overflow: visible; } }
+        
+        
+
+        .mui-mfn-nav {
+          height: 100vh;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;
+          position: fixed;
+          bottom: 0;
+          z-index: 1;
+          padding: 3rem 0 5.375rem 0;
+          width: 100%;
+          background: #191919;
+          opacity: 0;
+          transform: translate(0, 100%);
+          transition: transform 100ms linear, width 100ms linear, opacity 100ms linear; }
+          .mui-mfn-nav.mui-mainHead {
+            padding-top: 0; }
+
+          @media (min-width: 60rem) {
+            .mui-mfn-nav {
+              display: block;
+              align-itrems: center;
+              text-align: left;
+              position: fixed;
+              left: 0;
+              top: 0;
+              opacity: 1;
+              width: 32.0rem;
+              transform: translate(0, 0);
+              z-index: 100;
+              transition: none !important; }
+              .mui-mfn-nav::-webkit-scrollbar {
+                display: none; } }
+
+         
+      /* MFN Menu Open
+      =======================================================================================*/
+      .mui-mfn-menu-open {
+        transform: translate(0, 0);
+        border-radius: 0;
+        opacity: 1;
+        transition: transform 200ms ease-in, width 200ms ease-in, opacity 200ms ease-in; }
+           
+      /* MFN Home tab
+      =======================================================================================*/
+      .mui-mfn-home { position: sticky; top: 0; background: #191919; z-index: 1; }
+      .mui-mfn-home .mui-mfn__menu-button { padding: 1.5rem 3rem; opacity: 1; box-shadow: 0 0 96px 0 black; }
+      .mui-mfn-home .mui-mfn__menu-button.mui-mfn-active { opacity: 1; transform: scale(1); background: #2d2d2d; }
+      .mui-mfn-home .mui-mfn__menu-button:hover { opacity: 1; transform: scale(1); background: #272727; }
+      .mui-mfn-home hr { opacity: 0.2; }
+      .mui-mfn-menu-open .mui-mfn-home .mui-mfn__menu-button {opacity: 1;}
+
+      /* Sub head
+      =======================================================================================*/
+      .mui-mfn-nav div.mui-subHead {
+        padding: 0.75rem 3rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #bbbbbb;
+        font-size: calc(24 / 16 * 1em);
+        line-height: calc(36 / 24);
+        margin: 0;
+        margin-bottom: calc(24 / 24 * 1em);
+        margin-top: 1.5rem; }
+        @media (min-width: 60rem) {
+          .mui-mfn-nav div.mui-subHead {
+            font-size: calc(16 / 16 * 1em);
+            line-height: calc(24 / 16);
+            margin: 0;
+            margin-bottom: calc(24 / 16 * 1em);
+            margin: 0;
+            margin-top: 1.5rem; } }
+
+
+      /* Menu button
+      =======================================================================================*/
+      .mui-mfn-menu-open .mui-mfn__menu-button { opacity: 0.3; }
+      .mui-mfn__menu-button {
+        text-decoration: none;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: block;
+        background: transparent;
+        margin: 0;
+        color: white;
+        display: block;
+        padding: 0.75rem 3rem;
+        transition: opacity 400ms ease-in, transform 100ms ease-in;
+        opacity: 0;
+        font-weight: bold;
+        font-size: calc(24 / 16 * 1em);
+        line-height: calc(36 / 24);
+        margin: 0;
+        margin-bottom: calc(24 / 24 * 1em); }
+        .mui-mfn__menu-button.iron-selected { 
+          background: black; 
+          opacity: 1 !important; }
+
+       .mui-mfn__menu-button:hover { 
+          opacity: 1; 
+          color: var(--link-color-reverse); }
+          .mui-mfn__menu-button:focus { 
+            color: var(--link-color-reverse);
+            background: var(--black-bg-color);
+            opacity: 1; }
+        @media (min-width: 60rem) {
+          .mui-mfn__menu-button {
+            font-size: calc(16 / 16 * 1em);
+            line-height: calc(24 / 16);
+            margin: 0;
+            margin-bottom: calc(24 / 16 * 1em);
+            margin: 0;
+            opacity: 0.3; }
+            .mui-mfn__menu-button.iron-selected {
+              opacity: 1;
+              transform-origin: 20% 50%; }
+            .mui-mfn__menu-button:hover { 
+              transform: scale(1.1); } }   
+      
+
+
+
+        
+        @media (min-width: 60rem) {
+          .mui-mfn-offset-wrapper {
+            width: calc(100% - 32.0rem);
+            margin: 0;
+            transform: translate(32.0rem, 0); } }
+        
+        .mui-mfn-navigation-bar {
+          margin-bottom: 0;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          background: #191919;
+          padding: 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          z-index: 2; }
+          @media (min-width: 60rem) {
+            .mui-mfn-navigation-bar {
+              display: none; } }
+          .mui-mfn-navigation-bar .mui-mfn-menu-toggle {
+            flex: 0 0 1.75rem; }
+            .tIcons svg {
+              fill: white; }
+          .mui-mfn-navigation-bar .mui-mfn-website-name {
+            width: auto;
+            padding-left: 1.5rem;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: block;
+            margin-bottom: 0;
+            color: white; }
+
+
+
       </style>
 
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]"></app-location>
       <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
 
-      <iron-selector selected="[[page]]" attr-for-selected="name" role="navigation">
-        <a name="view1" href="[[rootPath]]view1">View One</a>
-        <a name="view2" href="[[rootPath]]view2">View Two</a>
-        <a name="view3" href="[[rootPath]]view3">View Three</a>
+      <iron-selector class="mui-mfn-nav mui-mainHead" selected="[[page]]" attr-for-selected="name" role="navigation" on-scroll="addOverflowHidden">
+        <div class="mui-mfn-home">
+          <a class="mui-mfn__menu-button" name="home" href="[[rootPath]]home">michaeltrilford.mui</a>
+        </div>
+
+        <div class="mui-subHead">Objects</div>
+        <a class="mui-mfn__menu-button" name="view2" href="[[rootPath]]view2">Transformicons</a>
+
+        <div class="mui-subHead">Components</div>
+        <a class="mui-mfn__menu-button" name="buttons-view" href="[[rootPath]]buttons-view">Buttons</a>
       </iron-selector>
 
-      <iron-pages selected="[[page]]" attr-for-selected="name" role="main">
-        <my-view1 name="view1"></my-view1>
+      <!-- Navigation Bar -->
+      <aside class="mui-mfn-navigation-bar">
+        <mui-transformicon rotate color="white" on-click="muiMfnToggle"></mui-transformicon>
+        <div class="bounceIn mui-mfn-website-name nmb">michaeltrilford.mui</div>
+      </aside>
+
+      <iron-pages class="mui-mfn-offset-wrapper" selected="[[page]]" attr-for-selected="name" role="main">
+        <buttons-view name="buttons-view"></buttons-view>
         <my-view2 name="view2"></my-view2>
         <my-view3 name="view3"></my-view3>
         <my-view404 name="view404"></my-view404>
       </iron-pages>
 
-    `}static get properties(){return{page:{type:String,reflectToAttribute:!0,observer:"_pageChanged"},routeData:Object,subroute:Object}}static get observers(){return["_routePageChanged(routeData.page)"]}_routePageChanged(page){if(!page){this.page="view1"}else if(-1!==["view1","view2","view3"].indexOf(page)){this.page=page}else{this.page="view404"}if(!this.$.drawer.persistent){this.$.drawer.close()}}_pageChanged(page){switch(page){case"view1":new Promise((res,rej)=>_require.default(["./my-view1.js"],res,rej)).then(bundle=>bundle&&bundle.$myView1||{});break;case"view2":new Promise((res,rej)=>_require.default(["./my-view2.js"],res,rej)).then(bundle=>bundle&&bundle.$myView2||{});break;case"view3":new Promise((res,rej)=>_require.default(["./my-view3.js"],res,rej)).then(bundle=>bundle&&bundle.$myView3||{});break;case"view404":new Promise((res,rej)=>_require.default(["./my-view404.js"],res,rej)).then(bundle=>bundle&&bundle.$myView404||{});break;}}}window.customElements.define("my-app",MyApp)});
+    `}static get properties(){return{page:{type:String,reflectToAttribute:!0,observer:"_pageChanged"},routeData:Object,subroute:Object}}static get observers(){return["_routePageChanged(routeData.page)"]}_routePageChanged(page){if(!page){this.page="buttons-view"}else if(-1!==["buttons-view","view2","view3"].indexOf(page)){this.page=page}else{this.page="view404"}if(!this.$.drawer.persistent){this.$.drawer.close()}}_pageChanged(page){switch(page){case"buttons-view":new Promise((res,rej)=>_require.default(["./buttons-view.js"],res,rej)).then(bundle=>bundle&&bundle.$buttonsView||{});break;case"view2":new Promise((res,rej)=>_require.default(["./my-view2.js"],res,rej)).then(bundle=>bundle&&bundle.$myView2||{});break;case"view3":new Promise((res,rej)=>_require.default(["./my-view3.js"],res,rej)).then(bundle=>bundle&&bundle.$myView3||{});break;case"view404":new Promise((res,rej)=>_require.default(["./my-view404.js"],res,rej)).then(bundle=>bundle&&bundle.$myView404||{});break;}}addOverflowHidden(){u("body").addClass("overflow-hidden")}muiMfnToggle(){u("body").toggleClass("mui-mfn-fixed-background");this.shadowRoot.querySelector(".mui-mfn-nav").classList.toggle("mui-mfn-menu-open")}}window.customElements.define("my-app",MyApp)});
