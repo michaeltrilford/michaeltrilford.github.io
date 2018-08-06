@@ -549,11 +549,36 @@ define(["exports","meta","require"],function(_exports,meta,_require){"use strict
           <a class="mui-mfn__menu-button" name="home" href="[[rootPath]]home">michaeltrilford.mui</a>
         </div>
 
+        <div class="mui-subHead">Guides</div>
+        <a class="mui-mfn__menu-button" href="../guides/baseline-grid.html">Baseline</a>
+
         <div class="mui-subHead">Objects</div>
+        <a class="mui-mfn__menu-button" href="../objects/static-icons.html">Static Icons</a>
         <a class="mui-mfn__menu-button" name="view2" href="[[rootPath]]view2">Transformicons</a>
 
+        <div class="mui-subHead">Tokens</div>
+        <a class="mui-mfn__menu-button" href="../tokens/variables.html">Variables</a>
+
+        <div class="mui-subHead">Base</div>
+        <a class="mui-mfn__menu-button" href="../base/resets.html">Resets</a>
+        <a class="mui-mfn__menu-button" href="../base/baseline-grid.html">Baseline</a>
+        <a class="mui-mfn__menu-button" href="../base/typography.html">Typography</a>
+        <a class="mui-mfn__menu-button" href="../base/formalize.html">Formalize</a>
+        <a class="mui-mfn__menu-button" href="../base/lists.html">Lists</a>
+        <a class="mui-mfn__menu-button" href="../base/images.html">Images</a>
+        <a class="mui-mfn__menu-button" href="../base/accordion.html">Accordion</a>
+        <a class="mui-mfn__menu-button" href="../base/table.html">Table</a>
+
+        <div class="mui-subHead">Layout</div>
+        <a class="mui-mfn__menu-button" href="../layout/columns.html">Columns</a>
+        <a class="mui-mfn__menu-button" href="../layout/css-grid.html">CSS Grid</a>
+        <a class="mui-mfn__menu-button" href="../layout/wrapper.html">Wrappers</a>
+
         <div class="mui-subHead">Components</div>
+        <a class="mui-mfn__menu-button" href="../components/accordion.html">Accordion</a>
         <a class="mui-mfn__menu-button" name="buttons-view" href="[[rootPath]]buttons-view">Buttons</a>
+        <a class="mui-mfn__menu-button" href="../components/browser-upgrade.html">Browser Upgrade</a>
+        <a class="mui-mfn__menu-button" href="../components/navigation.html">Navigation</a>
       </iron-selector>
 
       <!-- Navigation Bar -->
