@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/author.css">
-    
+
     <!-- Mui Marketing Components  -->
     <script src="js/mui-marketing-components/mui-marketing-navigation.js"></script>
     <script src="js/mui-marketing-components/mui-marketing-tech-stack-info.js"></script>
-
+    
     <!-- Application layout -->
     <script src="js/components/mui-navbar/mui-navbar-home.js"></script>
     <script src="js/components/mui-navbar/mui-navbar-group.js"></script>
@@ -25,26 +25,33 @@
 
     <!-- Application content -->
     <script src="js/components/mui-button.js"></script>
-
+    <script src="js/components/mui-button-group.js"></script>
+    
   </head>
 
-  <body class="home">
+  <body>
 
     <mui-marketing-navigation>
       <mui-container slot="marketing-content" center>
+        <h1>Buttons</h1>
         <mui-card>
-          <h1>⧉</h1>
-          <h4>Michael Trilford presents</h4>
-          <hr>
-          <h1 class="title">A Pattern Library Journey</h1>
-          <hr>
-          <p>This pattern library is a consolidation of patterns created on my personal <a href="https://codepen.io/trilm/">codepen.io/trilm</a>. It isn’t a framework, but a collection of base styles &amp; components to assist with crafting a prototypes or design.</p>
-          <mui-button rounded primary>Download</mui-button>
+          <h3>Square</h3>
+          <mui-button-group>
+            <mui-button secondary>Cancel</mui-button>
+            <mui-button primary>Submit</mui-button>
+            <mui-button warning>Delete</mui-button>
+          </mui-button-group>
+          <h3>Rounded</h3>
+          <mui-button-group>
+            <mui-button rounded secondary>Cancel</mui-button>
+            <mui-button rounded primary>Submit</mui-button>
+            <mui-button rounded warning>Delete</mui-button>
+          </mui-button-group>
         </mui-card>
         <mui-marketing-tech-stack-info></mui-marketing-tech-stack-info>
       </mui-container>
     </mui-marketing-navigation>
-
+  
     <script src="js/app.js"></script>
   </body>
 </html>
