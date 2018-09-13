@@ -26,8 +26,8 @@ class muiMarketingTechStackInfo extends HTMLElement {
     </style>
 
     <span class="tech-stack">Made with: <strong>native web components</strong></span>
-    <p class="mui-small">This site is made with experimental technology, as it's purpose is to prepare for native web components. Please view in <a href="https://www.google.com/chrome/canary/">Canary Web Browser</a></p>
-    <p class="mui-small">Currently Transformicons and Buttons is available to view.</p>
+    <p class="mui-small">This site is made with experimental technology, as it's purpose is to prepare for native web components. Please view in the latest version of <a href="https://www.google.com/chrome">Chrome Web Browser (69.0.3497.92)</a></p>
+    <p class="mui-small">Menu items available: Home, Transformicons, Buttons and Typography.</p>
 
     `;
     
