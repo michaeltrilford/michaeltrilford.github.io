@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/author.css">
+    <link rel="stylesheet" href="css/monokai-sublime.css">
 
     <!-- Mui Marketing Components  -->
     <script src="js/mui-marketing-components/mui-marketing-navigation.js"></script>
@@ -22,6 +23,8 @@
     <script src="js/components/mui-transformicon.js"></script>
     <script src="js/components/mui-container.js"></script>
     <script src="js/components/mui-card.js"></script>
+    <script src="js/components/mui-card-footer.js"></script>
+    <script src="js/components/mui-code.js"></script>
 
     <!-- Application content -->
     <script src="js/components/mui-button.js"></script>
@@ -34,24 +37,39 @@
     <mui-marketing-navigation>
       <mui-container slot="marketing-content" center>
         <h1>Buttons</h1>
-        <mui-card>
+        <mui-card footer>
           <h3>Square</h3>
           <mui-button-group>
             <mui-button secondary>Cancel</mui-button>
             <mui-button primary>Submit</mui-button>
             <mui-button warning>Delete</mui-button>
           </mui-button-group>
+          <mui-card-footer>
+            <mui-code>
+              &lt;mui-button-group&gt;Title one&lt;/mui-button-group&gt;
+            </mui-code>
+          </mui-card-footer>
+
+
+
+        </mui-card>
+        <mui-card footer>
           <h3>Rounded</h3>
           <mui-button-group>
             <mui-button rounded secondary>Cancel</mui-button>
             <mui-button rounded primary>Submit</mui-button>
             <mui-button rounded warning>Delete</mui-button>
           </mui-button-group>
+          <mui-card-footer>
+            <mui-code>
+              &lt;mui-button-group rounded&gt;Title one&lt;/mui-button-group&gt;
+            </mui-code>
+          </mui-card-footer>
         </mui-card>
         <mui-marketing-tech-stack-info></mui-marketing-tech-stack-info>
       </mui-container>
     </mui-marketing-navigation>
-  
+    <script src="js/highlight.pack.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

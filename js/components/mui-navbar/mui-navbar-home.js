@@ -23,7 +23,7 @@ class muiNavbarHome extends HTMLElement {
       background: #191919; 
       z-index: 1; 
     }
-    @media (min-width: 60rem) {
+    @media (min-width: 960px) {
       :host {
         display: block;
       }

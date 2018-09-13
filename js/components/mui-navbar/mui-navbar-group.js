@@ -29,7 +29,7 @@ class muiNavbarGroup extends HTMLElement {
       font-size: var(--font-size-heading-medium);
       
     }
-    @media (min-width: 60rem) {
+    @media (min-width: 960px) {
       :host {
         margin-top: var(--spacing-medium); 
       }

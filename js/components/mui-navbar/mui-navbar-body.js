@@ -11,7 +11,7 @@ class muiNavbarBody extends HTMLElement {
     <style>
     @import url("css/main.css");
 
-    @media (min-width: 60rem) {
+    @media (min-width: 960px) {
       :host {
         display: block;
         width: calc(100% - 32.0rem);

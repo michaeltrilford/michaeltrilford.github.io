@@ -12,9 +12,14 @@
   --link-color-reverse: white;
   --icon-color-reverse: white;
 
+  --code-text-color: white;
+  --code-bg: var(--dark-bg-color);
+
+  --card-radius: 6px;
+
   --link-reverse-underline: 0 0.1rem 0 var(--white-color-transparent-50);
 
-  --fieldset-border: 1px solid var(--grey-bg-color); 
+  --fieldset-border: 1px solid rgba(0, 0, 0, 0.1); 
 
   --button-primary-background: #333;
   --button-secondary-background: white;
@@ -50,13 +55,24 @@
   --font-size-heading-medium: 2.4rem;
   --font-size-heading-large: 3.6rem;
   --font-size-heading-x-large: 4.8rem;
-
   --font-size-heading-xx-large: 6.0rem;
   --font-size-heading-xxx-large: 7.2rem;
   --font-size-heading-xxxx-large: 8.4rem;
   --font-size-heading-xxxxx-large: 9.6rem;
 
-  font-size: 46.875%;
+  --root-font-size: 46.875%;
+}
+
+@media screen and (min-width: 768px) { 
+  :root { --root-font-size: 54.6875%; } 
+}
+
+@media screen and (min-width: 850px) { 
+  :root { --root-font-size: 62.5%; } 
+}
+
+:root {
+  font-size: var(--root-font-size);
   line-height: var(--line-height-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,11 +87,7 @@
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust:100%;
   color: var(--text-body-color);
-  
 }
-@media only screen and (min-width: 48rem) { :root { font-size: 54.6875%; } }
-@media only screen and (min-width: 53.125rem) { :root { font-size: 62.5%; } }
-
 
 body { 
   margin: var(--spacing-clear); 
@@ -99,8 +111,8 @@ progress{ vertical-align:baseline; }
 summary{ display: list-item;}
 template, [hidden], audio:not([controls]) { display:none; }
 article,aside,details,figcaption,figure,footer,header,hgroup,hr,main,nav,section,summary{ display: block; }
-button,html,input,select,textarea{font-family: inherit;}
-button,html,input,select,textarea{ color: inherit; }
+button,input,select,textarea{font-family: inherit;}
+button,input,select,textarea{ color: inherit; }
 audio,canvas,mark,video{display: inline-block;}
 hr,img,legend{ border: 0; }
 body,figure,form{ margin:0; }
@@ -146,19 +158,42 @@ button,input,optgroup,select,textarea {
 blockquote { margin: 1.6rem 0 2rem; font-style: italic; font-weight: 500; }
 strong { font-weight: bold; }
 em { font-style: italic; }
-h1 { font-size: var(--font-size-heading-x-large); line-height: 1.25; }
-h2 { font-size: var(--font-size-heading-large); line-height: 1.33333333333333; }
-h3 { font-size: var(--font-size-heading-medium); line-height: 1.5; }
-h4 { font-size: var(--font-size-heading-small); line-height: 1.14285714285714; }
-h5 { font-size: var(--font-size-heading-x-small); line-height: 1.33333333333333; font-weight: bold; }
-h6 { font-size: var(--font-size-heading-tiny); line-height: 1.5; font-weight: bold; }
+
 a { color: var(--link-color); }
 a:hover { color: var(--link-color); }
 a:focus { color: var(--link-color); }
 
+h1 {
+  font-size: var(--font-size-heading-x-large);
+  line-height: 1.25;
+}
+h2 {
+  font-size: var(--font-size-heading-large);
+  line-height: 1.33333333333333;
+}
+h3 {
+  font-size: var(--font-size-heading-medium);
+  line-height: 1.5;
+}
+h4 {
+  font-size: var(--font-size-heading-small);
+  line-height: 1.14285714285714;
+}
+h5 {
+  font-size: var(--font-size-heading-x-small);
+  line-height: 1.33333333333333;
+  font-weight: bold;
+}
+h6 {
+  font-size: var(--font-size-heading-tiny);
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+
 b,strong{font-weight:bolder}
-pre{ font-family: monospace, monospace; white-space: pre; white-space:pre-wrap; word-wrap:break-word;}
-code,kbd,samp{ font-family: monospace,monospace; font-size: var(--font-size-text);}
+pre { font-family: monospace; white-space: pre-wrap; word-wrap: break-word; }
+code,kbd,samp{ font-family: monospace; font-size: var(--font-size-text);}
 sub,sup, small { font-size: var(--font-size-text-tiny); }
 sub,sup { line-height:0; position:relative; vertical-align:baseline; }
 sub { bottom:-.25em}
@@ -348,11 +383,5 @@ nav ol,nav ul { list-style: none; }
   /* Radio & Checklist Styles */
   input[type="checkbox"], input[type="radio"] { width: auto; margin: 0 0.5em 0 0; }
   input[type="file"] { font-size: var(--font-size-text-tiny); padding: 1.75em 2em; margin-bottom: 2em; }
-  
-  /* Upload File Text */
-  button:focus, input:focus, textarea:focus, select:focus, a:focus, summary:focus {
-    outline-style: ridge;
-    outline-width: thick;
-    outline-color: #333; }
   
   button:focus, input[type="submit"]:focus { box-shadow: inset 0 0 0 1px white; }

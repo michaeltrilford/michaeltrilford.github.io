@@ -42,7 +42,7 @@ class muiMarketingNavigation extends HTMLElement {
         padding-top: 0;
       }
 
-      @media (min-width: 60rem) {
+      @media (min-width: 960px) {
         mui-navbar {
           align-items: center;
           text-align: left;
@@ -83,7 +83,7 @@ class muiMarketingNavigation extends HTMLElement {
       <mui-navbar-group groupname="Base">
         <mui-navbar-link link="#" title="Resets"></mui-navbar-link>
         <mui-navbar-link link="#" title="Baseline"></mui-navbar-link>
-        <mui-navbar-link link="#" title="Typography"></mui-navbar-link>
+        <mui-navbar-link link="typography.html" title="Typography"></mui-navbar-link>
         <mui-navbar-link link="#" title="Formalize"></mui-navbar-link>
         <mui-navbar-link link="#" title="Lists"></mui-navbar-link>
         <mui-navbar-link link="#" title="Images"></mui-navbar-link>
