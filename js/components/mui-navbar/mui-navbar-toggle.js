@@ -2,8 +2,10 @@
 class muiNavbarToggle extends HTMLElement {
 
   static get observedAttributes() {
-    return ['title'];
+    return ['link', 'title'];
   }
+
+  
 
   constructor() {
     super(); 
@@ -54,7 +56,7 @@ class muiNavbarToggle extends HTMLElement {
 
     <!-- Navigation Bar Toggle -->
     <slot></slot>
-    <a href="index.html">${this.getAttribute('title')}</a> 
+    <a href="${this.getAttribute('link')}">${this.getAttribute('title')}</a> 
 
     `;
     

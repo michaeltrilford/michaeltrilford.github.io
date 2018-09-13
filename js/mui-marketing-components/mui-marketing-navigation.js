@@ -65,7 +65,7 @@ class muiMarketingNavigation extends HTMLElement {
 
     <mui-navbar>
       <!-- Home -->
-      <mui-navbar-home link="index.html" title="michaeltrilford.mui"></mui-navbar-home>
+      <mui-navbar-home link="https://michaeltrilford.github.io/" title="michaeltrilford.mui"></mui-navbar-home>
       <!-- Guides -->
       <mui-navbar-group groupname="Guides">
         <mui-navbar-link link="#" title="Baseline"></mui-navbar-link>
@@ -105,7 +105,7 @@ class muiMarketingNavigation extends HTMLElement {
       </mui-navbar-group>
     </mui-navbar>
 
-    <mui-navbar-toggle title="michaeltrilford.mui">
+    <mui-navbar-toggle link="https://michaeltrilford.github.io/" title="michaeltrilford.mui">
       <mui-transformicon rotate inverted></mui-transformicon>
     </mui-navbar-toggle>
 
