@@ -1,6 +1,9 @@
 /* Mui Button */
 class muiButton extends HTMLElement {
-  constructor() {super(); this.attachShadow({ mode: 'open' });}
+  constructor() {
+    super(); 
+    this.attachShadow({ mode: 'open' });
+  }
   connectedCallback() {
     let html = `
     <style>

@@ -11,10 +11,12 @@ class muiButtonGroup extends HTMLElement {
         display: flex;
         margin-bottom: var(--spacing-medium);
       }
-      ::slotted(mui-button) {
+      ::slotted(mui-button),
+      ::slotted(button[is="fancy-button"]) {
         margin-right: var(--spacing-tiny);
       }
-      ::slotted(mui-button:last-child) {
+      ::slotted(mui-button:last-child),
+      ::slotted(button[is="fancy-button"]:last-child) {
         margin-right: 0;
       }
     </style>

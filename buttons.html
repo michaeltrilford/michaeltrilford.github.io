@@ -35,6 +35,7 @@
     <script src="js/components/mui-link.js"></script>
     <script src="js/components/mui-heading.js"></script>
     <script src="js/components/mui-paragraph.js"></script>
+    <script src="js/components/fancy-button.js"></script>
 
     <!-- Application content -->
     <script src="js/components/mui-button.js"></script>
@@ -46,14 +47,17 @@
 
     <mui-marketing-navigation>
       <mui-container slot="marketing-content" center>
-        <mui-heading size="1">Buttons</mui-heading>
+        <mui-heading headingsize="1">Buttons</mui-heading>
         <mui-paragraph small>MUI provides base-level styling for Native HTML elements through the optional <mui-link href="#">mui-base.css</mui-link>. It doesn't supply the consumer with modifier classes to customise the user interface. However, consumers are able to modify MUI web components by assigning defined attributes, which can be found within the Web component documentation.</mui-paragraph>
         <mui-card footer>
-          <mui-heading size="3">Square</mui-heading>
+          <mui-heading headingsize="3">Square</mui-heading>
           <mui-button-group>
             <mui-button secondary>Cancel</mui-button>
             <mui-button primary>Submit</mui-button>
             <mui-button warning>Delete</mui-button>
+            <button is="fancy-button" mui-warning mui-rounded>Delete</button>
+            <button is="fancy-button" mui-primary>Delete</button>
+            <button>hello</button>
           </mui-button-group>
           <mui-card-footer>
             <mui-code>
@@ -71,7 +75,7 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading size="3">Rounded</mui-heading>
+          <mui-heading headingsize="3">Rounded</mui-heading>
           <mui-button-group>
             <mui-button rounded secondary>Cancel</mui-button>
             <mui-button rounded primary>Submit</mui-button>

@@ -77,7 +77,7 @@ class muiMarketingNavigation extends HTMLElement {
         <mui-navbar-link link="container.html" title="Container"></mui-navbar-link>
       </mui-navbar-group>
       <!-- Base -->
-      <mui-navbar-group groupname="Optional Base CSS">
+      <mui-navbar-group groupname="Optional Global CSS">
         <mui-navbar-link link="web-foundation.html" title="Web Foundation"></mui-navbar-link>
         <mui-navbar-link link="baseline.html" title="Baseline Rhythm"></mui-navbar-link>
         <mui-navbar-link link="typography.html" title="Typography"></mui-navbar-link>

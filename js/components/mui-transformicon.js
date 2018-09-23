@@ -40,6 +40,7 @@ class muiTransformicon extends HTMLElement {
         padding: 0;
         line-height: 1;
         background: transparent; 
+        border: none;
       }
       button:hover { background: transparent; }
       button:focus { 

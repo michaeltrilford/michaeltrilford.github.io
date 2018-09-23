@@ -34,6 +34,8 @@ button, input, optgroup, select, textarea {
   font-family: var(--font-family);
   font-size: var(--font-size-text);
   line-height: var(--line-height-text);
+}
+input, optgroup, select, textarea {
   margin: var(--spacing-clear)
 }
 :focus {
