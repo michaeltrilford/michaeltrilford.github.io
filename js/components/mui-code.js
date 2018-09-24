@@ -19,7 +19,10 @@ class muiCode extends HTMLElement {
         color: var(--code-text-color);
         background: var(--code-bg);
         padding: var(--spacing-small) var(--spacing-x-medium) var(--spacing-small) var(--spacing-x-medium);
-      }      
+      }
+      ::slotted(hr) {
+        margin-top: calc(var(--spacing-medium) - 1px);
+      }     
     </style>
     <slot></slot>
     `;

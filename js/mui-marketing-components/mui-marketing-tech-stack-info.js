@@ -24,17 +24,16 @@ class muiMarketingTechStackInfo extends HTMLElement {
         margin-bottom: var(--spacing-small);
       }
 
-      .small { 
-        font-size: var(--font-size-text-small);
-        margin-bottom: var(--spacing-small);
+      mui-container {
+        padding: 0;
       }
 
     </style>
 
-    <span class="tech-stack">Made with: <strong>native web components</strong></span>
-    <p class="small">This site is made with experimental technology, as it's purpose is to prepare for native web components. Please view in the latest version of <a href="https://www.google.com/chrome">Chrome Web Browser (69.0.3497.92)</a></p>
-    <p class="small">Menu items available: Home, Transformicons, Buttons and Typography.</p>
-
+    <mui-container center small>
+      <mui-paragraph class="tech-stack" small>Made with: <strong>Native web components</strong></mui-paragraph small>
+      <mui-paragraph small>This site is made with experimental technology, as it's purpose is to prepare for native web components. Please view in the latest version of <a href="https://www.google.com/chrome">Chrome Web Browser (69.0.3497.92)</a></mui-paragraph>
+    </mui-container>
     `;
     
     this.shadowRoot.innerHTML = html;

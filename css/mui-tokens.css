@@ -39,7 +39,9 @@
 
   /* Border */
   --border-thin: 1px solid rgba(0, 0, 0, 0.1);
+  --border-thin-inverted: 1px solid hsla(0, 0%, 100%, 0.1);
   --border-thick: 2px solid rgba(0, 0, 0, 0.1);
+  --border-thick-inverted: 2px solid hsla(0, 0%, 100%, 0.1);
   --border-thin-dotted: 1px dotted rgba(0, 0, 0, 0.1);
   --border-thin-ridge: thick ridge var(--dark-grey-palette);
   --box-shadow-faux-border-bottom-thin-reverse: 0 0.1rem 0 var(--white-palette-transparent-50);

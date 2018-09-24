@@ -71,11 +71,6 @@ class muiMarketingNavigation extends HTMLElement {
         <mui-navbar-link link="tokens.html" title="Design Tokens"></mui-navbar-link>
         <mui-navbar-link link="resets.html" title="Reset CSS"></mui-navbar-link>
       </mui-navbar-group>
-      <!-- Layout -->
-      <mui-navbar-group groupname="Layout">
-        <mui-navbar-link link="#" title="Columns"></mui-navbar-link>
-        <mui-navbar-link link="container.html" title="Container"></mui-navbar-link>
-      </mui-navbar-group>
       <!-- Base -->
       <mui-navbar-group groupname="Optional Global CSS">
         <mui-navbar-link link="web-foundation.html" title="Web Foundation"></mui-navbar-link>
@@ -90,6 +85,8 @@ class muiMarketingNavigation extends HTMLElement {
       </mui-navbar-group>
       <!-- Components -->
       <mui-navbar-group groupname="Web Components">
+        <mui-navbar-link link="#" title="Columns"></mui-navbar-link>
+        <mui-navbar-link link="container.html" title="Container"></mui-navbar-link>
         <mui-navbar-link link="headings.html" title="Headings"></mui-navbar-link>
         <mui-navbar-link link="paragraph.html" title="Paragraphs"></mui-navbar-link>
         <mui-navbar-link link="transformicons.html" title="Transformicons"></mui-navbar-link>
