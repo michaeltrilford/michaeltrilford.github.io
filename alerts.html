@@ -34,40 +34,43 @@
 
     <script src="js/components/mui-container.js"></script>
     <script src="js/components/mui-card.js"></script>
+    <script src="js/components/mui-card-footer.js"></script>
+    <script src="js/components/mui-code.js"></script>
 
     <!-- Application content -->
-    <script src="js/components/mui-button.js"></script>
+    <script src="js/components/mui-heading.js"></script>
     <script src="js/components/mui-paragraph.js"></script>
     <script src="js/components/mui-link.js"></script>
-    <script src="js/components/mui-heading.js"></script>
     <script src="js/components/mui-rule.js"></script>
-    <script src="js/components/mui-badge.js"></script>
+    <script src="js/components/mui-alert.js"></script>
   </head>
 
-  <body class="home">
+  <body>
     <mui-marketing-navigation>
       <mui-container slot="marketing-content" center>
-        <mui-card>
-          <mui-heading headingsize="6">Michael Trilford presents</mui-heading>
+        <mui-heading headingsize="1">Alerts</mui-heading>
+        <mui-paragraph small
+          >MUI provides base-level styling for Native HTML elements through the
+          optional <mui-link href="#">mui-base.css</mui-link>. It doesn't supply
+          the consumer with modifier classes to customise the user interface.
+          However, consumers are able to modify MUI web components by assigning
+          defined attributes, which can be found within the Web component
+          documentation.</mui-paragraph
+        >
+        <mui-card footer>
+          <mui-heading headingsize="3">Warning</mui-heading>
           <mui-rule></mui-rule>
-          <div class="home__heading">
-            <mui-heading nomargin headingsize="1"
-              >A Pattern Library Journey</mui-heading
-            >
-            <mui-badge>Beta</mui-badge>
-          </div>
-          <mui-rule></mui-rule>
-          <mui-paragraph small>
-            This pattern library is a consolidation of patterns created on my
-            personal
-            <mui-link target="_blank" href="https://codepen.io/trilm/"
-              >codepen.io/trilm</mui-link
-            >. It isn’t a framework, but a collection of base styles &amp;
-            components to assist with crafting a prototypes or design.
-          </mui-paragraph>
-          <mui-button rounded primary>Download</mui-button>
+          <mui-alert warning
+            >Nulla vitae elit libero, a pharetra augue. Donec id elit non mi
+            porta gravida at eget metus.</mui-alert
+          >
+          <mui-card-footer>
+            <mui-code>
+              &lt;mui-alert warning&gt; ... &lt;/mui-alert&gt;
+              <br />
+            </mui-code>
+          </mui-card-footer>
         </mui-card>
-        <mui-marketing-tech-stack-info></mui-marketing-tech-stack-info>
       </mui-container>
     </mui-marketing-navigation>
   </body>

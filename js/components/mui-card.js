@@ -1,14 +1,12 @@
 /* Mui Card */
 class muiCard extends HTMLElement {
-
   static get observedAttributes() {
-    return ['footer'];
+    return ["footer"];
   }
 
   constructor() {
-    super(); 
-    this.attachShadow({ mode: 'open' });
-
+    super();
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -19,7 +17,7 @@ class muiCard extends HTMLElement {
 
       :host {
         display: block;
-        border-radius: var(--card-radius);
+        border-radius: var(--radius-card);
         padding: var(--spacing-medium) var(--spacing-x-medium) var(--spacing-x-medium) var(--spacing-x-medium);
         margin-bottom: var(--spacing-medium);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
@@ -28,26 +26,28 @@ class muiCard extends HTMLElement {
       :host([footer]) {
         padding-bottom: var(--spacing-clear);
       }
+      ::slotted(*:last-child) {
+        margin-bottom: 0;
+      }
       ::slotted(mui-card-footer) {
         width: calc(100% + (var(--spacing-x-medium) * 2));
         transform: translate(calc(-1 * var(--spacing-x-medium)),0);
-        border-bottom-right-radius: var(--card-radius);
-        border-bottom-left-radius: var(--card-radius);
+        border-bottom-right-radius: var(--radius-card);
+        border-bottom-left-radius: var(--radius-card);
       }
     </style>
     <slot></slot>
     
 
     `;
-    
+
     this.shadowRoot.innerHTML = html;
 
     // var hasFooter = document.querySelector('[footer=""]');
     // if (hasFooter) {
     //   this.innerHTML = '<mui-card-footer></mui-card-footer>';
     // }
-
   }
 }
 
-customElements.define('mui-card', muiCard);
+customElements.define("mui-card", muiCard);

@@ -1,6 +1,9 @@
 /* Mui ButtonGroup */
 class muiButtonGroup extends HTMLElement {
-  constructor() {super(); this.attachShadow({ mode: 'open' });}
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     let html = `
     <style>
@@ -10,6 +13,9 @@ class muiButtonGroup extends HTMLElement {
       :host {
         display: flex;
         margin-bottom: var(--spacing-medium);
+      }
+      :host([right-aligned]) {
+        justify-content: flex-end;
       }
       ::slotted(mui-button),
       ::slotted(button[is="fancy-button"]) {
@@ -21,9 +27,9 @@ class muiButtonGroup extends HTMLElement {
       }
     </style>
     <slot></slot>`;
-    
+
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define('mui-button-group', muiButtonGroup);
+customElements.define("mui-button-group", muiButtonGroup);

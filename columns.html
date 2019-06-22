@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- MUI Dependencies -->
+    <link rel="stylesheet" href="css/mui-tokens.css" />
+    <link rel="stylesheet" href="css/mui-reset.css" />
+
+    <!-- Author Adjustments -->
+    <link rel="stylesheet" href="css/author.css" />
+
+    <!-- Mui Marketing Components  -->
+    <script src="js/mui-marketing-components/mui-marketing-navigation.js"></script>
+    <script src="js/mui-marketing-components/mui-marketing-tech-stack-info.js"></script>
+
+    <!-- Application layout -->
+    <script src="js/components/mui-navbar/mui-navbar-home.js"></script>
+    <script src="js/components/mui-navbar/mui-navbar-group.js"></script>
+    <script src="js/components/mui-navbar/mui-navbar-link.js"></script>
+    <script src="js/components/mui-navbar/mui-navbar-toggle.js"></script>
+    <script src="js/components/mui-navbar/mui-navbar-body.js"></script>
+
+    <script src="js/components/mui-icons/mui-icon-menu.js"></script>
+    <script src="js/components/mui-icons/mui-icon-close.js"></script>
+    <script src="js/components/mui-icons/mui-transformicons/mui-icon-menu-close.js"></script>
+
+    <script src="js/components/mui-container.js"></script>
+    <script src="js/components/mui-card.js"></script>
+    <script src="js/components/mui-card-footer.js"></script>
+    <script src="js/components/mui-code.js"></script>
+
+    <!-- Application content -->
+    <script src="js/components/mui-heading.js"></script>
+    <script src="js/components/mui-paragraph.js"></script>
+    <script src="js/components/mui-columns.js"></script>
+    <script src="js/components/mui-link.js"></script>
+    <script src="js/components/mui-rule.js"></script>
+  </head>
+
+  <body>
+    <mui-marketing-navigation>
+      <mui-container slot="marketing-content" center>
+        <mui-heading headingsize="1">Columns</mui-heading>
+        <mui-paragraph small
+          >The <mui-link href="#">mui-base.css</mui-link> associated with MUI
+          Design System is recommended, as it will style the vanilla HTML
+          elements out-of-the-box. If you don't want to include
+          <mui-link href="#">mui-base.css</mui-link> in your project and elect
+          to style your elements from the ground up, that's fine.</mui-paragraph
+        >
+
+        <mui-card footer>
+          <mui-heading headingsize="3">Auto columns</mui-heading>
+          <mui-rule></mui-rule>
+          <mui-columns auto>
+            <svg width="72" height="72" viewBox="0 0 72 72">
+              <rect fill="#b9b9b9" width="72" height="72"></rect>
+            </svg>
+            <svg width="72" height="72" viewBox="0 0 72 72">
+              <rect fill="#b9b9b9" width="72" height="72"></rect>
+            </svg>
+            <svg width="72" height="72" viewBox="0 0 72 72">
+              <rect fill="#b9b9b9" width="72" height="72"></rect>
+            </svg>
+          </mui-columns>
+          <mui-card-footer>
+            <mui-code>
+              &lt;mui-columns auto&gt;
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &lt;/mui-columns&gt;
+            </mui-code>
+          </mui-card-footer>
+        </mui-card>
+
+        <mui-card footer>
+          <mui-heading headingsize="3">Two columns</mui-heading>
+          <mui-rule></mui-rule>
+          <mui-columns two-column>
+            <mui-paragraph
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              ullamcorper nulla non metus auctor fringilla. Integer posuere erat
+              a ante venenatis dapibus posuere velit aliquet.</mui-paragraph
+            >
+            <mui-paragraph
+              >Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+              fermentum massa justo sit amet risus.</mui-paragraph
+            >
+          </mui-columns>
+          <mui-card-footer>
+            <mui-code>
+              &lt;mui-columns two-column&gt;
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &lt;/mui-columns&gt;
+            </mui-code>
+          </mui-card-footer>
+        </mui-card>
+
+        <mui-card footer>
+          <mui-heading headingsize="3">Three columns</mui-heading>
+          <mui-rule></mui-rule>
+          <mui-columns three-column>
+            <mui-paragraph
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              ullamcorper nulla non metus auctor fringilla. Integer posuere erat
+              a ante venenatis dapibus posuere velit aliquet.</mui-paragraph
+            >
+            <mui-paragraph
+              >Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+              fermentum massa justo sit amet risus.</mui-paragraph
+            >
+            <mui-paragraph
+              >Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+              fermentum massa justo sit amet risus.</mui-paragraph
+            >
+          </mui-columns>
+          <mui-card-footer>
+            <mui-code>
+              &lt;mui-columns three-column&gt;
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &lt;/mui-columns&gt;
+            </mui-code>
+          </mui-card-footer>
+        </mui-card>
+
+        <mui-card footer>
+          <mui-heading headingsize="3">Four columns</mui-heading>
+          <mui-rule></mui-rule>
+          <mui-columns four-column>
+            <mui-paragraph
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              ullamcorper nulla non metus auctor fringilla. Integer posuere erat
+              a ante venenatis dapibus posuere velit aliquet.</mui-paragraph
+            >
+            <mui-paragraph
+              >Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+              fermentum massa justo sit amet risus.</mui-paragraph
+            >
+            <mui-paragraph
+              >Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+              fermentum massa justo sit amet risus.</mui-paragraph
+            >
+            <mui-paragraph
+              >Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+              fermentum massa justo sit amet risus.</mui-paragraph
+            >
+          </mui-columns>
+          <mui-card-footer>
+            <mui-code>
+              &lt;mui-columns four-column&gt;
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &nbsp;&nbsp;...
+              <br />
+              &lt;/mui-columns&gt;
+            </mui-code>
+          </mui-card-footer>
+        </mui-card>
+      </mui-container>
+    </mui-marketing-navigation>
+  </body>
+</html>

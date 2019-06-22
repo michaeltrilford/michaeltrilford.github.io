@@ -6,10 +6,18 @@ mui-marketing-navigation mui-container {
   text-align: center;
 }
 
-.home .intro { font-family: georgia; font-style: italic; font-weight: normal; }
-.home .title { font-size: var(--font-size-heading-xxxx-large); line-height: 1; }
+.home__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
 
-.transformicons table td:last-child,
-.transformicons table th:last-child  {
-  text-align: right;
+.home__heading mui-heading {
+  margin-right: var(--spacing-tiny);
+  line-height: var(--line-height-reset);
+}
+
+.home mui-paragraph {
+  max-width: 550px;
+  margin: 0 auto var(--spacing-medium);
 }

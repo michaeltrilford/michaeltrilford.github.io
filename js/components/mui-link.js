@@ -1,15 +1,14 @@
 /* Mui Link */
 class muiLink extends HTMLElement {
-  
   static get observedAttributes() {
-    return ['target', 'href', 'download'];
+    return ["target", "href"];
   }
 
   constructor() {
-    super(); 
-    this.attachShadow({ mode: 'open' });
+    super();
+    this.attachShadow({ mode: "open" });
   }
-  
+
   connectedCallback() {
     let html = `
     <style>
@@ -24,15 +23,19 @@ class muiLink extends HTMLElement {
         color: var(--link-color);
       }
       a:active, a:hover { outline: var(--spacing-clear); }
-      
+
+
     </style>
-    <a target="${this.getAttribute('target')}" download="${this.getAttribute('download')}" href="${this.getAttribute('href')}">
+    <a 
+      target="${this.getAttribute("target") || "_self"}" 
+      href="${this.getAttribute("href") || "(default)"}"
+      >
       <slot></slot>
     </a>
     `;
-    
+
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define('mui-link', muiLink);
+customElements.define("mui-link", muiLink);

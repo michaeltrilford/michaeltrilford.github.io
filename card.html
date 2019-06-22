@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="css/mui-tokens.css" />
     <link rel="stylesheet" href="css/mui-reset.css" />
 
-    <!-- MUI Base CSS -->
-    <link rel="stylesheet" href="css/mui-base.css" />
-
     <!-- Author Adjustments -->
     <link rel="stylesheet" href="css/author.css" />
 
@@ -41,12 +38,16 @@
     <script src="js/components/mui-heading.js"></script>
     <script src="js/components/mui-paragraph.js"></script>
     <script src="js/components/mui-link.js"></script>
+    <script src="js/components/mui-rule.js"></script>
+    <script src="js/components/mui-button.js"></script>
+    <script src="js/components/mui-image.js"></script>
+    <script src="js/components/mui-button-group.js"></script>
   </head>
 
   <body>
     <mui-marketing-navigation>
       <mui-container slot="marketing-content" center>
-        <mui-heading headingsize="1">Lists</mui-heading>
+        <mui-heading headingsize="1">Card</mui-heading>
         <mui-paragraph small
           >The <mui-link href="#">mui-base.css</mui-link> associated with MUI
           Design System is recommended, as it will style the vanilla HTML
@@ -56,101 +57,92 @@
         >
 
         <mui-card footer>
-          <mui-heading headingsize="3">Ordered List</mui-heading>
-          <hr />
-          <ol>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-          </ol>
+          <mui-card>
+            <mui-heading tinymargin headingsize="3">Basic card</mui-heading>
+            <mui-paragraph
+              >Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
+              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+              fermentum massa justo sit amet risus.</mui-paragraph
+            >
+          </mui-card>
           <mui-card-footer>
             <mui-code>
-              &lt;ol&gt;
+              &lt;mui-card&gt;
               <br />
-              &nbsp;&nbsp;&lt;li&gt;Coffee&lt;/li&gt;
+              &nbsp;&nbsp;&lt;mui-heading headingsize="3"&gt;Basic
+              card&lt;/mui-heading&gt; &nbsp;&nbsp;&lt;mui-paragraph&gt;Basic
+              card&lt;/mui-paragraph&gt;
               <br />
-              &nbsp;&nbsp;&lt;li&gt;Tea&lt;/li&gt;
-              <br />
-              &nbsp;&nbsp;&lt;li&gt;Milk&lt;/li&gt;
-              <br />
-              &lt;/ol&gt;
+              &lt;/mui-card&gt;
             </mui-code>
           </mui-card-footer>
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Unordered List</mui-heading>
-          <hr />
-          <ul>
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-          </ul>
+          <mui-card footer>
+            <mui-heading headingsize="3"
+              >Card with actions in the footer</mui-heading
+            >
+            <mui-card-footer actions>
+              <mui-button-group right-aligned>
+                <mui-button secondary>Cancel</mui-button>
+                <mui-button primary>Submit</mui-button>
+                <mui-button warning>Delete</mui-button>
+              </mui-button-group>
+            </mui-card-footer>
+          </mui-card>
           <mui-card-footer>
             <mui-code>
-              &lt;ul&gt;
+              &lt;mui-card footer&gt;
               <br />
-              &nbsp;&nbsp;&lt;li&gt;Coffee&lt;/li&gt;
+              &nbsp;&nbsp;&lt;mui-heading headingsize="3"&gt;Card with
+              footer&lt;/mui-heading&gt;
               <br />
-              &nbsp;&nbsp;&lt;li&gt;Tea&lt;/li&gt;
+              &nbsp;&nbsp;&lt;mui-card-footer actions&gt;
               <br />
-              &nbsp;&nbsp;&lt;li&gt;Milk&lt;/li&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button-group right-aligned&gt;
               <br />
-              &lt;/ul&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button
+              secondary>Cancel&lt;/mui-button&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button
+              primary>Submit&lt;/mui-button&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button
+              warning>Delete&lt;/mui-button&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button-group&gt;
+              <br />
+              &nbsp;&nbsp;&lt;mui-card-footer&gt;
+              <br />
+              &lt;/mui-card&gt;
             </mui-code>
           </mui-card-footer>
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Nested Unordered List</mui-heading>
-          <hr />
-          <ul>
-            <li>
-              Tea
-              <ul>
-                <li>Black tea</li>
-                <li>Green tea</li>
-              </ul>
-            </li>
-          </ul>
+          <mui-card footer>
+            <mui-heading headingsize="3">Card with footer</mui-heading>
+            <mui-card-footer>
+              <mui-image>
+                <img slot="image" src="images/image.png" />
+              </mui-image>
+            </mui-card-footer>
+          </mui-card>
           <mui-card-footer>
             <mui-code>
-              &lt;ul&gt;
+              &lt;mui-card footer&gt;
               <br />
-              &nbsp;&nbsp;&lt;li&gt;Tea
+              &nbsp;&nbsp;&lt;mui-heading headingsize="3"&gt;Card with
+              footer&lt;/mui-heading&gt;
               <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;
+              &nbsp;&nbsp;&lt;mui-card-footer&gt;
               <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Black tea&lt;/li&gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;... &nbsp;&nbsp;
               <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Green tea&lt;/li&gt;
+              &nbsp;&nbsp;&lt;mui-card-footer&gt;
               <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
-              <br />
-              &nbsp;&nbsp;&lt;/li&gt;
-              <br />
-              &lt;/ul&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-
-        <mui-card footer>
-          <mui-heading headingsize="3">Description List</mui-heading>
-          <hr />
-          <dl>
-            <dt>Dolor Commodo</dt>
-            <dd>Sed posuere consectetur est at lobortis.</dd>
-          </dl>
-          <mui-card-footer>
-            <mui-code>
-              &lt;dl&gt;
-              <br />
-              &nbsp;&nbsp;&lt;dt&gt;Dolor Commodo&lt;/dt&gt;
-              <br />
-              &nbsp;&nbsp;&lt;dd>Sed posuere consectetur est at
-              lobortis.&lt;/dd&gt;
-              <br />
-              &lt;/dl&gt;
+              &lt;/mui-card&gt;
             </mui-code>
           </mui-card-footer>
         </mui-card>

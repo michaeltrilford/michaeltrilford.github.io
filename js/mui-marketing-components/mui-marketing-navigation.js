@@ -1,9 +1,8 @@
 /* myApp */
 class muiMarketingNavigation extends HTMLElement {
-
   constructor() {
-    super(); 
-    this.attachShadow({ mode: 'open' });
+    super();
+    this.attachShadow({ mode: "open" });
 
     // eric bidelman
   }
@@ -79,18 +78,21 @@ class muiMarketingNavigation extends HTMLElement {
         <mui-navbar-link link="focus-state.html" title="Focus state"></mui-navbar-link>
         <mui-navbar-link link="formalize.html" title="Formalize"></mui-navbar-link>
         <mui-navbar-link link="lists.html" title="Lists"></mui-navbar-link>
-        <mui-navbar-link link="#" title="Images"></mui-navbar-link>
-        <mui-navbar-link link="#" title="Accordion"></mui-navbar-link>
-        <mui-navbar-link link="#" title="Table"></mui-navbar-link>
+        <mui-navbar-link link="detail-summary.html" title="Accordion"></mui-navbar-link>
+        <mui-navbar-link link="table.html" title="Table"></mui-navbar-link>
       </mui-navbar-group>
       <!-- Components -->
       <mui-navbar-group groupname="Web Components">
-        <mui-navbar-link link="#" title="Columns"></mui-navbar-link>
+        <mui-navbar-link link="alerts.html" title="Alerts"></mui-navbar-link>  
+        <mui-navbar-link link="card.html" title="Cards"></mui-navbar-link>
+        <mui-navbar-link link="columns.html" title="Columns"></mui-navbar-link>
         <mui-navbar-link link="container.html" title="Container"></mui-navbar-link>
         <mui-navbar-link link="headings.html" title="Headings"></mui-navbar-link>
         <mui-navbar-link link="paragraph.html" title="Paragraphs"></mui-navbar-link>
-        <mui-navbar-link link="transformicons.html" title="Transformicons"></mui-navbar-link>
-        <mui-navbar-link link="#" title="Accordion"></mui-navbar-link>
+        <mui-navbar-link link="images.html" title="Images"></mui-navbar-link>
+        <mui-navbar-link link="links.html" title="Links"></mui-navbar-link>
+        <mui-navbar-link link="icons.html" title="Icons"></mui-navbar-link>
+        <mui-navbar-link link="accordion.html" title="Accordion"></mui-navbar-link>
         <mui-navbar-link link="buttons.html" title="Buttons"></mui-navbar-link>
         <mui-navbar-link link="#" title="Browser Upgrade"></mui-navbar-link>
         <mui-navbar-link link="#" title="Navigation"></mui-navbar-link>
@@ -98,7 +100,7 @@ class muiMarketingNavigation extends HTMLElement {
     </mui-navbar>
 
     <mui-navbar-toggle link="index.html" title="michaeltrilford.mui">
-      <mui-transformicon rotate inverted></mui-transformicon>
+      <mui-icon-menu-close inverted rotate></mui-icon-menu-close>
     </mui-navbar-toggle>
 
     <mui-navbar-body>
@@ -106,16 +108,16 @@ class muiMarketingNavigation extends HTMLElement {
     </mui-navbar-body>
 
     `;
-    
+
     this.shadowRoot.innerHTML = html;
 
-    this.menuIconEl = this.shadowRoot.querySelector('mui-transformicon');
-    this.navbarEl = this.shadowRoot.querySelector('mui-navbar');
+    this.menuIconEl = this.shadowRoot.querySelector("mui-icon-menu-close");
+    this.navbarEl = this.shadowRoot.querySelector("mui-navbar");
 
-    this.menuIconEl.addEventListener('click', () => {
-      this.navbarEl.toggleAttribute('open');
+    this.menuIconEl.addEventListener("click", () => {
+      this.navbarEl.toggleAttribute("open");
     });
   }
 }
 
-customElements.define('mui-marketing-navigation', muiMarketingNavigation);
+customElements.define("mui-marketing-navigation", muiMarketingNavigation);

@@ -1,6 +1,9 @@
 /* Mui Card Footer */
 class muiCardFooter extends HTMLElement {
-  constructor() {super(); this.attachShadow({ mode: 'open' });}
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     let html = `
     <style>
@@ -17,12 +20,18 @@ class muiCardFooter extends HTMLElement {
         border-bottom-right-radius: var(--card-radius);
         border-bottom-left-radius: var(--card-radius);
       }
+      :host([actions]) {
+        padding: var(--spacing-medium);
+      }
+      ::slotted(*) {
+        margin-bottom: 0;
+      }
     </style>
     <slot></slot>
     `;
-    
+
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define('mui-card-footer', muiCardFooter);
+customElements.define("mui-card-footer", muiCardFooter);
