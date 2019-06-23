@@ -14,7 +14,7 @@ class muiBadge extends HTMLElement {
         background: var(--grey-palette);
         font-size: var(--font-size-text-tiny);
         color: var(--white-palette);
-        padding: var(--spacing-x-tiny) var(--spacing-tiny);
+        padding: var(--spacing-xx-tiny) var(--spacing-tiny);
       }
     </style>
     <slot></slot>

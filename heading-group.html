@@ -36,60 +36,47 @@
     <script src="js/components/mui-card.js"></script>
     <script src="js/components/mui-card-footer.js"></script>
     <script src="js/components/mui-code.js"></script>
-
-    <!-- Application content -->
+    <script src="js/components/mui-link.js"></script>
     <script src="js/components/mui-heading.js"></script>
     <script src="js/components/mui-paragraph.js"></script>
-    <script src="js/components/mui-link.js"></script>
-    <script src="js/components/mui-rule.js"></script>
+
+    <!-- Application content -->
+    <script src="js/components/mui-heading-group.js"></script>
   </head>
 
   <body>
     <mui-marketing-navigation>
       <mui-container slot="marketing-content" center>
-        <mui-heading headingsize="1">Detail & Summary</mui-heading>
+        <mui-heading headingsize="1">Heading group</mui-heading>
         <mui-paragraph small
-          >The <mui-link href="#">mui-base.css</mui-link> associated with MUI
-          Design System is recommended, as it will style the vanilla HTML
-          elements out-of-the-box. If you don't want to include
-          <mui-link href="#">mui-base.css</mui-link> in your project and elect
-          to style your elements from the ground up, that's fine.</mui-paragraph
+          >MUI provides base-level styling for Native HTML elements through the
+          optional <mui-link href="#">mui-base.css</mui-link>. It doesn't supply
+          the consumer with modifier classes to customise the user interface.
+          However, consumers are able to modify MUI web components by assigning
+          defined attributes, which can be found within the Web component
+          documentation.</mui-paragraph
         >
-
         <mui-card footer>
-          <details>
-            <summary>Dapibus Dolor</summary>
-            <p>
-              Nullam quis risus eget urna mollis ornare vel eu leo. Curabitur
-              blandit tempus porttitor.
-            </p>
-          </details>
-          <details open>
-            <summary>Cursus Fusce</summary>
-            <p>
-              Cum sociis natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in,
-              egestas eget quam.
-            </p>
-          </details>
-          <details>
-            <summary>Nullam Vestibulum</summary>
-            <p>
-              Cum sociis natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Maecenas sed diam eget risus varius
-              blandit sit amet non magna.
-            </p>
-          </details>
+          <mui-heading-group>
+            <mui-heading headingsize="2">Main title</mui-heading>
+            <mui-heading headingsize="3">Sub title</mui-heading>
+          </mui-heading-group>
           <mui-card-footer>
             <mui-code>
-              &lt;mui-columns auto&gt;
+              &lt;mui-heading-group&gt;
               <br />
-              &nbsp;&nbsp;...
+              &nbsp;&nbsp;&lt;mui-heading headingsize="2"&gt;Main
+              title&lt;/mui-heading&gt;
               <br />
-              &lt;/mui-columns&gt;
+              &nbsp;&nbsp;&lt;mui-heading headingsize="3"&gt;Sub
+              title&lt;/mui-heading&gt;
+              <br />
+              &lt;/mui-heading-group&gt;
             </mui-code>
           </mui-card-footer>
         </mui-card>
+
+        <mui-marketing-tech-stack-info></mui-marketing-tech-stack-info>
       </mui-container>
     </mui-marketing-navigation>
   </body>

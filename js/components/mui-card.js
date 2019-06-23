@@ -26,6 +26,9 @@ class muiCard extends HTMLElement {
       :host([footer]) {
         padding-bottom: var(--spacing-clear);
       }
+      :host([transparent-card]) {
+        background: transparent;
+      }
       ::slotted(*:last-child) {
         margin-bottom: 0;
       }

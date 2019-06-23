@@ -1,6 +1,9 @@
 /* Mui Paragraph */
 class muiParagraph extends HTMLElement {
-  constructor() {super(); this.attachShadow({ mode: 'open' });}
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     let html = `
     <style>
@@ -15,6 +18,7 @@ class muiParagraph extends HTMLElement {
       }
       :host([small]) {
         font-size: var(--font-size-text-small); 
+        line-height: 1.714285714285714;
       }
       :host([tiny]) {
         font-size: var(--font-size-text-tiny); 
@@ -22,9 +26,9 @@ class muiParagraph extends HTMLElement {
     </style>
     <slot></slot>
     `;
-    
+
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define('mui-paragraph', muiParagraph);
+customElements.define("mui-paragraph", muiParagraph);

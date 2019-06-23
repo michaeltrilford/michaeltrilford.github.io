@@ -21,3 +21,77 @@ mui-marketing-navigation mui-container {
   max-width: 550px;
   margin: 0 auto var(--spacing-medium);
 }
+
+/* Enable outline */
+.outline > * {
+  outline: 1px solid skyblue;
+}
+
+/* Baseline Grid Overlay */
+.mui-js-baselineSetup,
+.mui-js-baselineSetup > body {
+  height: 100vh;
+}
+.mui-js-baselineSetup > .mui-g-baseline,
+.mui-js-baselineSetup > body > .mui-g-baseline {
+  z-index: -1;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  outline: none !important;
+  margin-bottom: 0;
+  height: auto;
+}
+@media (min-height: 828px) {
+  .mui-js-baselineSetup > .mui-g-baseline,
+  .mui-js-baselineSetup > body > .mui-g-baseline {
+    height: 100vh;
+  }
+}
+.mui-js-baselineSetup > .mui-g-baseline div,
+.mui-js-baselineSetup > body > .mui-g-baseline div {
+  width: calc(100% + 2px);
+  transform: translate(-1px, 0);
+  height: 1.2rem;
+  outline: 2px solid #eaeaea;
+  opacity: 0.3;
+  outline-offset: -1px;
+  margin-bottom: 1.2rem;
+}
+.mui-js-baselineSetup > .mui-g-baseline div:nth-last-of-type(9),
+.mui-js-baselineSetup > body > .mui-g-baseline div:nth-last-of-type(9) {
+  opacity: 0.28;
+}
+.mui-js-baselineSetup > .mui-g-baseline div:nth-last-of-type(8),
+.mui-js-baselineSetup > body > .mui-g-baseline div:nth-last-of-type(8) {
+  opacity: 0.24;
+}
+.mui-js-baselineSetup > .mui-g-baseline div:nth-last-of-type(7),
+.mui-js-baselineSetup > body > .mui-g-baseline div:nth-last-of-type(7) {
+  opacity: 0.2;
+}
+.mui-js-baselineSetup > .mui-g-baseline div:nth-last-of-type(6),
+.mui-js-baselineSetup > body > .mui-g-baseline div:nth-last-of-type(6) {
+  opacity: 0.18;
+}
+.mui-js-baselineSetup > .mui-g-baseline div:nth-last-of-type(5),
+.mui-js-baselineSetup > body > .mui-g-baseline div:nth-last-of-type(5) {
+  opacity: 0.14;
+}
+.mui-js-baselineSetup > .mui-g-baseline div:nth-last-of-type(4),
+.mui-js-baselineSetup > body > .mui-g-baseline div:nth-last-of-type(4) {
+  opacity: 0.1;
+}
+.mui-js-baselineSetup > .mui-g-baseline div:nth-last-of-type(3),
+.mui-js-baselineSetup > body > .mui-g-baseline div:nth-last-of-type(3) {
+  opacity: 0.08;
+}
+.mui-js-baselineSetup > .mui-g-baseline div:nth-last-of-type(2),
+.mui-js-baselineSetup > body > .mui-g-baseline div:nth-last-of-type(2) {
+  opacity: 0.04;
+}
+.mui-js-baselineSetup > .mui-g-baseline div:nth-last-of-type(1),
+.mui-js-baselineSetup > body > .mui-g-baseline div:nth-last-of-type(1) {
+  opacity: 0;
+}

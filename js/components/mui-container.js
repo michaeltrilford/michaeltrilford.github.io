@@ -1,6 +1,9 @@
 /* Mui Wrapper */
 class muiContainer extends HTMLElement {
-  constructor() {super(); this.attachShadow({ mode: 'open' });}
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
   connectedCallback() {
     let html = `
     <style>
@@ -48,9 +51,9 @@ class muiContainer extends HTMLElement {
     </style>
     <slot></slot>
     `;
-    
+
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define('mui-container', muiContainer);
+customElements.define("mui-container", muiContainer);

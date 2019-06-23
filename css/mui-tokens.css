@@ -58,7 +58,8 @@
 
   /* Spacing */
   --spacing-clear: 0;
-  --spacing-x-tiny: 0.4rem;
+  --spacing-xx-tiny: 0.4rem;
+  --spacing-x-tiny: 0.6rem;
   --spacing-tiny: 0.8rem;
   --spacing-x-small: 1.2rem;
   --spacing-small: 1.6rem;

@@ -65,20 +65,21 @@ class muiMarketingNavigation extends HTMLElement {
     <mui-navbar>
       <!-- Home -->
       <mui-navbar-home link="index.html" title="michaeltrilford.mui"></mui-navbar-home>
+      <!-- Vertical rythym -->
+      <mui-navbar-group groupname="Vertical rythym">
+        <mui-navbar-link link="baseline.html" title="Baseline"></mui-navbar-link>
+      </mui-navbar-group>
       <!-- Required -->
-      <mui-navbar-group groupname="Required files">
+      <mui-navbar-group groupname="Required CSS">
         <mui-navbar-link link="tokens.html" title="Design Tokens"></mui-navbar-link>
         <mui-navbar-link link="resets.html" title="Reset CSS"></mui-navbar-link>
       </mui-navbar-group>
       <!-- Base -->
-      <mui-navbar-group groupname="Optional Global CSS">
-        <mui-navbar-link link="web-foundation.html" title="Web Foundation"></mui-navbar-link>
-        <mui-navbar-link link="baseline.html" title="Baseline Rhythm"></mui-navbar-link>
+      <mui-navbar-group groupname="Optional CSS">
         <mui-navbar-link link="typography.html" title="Typography"></mui-navbar-link>
-        <mui-navbar-link link="focus-state.html" title="Focus state"></mui-navbar-link>
         <mui-navbar-link link="formalize.html" title="Formalize"></mui-navbar-link>
         <mui-navbar-link link="lists.html" title="Lists"></mui-navbar-link>
-        <mui-navbar-link link="detail-summary.html" title="Accordion"></mui-navbar-link>
+        <mui-navbar-link link="detail-summary.html" title="Detail & Summary"></mui-navbar-link>
         <mui-navbar-link link="table.html" title="Table"></mui-navbar-link>
       </mui-navbar-group>
       <!-- Components -->
@@ -88,6 +89,7 @@ class muiMarketingNavigation extends HTMLElement {
         <mui-navbar-link link="columns.html" title="Columns"></mui-navbar-link>
         <mui-navbar-link link="container.html" title="Container"></mui-navbar-link>
         <mui-navbar-link link="headings.html" title="Headings"></mui-navbar-link>
+        <mui-navbar-link link="heading-group.html" title="Heading group"></mui-navbar-link>
         <mui-navbar-link link="paragraph.html" title="Paragraphs"></mui-navbar-link>
         <mui-navbar-link link="images.html" title="Images"></mui-navbar-link>
         <mui-navbar-link link="links.html" title="Links"></mui-navbar-link>

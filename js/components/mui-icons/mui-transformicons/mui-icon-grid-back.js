@@ -49,7 +49,7 @@ class muiIconGridBack extends HTMLElement {
           box-shadow: none; 
           outline-style: ridge; 
           outline-width: medium; 
-          outline-offset: var(--spacing-x-tiny);
+          outline-offset: var(--spacing-xx-tiny);
         }
 
         /* Inverted Button */

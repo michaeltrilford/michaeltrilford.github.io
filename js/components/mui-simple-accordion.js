@@ -51,7 +51,7 @@ class muiSimpleAccordion extends HTMLElement {
       mui-simple-accordion-detail-inner {
         display: block;
         margin-top: 1.2rem;
-        padding: 1.5rem;
+        padding: 1.2rem;
         padding-top: 0;
       }
 
