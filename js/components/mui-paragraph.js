@@ -22,6 +22,7 @@ class muiParagraph extends HTMLElement {
       }
       :host([tiny]) {
         font-size: var(--font-size-text-tiny); 
+        margin-bottom: var(--spacing-x-small);
       }
     </style>
     <slot></slot>

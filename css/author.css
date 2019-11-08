@@ -2,25 +2,125 @@ mui-marketing-navigation mui-container {
   padding-bottom: calc(5.4rem + var(--spacing-medium));
 }
 
-.home mui-container {
+.home mui-marketing-navigation mui-container {
+  padding-bottom: calc(5.4rem + var(--spacing-medium));
+  display: grid;
+  min-height: 100vh;
+}
+
+@media (min-width: 960px) {
+  .home mui-marketing-navigation mui-container {
+    padding: var(--spacing-large);
+  }
+}
+
+/* Grid */
+.mui-logo {
+  grid-column: 2 / 6;
+  align-self: center;
+}
+.mui-logo img {
+  width: 100%;
+}
+@media (min-width: 500px) {
+  .mui-logo {
+    grid-column: 6 / 13;
+  }
+}
+
+.mui-actions {
+  grid-column: 1 / 7;
+}
+@media (min-width: 500px) {
+  .mui-actions {
+    grid-column: 1 / 6;
+  }
+}
+
+.mui-introduction {
+  grid-column: 1 / 7;
+}
+@media (min-width: 500px) {
+  .mui-introduction {
+    grid-column: 6 / 9;
+  }
+}
+
+.mui-technology {
+  grid-column: 1 / 7;
+}
+@media (min-width: 500px) {
+  .mui-technology {
+    grid-column: 9 / 13;
+  }
+}
+
+.mui-rule {
+  grid-column: 1 / 7;
+}
+@media (min-width: 500px) {
+  .mui-rule {
+    grid-column: 1 / 13;
+  }
+}
+
+.footer-actions__secondary > mui-link:nth-of-type(1),
+.footer-actions__secondary > mui-link:nth-of-type(2) {
+  display: block;
+}
+
+.mui-logo,
+.mui-introduction,
+.mui-technology {
+  margin-bottom: 0;
+}
+
+.mui-actions {
+  width: auto;
   text-align: center;
+  margin-top: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+@media (min-width: 500px) {
+  .mui-actions {
+    width: block;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
-.home__heading {
-  display: flex;
+.home main {
+  display: grid;
+  row-gap: 2.4rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 1px auto auto auto;
+  margin-bottom: var(--spacing-clear);
+}
+
+@media (min-width: 500px) {
+  .home main {
+    column-gap: 2.4rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr 1px auto;
+  }
+}
+
+.home .footer {
+  display: grid;
+  grid-template-columns: 1fr 25rem 34rem;
+  grid-gap: 3.2rem;
+  margin-bottom: var(--spacing-clear);
   align-items: flex-start;
-  justify-content: center;
 }
 
-.home__heading mui-heading {
-  margin-right: var(--spacing-tiny);
-  line-height: var(--line-height-reset);
+.footer-actions__secondary {
+  margin-bottom: var(--spacing-clear);
+  font-size: var(--font-size-text-tiny);
+  margin-top: var(--spacing-small);
+  padding-left: var(--spacing-tiny);
 }
-
-.home mui-paragraph {
-  max-width: 550px;
-  margin: 0 auto var(--spacing-medium);
-}
+/* END - Grid */
 
 /* Enable outline */
 .outline > * {
