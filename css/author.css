@@ -14,17 +14,60 @@ mui-marketing-navigation mui-container {
   }
 }
 
+.home main {
+  display: grid;
+  row-gap: 2.4rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr auto auto auto;
+  margin-bottom: var(--spacing-clear);
+}
+
+@media (min-width: 500px) {
+  .home main {
+    column-gap: 2.4rem;
+    row-gap: 9.6rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr auto;
+  }
+}
+
 /* Grid */
-.mui-logo {
+.mui-logo-wrapper {
   grid-column: 2 / 6;
   align-self: center;
+  position: relative;
+  margin: 0;
 }
-.mui-logo img {
+.mui-logo {
   width: 100%;
 }
 @media (min-width: 500px) {
-  .mui-logo {
+  .mui-logo-wrapper {
     grid-column: 6 / 13;
+  }
+}
+
+.mui-logo__left-line {
+  position: absolute;
+}
+
+.mui-logo__left-line {
+  bottom: -11.8rem;
+  left: -45rem;
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .mui-logo__left-line {
+    bottom: -9.8rem;
+    left: -38rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .mui-logo__left-line {
+    bottom: -8.8rem;
+    left: -33rem;
   }
 }
 
@@ -64,11 +107,6 @@ mui-marketing-navigation mui-container {
   }
 }
 
-.footer-actions__secondary > mui-link:nth-of-type(1),
-.footer-actions__secondary > mui-link:nth-of-type(2) {
-  display: block;
-}
-
 .mui-logo,
 .mui-introduction,
 .mui-technology {
@@ -90,35 +128,16 @@ mui-marketing-navigation mui-container {
   }
 }
 
-.home main {
-  display: grid;
-  row-gap: 2.4rem;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 1fr 1px auto auto auto;
-  margin-bottom: var(--spacing-clear);
-}
-
-@media (min-width: 500px) {
-  .home main {
-    column-gap: 2.4rem;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr 1px auto;
-  }
-}
-
-.home .footer {
-  display: grid;
-  grid-template-columns: 1fr 25rem 34rem;
-  grid-gap: 3.2rem;
-  margin-bottom: var(--spacing-clear);
-  align-items: flex-start;
-}
-
-.footer-actions__secondary {
+.mui-actions__secondary {
   margin-bottom: var(--spacing-clear);
   font-size: var(--font-size-text-tiny);
   margin-top: var(--spacing-small);
   padding-left: var(--spacing-tiny);
+}
+
+.mui-actions__secondary > mui-link:nth-of-type(1),
+.mui-actions__secondary > mui-link:nth-of-type(2) {
+  display: block;
 }
 /* END - Grid */
 

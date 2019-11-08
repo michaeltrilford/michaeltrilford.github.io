@@ -48,10 +48,17 @@
     <mui-marketing-navigation>
       <mui-container slot="marketing-content" center fluid>
         <main>
-          <div class="mui-logo">
-            <img alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
+          <div class="mui-logo-wrapper">
+            <img
+              class="mui-logo"
+              alt="Mike's User Interface Logo"
+              src="./images/mui-logo.svg"
+            />
+            <img
+              class="mui-logo__left-line"
+              src="./images/mui-logo-left-line.svg"
+            />
           </div>
-          <mui-rule class="mui-rule"></mui-rule>
           <div class="mui-actions">
             <mui-link
               class="github-link"
@@ -62,7 +69,7 @@
               rounded
               >View on Github</mui-link
             >
-            <div class="footer-actions__secondary">
+            <div class="mui-actions__secondary">
               <mui-link target="_blank" href="https://codepen.io/trilm/"
                 >Codepen.io/trilm</mui-link
               >
