@@ -17,10 +17,8 @@
     <!-- Author Adjustments -->
     <link rel="stylesheet" href="css/author.css" />
 
-    <!-- Mui Marketing Components  -->
-    <script src="js/mui-marketing-components/mui-marketing-navigation.js"></script>
-
     <!-- Application layout -->
+    <script src="js/components/mui-navbar/mui-navbar.js"></script>
     <script src="js/components/mui-navbar/mui-navbar-home.js"></script>
     <script src="js/components/mui-navbar/mui-navbar-group.js"></script>
     <script src="js/components/mui-navbar/mui-navbar-link.js"></script>
@@ -45,8 +43,8 @@
   </head>
 
   <body class="home">
-    <mui-marketing-navigation>
-      <mui-container slot="marketing-content" center fluid>
+    <mui-navbar>
+      <mui-container slot="main-content" center fluid>
         <main>
           <div class="mui-logo-wrapper">
             <img
@@ -95,6 +93,9 @@
           </mui-paragraph>
         </main>
       </mui-container>
-    </mui-marketing-navigation>
+    </mui-navbar>
+
+    <script src="js/vendor/umbrella.js"></script>
+    <script src="js/vendor/app-functionality.js"></script>
   </body>
 </html>

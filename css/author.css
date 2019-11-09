@@ -1,17 +1,6 @@
-mui-marketing-navigation mui-container {
-  padding-bottom: calc(5.4rem + var(--spacing-medium));
-}
-
-.home mui-marketing-navigation mui-container {
-  padding-bottom: calc(5.4rem + var(--spacing-medium));
+.home mui-navbar mui-container {
   display: grid;
-  min-height: 100vh;
-}
-
-@media (min-width: 960px) {
-  .home mui-marketing-navigation mui-container {
-    padding: var(--spacing-large);
-  }
+  min-height: 100%;
 }
 
 .home main {

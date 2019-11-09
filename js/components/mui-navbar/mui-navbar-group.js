@@ -1,13 +1,12 @@
 /* myApp */
 class muiNavbarGroup extends HTMLElement {
-
   static get observedAttributes() {
-    return ['groupname'];
+    return ["groupname"];
   }
 
   constructor() {
-    super(); 
-    this.attachShadow({ mode: 'open' });
+    super();
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -19,6 +18,10 @@ class muiNavbarGroup extends HTMLElement {
       :host {
         display: block;
         margin-top: var(--spacing-large); 
+      }
+
+      :host(:last-of-type) {
+        padding-bottom: calc(5.4rem + 2.4rem);
       }
 
       span {
@@ -41,13 +44,13 @@ class muiNavbarGroup extends HTMLElement {
 
     </style>
 
-    <span>${this.getAttribute('groupname')}</span>
+    <span>${this.getAttribute("groupname")}</span>
     <slot></slot>
 
     `;
-    
+
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define('mui-navbar-group', muiNavbarGroup);
+customElements.define("mui-navbar-group", muiNavbarGroup);

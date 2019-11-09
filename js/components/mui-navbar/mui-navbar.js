@@ -1,29 +1,30 @@
 /* myApp */
-class muiMarketingNavigation extends HTMLElement {
+class muiNavbar extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
 
-    // eric bidelman
-  }
+    const shadowRoot = this.attachShadow({ mode: "open" });
 
-  connectedCallback() {
-    let html = `
-    <style>
-
+    const styles = `
       @import url("css/mui-reset.css");
-
-      :host { display: block; }
-
-      mui-navbar[open] {
+      :host { 
+        display: grid;
+        grid-template-rows: 1fr 5.4rem;
+        min-height: 100vh; 
+      }
+      @media (min-width: 960px) {
+        :host { 
+          grid-template-rows: 1fr;
+          grid-template-columns: 32.0rem 1fr;
+        }
+      }
+      mui-navbar-inner[open] {
         transform: translate(0, 0);
         border-radius: 0;
         opacity: 1;
         transition: transform 200ms ease-in, width 200ms ease-in, opacity 200ms ease-in; 
       }
-
-
-      mui-navbar {
+      mui-navbar-inner {
         display: block;
         height: 100vh;
         overflow-x: hidden;
@@ -32,7 +33,6 @@ class muiMarketingNavigation extends HTMLElement {
         position: fixed;
         bottom: 0;
         z-index: 1;
-        padding: 3rem 0 5.375rem 0;
         width: 100%;
         background: #191919;
         opacity: 0;
@@ -40,41 +40,43 @@ class muiMarketingNavigation extends HTMLElement {
         transition: transform 100ms linear, width 100ms linear, opacity 100ms linear;
         padding-top: 0;
       }
-
       @media (min-width: 960px) {
-        mui-navbar {
+        mui-navbar-inner {
           align-items: center;
           text-align: left;
           position: fixed;
-          left: 0;
-          top: 0;
           opacity: 1;
-          width: 32.0rem;
           transform: translate(0, 0);
           z-index: 100;
-          transition: none !important; 
+          width: 32rem;
+          transition: none !important;
+          height: 100vh;
         }
-        mui-navbar::-webkit-scrollbar {
+        mui-navbar-inner::-webkit-scrollbar {
           display: none; 
         } 
       }
 
+    `;
 
-    </style>
-
-    <mui-navbar>
-      <!-- Home -->
+    const Home = `
       <mui-navbar-home link="index.html" title="michaeltrilford.mui"></mui-navbar-home>
-      <!-- Vertical rythym -->
+    `;
+
+    const VerticalRythym = `
       <mui-navbar-group groupname="Vertical rythym">
         <mui-navbar-link link="baseline.html" title="Baseline"></mui-navbar-link>
       </mui-navbar-group>
-      <!-- Required -->
+    `;
+
+    const Required = `
       <mui-navbar-group groupname="Required CSS">
         <mui-navbar-link link="tokens.html" title="Design Tokens"></mui-navbar-link>
         <mui-navbar-link link="resets.html" title="Reset CSS"></mui-navbar-link>
       </mui-navbar-group>
-      <!-- Base -->
+    `;
+
+    const Base = `
       <mui-navbar-group groupname="Optional CSS">
         <mui-navbar-link link="typography.html" title="Typography"></mui-navbar-link>
         <mui-navbar-link link="formalize.html" title="Formalize"></mui-navbar-link>
@@ -82,7 +84,9 @@ class muiMarketingNavigation extends HTMLElement {
         <mui-navbar-link link="detail-summary.html" title="Detail & Summary"></mui-navbar-link>
         <mui-navbar-link link="table.html" title="Table"></mui-navbar-link>
       </mui-navbar-group>
-      <!-- Components -->
+    `;
+
+    const Components = `
       <mui-navbar-group groupname="Web Components">
         <mui-navbar-link link="alerts.html" title="Alerts"></mui-navbar-link>  
         <mui-navbar-link link="card.html" title="Cards"></mui-navbar-link>
@@ -99,27 +103,42 @@ class muiMarketingNavigation extends HTMLElement {
         <mui-navbar-link link="#" title="Browser Upgrade"></mui-navbar-link>
         <mui-navbar-link link="#" title="Navigation"></mui-navbar-link>
       </mui-navbar-group>
-    </mui-navbar>
-
-    <mui-navbar-toggle link="index.html" title="michaeltrilford.mui">
-      <mui-icon-menu-close inverted rotate></mui-icon-menu-close>
-    </mui-navbar-toggle>
-
-    <mui-navbar-body>
-      <slot name="marketing-content"></slot>
-    </mui-navbar-body>
-
     `;
 
-    this.shadowRoot.innerHTML = html;
+    // We provide the shadow root with some HTML
+    shadowRoot.innerHTML = `
+      <style>${styles}</style>
+      <mui-navbar-body>
+        <slot name="main-content"></slot>
+      </mui-navbar-body>
+      <mui-navbar-inner>
+        ${Home}
+        ${VerticalRythym}
+        ${Required}
+        ${Base}
+        ${Components}
+      </mui-navbar-inner>
+      <mui-navbar-toggle link="index.html" title="michaeltrilford.mui">
+        <mui-icon-menu-close inverted rotate></mui-icon-menu-close>
+      </mui-navbar-toggle>
+    `;
 
     this.menuIconEl = this.shadowRoot.querySelector("mui-icon-menu-close");
-    this.navbarEl = this.shadowRoot.querySelector("mui-navbar");
-
+    this.navbarEl = this.shadowRoot.querySelector("mui-navbar-inner");
     this.menuIconEl.addEventListener("click", () => {
       this.navbarEl.toggleAttribute("open");
+    });
+
+    this.navbarMainEl = this.shadowRoot.querySelector("mui-navbar-body");
+
+    this.navbarEl.addEventListener("scroll", () => {
+      this.navbarMainEl.classList.add("scroll");
+    });
+
+    this.navbarMainEl.addEventListener("mouseover", () => {
+      this.navbarMainEl.classList.remove("scroll");
     });
   }
 }
 
-customElements.define("mui-marketing-navigation", muiMarketingNavigation);
+customElements.define("mui-navbar", muiNavbar);
