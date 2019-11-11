@@ -1,4 +1,7 @@
 /* Mui ButtonGroup */
+
+// Connected callback is used to render the hidden icon in the correct state
+// The hidden icon would animate when the page loads, causing a flicker
 class muiIconAddSubtract extends HTMLElement {
   constructor() {
     super();
@@ -20,11 +23,9 @@ class muiIconAddSubtract extends HTMLElement {
           align-items: center;
           justify-content: center;
         }
-
         /* Position Icons */
         mui-icon-add,
         mui-icon-subtract { position: absolute; top: 0; left: 0; }
-
         /* Transition */
         :host([toggle]) mui-icon-add { transform: scale(0); }
         :host([toggle]) mui-icon-subtract { transform: scale(1); }
@@ -32,7 +33,6 @@ class muiIconAddSubtract extends HTMLElement {
         :host([toggle][rotate]) mui-icon-subtract { transform: scale(1) rotate(-360deg); }
         :host mui-icon-add { transform-origin: 50% 50%; transition: 0.2s ease-in-out; }
         :host mui-icon-subtract { transform-origin: 50% 50%; transition: 0.2s ease-in-out; transform: scale(0); }
-
         /* Button adjustments */
         button { 
           width: inherit; 
@@ -51,18 +51,14 @@ class muiIconAddSubtract extends HTMLElement {
           outline-width: medium; 
           outline-offset: var(--spacing-xx-tiny);
         }
-
         /* Inverted Button */
         :host([inverted]) button:focus { outline-color: var(--icon-color-reverse); }
         :host([inverted]) mui-icon-add,
         :host([inverted]) mui-icon-subtract { fill: var(--icon-color-reverse); }
-
       </style>
-
       <button>
         <mui-icon-add small></mui-icon-add>
         <mui-icon-subtract small></mui-icon-subtract>
-
       </button>
     `;
 

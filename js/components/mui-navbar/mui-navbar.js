@@ -64,20 +64,20 @@ class muiNavbar extends HTMLElement {
     `;
 
     const VerticalRythym = `
-      <mui-navbar-group groupname="Vertical rythym">
+      <mui-navbar-group id="vertical-rythym" groupname="Vertical Rythym">
         <mui-navbar-link link="baseline.html" title="Baseline"></mui-navbar-link>
       </mui-navbar-group>
     `;
 
     const Required = `
-      <mui-navbar-group groupname="Required CSS">
+      <mui-navbar-group id="required-css" groupname="Required CSS">
         <mui-navbar-link link="tokens.html" title="Design Tokens"></mui-navbar-link>
         <mui-navbar-link link="resets.html" title="Reset CSS"></mui-navbar-link>
       </mui-navbar-group>
     `;
 
     const Base = `
-      <mui-navbar-group groupname="Optional CSS">
+      <mui-navbar-group id="optional-css" groupname="Optional CSS">
         <mui-navbar-link link="typography.html" title="Typography"></mui-navbar-link>
         <mui-navbar-link link="formalize.html" title="Formalize"></mui-navbar-link>
         <mui-navbar-link link="lists.html" title="Lists"></mui-navbar-link>
@@ -87,7 +87,7 @@ class muiNavbar extends HTMLElement {
     `;
 
     const Components = `
-      <mui-navbar-group groupname="Web Components">
+      <mui-navbar-group id="web-components" groupname="Web Components">
         <mui-navbar-link link="alerts.html" title="Alerts"></mui-navbar-link>  
         <mui-navbar-link link="card.html" title="Cards"></mui-navbar-link>
         <mui-navbar-link link="columns.html" title="Columns"></mui-navbar-link>
@@ -123,20 +123,68 @@ class muiNavbar extends HTMLElement {
       </mui-navbar-toggle>
     `;
 
+    // Query elements
     this.menuIconEl = this.shadowRoot.querySelector("mui-icon-menu-close");
     this.navbarEl = this.shadowRoot.querySelector("mui-navbar-inner");
+    this.navbarMainEl = this.shadowRoot.querySelector("mui-navbar-body");
+    this.navGroupVerticalRythymEl = this.shadowRoot.getElementById(
+      "vertical-rythym"
+    );
+    this.navGroupRequiredCSSEl = this.shadowRoot.getElementById("required-css");
+    this.navGroupOptionalCSSEl = this.shadowRoot.getElementById("optional-css");
+    this.navGroupWebComponentsEl = this.shadowRoot.getElementById(
+      "web-components"
+    );
+
+    // Reveal navigation on mobile
     this.menuIconEl.addEventListener("click", () => {
       this.navbarEl.toggleAttribute("open");
     });
 
-    this.navbarMainEl = this.shadowRoot.querySelector("mui-navbar-body");
-
-    this.navbarEl.addEventListener("scroll", () => {
-      this.navbarMainEl.classList.add("scroll");
+    // On mouse over of main content, remove defined scroll attributes
+    this.navbarMainEl.addEventListener("mouseover", () => {
+      this.navbarMainEl.removeAttribute("onscroll", "fixed-view");
+      this.navbarMainEl.classList.remove("vertical-rythym");
+      this.navbarMainEl.classList.remove("required-css");
+      this.navbarMainEl.classList.remove("web-components");
+      this.navbarMainEl.classList.remove("optional-css");
     });
 
-    this.navbarMainEl.addEventListener("mouseover", () => {
-      this.navbarMainEl.classList.remove("scroll");
+    // On scroll of the navigation, add scroll atributes
+    this.navbarEl.addEventListener("scroll", () => {
+      this.navbarMainEl.setAttribute("onscroll", "fixed-view");
+    });
+
+    // On mouse over of required css, add a unqiue colour for section
+    this.navGroupVerticalRythymEl.addEventListener("mouseover", () => {
+      this.navbarMainEl.classList.add("vertical-rythym");
+      this.navbarMainEl.classList.remove("required-css");
+      this.navbarMainEl.classList.remove("web-components");
+      this.navbarMainEl.classList.remove("optional-css");
+    });
+
+    // On mouse over of required css, add a unqiue colour for section
+    this.navGroupRequiredCSSEl.addEventListener("mouseover", () => {
+      this.navbarMainEl.classList.add("required-css");
+      this.navbarMainEl.classList.remove("vertical-rythym");
+      this.navbarMainEl.classList.remove("web-components");
+      this.navbarMainEl.classList.remove("optional-css");
+    });
+
+    // On mouse over of optional css, add a unqiue colour for section
+    this.navGroupOptionalCSSEl.addEventListener("mouseover", () => {
+      this.navbarMainEl.classList.add("optional-css");
+      this.navbarMainEl.classList.remove("vertical-rythym");
+      this.navbarMainEl.classList.remove("required-css");
+      this.navbarMainEl.classList.remove("web-components");
+    });
+
+    // On mouse over of main content, add a unqiue colour for section
+    this.navGroupWebComponentsEl.addEventListener("mouseover", () => {
+      this.navbarMainEl.classList.add("web-components");
+      this.navbarMainEl.classList.remove("vertical-rythym");
+      this.navbarMainEl.classList.remove("required-css");
+      this.navbarMainEl.classList.remove("optional-css");
     });
   }
 }

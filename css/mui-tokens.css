@@ -113,4 +113,11 @@
 
   /* Legend object */
   --legend-background: var(--white-palette);
+
+  /* Specific tokens
+  =======================================================================================*/
+  --vertical-rythym: #b5ffb5;
+  --required-css: salmon;
+  --optional-css: #ddb8ff;
+  --web-components: skyblue;
 }

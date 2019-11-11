@@ -1,4 +1,7 @@
 /* Mui ButtonGroup */
+
+// Connected callback is used to render the hidden icon in the correct state
+// The hidden icon would animate when the page loads, causing a flicker
 class muiIconGridClose extends HTMLElement {
   constructor() {
     super();
@@ -20,11 +23,9 @@ class muiIconGridClose extends HTMLElement {
           align-items: center;
           justify-content: center;
         }
-
         /* Position Icons */
         mui-icon-grid,
         mui-icon-close { position: absolute; top: 0; left: 0; }
-
         /* Transition */
         :host([toggle]) mui-icon-grid { transform: scale(0); }
         :host([toggle]) mui-icon-close { transform: scale(1); }
@@ -32,7 +33,6 @@ class muiIconGridClose extends HTMLElement {
         :host([toggle][rotate]) mui-icon-close { transform: scale(1) rotate(-360deg); }
         :host mui-icon-grid { transform-origin: 50% 50%; transition: 0.2s ease-in-out; }
         :host mui-icon-close { transform-origin: 50% 50%; transition: 0.2s ease-in-out; transform: scale(0); }
-
         /* Button adjustments */
         button { 
           width: inherit; 
@@ -51,18 +51,14 @@ class muiIconGridClose extends HTMLElement {
           outline-width: medium; 
           outline-offset: var(--spacing-xx-tiny);
         }
-
         /* Inverted Button */
         :host([inverted]) button:focus { outline-color: var(--icon-color-reverse); }
         :host([inverted]) mui-icon-grid,
         :host([inverted]) mui-icon-close { fill: var(--icon-color-reverse); }
-
       </style>
-
       <button>
         <mui-icon-grid small></mui-icon-grid>
         <mui-icon-close small></mui-icon-close>
-
       </button>
     `;
 

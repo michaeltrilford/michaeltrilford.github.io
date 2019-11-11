@@ -16,14 +16,30 @@ class muiNavbarBody extends HTMLElement {
           display: block;
           margin: 0;
           grid-column: 2 / 3;
-          transition: 1s linear;
+          transition: background 1s linear;
           padding: 0 2.4rem 2.4rem;
         } 
       }
 
-      :host([class="scroll"]) {
-        background: salmon;
-        
+      :host([onscroll="fixed-view"]) {
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      :host([class="vertical-rythym"]) {
+        background: var(--vertical-rythym);
+      }
+
+      :host([class="required-css"]) {
+        background: var(--required-css); 
+      }
+
+      :host([class="optional-css"]) {
+        background: var(--optional-css);
+      }
+
+      :host([class="web-components"]) {
+        background: var(--web-components);
       }
 
     </style>

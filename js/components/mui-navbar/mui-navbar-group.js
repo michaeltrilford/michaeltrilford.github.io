@@ -24,6 +24,22 @@ class muiNavbarGroup extends HTMLElement {
         padding-bottom: calc(5.4rem + 2.4rem);
       }
 
+      :host([groupname="Vertical Rythym"]:hover) span {
+        color: var(--vertical-rythym);
+      }
+
+      :host([groupname="Required CSS"]:hover) span {
+        color: var(--required-css);
+      }
+
+      :host([groupname="Optional CSS"]:hover) span {
+        color: var(--optional-css);
+      }
+
+      :host([groupname="Web Components"]:hover) span {
+        color: var(--web-components);
+      }
+
       span {
         display: block;
         text-transform: uppercase;

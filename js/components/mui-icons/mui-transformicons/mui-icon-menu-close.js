@@ -20,11 +20,9 @@ class muiIconMenuClose extends HTMLElement {
           align-items: center;
           justify-content: center;
         }
-
         /* Position Icons */
         mui-icon-menu,
         mui-icon-close { position: absolute; top: 0; left: 0; }
-
         /* Transition */
         :host([toggle]) mui-icon-menu { transform: scale(0); }
         :host([toggle]) mui-icon-close { transform: scale(1); }
@@ -32,7 +30,6 @@ class muiIconMenuClose extends HTMLElement {
         :host([toggle][rotate]) mui-icon-close { transform: scale(1) rotate(-360deg); }
         :host mui-icon-menu { transform-origin: 50% 50%; transition: 0.2s ease-in-out; }
         :host mui-icon-close { transform-origin: 50% 50%; transition: 0.2s ease-in-out; transform: scale(0); }
-
         /* Button adjustments */
         button { 
           width: inherit; 
@@ -51,18 +48,14 @@ class muiIconMenuClose extends HTMLElement {
           outline-width: medium; 
           outline-offset: var(--spacing-xx-tiny);
         }
-
         /* Inverted Button */
         :host([inverted]) button:focus { outline-color: var(--icon-color-reverse); }
         :host([inverted]) mui-icon-menu,
         :host([inverted]) mui-icon-close { fill: var(--icon-color-reverse); }
-
       </style>
-
       <button>
         <mui-icon-menu small></mui-icon-menu>
         <mui-icon-close small></mui-icon-close>
-
       </button>
     `;
 
