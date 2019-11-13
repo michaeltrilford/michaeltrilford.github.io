@@ -144,10 +144,10 @@ class muiNavbar extends HTMLElement {
     // On mouse over of main content, remove defined scroll attributes
     this.navbarMainEl.addEventListener("mouseover", () => {
       this.navbarMainEl.removeAttribute("onscroll", "fixed-view");
-      this.navbarMainEl.classList.remove("vertical-rythym");
-      this.navbarMainEl.classList.remove("required-css");
-      this.navbarMainEl.classList.remove("web-components");
-      this.navbarMainEl.classList.remove("optional-css");
+      // this.navbarMainEl.classList.remove("vertical-rythym");
+      // this.navbarMainEl.classList.remove("required-css");
+      // this.navbarMainEl.classList.remove("web-components");
+      // this.navbarMainEl.classList.remove("optional-css");
     });
 
     // On scroll of the navigation, add scroll atributes

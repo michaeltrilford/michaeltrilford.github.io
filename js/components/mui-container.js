@@ -15,7 +15,7 @@ class muiContainer extends HTMLElement {
         width: 95%;
         width: calc( 100% - 4.8rem );
         max-width: 118.0rem;
-        padding: 2.4rem 0;
+        padding-top: 2.4rem;
         min-width: 30.0rem;
         margin: 0 4.8rem; }
 

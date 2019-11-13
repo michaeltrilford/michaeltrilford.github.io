@@ -11,19 +11,27 @@ class muiNavbarBody extends HTMLElement {
 
       @import url("css/mui-reset.css");
 
+      :host {
+        padding: 2.4rem;
+      }
+
       @media (min-width: 960px) {
         :host {
           display: block;
           margin: 0;
           grid-column: 2 / 3;
           transition: background 1s linear;
-          padding: 0 2.4rem 2.4rem;
+          padding-top: 0;
         } 
       }
 
       :host([onscroll="fixed-view"]) {
-        height: 100vh;
         overflow: hidden;
+        padding: 0 2.4rem 0;
+      }
+
+      :host([onscroll="fixed-view"]) ::slotted(mui-container) {
+        height: 100vh;
       }
 
       :host([class="vertical-rythym"]) {

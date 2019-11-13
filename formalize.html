@@ -43,28 +43,26 @@
       <mui-container slot="main-content" center>
         <mui-heading headingsize="1">Formalize</mui-heading>
         <mui-card footer>
-          <mui-heading headingsize="3">Label & Input</mui-heading>
+          <mui-heading headingsize="3">Label, Input & Submit</mui-heading>
           <hr />
           <form action="#">
             <label for="first-name">First name:</label>
-            <input
-              type="text"
-              name="first-name"
-              id="first-name"
-              placeholder="Hank..."
-            />
-            <label for="last-name">Last name:</label>
-            <input
-              type="text"
-              id="last-name"
-              name="last-name"
-              placeholder="Jones..."
-            />
+            <input type="text" name="first-name" id="first-name" />
             <input type="submit" value="Submit now" />
           </form>
           <mui-card-footer>
             <mui-code>
-              &lt;/ol&gt;
+              &lt;form&gt;
+              <br />
+              &nbsp;&nbsp;&lt;label for="first-name"&gt;First
+              name:&lt;/label&gt;
+              <br />
+              &nbsp;&nbsp;&lt;input type="text" name="first-name"
+              id="first-name" /&gt;
+              <br />
+              &nbsp;&nbsp;&lt;input type="submit" value="Submit now" /&gt;
+              <br />
+              &lt;/form&gt;
             </mui-code>
           </mui-card-footer>
         </mui-card>
@@ -72,21 +70,19 @@
         <mui-card footer>
           <mui-heading headingsize="3">Label & Textarea</mui-heading>
           <hr />
-          <form action="#">
-            <label for="text-area-example"
-              >Write something about yourself:</label
-            >
-            <textarea
-              rows="4"
-              cols="50"
-              id="text-area-example"
-              placeholder="eg. My name is Mike, and I created this site..."
-            ></textarea>
-            <input type="submit" value="Submit now" />
-          </form>
+          <label for="text-area-example">Write something about yourself:</label>
+          <textarea rows="4" cols="50" id="text-area-example"></textarea>
           <mui-card-footer>
             <mui-code>
-              &lt;/ol&gt;
+              &lt;form&gt;
+              <br />
+              &nbsp;&nbsp;&lt;label for="text-area-example"&gt;Write something
+              about yourself:&lt;/label&gt;
+              <br />
+              &nbsp;&nbsp;&lt;textarea rows="4" cols="50" id="text-area-example"
+              &gt;&lt;/textarea&gt;
+              <br />
+              &lt;/form&gt;
             </mui-code>
           </mui-card-footer>
         </mui-card>
@@ -94,17 +90,23 @@
         <mui-card footer>
           <mui-heading headingsize="3">Fieldset & Legend</mui-heading>
           <hr />
-          <form action="#">
-            <fieldset>
-              <legend>Example of a fieldset</legend>
-              <label for="Name">Name:</label>
-              <input type="text" id="Name" />
-            </fieldset>
-            <input type="submit" value="Submit now" />
-          </form>
+          <fieldset>
+            <legend>Example of a fieldset</legend>
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" />
+          </fieldset>
           <mui-card-footer>
             <mui-code>
-              &lt;/ol&gt;
+              &lt;fieldset&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&lt;legend&gt;Example of a
+              fieldset&lt;/legend&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&lt;label for="Name">Name:&lt;/label&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&lt;input type="text" id="Name" /&gt;
+              <br />
+              &lt;/fieldset&gt;
             </mui-code>
           </mui-card-footer>
         </mui-card>
@@ -190,7 +192,29 @@
 
           <mui-card-footer>
             <mui-code>
-              &lt;/ol&gt;
+              &lt;fieldset&gt;
+              <br />
+              &nbsp;&nbsp;&lt;legend&gt;Pick all your favourite
+              fruit&lt;/legend&gt;
+              <br />
+              &nbsp;&nbsp;&lt;ul&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="applesC"
+              &gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input
+              type="checkbox" name="fruit" id="applesC" value="applesC"
+              /&gt;Apples&lt;/label &gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;...
+              <br />
+              &nbsp;&nbsp;&lt;/ul&gt;
+              <br />
+              &lt;/fieldset&gt;
             </mui-code>
           </mui-card-footer>
         </mui-card>
