@@ -1,15 +1,12 @@
 /* myApp */
 class muiNavbarToggle extends HTMLElement {
-
   static get observedAttributes() {
-    return ['link', 'title'];
+    return ["link", "title"];
   }
 
-  
-
   constructor() {
-    super(); 
-    this.attachShadow({ mode: 'open' });
+    super();
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -32,7 +29,7 @@ class muiNavbarToggle extends HTMLElement {
         z-index: 2; 
       }
 
-      @media (min-width: 60rem) {
+      @media (min-width: 960px) {
         :host {
           display: none; 
         } 
@@ -57,12 +54,12 @@ class muiNavbarToggle extends HTMLElement {
 
     <!-- Navigation Bar Toggle -->
     <slot></slot>
-    <a href="${this.getAttribute('link')}">${this.getAttribute('title')}</a> 
+    <a href="${this.getAttribute("link")}">${this.getAttribute("title")}</a> 
 
     `;
-    
+
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define('mui-navbar-toggle', muiNavbarToggle);
+customElements.define("mui-navbar-toggle", muiNavbarToggle);
