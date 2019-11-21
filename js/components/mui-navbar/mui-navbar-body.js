@@ -27,7 +27,7 @@ class muiNavbarBody extends HTMLElement {
 
       :host([onscroll="fixed-view"]) {
         overflow: hidden;
-        padding: 0 2.4rem 0;
+
       }
 
       :host([onscroll="fixed-view"]) ::slotted(mui-container) {

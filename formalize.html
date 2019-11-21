@@ -112,78 +112,108 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Radio & Checklist</mui-heading>
+          <mui-heading headingsize="3">Radio buttons</mui-heading>
           <hr />
           <form action="#">
             <fieldset>
               <legend>Pick one of your favourite fruit</legend>
               <ul>
                 <li>
-                  <label for="applesR"
+                  <label for="apples"
                     ><input
                       type="radio"
                       name="fruit"
-                      id="applesR"
-                      value="applesR"
+                      id="apples"
+                      value="apples"
                     />Apples</label
                   >
                 </li>
                 <li>
-                  <label for="orangesR"
+                  <label for="oranges"
                     ><input
                       type="radio"
                       name="fruit"
-                      id="orangesR"
-                      value="orangesR"
+                      id="oranges"
+                      value="oranges"
                     />Oranges</label
                   >
                 </li>
                 <li>
-                  <label for="pearsR"
+                  <label for="pears"
                     ><input
                       type="radio"
                       name="fruit"
-                      id="pearsR"
-                      value="pearsR"
+                      id="pears"
+                      value="pears"
                     />Pears</label
                   >
                 </li>
               </ul>
             </fieldset>
           </form>
+          <mui-card-footer>
+            <mui-code>
+              &lt;fieldset&gt;
+              <br />
+              &nbsp;&nbsp;&lt;legend&gt;Pick one of your favourite
+              fruit&lt;/legend&gt;
+              <br />
+              &nbsp;&nbsp;&lt;ul&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="applesC"
+              &gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio"
+              name="fruit" id="apples" value="apples" /&gt;Apples&lt;/label &gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
+              <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;...
+              <br />
+              &nbsp;&nbsp;&lt;/ul&gt;
+              <br />
+              &lt;/fieldset&gt;
+            </mui-code>
+          </mui-card-footer>
+        </mui-card>
 
+        <mui-card footer>
+          <mui-heading headingsize="3">Checklist</mui-heading>
+          <hr />
           <form action="#">
             <fieldset>
-              <legend>Pick all your favourite fruit</legend>
+              <legend>Pick all your favourite vegetables</legend>
               <ul>
                 <li>
-                  <label for="applesC"
+                  <label for="carrots"
                     ><input
                       type="checkbox"
-                      name="fruit"
-                      id="applesC"
-                      value="applesC"
-                    />Apples</label
+                      name="vegetables"
+                      id="carrots"
+                      value="carrots"
+                    />Carrots</label
                   >
                 </li>
                 <li>
-                  <label for="orangesC"
+                  <label for="eggplants"
                     ><input
                       type="checkbox"
-                      name="fruit"
-                      id="orangesC"
-                      value="orangesC"
-                    />Oranges</label
+                      name="vegetables"
+                      id="eggplants"
+                      value="eggplants"
+                    />Eggplants</label
                   >
                 </li>
                 <li>
-                  <label for="pearsC"
+                  <label for="zuchini"
                     ><input
                       type="checkbox"
-                      name="fruit"
-                      id="pearsC"
-                      value="pearsC"
-                    />Pears</label
+                      name="vegetables"
+                      id="zuchini"
+                      value="zuchini"
+                    />Zuchini</label
                   >
                 </li>
               </ul>
@@ -194,19 +224,19 @@
             <mui-code>
               &lt;fieldset&gt;
               <br />
-              &nbsp;&nbsp;&lt;legend&gt;Pick all your favourite
-              fruit&lt;/legend&gt;
+              &nbsp;&nbsp;&lt;legend&gt;Pick all of your favourite
+              vegetables&lt;/legend&gt;
               <br />
               &nbsp;&nbsp;&lt;ul&gt;
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;
               <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="applesC"
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="zuchini"
               &gt;
               <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input
-              type="checkbox" name="fruit" id="applesC" value="applesC"
-              /&gt;Apples&lt;/label &gt;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="radio"
+              name="vegetables" id="zuchini" value="zuchini"
+              /&gt;Zuchini&lt;/label &gt;
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li&gt;
               <br />

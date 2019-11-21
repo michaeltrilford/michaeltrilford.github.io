@@ -45,12 +45,13 @@ class muiNavbar extends HTMLElement {
           align-items: center;
           text-align: left;
           position: fixed;
+          top: 0;
           opacity: 1;
           transform: translate(0, 0);
           z-index: 100;
           width: 32rem;
           transition: none !important;
-          height: 100vh;
+          height: 100%;
         }
         mui-navbar-inner::-webkit-scrollbar {
           display: none; 
