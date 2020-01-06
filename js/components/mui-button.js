@@ -1,8 +1,8 @@
 /* Mui Button */
 class muiButton extends HTMLElement {
   constructor() {
-    super(); 
-    this.attachShadow({ mode: 'open' });
+    super();
+    this.attachShadow({ mode: "open" });
   }
   connectedCallback() {
     let html = `
@@ -31,7 +31,7 @@ class muiButton extends HTMLElement {
       /* Rounded 
       ========================================= */
       :host([rounded]) button {
-        border-radius: 1.5em; }
+        border-radius: 1.8rem; }
       /* ===================================== */
 
 
@@ -71,9 +71,9 @@ class muiButton extends HTMLElement {
     <button>
       <slot></slot>
     </button>`;
-    
+
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define('mui-button', muiButton);
+customElements.define("mui-button", muiButton);

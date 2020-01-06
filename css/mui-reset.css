@@ -46,13 +46,13 @@ textarea {
   margin: var(--spacing-clear);
 }
 
-:focus,
-button:focus,
-input:focus,
-textarea:focus,
-select:focus,
-a:focus,
-summary:focus {
+:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible,
+summary:focus-visible {
   outline: var(--border-thin-ridge);
 }
 
