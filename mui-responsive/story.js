@@ -6,19 +6,91 @@ class storyResponsive extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: "open" });
     const styles = `
       :host { display: block; }
+      .local-ring {
+        height: 5rem;
+        -webkit-transform: scale(1.2157);
+        transform: scale(1.2157);
+        width: 5rem;
+      }
+      .local-ring_text {
+        fill: #1b2830;
+        font-size: 1.2rem;
+        -webkit-transform: translateY(0.34em);
+        transform: translateY(0.34em);
+        font-weight: bold;
+      }
     `;
 
-    const ProgressChip = `
-      <div style="width: 10px; height: 10px; background: salmon;"></div>
+    const LocalRing = `
+      <div class="local-ring" style="margin: 0 auto;">
+        <svg 
+          width="100%" 
+          height="100%" 
+          viewBox="0 0 42 42" 
+          style="text-anchor: middle; width: 100%;"
+        >
+          <circle class="local-ring__hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+          <circle class="local-ring__ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="4"></circle>
+          <circle class="local-ring__segment VE4Mc" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#000000" stroke-width="4" stroke-dasharray="50,50" stroke-dashoffset="25"></circle>
+          <g><text x="50%" y="50%" class="local-ring_text">2/4</text></g>
+        </svg>
+      </div>
     `;
 
-    const ProgressSection = `
-      <mui-h-stack space="4px">
-        ${ProgressChip}
-        ${ProgressChip}
-        ${ProgressChip}
-        ${ProgressChip}
-      </mui-h-stack>
+    const ProgressTableColumns = `1fr 1fr 1fr 92px`;
+
+    const ProgressTable = `
+      <mui-table> 
+        <mui-row-group heading> 
+          <mui-row columns="${ProgressTableColumns}"> 
+            <mui-cell heading>File</mui-cell> 
+            <mui-cell heading>Due date</mui-cell> 
+            <mui-cell heading>Status</mui-cell> 
+            <mui-cell heading>Automation</mui-cell> 
+          </mui-row> 
+        </mui-row-group> 
+        <mui-row-group> 
+          <mui-row columns="${ProgressTableColumns}"> 
+            <mui-cell align-y="center"><mui-body small>Alison Max</mui-body></mui-cell> 
+            <mui-cell align-y="center"><mui-v-stack space="var(--spacing-xx-tiny)"><mui-body small>27/07/2020</mui-body><mui-badge>Quarterly</mui-badge></mui-v-stack></mui-cell> 
+            <mui-cell align-y="center"><mui-badge>Unlodged</mui-badge></mui-cell> 
+            <mui-cell align-y="center">${LocalRing}</mui-cell> 
+          </mui-row> 
+        </mui-row-group> 
+      </mui-table>
+    `;
+
+    const ProgressSlat = `
+        <mui-v-stack space="var(--spacing-small)">
+          ${LocalRing}
+          <mui-heading 
+            size="6" 
+            style="width: 100%; text-align: center;"
+          >
+            Transactions automated
+          </mui-heading>
+          
+          <mui-rule></mui-rule>
+
+        </mui-v-stack>
+
+        
+        <mui-grid col="1fr 1fr 1fr">
+          <mui-v-stack space="var(--spacing-xxx-tiny)">
+            <mui-body small><strong>Client</strong></mui-body>
+            <mui-body small>Alison Max</mui-body>
+          </mui-v-stack>
+          <mui-v-stack space="var(--spacing-xxx-tiny)">
+            <mui-body small style="text-align: center;"><strong>Due date</strong></mui-body>
+            <mui-body small style="text-align: center;">27/07/2020</mui-body>
+          </mui-v-stack>
+          <mui-v-stack space="var(--spacing-xxx-tiny)">
+            <mui-body small style="text-align: right;"><strong>Status</strong></mui-body>
+            <mui-body small style="text-align: right;">Unlodged</mui-body>
+          </mui-v-stack>
+        </mui-grid>
+
+
     `;
 
     shadowRoot.innerHTML = `
@@ -47,28 +119,15 @@ class storyResponsive extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Adjust layout">
+        <story-card title="Advanced example">
 
-          <mui-responsive slot="body" breakpoint="600">
+          <mui-responsive slot="body" breakpoint="1080">
             <mui-h-stack slot="showAbove" space="16px" alignY="center">
-              <mui-heading size="6">Progress</mui-heading>
-              <mui-h-stack space="8px" alignY="center">
-                ${ProgressSection}
-                ${ProgressSection}
-                ${ProgressSection}
-                ${ProgressSection}
-              </mui-h-stack>
+              ${ProgressTable}
             </mui-h-stack>
-
-            <mui-v-stack slot="showBelow" space="24px">
-              <mui-heading size="4" style="width: 100%; text-align: center;">Progress</mui-heading>
-              <mui-h-stack space="8px" alignY="center" alignX="center">
-                ${ProgressSection}
-                ${ProgressSection}
-                ${ProgressSection}
-                ${ProgressSection}
-              </mui-h-stack>
-            </mui-v-stack>
+            <div slot="showBelow">
+              ${ProgressSlat}
+            </div>
           </mui-responsive>
 
           <mui-code slot="footer">
