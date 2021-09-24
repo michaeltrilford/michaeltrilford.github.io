@@ -1,149 +1,29 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- MUI Dependencies -->
-    <link rel="stylesheet" href="css/mui-tokens.css" />
-    <link rel="stylesheet" href="css/mui-reset.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/skeleton.css"></link>
+  <script src="js/vendor/index.js"></script>
+</head>
 
-    <!-- Author Adjustments -->
-    <link rel="stylesheet" href="css/author.css" />
+<body onload="reveal();">
 
-    <!-- Application layout -->
-    <script src="js/components/mui-navbar/mui-navbar.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-home.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-group.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-link.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-toggle.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-body.js"></script>
+    <div id="loader" class="skeleton">
+      <div class="skeleton_nav"></div>
+      <div class="skeleton_body"></div>
+    </div>
 
-    <script src="js/components/mui-icons/mui-icon-menu.js"></script>
-    <script src="js/components/mui-icons/mui-icon-close.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-menu-close.js"></script>
+    <div style="display: none;" id="app">
+      <story-cards></story-cards>
+    </div>
 
-    <script src="js/components/mui-container.js"></script>
-    <script src="js/components/mui-card.js"></script>
-    <script src="js/components/mui-card-footer.js"></script>
-    <script src="js/components/mui-code.js"></script>
+    <script src="js/vendor/load-page/index.js"></script>
 
-    <!-- Application content -->
-    <script src="js/components/mui-heading.js"></script>
-    <script src="js/components/mui-paragraph.js"></script>
-    <script src="js/components/mui-link.js"></script>
-    <script src="js/components/mui-rule.js"></script>
-    <script src="js/components/mui-button.js"></script>
-    <script src="js/components/mui-image.js"></script>
-    <script src="js/components/mui-button-group.js"></script>
-  </head>
-
-  <body>
-    <mui-navbar>
-      <mui-container slot="main-content" center>
-        <mui-heading headingsize="1">Card</mui-heading>
-        <mui-paragraph small
-          >The <mui-link href="#">mui-base.css</mui-link> associated with MUI
-          Design System is recommended, as it will style the vanilla HTML
-          elements out-of-the-box. If you don't want to include
-          <mui-link href="#">mui-base.css</mui-link> in your project and elect
-          to style your elements from the ground up, that's fine.</mui-paragraph
-        >
-
-        <mui-card footer>
-          <mui-card>
-            <mui-heading tinymargin headingsize="3">Basic card</mui-heading>
-            <mui-paragraph
-              >Etiam porta sem malesuada magna mollis euismod. Fusce dapibus,
-              tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum massa justo sit amet risus.</mui-paragraph
-            >
-          </mui-card>
-          <mui-card-footer>
-            <mui-code>
-              &lt;mui-card&gt;
-              <br />
-              &nbsp;&nbsp;&lt;mui-heading headingsize="3"&gt;Basic
-              card&lt;/mui-heading&gt; &nbsp;&nbsp;&lt;mui-paragraph&gt;Basic
-              card&lt;/mui-paragraph&gt;
-              <br />
-              &lt;/mui-card&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-
-        <mui-card footer>
-          <mui-card footer>
-            <mui-heading headingsize="3"
-              >Card with actions in the footer</mui-heading
-            >
-            <mui-card-footer actions>
-              <mui-button-group right-aligned>
-                <mui-button secondary>Cancel</mui-button>
-                <mui-button primary>Submit</mui-button>
-                <mui-button warning>Delete</mui-button>
-              </mui-button-group>
-            </mui-card-footer>
-          </mui-card>
-          <mui-card-footer>
-            <mui-code>
-              &lt;mui-card footer&gt;
-              <br />
-              &nbsp;&nbsp;&lt;mui-heading headingsize="3"&gt;Card with
-              footer&lt;/mui-heading&gt;
-              <br />
-              &nbsp;&nbsp;&lt;mui-card-footer actions&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button-group right-aligned&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button
-              secondary>Cancel&lt;/mui-button&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button
-              primary>Submit&lt;/mui-button&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button
-              warning>Delete&lt;/mui-button&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button-group&gt;
-              <br />
-              &nbsp;&nbsp;&lt;mui-card-footer&gt;
-              <br />
-              &lt;/mui-card&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-
-        <mui-card footer>
-          <mui-card footer>
-            <mui-heading headingsize="3">Card with footer</mui-heading>
-            <mui-card-footer>
-              <mui-image>
-                <img slot="image" src="images/image.png" />
-              </mui-image>
-            </mui-card-footer>
-          </mui-card>
-          <mui-card-footer>
-            <mui-code>
-              &lt;mui-card footer&gt;
-              <br />
-              &nbsp;&nbsp;&lt;mui-heading headingsize="3"&gt;Card with
-              footer&lt;/mui-heading&gt;
-              <br />
-              &nbsp;&nbsp;&lt;mui-card-footer&gt;
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;... &nbsp;&nbsp;
-              <br />
-              &nbsp;&nbsp;&lt;mui-card-footer&gt;
-              <br />
-              &lt;/mui-card&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-      </mui-container>
-    </mui-navbar>
   </body>
+
 </html>

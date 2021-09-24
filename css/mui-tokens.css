@@ -9,6 +9,7 @@
   --font-size-link: 1.6rem;
   --font-size-button: 1.6rem;
   --font-size-text: 1.6rem;
+  --font-size-text-large: 1.8rem;
   --font-size-text-small: 1.4rem;
   --font-size-text-tiny: 1.2rem;
   --font-size-heading-tiny: 1.6rem;
@@ -21,7 +22,6 @@
   --font-size-heading-xxx-large: 7.2rem;
   --font-size-heading-xxxx-large: 8.4rem;
   --font-size-heading-xxxxx-large: 9.6rem;
-  --root-font-size: 46.875%;
 
   /* Palette tokens */
   --dark-grey-palette: #333;
@@ -32,12 +32,21 @@
   --white-palette: #ffffff;
   --white-palette-transparent-50: hsla(0, 0%, 100%, 0.5);
   --red-palette: #f74e4e;
+  --orange-palette: orange;
+  --green-palette: #00bd00;
+  --blue-palette: blue;
 
   /* Radius */
   --radius-clear: 0;
   --radius-card: 6px;
   --radius-alert: 4px;
+  --radius-button: 4px;
   --radius-badge: 4px;
+
+  --radius-tiny: 4px;
+  --radius-small: 8px;
+  --radius-medium: 16px;
+  --radius-large: 24px;
 
   /* Border */
   --border-thin: 1px solid rgba(0, 0, 0, 0.1);
@@ -52,9 +61,10 @@
   --box-shadow-faux-border-thin-inset: 0 0 0 1px var(--light-grey-palette);
   --box-shadow-faux-border-top-thin: inset 0 -1px 0 0 var(--light-grey-palette);
 
-  --border-alert-important: 2px solid var(--yellow-palette);
+  --border-alert-info: 2px solid var(--blue-palette);
   --border-alert-success: 2px solid var(--green-palette);
-  --border-alert-warning: 2px solid var(--red-palette);
+  --border-alert-error: 2px solid var(--red-palette);
+  --border-alert-warning: 2px solid var(--orange-palette);
 
   /* Spacing */
   --spacing-clear: 0;
@@ -80,8 +90,6 @@
   --text-body-color: var(--dark-grey-palette);
   --selection-text-color: var(--white-palette);
 
-  --alert-warning-color: var(--red-palette);
-
   /* Link object */
   --link-color: var(--dark-grey-palette);
   --link-color-reverse: var(--white-palette);
@@ -100,6 +108,7 @@
   --button-primary-color: var(--white-palette);
   --button-secondary-background: var(--white-palette);
   --button-warning-background: var(--red-palette);
+  --button-icon-only-width: 4rem;
 
   /* Summary object */
   --summary-background: var(--white-palette);
@@ -116,8 +125,6 @@
 
   /* Specific tokens
   =======================================================================================*/
-  --vertical-rythym: #b5ffb5;
   --required-css: salmon;
-  --optional-css: #ddb8ff;
   --web-components: skyblue;
 }

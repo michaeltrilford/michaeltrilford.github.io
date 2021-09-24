@@ -1,88 +1,29 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- MUI Dependencies -->
-    <link rel="stylesheet" href="css/mui-tokens.css" />
-    <link rel="stylesheet" href="css/mui-reset.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/skeleton.css"></link>
+  <script src="js/vendor/index.js"></script>
+</head>
 
-    <!-- Author Adjustments -->
-    <link rel="stylesheet" href="css/author.css" />
+<body onload="reveal();">
 
-    <!-- Application layout -->
-    <script src="js/components/mui-navbar/mui-navbar.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-home.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-group.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-link.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-toggle.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-body.js"></script>
+  <div id="loader" class="skeleton">
+    <div class="skeleton_nav"></div>
+    <div class="skeleton_body"></div>
+  </div>
 
-    <script src="js/components/mui-icons/mui-icon-menu.js"></script>
-    <script src="js/components/mui-icons/mui-icon-close.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-menu-close.js"></script>
+  <div style="display: none;" id="app">
+    <story-containers></story-containers>
+  </div>
 
-    <script src="js/components/mui-container.js"></script>
-    <script src="js/components/mui-card.js"></script>
-    <script src="js/components/mui-card-footer.js"></script>
-    <script src="js/components/mui-code.js"></script>
-    <script src="js/components/mui-heading.js"></script>
-  </head>
+  <script src="js/vendor/load-page/index.js"></script>
 
-  <body class="transformicons">
-    <mui-navbar>
-      <mui-container slot="main-content" center>
-        <mui-heading headingsize="1">Container</mui-heading>
+</body>
 
-        <mui-card footer>
-          <mui-heading headingsize="3">Small</mui-heading>
-          <mui-card-footer>
-            <mui-code>
-              &lt;mui-container small&gt;&lt;/mui-container&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-
-        <mui-card footer>
-          <mui-heading headingsize="3">Medium</mui-heading>
-          <mui-card-footer>
-            <mui-code>
-              &lt;mui-container medium&gt;&lt;/mui-container&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-
-        <mui-card footer>
-          <mui-heading headingsize="3">Large</mui-heading>
-          <mui-card-footer>
-            <mui-code>
-              &lt;mui-container large&gt;&lt;/mui-container&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-
-        <mui-card footer>
-          <mui-heading headingsize="3">Fluid</mui-heading>
-          <mui-card-footer>
-            <mui-code>
-              &lt;mui-container fluid&gt;&lt;/mui-container&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-
-        <mui-card footer>
-          <mui-heading headingsize="3">Center</mui-heading>
-          <mui-card-footer>
-            <mui-code>
-              &lt;mui-container center&gt;&lt;/mui-container&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-      </mui-container>
-    </mui-navbar>
-  </body>
 </html>

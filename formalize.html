@@ -1,50 +1,30 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- MUI Dependencies -->
-    <link rel="stylesheet" href="css/mui-tokens.css" />
-    <link rel="stylesheet" href="css/mui-reset.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/skeleton.css"></link>
+  <script src="js/vendor/index.js"></script>
+</head>
 
-    <!-- MUI Base CSS -->
-    <link rel="stylesheet" href="css/mui-base.css" />
+<body onload="reveal();">
 
-    <!-- Author Adjustments -->
-    <link rel="stylesheet" href="css/author.css" />
+  <div id="loader" class="skeleton">
+    <div class="skeleton_nav"></div>
+    <div class="skeleton_body"></div>
+  </div>
 
-    <!-- Application layout -->
-    <script src="js/components/mui-navbar/mui-navbar.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-home.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-group.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-link.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-toggle.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-body.js"></script>
-
-    <script src="js/components/mui-icons/mui-icon-menu.js"></script>
-    <script src="js/components/mui-icons/mui-icon-close.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-menu-close.js"></script>
-
-    <script src="js/components/mui-container.js"></script>
-    <script src="js/components/mui-card.js"></script>
-    <script src="js/components/mui-card-footer.js"></script>
-    <script src="js/components/mui-code.js"></script>
-
-    <!-- Application content -->
-    <script src="js/components/mui-heading.js"></script>
-  </head>
-
-  <body>
+  <div style="display: none;" id="app">
     <mui-navbar>
       <mui-container slot="main-content" center>
-        <mui-heading headingsize="1">Formalize</mui-heading>
+        <mui-heading size="1">Formalize</mui-heading>
         <mui-card footer>
-          <mui-heading headingsize="3">Label, Input & Submit</mui-heading>
-          <hr />
+          <mui-heading size="3">Label, Input & Submit</mui-heading>
+          <mui-rule></mui-rule>
           <form action="#">
             <label for="first-name">First name:</label>
             <input type="text" name="first-name" id="first-name" />
@@ -68,8 +48,8 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Label & Textarea</mui-heading>
-          <hr />
+          <mui-heading size="3">Label & Textarea</mui-heading>
+          <mui-rule></mui-rule>
           <label for="text-area-example">Write something about yourself:</label>
           <textarea rows="4" cols="50" id="text-area-example"></textarea>
           <mui-card-footer>
@@ -88,8 +68,8 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Fieldset & Legend</mui-heading>
-          <hr />
+          <mui-heading size="3">Fieldset & Legend</mui-heading>
+          <mui-rule></mui-rule>
           <fieldset>
             <legend>Example of a fieldset</legend>
             <label for="Name">Name:</label>
@@ -112,41 +92,20 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Radio buttons</mui-heading>
-          <hr />
+          <mui-heading size="3">Radio buttons</mui-heading>
+          <mui-rule></mui-rule>
           <form action="#">
             <fieldset>
               <legend>Pick one of your favourite fruit</legend>
               <ul>
                 <li>
-                  <label for="apples"
-                    ><input
-                      type="radio"
-                      name="fruit"
-                      id="apples"
-                      value="apples"
-                    />Apples</label
-                  >
+                  <label for="apples"><input type="radio" name="fruit" id="apples" value="apples" />Apples</label>
                 </li>
                 <li>
-                  <label for="oranges"
-                    ><input
-                      type="radio"
-                      name="fruit"
-                      id="oranges"
-                      value="oranges"
-                    />Oranges</label
-                  >
+                  <label for="oranges"><input type="radio" name="fruit" id="oranges" value="oranges" />Oranges</label>
                 </li>
                 <li>
-                  <label for="pears"
-                    ><input
-                      type="radio"
-                      name="fruit"
-                      id="pears"
-                      value="pears"
-                    />Pears</label
-                  >
+                  <label for="pears"><input type="radio" name="fruit" id="pears" value="pears" />Pears</label>
                 </li>
               </ul>
             </fieldset>
@@ -180,41 +139,23 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Checklist</mui-heading>
-          <hr />
+          <mui-heading size="3">Checklist</mui-heading>
+          <mui-rule></mui-rule>
           <form action="#">
             <fieldset>
               <legend>Pick all your favourite vegetables</legend>
               <ul>
                 <li>
-                  <label for="carrots"
-                    ><input
-                      type="checkbox"
-                      name="vegetables"
-                      id="carrots"
-                      value="carrots"
-                    />Carrots</label
-                  >
+                  <label for="carrots"><input type="checkbox" name="vegetables" id="carrots"
+                      value="carrots" />Carrots</label>
                 </li>
                 <li>
-                  <label for="eggplants"
-                    ><input
-                      type="checkbox"
-                      name="vegetables"
-                      id="eggplants"
-                      value="eggplants"
-                    />Eggplants</label
-                  >
+                  <label for="eggplants"><input type="checkbox" name="vegetables" id="eggplants"
+                      value="eggplants" />Eggplants</label>
                 </li>
                 <li>
-                  <label for="zuchini"
-                    ><input
-                      type="checkbox"
-                      name="vegetables"
-                      id="zuchini"
-                      value="zuchini"
-                    />Zuchini</label
-                  >
+                  <label for="zuchini"><input type="checkbox" name="vegetables" id="zuchini"
+                      value="zuchini" />Zuchini</label>
                 </li>
               </ul>
             </fieldset>
@@ -250,8 +191,8 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Select</mui-heading>
-          <hr />
+          <mui-heading size="3">Select</mui-heading>
+          <mui-rule></mui-rule>
           <form action="#">
             <label for="cars-select">Cars:</label>
             <select id="cars-select">
@@ -270,8 +211,8 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Optgroup</mui-heading>
-          <hr />
+          <mui-heading size="3">Optgroup</mui-heading>
+          <mui-rule></mui-rule>
           <form action="#">
             <label for="cars-optgroup">Cars:</label>
             <select id="cars-optgroup">
@@ -290,8 +231,8 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Option</mui-heading>
-          <hr />
+          <mui-heading size="3">Option</mui-heading>
+          <mui-rule></mui-rule>
           <form action="#">
             <label for="cars-option">Cars:</label>
             <select id="cars-option">
@@ -308,8 +249,8 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Datalist</mui-heading>
-          <hr />
+          <mui-heading size="3">Datalist</mui-heading>
+          <mui-rule></mui-rule>
           <form action="#">
             <label for="homeworld">Your home planet</label>
             <input type="text" name="homeworld" id="homeworld" list="planets" />
@@ -328,20 +269,13 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Newsletter Signup</mui-heading>
-          <hr />
+          <mui-heading size="3">Newsletter Signup</mui-heading>
+          <mui-rule></mui-rule>
           <form method="post" action="/mailer.php">
             <label for="email">Subscribe to my Newsletter</label>
-            <input
-              name="email"
-              id="email"
-              type="email"
-              placeholder="Enter your email address here"
-              title="Your e-mail address is required so I can reply"
-              required
-              maxlength="50"
-              pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
-            />
+            <input name="email" id="email" type="email" placeholder="Enter your email address here"
+              title="Your e-mail address is required so I can reply" required maxlength="50"
+              pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" />
             <input type="submit" value="Submit now" />
           </form>
           <mui-card-footer>
@@ -352,8 +286,8 @@
         </mui-card>
 
         <mui-card footer>
-          <mui-heading headingsize="3">Upload File</mui-heading>
-          <hr />
+          <mui-heading size="3">Upload File</mui-heading>
+          <mui-rule></mui-rule>
           <form action="#">
             <input type="File" value="File" />
             <input type="submit" value="Submit now" />
@@ -366,5 +300,11 @@
         </mui-card>
       </mui-container>
     </mui-navbar>
-  </body>
+
+  </div>
+
+  <script src="js/vendor/load-page/index.js"></script>
+
+</body>
+
 </html>

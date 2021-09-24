@@ -6,17 +6,6 @@
 /*  G - Transformicons               */
 /*  H - Lists                        */
 
-/* Links */
-a {
-  color: var(--link-color);
-}
-a:hover {
-  color: var(--link-color);
-}
-a:focus {
-  color: var(--link-color);
-}
-
 /* C - Baseline rhythm
 ========================================================================== */
 label {
@@ -26,14 +15,8 @@ summary,
 details p {
   margin-bottom: var(--spacing-clear);
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-p,
+
+/* li,
 small,
 header,
 table,
@@ -46,8 +29,6 @@ section,
 article,
 dl,
 menu,
-ul,
-ol,
 aside,
 div,
 hr,
@@ -58,50 +39,11 @@ select,
 input {
   margin: var(--spacing-clear);
   margin-bottom: var(--spacing-medium);
-}
+} */
 
 /* D - Typography:
 =======================================================================================*/
 
-/* Headings */
-h1 {
-  font-size: var(--font-size-heading-x-large);
-  line-height: 1.25;
-}
-h2 {
-  font-size: var(--font-size-heading-large);
-  line-height: 1.33333333333333;
-}
-h3 {
-  font-size: var(--font-size-heading-medium);
-  line-height: 1.5;
-}
-h4 {
-  font-size: var(--font-size-heading-small);
-  line-height: 1.14285714285714;
-}
-h5 {
-  font-size: var(--font-size-heading-x-small);
-  line-height: 1.33333333333333;
-  font-weight: bold;
-}
-h6 {
-  font-size: var(--font-size-heading-tiny);
-  line-height: 1.5;
-  font-weight: bold;
-}
-
-blockquote {
-  border-left: var(--border-thick);
-  padding-left: var(--spacing-small);
-  font-size: var(--spacing-medium);
-  line-height: var(--line-height-heading);
-}
-code,
-kbd,
-samp {
-  font-size: var(--font-size-text);
-}
 sub,
 sup,
 small {
@@ -116,46 +58,24 @@ sup {
 
 /* F - Horizontal rule:
 =======================================================================================*/
-hr {
+/* hr {
   border-top: var(--border-thin);
   margin-bottom: calc(var(--spacing-medium) - 1px);
-}
+} */
 
 /* H - Lists:
 =======================================================================================*/
-ul,
-ol {
-  padding: var(--spacing-clear);
-}
-ul li ul {
-  margin-top: 0.85714em;
-  margin-bottom: 1.71429em;
-  color: #777;
-  font-size: 0.875em;
-}
-ul li ul li {
-  line-height: 1.71429;
-  margin-bottom: 0.85714em;
-}
-li {
-  padding-left: 1em;
-  text-indent: -1em;
-  margin-bottom: var(--spacing-x-small);
-}
 
 /* H - Nav:
 =======================================================================================*/
-nav a {
-  text-decoration: none;
-}
-nav ol,
+/* nav ol,
 nav ul {
   list-style: none;
-}
+} */
 
 /* H - Figure
 =======================================================================================*/
-figure {
+/* figure {
   background: #eee;
 }
 figure img {
@@ -165,7 +85,7 @@ figure img {
 figure figcaption {
   padding: var(--spacing-medium);
   text-align: center;
-}
+} */
 
 /* H - Description list
 =======================================================================================*/
@@ -175,7 +95,7 @@ dt {
 
 /* H - Details
 =======================================================================================*/
-summary {
+/* summary {
   background: var(--summary-background);
   padding: var(--spacing-x-small);
 }
@@ -201,11 +121,11 @@ details[open] summary:before {
 details p {
   padding: var(--spacing-medium);
   background: var(--summary-background);
-}
+} */
 
 /* H - Table:
 =======================================================================================*/
-
+/* 
 table {
   background: var(--table-background);
 }
@@ -282,7 +202,7 @@ tr {
     text-align: left;
     margin-bottom: var(--spacing-clear);
   }
-}
+} */
 
 /* H - Formalize:
 =======================================================================================*/

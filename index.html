@@ -1,100 +1,67 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- MUI Dependencies -->
-    <link rel="stylesheet" href="css/mui-tokens.css" />
-    <link rel="stylesheet" href="css/mui-reset.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/skeleton.css"></link>
+  <script src="js/vendor/index.js"></script>
+</head>
 
-    <!-- MUI Base CSS -->
-    <link rel="stylesheet" href="css/mui-base.css" />
+<body onload="reveal();" class="home">
 
-    <!-- Author Adjustments -->
-    <link rel="stylesheet" href="css/author.css" />
+  <div id="loader" class="skeleton">
+    <div class="skeleton_nav"></div>
+    <div class="skeleton_body"></div>
+  </div>
 
-    <!-- Application layout -->
-    <script src="js/components/mui-navbar/mui-navbar.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-home.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-group.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-link.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-toggle.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-body.js"></script>
-
-    <script src="js/components/mui-icons/mui-icon-menu.js"></script>
-    <script src="js/components/mui-icons/mui-icon-close.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-menu-close.js"></script>
-
-    <script src="js/components/mui-container.js"></script>
-    <script src="js/components/mui-card.js"></script>
-
-    <!-- Application content -->
-    <script src="js/components/mui-button.js"></script>
-    <script src="js/components/mui-paragraph.js"></script>
-    <script src="js/components/mui-link.js"></script>
-    <script src="js/components/mui-heading.js"></script>
-    <script src="js/components/mui-rule.js"></script>
-    <script src="js/components/mui-badge.js"></script>
-    <script src="js/components/mui-columns.js"></script>
-  </head>
-
-  <body class="home">
+  <div style="display: none;" id="app">
     <mui-navbar>
       <mui-container slot="main-content" center fluid>
         <main>
           <div class="mui-logo-wrapper">
-            <img
-              class="mui-logo"
-              alt="Mike's User Interface Logo"
-              src="./images/mui-logo.svg"
-            />
-            <img
-              class="mui-logo__left-line"
-              src="./images/mui-logo-left-line.svg"
-            />
+            <img class="mui-logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
+            <img class="mui-logo__left-line" src="./images/mui-logo-left-line.svg" />
           </div>
           <div class="mui-actions">
-            <mui-link
-              class="github-link"
-              target="_blank"
-              href="https://github.com/michaeltrilford/michaeltrilford.github.io"
-              button
-              primary
-              rounded
-              >View on Github</mui-link
-            >
+            <mui-link class="github-link" target="_blank"
+              href="https://github.com/michaeltrilford/michaeltrilford.github.io" button primary rounded>View on Github
+            </mui-link>
             <div class="mui-actions__secondary">
-              <mui-link target="_blank" href="https://codepen.io/trilm/"
-                >Codepen.io/trilm</mui-link
-              >
-              <mui-link target="_blank" href="https://michaeltrilford.co.nz"
-                >michaeltrilford.co.nz</mui-link
-              >
+              <mui-link target="_blank" href="https://codepen.io/trilm/">Codepen.io/trilm</mui-link>
+              <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
             </div>
           </div>
-          <mui-paragraph class="mui-introduction" tiny>
+          <mui-body class="mui-introduction" tiny>
             The components are not production-ready as they're using
             experimental Native Web Component. However, porting the styles and
             HTML structure components to front-end frameworks, such as React,
             Vue or Svelte, is very simple.
-          </mui-paragraph>
-          <mui-paragraph class="mui-technology" tiny>
+          </mui-body>
+          <mui-body class="mui-technology" tiny>
             The collection of patterns showcased come from my past explorations
             on
-            <mui-link target="_blank" href="https://codepen.io/trilm/"
-              >codepen.io/trilm</mui-link
-            >.
+            <mui-link target="_blank" href="https://codepen.io/trilm/">codepen.io/trilm</mui-link>.
             <br />
             <br />
             Svelte example:
             <a href="https://mui-svelte-sapper.trilfordm.now.sh">mui.svelte</a>
-          </mui-paragraph>
+          </mui-body>
         </main>
       </mui-container>
     </mui-navbar>
-  </body>
+  </div>
+
+  <script src="js/vendor/load-page/index.js"></script>
+
+</body>
+
 </html>
+
+
+
+
+

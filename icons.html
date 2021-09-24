@@ -1,287 +1,30 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- MUI Dependencies -->
-    <link rel="stylesheet" href="css/mui-tokens.css" />
-    <link rel="stylesheet" href="css/mui-reset.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/skeleton.css"></link>
+  <script src="js/vendor/index.js"></script>
+</head>
 
-    <!-- MUI Base CSS -->
-    <link rel="stylesheet" href="css/mui-base.css" />
+<body onload="reveal();">
 
-    <!-- Author Adjustments -->
-    <link rel="stylesheet" href="css/author.css" />
+  <div id="loader" class="skeleton">
+    <div class="skeleton_nav"></div>
+    <div class="skeleton_body"></div>
+  </div>
 
-    <!-- Application layout -->
-    <script src="js/components/mui-navbar/mui-navbar.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-home.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-group.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-link.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-toggle.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-body.js"></script>
+  <div style="display: none;" id="app">
+    <story-icon></story-icon>
+  </div>
 
-    <script src="js/components/mui-icons/mui-icon-menu.js"></script>
-    <script src="js/components/mui-icons/mui-icon-close.js"></script>
-    <script src="js/components/mui-icons/mui-icon-right-chevron.js"></script>
-    <script src="js/components/mui-icons/mui-icon-back.js"></script>
-    <script src="js/components/mui-icons/mui-icon-grid.js"></script>
-    <script src="js/components/mui-icons/mui-icon-add.js"></script>
-    <script src="js/components/mui-icons/mui-icon-subtract.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-menu-close.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-menu-back.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-grid-close.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-grid-back.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-add-subtract.js"></script>
+  <script src="js/vendor/load-page/index.js"></script>
 
-    <script src="js/components/mui-container.js"></script>
-    <script src="js/components/mui-card.js"></script>
-    <script src="js/components/mui-card-footer.js"></script>
-    <script src="js/components/mui-code.js"></script>
-    <script src="js/components/mui-heading.js"></script>
-    <script src="js/components/mui-paragraph.js"></script>
-    <script src="js/components/mui-link.js"></script>
-    <script src="js/components/mui-rule.js"></script>
-  </head>
 
-  <body class="icons">
-    <mui-navbar>
-      <mui-container slot="main-content" center>
-        <mui-heading headingsize="1">Icons</mui-heading>
-        <mui-paragraph small
-          >MUI provides base-level styling for Native HTML elements through the
-          optional <mui-link href="#">mui-base.css</mui-link>. It doesn't supply
-          the consumer with modifier classes to customise the user interface.
-          However, consumers are able to modify MUI web components by assigning
-          defined attributes, which can be found within the Web component
-          documentation.</mui-paragraph
-        >
-        <mui-card footer>
-          <mui-heading headingsize="3">Icons</mui-heading>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Icon</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Name:">Menu</td>
-                <td data-label="Icon:">
-                  <mui-icon-menu></mui-icon-menu>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Close</td>
-                <td data-label="Icon:">
-                  <mui-icon-close></mui-icon-close>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Chevron</td>
-                <td data-label="Icon:">
-                  <mui-icon-right-chevron></mui-icon-right-chevron>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Back</td>
-                <td data-label="Icon:">
-                  <mui-icon-back></mui-icon-back>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Grid</td>
-                <td data-label="Icon:">
-                  <mui-icon-grid></mui-icon-grid>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Add</td>
-                <td data-label="Icon:">
-                  <mui-icon-add></mui-icon-add>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Subtract</td>
-                <td data-label="Icon:">
-                  <mui-icon-subtract></mui-icon-subtract>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <mui-card-footer>
-            <mui-code>
-              // Required scripts to include in &lt;head&gt;
-              <br />
-              &lt;script
-              src="js/components/mui-icons/mui-icon-menu.js"&gt;&lt;/script&gt;
-              <br />
-              &lt;script
-              src="js/components/mui-icons/mui-icon-close.js"&gt;&lt;/script&gt;
-              <br />
-              &lt;script
-              src="js/components/mui-icons/mui-icon-back.js"&gt;&lt;/script&gt;
-              <br />
-              &lt;script
-              src="js/components/mui-icons/mui-icon-grid.js"&gt;&lt;/script&gt;
-              <br />
-              &lt;script
-              src="js/components/mui-icons/mui-icon-add.js"&gt;&lt;/script&gt;
-              <br />
-              &lt;script
-              src="js/components/mui-icons/mui-icon-subtract.js"&gt;&lt;/script&gt;
-              <br />
-              <mui-rule inverted margintop></mui-rule>
-              // Components
-              <br />
-              &lt;mui-icon-menu&gt;&lt;/mui-icon-menu&gt;
-              <br />
-              &lt;mui-icon-close&gt;&lt;/mui-icon-close&gt;
-              <br />
-              &lt;mui-icon-back&gt;&lt;/mui-icon-back&gt;
-              <br />
-              &lt;mui-icon-grid&gt;&lt;/mui-icon-grid&gt;
-              <br />
-              &lt;mui-icon-add&gt;&lt;/mui-icon-add&gt;
-              <br />
-              &lt;mui-icon-subtract&gt;&lt;/mui-icon-subtract&gt;
-              <mui-rule inverted margintop></mui-rule>
-              // Size properties
-              <br />
-              &lt;mui-icon-menu tiny&gt;&lt;/mui-icon-menu&gt;
-              <br />
-              &lt;mui-icon-menu small&gt;&lt;/mui-icon-menu&gt;
-              <br />
-              &lt;mui-icon-menu medium&gt;&lt;/mui-icon-menu&gt;
-              <br />
-              &lt;mui-icon-menu large&gt;&lt;/mui-icon-menu&gt;
-              <br />
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
+</body>
 
-        <mui-card footer>
-          <mui-heading headingsize="3"
-            >Transformicons: Scale transform</mui-heading
-          >
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Icon</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Name:">Menu > Close</td>
-                <td data-label="Icon:">
-                  <mui-icon-menu-close></mui-icon-menu-close>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Menu > Back</td>
-                <td data-label="Icon:">
-                  <mui-icon-menu-back></mui-icon-menu-back>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Grid > Close</td>
-                <td data-label="Icon:">
-                  <mui-icon-grid-close></mui-icon-grid-close>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Grid > Back</td>
-                <td data-label="Icon:">
-                  <mui-icon-grid-back></mui-icon-grid-back>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Add > Subtract</td>
-                <td data-label="Icon:">
-                  <mui-icon-add-subtract></mui-icon-add-subtract>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <mui-card-footer>
-            <mui-code>
-              // MENU TO CLOSE
-              <br />
-              <br />
-              // Required scripts to include in &lt;head&gt;
-              <br />
-              &lt;script
-              src="js/components/icons/mui-icon-menu.js"&gt;&lt;/script&gt;
-              <br />
-              &lt;script
-              src="js/components/icons/mui-icon-close.js"&gt;&lt;/script&gt;
-              <br />
-              &lt;script
-              src="js/components/mui-icons/mui-transformicons/mui-icon-menu-close.js"&gt;&lt;/script&gt;
-              <br />
-              <br />
-              // Web component to include in &lt;body&gt;
-              <br />
-              Default:&nbsp;&lt;mui-icon-menu-close&gt;&lt;/mui-icon-menu-close&gt;
-              <br />
-              Rotate:&nbsp;&lt;mui-icon-menu-close
-              rotate&gt;&lt;/mui-icon-menu-close&gt;
-              <mui-rule inverted margintop></mui-rule>
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-        <mui-card>
-          <mui-heading headingsize="3"
-            >Transformicons: Rotate transform</mui-heading
-          >
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Icon</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Name:">Menu > Close</td>
-                <td data-label="Icon:">
-                  <mui-icon-menu-close rotate></mui-icon-menu-close>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Menu > Back</td>
-                <td data-label="Icon:">
-                  <mui-icon-menu-back rotate></mui-icon-menu-back>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Grid > Close</td>
-                <td data-label="Icon:">
-                  <mui-icon-grid-close rotate></mui-icon-grid-close>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Grid > Back</td>
-                <td data-label="Icon:">
-                  <mui-icon-grid-back rotate></mui-icon-grid-back>
-                </td>
-              </tr>
-              <tr>
-                <td data-label="Name:">Add > Subtract</td>
-                <td data-label="Icon:">
-                  <mui-icon-add-subtract rotate></mui-icon-add-subtract>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </mui-card>
-      </mui-container>
-    </mui-navbar>
-  </body>
 </html>

@@ -1,84 +1,29 @@
 <!DOCTYPE html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- MUI Dependencies -->
-    <link rel="stylesheet" href="css/mui-tokens.css" />
-    <link rel="stylesheet" href="css/mui-reset.css" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/skeleton.css"></link>
+  <script src="js/vendor/index.js"></script>
+</head>
 
-    <!-- MUI Base CSS -->
-    <link rel="stylesheet" href="css/mui-base.css" />
+<body onload="reveal();">
 
-    <!-- Author Adjustments -->
-    <link rel="stylesheet" href="css/author.css" />
+  <div id="loader" class="skeleton">
+    <div class="skeleton_nav"></div>
+    <div class="skeleton_body"></div>
+  </div>
 
-    <!-- Application layout -->
-    <script src="js/components/mui-navbar/mui-navbar.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-home.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-group.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-link.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-toggle.js"></script>
-    <script src="js/components/mui-navbar/mui-navbar-body.js"></script>
+  <div style="display: none;" id="app">
+    <story-accordion></story-accordion>
+  </div>
 
-    <script src="js/components/mui-icons/mui-icon-menu.js"></script>
-    <script src="js/components/mui-icons/mui-icon-close.js"></script>
-    <script src="js/components/mui-icons/mui-icon-right-chevron.js"></script>
-    <script src="js/components/mui-icons/mui-transformicons/mui-icon-menu-close.js"></script>
+  <script src="js/vendor/load-page/index.js"></script>
 
-    <script src="js/components/mui-container.js"></script>
-    <script src="js/components/mui-card.js"></script>
-    <script src="js/components/mui-card-footer.js"></script>
-    <script src="js/components/mui-code.js"></script>
+</body>
 
-    <!-- Application content -->
-    <script src="js/components/mui-heading.js"></script>
-    <script src="js/components/mui-paragraph.js"></script>
-    <script src="js/components/mui-link.js"></script>
-    <script src="js/components/mui-rule.js"></script>
-    <script src="js/components/mui-simple-accordion.js"></script>
-  </head>
-
-  <body>
-    <mui-navbar>
-      <mui-container slot="main-content" center>
-        <mui-heading headingsize="1">Accordion</mui-heading>
-        <mui-paragraph small
-          >The <mui-link href="#">mui-base.css</mui-link> associated with MUI
-          Design System is recommended, as it will style the vanilla HTML
-          elements out-of-the-box. If you don't want to include
-          <mui-link href="#">mui-base.css</mui-link> in your project and elect
-          to style your elements from the ground up, that's fine.</mui-paragraph
-        >
-
-        <mui-card footer>
-          <mui-heading headingsize="3">Simple accordion</mui-heading>
-          <mui-rule></mui-rule>
-          <mui-simple-accordion>
-            <span slot="title">Hello</span>
-            <div slot="detail">
-              <ul>
-                <li>Praesent commodo cursus magna.</li>
-                <li>Vel scelerisque nisl consectetur et.</li>
-                <li>Donec id elit non mi porta gravida at eget metus.</li>
-              </ul>
-            </div>
-          </mui-simple-accordion>
-          <mui-card-footer>
-            <mui-code>
-              &lt;mui-columns auto&gt;
-              <br />
-              &nbsp;&nbsp;...
-              <br />
-              &lt;/mui-columns&gt;
-            </mui-code>
-          </mui-card-footer>
-        </mui-card>
-      </mui-container>
-    </mui-navbar>
-  </body>
 </html>
