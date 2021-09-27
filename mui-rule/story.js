@@ -8,6 +8,8 @@ class storyRule extends HTMLElement {
       :host { display: block; }
     `;
 
+    const TableColumns = `1fr 1fr`;
+
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
@@ -18,16 +20,93 @@ class storyRule extends HTMLElement {
 
       <mui-v-stack space="var(--spacing-large)">
 
-        <story-card title="...">
-
+        <story-card title="Horizontal">
           <div slot="body">
-            <mui-rule></mui-rule>
+            <mui-rule direction="horizontal" length="100%" style="margin: var(--spacing-large) 0;"></mui-rule>
           </div>
-          
           <mui-code slot="footer">
-            &lt;mui-rule&gt;&lt;/mui-rule&gt;
+            &lt;mui-rule
+            <br />
+            &nbsp;&nbsp;direction="horizontal"
+            <br />
+            &nbsp;&nbsp;length="100%"&gt;
+            <br />
+            &lt;/mui-rule&gt;
           </mui-code>
+        </story-card>
 
+        <story-card title="Vertical">
+          <div slot="body">
+            <mui-rule direction="vertical" length="100px"></mui-rule>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-rule
+            <br />
+            &nbsp;&nbsp;direction="vertical"
+            <br />
+            &nbsp;&nbsp;length="100px"&gt;
+            <br />
+            &lt;/mui-rule&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Horizontal">
+          <div slot="body">
+            <mui-rule direction="horizontal" length="100%" weight="2px" style="margin: var(--spacing-large) 0;"></mui-rule>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-rule
+            <br />
+            &nbsp;&nbsp;direction="horizontal"
+            <br />
+            &nbsp;&nbsp;length="100%"&gt;
+            <br />
+            &nbsp;&nbsp;weight="2px"&gt;
+            <br />
+            &lt;/mui-rule&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Vertical">
+          <div slot="body">
+            <mui-rule direction="vertical" length="100px" weight="2px"></mui-rule>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-rule
+            <br />
+            &nbsp;&nbsp;direction="vertical"
+            <br />
+            &nbsp;&nbsp;length="100px"&gt;
+            <br />
+            &nbsp;&nbsp;weight="2px"&gt;
+            <br />
+            &lt;/mui-rule&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Props">
+          <mui-table slot="body"> 
+            <mui-row-group heading> 
+              <mui-row columns="${TableColumns}"> 
+                <mui-cell heading>Prop</mui-cell> 
+                <mui-cell heading>Default</mui-cell> 
+              </mui-row> 
+            </mui-row-group> 
+            <mui-row-group> 
+              <mui-row columns="${TableColumns}"> 
+                <mui-cell align-y="center"><mui-body small>direction</mui-body></mui-cell> 
+                <mui-cell align-y="center"><mui-body small>"horizontal"</mui-body></mui-cell> 
+              </mui-row> 
+              <mui-row columns="${TableColumns}"> 
+                <mui-cell align-y="center"><mui-body small>length</mui-body></mui-cell> 
+                <mui-cell align-y="center"><mui-body small>"100%"</mui-body></mui-cell> 
+              </mui-row> 
+              <mui-row columns="${TableColumns}"> 
+                <mui-cell align-y="center"><mui-body small>weight</mui-body></mui-cell> 
+                <mui-cell align-y="center"><mui-body small>"1px"</mui-body></mui-cell> 
+              </mui-row> 
+            </mui-row-group> 
+          </mui-table>
         </story-card>
 
       </mui-v-stack>

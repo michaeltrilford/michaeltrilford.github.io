@@ -1,5 +1,5 @@
 /* Mui Accordion */
-class muiAccordion extends HTMLElement {
+class muiAccordionInline extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -8,17 +8,15 @@ class muiAccordion extends HTMLElement {
     let html = `
     <style>
 
-      @import url("./css/mui-reset.css");
-
-      :host {
-        display: block;
-        margin-bottom: var(--spacing-medium);
+      :host { 
+        display: inline-flex;
+        flex-direction: column;
       }
 
       mui-accordion-summary {
         display: flex;
         align-items: center;
-        margin-bottom: 0;
+        margin-bottom: var(--spacing-clear);
       }
 
       mui-accordion-summary mui-heading:hover {
@@ -26,7 +24,7 @@ class muiAccordion extends HTMLElement {
       }
   
       mui-icon-right-chevron {
-        margin-right: 0.375rem;
+        margin-right: var(--spacing-x-tiny);
         transition: 0.2s ease-in-out;
         fill: var(--grey-palette);
       }
@@ -37,7 +35,7 @@ class muiAccordion extends HTMLElement {
           
       mui-accordion-detail {
         display: block;
-        margin-bottom: 0;
+        margin-bottom: var(--spacing-clear);
         max-height: 0;
         transition: max-height .10s ease-in-out;
         overflow-y: hidden;
@@ -51,12 +49,10 @@ class muiAccordion extends HTMLElement {
       mui-accordion-detail-inner {
         display: block;
         margin-top: 1.2rem;
-        padding: 1.2rem;
-        padding-top: 0;
       }
 
       mui-accordion-detail-inner > *:last-child {
-        margin-bottom: 0
+        margin-bottom: var(--spacing-clear);
       }
 
     </style>
@@ -101,4 +97,4 @@ class muiAccordion extends HTMLElement {
   }
 }
 
-customElements.define("mui-accordion", muiAccordion);
+customElements.define("mui-accordion-inline", muiAccordionInline);

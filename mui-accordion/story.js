@@ -18,21 +18,55 @@ class storyAccordion extends HTMLElement {
 
       <mui-v-stack space="var(--spacing-large)">
 
-        <story-card title="Accordion">
-
+        <story-card 
+          title="Inline" 
+          description="The inline accordion is typically used within a block layout as a secondary UI element to a block element."
+        >
           <div slot="body">
-            <mui-accordion>
+            <mui-accordion-inline>
               <span slot="title">Hello</span>
-              <div slot="detail">
+              <div slot="detail" style="padding-left: var(--spacing-xx-tiny); padding-right: var(--spacing-xx-tiny);">
                 <mui-list as="ul">
                   <mui-list-item>Coffee</mui-list-item>
                   <mui-list-item>Tea</mui-list-item>
                   <mui-list-item>Milk</mui-list-item>
                 </mui-list>
               </div>
-            </mui-accordion>
+            </mui-accordion-inline>
           </div>
+          <mui-code slot="footer">
+            &lt;mui-accordion-inline&gt;
+            <br />
+            &nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
+            <br />
+            &nbsp;&nbsp;&lt;div slot="detail"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;...
+            <br />
+            &nbsp;&nbsp;&lt;/div&gt;
+            <br />
+            &lt;/mui-accordion-inline&gt;
+          </mui-code>
+        </story-card>
 
+        <story-card 
+          title="Block" 
+          description="The block accordion is typically used within a page layout full-width to the parent container."
+        >
+          <div slot="body">
+            <mui-accordion-block>
+              <span slot="title">Hello</span>
+              <div slot="detail">
+                  Hello
+              </div>
+            </mui-accordion-block>
+            <mui-accordion-block>
+              <span slot="title">Hello</span>
+              <div slot="detail">
+                  Hello
+              </div>
+            </mui-accordion-block>
+          </div>
           <mui-code slot="footer">
             &lt;mui-accordion&gt;
             <br />
@@ -45,9 +79,7 @@ class storyAccordion extends HTMLElement {
             &nbsp;&nbsp;&lt;/div&gt;
             <br />
             &lt;/mui-accordion&gt;
-
           </mui-code>
-
         </story-card>
 
       </mui-v-stack>

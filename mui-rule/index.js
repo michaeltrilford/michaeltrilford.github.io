@@ -1,45 +1,37 @@
-/* Mui Rule */
 class muiRule extends HTMLElement {
+
+  static get observedAttributes() {
+    return ['length', 'weight', 'direction'];
+  }
 
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
-  }
-
-  connectedCallback() {
-    let html = `
-    <style>
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    let direction = `horizontal`;
+    let length = `100%`;
+    let weight = '1px';
+    this.setAttribute("role", "presentation");
+    this.setAttribute("direction", this.getAttribute('direction') || direction);
+    this.setAttribute("length", this.getAttribute('length') || length);
+    this.setAttribute("weight", this.getAttribute('weight') || weight);
+    const styles = `
       :host {
         display: block;
+        background: var(--light-grey-palette);
       }
-      :host hr {
-        padding: 0;
-        box-sizing: content-box;
-        height: 0;
-        overflow: visible;
-        border: none;
-        border-top: var(--border-thin);
-        display: block;
-        width: 100%;
-        border: none;
-        margin: var(--spacing-clear);
-        border-top: var(--border-thin); 
-        margin-bottom: calc(var(--spacing-medium) - 1px);
+      :host([direction="horizontal"]) {
+        width: ${this.getAttribute('length') || length};
+        height: ${this.getAttribute('weight') || weight};
       }
-      :host([inverted]) hr {
-        border-top: var(--border-thin-inverted); 
+      :host([direction="vertical"]) {
+        height: ${this.getAttribute('length') || length};
+        width: ${this.getAttribute('weight') || weight};
       }
-      :host([nomarginbottom]) hr {
-        margin-bottom: var(--spacing-clear);
-      }
-      :host([margintop]) hr {
-        margin-top: calc(var(--spacing-medium) - 1px);
-      }
-    </style>
-    <hr />
     `;
+    shadowRoot.innerHTML = `
+    <style>${styles}</style>
+  `;
 
-    this.shadowRoot.innerHTML = html;
   }
 }
 

@@ -72,10 +72,7 @@ class storyResponsive extends HTMLElement {
           
           <mui-rule></mui-rule>
 
-        </mui-v-stack>
-
-        
-        <mui-grid col="1fr 1fr 1fr">
+          <mui-grid col="1fr 1fr 1fr">
           <mui-v-stack space="var(--spacing-xxx-tiny)">
             <mui-body small><strong>Client</strong></mui-body>
             <mui-body small>Alison Max</mui-body>
@@ -89,6 +86,11 @@ class storyResponsive extends HTMLElement {
             <mui-body small style="text-align: right;">Unlodged</mui-body>
           </mui-v-stack>
         </mui-grid>
+
+        </mui-v-stack>
+
+        
+
 
 
     `;

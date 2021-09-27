@@ -76,7 +76,8 @@ const AppComponent = AppCompArray.map(Items => {
 AppComponent
 
 const MuiCompArray = [
-  'mui-accordion/index.js',
+  'mui-accordion/accordion-inline.js',
+  'mui-accordion/accordion-block.js',
   'mui-alert/index.js',
   'mui-badge/index.js',
   'mui-button/index.js',
