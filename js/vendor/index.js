@@ -93,7 +93,6 @@ const MuiCompArray = [
   'mui-responsive/index.js',
   'mui-container/index.js',
   'mui-heading/index.js',
-  'mui-heading-group/index.js',
   'mui-icons/mui-transformicons/mui-icon-add-subtract.js',
   'mui-icons/mui-transformicons/mui-icon-grid-back.js',
   'mui-icons/mui-transformicons/mui-icon-grid-close.js',

@@ -50,7 +50,6 @@ class muiNavbar extends HTMLElement {
         <mui-navbar-link link="card.html" title="Cards"></mui-navbar-link>
         <mui-navbar-link link="container.html" title="Container"></mui-navbar-link>
         <mui-navbar-link link="headings.html" title="Headings"></mui-navbar-link>
-        <mui-navbar-link link="heading-group.html" title="Heading group"></mui-navbar-link>
         <mui-navbar-link link="body.html" title="Body"></mui-navbar-link>
         <mui-navbar-link link="image.html" title="Image"></mui-navbar-link>
         <mui-navbar-link link="links.html" title="Links"></mui-navbar-link>
