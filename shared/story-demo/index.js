@@ -24,7 +24,7 @@ class storyDemo extends HTMLElement {
         height: var(--height);
       }
     `;
-    const description = `<mui-body small>${this.getAttribute('description')}</mui-body>`
+    const description = `<mui-body variant="small">${this.getAttribute('description')}</mui-body>`
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>

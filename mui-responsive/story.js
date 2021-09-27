@@ -51,8 +51,8 @@ class storyResponsive extends HTMLElement {
         </mui-row-group> 
         <mui-row-group> 
           <mui-row columns="${ProgressTableColumns}"> 
-            <mui-cell align-y="center"><mui-body small>Alison Max</mui-body></mui-cell> 
-            <mui-cell align-y="center"><mui-v-stack space="var(--spacing-xx-tiny)"><mui-body small>27/07/2020</mui-body><mui-badge>Quarterly</mui-badge></mui-v-stack></mui-cell> 
+            <mui-cell align-y="center"><mui-body variant="small">Alison Max</mui-body></mui-cell> 
+            <mui-cell align-y="center"><mui-v-stack space="var(--spacing-xx-tiny)"><mui-body variant="small">27/07/2020</mui-body><mui-badge>Quarterly</mui-badge></mui-v-stack></mui-cell> 
             <mui-cell align-y="center"><mui-badge>Unlodged</mui-badge></mui-cell> 
             <mui-cell align-y="center">${LocalRing}</mui-cell> 
           </mui-row> 
@@ -74,16 +74,16 @@ class storyResponsive extends HTMLElement {
 
           <mui-grid col="1fr 1fr 1fr">
           <mui-v-stack space="var(--spacing-xxx-tiny)">
-            <mui-body small><strong>Client</strong></mui-body>
-            <mui-body small>Alison Max</mui-body>
+            <mui-body variant="small"><strong>Client</strong></mui-body>
+            <mui-body variant="small">Alison Max</mui-body>
           </mui-v-stack>
           <mui-v-stack space="var(--spacing-xxx-tiny)">
-            <mui-body small style="text-align: center;"><strong>Due date</strong></mui-body>
-            <mui-body small style="text-align: center;">27/07/2020</mui-body>
+            <mui-body variant="small" style="text-align: center;"><strong>Due date</strong></mui-body>
+            <mui-body variant="small" style="text-align: center;">27/07/2020</mui-body>
           </mui-v-stack>
           <mui-v-stack space="var(--spacing-xxx-tiny)">
-            <mui-body small style="text-align: right;"><strong>Status</strong></mui-body>
-            <mui-body small style="text-align: right;">Unlodged</mui-body>
+            <mui-body variant="small" style="text-align: right;"><strong>Status</strong></mui-body>
+            <mui-body variant="small" style="text-align: right;">Unlodged</mui-body>
           </mui-v-stack>
         </mui-grid>
 

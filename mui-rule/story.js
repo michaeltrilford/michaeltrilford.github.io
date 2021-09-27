@@ -94,16 +94,16 @@ class storyRule extends HTMLElement {
             </mui-row-group> 
             <mui-row-group> 
               <mui-row columns="${TableColumns}"> 
-                <mui-cell align-y="center"><mui-body small>direction</mui-body></mui-cell> 
-                <mui-cell align-y="center"><mui-body small>"horizontal"</mui-body></mui-cell> 
+                <mui-cell align-y="center"><mui-body variant="small">direction</mui-body></mui-cell> 
+                <mui-cell align-y="center"><mui-body variant="small">"horizontal"</mui-body></mui-cell> 
               </mui-row> 
               <mui-row columns="${TableColumns}"> 
-                <mui-cell align-y="center"><mui-body small>length</mui-body></mui-cell> 
-                <mui-cell align-y="center"><mui-body small>"100%"</mui-body></mui-cell> 
+                <mui-cell align-y="center"><mui-body variant="small">length</mui-body></mui-cell> 
+                <mui-cell align-y="center"><mui-body variant="small">"100%"</mui-body></mui-cell> 
               </mui-row> 
               <mui-row columns="${TableColumns}"> 
-                <mui-cell align-y="center"><mui-body small>weight</mui-body></mui-cell> 
-                <mui-cell align-y="center"><mui-body small>"1px"</mui-body></mui-cell> 
+                <mui-cell align-y="center"><mui-body variant="small">weight</mui-body></mui-cell> 
+                <mui-cell align-y="center"><mui-body variant="small">"1px"</mui-body></mui-cell> 
               </mui-row> 
             </mui-row-group> 
           </mui-table>
