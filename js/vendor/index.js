@@ -25,7 +25,6 @@ const StoryArray = [
   'mui-code/story.js',
   'mui-container/story.js',
   'mui-heading/story.js',
-  'mui-heading-group/story.js',
   'mui-icons/story.js',
   'mui-icons/story-icon-grid.js',
   'mui-image/story.js',

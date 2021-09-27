@@ -29,45 +29,45 @@ class muiButton extends HTMLElement {
 
       /* Primary 
       ========================================= */
-      :host([primary]) button {
+      :host([variant="primary"]) button {
         background-color: #333333;
         color: white; }
 
-      :host([primary]) button:focus {
+      :host([variant="primary"]) button:focus {
         color: white; }
       /* ===================================== */
 
 
       /* Secondary
       ========================================= */
-      :host([secondary]) button {
+      :host([variant="secondary"]) button {
         background-color: white;
         color: #333333;
         box-shadow: inset 0 0 0 1px #333333; }
 
-      :host([secondary]) button:focus {
+      :host([variant="secondary"]) button:focus {
         color: #333333; }
       /* ===================================== */
 
       /* Warning
       ========================================= */
-      :host([warning]) button {
+      :host([variant="warning"]) button {
         background-color: var(--button-warning-background);
         color: white; }
 
-      :host([warning]) button:focus {
+      :host([variant="warning"]) button:focus {
         color: #333333; }
       /* ===================================== */
 
       /* Icon only
       ========================================= */
-      :host([iconOnly]) button {
+      :host([variant="iconOnly"]) button {
         height: 32px;
         width: 32px;
         padding: var(--spacing-clear);
         box-shadow: none;
       }
-      :host([iconOnly]) button:hover {
+      :host([variant="iconOnly"]) button:hover {
         background: var(--light-grey-palette);
       }
       /* ===================================== */

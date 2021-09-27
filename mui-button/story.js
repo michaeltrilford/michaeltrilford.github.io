@@ -30,18 +30,18 @@ class storyButton extends HTMLElement {
 
         <story-card title="mui-button">
           <mui-button-group slot="body">
-            <mui-button secondary>Cancel</mui-button>
-            <mui-button primary>Submit</mui-button>
-            <mui-button warning>Delete</mui-button>
+            <mui-button variant="secondary">Cancel</mui-button>
+            <mui-button variant="primary">Submit</mui-button>
+            <mui-button variant="warning">Delete</mui-button>
           </mui-button-group>
           <mui-code slot="footer">
             &lt;mui-button-group&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-button secondary&gt;Cancel&lt;/mui-button&gt;
+            &nbsp;&nbsp;&lt;mui-button variant="secondary"&gt;Cancel&lt;/mui-button&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-button primary&gt;Submit&lt;/mui-button&gt;
+            &nbsp;&nbsp;&lt;mui-button variant="primary"&gt;Submit&lt;/mui-button&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-button warning&gt;Delete&lt;/mui-button&gt;
+            &nbsp;&nbsp;&lt;mui-button variant="warning"&gt;Delete&lt;/mui-button&gt;
             <br />
             &lt;/mui-button-group&gt;
           </mui-code>
@@ -49,18 +49,18 @@ class storyButton extends HTMLElement {
 
         <story-card title="mui-button-group">
           <mui-button-group right slot="body">
-            <mui-button secondary>Cancel</mui-button>
-            <mui-button primary>Submit</mui-button>
-            <mui-button warning>Delete</mui-button>
+            <mui-button variant="secondary">Cancel</mui-button>
+            <mui-button variant="primary">Submit</mui-button>
+            <mui-button variant="warning">Delete</mui-button>
           </mui-button-group>
           <mui-code slot="footer">
             &lt;mui-button-group right&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-button secondary&gt;Cancel&lt;/mui-button&gt;
+            &nbsp;&nbsp;&lt;mui-button variant="secondary"&gt;Cancel&lt;/mui-button&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-button primary&gt;Submit&lt;/mui-button&gt;
+            &nbsp;&nbsp;&lt;mui-button variant="primary"&gt;Submit&lt;/mui-button&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-button warning&gt;Delete&lt;/mui-button&gt;
+            &nbsp;&nbsp;&lt;mui-button variant="warning"&gt;Delete&lt;/mui-button&gt;
             <br />
             &lt;/mui-button-group&gt;
           </mui-code>

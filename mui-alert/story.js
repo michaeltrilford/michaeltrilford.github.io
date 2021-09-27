@@ -20,12 +20,12 @@ class storyAlert extends HTMLElement {
 
           <story-card title="Success">
             <div slot="body">
-              <mui-alert success>
+              <mui-alert variant="success">
                 Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
               </mui-alert>
             </div>
             <mui-code slot="footer">
-              &lt;mui-alert success&gt;
+              &lt;mui-alert variant="success"&gt;
               <br />
               &nbsp;&nbsp;...
               <br />
@@ -35,12 +35,12 @@ class storyAlert extends HTMLElement {
 
           <story-card title="Info">
             <div slot="body">
-              <mui-alert info>
+              <mui-alert variant="info">
                 Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
               </mui-alert>
             </div>
             <mui-code slot="footer">
-            &lt;mui-alert info&gt;
+            &lt;mui-alert variant="info"&gt;
             <br />
             &nbsp;&nbsp;...
             <br />
@@ -50,12 +50,12 @@ class storyAlert extends HTMLElement {
 
           <story-card title="Warning">
             <div slot="body">
-              <mui-alert warning>
+              <mui-alert variant="warning">
                 Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
               </mui-alert>
             </div>
             <mui-code slot="footer">
-            &lt;mui-alert warning&gt;
+            &lt;mui-alert variant="warning"&gt;
             <br />
             &nbsp;&nbsp;...
             <br />
@@ -65,12 +65,12 @@ class storyAlert extends HTMLElement {
 
           <story-card title="Error">
             <div slot="body">
-              <mui-alert error>
+              <mui-alert variant="error">
                 Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
               </mui-alert>
             </div>
             <mui-code slot="footer">
-            &lt;mui-alert error&gt;
+            &lt;mui-alert variant="error"&gt;
             <br />
             &nbsp;&nbsp;...
             <br />

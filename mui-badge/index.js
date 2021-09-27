@@ -1,13 +1,9 @@
-/* Mui Badge */
 class muiBadge extends HTMLElement {
+
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
-  }
-
-  connectedCallback() {
-    let html = `
-    <style>
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    const styles = `
       :host {
         display: inline-block;
         border-radius: var(--radius-badge);
@@ -16,12 +12,13 @@ class muiBadge extends HTMLElement {
         color: var(--white-palette);
         padding: var(--spacing-xx-tiny) var(--spacing-tiny);
       }
-    </style>
-    <slot></slot>
     `;
+    shadowRoot.innerHTML = `
+      <style>${styles}</style>
+      <slot></slot>
+  `;
 
-    this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define("mui-badge", muiBadge);
+customElements.define('mui-badge', muiBadge);

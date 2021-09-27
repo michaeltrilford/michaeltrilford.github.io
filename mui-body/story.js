@@ -19,21 +19,37 @@ class storyBody extends HTMLElement {
 
         <mui-v-stack space="var(--spacing-large)">
 
-          <story-card title="Badge">
+        <story-card title="Default">
+
+          <div slot="body">
+            <mui-body>Risus Mollis Dapibus</mui-body>
+          </div>
+
+          <mui-code slot="footer">
+            &lt;mui-body&gt; ... &lt;/mui-body&gt;
+          </mui-code>
+
+        </story-card>
+
+        <story-card title="Variants">
 
             <div slot="body">
               <mui-v-stack space="var(--spacing-medium)">
                 <div>
-                  <mui-heading size="4" tinymargin>Normal</mui-heading>
-                  <mui-body>Risus Mollis Dapibus</mui-body>
+                  <mui-heading size="4" tinymargin>Large</mui-heading>
+                  <mui-body variant="large">Risus Mollis Dapibus</mui-body>
+                </div>
+                <div>
+                  <mui-heading size="4" tinymargin>Medium</mui-heading>
+                  <mui-body variant="medium">Risus Mollis Dapibus</mui-body>
                 </div>
                 <div>
                   <mui-heading size="4" tinymargin>Small</mui-heading>
-                  <mui-body small>Risus Mollis Dapibus</mui-body>
+                  <mui-body variant="small">Risus Mollis Dapibus</mui-body>
                 </div>
                 <div>
                   <mui-heading size="4" tinymargin>Tiny</mui-heading>
-                  <mui-body tiny>Risus Mollis Dapibus</mui-body>
+                  <mui-body variant="tiny">Risus Mollis Dapibus</mui-body>
                 </div>
               </mui-v-stack>
             </div>
