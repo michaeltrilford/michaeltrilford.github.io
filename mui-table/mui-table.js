@@ -18,7 +18,6 @@ class muiTable extends HTMLElement {
         width: 100%;
         background: var(--table-background);
         margin: var(--spacing-clear);
-        margin-bottom: var(--spacing-medium);
       }
     </style>
     <slot></slot>

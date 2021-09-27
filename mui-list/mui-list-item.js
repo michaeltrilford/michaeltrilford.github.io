@@ -20,6 +20,9 @@ class muiListItem extends HTMLElement {
         margin: var(--spacing-clear);
         margin-bottom: var(--spacing-x-small);
       }
+      :host(:last-child) {
+        margin: var(--spacing-clear);
+      }
   `;
   
   shadowRoot.innerHTML = `

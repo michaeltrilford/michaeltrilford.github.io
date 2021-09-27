@@ -9,22 +9,28 @@ class muiImage extends HTMLElement {
 
     <style>
 
-      @import url("./css/mui-reset.css");
 
       :host {
-        display: inline-block;
-        margin-bottom: var(--spacing-medium);
+        display: flex;
       }
       figure {
         background: #eee;
+        display: block;
+        width: 100%;
+        margin: var(--spacing-clear);
       }
       ::slotted(img) {
         width: 100%;
         height: auto;
+        display: block;
+        border-style: none;
+        -ms-interpolation-mode: bicubic;
+        vertical-align: middle;
       }
       ::slotted(figcaption) {
         padding: var(--spacing-medium);
         text-align: center;
+        display: block;
       }
     </style>
 

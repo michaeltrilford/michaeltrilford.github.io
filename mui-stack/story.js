@@ -20,7 +20,7 @@ class storyStack extends HTMLElement {
           <mui-heading size="6">Default prop:</mui-heading>
           <mui-code style="border-radius: 8px;">space="var(--spacing-medium)"</mui-code>
         </mui-v-stack>
-        <mui-h-stack style="margin-bottom: var(--spacing-medium)">
+        <mui-h-stack>
           ${Box}
           ${Box}
           ${Box}
@@ -35,7 +35,7 @@ class storyStack extends HTMLElement {
           <mui-heading size="6">Default prop:</mui-heading>
           <mui-code style="border-radius: 8px;">space="var(--spacing-medium)"</mui-code>
         </mui-v-stack>
-        <mui-v-stack style="margin-bottom: var(--spacing-medium)">
+        <mui-v-stack>
           ${BlockBox}
           ${BlockBox}
           ${BlockBox}
