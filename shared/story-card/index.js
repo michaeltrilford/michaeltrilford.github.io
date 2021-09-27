@@ -39,6 +39,10 @@ class storyCard extends HTMLElement {
         background: skyblue;
       }
 
+      div {
+        padding: 4px;
+      }
+
       section:before,
       section:after { height: 1px; }
       div:before,
@@ -60,6 +64,7 @@ class storyCard extends HTMLElement {
         top: -4px;
         height: calc(4px + 100% + 4px);
         bottom: 4px;
+        left: 0;
       }
       div:after {
         top: -4px;
