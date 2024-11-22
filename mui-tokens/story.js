@@ -28,36 +28,7 @@ class storyTokens extends HTMLElement {
               token="--font-family" 
               output="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji", 'Segoe UI Symbol'">
             </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-link" 
-              output="1.6rem">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-button" 
-              output="1.6rem">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-text-300" 
-              output="1.6rem">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-text-400" 
-              output="1.8rem">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-text-200" 
-              output="1.4rem">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-text-100" 
-              output="1.2rem">
-            </mui-token-local-slat>
+
             <mui-token-local-slat 
               slot="body" 
               token="--font-size-100" 
@@ -108,6 +79,43 @@ class storyTokens extends HTMLElement {
               token="--font-size-1000" 
               output="9.6rem">
             </mui-token-local-slat>
+
+            <mui-token-local-slat 
+              slot="body" 
+              token="--font-size-link" 
+              output="1.6rem">
+            </mui-token-local-slat>
+
+            <mui-token-local-slat 
+              slot="body" 
+              token="--font-size-button" 
+              output="1.6rem">
+            </mui-token-local-slat>
+
+            <mui-token-local-slat 
+            slot="body" 
+            token="--font-size-text-100" 
+            output="1.2rem">
+            </mui-token-local-slat>
+            
+            <mui-token-local-slat 
+            slot="body" 
+            token="--font-size-text-200" 
+            output="1.4rem">
+            </mui-token-local-slat>
+            
+            <mui-token-local-slat 
+              slot="body" 
+              token="--font-size-text-300" 
+              output="1.6rem">
+            </mui-token-local-slat>
+
+            <mui-token-local-slat 
+              slot="body" 
+              token="--font-size-text-400" 
+              output="1.8rem">
+            </mui-token-local-slat>
+
           </story-card>
 
           <story-card title="Palette" nofooter>
