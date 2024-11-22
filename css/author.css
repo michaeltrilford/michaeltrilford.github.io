@@ -12,7 +12,7 @@
   row-gap: 2.4rem;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr auto auto auto;
-  margin-bottom: var(--spacing-clear);
+  margin-bottom: var(--spacing-0);
 }
 
 @media (min-width: 500px) {
@@ -124,10 +124,10 @@
 }
 
 .mui-actions__secondary {
-  margin-bottom: var(--spacing-clear);
-  font-size: var(--font-size-text-tiny);
-  margin-top: var(--spacing-small);
-  padding-left: var(--spacing-tiny);
+  margin-bottom: var(--spacing-0);
+  font-size: var(--font-size-text-100);
+  margin-top: var(--spacing-400);
+  padding-left: var(--spacing-200);
 }
 
 .mui-actions__secondary > mui-link:nth-of-type(1),

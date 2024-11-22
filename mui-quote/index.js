@@ -1,6 +1,5 @@
 /* Mui Quote */
 class muiQuote extends HTMLElement {
-
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -12,10 +11,10 @@ class muiQuote extends HTMLElement {
       :host { display: block; }
       blockquote {
         border-left: var(--border-thick);
-        padding-left: var(--spacing-medium);
-        font-size: var(--spacing-medium);
+        padding-left: var(--spacing-500);
+        font-size: var(--spacing-500);
         line-height: 1.5;
-        margin: var(--spacing-medium) var(--spacing-clear);
+        margin: var(--spacing-500) var(--spacing-0);
         font-style: italic;
       }
     </style>

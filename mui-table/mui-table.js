@@ -1,9 +1,8 @@
 /* Mui Rule */
 class muiTable extends HTMLElement {
-
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -17,7 +16,7 @@ class muiTable extends HTMLElement {
         border-color: grey;
         width: 100%;
         background: var(--table-background);
-        margin: var(--spacing-clear);
+        margin: var(--spacing-0);
       }
     </style>
     <slot></slot>
@@ -25,4 +24,4 @@ class muiTable extends HTMLElement {
   }
 }
 
-customElements.define('mui-table', muiTable);
+customElements.define("mui-table", muiTable);

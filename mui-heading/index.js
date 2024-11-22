@@ -1,15 +1,14 @@
 /* Mui Heading */
 class muiHeading extends HTMLElement {
-  
   static get observedAttributes() {
-    return ['size', 'weight'];
+    return ["size", "weight"];
   }
 
   constructor() {
-    super(); 
-    this.attachShadow({ mode: 'open' });
+    super();
+    this.attachShadow({ mode: "open" });
   }
-  
+
   connectedCallback() {
     let weight = `bold`;
     this.shadowRoot.innerHTML = `
@@ -19,45 +18,47 @@ class muiHeading extends HTMLElement {
           display: block;
         }
         h1 {
-          font-size: var(--font-size-heading-x-large);
+          font-size: var(--font-size-600);
           line-height: 1.25;
-          margin: var(--spacing-clear);
-          font-weight: ${this.getAttribute('weight') || weight};
+          margin: var(--spacing-0);
+          font-weight: ${this.getAttribute("weight") || weight};
         }
         h2 {
-          font-size: var(--font-size-heading-large);
+          font-size: var(--font-size-500);
           line-height: 1.33333333333333;
-          margin: var(--spacing-clear);
-          font-weight: ${this.getAttribute('weight') || weight};
+          margin: var(--spacing-0);
+          font-weight: ${this.getAttribute("weight") || weight};
         }
         h3 {
-          font-size: var(--font-size-heading-medium);
+          font-size: var(--font-size-400);
           line-height: 1.5;
-          margin: var(--spacing-clear);
-          font-weight: ${this.getAttribute('weight') || weight};
+          margin: var(--spacing-0);
+          font-weight: ${this.getAttribute("weight") || weight};
         }
         h4 {
-          font-size: var(--font-size-heading-small);
+          font-size: var(--font-size-300);
           line-height: 1.14285714285714;
-          margin: var(--spacing-clear);
-          font-weight: ${this.getAttribute('weight') || weight};
+          margin: var(--spacing-0);
+          font-weight: ${this.getAttribute("weight") || weight};
         }
         h5 {
-          font-size: var(--font-size-heading-x-small);
+          font-size: var(--font-size-200);
           line-height: 1.33333333333333;
-          font-weight: ${this.getAttribute('weight') || weight};
-          margin: var(--spacing-clear);
+          font-weight: ${this.getAttribute("weight") || weight};
+          margin: var(--spacing-0);
         }
         h6 {
-          font-size: var(--font-size-heading-tiny);
+          font-size: var(--font-size-100);
           line-height: 1.5;
-          font-weight: ${this.getAttribute('weight') || weight};
-          margin: var(--spacing-clear);
+          font-weight: ${this.getAttribute("weight") || weight};
+          margin: var(--spacing-0);
         }
       </style>
-      <h${this.getAttribute('size')}><slot></slot></h${this.getAttribute('size')}>
-    `; 
+      <h${this.getAttribute("size")}><slot></slot></h${this.getAttribute(
+      "size"
+    )}>
+    `;
   }
 }
 
-customElements.define('mui-heading', muiHeading);
+customElements.define("mui-heading", muiHeading);

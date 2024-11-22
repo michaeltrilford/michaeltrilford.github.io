@@ -9,11 +9,11 @@
 /* C - Baseline rhythm
 ========================================================================== */
 label {
-  margin-bottom: var(--spacing-tiny);
+  margin-bottom: var(--spacing-200);
 }
 summary,
 details p {
-  margin-bottom: var(--spacing-clear);
+  margin-bottom: var(--spacing-0);
 }
 
 /* li,
@@ -37,8 +37,8 @@ textarea,
 keygen,
 select,
 input {
-  margin: var(--spacing-clear);
-  margin-bottom: var(--spacing-medium);
+  margin: var(--spacing-0);
+  margin-bottom: var(--spacing-500);
 } */
 
 /* D - Typography:
@@ -47,7 +47,7 @@ input {
 sub,
 sup,
 small {
-  font-size: var(--font-size-text-tiny);
+  font-size: var(--font-size-text-100);
 }
 sub {
   bottom: -0.25em;
@@ -60,7 +60,7 @@ sup {
 =======================================================================================*/
 /* hr {
   border-top: var(--border-thin);
-  margin-bottom: calc(var(--spacing-medium) - 1px);
+  margin-bottom: calc(var(--spacing-500) - 1px);
 } */
 
 /* H - Lists:
@@ -83,7 +83,7 @@ figure img {
   height: auto;
 }
 figure figcaption {
-  padding: var(--spacing-medium);
+  padding: var(--spacing-500);
   text-align: center;
 } */
 
@@ -97,7 +97,7 @@ dt {
 =======================================================================================*/
 /* summary {
   background: var(--summary-background);
-  padding: var(--spacing-x-small);
+  padding: var(--spacing-300);
 }
 details {
   box-shadow: var(--box-shadow-faux-border-thin);
@@ -110,16 +110,16 @@ summary::-webkit-details-marker {
 }
 summary:before {
   content: "+";
-  padding-right: var(--spacing-x-small);
+  padding-right: var(--spacing-300);
   display: block;
   float: left;
-  width: var(--spacing-medium);
+  width: var(--spacing-500);
 }
 details[open] summary:before {
   content: "-";
 }
 details p {
-  padding: var(--spacing-medium);
+  padding: var(--spacing-500);
   background: var(--summary-background);
 } */
 
@@ -149,18 +149,18 @@ thead tr {
 
 td,
 th {
-  padding: var(--spacing-medium);
+  padding: var(--spacing-500);
 }
 
 @media only screen and (min-width: 31.25em) {
   td,
   th {
-    padding: var(--spacing-x-small) var(--spacing-medium);
+    padding: var(--spacing-300) var(--spacing-500);
   }
 }
 
 td {
-  box-shadow: inset 0 -1px 0 0 var(--light-grey-palette);
+  box-shadow: inset 0 -1px 0 0 var(--grey-200);
   display: flex;
   justify-content: space-between;
 }
@@ -181,7 +181,7 @@ td:before {
 
 @media only screen and (min-width: 53.125em) {
   td {
-    box-shadow: 0 -1px 0 0 var(--light-grey-palette);
+    box-shadow: 0 -1px 0 0 var(--grey-200);
     display: table-cell;
     text-align: left;
   }
@@ -192,15 +192,15 @@ td:before {
 
 tr {
   display: block;
-  margin-bottom: var(--spacing-medium);
-  box-shadow: inset 0 0 0 1px var(--light-grey-palette);
+  margin-bottom: var(--spacing-500);
+  box-shadow: inset 0 0 0 1px var(--grey-200);
 }
 @media only screen and (min-width: 53.125em) {
   tr {
     display: table-row;
     vertical-align: top;
     text-align: left;
-    margin-bottom: var(--spacing-clear);
+    margin-bottom: var(--spacing-0);
   }
 } */
 
@@ -208,11 +208,11 @@ tr {
 =======================================================================================*/
 
 label {
-  margin-bottom: var(--spacing-x-tiny);
+  margin-bottom: var(--spacing-100);
 }
 input,
 textarea {
-  border-radius: var(--radius-clear);
+  border-radius: var(--radius-0);
 }
 
 input[type="text"],
@@ -238,7 +238,7 @@ input[type="password"],
 input[type="search"],
 input[type="range"] {
   height: 4.2rem;
-  padding: var(--spacing-clear) var(--spacing-small);
+  padding: var(--spacing-0) var(--spacing-400);
 }
 
 input[type="text"],
@@ -258,7 +258,7 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 button {
-  padding: var(--spacing-clear) var(--spacing-small);
+  padding: var(--spacing-0) var(--spacing-400);
   line-height: 2.25;
   background: var(--button-primary-background);
   color: var(--button-primary-color);
@@ -283,13 +283,13 @@ button:active {
 
 /* Textarea styles */
 textarea {
-  padding: var(--spacing-small);
+  padding: var(--spacing-400);
   height: calc(6em + 0.375em);
 }
 
 /* Legend */
 legend {
-  padding: var(--spacing-clear) var(--spacing-tiny);
+  padding: var(--spacing-0) var(--spacing-200);
   margin-left: -0.8rem;
   background: var(--legend-background);
 }
@@ -297,18 +297,18 @@ legend {
 /* Fieldset styles & File Upload style */
 fieldset {
   border-radius: 0.3125em;
-  padding: var(--spacing-x-small) var(--spacing-medium);
-  padding-bottom: var(--spacing-clear);
+  padding: var(--spacing-300) var(--spacing-500);
+  padding-bottom: var(--spacing-0);
 }
 fieldset ul {
   list-style: none;
-  margin-bottom: var(--spacing-clear);
+  margin-bottom: var(--spacing-0);
 }
 fieldset ul label {
-  margin-bottom: var(--spacing-clear);
+  margin-bottom: var(--spacing-0);
 }
 fieldset li {
-  margin-bottom: var(--spacing-small);
+  margin-bottom: var(--spacing-400);
 }
 
 /* Select */
@@ -319,13 +319,13 @@ select {
 /* Radio & Checklist Styles */
 input[type="checkbox"],
 input[type="radio"] {
-  margin: 0 var(--spacing-tiny) 0 0;
+  margin: 0 var(--spacing-200) 0 0;
 }
 
 input[type="file"] {
-  font-size: var(--font-size-text-tiny);
-  padding: var(--spacing-small);
-  margin-bottom: var(--spacing-medium);
+  font-size: var(--font-size-text-100);
+  padding: var(--spacing-400);
+  margin-bottom: var(--spacing-500);
 }
 
 button:focus,

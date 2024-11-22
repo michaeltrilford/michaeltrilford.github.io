@@ -1,6 +1,4 @@
-
 class storyRule extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -18,11 +16,11 @@ class storyRule extends HTMLElement {
         description="A horizontal rule to divide a page"
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="Horizontal">
           <div slot="body">
-            <mui-rule direction="horizontal" length="100%" style="margin: var(--spacing-large) 0;"></mui-rule>
+            <mui-rule direction="horizontal" length="100%" style="margin: var(--spacing-700) 0;"></mui-rule>
           </div>
           <mui-code slot="footer">
             &lt;mui-rule
@@ -52,7 +50,7 @@ class storyRule extends HTMLElement {
 
         <story-card title="Horizontal">
           <div slot="body">
-            <mui-rule direction="horizontal" length="100%" weight="2px" style="margin: var(--spacing-large) 0;"></mui-rule>
+            <mui-rule direction="horizontal" length="100%" weight="2px" style="margin: var(--spacing-700) 0;"></mui-rule>
           </div>
           <mui-code slot="footer">
             &lt;mui-rule
@@ -113,13 +111,7 @@ class storyRule extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-rule", storyRule);
-
-
-
-

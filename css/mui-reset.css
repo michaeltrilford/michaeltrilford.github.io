@@ -10,7 +10,7 @@
   -o-font-feature-settings: kern, liga;
   font-feature-settings: kern, liga;
   font-family: var(--font-family);
-  background: var(--white-palette);
+  background: var(--white);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   color: var(--text-body-color);
@@ -21,8 +21,8 @@
 }
 
 body {
-  margin: var(--spacing-clear);
-  font-size: var(--font-size-text);
+  margin: var(--spacing-0);
+  font-size: var(--font-size-text-300);
   min-height: 100vh;
 }
 
@@ -32,14 +32,14 @@ optgroup,
 select,
 textarea {
   font-family: var(--font-family);
-  font-size: var(--font-size-text);
+  font-size: var(--font-size-text-300);
   line-height: var(--line-height-text);
 }
 input,
 optgroup,
 select,
 textarea {
-  margin: var(--spacing-clear);
+  margin: var(--spacing-0);
 }
 
 :focus-visible,
@@ -110,12 +110,12 @@ video {
 }
 img,
 legend {
-  border: var(--spacing-clear);
+  border: var(--spacing-0);
 }
 body,
 figure,
 form {
-  margin: var(--spacing-clear);
+  margin: var(--spacing-0);
 }
 audio,
 canvas,
@@ -124,7 +124,7 @@ video {
   vertical-align: middle;
 }
 audio:not([controls]) {
-  height: var(--spacing-clear);
+  height: var(--spacing-0);
 }
 abbr[title] {
   border-bottom: var(--border-thin-dotted);
@@ -164,7 +164,7 @@ svg:not(:root) {
 }
 ::-moz-selection,
 ::selection {
-  background: var(--dark-grey-palette);
+  background: var(--grey-900);
   color: var(--selection-text-color);
   text-shadow: none;
 }

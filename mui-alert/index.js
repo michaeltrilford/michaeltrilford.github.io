@@ -1,7 +1,6 @@
 class muiAlert extends HTMLElement {
-
   static get observedAttributes() {
-    return ['length', 'weight', 'direction'];
+    return ["length", "weight", "direction"];
   }
 
   constructor() {
@@ -11,8 +10,8 @@ class muiAlert extends HTMLElement {
       :host {
         display: block;
         border-radius: var(--radius-alert);
-        padding: var(--spacing-small) var(--spacing-medium);
-        background: var(--white-palette);
+        padding: var(--spacing-400) var(--spacing-500);
+        background: var(--white);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
       }
       :host([variant="success"]) {
@@ -32,8 +31,7 @@ class muiAlert extends HTMLElement {
       <style>${styles}</style>
       <slot></slot>
   `;
-
   }
 }
 
-customElements.define('mui-alert', muiAlert);
+customElements.define("mui-alert", muiAlert);

@@ -1,6 +1,4 @@
-
 class storyResponsive extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -52,7 +50,7 @@ class storyResponsive extends HTMLElement {
         <mui-row-group> 
           <mui-row columns="${ProgressTableColumns}"> 
             <mui-cell align-y="center"><mui-body variant="small">Alison Max</mui-body></mui-cell> 
-            <mui-cell align-y="center"><mui-v-stack space="var(--spacing-xx-tiny)"><mui-body variant="small">27/07/2020</mui-body><mui-badge>Quarterly</mui-badge></mui-v-stack></mui-cell> 
+            <mui-cell align-y="center"><mui-v-stack space="var(--spacing-50)"><mui-body variant="small">27/07/2020</mui-body><mui-badge>Quarterly</mui-badge></mui-v-stack></mui-cell> 
             <mui-cell align-y="center"><mui-badge>Unlodged</mui-badge></mui-cell> 
             <mui-cell align-y="center">${LocalRing}</mui-cell> 
           </mui-row> 
@@ -61,7 +59,7 @@ class storyResponsive extends HTMLElement {
     `;
 
     const ProgressSlat = `
-        <mui-v-stack space="var(--spacing-small)">
+        <mui-v-stack space="var(--spacing-400)">
           ${LocalRing}
           <mui-heading 
             size="6" 
@@ -103,7 +101,7 @@ class storyResponsive extends HTMLElement {
         description="Dynamically render UI based on viewport size"
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
       
         <story-card title="Basic example">
           <mui-responsive slot="body" breakpoint="600">
@@ -147,13 +145,7 @@ class storyResponsive extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-responsive", storyResponsive);
-
-
-
-

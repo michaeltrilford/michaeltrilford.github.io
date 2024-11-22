@@ -1,6 +1,4 @@
-
 class storyGrid extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -22,7 +20,7 @@ class storyGrid extends HTMLElement {
         description="Layout component to enable grid layouts"
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
       
         <story-card title="Default">
         
@@ -62,13 +60,13 @@ class storyGrid extends HTMLElement {
         </story-card>
 
         <story-card title="Custom gap">
-          <mui-grid col="1fr 1fr 1fr" gap="var(--spacing-x-large)" slot="body">
+          <mui-grid col="1fr 1fr 1fr" gap="var(--spacing-800)" slot="body">
             ${Box}
             ${Box}
             ${Box}
           </mui-grid>
           <mui-code slot="footer">
-            &lt;mui-grid col="1fr 1fr 1fr" gap="var(--spacing-x-large)"&gt;
+            &lt;mui-grid col="1fr 1fr 1fr" gap="var(--spacing-800)"&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />
@@ -84,13 +82,7 @@ class storyGrid extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-grid", storyGrid);
-
-
-
-

@@ -13,8 +13,8 @@ class muiColumns extends HTMLElement {
       @media only screen and (min-width: 500px) {
         :host {
           display: grid;
-          grid-gap: var(--spacing-medium);;
-          margin-bottom: var(--spacing-medium);
+          grid-gap: var(--spacing-500);;
+          margin-bottom: var(--spacing-500);
         }
 
         :host([two-column]) {

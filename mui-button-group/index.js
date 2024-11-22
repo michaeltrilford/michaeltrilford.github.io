@@ -12,7 +12,7 @@ class muiButtonGroup extends HTMLElement {
       
       :host {
         display: flex;
-        gap: var(--spacing-tiny);
+        gap: var(--spacing-200);
       }
       :host([right]) {
         justify-content: flex-end;

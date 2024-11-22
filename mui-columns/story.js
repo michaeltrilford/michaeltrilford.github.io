@@ -1,6 +1,4 @@
-
 class storyX extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -11,7 +9,7 @@ class storyX extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="...">
 
@@ -33,13 +31,7 @@ class storyX extends HTMLElement {
 
       </mui-v-stack>
     `;
-
   }
-  
 }
 
 customElements.define("story-x", storyX);
-
-
-
-

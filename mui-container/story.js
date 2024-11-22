@@ -1,6 +1,4 @@
-
 class storyContainers extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -15,7 +13,7 @@ class storyContainers extends HTMLElement {
       title="Container" 
       description="The Container is a layout helper to provide the base page structure for a web experience.">
 
-        <mui-v-stack space="var(--spacing-large)">
+        <mui-v-stack space="var(--spacing-700)">
 
           <story-card title="Small">
             <mui-container small slot="body">
@@ -66,13 +64,7 @@ class storyContainers extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-containers", storyContainers);
-
-
-
-

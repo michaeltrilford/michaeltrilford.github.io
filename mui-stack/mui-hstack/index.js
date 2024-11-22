@@ -1,13 +1,12 @@
 class muiHStack extends HTMLElement {
-
   static get observedAttributes() {
-    return ['space', 'alignY', 'alignX'];
+    return ["space", "alignY", "alignX"];
   }
 
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
-    let space = `var(--spacing-medium)`;
+    let space = `var(--spacing-500)`;
     let alignY = `flex-start`;
     let alignX = `flex-start`;
     const styles = `
@@ -23,7 +22,9 @@ class muiHStack extends HTMLElement {
     `;
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <slot style="--space: ${this.getAttribute('space') || space}; --alignY: ${this.getAttribute('alignY') || alignY}; --alignX: ${this.getAttribute('alignX') || alignX}"></slot>
+      <slot style="--space: ${this.getAttribute("space") || space}; --alignY: ${
+      this.getAttribute("alignY") || alignY
+    }; --alignX: ${this.getAttribute("alignX") || alignX}"></slot>
     `;
   }
 }

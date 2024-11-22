@@ -1,6 +1,4 @@
-
 class storyList extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -16,7 +14,7 @@ class storyList extends HTMLElement {
         description="The component defines an ordered or unordered list."
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="Unordered">
 
@@ -70,13 +68,7 @@ class storyList extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-list", storyList);
-
-
-
-

@@ -1,5 +1,4 @@
 class muiBadge extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -7,18 +6,17 @@ class muiBadge extends HTMLElement {
       :host {
         display: inline-block;
         border-radius: var(--radius-badge);
-        background: var(--grey-palette);
-        font-size: var(--font-size-text-tiny);
-        color: var(--white-palette);
-        padding: var(--spacing-xx-tiny) var(--spacing-tiny);
+        background: var(--grey-700);
+        font-size: var(--font-size-text-100);
+        color: var(--white);
+        padding: var(--spacing-50) var(--spacing-200);
       }
     `;
     shadowRoot.innerHTML = `
       <style>${styles}</style>
       <slot></slot>
   `;
-
   }
 }
 
-customElements.define('mui-badge', muiBadge);
+customElements.define("mui-badge", muiBadge);

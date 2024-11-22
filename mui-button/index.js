@@ -1,9 +1,8 @@
 class muiButton extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
-    let space = `var(--spacing-medium)`;
+    let space = `var(--spacing-500)`;
     const styles = `
 
       @import url("./css/mui-reset.css");
@@ -16,7 +15,7 @@ class muiButton extends HTMLElement {
         cursor: pointer;
         width: auto;
         border-radius: var(--radius-button);
-        padding: var(--spacing-tiny) var(--spacing-medium);
+        padding: var(--spacing-200) var(--spacing-500);
         text-decoration: none;
         line-height: var(--line-height-text);
         display: inline-block;
@@ -64,11 +63,11 @@ class muiButton extends HTMLElement {
       :host([variant="iconOnly"]) button {
         height: 32px;
         width: 32px;
-        padding: var(--spacing-clear);
+        padding: var(--spacing-0);
         box-shadow: none;
       }
       :host([variant="iconOnly"]) button:hover {
-        background: var(--light-grey-palette);
+        background: var(--grey-200);
       }
       /* ===================================== */
     `;

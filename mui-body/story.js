@@ -1,6 +1,4 @@
-
 class storyBody extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -17,7 +15,7 @@ class storyBody extends HTMLElement {
         description="Defines a paragraph."
       >
 
-        <mui-v-stack space="var(--spacing-large)">
+        <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="Default">
 
@@ -34,7 +32,7 @@ class storyBody extends HTMLElement {
         <story-card title="Variants">
 
             <div slot="body">
-              <mui-v-stack space="var(--spacing-medium)">
+              <mui-v-stack space="var(--spacing-500)">
                 <div>
                   <mui-heading size="4" tinymargin>Large</mui-heading>
                   <mui-body variant="large">Risus Mollis Dapibus</mui-body>
@@ -68,13 +66,7 @@ class storyBody extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-body", storyBody);
-
-
-
-

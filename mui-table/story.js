@@ -1,6 +1,4 @@
-
 class storyTable extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -16,7 +14,7 @@ class storyTable extends HTMLElement {
         description="An HTML table consists of one table element and one or more tr, th, and td elements."
       >
 
-        <mui-v-stack space="var(--spacing-large)">
+        <mui-v-stack space="var(--spacing-700)">
 
           <story-card title="Table">
             <app-table slot="body"></app-table>
@@ -67,7 +65,7 @@ class storyTable extends HTMLElement {
               <mui-slat slot="showBelow">
                 <mui-heading slot="start" size="5">Heading</mui-heading>
                 <div slot="end" width="20px">
-                  <mui-h-stack slot="end" space="var(--spacing-small)" alignX="flex-end">
+                  <mui-h-stack slot="end" space="var(--spacing-400)" alignX="flex-end">
                     <mui-body width="20px">Body</mui-body>
                     <mui-body width="20px">Body</mui-body>
                   </mui-h-stack>
@@ -123,7 +121,7 @@ class storyTable extends HTMLElement {
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="end" width="20px"&gt;
                 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-h-stack slot="end" space="var(--spacing-small)" alignX="flex-end"&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-h-stack slot="end" space="var(--spacing-400)" alignX="flex-end"&gt;
                   <br />  
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-body width="20px"&gt;Body&lt;/mui-body&gt;
                     <br />
@@ -150,13 +148,7 @@ class storyTable extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-table", storyTable);
-
-
-
-

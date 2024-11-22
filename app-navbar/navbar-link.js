@@ -1,13 +1,12 @@
 /* myApp */
 class muiNavbarLink extends HTMLElement {
-
   static get observedAttributes() {
-    return ['link', 'title'];
+    return ["link", "title"];
   }
 
   constructor() {
-    super(); 
-    this.attachShadow({ mode: 'open' });
+    super();
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -28,11 +27,11 @@ class muiNavbarLink extends HTMLElement {
         margin: 0;
         color: white;
         display: block;
-        padding: 0.75rem var(--spacing-medium);
+        padding: 0.75rem var(--spacing-500);
         transition: opacity 400ms ease-in, transform 100ms ease-in;
         opacity: 0.3;
         font-weight: bold;
-        font-size: var(--font-size-heading-medium);
+        font-size: var(--font-size-400);
         margin: 0; 
       }
 
@@ -48,13 +47,13 @@ class muiNavbarLink extends HTMLElement {
 
       a:focus { 
         color: var(--link-color-reverse);
-        background: var(--black-palette);
+        background: var(--black);
         opacity: 1; 
       }
 
       @media (min-width: 960px) {
         a {
-          font-size: var(--font-size-heading-tiny);
+          font-size: var(--font-size-100);
           margin: 0;
         }
         :host([active]) {
@@ -68,12 +67,12 @@ class muiNavbarLink extends HTMLElement {
 
     </style>
 
-    <a href="${this.getAttribute('link')}">${this.getAttribute('title')}</a> 
+    <a href="${this.getAttribute("link")}">${this.getAttribute("title")}</a> 
 
     `;
-    
+
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define('mui-navbar-link', muiNavbarLink);
+customElements.define("mui-navbar-link", muiNavbarLink);

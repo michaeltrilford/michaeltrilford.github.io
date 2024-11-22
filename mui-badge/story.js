@@ -1,6 +1,4 @@
-
 class storyBadge extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -16,7 +14,7 @@ class storyBadge extends HTMLElement {
         description=""
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="Badge">
 
@@ -38,13 +36,7 @@ class storyBadge extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-badge", storyBadge);
-
-
-
-

@@ -1,6 +1,5 @@
 /* Mui Link */
 class muiLink extends HTMLElement {
-
   static get observedAttributes() {
     return ["target", "href"];
   }
@@ -23,7 +22,7 @@ class muiLink extends HTMLElement {
         font-size: inherit;
         color: var(--link-color);
       }
-      a:active, a:hover { outline: var(--spacing-clear); }
+      a:active, a:hover { outline: var(--spacing-0); }
 
       /* Button
       ========================================= */
@@ -35,10 +34,10 @@ class muiLink extends HTMLElement {
         border: none;
         cursor: pointer;
         width: auto;
-        padding: 0 var(--spacing-medium);
+        padding: 0 var(--spacing-500);
         text-decoration: none;
-        line-height: var(--spacing-x-medium);
-        height: var(--spacing-x-medium);
+        line-height: var(--spacing-600);
+        height: var(--spacing-600);
         display: inline-block; 
       }
       :host([button]) a:hover, 

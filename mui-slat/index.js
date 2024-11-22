@@ -1,9 +1,8 @@
 /* Mui Rule */
 class muiSlat extends HTMLElement {
-
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -13,7 +12,7 @@ class muiSlat extends HTMLElement {
       :host {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: var(--spacing-medium);
+        gap: var(--spacing-500);
       }
     </style>
     <slot name="start"></slot>
@@ -22,4 +21,4 @@ class muiSlat extends HTMLElement {
   }
 }
 
-customElements.define('mui-slat', muiSlat);
+customElements.define("mui-slat", muiSlat);

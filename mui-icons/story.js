@@ -1,6 +1,4 @@
-
 class storyIcon extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -15,7 +13,7 @@ class storyIcon extends HTMLElement {
         title="Icons"
       >
 
-        <mui-v-stack space="var(--spacing-large)">
+        <mui-v-stack space="var(--spacing-700)">
 
           <story-card title="Default" noFooter>
 
@@ -127,13 +125,7 @@ class storyIcon extends HTMLElement {
       </story-container>
 
     `;
-
   }
-  
 }
 
 customElements.define("story-icon", storyIcon);
-
-
-
-

@@ -1,6 +1,4 @@
-
 class storyButton extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -26,7 +24,7 @@ class storyButton extends HTMLElement {
 
       <story-container title="Buttons" description="Use a Button when triggering a user-led action.">
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="mui-button">
           <mui-button-group slot="body">
@@ -70,13 +68,7 @@ class storyButton extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-button", storyButton);
-
-
-
-

@@ -1,6 +1,4 @@
-
 class storyAlert extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -16,7 +14,7 @@ class storyAlert extends HTMLElement {
         description="Alerts are to surface meaningful system messages related to the users' current task or action."
       >
 
-        <mui-v-stack space="var(--spacing-large)">
+        <mui-v-stack space="var(--spacing-700)">
 
           <story-card title="Success">
             <div slot="body">
@@ -82,13 +80,7 @@ class storyAlert extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-alert", storyAlert);
-
-
-
-

@@ -1,6 +1,4 @@
-
 class storyCards extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -13,7 +11,7 @@ class storyCards extends HTMLElement {
 
       <story-container title="Card" description="The Card provides the ability to group items or components. ">
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="Card">
           <div slot="body">
@@ -57,7 +55,7 @@ class storyCards extends HTMLElement {
                   fermentum massa justo sit amet risus.
                 </mui-body>
               </mui-card-body>
-              <mui-card-footer style="padding: var(--spacing-medium) var(--spacing-x-medium)">
+              <mui-card-footer style="padding: var(--spacing-500) var(--spacing-600)">
                 <mui-button-group right>
                   <mui-button secondary>Cancel</mui-button>
                   <mui-button primary>Submit</mui-button>
@@ -77,7 +75,7 @@ class storyCards extends HTMLElement {
             <br />
             &nbsp;&nbsp;&lt;mui-card-body&gt;...&lt;/mui-card-body&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-card-footer style="padding: var(--spacing-medium) var(--spacing-x-medium)"&gt;
+            &nbsp;&nbsp;&lt;mui-card-footer style="padding: var(--spacing-500) var(--spacing-600)"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button-group right&gt;
             <br />
@@ -138,13 +136,7 @@ class storyCards extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-cards", storyCards);
-
-
-
-

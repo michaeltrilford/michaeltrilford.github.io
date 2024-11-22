@@ -1,9 +1,8 @@
 /* Mui Rule */
 class muiRowGroup extends HTMLElement {
-
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
+    this.attachShadow({ mode: "open" });
   }
 
   connectedCallback() {
@@ -15,7 +14,7 @@ class muiRowGroup extends HTMLElement {
       }
       :host([heading]) {
         display: block;
-        border-bottom: 1px solid var(--light-grey-palette);
+        border-bottom: 1px solid var(--grey-200);
       }
     </style>
     <slot></slot>
@@ -23,4 +22,4 @@ class muiRowGroup extends HTMLElement {
   }
 }
 
-customElements.define('mui-row-group', muiRowGroup);
+customElements.define("mui-row-group", muiRowGroup);

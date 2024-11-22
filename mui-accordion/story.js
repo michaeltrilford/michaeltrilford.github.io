@@ -1,6 +1,4 @@
-
 class storyAccordion extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -16,7 +14,7 @@ class storyAccordion extends HTMLElement {
         description="The Accordion is a component stores content underneath a collapsible heading, revealing it through progressive disclosure in the user interface."
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card 
           title="Inline" 
@@ -25,7 +23,7 @@ class storyAccordion extends HTMLElement {
           <div slot="body">
             <mui-accordion-inline>
               <span slot="title">Hello</span>
-              <div slot="detail" style="padding-left: var(--spacing-xx-tiny); padding-right: var(--spacing-xx-tiny);">
+              <div slot="detail" style="padding-left: var(--spacing-50); padding-right: var(--spacing-50);">
                 <mui-list as="ul">
                   <mui-list-item>Coffee</mui-list-item>
                   <mui-list-item>Tea</mui-list-item>
@@ -86,13 +84,7 @@ class storyAccordion extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-accordion", storyAccordion);
-
-
-
-

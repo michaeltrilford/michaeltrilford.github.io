@@ -1,8 +1,6 @@
-
 class storyDemo extends HTMLElement {
-
   static get observedAttributes() {
-    return ['width', 'height', 'description'];
+    return ["width", "height", "description"];
   }
 
   constructor() {
@@ -14,26 +12,29 @@ class storyDemo extends HTMLElement {
       :host { display: block; }
       slot {
         display: flex;
-        padding: var(--spacing-xx-tiny) var(--spacing-small);
+        padding: var(--spacing-50) var(--spacing-400);
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
-        background: var(--light-grey-palette);
-        border-radius: var(--radius-small);
+        background: var(--grey-200);
+        border-radius: var(--radius-200);
         width: var(--width); 
         height: var(--height);
       }
     `;
-    const description = `<mui-body variant="small">${this.getAttribute('description')}</mui-body>`
+    const description = `<mui-body variant="small">${this.getAttribute(
+      "description"
+    )}</mui-body>`;
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <slot style="--width: ${this.getAttribute('width') || width}; --height: ${this.getAttribute('height') || height};">
+      <slot style="--width: ${this.getAttribute("width") || width}; --height: ${
+      this.getAttribute("height") || height
+    };">
         ${description}
       </slot>
     `;
   }
-  
 }
 
 customElements.define("story-demo", storyDemo);

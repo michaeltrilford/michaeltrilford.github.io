@@ -6,47 +6,49 @@
   /* Typography tokens */
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-size-link: 1.6rem;
-  --font-size-button: 1.6rem;
-  --font-size-text: 1.6rem;
-  --font-size-text-large: 1.8rem;
-  --font-size-text-small: 1.4rem;
-  --font-size-text-tiny: 1.2rem;
-  --font-size-heading-tiny: 1.6rem;
-  --font-size-heading-x-small: 1.8rem;
-  --font-size-heading-small: 2.1rem;
-  --font-size-heading-medium: 2.4rem;
-  --font-size-heading-large: 3.6rem;
-  --font-size-heading-x-large: 4.8rem;
-  --font-size-heading-xx-large: 6rem;
-  --font-size-heading-xxx-large: 7.2rem;
-  --font-size-heading-xxxx-large: 8.4rem;
-  --font-size-heading-xxxxx-large: 9.6rem;
+
+  --font-size-25: 1.2rem; /* Smallest */
+  --font-size-50: 1.4rem; /* Smaller than Tiny */
+  --font-size-100: 1.6rem; /* Tiny */
+  --font-size-200: 1.8rem; /* X-Small */
+  --font-size-300: 2.1rem; /* Small */
+  --font-size-400: 2.4rem; /* Medium */
+  --font-size-500: 3.6rem; /* Large */
+  --font-size-600: 4.8rem; /* X-Large */
+  --font-size-700: 6rem; /* XX-Large */
+  --font-size-800: 7.2rem; /* XXX-Large */
+  --font-size-900: 8.4rem; /* XXXX-Large */
+  --font-size-1000: 9.6rem; /* XXXXX-Large */
+
+  --font-size-text-100: var(var(--font-size-25));
+  --font-size-text-200: var(--font-size-50);
+  --font-size-text-300: var(--font-size-100);
+  --font-size-text-400: var(--font-size-200);
+
+  --font-size-link: var(--font-size-100);
+  --font-size-button: var(--font-size-100);
 
   /* Palette tokens */
-  --dark-grey-palette: #333;
-  --gloom-grey-palette: #444;
-  --grey-palette: #555;
-  --light-grey-palette: #e5e5e5;
-  --black-palette: black;
-  --white-palette: #ffffff;
-  --white-palette-transparent-50: hsla(0, 0%, 100%, 0.5);
-  --red-palette: #f74e4e;
-  --orange-palette: orange;
-  --green-palette: #00bd00;
-  --blue-palette: blue;
+  --black: black;
+  --white: #ffffff;
+  --grey-900: #333;
+  --grey-800: #444;
+  --grey-700: #555;
+  --grey-200: #e5e5e5;
+  --black-translucent-500: hsla(0, 0%, 0%, 0.5);
+  --white-translucent-500: hsla(0, 0%, 100%, 0.5);
+  --red-500: #f74e4e;
+  --orange-500: orange;
+  --green-500: #00bd00;
+  --blue-500: blue;
 
   /* Radius */
-  --radius-clear: 0;
-  --radius-card: 6px;
-  --radius-alert: 4px;
-  --radius-button: 4px;
-  --radius-badge: 4px;
-
-  --radius-tiny: 4px;
-  --radius-small: 8px;
-  --radius-medium: 16px;
-  --radius-large: 24px;
+  --radius-0: 0;
+  --radius-100: 4px; /* Tiny */
+  --radius-150: 6px; /* Small */
+  --radius-200: 8px; /* Small */
+  --radius-300: 16px; /* Medium */
+  --radius-400: 24px; /* Large */
 
   /* Border */
   --border-thin: 1px solid rgba(0, 0, 0, 0.1);
@@ -54,74 +56,81 @@
   --border-thick: 2px solid rgba(0, 0, 0, 0.1);
   --border-thick-inverted: 2px solid hsla(0, 0%, 100%, 0.1);
   --border-thin-dotted: 1px dotted rgba(0, 0, 0, 0.1);
-  --border-thin-ridge: thick ridge var(--dark-grey-palette);
+  --border-thin-ridge: thick ridge var(--grey-900);
   --box-shadow-faux-border-bottom-thin-reverse: 0 0.1rem 0
-    var(--white-palette-transparent-50);
-  --box-shadow-faux-border-thin: 0 0 0 1px var(--light-grey-palette);
-  --box-shadow-faux-border-thin-inset: 0 0 0 1px var(--light-grey-palette);
-  --box-shadow-faux-border-top-thin: inset 0 -1px 0 0 var(--light-grey-palette);
-
-  --border-alert-info: 2px solid var(--blue-palette);
-  --border-alert-success: 2px solid var(--green-palette);
-  --border-alert-error: 2px solid var(--red-palette);
-  --border-alert-warning: 2px solid var(--orange-palette);
+    var(--white-translucent-500);
+  --box-shadow-faux-border-thin: 0 0 0 1px var(--grey-200);
+  --box-shadow-faux-border-thin-inset: 0 0 0 1px var(--grey-200);
+  --box-shadow-faux-border-top-thin: inset 0 -1px 0 0 var(--grey-200);
 
   /* Spacing */
-  --spacing-clear: 0;
-  --spacing-xx-tiny: 0.4rem;
-  --spacing-x-tiny: 0.6rem;
-  --spacing-tiny: 0.8rem;
-  --spacing-x-small: 1.2rem;
-  --spacing-small: 1.6rem;
-  --spacing-medium: 2.4rem;
-  --spacing-x-medium: 3.6rem;
-  --spacing-large: 4.8rem;
-  --spacing-x-large: 6rem;
+  --spacing-0: 0; /* Clear */
+  --spacing-50: 0.4rem; /* XX-Tiny */
+  --spacing-100: 0.6rem; /* X-Tiny */
+  --spacing-200: 0.8rem; /* Tiny */
+  --spacing-300: 1.2rem; /* X-Small */
+  --spacing-400: 1.6rem; /* Small */
+  --spacing-500: 2.4rem; /* Medium */
+  --spacing-600: 3.6rem; /* X-Medium */
+  --spacing-700: 4.8rem; /* Large */
+  --spacing-800: 6rem; /* X-Large */
+
+  /* Contextual tokens
+  =======================================================================================*/
+
+  /* Radius */
+  --radius-card: var(--radius-150);
+  --radius-alert: var(--radius-100);
+  --radius-button: var(--radius-100);
+  --radius-badge: var(--radius-100);
 
   /* Line-height */
   --line-height-reset: 1;
   --line-height-text: 1.5;
   --line-height-heading: 1.25;
 
-  /* Contextual tokens
-  =======================================================================================*/
+  /* Alert */
+  --border-alert-info: 2px solid var(--blue-500);
+  --border-alert-success: 2px solid var(--green-500);
+  --border-alert-error: 2px solid var(--red-500);
+  --border-alert-warning: 2px solid var(--orange-500);
 
   /* Typography */
-  --text-body-color: var(--dark-grey-palette);
-  --selection-text-color: var(--white-palette);
+  --text-body-color: var(--grey-900);
+  --selection-text-color: var(--white);
 
   /* Link object */
-  --link-color: var(--dark-grey-palette);
-  --link-color-reverse: var(--white-palette);
+  --link-color: var(--grey-900);
+  --link-color-reverse: var(--white);
 
   /* Element object */
-  --icon-color-reverse: var(--white-palette);
+  --icon-color-reverse: var(--white);
 
   /* Code element */
-  --code-text-color: var(--white-palette);
-  --code-bg: var(--dark-grey-palette);
+  --code-text-color: var(--white);
+  --code-bg: var(--grey-900);
 
   /* Button object */
-  --button-primary-background: var(--dark-grey-palette);
-  --button-primary-background-hover: var(--gloom-grey-palette);
-  --button-primary-background-active: var(--grey-palette);
-  --button-primary-color: var(--white-palette);
-  --button-secondary-background: var(--white-palette);
-  --button-warning-background: var(--red-palette);
+  --button-primary-background: var(--grey-900);
+  --button-primary-background-hover: var(--grey-800);
+  --button-primary-background-active: var(--grey-700);
+  --button-primary-color: var(--white);
+  --button-secondary-background: var(--white);
+  --button-warning-background: var(---red-500);
   --button-icon-only-width: 4rem;
 
   /* Summary object */
-  --summary-background: var(--white-palette);
+  --summary-background: var(--white);
 
   /* Mark object */
-  --mark-background: var(--dark-grey-palette);
-  --mark-color: var(--white-palette);
+  --mark-background: var(--grey-900);
+  --mark-color: var(--white);
 
   /* Table object */
-  --table-background: var(--white-palette);
+  --table-background: var(--white);
 
   /* Legend object */
-  --legend-background: var(--white-palette);
+  --legend-background: var(--white);
 
   /* Specific tokens
   =======================================================================================*/

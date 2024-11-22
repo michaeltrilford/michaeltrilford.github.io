@@ -16,7 +16,7 @@ class muiAccordionInline extends HTMLElement {
       mui-accordion-summary {
         display: flex;
         align-items: center;
-        margin-bottom: var(--spacing-clear);
+        margin-bottom: var(--spacing-0);
       }
 
       mui-accordion-summary mui-heading:hover {
@@ -24,9 +24,9 @@ class muiAccordionInline extends HTMLElement {
       }
   
       mui-icon-right-chevron {
-        margin-right: var(--spacing-x-tiny);
+        margin-right: var(--spacing-100);
         transition: 0.2s ease-in-out;
-        fill: var(--grey-palette);
+        fill: var(--grey-700);
       }
 
       mui-icon-right-chevron[open] {
@@ -35,7 +35,7 @@ class muiAccordionInline extends HTMLElement {
           
       mui-accordion-detail {
         display: block;
-        margin-bottom: var(--spacing-clear);
+        margin-bottom: var(--spacing-0);
         max-height: 0;
         transition: max-height .10s ease-in-out;
         overflow-y: hidden;
@@ -52,7 +52,7 @@ class muiAccordionInline extends HTMLElement {
       }
 
       mui-accordion-detail-inner > *:last-child {
-        margin-bottom: var(--spacing-clear);
+        margin-bottom: var(--spacing-0);
       }
 
     </style>
@@ -77,12 +77,8 @@ class muiAccordionInline extends HTMLElement {
 
     this.shadowRoot.innerHTML = html;
 
-    this.titleEl = this.shadowRoot.querySelector(
-      "mui-accordion-summary"
-    );
-    this.detailEl = this.shadowRoot.querySelector(
-      "mui-accordion-detail"
-    );
+    this.titleEl = this.shadowRoot.querySelector("mui-accordion-summary");
+    this.detailEl = this.shadowRoot.querySelector("mui-accordion-detail");
     this.chevronEl = this.shadowRoot.querySelector("mui-icon-right-chevron");
 
     this.titleEl.addEventListener("click", () => {

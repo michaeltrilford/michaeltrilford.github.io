@@ -1,6 +1,4 @@
-
 class storyCode extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -16,7 +14,7 @@ class storyCode extends HTMLElement {
         description="The component defines a code view."
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="Default">
           <div slot="body">
@@ -64,13 +62,7 @@ class storyCode extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-code", storyCode);
-
-
-
-

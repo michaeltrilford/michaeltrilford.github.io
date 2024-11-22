@@ -13,8 +13,8 @@ class muiAccordionBlock extends HTMLElement {
       mui-accordion-summary {
         display: flex;
         align-items: center;
-        margin-bottom: var(--spacing-clear);
-        padding: var(--spacing-small) var(--spacing-medium); 
+        margin-bottom: var(--spacing-0);
+        padding: var(--spacing-400) var(--spacing-500); 
         border-bottom: var(--border-thin);
       }
 
@@ -31,12 +31,12 @@ class muiAccordionBlock extends HTMLElement {
       }
   
       mui-icon-right-chevron {
-        margin-right: var(--spacing-x-tiny);
+        margin-right: var(--spacing-100);
         transition: transform 0.2s ease-in-out;
-        fill: var(--grey-palette);
+        fill: var(--grey-700);
         transform: rotate(90deg);
-        padding: var(--spacing-tiny);
-        border-radius: var(--radius-small);
+        padding: var(--spacing-200);
+        border-radius: var(--radius-200);
       }
 
       mui-icon-right-chevron[open] {
@@ -45,7 +45,7 @@ class muiAccordionBlock extends HTMLElement {
           
       mui-accordion-detail {
         display: block;
-        margin-bottom: var(--spacing-clear);
+        margin-bottom: var(--spacing-0);
         max-height: 0;
         transition: max-height .10s ease-in-out;
         overflow-y: hidden;
@@ -59,11 +59,11 @@ class muiAccordionBlock extends HTMLElement {
         
       mui-accordion-detail-inner {
         display: block;
-        padding: var(--spacing-medium);
+        padding: var(--spacing-500);
       }
 
       mui-accordion-detail-inner > *:last-child {
-        margin-bottom: var(--spacing-clear);
+        margin-bottom: var(--spacing-0);
       }
 
     </style>
@@ -88,12 +88,8 @@ class muiAccordionBlock extends HTMLElement {
 
     this.shadowRoot.innerHTML = html;
 
-    this.titleEl = this.shadowRoot.querySelector(
-      "mui-accordion-summary"
-    );
-    this.detailEl = this.shadowRoot.querySelector(
-      "mui-accordion-detail"
-    );
+    this.titleEl = this.shadowRoot.querySelector("mui-accordion-summary");
+    this.detailEl = this.shadowRoot.querySelector("mui-accordion-detail");
     this.chevronEl = this.shadowRoot.querySelector("mui-icon-right-chevron");
 
     this.titleEl.addEventListener("click", () => {

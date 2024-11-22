@@ -1,6 +1,6 @@
 body {
-  margin: var(--spacing-clear);
-  font-size: var(--font-size-text);
+  margin: var(--spacing-0);
+  font-size: var(--font-size-text-300);
   min-height: 100vh;
 }
 

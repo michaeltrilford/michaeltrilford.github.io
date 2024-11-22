@@ -1,6 +1,4 @@
-
 class storyStack extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -15,10 +13,10 @@ class storyStack extends HTMLElement {
     `;
 
     const HStack = `
-      <mui-v-stack space="var(--spacing-large)" slot="body">
+      <mui-v-stack space="var(--spacing-700)" slot="body">
         <mui-v-stack space="8px">
           <mui-heading size="6">Default prop:</mui-heading>
-          <mui-code style="border-radius: 8px;">space="var(--spacing-medium)"</mui-code>
+          <mui-code style="border-radius: 8px;">space="var(--spacing-500)"</mui-code>
         </mui-v-stack>
         <mui-h-stack>
           ${Box}
@@ -30,10 +28,10 @@ class storyStack extends HTMLElement {
     `;
 
     const VStack = `
-      <mui-v-stack space="var(--spacing-large)" slot="body">
+      <mui-v-stack space="var(--spacing-700)" slot="body">
         <mui-v-stack space="8px">
           <mui-heading size="6">Default prop:</mui-heading>
-          <mui-code style="border-radius: 8px;">space="var(--spacing-medium)"</mui-code>
+          <mui-code style="border-radius: 8px;">space="var(--spacing-500)"</mui-code>
         </mui-v-stack>
         <mui-v-stack>
           ${BlockBox}
@@ -44,8 +42,8 @@ class storyStack extends HTMLElement {
       </mui-v-stack>
   `;
 
-  const HStackSpace = `
-    <mui-h-stack  space="var(--spacing-large)" slot="body">
+    const HStackSpace = `
+    <mui-h-stack  space="var(--spacing-700)" slot="body">
       ${Box}
       ${Box}
       ${Box}
@@ -53,15 +51,14 @@ class storyStack extends HTMLElement {
     </mui-h-stack>
   `;
 
-  const VStackSpace = `
-    <mui-v-stack slot="body" space="var(--spacing-large)">
+    const VStackSpace = `
+    <mui-v-stack slot="body" space="var(--spacing-700)">
       ${BlockBox}
       ${BlockBox}
       ${BlockBox}
       ${BlockBox}
     </mui-v-stack>
   `;
-
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -71,7 +68,7 @@ class storyStack extends HTMLElement {
         description="A layout component that arranges its children in a horizontal or vertical flow"
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="Horizontal – Default">
           ${HStack}
@@ -110,7 +107,7 @@ class storyStack extends HTMLElement {
       <story-card title="Horizontal – Bespoke space">
         ${HStackSpace}
         <mui-code slot="footer">
-          &lt;mui-h-stack space="var(--spacing-large)"&gt;
+          &lt;mui-h-stack space="var(--spacing-700)"&gt;
           <br />
           &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
           <br />
@@ -127,7 +124,7 @@ class storyStack extends HTMLElement {
       <story-card title="Vertical - Bespoke space">
         ${VStackSpace}
         <mui-code slot="footer">
-          &lt;mui-v-stack space="var(--spacing-large)"&gt;
+          &lt;mui-v-stack space="var(--spacing-700)"&gt;
           <br />
           &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
           <br />
@@ -145,13 +142,7 @@ class storyStack extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-stack", storyStack);
-
-
-
-

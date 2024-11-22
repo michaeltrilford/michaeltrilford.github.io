@@ -1,6 +1,4 @@
-
 class storyImage extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -17,7 +15,7 @@ class storyImage extends HTMLElement {
         description="Defines a image."
       >
 
-        <mui-v-stack space="var(--spacing-large)">
+        <mui-v-stack space="var(--spacing-700)">
 
           <story-card title="Single image">
             <div slot="body">
@@ -57,13 +55,7 @@ class storyImage extends HTMLElement {
       </story-container>
 
     `;
-
   }
-  
 }
 
 customElements.define("story-image", storyImage);
-
-
-
-

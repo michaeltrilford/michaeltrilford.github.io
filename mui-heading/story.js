@@ -1,6 +1,4 @@
-
 class storyHeading extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -16,7 +14,7 @@ class storyHeading extends HTMLElement {
         description="This component is to define system headings."
       >
         
-        <mui-v-stack space="var(--spacing-large)">
+        <mui-v-stack space="var(--spacing-700)">
         
           <story-card noHeader>
             <div slot="body">
@@ -76,13 +74,7 @@ class storyHeading extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-heading", storyHeading);
-
-
-
-

@@ -1,6 +1,4 @@
-
 class storyLink extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -16,7 +14,7 @@ class storyLink extends HTMLElement {
         description="The mui-link defines a hyperlink, which is used to link from one page to another."
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="URL">
           <div slot="body">
@@ -40,13 +38,7 @@ class storyLink extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-link", storyLink);
-
-
-
-

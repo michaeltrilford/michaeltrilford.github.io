@@ -1,6 +1,4 @@
-
 class storyQuote extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -16,7 +14,7 @@ class storyQuote extends HTMLElement {
         description="The mui-quote specifies a section that is quoted from another source."
       >
 
-      <mui-v-stack space="var(--spacing-large)">
+      <mui-v-stack space="var(--spacing-700)">
 
         <story-card title="Quote">
 
@@ -45,13 +43,7 @@ class storyQuote extends HTMLElement {
 
       </story-container>
     `;
-
   }
-  
 }
 
 customElements.define("story-quote", storyQuote);
-
-
-
-

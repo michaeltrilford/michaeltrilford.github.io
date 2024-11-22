@@ -1,13 +1,12 @@
 class muiVStack extends HTMLElement {
-
   static get observedAttributes() {
-    return ['space'];
+    return ["space"];
   }
 
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
-    let space = `var(--spacing-medium)`;
+    let space = `var(--spacing-500)`;
     const styles = `
       :host {
         display: block;
@@ -19,7 +18,7 @@ class muiVStack extends HTMLElement {
     `;
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <slot style="--space: ${this.getAttribute('space') || space}"></slot>
+      <slot style="--space: ${this.getAttribute("space") || space}"></slot>
     `;
   }
 }
