@@ -9,22 +9,22 @@ class muiAlert extends HTMLElement {
     const styles = `
       :host {
         display: block;
-        border-radius: var(--radius-alert);
+        border-radius: var(--alert-radius);
         padding: var(--spacing-400) var(--spacing-500);
         background: var(--white);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
       }
       :host([variant="success"]) {
-        border: var(--border-alert-success);
+        border: var(--alert-border-success);
       }
       :host([variant="info"]) {
-        border: var(--border-alert-info);
+        border: var(--alert-border-info);
       }
       :host([variant="warning"]) {
-        border: var(--border-alert-warning);
+        border: var(--alert-border-warning);
       }
       :host([variant="error"]) {
-        border: var(--border-alert-error);
+        border: var(--alert-border-error);
       }
     `;
     shadowRoot.innerHTML = `

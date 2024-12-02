@@ -7,7 +7,7 @@ class muiBadge extends HTMLElement {
         display: inline-block;
         border-radius: var(--radius-badge);
         background: var(--grey-700);
-        font-size: var(--font-size-text-100);
+        font-size: var(--body-font-size-xs);
         color: var(--white);
         padding: var(--spacing-50) var(--spacing-200);
       }

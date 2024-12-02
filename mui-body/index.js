@@ -19,18 +19,18 @@ class muiBody extends HTMLElement {
         width: 100%;
       }
       :host([variant="medium"]) p {
-        font-size: var(---font-size-text-300);
+        font-size: var(--body-font-size-m);
       }
       :host([variant="large"]) p {
-        font-size: var(--font-size-text-400); 
+        font-size: var(--body-font-size-l); 
         line-height: 1.714285714285714;
       }
       :host([variant="small"]) p {
-        font-size: var(--font-size-text-200); 
+        font-size: var(--body-font-size-s); 
         line-height: 1.714285714285714;
       }
       :host([variant="tiny"]) p {
-        font-size: var(--font-size-text-100); 
+        font-size: var(--body-font-size-xs); 
       }
     `;
     shadowRoot.innerHTML = `

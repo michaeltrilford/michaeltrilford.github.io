@@ -47,7 +47,7 @@ class muiLink extends HTMLElement {
 
 
       a:focus-visible {
-        outline: var(--border-thin-ridge);
+        outline: var(--border-thick-ridge);
       }
       /* ===================================== */
 

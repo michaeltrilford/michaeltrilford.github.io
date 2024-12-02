@@ -20,27 +20,19 @@
   --font-size-900: 8.4rem; /* XXXX-Large */
   --font-size-1000: 9.6rem; /* XXXXX-Large */
 
-  --font-size-text-100: var(var(--font-size-25));
-  --font-size-text-200: var(--font-size-50);
-  --font-size-text-300: var(--font-size-100);
-  --font-size-text-400: var(--font-size-200);
-
-  --font-size-link: var(--font-size-100);
-  --font-size-button: var(--font-size-100);
-
   /* Palette tokens */
   --black: black;
   --white: #ffffff;
+  --black-opacity-50: hsla(0, 0%, 0%, 0.5);
+  --white-opacity-50: hsla(0, 0%, 100%, 0.5);
   --grey-900: #333;
   --grey-800: #444;
   --grey-700: #555;
   --grey-200: #e5e5e5;
-  --black-translucent-500: hsla(0, 0%, 0%, 0.5);
-  --white-translucent-500: hsla(0, 0%, 100%, 0.5);
   --red-500: #f74e4e;
-  --orange-500: orange;
+  --orange-500: #ffa500;
   --green-500: #00bd00;
-  --blue-500: blue;
+  --blue-500: #0000ff;
 
   /* Radius */
   --radius-0: 0;
@@ -49,19 +41,6 @@
   --radius-200: 8px; /* Small */
   --radius-300: 16px; /* Medium */
   --radius-400: 24px; /* Large */
-
-  /* Border */
-  --border-thin: 1px solid rgba(0, 0, 0, 0.1);
-  --border-thin-inverted: 1px solid hsla(0, 0%, 100%, 0.1);
-  --border-thick: 2px solid rgba(0, 0, 0, 0.1);
-  --border-thick-inverted: 2px solid hsla(0, 0%, 100%, 0.1);
-  --border-thin-dotted: 1px dotted rgba(0, 0, 0, 0.1);
-  --border-thin-ridge: thick ridge var(--grey-900);
-  --box-shadow-faux-border-bottom-thin-reverse: 0 0.1rem 0
-    var(--white-translucent-500);
-  --box-shadow-faux-border-thin: 0 0 0 1px var(--grey-200);
-  --box-shadow-faux-border-thin-inset: 0 0 0 1px var(--grey-200);
-  --box-shadow-faux-border-top-thin: inset 0 -1px 0 0 var(--grey-200);
 
   /* Spacing */
   --spacing-0: 0; /* Clear */
@@ -75,29 +54,57 @@
   --spacing-700: 4.8rem; /* Large */
   --spacing-800: 6rem; /* X-Large */
 
-  /* Contextual tokens
+  /* Border */
+  --border-thin: 1px solid rgba(0, 0, 0, 0.1);
+  --border-thick: 2px solid rgba(0, 0, 0, 0.1);
+  --border-thin-ridge: thin ridge var(--grey-900);
+  --border-thick-ridge: thick ridge var(--grey-900);
+
+  /* Line-height */
+  --line-height-100: 1;
+  --line-height-200: 1.25;
+  --line-height-300: 1.5;
+
+  /* Semantic tokens (color.text.primary)
+  =======================================================================================*/
+
+  /* EBAY use this layer as their toggle for theme */
+  /* --color-background-primary: {Light & Dark} */
+  --info: var(--blue-500);
+  --success: var(--green-500);
+  --warning: var(--orange-500);
+  --attention: var(--red-500);
+
+  /* Line-height */
+  --line-height-reset: var(--line-height-100);
+  --line-height-heading: var(--line-height-200);
+  --line-height-body: var(--line-height-300);
+
+  /* Contextual tokens (card.radius)
   =======================================================================================*/
 
   /* Radius */
-  --radius-card: var(--radius-150);
-  --radius-alert: var(--radius-100);
-  --radius-button: var(--radius-100);
-  --radius-badge: var(--radius-100);
-
-  /* Line-height */
-  --line-height-reset: 1;
-  --line-height-text: 1.5;
-  --line-height-heading: 1.25;
+  --card-radius: var(--radius-150);
+  --alert-radius: var(--radius-100);
+  --button-radius: var(--radius-100);
+  --badge-radius: var(--radius-100);
 
   /* Alert */
-  --border-alert-info: 2px solid var(--blue-500);
-  --border-alert-success: 2px solid var(--green-500);
-  --border-alert-error: 2px solid var(--red-500);
-  --border-alert-warning: 2px solid var(--orange-500);
+  --alert-border-info: 2px solid var(--info);
+  --alert-border-success: 2px solid var(--success);
+  --alert-border-warning: 2px solid var(--warning);
+  --alert-border-error: 2px solid var(--attention);
 
   /* Typography */
-  --text-body-color: var(--grey-900);
-  --selection-text-color: var(--white);
+  --body-font-size-xs: var(var(--font-size-25));
+  --body-font-size-s: var(--font-size-50);
+  --body-font-size-m: var(--font-size-100);
+  --body-font-size-l: var(--font-size-200);
+  --link-font-size: var(--font-size-100);
+  --button-font-size: var(--font-size-100);
+
+  --selection-color: var(--white);
+  --body-color: var(--grey-900);
 
   /* Link object */
   --link-color: var(--grey-900);
@@ -107,17 +114,17 @@
   --icon-color-reverse: var(--white);
 
   /* Code element */
-  --code-text-color: var(--white);
-  --code-bg: var(--grey-900);
+  --code-color: var(--white);
+  --code-background: var(--grey-900);
 
   /* Button object */
-  --button-primary-background: var(--grey-900);
-  --button-primary-background-hover: var(--grey-800);
-  --button-primary-background-active: var(--grey-700);
-  --button-primary-color: var(--white);
-  --button-secondary-background: var(--white);
-  --button-warning-background: var(---red-500);
-  --button-icon-only-width: 4rem;
+  --button-foreground-primary: var(--white);
+  --button-foreground-secondary: var(--grey-900);
+  --button-foreground-warning: var(--white);
+
+  --button-background-primary: var(--grey-900);
+  --button-background-secondary: var(--white);
+  --button-background-warning: var(--attention);
 
   /* Summary object */
   --summary-background: var(--white);

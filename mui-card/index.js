@@ -14,7 +14,7 @@ class muiCard extends HTMLElement {
     <style>
       :host {
         display: block;
-        border-radius: var(--radius-card);
+        border-radius: var(--card-radius);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
         background: var(--white);
       }

@@ -48,7 +48,7 @@ class muiNavbarGroup extends HTMLElement {
           margin-top: var(--spacing-500); 
         }
         span {
-          font-size: var(--font-size-heading-x-tiny);
+          font-size: var(--font-size-50);
         } 
       }
 

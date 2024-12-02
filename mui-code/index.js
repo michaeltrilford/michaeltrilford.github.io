@@ -12,18 +12,18 @@ class muiCode extends HTMLElement {
         display: block;
       }
       :host([small]) code {
-        font-size: var(--font-size-text-200);
+        font-size: var(--body-font-size-s);
       }
       :host([tiny]) code {
-        font-size: var(--font-size-text-100);
+        font-size: var(--body-font-size-xs);
       }
       code {
         display: block;
         border-radius: inherit;
         font-family: monospace;
-        font-size: var(--font-size-text-300);
-        color: var(--code-text-color);
-        background: var(--code-bg);
+        font-size: var(--body-font-size-m);
+        color: var(--code-color);
+        background: var(--code-background);
         padding: var(--spacing-400) var(--spacing-600) var(--spacing-400) var(--spacing-600);
       }
       ::slotted(hr) {

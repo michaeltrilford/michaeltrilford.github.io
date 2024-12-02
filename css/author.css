@@ -125,7 +125,7 @@
 
 .mui-actions__secondary {
   margin-bottom: var(--spacing-0);
-  font-size: var(--font-size-text-100);
+  font-size: var(--body-font-size-xs);
   margin-top: var(--spacing-400);
   padding-left: var(--spacing-200);
 }

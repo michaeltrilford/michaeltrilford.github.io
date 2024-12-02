@@ -40,7 +40,7 @@ class muiNavbarToggle extends HTMLElement {
       }
       a:hover {
         color: var(--link-color-reverse);
-        box-shadow: var(--box-shadow-faux-border-bottom-thin-reverse); 
+        box-shadow: 0 0 0 1px red; 
       }
 
     </style>

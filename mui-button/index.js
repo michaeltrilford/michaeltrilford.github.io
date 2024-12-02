@@ -14,10 +14,10 @@ class muiButton extends HTMLElement {
         border: none;
         cursor: pointer;
         width: auto;
-        border-radius: var(--radius-button);
+        border-radius: var(--button-radius);
         padding: var(--spacing-200) var(--spacing-500);
         text-decoration: none;
-        line-height: var(--line-height-text);
+        line-height: var(--line-height-body);
         display: inline-block;
         box-sizing: border-box;
       }
@@ -51,7 +51,7 @@ class muiButton extends HTMLElement {
       /* Warning
       ========================================= */
       :host([variant="warning"]) button {
-        background-color: var(--button-warning-background);
+        background-color: var(--button-background-warning);
         color: white; }
 
       :host([variant="warning"]) button:focus {

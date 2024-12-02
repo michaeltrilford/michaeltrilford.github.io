@@ -22,13 +22,25 @@ class storyTokens extends HTMLElement {
 
         <mui-v-stack space="var(--spacing-700)">
 
-          <story-card title="Typography" nofooter>
+          <story-card title="Font Family" nofooter>
             <mui-token-local-slat 
               slot="body" 
               token="--font-family" 
               output="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji", 'Segoe UI Symbol'">
             </mui-token-local-slat>
-
+          </story-card>
+            
+          <story-card title="Font Scale" nofooter>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--font-size-25" 
+              output="1.2rem">
+            </mui-token-local-slat>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--font-size-50" 
+              output="1.4rem">
+            </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
               token="--font-size-100" 
@@ -79,46 +91,32 @@ class storyTokens extends HTMLElement {
               token="--font-size-1000" 
               output="9.6rem">
             </mui-token-local-slat>
-
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-link" 
-              output="1.6rem">
-            </mui-token-local-slat>
-
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-button" 
-              output="1.6rem">
-            </mui-token-local-slat>
-
-            <mui-token-local-slat 
-            slot="body" 
-            token="--font-size-text-100" 
-            output="1.2rem">
-            </mui-token-local-slat>
-            
-            <mui-token-local-slat 
-            slot="body" 
-            token="--font-size-text-200" 
-            output="1.4rem">
-            </mui-token-local-slat>
-            
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-text-300" 
-              output="1.6rem">
-            </mui-token-local-slat>
-
-            <mui-token-local-slat 
-              slot="body" 
-              token="--font-size-text-400" 
-              output="1.8rem">
-            </mui-token-local-slat>
-
           </story-card>
 
-          <story-card title="Palette" nofooter>
+          <story-card title="Colors" nofooter>
+
+            <mui-token-local-slat 
+              slot="body" 
+              token="--white" 
+              output="white">
+            </mui-token-local-slat>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--white-opacity-50" 
+              output="hsla(0, 0%, 100%, 0.5)">
+            </mui-token-local-slat>
+
+            <mui-token-local-slat 
+              slot="body" 
+              token="--black" 
+              output="black">
+            </mui-token-local-slat>            
+            <mui-token-local-slat 
+              slot="body" 
+              token="--black-opacity-50" 
+              output="hsla(0, 0%, 0%, 0.5)">
+            </mui-token-local-slat>
+
             <mui-token-local-slat 
               slot="body" 
               token="--grey-900" 
@@ -139,21 +137,7 @@ class storyTokens extends HTMLElement {
               token="--grey-200" 
               output="#e5e5e5">
             </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--black" 
-              output="black">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--black-white" 
-              output="white">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--white-translucent-500" 
-              output="hsla(0, 0%, 100%, 0.5)">
-            </mui-token-local-slat>
+
             <mui-token-local-slat 
               slot="body" 
               token="--red-500" 
@@ -162,7 +146,7 @@ class storyTokens extends HTMLElement {
             <mui-token-local-slat 
               slot="body" 
               token="--orange-500" 
-              output="orange">
+              output="#ffa500">
             </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
@@ -172,11 +156,16 @@ class storyTokens extends HTMLElement {
             <mui-token-local-slat 
               slot="body" 
               token="--blue-500" 
-              output="blue">
+              output="#0000ff">
             </mui-token-local-slat>
           </story-card>
 
           <story-card title="Radius" nofooter>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--radius-0" 
+              output="0">
+            </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
               token="--radius-100" 
@@ -197,31 +186,6 @@ class storyTokens extends HTMLElement {
               token="--radius-400" 
               output="24px">
             </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--radius-0" 
-              output="0">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--radius-card" 
-              output="6px">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--radius-alert" 
-              output="4px">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--radius-button" 
-              output="4px">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--radius-badge" 
-              output="4px">
-            </mui-token-local-slat>
           </story-card>
 
           <story-card title="Borders" nofooter>
@@ -232,48 +196,18 @@ class storyTokens extends HTMLElement {
             </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
-              token="--border-thin-inverted" 
-              output="1px solid hsla(0, 0%, 100%, 0.1)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
               token="--border-thick" 
               output="2px solid rgba(0, 0, 0, 0.1)">
             </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
-              token="--border-thick-inverted" 
-              output="2px solid hsla(0, 0%, 100%, 0.1)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--border-thin-dotted" 
-              output="1px dotted rgba(0, 0, 0, 0.1)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
               token="--border-thin-ridge" 
+              output="thin ridge var(--grey-900)">
+            </mui-token-local-slat>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--border-thick-ridge" 
               output="thick ridge var(--grey-900)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--box-shadow-faux-border-bottom-thin-reverse" 
-              output="0 0.1rem 0 var(--white-translucent-500)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--box-shadow-faux-border-thin" 
-              output="0 0 0 1px var(--grey-200)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--box-shadow-faux-border-thin-inset" 
-              output="0 0 0 1px var(--grey-200)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--box-shadow-faux-border-top-thin" 
-              output="inset 0 -1px 0 0 var(--grey-200)">
             </mui-token-local-slat>
           </story-card>
 
@@ -338,7 +272,7 @@ class storyTokens extends HTMLElement {
             </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
-              token="--line-height-text" 
+              token="--line-height-body" 
               output="1.5">
             </mui-token-local-slat>
             <mui-token-local-slat 
@@ -357,14 +291,51 @@ class storyTokens extends HTMLElement {
           <story-card title="Typography" nofooter>
             <mui-token-local-slat 
               slot="body" 
-              token="--text-body-color" 
+              token="--body-color" 
               output="var(--grey-900)">
             </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
-              token="--selection-text-color" 
+              token="--selection-color" 
               output="var(--white)">
             </mui-token-local-slat>
+
+            <mui-token-local-slat 
+              slot="body" 
+              token="--link-font-size" 
+              output="1.6rem">
+            </mui-token-local-slat>
+
+            <mui-token-local-slat 
+              slot="body" 
+              token="--button-font-size" 
+              output="1.6rem">
+            </mui-token-local-slat>
+
+                        <mui-token-local-slat 
+            slot="body" 
+            token="--body-font-size-xs" 
+            output="1.2rem">
+            </mui-token-local-slat>
+            
+            <mui-token-local-slat 
+            slot="body" 
+            token="--body-font-size-s" 
+            output="1.4rem">
+            </mui-token-local-slat>
+            
+            <mui-token-local-slat 
+              slot="body" 
+              token="--body-font-size-m" 
+              output="1.6rem">
+            </mui-token-local-slat>
+
+            <mui-token-local-slat 
+              slot="body" 
+              token="--body-font-size-l" 
+              output="1.8rem">
+            </mui-token-local-slat>
+
           </story-card>
 
           <story-card title="Link object" nofooter>
@@ -383,72 +354,34 @@ class storyTokens extends HTMLElement {
           <story-card title="Icons" nofooter>
             <mui-token-local-slat 
               slot="body" 
-              token="--icon-color-reverse" 
+              token="--link-color-reverse" 
               output="var(--white)">
             </mui-token-local-slat>
           </story-card>
 
-          <story-card title="Code" nofooter>
+          <story-card title="Background" nofooter>
             <mui-token-local-slat 
               slot="body" 
-              token="--code-text-color" 
-              output="var(--white)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--code-bg" 
-              output="var(--grey-900)">
-            </mui-token-local-slat>
-          </story-card>
-
-          <story-card title="Button" nofooter>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--button-primary-background" 
+              token="--button-background-primary" 
               output="var(--grey-900)">
             </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
-              token="--button-primary-background-hover" 
-              output="var(--grey-800)">
-            </mui-token-local-slat>
-
-            <mui-token-local-slat 
-              slot="body" 
-              token="--button-primary-background-active" 
-              output="var(--grey-700)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--button-primary-color" 
+              token="--button-background-secondary" 
               output="var(--white)">
             </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
-              token="--button-secondary-background" 
-              output="var(--white)">
-            </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--button-warning-background" 
+              token="--button-background-warning" 
               output="var(--red-500)">
             </mui-token-local-slat>
-            <mui-token-local-slat 
-              slot="body" 
-              token="--button-icon-only-width" 
-              output="4rem">
-            </mui-token-local-slat>
-          </story-card>
 
-          <story-card title="Summary" nofooter>
+
             <mui-token-local-slat 
               slot="body" 
-              token="--summary-background" 
+              token="--table-background" 
               output="var(--white)">
             </mui-token-local-slat>
-          </story-card>
-
-          <story-card title="Mark" nofooter>
             <mui-token-local-slat 
               slot="body" 
               token="--mark-background" 
@@ -456,24 +389,61 @@ class storyTokens extends HTMLElement {
             </mui-token-local-slat>
             <mui-token-local-slat 
               slot="body" 
+              token="--legend-background" 
+              output="var(--white)">
+            </mui-token-local-slat>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--summary-background" 
+              output="var(--white)">
+            </mui-token-local-slat>
+
+            <mui-token-local-slat 
+              slot="body" 
+              token="--code-background" 
+              output="var(--grey-900)">
+            </mui-token-local-slat>
+
+          </story-card>
+
+          <story-card title="Text Color" nofooter>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--button-color-primary" 
+              output="var(--white)">
+            </mui-token-local-slat>
+            <mui-token-local-slat 
+              slot="body" 
               token="--mark-color" 
               output="var(--white)">
             </mui-token-local-slat>
-          </story-card>
-
-          <story-card title="Table" nofooter>
             <mui-token-local-slat 
               slot="body" 
-              token="--table-background" 
+              token="--code-color" 
               output="var(--white)">
             </mui-token-local-slat>
           </story-card>
 
-          <story-card title="Legend" nofooter>
+          <story-card title="Radius" nofooter>
             <mui-token-local-slat 
               slot="body" 
-              token="--legend-background" 
-              output="var(--white)">
+              token="--card-radius" 
+              output="6px">
+            </mui-token-local-slat>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--alert-radius" 
+              output="4px">
+            </mui-token-local-slat>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--radius-button" 
+              output="4px">
+            </mui-token-local-slat>
+            <mui-token-local-slat 
+              slot="body" 
+              token="--radius-badge" 
+              output="4px">
             </mui-token-local-slat>
           </story-card>
 
