@@ -17,7 +17,7 @@ class muiButton extends HTMLElement {
         border-radius: var(--button-radius);
         padding: var(--spacing-200) var(--spacing-500);
         text-decoration: none;
-        line-height: var(--line-height-body);
+        line-height: var(--body-line-height);
         display: inline-block;
         box-sizing: border-box;
       }

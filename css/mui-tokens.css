@@ -76,9 +76,8 @@
   --attention: var(--red-500);
 
   /* Line-height */
-  --line-height-reset: var(--line-height-100);
-  --line-height-heading: var(--line-height-200);
-  --line-height-body: var(--line-height-300);
+  --heading-line-height: var(--line-height-200);
+  --body-line-height: var(--line-height-300);
 
   /* Contextual tokens (card.radius)
   =======================================================================================*/
@@ -96,47 +95,37 @@
   --alert-border-error: 2px solid var(--attention);
 
   /* Typography */
-  --body-font-size-xs: var(var(--font-size-25));
+  --body-font-size-xs: var(--font-size-25);
   --body-font-size-s: var(--font-size-50);
   --body-font-size-m: var(--font-size-100);
   --body-font-size-l: var(--font-size-200);
   --link-font-size: var(--font-size-100);
   --button-font-size: var(--font-size-100);
 
-  --selection-color: var(--white);
+  /* Color */
+  --button-color-primary: var(--white);
+  --button-color-secondary: var(--grey-900);
+  --button-color-warning: var(--white);
   --body-color: var(--grey-900);
-
-  /* Link object */
+  --code-color: var(--white);
   --link-color: var(--grey-900);
-  --link-color-reverse: var(--white);
+  --mark-color: var(--white);
+  --selection-color: var(--white);
 
   /* Element object */
   --icon-color-reverse: var(--white);
 
   /* Code element */
-  --code-color: var(--white);
   --code-background: var(--grey-900);
 
   /* Button object */
-  --button-foreground-primary: var(--white);
-  --button-foreground-secondary: var(--grey-900);
-  --button-foreground-warning: var(--white);
-
   --button-background-primary: var(--grey-900);
   --button-background-secondary: var(--white);
   --button-background-warning: var(--attention);
 
-  /* Summary object */
   --summary-background: var(--white);
-
-  /* Mark object */
   --mark-background: var(--grey-900);
-  --mark-color: var(--white);
-
-  /* Table object */
   --table-background: var(--white);
-
-  /* Legend object */
   --legend-background: var(--white);
 
   /* Specific tokens

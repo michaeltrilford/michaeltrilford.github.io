@@ -35,11 +35,11 @@ class muiNavbarToggle extends HTMLElement {
         overflow: hidden;
         display: block;
         margin-bottom: 0;
-        color: var(--link-color-reverse); 
+        color: var(--white); 
         text-decoration: none;
       }
       a:hover {
-        color: var(--link-color-reverse);
+        color: var(--white);
         box-shadow: 0 0 0 1px red; 
       }
 

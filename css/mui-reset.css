@@ -1,6 +1,6 @@
 :root {
   font-size: var(--root-font-size);
-  line-height: var(--line-height-body);
+  line-height: var(--body-line-height);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-feature-settings: kern 1, liga 1;
@@ -33,7 +33,7 @@ select,
 textarea {
   font-family: var(--font-family);
   font-size: var(--body-font-size-m);
-  line-height: var(--line-height-body);
+  line-height: var(--body-line-height);
 }
 input,
 optgroup,

@@ -42,11 +42,11 @@ class muiNavbarLink extends HTMLElement {
       
       a:hover { 
         opacity: 1; 
-        color: var(--link-color-reverse); 
+        color: var(--white); 
       }
 
       a:focus { 
-        color: var(--link-color-reverse);
+        color: var(--white);
         background: var(--black);
         opacity: 1; 
       }
