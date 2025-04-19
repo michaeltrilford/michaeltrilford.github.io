@@ -52,9 +52,9 @@ class muiIconAddSubtract extends HTMLElement {
           outline-offset: var(--spacing-50);
         }
         /* Inverted Button */
-        :host([inverted]) button:focus { outline-color: var(--icon-color-reverse); }
+        :host([inverted]) button:focus { outline-color: var(--white); }
         :host([inverted]) mui-icon-add,
-        :host([inverted]) mui-icon-subtract { fill: var(--icon-color-reverse); }
+        :host([inverted]) mui-icon-subtract { fill: var(--white); }
       </style>
       <button>
         <mui-icon-add small></mui-icon-add>

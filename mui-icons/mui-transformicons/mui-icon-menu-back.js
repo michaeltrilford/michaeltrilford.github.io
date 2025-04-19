@@ -52,9 +52,9 @@ class muiIconMenuBack extends HTMLElement {
           outline-offset: var(--spacing-50);
         }
         /* Inverted Button */
-        :host([inverted]) button:focus { outline-color: var(--icon-color-reverse); }
+        :host([inverted]) button:focus { outline-color: var(--white); }
         :host([inverted]) mui-icon-menu,
-        :host([inverted]) mui-icon-back { fill: var(--icon-color-reverse); }
+        :host([inverted]) mui-icon-back { fill: var(--white); }
       </style>
       <button>
         <mui-icon-menu small></mui-icon-menu>

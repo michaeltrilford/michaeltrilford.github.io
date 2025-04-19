@@ -16,15 +16,19 @@ class muiAlert extends HTMLElement {
       }
       :host([variant="success"]) {
         border: var(--alert-border-success);
+        background: var(--alert-background-primary);
       }
       :host([variant="info"]) {
         border: var(--alert-border-info);
+        background: var(--alert-background-info);
       }
       :host([variant="warning"]) {
         border: var(--alert-border-warning);
+        background: var(--alert-background-warning);
       }
       :host([variant="error"]) {
         border: var(--alert-border-error);
+        background: var(--alert-background-error);
       }
     `;
     shadowRoot.innerHTML = `

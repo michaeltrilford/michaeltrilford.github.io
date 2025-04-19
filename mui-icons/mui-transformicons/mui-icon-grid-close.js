@@ -52,9 +52,9 @@ class muiIconGridClose extends HTMLElement {
           outline-offset: var(--spacing-50);
         }
         /* Inverted Button */
-        :host([inverted]) button:focus { outline-color: var(--icon-color-reverse); }
+        :host([inverted]) button:focus { outline-color: var(--white); }
         :host([inverted]) mui-icon-grid,
-        :host([inverted]) mui-icon-close { fill: var(--icon-color-reverse); }
+        :host([inverted]) mui-icon-close { fill: var(--white); }
       </style>
       <button>
         <mui-icon-grid small></mui-icon-grid>

@@ -32,7 +32,7 @@
   --red-500: #f74e4e;
   --orange-500: #ffa500;
   --green-500: #00bd00;
-  --blue-500: #0000ff;
+  --blue-500: #62b7fb;
 
   /* Radius */
   --radius-0: 0;
@@ -73,11 +73,25 @@
   --info: var(--blue-500);
   --success: var(--green-500);
   --warning: var(--orange-500);
-  --attention: var(--red-500);
+  --error: var(--red-500);
 
-  /* Line-height */
-  --heading-line-height: var(--line-height-200);
-  --body-line-height: var(--line-height-300);
+  --info-border: 2px solid var(--info);
+  --success-border: 2px solid var(--success);
+  --warning-border: 2px solid var(--warning);
+  --error-border: 2px solid var(--error);
+
+  --success-background: color-mix(in srgb, var(--success) 10%, var(--white) 0%);
+  --info-background: color-mix(in srgb, var(--info) 10%, var(--white) 0%);
+  --warning-background: color-mix(in srgb, var(--warning) 10%, var(--white) 0%);
+  --error-background: color-mix(in srgb, var(--error) 10%, var(--white) 0%);
+
+  --primary-background: var(--grey-900);
+  --secondary-background: var(--white);
+  --tertiary-background: var(--red-500);
+
+  --primary-text-color: var(--white);
+  --secondary-text-color: var(--grey-900);
+  --tertiary-text-color: var(--white);
 
   /* Contextual tokens (card.radius)
   =======================================================================================*/
@@ -88,11 +102,15 @@
   --button-radius: var(--radius-100);
   --badge-radius: var(--radius-100);
 
-  /* Alert */
-  --alert-border-info: 2px solid var(--info);
-  --alert-border-success: 2px solid var(--success);
-  --alert-border-warning: 2px solid var(--warning);
-  --alert-border-error: 2px solid var(--attention);
+  /* Border */
+  --alert-border-info: var(--info-border);
+  --alert-border-success: var(--success-border);
+  --alert-border-warning: var(--warning-border);
+  --alert-border-error: var(--error-border);
+
+  /* Line-height */
+  --heading-line-height: var(--line-height-200);
+  --body-line-height: var(--line-height-300);
 
   /* Typography */
   --body-font-size-xs: var(--font-size-25);
@@ -102,31 +120,31 @@
   --link-font-size: var(--font-size-100);
   --button-font-size: var(--font-size-100);
 
+  /* Background */
+  --button-background-primary: var(--primary-background);
+  --button-background-secondary: var(--secondary-background);
+  --button-background-warning: var(--tertiary-background);
+
+  --code-background: var(--grey-900);
+  --summary-background: var(--white);
+  --mark-background: var(--grey-900);
+  --table-background: var(--white);
+  --legend-background: var(--white);
+
+  --alert-background-primary: var(--success-background);
+  --alert-background-info: var(--info-background);
+  --alert-background-warning: var(--warning-background);
+  --alert-background-error: var(--error-background);
+
   /* Color */
-  --button-color-primary: var(--white);
-  --button-color-secondary: var(--grey-900);
-  --button-color-warning: var(--white);
+  --button-color-primary: var(--primary-text-color);
+  --button-color-secondary: var(--secondary-text-color);
+  --button-color-warning: var(--tertiary-text-color);
   --body-color: var(--grey-900);
   --code-color: var(--white);
   --link-color: var(--grey-900);
   --mark-color: var(--white);
   --selection-color: var(--white);
-
-  /* Element object */
-  --icon-color-reverse: var(--white);
-
-  /* Code element */
-  --code-background: var(--grey-900);
-
-  /* Button object */
-  --button-background-primary: var(--grey-900);
-  --button-background-secondary: var(--white);
-  --button-background-warning: var(--attention);
-
-  --summary-background: var(--white);
-  --mark-background: var(--grey-900);
-  --table-background: var(--white);
-  --legend-background: var(--white);
 
   /* Specific tokens
   =======================================================================================*/
