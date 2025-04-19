@@ -11,7 +11,7 @@ class storySlat extends HTMLElement {
 
       <story-container 
         title="Slat"
-        description="Slat"
+        description="Slat is a composable component designed to display table data on mobile devices. It provides flexible start and end slots, enabling consumers to tailor how data is presented in a mobile-friendly, stacked format. Slat is ideal for adapting complex table layouts into a clearer, more accessible experience on smaller screens."
       >
 
       <mui-v-stack space="var(--spacing-700)">
@@ -20,24 +20,23 @@ class storySlat extends HTMLElement {
 
           <mui-slat slot="body">
             <mui-heading slot="start" size="5">Heading</mui-heading>
-            <div slot="end" width="20px">
-              <mui-h-stack slot="end" space="var(--spacing-400)" alignX="flex-end">
-                <mui-body width="20px">Body</mui-body>
-                <mui-body width="20px">Body</mui-body>
-              </mui-h-stack>
-            </div>
+            <mui-h-stack slot="end" space="var(--spacing-400)" alignX="flex-end">
+              <mui-body width="20px">Body</mui-body>
+            </mui-h-stack>
           </mui-slat>
           
           <mui-code slot="footer">
-            &lt;mui-x&gt;
+            &lt;mui-slat&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-x&gt;...&lt;/mui-x&gt;
+            &nbsp;&nbsp;&lt;mui-heading slot="start" size="5"&gt;...&lt;/mui-heading&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-x&gt;...&lt;/mui-x&gt;
+            &nbsp;&nbsp;&lt;mui-h-stack slot="end"&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-x&gt;...&lt;/mui-x&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-body&gt;...&lt;/mui-body&gt;
             <br />
-            &lt;/mui-x&gt;
+            &nbsp;&nbsp;&lt;/mui-h-stack&gt;
+            <br />
+            &lt;/mui-slat&gt;
           </mui-code>
 
         </story-card>

@@ -31,14 +31,15 @@ class muiNavbar extends HTMLElement {
 
     const Home = `
       <mui-navbar-home link="./index.html" title="michaeltrilford.mui"></mui-navbar-home>
-    `
-    
+    `;
+
     const Required = `
       <mui-navbar-group id="required-css" groupname="Required CSS">
-        <mui-navbar-link link="tokens.html" title="Design Tokens"></mui-navbar-link>
+        <mui-navbar-link link="tokens-base.html" title="Base Tokens"></mui-navbar-link>
+        <mui-navbar-link link="tokens-contextual.html" title="Contextual Tokens"></mui-navbar-link>
       </mui-navbar-group>
-    `
-    
+    `;
+
     const Components = `
       <mui-navbar-group id="web-components" groupname="Web Components">
         <mui-navbar-link link="alert.html" title="Alerts"></mui-navbar-link>
@@ -62,7 +63,7 @@ class muiNavbar extends HTMLElement {
         <mui-navbar-link link="table.html" title="Table"></mui-navbar-link>
         <mui-navbar-link link="slat.html" title="Slat"></mui-navbar-link>
       </mui-navbar-group>
-    `
+    `;
 
     // We provide the shadow root with some HTML
     shadowRoot.innerHTML = `
@@ -95,9 +96,8 @@ class muiNavbar extends HTMLElement {
     this.navbarEl = this.shadowRoot.getElementById("mobile");
     this.navbarMainEl = this.shadowRoot.querySelector("mui-navbar-body");
     this.navGroupRequiredCSSEl = this.shadowRoot.getElementById("required-css");
-    this.navGroupWebComponentsEl = this.shadowRoot.getElementById(
-      "web-components"
-    );
+    this.navGroupWebComponentsEl =
+      this.shadowRoot.getElementById("web-components");
 
     // Reveal navigation on mobile
     this.menuIconEl.addEventListener("click", () => {
