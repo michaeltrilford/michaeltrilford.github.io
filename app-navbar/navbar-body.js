@@ -9,15 +9,16 @@ class muiNavbarBody extends HTMLElement {
     let html = `
     <style>
 
-      :host { padding: 2.4rem; }
-
       @media (min-width: 960px) {
         :host {
           display: block;
           margin: 0;
           grid-column: 2 / 3;
           transition: background 1s linear;
-          padding-top: 0;
+          padding-left: 2.4rem;
+          padding-right: 2.4rem;
+          padding-bottom: 2.4rem;
+
         } 
       }
 
@@ -28,18 +29,6 @@ class muiNavbarBody extends HTMLElement {
 
       :host([onscroll="fixed-view"]) ::slotted(mui-container) {
         height: 100vh;
-      }
-
-      :host([class="required-css"]) {
-        background: var(--required-css); 
-      }
-
-      :host([class="optional-css"]) {
-        background: var(--optional-css);
-      }
-
-      :host([class="web-components"]) {
-        background: var(--web-components);
       }
 
     </style>

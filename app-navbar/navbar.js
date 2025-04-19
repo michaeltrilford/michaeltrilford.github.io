@@ -95,9 +95,6 @@ class muiNavbar extends HTMLElement {
     this.menuIconEl = this.shadowRoot.querySelector("mui-icon-menu-close");
     this.navbarEl = this.shadowRoot.getElementById("mobile");
     this.navbarMainEl = this.shadowRoot.querySelector("mui-navbar-body");
-    this.navGroupRequiredCSSEl = this.shadowRoot.getElementById("required-css");
-    this.navGroupWebComponentsEl =
-      this.shadowRoot.getElementById("web-components");
 
     // Reveal navigation on mobile
     this.menuIconEl.addEventListener("click", () => {
@@ -112,20 +109,6 @@ class muiNavbar extends HTMLElement {
     // On scroll of the navigation, add scroll atributes
     this.navbarEl.addEventListener("scroll", () => {
       this.navbarMainEl.setAttribute("onscroll", "fixed-view");
-    });
-
-    // On mouse over of required css, add a unqiue colour for section
-    this.navGroupRequiredCSSEl.addEventListener("mouseover", () => {
-      this.navbarMainEl.classList.add("required-css");
-      this.navbarMainEl.classList.remove("web-components");
-      this.navbarMainEl.classList.remove("optional-css");
-    });
-
-    // On mouse over of main content, add a unqiue colour for section
-    this.navGroupWebComponentsEl.addEventListener("mouseover", () => {
-      this.navbarMainEl.classList.add("web-components");
-      this.navbarMainEl.classList.remove("required-css");
-      this.navbarMainEl.classList.remove("optional-css");
     });
   }
 }

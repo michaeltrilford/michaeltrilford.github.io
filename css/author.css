@@ -40,32 +40,6 @@
   }
 }
 
-.mui-logo__left-line {
-  position: absolute;
-  display: none;
-}
-
-.mui-logo__left-line {
-  bottom: -11.8rem;
-  left: -45rem;
-  opacity: 0.6;
-}
-
-@media (min-width: 768px) {
-  .mui-logo__left-line {
-    bottom: -9.8rem;
-    left: -38rem;
-  }
-}
-
-@media (min-width: 850px) {
-  .mui-logo__left-line {
-    bottom: -8.8rem;
-    left: -33rem;
-    display: block;
-  }
-}
-
 .mui-actions {
   grid-column: 1 / 7;
 }

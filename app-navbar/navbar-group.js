@@ -26,10 +26,6 @@ class muiNavbarGroup extends HTMLElement {
         color: var(--required-css);
       }
 
-      :host([groupname="Optional CSS"]:hover) span {
-        color: var(--optional-css);
-      }
-
       :host([groupname="Web Components"]:hover) span {
         color: var(--web-components);
       }

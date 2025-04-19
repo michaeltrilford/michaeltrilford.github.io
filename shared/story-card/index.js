@@ -14,14 +14,23 @@ class storyCard extends HTMLElement {
         box-shadow:  20px 20px 60px rgb(0 0 0 / 35%),
                     -20px -20px 60px rgb(255 255 255 / 20%);
       }
-      @media (min-width: 500px) {
-        mui-card {
-          border-radius: var(--radius-400);
-        }
+
+
+      mui-card-header {
+        padding: var(--spacing-500);
       }
+
+
+
       mui-card-body {
         background: #f5f5f5;
+        padding: var(--spacing-500);
+        border-bottom-right-radius: var(--radius-200);
+        border-bottom-left-radius: var(--radius-200);
       }
+
+
+
       section {
         background: white;
         box-shadow: 0 4px 12px 0 rgb(0 0 0 / 10%);
