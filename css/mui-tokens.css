@@ -1,9 +1,15 @@
-/*  Type Scale
-=======================================================================================*/
-/* 6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120, 132, 144, 156, 168, 180, 192 */
-
 :root {
-  /* Typography tokens */
+  /* Base Tokens
+=======================================================================================*/
+
+  /* These tokens provide the foundational values for design properties. */
+  /* They are raw values without contextual meaning, intended to be reused by semantic and component tokens. */
+  /* Organized by category: typography, palette, spacing, radius, border, and line height. */
+
+  /* Type Scale Reminder */
+  /* 6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120, 132, 144, 156, 168, 180, 192 */
+
+  /* Typography */
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -20,7 +26,7 @@
   --font-size-900: 8.4rem; /* XXXX-Large */
   --font-size-1000: 9.6rem; /* XXXXX-Large */
 
-  /* Palette tokens */
+  /* Palette */
   --black: black;
   --white: #ffffff;
   --black-opacity-50: hsla(0, 0%, 0%, 0.5);
@@ -65,11 +71,20 @@
   --line-height-200: 1.25;
   --line-height-300: 1.5;
 
-  /* Semantic tokens (color.text.primary)
-  =======================================================================================*/
+  /* Semantic Tokens 
+=======================================================================================*/
 
-  /* EBAY use this layer as their toggle for theme */
-  /* --color-background-primary: {Light & Dark} */
+  /* TOKEN STRUCTURE */
+  /* Token Example: --primary-background */
+  /* Token Key: [variant]-[property-name] */
+
+  /* Unlike contextual/component tokens (shown below), semantic tokens lead with the variant. */
+  /* This format puts the emphasis on the intended purpose (e.g. "primary") before the visual property (e.g. "background"). */
+
+  /* These tokens represent semantic values intended to support theme toggling. */
+  /* For example: --primary-background may have different values in Light and Dark modes. */
+  /* Note: Theme switching is handled by additional tooling not shown here. The tokens below do not include theming logic. */
+
   --info: var(--blue-500);
   --success: var(--green-500);
   --warning: var(--orange-500);
@@ -93,8 +108,16 @@
   --secondary-text-color: var(--grey-900);
   --tertiary-text-color: var(--white);
 
-  /* Contextual tokens (card.radius)
+  /* Contextual tokens 
   =======================================================================================*/
+
+  /* TOKEN STRUCTURE */
+  /* Token Example: --button-background-primary */
+  /* Token Key: [component]-[property-name]-[variant] */
+
+  /* USING THE TOKEN */
+  /* Using the property name helps indicate what CSS property the token is mapped to. */
+  /* CSS Usage Example: background: var(--button-background-primary); */
 
   /* Radius */
   --card-radius: var(--radius-150);
