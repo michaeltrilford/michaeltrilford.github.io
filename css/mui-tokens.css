@@ -13,52 +13,124 @@
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-  --font-size-25: 1.2rem; /* Smallest */
-  --font-size-50: 1.4rem; /* Smaller than Tiny */
-  --font-size-100: 1.6rem; /* Tiny */
-  --font-size-200: 1.8rem; /* X-Small */
-  --font-size-300: 2.1rem; /* Small */
-  --font-size-400: 2.4rem; /* Medium */
-  --font-size-500: 3.6rem; /* Large */
-  --font-size-600: 4.8rem; /* X-Large */
-  --font-size-700: 6rem; /* XX-Large */
-  --font-size-800: 7.2rem; /* XXX-Large */
-  --font-size-900: 8.4rem; /* XXXX-Large */
-  --font-size-1000: 9.6rem; /* XXXXX-Large */
+  --font-size-25: 1.2rem;
+  --font-size-50: 1.4rem;
+  --font-size-100: 1.6rem;
+  --font-size-200: 1.8rem;
+  --font-size-300: 2.1rem;
+  --font-size-400: 2.4rem;
+  --font-size-500: 3.6rem;
+  --font-size-600: 4.8rem;
+  --font-size-700: 6rem;
+  --font-size-800: 7.2rem;
+  --font-size-900: 8.4rem;
+  --font-size-1000: 9.6rem;
 
   /* Palette */
+
+  /* Base colors */
   --black: black;
   --white: #ffffff;
+
+  /* Opacity variants */
+  --black-opacity-0: hsla(0, 0%, 0%, 0);
+  --black-opacity-10: hsla(0, 0%, 0%, 0.1);
+  --black-opacity-20: hsla(0, 0%, 0%, 0.2);
+  --black-opacity-30: hsla(0, 0%, 0%, 0.3);
+  --black-opacity-40: hsla(0, 0%, 0%, 0.4);
   --black-opacity-50: hsla(0, 0%, 0%, 0.5);
+  --black-opacity-60: hsla(0, 0%, 0%, 0.6);
+  --black-opacity-70: hsla(0, 0%, 0%, 0.7);
+  --black-opacity-80: hsla(0, 0%, 0%, 0.8);
+  --black-opacity-90: hsla(0, 0%, 0%, 0.9);
+  --black-opacity-100: hsla(0, 0%, 0%, 1);
+
+  --white-opacity-0: hsla(0, 0%, 100%, 0);
+  --white-opacity-10: hsla(0, 0%, 100%, 0.1);
+  --white-opacity-20: hsla(0, 0%, 100%, 0.2);
+  --white-opacity-30: hsla(0, 0%, 100%, 0.3);
+  --white-opacity-40: hsla(0, 0%, 100%, 0.4);
   --white-opacity-50: hsla(0, 0%, 100%, 0.5);
-  --grey-900: #333;
-  --grey-800: #444;
-  --grey-700: #555;
+  --white-opacity-60: hsla(0, 0%, 100%, 0.6);
+  --white-opacity-70: hsla(0, 0%, 100%, 0.7);
+  --white-opacity-80: hsla(0, 0%, 100%, 0.8);
+  --white-opacity-90: hsla(0, 0%, 100%, 0.9);
+  --white-opacity-100: hsla(0, 0%, 100%, 1);
+
+  /* Grey scale */
+  --grey-100: #f5f5f5;
   --grey-200: #e5e5e5;
+  --grey-300: #ccc;
+  --grey-400: #aaa;
+  --grey-500: #888;
+  --grey-600: #666;
+  --grey-700: #555;
+  --grey-800: #444;
+  --grey-900: #333;
+
+  /* Red scale */
+  --red-100: #ffe5e5;
+  --red-200: #fbbcbc;
+  --red-300: #f79494;
+  --red-400: #f36b6b;
   --red-500: #f74e4e;
+  --red-600: #e04343;
+  --red-700: #c23c3c;
+  --red-800: #a43535;
+  --red-900: #862e2e;
+
+  /* Orange scale */
+  --orange-100: #fff2cc;
+  --orange-200: #ffe0a3;
+  --orange-300: #ffcc80;
+  --orange-400: #ffb84d;
   --orange-500: #ffa500;
+  --orange-600: #e59400;
+  --orange-700: #cc8300;
+  --orange-800: #b37300;
+  --orange-900: #996200;
+
+  /* Green scale */
+  --green-100: #e5f9e5;
+  --green-200: #c6f3c6;
+  --green-300: #a6eda6;
+  --green-400: #86e786;
   --green-500: #00bd00;
+  --green-600: #00a800;
+  --green-700: #009400;
+  --green-800: #007f00;
+  --green-900: #006b00;
+
+  /* Blue scale */
+  --blue-100: #e6f2ff;
+  --blue-200: #cce4ff;
+  --blue-300: #99caff;
+  --blue-400: #85bffb;
   --blue-500: #62b7fb;
+  --blue-600: #4da6f3;
+  --blue-700: #3396eb;
+  --blue-800: #1a86e3;
+  --blue-900: #0076db;
 
   /* Radius */
   --radius-0: 0;
-  --radius-100: 4px; /* Tiny */
-  --radius-150: 6px; /* Small */
-  --radius-200: 8px; /* Small */
-  --radius-300: 16px; /* Medium */
-  --radius-400: 24px; /* Large */
+  --radius-100: 4px;
+  --radius-150: 6px;
+  --radius-200: 8px;
+  --radius-300: 16px;
+  --radius-400: 24px;
 
   /* Spacing */
-  --spacing-0: 0; /* Clear */
-  --spacing-50: 0.4rem; /* XX-Tiny */
-  --spacing-100: 0.6rem; /* X-Tiny */
-  --spacing-200: 0.8rem; /* Tiny */
-  --spacing-300: 1.2rem; /* X-Small */
-  --spacing-400: 1.6rem; /* Small */
-  --spacing-500: 2.4rem; /* Medium */
-  --spacing-600: 3.6rem; /* X-Medium */
-  --spacing-700: 4.8rem; /* Large */
-  --spacing-800: 6rem; /* X-Large */
+  --spacing-0: 0;
+  --spacing-50: 0.4rem;
+  --spacing-100: 0.6rem;
+  --spacing-200: 0.8rem;
+  --spacing-300: 1.2rem;
+  --spacing-400: 1.6rem;
+  --spacing-500: 2.4rem;
+  --spacing-600: 3.6rem;
+  --spacing-700: 4.8rem;
+  --spacing-800: 6rem;
 
   /* Border */
   --border-thin: 1px solid rgba(0, 0, 0, 0.1);
