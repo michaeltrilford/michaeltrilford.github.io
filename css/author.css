@@ -1,5 +1,5 @@
 :root {
-  background: rgb(0 0 0 / 10%);
+  background: var(--black-opacity-10);
 }
 
 .home mui-navbar mui-container {
