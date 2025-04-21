@@ -15,6 +15,7 @@ class muiNavbarBody extends HTMLElement {
           margin: 0;
           grid-column: 2 / 3;
           transition: background 1s linear;
+          padding-top: 2.4rem;         
           padding-left: 2.4rem;
           padding-right: 2.4rem;
           padding-bottom: 2.4rem;
