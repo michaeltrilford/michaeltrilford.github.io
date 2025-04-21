@@ -27,7 +27,7 @@ class muiNavbarMenu extends HTMLElement {
         text-align: left;
         opacity: 1;
         z-index: 100;
-        width: 32rem;
+        width: 24rem;
         height: 100%;
       }
       :host([desktop])::-webkit-scrollbar {
@@ -35,14 +35,11 @@ class muiNavbarMenu extends HTMLElement {
       } 
     `;
 
-
     // We provide the shadow root with some HTML
     shadowRoot.innerHTML = `
       <style>${styles}</style>
       <slot></slot>
     `;
-
-
   }
 }
 

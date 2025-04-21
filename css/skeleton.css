@@ -1,5 +1,5 @@
 body {
-  margin: var(--spacing-0);
+  margin: var(--spacing-000);
   font-size: var(--body-font-size-m);
   min-height: 100vh;
 }
@@ -7,7 +7,7 @@ body {
 .skeleton {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 32rem 1fr;
+  grid-template-columns: 24rem 1fr;
   height: 100vh;
   position: absolute;
 }

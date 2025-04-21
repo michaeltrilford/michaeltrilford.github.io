@@ -9,7 +9,7 @@ class muiNavbarBody extends HTMLElement {
     let html = `
     <style>
 
-      @media (min-width: 960px) {
+      @media (min-width: 961px) {
         :host {
           display: block;
           margin: 0;

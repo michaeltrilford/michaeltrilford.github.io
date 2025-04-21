@@ -9,7 +9,7 @@ class muiBadge extends HTMLElement {
         background: var(--grey-700);
         font-size: var(--body-font-size-xs);
         color: var(--white);
-        padding: var(--spacing-50) var(--spacing-200);
+        padding: var(--spacing-050) var(--spacing-200);
       }
     `;
     shadowRoot.innerHTML = `

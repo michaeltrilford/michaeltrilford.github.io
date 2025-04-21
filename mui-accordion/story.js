@@ -23,7 +23,7 @@ class storyAccordion extends HTMLElement {
           <div slot="body">
             <mui-accordion-inline>
               <span slot="title">Hello</span>
-              <div slot="detail" style="padding-left: var(--spacing-50); padding-right: var(--spacing-50);">
+              <div slot="detail" style="padding-left: var(--spacing-050); padding-right: var(--spacing-050);">
                 <mui-list as="ul">
                   <mui-list-item>Coffee</mui-list-item>
                   <mui-list-item>Tea</mui-list-item>

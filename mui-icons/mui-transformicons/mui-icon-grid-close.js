@@ -49,7 +49,7 @@ class muiIconGridClose extends HTMLElement {
           box-shadow: none; 
           outline-style: ridge; 
           outline-width: medium; 
-          outline-offset: var(--spacing-50);
+          outline-offset: var(--spacing-050);
         }
         /* Inverted Button */
         :host([inverted]) button:focus { outline-color: var(--white); }

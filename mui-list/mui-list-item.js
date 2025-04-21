@@ -16,11 +16,11 @@ class muiListItem extends HTMLElement {
         display: list-item;
         padding-left: 1em;
         text-indent: -1em;
-        margin: var(--spacing-0);
+        margin: var(--spacing-000);
         margin-bottom: var(--spacing-300);
       }
       :host(:last-child) {
-        margin: var(--spacing-0);
+        margin: var(--spacing-000);
       }
   `;
 

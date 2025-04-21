@@ -17,7 +17,7 @@ class muiImage extends HTMLElement {
         background: #eee;
         display: block;
         width: 100%;
-        margin: var(--spacing-0);
+        margin: var(--spacing-000);
       }
       ::slotted(img) {
         width: 100%;

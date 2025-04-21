@@ -13,7 +13,7 @@ class muiAccordionBlock extends HTMLElement {
       mui-accordion-summary {
         display: flex;
         align-items: center;
-        margin-bottom: var(--spacing-0);
+        margin-bottom: var(--spacing-000);
         padding: var(--spacing-400) var(--spacing-500); 
         border-bottom: var(--border-thin);
       }
@@ -45,7 +45,7 @@ class muiAccordionBlock extends HTMLElement {
           
       mui-accordion-detail {
         display: block;
-        margin-bottom: var(--spacing-0);
+        margin-bottom: var(--spacing-000);
         max-height: 0;
         transition: max-height .10s ease-in-out;
         overflow-y: hidden;
@@ -63,7 +63,7 @@ class muiAccordionBlock extends HTMLElement {
       }
 
       mui-accordion-detail-inner > *:last-child {
-        margin-bottom: var(--spacing-0);
+        margin-bottom: var(--spacing-000);
       }
 
     </style>

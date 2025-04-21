@@ -63,7 +63,7 @@ class muiButton extends HTMLElement {
       :host([variant="iconOnly"]) button {
         height: 32px;
         width: 32px;
-        padding: var(--spacing-0);
+        padding: var(--spacing-000);
         box-shadow: none;
       }
       :host([variant="iconOnly"]) button:hover {

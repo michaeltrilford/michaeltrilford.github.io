@@ -11,7 +11,7 @@ class storyHeading extends HTMLElement {
 
       <story-container 
         title="Heading" 
-        description="This component is to define system headings."
+        description="The Heading component includes six levels (H1–H6) for structured heading usage, supporting a range of hierarchies in text presentation."
       >
         
         <mui-v-stack space="var(--spacing-700)">

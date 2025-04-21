@@ -13,7 +13,7 @@ class storyTokensContextual extends HTMLElement {
 
       <story-container 
         title="Contextual Tokens"
-        description="Base tokens are the foundational values of a design system. They represent raw, unchanging definitions for core design attributes such as colors, typography, spacing, and sizes."
+        description="Contextual tokens bridge the gap between raw base tokens and specific use cases. They are tied to a particular context or element, reflecting how a base token is applied in a specific environment or scenario."
       >
         <mui-v-stack space="var(--spacing-700)">
   

@@ -1,20 +1,25 @@
 class muiBody extends HTMLElement {
   static get observedAttributes() {
-    return ["variant"];
+    return ["variant, weight"];
   }
 
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
-    let variant = `medium`;
-    this.setAttribute("variant", this.getAttribute("variant") || variant);
+
+    // Set defaults
+    const variant = this.getAttribute("variant") || "medium";
+    const weight = this.getAttribute("weight") || "regular";
+    this.setAttribute("variant", variant);
+    this.setAttribute("weight", weight);
+
     const styles = `
       :host {
         display: block;
       }
 
       :host p {
-        margin: var(--spacing-0);
+        margin: var(--spacing-000);
         display: block;
         width: 100%;
       }
@@ -32,6 +37,19 @@ class muiBody extends HTMLElement {
       :host([variant="tiny"]) p {
         font-size: var(--body-font-size-xs); 
       }
+
+      :host([weight="regular"]) p {
+        font-weight: 400;
+      }
+
+      :host([weight="medium"]) p {
+        font-weight: 500;
+      }
+
+      :host([weight="bold"]) p {
+        font-weight: 700;
+      }
+
     `;
     shadowRoot.innerHTML = `
       <style>${styles}</style>

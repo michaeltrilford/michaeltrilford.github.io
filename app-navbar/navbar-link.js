@@ -51,7 +51,7 @@ class muiNavbarLink extends HTMLElement {
         opacity: 1; 
       }
 
-      @media (min-width: 960px) {
+      @media (min-width: 961px) {
         a {
           font-size: var(--font-size-100);
           margin: 0;

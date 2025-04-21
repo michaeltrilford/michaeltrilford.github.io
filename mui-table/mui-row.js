@@ -17,8 +17,8 @@ class muiRow extends HTMLElement {
         display: grid;
         grid-template-columns: ${this.getAttribute("columns")};
         grid-gap: var(--spacing-500);
-        margin-bottom: var(--spacing-0);
-        padding: var(--spacing-300) var(--spacing-0);
+        margin-bottom: var(--spacing-000);
+        padding: var(--spacing-300) var(--spacing-000);
         border-bottom: 1px solid var(--grey-200);
       }
     </style>

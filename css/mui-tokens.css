@@ -113,7 +113,7 @@
   --blue-900: #0076db;
 
   /* Radius */
-  --radius-0: 0;
+  --radius-000: 0;
   --radius-100: 4px;
   --radius-150: 6px;
   --radius-200: 8px;
@@ -121,8 +121,8 @@
   --radius-400: 24px;
 
   /* Spacing */
-  --spacing-0: 0;
-  --spacing-50: 0.4rem;
+  --spacing-000: 0;
+  --spacing-050: 0.4rem;
   --spacing-100: 0.6rem;
   --spacing-200: 0.8rem;
   --spacing-300: 1.2rem;
@@ -243,6 +243,5 @@
 
   /* Specific tokens
   =======================================================================================*/
-  --required-css: salmon;
-  --web-components: skyblue;
+  --mui-brand: #ffeb3b;
 }

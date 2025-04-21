@@ -11,7 +11,7 @@
   <script src="js/vendor/index.js"></script>
 </head>
 
-<body onload="reveal();" class="home" style="background: var(--web-components)">
+<body onload="reveal();" class="home">
 
   <div id="loader" class="skeleton">
     <div class="skeleton_nav"></div>
@@ -21,29 +21,85 @@
   <div style="display: none;" id="app">
     <mui-navbar>
       <mui-container slot="main-content" center fluid>
-        <main>
-          <div class="mui-logo-wrapper">
-            <img class="mui-logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
-          </div>
-          <div class="mui-actions">
-            <mui-link class="github-link" target="_blank"
-              href="https://github.com/michaeltrilford/michaeltrilford.github.io" button primary rounded>View on Github
-            </mui-link>
-            <div class="mui-actions__secondary">
-              <mui-link target="_blank" href="https://codepen.io/trilm/">Codepen.io/trilm</mui-link>
-              <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
-              <mui-link href="https://mui-svelte-sapper.trilfordm.now.sh">michaeltrilford/mui.svelte</mui-link>
+
+
+        <mui-responsive breakpoint="960" class="home-grid">
+          
+          <main slot="showAbove">
+            <div class="mui-logo-wrapper">
+              <img class="mui-logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
             </div>
-          </div>
-          <mui-body class="mui-introduction" variant="tiny">
-            MUI is an experimental UI offering, which leverages Native Web Component techniques using Vanilla JS, HTML &amp; scoped CSS.
-          </mui-body>
-          <mui-body class="mui-technology" variant="tiny">
-            The collection of components come from my past explorations
-            on
-            <mui-link target="_blank" href="https://codepen.io/trilm/">codepen.io/trilm</mui-link>.
-          </mui-body>
-        </main>
+
+            <mui-v-stack class="mui-actions" space="var(--spacing-050)">
+              <mui-body variant="small" weight="bold">
+                <mui-link class="github-link" target="_blank"
+                  href="https://github.com/michaeltrilford/michaeltrilford.github.io" button primary rounded>Fork on GitHub
+                </mui-link>
+              </mui-body>
+              <mui-v-stack class="mui-actions__secondary" space="var(--spacing-000)">
+                <mui-body variant="small" weight="medium">
+                  <mui-link target="_blank" href="https://codepen.io/trilm/">Codepen.io/trilm</mui-link>
+                </mui-body>
+                <mui-body variant="small" weight="medium">
+                  <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
+                </mui-body>
+              </mui-v-stack>
+            </mui-v-stack>
+
+            <mui-body class="mui-introduction" variant="small" weight="bold">
+              MUI is an experimental UI offering, which leverages Native Web Component techniques using Vanilla JS, HTML &amp; scoped CSS.
+            </mui-body>
+            <mui-body class="mui-technology" variant="small" weight="bold">
+              The collection of components come from my past explorations
+              on
+              <mui-link target="_blank" href="https://codepen.io/trilm/">codepen.io/trilm</mui-link>
+            </mui-body>
+          </main>
+
+          <main slot="showBelow">
+            <div class="mui-logo-wrapper">
+              <img class="mui-logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
+            </div>
+            
+            <mui-v-stack space="var(--spacing-800)" style="max-width: 40ch; text-align: center;">
+            
+              <mui-v-stack space="var(--spacing-500)">
+                <mui-body class="mui-introduction" variant="large" weight="bold">
+                  MUI is an experimental UI offering, which leverages Native Web Component techniques using Vanilla JS, HTML &amp; scoped CSS.
+                </mui-body>
+                <mui-body class="mui-technology" variant="large" weight="bold">
+                  The collection of components come from my past explorations
+                  on
+                  <mui-link target="_blank" href="https://codepen.io/trilm/">codepen.io/trilm</mui-link>
+                </mui-body>
+              </mui-v-stack>
+
+              <mui-v-stack class="mui-actions" space="var(--spacing-300)">
+                <mui-body variant="large" weight="medium">
+                  <mui-link class="github-link" target="_blank"
+                    href="https://github.com/michaeltrilford/michaeltrilford.github.io" button primary rounded>View on Github
+                  </mui-link>
+                </mui-body>
+                <mui-v-stack class="mui-actions__secondary" space="var(--spacing-050)">
+                  <mui-body variant="medium" weight="medium">
+                    <mui-link target="_blank" href="https://codepen.io/trilm/">Codepen.io/trilm</mui-link>
+                  </mui-body>
+                  <mui-body variant="medium" weight="medium">
+                    <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
+                  </mui-body>
+                </mui-v-stack>
+              </mui-v-stack>
+
+            </mui-v-stack>
+  
+  
+          </main>
+
+
+        </mui-responsive>
+
+
+
       </mui-container>
     </mui-navbar>
   </div>

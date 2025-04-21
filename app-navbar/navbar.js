@@ -10,10 +10,10 @@ class muiNavbar extends HTMLElement {
         grid-template-rows: 1fr 5.4rem;
         min-height: 100vh; 
       }
-      @media (min-width: 960px) {
+      @media (min-width: 961px) {
         :host { 
           grid-template-rows: 1fr;
-          grid-template-columns: 32.0rem 1fr;
+          grid-template-columns: 24rem 1fr;
         }
       }
     
@@ -34,9 +34,9 @@ class muiNavbar extends HTMLElement {
     `;
 
     const Required = `
-      <mui-navbar-group id="required-css" groupname="Required CSS">
-        <mui-navbar-link link="tokens-base.html" title="Base Tokens"></mui-navbar-link>
-        <mui-navbar-link link="tokens-contextual.html" title="Contextual Tokens"></mui-navbar-link>
+      <mui-navbar-group id="design-tokens" groupname="Design Tokens">
+        <mui-navbar-link link="tokens-base.html" title="Base"></mui-navbar-link>
+        <mui-navbar-link link="tokens-contextual.html" title="Contextual"></mui-navbar-link>
       </mui-navbar-group>
     `;
 

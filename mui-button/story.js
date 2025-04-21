@@ -22,7 +22,7 @@ class storyButton extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container title="Buttons" description="Use a Button when triggering a user-led action.">
+      <story-container title="Buttons" description="Buttons are essential UI elements that trigger actions when clicked or tapped. They should be easily recognisable, provide clear feedback, and be accessible to all users.">
 
       <mui-v-stack space="var(--spacing-700)">
 

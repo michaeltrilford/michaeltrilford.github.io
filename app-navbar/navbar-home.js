@@ -22,7 +22,7 @@ class muiNavbarHome extends HTMLElement {
         z-index: 1; 
       }
       a {
-        color: var(--white); 
+        color: var(--mui-brand); 
         padding: 1.5rem var(--spacing-500);
         box-shadow: 0 0 96px 0 black;
         display: block;
@@ -33,7 +33,7 @@ class muiNavbarHome extends HTMLElement {
       a:hover {
         background: var(--black);
         box-shadow: 0 1px 0 0 var(--grey-900);
-        color: var(--white);
+        color: var(--mui-brand); 
       }
 
     </style>

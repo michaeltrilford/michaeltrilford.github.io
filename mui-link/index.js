@@ -22,7 +22,7 @@ class muiLink extends HTMLElement {
         font-size: inherit;
         color: var(--link-color);
       }
-      a:active, a:hover { outline: var(--spacing-0); }
+      a:active, a:hover { outline: var(--spacing-000); }
 
       /* Button
       ========================================= */
@@ -34,7 +34,7 @@ class muiLink extends HTMLElement {
         border: none;
         cursor: pointer;
         width: auto;
-        padding: 0 var(--spacing-500);
+        padding: 0 var(--spacing-400);
         text-decoration: none;
         line-height: var(--spacing-600);
         height: var(--spacing-600);

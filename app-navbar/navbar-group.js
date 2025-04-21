@@ -22,14 +22,6 @@ class muiNavbarGroup extends HTMLElement {
         padding-bottom: calc(5.4rem + 2.4rem);
       }
 
-      :host([groupname="Required CSS"]:hover) span {
-        color: var(--required-css);
-      }
-
-      :host([groupname="Web Components"]:hover) span {
-        color: var(--web-components);
-      }
-
       span {
         display: block;
         text-transform: uppercase;
@@ -39,7 +31,7 @@ class muiNavbarGroup extends HTMLElement {
         font-size: var(--font-size-400);
         
       }
-      @media (min-width: 960px) {
+      @media (min-width: 961px) {
         :host {
           margin-top: var(--spacing-500); 
         }

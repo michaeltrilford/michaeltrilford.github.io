@@ -11,8 +11,9 @@ class storyCard extends HTMLElement {
       mui-card {
         box-shadow: none;
         border-radius: var(--radius-200);
-        box-shadow:  20px 20px 60px rgb(0 0 0 / 35%),
-                    -20px -20px 60px rgb(255 255 255 / 20%);
+        box-shadow: 6px 6px 16px var(--white-opacity-20), 
+        6px 6px 16px var(--black-opacity-10),
+                    -6px -6px 14px var(--black-opacity-10);
       }
 
 
@@ -23,7 +24,7 @@ class storyCard extends HTMLElement {
 
 
       mui-card-body {
-        background: #f5f5f5;
+        background: var(--grey-100);
         padding: var(--spacing-500);
         border-bottom-right-radius: var(--radius-200);
         border-bottom-left-radius: var(--radius-200);
@@ -33,7 +34,6 @@ class storyCard extends HTMLElement {
 
       section {
         background: white;
-        box-shadow: 0 4px 12px 0 rgb(0 0 0 / 10%);
         position: relative;
       }
 
@@ -43,7 +43,7 @@ class storyCard extends HTMLElement {
       div:after {
         content: "";
         position: absolute;
-        background: skyblue;
+        background: #12caff;
       }
 
       div {

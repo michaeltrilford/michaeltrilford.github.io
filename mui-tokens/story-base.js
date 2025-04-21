@@ -134,7 +134,7 @@ class storyTokensBase extends HTMLElement {
           </story-card>
 
           <story-card title="Radius" nofooter>
-            <mui-token-local-slat slot="body" token="--radius-0" output="0"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--radius-000" output="0"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--radius-100" output="4px"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--radius-200" output="8px"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--radius-300" output="16px"></mui-token-local-slat>
@@ -149,8 +149,8 @@ class storyTokensBase extends HTMLElement {
           </story-card>
 
           <story-card title="Spacing" nofooter>
-            <mui-token-local-slat slot="body" token="--spacing-0" output="0"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-50" output="0.4rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--spacing-000" output="0"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--spacing-050" output="0.4rem"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--spacing-100" output="0.6rem"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--spacing-200" output="0.8rem"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--spacing-300" output="1.2rem"></mui-token-local-slat>

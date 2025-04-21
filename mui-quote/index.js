@@ -14,7 +14,7 @@ class muiQuote extends HTMLElement {
         padding-left: var(--spacing-500);
         font-size: var(--spacing-500);
         line-height: 1.5;
-        margin: var(--spacing-500) var(--spacing-0);
+        margin: var(--spacing-500) var(--spacing-000);
         font-style: italic;
       }
     </style>

@@ -27,8 +27,8 @@ class muiTokenLocalSlat extends HTMLElement {
       }
 
       code {
-        background: #ffada4;
-        box-shadow: 0 1px 0 0 salmon;
+        background: var(--mui-brand);
+        box-shadow: 0 1px 0 0 var(--mui-brand);
         border-radius: var(--radius-100);
         padding: 0 var(--spacing-200);
       }

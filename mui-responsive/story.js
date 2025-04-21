@@ -50,7 +50,7 @@ class storyResponsive extends HTMLElement {
         <mui-row-group> 
           <mui-row columns="${ProgressTableColumns}"> 
             <mui-cell align-y="center"><mui-body variant="small">Alison Max</mui-body></mui-cell> 
-            <mui-cell align-y="center"><mui-v-stack space="var(--spacing-50)"><mui-body variant="small">27/07/2020</mui-body><mui-badge>Quarterly</mui-badge></mui-v-stack></mui-cell> 
+            <mui-cell align-y="center"><mui-v-stack space="var(--spacing-050)"><mui-body variant="small">27/07/2020</mui-body><mui-badge>Quarterly</mui-badge></mui-v-stack></mui-cell> 
             <mui-cell align-y="center"><mui-badge>Unlodged</mui-badge></mui-cell> 
             <mui-cell align-y="center">${LocalRing}</mui-cell> 
           </mui-row> 
