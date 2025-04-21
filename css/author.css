@@ -17,7 +17,6 @@
   justify-content: center;
   margin-bottom: var(--spacing-000);
   gap: var(--spacing-800);
-  padding: 0 var(--spacing-700);
 }
 
 @media (min-height: 1100px) {
@@ -51,15 +50,23 @@
   }
 }
 
-/* Grid */
-.mui-logo {
-  width: 100%;
-}
-
 .mui-logo-wrapper {
   align-self: center;
   position: relative;
   margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Grid */
+.mui-logo {
+  width: 80%;
+}
+
+@media (min-width: 640px) {
+  .mui-logo {
+    width: 100%;
+  }
 }
 
 @media (min-width: 961px) {
