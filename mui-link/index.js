@@ -34,11 +34,12 @@ class muiLink extends HTMLElement {
         border: none;
         cursor: pointer;
         width: auto;
-        padding: 0 var(--spacing-400);
+        border-radius: var(--button-radius);
+        padding: var(--spacing-200) var(--spacing-500);
         text-decoration: none;
-        line-height: var(--spacing-600);
-        height: var(--spacing-600);
-        display: inline-block; 
+        line-height: var(--body-line-height);
+        display: inline-block;
+        box-sizing: border-box;
       }
       :host([button]) a:hover, 
       :host([button]) a:focus {
