@@ -17,7 +17,7 @@
   justify-content: center;
   margin-bottom: var(--spacing-000);
   gap: var(--spacing-800);
-  padding: var(--spacing-700);
+  padding: 0 var(--spacing-700);
 }
 
 @media (min-height: 1100px) {
