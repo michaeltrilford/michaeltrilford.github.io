@@ -86,13 +86,16 @@ class muiNavbar extends HTMLElement {
 
       <mui-responsive breakpoint="960">
         <mui-navbar-toggle slot="showBelow" link="index.html" title="michaeltrilford.mui">
-          <mui-icon-menu-close inverted rotate></mui-icon-menu-close>
+          <mui-icon-toggle color="var(--mui-brand)" inverted rotate variant="tiny">
+            <mui-icon-menu slot="primary" variant="tiny"></mui-icon-menu>
+            <mui-icon-close slot="secondary" variant="tiny"></mui-icon-close>
+          </mui-icon-toggle>
         </mui-navbar-toggle>
       </mui-responsive>
     `;
 
     // Query elements
-    this.menuIconEl = this.shadowRoot.querySelector("mui-icon-menu-close");
+    this.menuIconEl = this.shadowRoot.querySelector("mui-icon-toggle");
     this.navbarEl = this.shadowRoot.getElementById("mobile");
     this.navbarMainEl = this.shadowRoot.querySelector("mui-navbar-body");
 

@@ -54,8 +54,8 @@ class muiIconMenuClose extends HTMLElement {
         :host([inverted]) mui-icon-close { fill: var(--white); }
       </style>
       <button>
-        <mui-icon-menu small></mui-icon-menu>
-        <mui-icon-close small></mui-icon-close>
+        <mui-icon-menu variant="tiny"></mui-icon-menu>
+        <mui-icon-close variant="tiny"></mui-icon-close>
       </button>
     `;
 

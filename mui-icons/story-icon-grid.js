@@ -1,6 +1,4 @@
-
 class storyIconGrid extends HTMLElement {
-
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -14,13 +12,12 @@ class storyIconGrid extends HTMLElement {
         <mui-card-body style="text-align: center;">
           <slot name="body"></slot>
         </mui-card-body>
-        <mui-card-footer style="text-align: center;">
+        <mui-card-footer>
           <slot name="footer"></slot>
         </mui-card-footer>
       </mui-card>
     `;
   }
-  
 }
 
 customElements.define("story-icon-grid", storyIconGrid);

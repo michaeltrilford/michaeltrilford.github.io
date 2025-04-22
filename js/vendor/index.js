@@ -99,6 +99,7 @@ const MuiCompArray = [
   "mui-icons/mui-transformicons/mui-icon-grid-close.js",
   "mui-icons/mui-transformicons/mui-icon-menu-back.js",
   "mui-icons/mui-transformicons/mui-icon-menu-close.js",
+  "mui-icons/mui-transformicons/mui-icon-toggle.js",
   "mui-icons/mui-icon-add.js",
   "mui-icons/mui-icon-back.js",
   "mui-icons/mui-icon-close.js",
