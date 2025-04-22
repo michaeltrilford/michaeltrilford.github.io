@@ -19,7 +19,7 @@ class muiNavbarGroup extends HTMLElement {
       }
 
       :host(:last-of-type) {
-        padding-bottom: calc(5.4rem + 2.4rem);
+        padding-bottom: calc(5.6rem + 2.4rem);
       }
 
       span {

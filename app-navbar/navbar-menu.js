@@ -18,7 +18,7 @@ class muiNavbarMenu extends HTMLElement {
         top: 0;
       }
       :host([mobile]) {
-        height: 100vh;
+        height: (100vh - 5.6rem);
         z-index: 1;
         width: 100%;
       }

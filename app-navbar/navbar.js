@@ -7,7 +7,7 @@ class muiNavbar extends HTMLElement {
     const styles = `
       :host { 
         display: grid;
-        grid-template-rows: 1fr 5.4rem;
+        grid-template-rows: 1fr 5.6rem;
         min-height: 100vh; 
       }
       @media (min-width: 961px) {

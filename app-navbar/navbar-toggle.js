@@ -21,7 +21,7 @@ class muiNavbarToggle extends HTMLElement {
         bottom: 0;
         left: 0;
         background: #191919;
-        padding: 1.5rem;
+        padding: var(--spacing-400) var(--spacing-500);
         display: flex;
         justify-content: space-between;
         z-index: 2;
