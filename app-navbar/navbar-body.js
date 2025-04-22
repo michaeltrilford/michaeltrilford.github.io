@@ -9,9 +9,13 @@ class muiNavbarBody extends HTMLElement {
     let html = `
     <style>
 
+      :host {
+        display: flex;
+      }
+
       @media (min-width: 961px) {
         :host {
-          display: block;
+          display: flex;
           margin: 0;
           grid-column: 2 / 3;
           transition: background 1s linear;
