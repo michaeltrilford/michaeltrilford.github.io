@@ -31,7 +31,7 @@ class muiNavbarLink extends HTMLElement {
         transition: opacity 400ms ease-in, transform 100ms ease-in;
         opacity: 0.3;
         font-weight: bold;
-        font-size: var(--font-size-400);
+        font-size: var(--font-size-100);
         margin: 0; 
       }
 
