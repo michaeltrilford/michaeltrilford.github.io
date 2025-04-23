@@ -13,24 +13,40 @@ class muiLink extends HTMLElement {
     let html = `
     <style>
 
-      @import url("./css/mui-reset.css");
-
       :host {
         display: inline;
       }
       a {
-        font-size: inherit;
-        color: var(--link-color);
+        font-size: var(--link-font-size);
+        color: var(--link-text-color-default);
       }
       a:active, a:hover { outline: var(--spacing-000); }
 
+      a:hover {
+        color: var(--link-text-color-default-hover);
+      }
+
+      a:focus {
+        color: var(--link-text-color-default-focus);
+      }
+
+      a:disabled {
+        color: var(--link-text-color-default-disabled);
+      }
+
+      a, a:before, a:after {box-sizing: border-box;}
+
+      a:focus-visible {
+        outline: var(--outline-thick);
+      }
+
       /* Button
       ========================================= */
-      :host([button]) {
+      :host([as="button"]) {
         display: inline-block;
       }
 
-      :host([button]) a {
+      :host([as="button"]) a {
         border: none;
         cursor: pointer;
         width: auto;
@@ -40,18 +56,116 @@ class muiLink extends HTMLElement {
         line-height: var(--body-line-height);
         display: inline-block;
         box-sizing: border-box;
-      }
-      :host([button]) a:hover, 
-      :host([button]) a:focus {
-        opacity: 0.8;
+        background-color: var(--link-background-primary);
+        color: var(--link-text-color-primary);
       }
 
+      :host([as="button"]) a:hover {
+        background-color: var(--link-background-primary-hover);
+        color: var(--link-text-color-primary-hover);
+      } 
 
-      a:focus-visible {
-        outline: var(--border-thick-ridge);
+      :host([as="button"]) a:focus {
+        background-color: var(--link-background-primary-focus);
+        color: var(--link-text-color-primary-focus);
       }
-      /* ===================================== */
 
+      :host([as="button"]) a:focus-visible {
+        outline: var(--outline-thick);
+        background-color: var(--link-background-primary-focus);
+        color: var(--link-text-color-primary-focus);
+      }
+
+      :host([variant="primary"]) a:disabled {
+        color: var(--link-text-color-primary-disabled);
+        background: var(--link-background-primary-disabled); 
+      }
+
+      /* Button Primary 
+      ========================================= */
+      :host([variant="primary"]) a {
+        background-color: var(--link-background-primary);
+        color: var(--link-text-color-primary); 
+      }
+
+      :host([variant="primary"]) a:hover {
+        color: var(--link-text-color-primary-hover);
+        background: var(--link-background-primary-hover); 
+      }
+
+      :host([variant="primary"]) a:focus {
+        color: var(--link-text-color-primary-focus);
+        background: var(--link-background-primary-focus); 
+      }
+
+      :host([variant="primary"]) a:focus-visible {
+        outline: var(--outline-thick);
+        color: var(--link-text-color-primary-focus);
+        background: var(--link-background-primary-focus); 
+      }
+
+      :host([variant="primary"]) a:disabled {
+        color: var(--link-text-color-primary-disabled);
+        background: var(--link-background-primary-disabled); 
+      }
+
+      /* Button Secondary 
+      ========================================= */
+      :host([variant="secondary"]) a {
+        background-color: var(--link-background-secondary);
+        color: var(--link-text-color-secondary); 
+      }
+
+      :host([variant="secondary"]) a:hover {
+        color: var(--link-text-color-secondary-hover);
+        background: var(--link-background-secondary-hover); 
+      }
+
+      :host([variant="secondary"]) a:focus {
+        color: var(--link-text-color-secondary-focus);
+        background: var(--link-background-secondary-focus); 
+      }
+
+      :host([variant="secondary"]) a:focus-visible {
+        outline: var(--outline-thick);
+        color: var(--link-text-color-secondary-focus);
+        background: var(--link-background-secondary-focus); 
+      }
+
+      :host([variant="secondary"]) a:disabled {
+        color: var(--link-text-color-secondary-disabled);
+        background: var(--link-background-secondary-disabled); 
+      }
+
+      /* Button Warning 
+      ========================================= */
+      :host([variant="warning"]) a {
+        background-color: var(--link-background-warning);
+        color: var(--link-text-color-warning); 
+      }
+
+      :host([variant="warning"]) a:hover {
+        color: var(--link-text-color-warning-hover);
+        background: var(--link-background-warning-hover); 
+      }
+
+      :host([variant="warning"]) a:focus {
+        color: var(--link-text-color-warning-focus);
+        background: var(--link-background-warning-focus); 
+      }
+
+      :host([variant="warning"]) a:focus-visible {
+        outline: var(--outline-thick);
+        color: var(--link-text-color-warning-focus);
+        background: var(--link-background-warning-focus); 
+      }
+
+      :host([variant="warning"]) a:disabled {
+        color: var(--link-text-color-warning-disabled);
+        background: var(--link-background-warning-disabled); 
+      }
+
+      /* ===================================== */  
       
       /* Rounded 
       ========================================= */
@@ -59,16 +173,6 @@ class muiLink extends HTMLElement {
         border-radius: 1.5em; }
       /* ===================================== */
 
-
-      /* Button Primary 
-      ========================================= */
-      :host([primary]) a {
-        background-color: #333333;
-        color: white; }
-
-      :host([primary]) a:focus {
-        color: white; }
-      /* ===================================== */      
 
     </style>
     <a 

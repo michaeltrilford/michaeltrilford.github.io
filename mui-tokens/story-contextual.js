@@ -43,14 +43,14 @@ class storyTokensContextual extends HTMLElement {
           </story-card>
 
           <story-card title="Text Color" nofooter>
-            <mui-token-local-slat slot="body" token="--button-color-primary" output="var(--white)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--button-color-secondary" output="var(--grey-900)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--button-color-warning" output="var(--white)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--body-color" output="var(--grey-900)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--selection-color" output="var(--white)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--link-color" output="var(--grey-900)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--mark-color" output="var(--white)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--code-color" output="var(--white)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--button-text-color-primary" output="var(--white)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--button-text-color-secondary" output="var(--grey-900)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--button-text-color-warning" output="var(--white)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--body-text-color" output="var(--grey-900)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--selection-text-color" output="var(--white)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--link-text-color-default" output="var(--grey-900)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--mark-text-color" output="var(--white)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--code-text-color" output="var(--white)"></mui-token-local-slat>
           </story-card>
 
           <story-card title="Radius" nofooter>

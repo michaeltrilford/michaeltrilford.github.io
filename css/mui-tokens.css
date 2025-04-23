@@ -2,6 +2,8 @@
   /* Base Tokens
 =======================================================================================*/
 
+  /* Raw, foundational value (no context) */
+
   /* These tokens provide the foundational values for design properties. */
   /* They are raw values without contextual meaning, intended to be reused by semantic and component tokens. */
   /* Organized by category: typography, palette, spacing, radius, border, and line height. */
@@ -67,6 +69,7 @@
   --grey-700: #555;
   --grey-800: #444;
   --grey-900: #333;
+  --grey-1000: #222;
 
   /* Red scale */
   --red-100: #ffe5e5;
@@ -132,114 +135,288 @@
   --spacing-700: 4.8rem;
   --spacing-800: 6rem;
 
-  /* Border */
-  --border-thin: 1px solid rgba(0, 0, 0, 0.1);
-  --border-thick: 2px solid rgba(0, 0, 0, 0.1);
-  --border-thin-ridge: thin ridge var(--grey-900);
-  --border-thick-ridge: thick ridge var(--grey-900);
+  /* Stroke */
+  --stroke-size-100: 1px;
+  --stroke-size-200: 2px;
+  --stroke-size-300: 3px;
+  --stroke-size-500: 5px;
+
+  --stroke-style-solid: solid;
+  --stroke-style-outset: outset;
 
   /* Line-height */
   --line-height-100: 1;
   --line-height-200: 1.25;
   --line-height-300: 1.5;
 
-  /* Semantic Tokens 
+  /* Semantic Tokens - Expresses meaning or state
 =======================================================================================*/
 
   /* TOKEN STRUCTURE */
   /* Token Example: --primary-background */
-  /* Token Key: [variant]-[property-name] */
-
-  /* Unlike contextual/component tokens (shown below), semantic tokens lead with the variant. */
-  /* This format puts the emphasis on the intended purpose (e.g. "primary") before the visual property (e.g. "background"). */
+  /* Token Key: [identifier (Optional)]-[variant]-[property-name]-[state] */
 
   /* These tokens represent semantic values intended to support theme toggling. */
   /* For example: --primary-background may have different values in Light and Dark modes. */
   /* Note: Theme switching is handled by additional tooling not shown here. The tokens below do not include theming logic. */
 
-  --info: var(--blue-500);
-  --success: var(--green-500);
-  --warning: var(--orange-500);
-  --error: var(--red-500);
+  --success-color: var(--green-500);
+  --info-color: var(--blue-500);
+  --warning-color: var(--orange-500);
+  --error-color: var(--red-500);
 
-  --info-border: 2px solid var(--info);
-  --success-border: 2px solid var(--success);
-  --warning-border: 2px solid var(--warning);
-  --error-border: 2px solid var(--error);
+  --interactive-primary-bg: var(--grey-900);
+  --interactive-primary-bg-hover: var(--grey-1000);
+  --interactive-primary-bg-focus: var(--grey-1000);
+  --interactive-primary-bg-disabled: var(--grey-200);
+  --interactive-primary-text: var(--white);
+  --interactive-primary-text-hover: var(--white);
+  --interactive-primary-text-focus: var(--white);
+  --interactive-primary-text-disabled: var(--grey-400);
 
-  --success-background: color-mix(in srgb, var(--success) 10%, var(--white) 0%);
-  --info-background: color-mix(in srgb, var(--info) 10%, var(--white) 0%);
-  --warning-background: color-mix(in srgb, var(--warning) 10%, var(--white) 0%);
-  --error-background: color-mix(in srgb, var(--error) 10%, var(--white) 0%);
+  --interactive-secondary-bg: var(--white);
+  --interactive-secondary-bg-hover: var(--grey-100);
+  --interactive-secondary-bg-focus: var(--grey-100);
+  --interactive-secondary-bg-disabled: var(--grey-100);
+  --interactive-secondary-text: var(--grey-900);
+  --interactive-secondary-text-hover: var(--grey-900);
+  --interactive-secondary-text-focus: var(--grey-900);
+  --interactive-secondary-text-disabled: var(--grey-400);
 
-  --primary-background: var(--grey-900);
-  --secondary-background: var(--white);
-  --tertiary-background: var(--red-500);
+  --interactive-warning-bg: var(--red-500);
+  --interactive-warning-bg-hover: var(--red-600);
+  --interactive-warning-bg-focus: var(--red-600);
+  --interactive-warning-bg-disabled: var(--red-100);
+  --interactive-warning-text: var(--white);
+  --interactive-warning-text-hover: var(--white);
+  --interactive-warning-text-focus: var(--white);
+  --interactive-warning-text-disabled: var(--red-300);
 
-  --primary-text-color: var(--white);
-  --secondary-text-color: var(--grey-900);
-  --tertiary-text-color: var(--white);
+  --interactive-radius: var(--radius-100);
 
-  /* Contextual tokens 
+  /* Contextual tokens - Applies a primitive to a specific use
+  =======================================================================================*/
+
+  /* TOKEN STRUCTURE */
+  /* Token Example: --stroke-color-focus */
+  /* Token Key: [context]-[property-name]-[state] */
+
+  /* These tokens represent contextual values intended to support theme toggling. */
+  /* For example: --stroke-color-focus may have different values in Light and Dark modes. */
+  /* Note: Theme switching is handled by additional tooling not shown here. The tokens below do not include theming logic. */
+
+  /* Stroke (Borders & Outlines) */
+  --stroke-color-default: var(--grey-400);
+  --stroke-color-focus: var(--blue-500);
+  --stroke-color-warning: var(--orange-500);
+  --stroke-color-error: var(--red-600);
+
+  --stroke-color-button-primary: var(--black-opacity-0);
+  --stroke-color-button-secondary: var(--grey-600);
+  --stroke-color-button-warning: var(--black-opacity-0);
+  --stroke-color-button-icon-only: var(--black-opacity-0);
+
+  --summary-background: var(--white);
+  --mark-background: var(--grey-900);
+  --legend-background: var(--white);
+  --mark-text-color: var(--white);
+  --selection-text-color: var(--white);
+
+  /* Border */
+  --border-thin: var(--stroke-size-100) var(--stroke-style-solid)
+    var(--stroke-color-default);
+  --border-thick: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--stroke-color-default);
+
+  /* Outline */
+  --outline-thin: var(--stroke-size-100) var(--stroke-style-outset)
+    var(--stroke-color-focus);
+  --outline-medium: var(--stroke-size-300) var(--stroke-style-outset)
+    var(--stroke-color-focus);
+  --outline-thick: var(--stroke-size-500) var(--stroke-style-outset)
+    var(--stroke-color-focus);
+
+  /* Component tokens - Tied to specific UI components
   =======================================================================================*/
 
   /* TOKEN STRUCTURE */
   /* Token Example: --button-background-primary */
-  /* Token Key: [component]-[property-name]-[variant] */
+  /* Token Key: [component]-[property-name]-[variant]-[state] */
 
   /* USING THE TOKEN */
   /* Using the property name helps indicate what CSS property the token is mapped to. */
   /* CSS Usage Example: background: var(--button-background-primary); */
 
-  /* Radius */
+  /* Icon */
+  --icon-color-default: var(--black);
+  --icon-color-inverted: var(--white);
+
+  /* Card */
   --card-radius: var(--radius-150);
-  --alert-radius: var(--radius-100);
-  --button-radius: var(--radius-100);
+
+  /* Badge */
   --badge-radius: var(--radius-100);
 
-  /* Border */
-  --alert-border-info: var(--info-border);
-  --alert-border-success: var(--success-border);
-  --alert-border-warning: var(--warning-border);
-  --alert-border-error: var(--error-border);
-
-  /* Line-height */
+  /* Heading */
   --heading-line-height: var(--line-height-200);
-  --body-line-height: var(--line-height-300);
 
-  /* Typography */
+  /* Body */
+  --body-line-height: var(--line-height-300);
+  --body-text-color: var(--grey-900);
   --body-font-size-xs: var(--font-size-25);
   --body-font-size-s: var(--font-size-50);
   --body-font-size-m: var(--font-size-100);
   --body-font-size-l: var(--font-size-200);
-  --link-font-size: var(--font-size-100);
+
+  /* Code */
+  --code-text-color: var(--white);
+  --code-font-size-xs: var(--font-size-25);
+  --code-font-size-s: var(--font-size-50);
+  --code-font-size-m: var(--font-size-100);
+  --code-font-size-l: var(--font-size-200);
+  --code-background: var(--grey-900);
+
+  /* Table */
+  --table-background: var(--white);
+
+  /* Alert */
+  --alert-radius: var(--radius-100);
+  --alert-border-success: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--success-color);
+  --alert-border-info: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--info-color);
+  --alert-border-warning: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--warning-color);
+  --alert-border-error: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--error-color);
+
+  --alert-background-success: color-mix(
+    in srgb,
+    var(--success-color) 10%,
+    var(--white) 0%
+  );
+  --alert-background-info: color-mix(
+    in srgb,
+    var(--info-color) 10%,
+    var(--white) 0%
+  );
+  --alert-background-warning: color-mix(
+    in srgb,
+    var(--warning-color) 10%,
+    var(--white) 0%
+  );
+  --alert-background-error: color-mix(
+    in srgb,
+    var(--error-color) 10%,
+    var(--white) 0%
+  );
+
+  /* Button */
+  --button-radius: var(--interactive-radius);
   --button-font-size: var(--font-size-100);
 
-  /* Background */
-  --button-background-primary: var(--primary-background);
-  --button-background-secondary: var(--secondary-background);
-  --button-background-warning: var(--tertiary-background);
+  --button-background-primary: var(--interactive-primary-bg);
+  --button-background-primary-hover: var(--interactive-primary-bg-hover);
+  --button-background-primary-focus: var(--interactive-primary-bg-focus);
+  --button-background-primary-disabled: var(--interactive-primary-bg-disabled);
 
-  --code-background: var(--grey-900);
-  --summary-background: var(--white);
-  --mark-background: var(--grey-900);
-  --table-background: var(--white);
-  --legend-background: var(--white);
+  --button-border-primary: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--stroke-color-button-primary);
 
-  --alert-background-primary: var(--success-background);
-  --alert-background-info: var(--info-background);
-  --alert-background-warning: var(--warning-background);
-  --alert-background-error: var(--error-background);
+  --button-background-secondary: var(--interactive-secondary-bg);
+  --button-background-secondary-hover: var(--interactive-secondary-bg-hover);
+  --button-background-secondary-focus: var(--interactive-secondary-bg-focus);
+  --button-background-secondary-disabled: var(
+    --interactive-secondary-bg-disabled
+  );
 
-  /* Color */
-  --button-color-primary: var(--primary-text-color);
-  --button-color-secondary: var(--secondary-text-color);
-  --button-color-warning: var(--tertiary-text-color);
-  --body-color: var(--grey-900);
-  --code-color: var(--white);
-  --link-color: var(--grey-900);
-  --mark-color: var(--white);
-  --selection-color: var(--white);
+  --button-border-secondary: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--stroke-color-button-secondary);
+
+  --button-background-warning: var(--interactive-warning-bg);
+  --button-background-warning-hover: var(--interactive-warning-bg-hover);
+  --button-background-warning-focus: var(--interactive-warning-bg-focus);
+  --button-background-warning-disabled: var(--interactive-warning-bg-disabled);
+
+  --button-border-warning: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--stroke-color-button-warning);
+
+  --button-text-color-primary: var(--interactive-primary-text);
+  --button-text-color-primary-hover: var(--interactive-primary-text-hover);
+  --button-text-color-primary-focus: var(--interactive-primary-text-focus);
+  --button-text-color-primary-disabled: var(
+    --interactive-primary-text-disabled
+  );
+
+  --button-text-color-secondary: var(--interactive-secondary-text);
+  --button-text-color-secondary-hover: var(--interactive-secondary-text-hover);
+  --button-text-color-secondary-focus: var(--interactive-secondary-text-focus);
+  --button-text-color-secondary-disabled: var(
+    --interactive-secondary-text-disabled
+  );
+
+  --button-text-color-warning: var(--interactive-warning-text);
+  --button-text-color-warning-hover: var(--interactive-warning-text-hover);
+  --button-text-color-warning-focus: var(--interactive-warning-text-focus);
+  --button-text-color-warning-disabled: var(
+    --interactive-warning-text-disabled
+  );
+
+  --button-border-icon-only: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--stroke-color-button-icon-only);
+
+  /* Link */
+  --link-font-size: var(--font-size-100);
+
+  --link-text-color-default: var(--grey-900);
+  --link-text-color-default-hover: var(--grey-1000);
+  --link-text-color-default-focus: var(--grey-1000);
+  --link-text-color-default-disabled: var(--grey-800);
+
+  --link-background-primary: var(--interactive-primary-bg);
+  --link-background-primary-hover: var(--interactive-primary-bg-hover);
+  --link-background-primary-focus: var(--interactive-primary-bg-focus);
+  --link-background-primary-disabled: var(--interactive-primary-bg-disabled);
+
+  --link-border-primary: var(--stroke-size-200) var(--stroke-style-solid)
+    transparent;
+
+  --link-background-secondary: var(--interactive-secondary-bg);
+  --link-background-secondary-hover: var(--interactive-secondary-bg-hover);
+  --link-background-secondary-focus: var(--interactive-secondary-bg-focus);
+  --link-background-secondary-disabled: var(
+    --interactive-secondary-bg-disabled
+  );
+
+  --link-border-secondary: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--stroke-color-default);
+
+  --link-background-warning: var(--interactive-warning-bg);
+  --link-background-warning-hover: var(--interactive-warning-bg-hover);
+  --link-background-warning-focus: var(--interactive-warning-bg-focus);
+  --link-background-warning-disabled: var(--interactive-warning-bg-disabled);
+
+  --link-border-warning: var(--stroke-size-200) var(--stroke-style-solid)
+    transparent;
+
+  --link-text-color-primary: var(--interactive-primary-text);
+  --link-text-color-primary-hover: var(--interactive-primary-text-hover);
+  --link-text-color-primary-focus: var(--interactive-primary-text-focus);
+  --link-text-color-primary-disabled: var(--interactive-primary-text-disabled);
+
+  --link-text-color-secondary: var(--interactive-secondary-text);
+  --link-text-color-secondary-hover: var(--interactive-secondary-text-hover);
+  --link-text-color-secondary-focus: var(--interactive-secondary-text-focus);
+  --link-text-color-secondary-disabled: var(
+    --interactive-secondary-text-disabled
+  );
+
+  --link-text-color-warning: var(--interactive-warning-text);
+  --link-text-color-warning-hover: var(--interactive-warning-text-hover);
+  --link-text-color-warning-focus: var(--interactive-warning-text-focus);
+  --link-text-color-warning-disabled: var(--interactive-warning-text-disabled);
+
+  --link-radius: var(--interactive-radius);
 
   /* Specific tokens
   =======================================================================================*/

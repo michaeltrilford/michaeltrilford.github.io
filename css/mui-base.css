@@ -86,7 +86,7 @@ button {
   padding: var(--spacing-000) var(--spacing-400);
   line-height: 2.25;
   background: var(--button-background-primary);
-  color: var(--button-color-primary);
+  color: var(--button-text-color-primary);
   border-color: var(--button-background-primary);
 } */
 

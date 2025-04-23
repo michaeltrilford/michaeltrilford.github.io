@@ -2,15 +2,13 @@ class muiButton extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
-    let space = `var(--spacing-500)`;
     const styles = `
-
-      @import url("./css/mui-reset.css");
 
       :host {
         display: inline-block;
       }
       button {
+        vertical-align: baseline;
         border: none;
         cursor: pointer;
         width: auto;
@@ -19,55 +17,119 @@ class muiButton extends HTMLElement {
         text-decoration: none;
         line-height: var(--body-line-height);
         display: inline-block;
-        box-sizing: border-box;
+        text-transform: none;
+        overflow: visible;
+        -webkit-appearance: button;
+        font-family: var(--font-family);
+        font-size: var(--button-font-size);
+        background: var(--button-background-primary);
+        color: var(--button-text-color-primary);
+        border: var(--button-border-primary); 
       }
-      button:hover, 
+
+      button:active, button:hover { outline: var(--spacing-000); }
+
+      button:hover {
+        background: var(--button-background-primary-hover);
+        color: var(--button-text-color-primary-hover);
+      }
+
       button:focus {
-        opacity: 0.8;
+        background: var(--button-background-primary-focus);
+        color: var(--button-text-color-primary-focus);
+      }
+
+      button:disabled {
+        background: var(--button-background-primary-disabled);
+        color: var(--button-text-color-primary-disabled);
+      }
+
+      button, button:before, button:after {box-sizing: border-box;}
+
+      button:focus-visible {
+        outline: var(--outline-thick);
       }
 
       /* Primary 
       ========================================= */
       :host([variant="primary"]) button {
-        background-color: #333333;
-        color: white; }
+        background: var(--button-background-primary);
+        color: var(--button-text-color-primary);
+        border: var(--button-border-primary); 
+      }
+
+      :host([variant="primary"]) button:hover {
+        background: var(--button-background-primary-hover);
+        color: var(--button-text-color-primary-hover);
+      }
 
       :host([variant="primary"]) button:focus {
-        color: white; }
-      /* ===================================== */
+        background: var(--button-background-primary-focus);
+        color: var(--button-text-color-primary-focus);
+      }
 
+      :host([variant="primary"]) button:disabled {
+        background: var(--button-background-primary-disabled);
+        color: var(--button-text-color-primary-disabled);
+      }
 
       /* Secondary
       ========================================= */
+
       :host([variant="secondary"]) button {
-        background-color: white;
-        color: #333333;
-        box-shadow: inset 0 0 0 1px #333333; }
+        background: var(--button-background-secondary);
+        color: var(--button-text-color-secondary);
+        border: var(--button-border-secondary); 
+      }
+
+      :host([variant="secondary"]) button:hover {
+        background: var(--button-background-secondary-hover);
+        color: var(--button-text-color-secondary-hover);
+      }
 
       :host([variant="secondary"]) button:focus {
-        color: #333333; }
-      /* ===================================== */
+        background: var(--button-background-secondary-focus);
+        color: var(--button-text-color-secondary-focus);
+      }
+
+      :host([variant="secondary"]) button:disabled {
+        background: var(--button-background-secondary-disabled);
+        color: var(--button-text-color-secondary-disabled);
+      }
+
 
       /* Warning
       ========================================= */
       :host([variant="warning"]) button {
-        background-color: var(--button-background-warning);
-        color: white; }
+        background: var(--button-background-warning);
+        color: var(--button-text-color-warning);
+        border: var(--button-border-warning); 
+      }
+
+      :host([variant="warning"]) button:hover {
+        background: var(--button-background-warning-hover);
+        color: var(--button-text-color-warning-hover);
+      }
 
       :host([variant="warning"]) button:focus {
-        color: #333333; }
-      /* ===================================== */
+        background: var(--button-background-warning-focus);
+        color: var(--button-text-color-warning-focus);
+      }
+
+      :host([variant="warning"]) button:disabled {
+        background: var(--button-background-warning-disabled);
+        color: var(--button-text-color-warning-disabled);
+      }
 
       /* Icon only
       ========================================= */
-      :host([variant="iconOnly"]) button {
-        height: 32px;
-        width: 32px;
-        padding: var(--spacing-000);
-        box-shadow: none;
-      }
-      :host([variant="iconOnly"]) button:hover {
-        background: var(--grey-200);
+      :host([iconOnly]) button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        width: 44px;
+        padding: var(--spacing-000)
       }
       /* ===================================== */
     `;

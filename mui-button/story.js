@@ -6,19 +6,6 @@ class storyButton extends HTMLElement {
       :host { display: block; }
     `;
 
-    const ProgressChip = `
-      <div style="width: 10px; height: 10px; background: salmon;"></div>
-    `;
-
-    const ProgressSection = `
-      <mui-h-stack space="4px">
-        ${ProgressChip}
-        ${ProgressChip}
-        ${ProgressChip}
-        ${ProgressChip}
-      </mui-h-stack>
-    `;
-
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
@@ -26,26 +13,28 @@ class storyButton extends HTMLElement {
 
       <mui-v-stack space="var(--spacing-700)">
 
-        <story-card title="mui-button">
-          <mui-button-group slot="body">
-            <mui-button variant="secondary">Cancel</mui-button>
-            <mui-button variant="primary">Submit</mui-button>
-            <mui-button variant="warning">Delete</mui-button>
-          </mui-button-group>
+        <story-card title="Primary Button">
+        <mui-button variant="primary" slot="body">Submit</mui-button>
           <mui-code slot="footer">
-            &lt;mui-button-group&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-button variant="secondary"&gt;Cancel&lt;/mui-button&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-button variant="primary"&gt;Submit&lt;/mui-button&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-button variant="warning"&gt;Delete&lt;/mui-button&gt;
-            <br />
-            &lt;/mui-button-group&gt;
+            &lt;mui-button variant="primary"&gt;Cancel&lt;/mui-button&gt;
           </mui-code>
         </story-card>
 
-        <story-card title="mui-button-group">
+        <story-card title="Secondary Button">
+         <mui-button variant="secondary" slot="body">Cancel</mui-button>
+          <mui-code slot="footer">
+            &lt;mui-button variant="secondary"&gt;Submit&lt;/mui-button&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Warning Button">
+          <mui-button variant="warning" slot="body">Delete</mui-button>
+          <mui-code slot="footer">
+            &lt;mui-button variant="warning"&gt;Delete&lt;/mui-button&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Button Group">
           <mui-button-group right slot="body">
             <mui-button variant="secondary">Cancel</mui-button>
             <mui-button variant="primary">Submit</mui-button>
@@ -61,6 +50,45 @@ class storyButton extends HTMLElement {
             &nbsp;&nbsp;&lt;mui-button variant="warning"&gt;Delete&lt;/mui-button&gt;
             <br />
             &lt;/mui-button-group&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Icon Only / Primary Button">
+          <mui-button variant="primary" iconOnly slot="body">
+            <mui-icon-add color="primaryButton" variant="tiny"></mui-icon-add>
+          </mui-button>
+          <mui-code slot="footer">
+            &lt;mui-button variant="primary"&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-icon-add color="primaryButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
+            <br />
+            &lt;/mui-button&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Icon Only / Secondary Button">
+          <mui-button variant="secondary" iconOnly slot="body">
+            <mui-icon-add color="secondaryButton" variant="tiny"></mui-icon-add>
+          </mui-button>
+          <mui-code slot="footer">
+            &lt;mui-button variant="secondary"&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-icon-add color="secondaryButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
+            <br />
+            &lt;/mui-button&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Icon Only / Warning Button">
+          <mui-button variant="warning" iconOnly slot="body">
+            <mui-icon-add color="warningButton" variant="tiny"></mui-icon-add>
+          </mui-button>
+          <mui-code slot="footer">
+            &lt;mui-button variant="warning"&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-icon-add color="warningButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
+            <br />
+            &lt;/mui-button&gt;
           </mui-code>
         </story-card>
 

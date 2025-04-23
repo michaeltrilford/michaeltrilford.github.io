@@ -1,3 +1,18 @@
+// Wait for DOM content before adding listeners
+// Used to ensure focus state doesn't appear on Icon Toggle but still works on Keyboard
+document.addEventListener("DOMContentLoaded", () => {
+  // --- Focus visibility detection (keep outlines for keyboard users only)
+  document.body.addEventListener("keydown", (e) => {
+    if (e.key === "Tab") {
+      document.body.dataset.userIsTabbing = "true";
+    }
+  });
+
+  document.body.addEventListener("mousedown", () => {
+    delete document.body.dataset.userIsTabbing;
+  });
+});
+
 const StylesArray = [
   "css/mui-tokens.css",
   "css/mui-reset.css",
@@ -94,12 +109,7 @@ const MuiCompArray = [
   "mui-responsive/index.js",
   "mui-container/index.js",
   "mui-heading/index.js",
-  "mui-icons/mui-transformicons/mui-icon-add-subtract.js",
-  "mui-icons/mui-transformicons/mui-icon-grid-back.js",
-  "mui-icons/mui-transformicons/mui-icon-grid-close.js",
-  "mui-icons/mui-transformicons/mui-icon-menu-back.js",
-  "mui-icons/mui-transformicons/mui-icon-menu-close.js",
-  "mui-icons/mui-transformicons/mui-icon-toggle.js",
+  "mui-icons/mui-icon-toggle.js",
   "mui-icons/mui-icon-add.js",
   "mui-icons/mui-icon-back.js",
   "mui-icons/mui-icon-close.js",

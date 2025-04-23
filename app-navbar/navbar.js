@@ -86,7 +86,7 @@ class muiNavbar extends HTMLElement {
 
       <mui-responsive breakpoint="960">
         <mui-navbar-toggle slot="showBelow" link="index.html" title="michaeltrilford.mui">
-          <mui-icon-toggle color="var(--mui-brand)" inverted rotate variant="tiny">
+          <mui-icon-toggle color="var(--mui-brand)" rotate variant="tiny">
             <mui-icon-menu slot="primary" variant="tiny"></mui-icon-menu>
             <mui-icon-close slot="secondary" variant="tiny"></mui-icon-close>
           </mui-icon-toggle>

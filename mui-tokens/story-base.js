@@ -144,8 +144,12 @@ class storyTokensBase extends HTMLElement {
           <story-card title="Borders" nofooter>
             <mui-token-local-slat slot="body" token="--border-thin" output="1px solid rgba(0, 0, 0, 0.1)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--border-thick" output="2px solid rgba(0, 0, 0, 0.1)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--border-thin-ridge" output="thin ridge var(--grey-900)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--border-thick-ridge" output="thick ridge var(--grey-900)"></mui-token-local-slat>
+          </story-card>
+
+          <story-card title="Outline" nofooter>
+            <mui-token-local-slat slot="body" token="--outline-thin" output="thin ridge var(--grey-900)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--outline-medium" output="medium ridge var(--grey-900)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--outline-thick" output="thick ridge var(--grey-900)"></mui-token-local-slat>
           </story-card>
 
           <story-card title="Spacing" nofooter>

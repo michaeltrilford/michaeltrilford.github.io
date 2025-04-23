@@ -34,6 +34,33 @@ class storyLink extends HTMLElement {
           </mui-code>
         </story-card>
 
+        <story-card title="Primary Link">
+          <div slot="body">
+            <mui-link target="_blank" as="button" variant="primary">View report</mui-link>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-link as="button" variant="primary" href="links.html"&gt;...&lt;/mui-link&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Secondary Link">
+          <div slot="body">
+            <mui-link target="_blank" as="button" variant="secondary">View report</mui-link>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-link as="button" variant="secondary" href="links.html"&gt;...&lt;/mui-link&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Warning Link">
+          <div slot="body">
+            <mui-link target="_blank" as="button" variant="warning">View report</mui-link>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-link as="button" variant="warning" href="links.html"&gt;...&lt;/mui-link&gt;
+          </mui-code>
+        </story-card>
+
       </mui-v-stack>
 
       </story-container>

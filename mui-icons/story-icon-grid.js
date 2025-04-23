@@ -1,12 +1,46 @@
 class storyIconGrid extends HTMLElement {
+  static get observedAttributes() {
+    return ["theme"];
+  }
+
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: "open" });
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === "theme" && oldValue !== newValue) {
+      this.render();
+    }
+  }
+
+  render() {
+    const theme = this.getAttribute("theme") || "default";
+
+    // Map semantic theme names to token values
+    const colorMap = {
+      default: "var(--white)",
+      inverted: "var(--grey-900)",
+      primaryButton: "var(--button-background-primary)",
+      secondaryButton: "var(--button-background-secondary)",
+      warningButton: "var(--button-background-warning)",
+    };
+
+    const backgroundColor = colorMap[theme] || colorMap.default;
+
     const styles = `
       :host { display: block; }
+      mui-card {
+        background-color: ${backgroundColor};
+        display: block;
+      }
     `;
 
-    shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = `
       <style>${styles}</style>
       <mui-card>
         <mui-card-body style="text-align: center;">

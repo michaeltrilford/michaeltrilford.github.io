@@ -16,7 +16,7 @@ class muiAlert extends HTMLElement {
       }
       :host([variant="success"]) {
         border: var(--alert-border-success);
-        background: var(--alert-background-primary);
+        background: var(--alert-background-success);
       }
       :host([variant="info"]) {
         border: var(--alert-border-info);

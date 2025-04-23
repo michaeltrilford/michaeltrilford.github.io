@@ -1,7 +1,7 @@
 /* Mui Icon: Menu */
 class muiIconMenu extends HTMLElement {
   static get observedAttributes() {
-    return ["variant"];
+    return ["variant", "color"];
   }
 
   constructor() {
@@ -13,12 +13,28 @@ class muiIconMenu extends HTMLElement {
     this.render();
   }
 
-  attributeChangedCallback() {
-    this.render();
+  attributeChangedCallback(name, oldValue, newValue) {
+    if ((name === "variant" || name === "color") && oldValue !== newValue) {
+      this.render();
+    }
   }
 
   render() {
     const variant = this.getAttribute("variant") || "small";
+    const rawColor = this.getAttribute("color");
+
+    // Map semantic names to actual token values
+    const colorMap = {
+      default: "var(--icon-color-default)",
+      inverted: "var(--icon-color-inverted)",
+      primaryButton: "var(--icon-color-inverted)",
+      secondaryButton: "var(--icon-color-default)",
+      warningButton: "var(--icon-color-inverted)",
+    };
+
+    // If rawColor matches a semantic key, use it; otherwise use the raw value or default
+    const iconColor =
+      colorMap[rawColor] || rawColor || "var(--icon-color-default)";
 
     const sizeMap = {
       tiny: "1.6rem",
@@ -37,11 +53,12 @@ class muiIconMenu extends HTMLElement {
           display: inline-flex;
           align-items: center;
           justify-content: center;
+          fill: ${iconColor};
         }
         svg {
           width: 100%;
           display: block;
-          fill: inherit;
+          fill: inherit; 
         }
       </style>
       <svg viewBox="0 0 36 30">

@@ -12,17 +12,17 @@ class muiCode extends HTMLElement {
         display: block;
       }
       :host([small]) code {
-        font-size: var(--body-font-size-s);
+        font-size: var(--code-font-size-s);
       }
       :host([tiny]) code {
-        font-size: var(--body-font-size-xs);
+        font-size: var(--code-font-size-xs);
       }
       code {
         display: block;
         border-radius: inherit;
         font-family: monospace;
-        font-size: var(--body-font-size-m);
-        color: var(--code-color);
+        font-size: var(--code-font-size-m);
+        color: var(--code-text-color);
         background: var(--code-background);
         padding: var(--spacing-400) var(--spacing-600) var(--spacing-400) var(--spacing-600);
       }

@@ -9,6 +9,10 @@ class muiIconToggle extends HTMLElement {
 
     this.addEventListener("click", () => {
       this.toggleAttribute("toggle");
+
+      // Blur the button after click to remove persistent focus
+      const button = this.shadowRoot.querySelector("button");
+      if (button) button.blur();
     });
   }
 
@@ -24,7 +28,17 @@ class muiIconToggle extends HTMLElement {
 
   render() {
     const variant = this.getAttribute("variant") || "small";
-    const color = this.getAttribute("color") || "black"; // default fallback
+    const rawColor = this.getAttribute("color");
+
+    // Map semantic names to actual token values
+    const colorMap = {
+      default: "var(--icon-color-default)",
+      inverted: "var(--icon-color-inverted)",
+    };
+
+    // If rawColor matches a semantic key, use it; otherwise use the raw value or default
+    const iconColor =
+      colorMap[rawColor] || rawColor || "var(--icon-color-default)";
 
     const sizeMap = {
       tiny: "2.4rem",
@@ -43,7 +57,7 @@ class muiIconToggle extends HTMLElement {
           justify-content: center;
           width: ${size};
           height: ${size};
-          --icon-color: ${color};
+          --icon-color-map: ${iconColor};
         }
 
         button {
@@ -61,10 +75,14 @@ class muiIconToggle extends HTMLElement {
 
         button:focus {
           box-shadow: none;
-          outline-style: ridge;
-          outline-width: medium;
-          outline-offset: var(--spacing-050);
-          outline-color: var(--icon-color);
+          outline: none;
+          box-shadow: none;
+        }
+
+        /* Show outline only if user is tabbing */
+        :host-context(body[data-user-is-tabbing]) button:focus {
+          outline: var(--outline-medium);
+          outline-color: var(--stroke-color-focus);
         }
 
         ::slotted(*) {
@@ -73,7 +91,7 @@ class muiIconToggle extends HTMLElement {
           left: auto;
           transform-origin: 50% 50%;
           transition: 0.2s ease-in-out;
-          fill: var(--icon-color);
+          fill: var(--icon-color-map);
         }
 
         ::slotted([slot="primary"]) {
