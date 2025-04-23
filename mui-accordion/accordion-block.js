@@ -72,7 +72,7 @@ class muiAccordionBlock extends HTMLElement {
       <mui-heading nomargin size="5" style="width: 100%;">
         <slot name="title">Ridiculus Inceptos</slot>
       </mui-heading>
-      <mui-icon-right-chevron tiny></mui-icon-right-chevron>  
+      <mui-icon-right-chevron variant="tiny"></mui-icon-right-chevron>  
     </mui-accordion-summary> 
 
     <mui-accordion-detail>

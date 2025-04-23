@@ -165,6 +165,7 @@
   --warning-color: var(--orange-500);
   --error-color: var(--red-500);
 
+  --interactive-primary-stroke: var(--black-opacity-0);
   --interactive-primary-bg: var(--grey-900);
   --interactive-primary-bg-hover: var(--grey-1000);
   --interactive-primary-bg-focus: var(--grey-1000);
@@ -174,6 +175,7 @@
   --interactive-primary-text-focus: var(--white);
   --interactive-primary-text-disabled: var(--grey-400);
 
+  --interactive-secondary-stroke: var(--grey-800);
   --interactive-secondary-bg: var(--white);
   --interactive-secondary-bg-hover: var(--grey-100);
   --interactive-secondary-bg-focus: var(--grey-100);
@@ -183,6 +185,7 @@
   --interactive-secondary-text-focus: var(--grey-900);
   --interactive-secondary-text-disabled: var(--grey-400);
 
+  --interactive-warning-stroke: var(--black-opacity-0);
   --interactive-warning-bg: var(--red-500);
   --interactive-warning-bg-hover: var(--red-600);
   --interactive-warning-bg-focus: var(--red-600);
@@ -206,15 +209,10 @@
   /* Note: Theme switching is handled by additional tooling not shown here. The tokens below do not include theming logic. */
 
   /* Stroke (Borders & Outlines) */
-  --stroke-color-default: var(--grey-400);
+  --stroke-color-default: var(--grey-200);
   --stroke-color-focus: var(--blue-500);
   --stroke-color-warning: var(--orange-500);
   --stroke-color-error: var(--red-600);
-
-  --stroke-color-button-primary: var(--black-opacity-0);
-  --stroke-color-button-secondary: var(--grey-600);
-  --stroke-color-button-warning: var(--black-opacity-0);
-  --stroke-color-button-icon-only: var(--black-opacity-0);
 
   --summary-background: var(--white);
   --mark-background: var(--grey-900);
@@ -321,7 +319,7 @@
   --button-background-primary-disabled: var(--interactive-primary-bg-disabled);
 
   --button-border-primary: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--stroke-color-button-primary);
+    var(--interactive-primary-stroke);
 
   --button-background-secondary: var(--interactive-secondary-bg);
   --button-background-secondary-hover: var(--interactive-secondary-bg-hover);
@@ -331,7 +329,7 @@
   );
 
   --button-border-secondary: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--stroke-color-button-secondary);
+    var(--interactive-secondary-stroke);
 
   --button-background-warning: var(--interactive-warning-bg);
   --button-background-warning-hover: var(--interactive-warning-bg-hover);
@@ -339,7 +337,7 @@
   --button-background-warning-disabled: var(--interactive-warning-bg-disabled);
 
   --button-border-warning: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--stroke-color-button-warning);
+    var(--interactive-warning-stroke);
 
   --button-text-color-primary: var(--interactive-primary-text);
   --button-text-color-primary-hover: var(--interactive-primary-text-hover);
@@ -379,7 +377,7 @@
   --link-background-primary-disabled: var(--interactive-primary-bg-disabled);
 
   --link-border-primary: var(--stroke-size-200) var(--stroke-style-solid)
-    transparent;
+    var(--interactive-primary-stroke);
 
   --link-background-secondary: var(--interactive-secondary-bg);
   --link-background-secondary-hover: var(--interactive-secondary-bg-hover);
@@ -389,7 +387,7 @@
   );
 
   --link-border-secondary: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--stroke-color-default);
+    var(--interactive-secondary-stroke);
 
   --link-background-warning: var(--interactive-warning-bg);
   --link-background-warning-hover: var(--interactive-warning-bg-hover);
@@ -397,7 +395,7 @@
   --link-background-warning-disabled: var(--interactive-warning-bg-disabled);
 
   --link-border-warning: var(--stroke-size-200) var(--stroke-style-solid)
-    transparent;
+    var(--interactive-warning-stroke);
 
   --link-text-color-primary: var(--interactive-primary-text);
   --link-text-color-primary-hover: var(--interactive-primary-text-hover);

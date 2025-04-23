@@ -18,7 +18,7 @@ class storyLink extends HTMLElement {
 
         <story-card title="URL">
           <div slot="body">
-            <mui-link target="_blank" href="links.html">View report</mui-link>
+            <mui-link target="_blank" href="links.html">Unsubscribe</mui-link>
           </div>
           <mui-code slot="footer">
             &lt;mui-link href="links.html"&gt;...&lt;/mui-link&gt;
@@ -27,7 +27,7 @@ class storyLink extends HTMLElement {
 
         <story-card title="External link">
           <div slot="body">
-            <mui-link target="_blank">View report</mui-link>
+            <mui-link target="_blank">Unsubscribe</mui-link>
           </div>
           <mui-code slot="footer">
             &lt;mui-link target="_blank" href="links.html"&gt;...&lt;/mui-link&gt;
@@ -36,7 +36,7 @@ class storyLink extends HTMLElement {
 
         <story-card title="Primary Link">
           <div slot="body">
-            <mui-link target="_blank" as="button" variant="primary">View report</mui-link>
+            <mui-link target="_blank" as="button" variant="primary">Fork Github</mui-link>
           </div>
           <mui-code slot="footer">
             &lt;mui-link as="button" variant="primary" href="links.html"&gt;...&lt;/mui-link&gt;
@@ -54,7 +54,7 @@ class storyLink extends HTMLElement {
 
         <story-card title="Warning Link">
           <div slot="body">
-            <mui-link target="_blank" as="button" variant="warning">View report</mui-link>
+            <mui-link target="_blank" as="button" variant="warning">Fork Github</mui-link>
           </div>
           <mui-code slot="footer">
             &lt;mui-link as="button" variant="warning" href="links.html"&gt;...&lt;/mui-link&gt;

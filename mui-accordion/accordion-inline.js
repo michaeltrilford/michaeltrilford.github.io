@@ -58,7 +58,7 @@ class muiAccordionInline extends HTMLElement {
     </style>
 
     <mui-accordion-summary tabindex="0" role="button" aria-pressed="false">
-      <mui-icon-right-chevron tiny></mui-icon-right-chevron>  
+      <mui-icon-right-chevron variant="tiny"></mui-icon-right-chevron>  
       <mui-heading nomargin size="5">
         <slot name="title">Ridiculus Inceptos</slot>
       </mui-heading>

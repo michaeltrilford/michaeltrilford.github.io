@@ -85,7 +85,8 @@ class muiLink extends HTMLElement {
       ========================================= */
       :host([variant="primary"]) a {
         background-color: var(--link-background-primary);
-        color: var(--link-text-color-primary); 
+        color: var(--link-text-color-primary);
+        border: var(--link-border-primary); 
       }
 
       :host([variant="primary"]) a:hover {
@@ -113,7 +114,8 @@ class muiLink extends HTMLElement {
       ========================================= */
       :host([variant="secondary"]) a {
         background-color: var(--link-background-secondary);
-        color: var(--link-text-color-secondary); 
+        color: var(--link-text-color-secondary);
+        border: var(--link-border-secondary); 
       }
 
       :host([variant="secondary"]) a:hover {
@@ -141,7 +143,8 @@ class muiLink extends HTMLElement {
       ========================================= */
       :host([variant="warning"]) a {
         background-color: var(--link-background-warning);
-        color: var(--link-text-color-warning); 
+        color: var(--link-text-color-warning);
+        border: var(--link-border-warning); 
       }
 
       :host([variant="warning"]) a:hover {
