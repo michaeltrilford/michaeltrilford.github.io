@@ -4,6 +4,7 @@ class muiAccordionBlock extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
   }
+
   connectedCallback() {
     let html = `
     <style>
@@ -68,7 +69,7 @@ class muiAccordionBlock extends HTMLElement {
 
     </style>
 
-    <mui-accordion-summary tabindex="0" role="button" aria-pressed="false">
+    <mui-accordion-summary tabindex="0" role="button" aria-expanded="false">
       <mui-heading nomargin size="5" style="width: 100%;">
         <slot name="title">Ridiculus Inceptos</slot>
       </mui-heading>
@@ -92,15 +93,40 @@ class muiAccordionBlock extends HTMLElement {
     this.detailEl = this.shadowRoot.querySelector("mui-accordion-detail");
     this.chevronEl = this.shadowRoot.querySelector("mui-icon-right-chevron");
 
-    this.titleEl.addEventListener("click", () => {
-      this.detailEl.toggleAttribute("open");
-      this.chevronEl.toggleAttribute("open");
-    });
+    this.titleEl.addEventListener("click", this.toggleAccordion.bind(this));
 
-    this.titleEl.addEventListener("keydown", () => {
-      this.detailEl.toggleAttribute("open");
-      this.chevronEl.toggleAttribute("open");
+    this.titleEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        this.toggleAccordion();
+      }
     });
+  }
+
+  toggleAccordion() {
+    const isOpen = this.detailEl.hasAttribute("open");
+    this.setOpen(!isOpen);
+  }
+
+  setOpen(state) {
+    if (state) {
+      this.detailEl.setAttribute("open", "");
+      this.chevronEl.setAttribute("open", "");
+      this.titleEl.setAttribute("aria-expanded", "true");
+
+      // 🔥 Emit event so parent knows this one opened
+      this.dispatchEvent(
+        new CustomEvent("accordion-opened", { bubbles: true, composed: true })
+      );
+    } else {
+      this.detailEl.removeAttribute("open");
+      this.chevronEl.removeAttribute("open");
+      this.titleEl.setAttribute("aria-expanded", "false");
+    }
+  }
+
+  closeAccordion() {
+    this.setOpen(false);
   }
 }
 

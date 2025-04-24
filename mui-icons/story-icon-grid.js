@@ -27,7 +27,8 @@ class storyIconGrid extends HTMLElement {
       inverted: "var(--grey-900)",
       primaryButton: "var(--button-background-primary)",
       secondaryButton: "var(--button-background-secondary)",
-      warningButton: "var(--button-background-warning)",
+      tertiaryButton: "var(--button-background-tertiary)",
+      attentionButton: "var(--button-background-attention)",
     };
 
     const backgroundColor = colorMap[theme] || colorMap.default;

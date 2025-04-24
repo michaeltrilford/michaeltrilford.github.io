@@ -30,13 +30,15 @@ class muiNavbar extends HTMLElement {
     `;
 
     const Home = `
-      <mui-navbar-home link="./index.html" title="michaeltrilford.mui"></mui-navbar-home>
+      <mui-navbar-home  link="./index.html" title="michaeltrilford.mui"></mui-navbar-home>
     `;
 
     const Required = `
       <mui-navbar-group id="design-tokens" groupname="Design Tokens">
         <mui-navbar-link link="tokens-base.html" title="Base"></mui-navbar-link>
+        <mui-navbar-link link="tokens-semantic.html" title="Semantic"></mui-navbar-link>
         <mui-navbar-link link="tokens-contextual.html" title="Contextual"></mui-navbar-link>
+        <mui-navbar-link link="tokens-components.html" title="Components"></mui-navbar-link>
       </mui-navbar-group>
     `;
 
@@ -86,7 +88,7 @@ class muiNavbar extends HTMLElement {
 
       <mui-responsive breakpoint="960">
         <mui-navbar-toggle slot="showBelow" link="index.html" title="michaeltrilford.mui">
-          <mui-icon-toggle color="var(--mui-brand)" rotate variant="tiny">
+          <mui-icon-toggle color="var(--mui-brand)" rotate>
             <mui-icon-menu slot="primary" variant="tiny"></mui-icon-menu>
             <mui-icon-close slot="secondary" variant="tiny"></mui-icon-close>
           </mui-icon-toggle>
@@ -99,9 +101,45 @@ class muiNavbar extends HTMLElement {
     this.navbarEl = this.shadowRoot.getElementById("mobile");
     this.navbarMainEl = this.shadowRoot.querySelector("mui-navbar-body");
 
+    // Helper method to update tabindex
+    this.updateTabIndexForMenuLinks = (container, enable) => {
+      const links = container.querySelectorAll("mui-navbar-link");
+      links.forEach((link) => {
+        if (enable) {
+          link.removeAttribute("tabindex");
+        } else {
+          link.setAttribute("tabindex", "-1");
+        }
+      });
+    };
+
+    // Method to handle responsive behavior
+    this.handleResponsiveTabIndex = () => {
+      const isDesktop = window.innerWidth >= 961;
+      if (isDesktop) {
+        this.updateTabIndexForMenuLinks(this.navbarEl, true);
+      } else {
+        const isOpen = this.navbarEl.hasAttribute("open");
+        this.updateTabIndexForMenuLinks(this.navbarEl, isOpen);
+      }
+    };
+
+    // Call initially and on resize
+    this.handleResponsiveTabIndex();
+    window.addEventListener("resize", this.handleResponsiveTabIndex);
+
     // Reveal navigation on mobile
     this.menuIconEl.addEventListener("click", () => {
       this.navbarEl.toggleAttribute("open");
+      const isNowOpen = this.navbarEl.hasAttribute("open");
+      this.updateTabIndexForMenuLinks(this.navbarEl, isNowOpen);
+
+      if (isNowOpen) {
+        requestAnimationFrame(() => {
+          const homeLink = this.shadowRoot.querySelector("mui-navbar-home");
+          if (homeLink) homeLink.focus();
+        });
+      }
     });
 
     // On mouse over of main content, remove defined scroll attributes
@@ -109,7 +147,7 @@ class muiNavbar extends HTMLElement {
       this.navbarMainEl.removeAttribute("onscroll", "fixed-view");
     });
 
-    // On scroll of the navigation, add scroll atributes
+    // On scroll of the navigation, add scroll attributes
     this.navbarEl.addEventListener("scroll", () => {
       this.navbarMainEl.setAttribute("onscroll", "fixed-view");
     });

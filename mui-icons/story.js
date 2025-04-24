@@ -81,10 +81,10 @@ class storyIcon extends HTMLElement {
                 <mui-code tiny slot="footer">&lt;mui-icon-menu color="secondaryButton"&gt;&lt;/mui-icon-menu&gt;</mui-code>
               </story-icon-grid>
 
-              <story-icon-grid theme="warningButton">              
-                <mui-icon-menu slot="body" color="warningButton"></mui-icon-menu>
-                <mui-body variant="tiny" weight="bold" style="margin-top: var(--spacing-100); color: var(--button-text-color-warning)" slot="body">Only Icon w/ Warning Button</mui-body>
-                <mui-code tiny slot="footer">&lt;mui-icon-menu color="warningButton"&gt;&lt;/mui-icon-menu&gt;</mui-code>
+              <story-icon-grid theme="attentionButton">              
+                <mui-icon-menu slot="body" color="attentionButton"></mui-icon-menu>
+                <mui-body variant="tiny" weight="bold" style="margin-top: var(--spacing-100); color: var(--button-text-color-attention)" slot="body">Only Icon w/ Attention Button</mui-body>
+                <mui-code tiny slot="footer">&lt;mui-icon-menu color="attentionButton"&gt;&lt;/mui-icon-menu&gt;</mui-code>
               </story-icon-grid>
 
             </mui-grid> 

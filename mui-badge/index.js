@@ -1,21 +1,45 @@
 class muiBadge extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    this._shadow = this.attachShadow({ mode: "open" });
+    this.render();
+  }
+
+  static get observedAttributes() {
+    return ["variant"];
+  }
+
+  attributeChangedCallback() {
+    this.render();
+  }
+
+  render() {
+    const variant = this.getAttribute("variant") || "neutral";
+    const backgroundMap = {
+      neutral: "var(--badge-background-neutral)",
+      positive: "var(--badge-background-positive)",
+      warning: "var(--badge-background-warning)",
+      attention: "var(--badge-background-attention)",
+    };
+
+    const background = backgroundMap[variant] || backgroundMap.neutral;
+
     const styles = `
       :host {
         display: inline-block;
         border-radius: var(--badge-radius);
-        background: var(--grey-700);
+        background: ${background};
         font-size: var(--body-font-size-xs);
+        font-weight: var(--badge-font-weight);
         color: var(--white);
         padding: var(--spacing-050) var(--spacing-200);
       }
     `;
-    shadowRoot.innerHTML = `
+
+    this._shadow.innerHTML = `
       <style>${styles}</style>
       <slot></slot>
-  `;
+    `;
   }
 }
 

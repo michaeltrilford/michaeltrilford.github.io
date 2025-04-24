@@ -52,12 +52,12 @@ class storyLink extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Warning Link">
+        <story-card title="Attention Link">
           <div slot="body">
-            <mui-link target="_blank" as="button" variant="warning">Fork Github</mui-link>
+            <mui-link target="_blank" as="button" variant="attention">Fork Github</mui-link>
           </div>
           <mui-code slot="footer">
-            &lt;mui-link as="button" variant="warning" href="links.html"&gt;...&lt;/mui-link&gt;
+            &lt;mui-link as="button" variant="attention" href="links.html"&gt;...&lt;/mui-link&gt;
           </mui-code>
         </story-card>
 

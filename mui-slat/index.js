@@ -13,6 +13,7 @@ class muiSlat extends HTMLElement {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: var(--spacing-500);
+        box-sizing: border-box;
       }
     </style>
     <slot name="start"></slot>

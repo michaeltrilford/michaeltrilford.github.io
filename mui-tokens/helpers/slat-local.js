@@ -11,12 +11,9 @@ class muiTokenLocalSlat extends HTMLElement {
     const styles = `
       :host { 
         display: block;
-        padding: var(--spacing-500);
+        padding: var(--spacing-300);
         border-bottom: var(--border-thin);
       }
-      // :host(:first-of-type) { 
-      //   padding-top: 0;
-      // }
 
       :host(:last-of-type) { 
         border-bottom: none;
@@ -40,11 +37,11 @@ class muiTokenLocalSlat extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <mui-slat>
-        <mui-body slot="start" variant="small"><code>${this.getAttribute(
+      <mui-slat style="grid-template-columns: 0.8fr 1.2fr;">
+        <mui-body slot="start" variant="tiny"><code>${this.getAttribute(
           "token"
         )}</code></mui-body>
-        <mui-body variant="small" slot="end">
+        <mui-body variant="tiny" slot="end">
             ${this.getAttribute("output")}
         </mui-body>
       </mui-slat>

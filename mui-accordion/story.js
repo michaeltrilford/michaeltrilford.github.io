@@ -17,7 +17,7 @@ class storyAccordion extends HTMLElement {
       <mui-v-stack space="var(--spacing-700)">
 
         <story-card 
-          title="Inline" 
+          title="Accordion Inline" 
           description="The inline accordion is typically used within a block layout as a secondary UI element to a block element."
         >
           <div slot="body">
@@ -48,10 +48,10 @@ class storyAccordion extends HTMLElement {
         </story-card>
 
         <story-card 
-          title="Block" 
+          title="Accordion Group & Block" 
           description="The block accordion is typically used within a page layout full-width to the parent container."
         >
-          <div slot="body">
+          <mui-accordion-group slot="body">
             <mui-accordion-block>
               <span slot="title">Hello</span>
               <div slot="detail">
@@ -64,19 +64,84 @@ class storyAccordion extends HTMLElement {
                   Hello
               </div>
             </mui-accordion-block>
-          </div>
+          </mui-accordion-group>
           <mui-code slot="footer">
-            &lt;mui-accordion&gt;
+            &lt;mui-accordion-group&gt;
+            <br />  
+            &nbsp;&nbsp;&lt;mui-accordion-block&gt;
             <br />
-            &nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
             <br />
-            &nbsp;&nbsp;&lt;div slot="detail"&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;...
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
             <br />
-            &nbsp;&nbsp;&lt;/div&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
             <br />
-            &lt;/mui-accordion&gt;
+            &nbsp;&nbsp;&lt;/mui-accordion-block&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-accordion-block&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+            <br />
+            &nbsp;&nbsp;&lt;/mui-accordion-block&gt;
+            <br />
+            &lt;mui-accordion-group&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card 
+          title="Accordion Group & Block: Exclusive" 
+          description="The block accordion is typically used within a page layout full-width to the parent container."
+        >
+          <mui-accordion-group exclusive slot="body">
+            <mui-accordion-block>
+              <span slot="title">Hello</span>
+              <div slot="detail">
+                  Hello
+              </div>
+            </mui-accordion-block>
+            <mui-accordion-block>
+              <span slot="title">Hello</span>
+              <div slot="detail">
+                  Hello
+              </div>
+            </mui-accordion-block>
+          </mui-accordion-group>
+          <mui-code slot="footer">
+            &lt;mui-accordion-group exclusive&gt;
+            <br />  
+            &nbsp;&nbsp;&lt;mui-accordion-block&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+            <br />
+            &nbsp;&nbsp;&lt;/mui-accordion-block&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-accordion-block&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+            <br />
+            &nbsp;&nbsp;&lt;/mui-accordion-block&gt;
+            <br />
+            &lt;mui-accordion-group&gt;
           </mui-code>
         </story-card>
 

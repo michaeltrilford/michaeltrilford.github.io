@@ -27,10 +27,17 @@ class storyButton extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Warning Button">
-          <mui-button variant="warning" slot="body">Delete</mui-button>
+        <story-card title="Tertiary Button">
+         <mui-button variant="tertiary" slot="body">Cancel</mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="warning"&gt;Delete&lt;/mui-button&gt;
+            &lt;mui-button variant="tertiary"&gt;Submit&lt;/mui-button&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Attention Button">
+          <mui-button variant="attention" slot="body">Delete</mui-button>
+          <mui-code slot="footer">
+            &lt;mui-button variant="attention"&gt;Delete&lt;/mui-button&gt;
           </mui-code>
         </story-card>
 
@@ -38,7 +45,7 @@ class storyButton extends HTMLElement {
           <mui-button-group right slot="body">
             <mui-button variant="secondary">Cancel</mui-button>
             <mui-button variant="primary">Submit</mui-button>
-            <mui-button variant="warning">Delete</mui-button>
+            <mui-button variant="attention">Delete</mui-button>
           </mui-button-group>
           <mui-code slot="footer">
             &lt;mui-button-group right&gt;
@@ -47,7 +54,7 @@ class storyButton extends HTMLElement {
             <br />
             &nbsp;&nbsp;&lt;mui-button variant="primary"&gt;Submit&lt;/mui-button&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-button variant="warning"&gt;Delete&lt;/mui-button&gt;
+            &nbsp;&nbsp;&lt;mui-button variant="attention"&gt;Delete&lt;/mui-button&gt;
             <br />
             &lt;/mui-button-group&gt;
           </mui-code>
@@ -79,14 +86,27 @@ class storyButton extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Icon Only / Warning Button">
-          <mui-button variant="warning" iconOnly slot="body">
-            <mui-icon-add color="warningButton" variant="tiny"></mui-icon-add>
+        <story-card title="Icon Only / Tertiary Button">
+          <mui-button variant="tertiary" iconOnly slot="body">
+            <mui-icon-add color="tertiaryButton" variant="tiny"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="warning"&gt;
+            &lt;mui-button variant="tertiary"&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-icon-add color="warningButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
+            &nbsp;&nbsp;&lt;mui-icon-add color="tertiaryButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
+            <br />
+            &lt;/mui-button&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Icon Only / Attention Button">
+          <mui-button variant="attention" iconOnly slot="body">
+            <mui-icon-add color="attentionButton" variant="tiny"></mui-icon-add>
+          </mui-button>
+          <mui-code slot="footer">
+            &lt;mui-button variant="attention"&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-icon-add color="attentionButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
             <br />
             &lt;/mui-button&gt;
           </mui-code>

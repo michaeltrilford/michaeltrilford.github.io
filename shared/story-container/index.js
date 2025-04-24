@@ -7,7 +7,7 @@ class storyContainer extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
     const styles = `:host { display: block; }`;
-    const description = `<mui-body large style="letter-spacing: 0.75px; max-width: 60ch;">${this.getAttribute(
+    const description = `<mui-body large style="letter-spacing: 0.75px; max-width: 75ch;">${this.getAttribute(
       "description"
     )}</mui-body>`;
 

@@ -92,9 +92,7 @@ class storyCard extends HTMLElement {
         <mui-heading size="3">${this.getAttribute("title")}</mui-heading>
         ${
           this.hasAttribute("description")
-            ? `<mui-body style="width: 55ch;">${this.getAttribute(
-                "description"
-              )}</mui-body>`
+            ? `<mui-body>${this.getAttribute("description")}</mui-body>`
             : ``
         }
         </mui-card-header>

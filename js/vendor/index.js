@@ -52,7 +52,9 @@ const StoryArray = [
   "mui-slat/story.js",
   "mui-tokens/story.js",
   "mui-tokens/story-base.js",
+  "mui-tokens/story-semantic.js",
   "mui-tokens/story-contextual.js",
+  "mui-tokens/story-components.js",
 ];
 
 const Story = StoryArray.map((Items) => {
@@ -94,6 +96,7 @@ AppComponent;
 const MuiCompArray = [
   "mui-accordion/accordion-inline.js",
   "mui-accordion/accordion-block.js",
+  "mui-accordion/accordion-group.js",
   "mui-alert/index.js",
   "mui-badge/index.js",
   "mui-button/index.js",

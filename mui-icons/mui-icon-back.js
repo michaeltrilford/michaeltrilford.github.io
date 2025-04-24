@@ -29,7 +29,8 @@ class muiIconBack extends HTMLElement {
       inverted: "var(--icon-color-inverted)",
       primaryButton: "var(--icon-color-inverted)",
       secondaryButton: "var(--icon-color-default)",
-      warningButton: "var(--icon-color-inverted)",
+      tertiaryButton: "var(--icon-color-default)",
+      attentionButton: "var(--icon-color-inverted)",
     };
 
     // If rawColor matches a semantic key, use it; otherwise use the raw value or default

@@ -22,6 +22,7 @@ class muiButton extends HTMLElement {
         -webkit-appearance: button;
         font-family: var(--font-family);
         font-size: var(--button-font-size);
+        font-weight: var(--button-font-weight);
         background: var(--button-background-primary);
         color: var(--button-text-color-primary);
         border: var(--button-border-primary); 
@@ -97,28 +98,52 @@ class muiButton extends HTMLElement {
         color: var(--button-text-color-secondary-disabled);
       }
 
+      /* Tertiary
+      ========================================= */
+
+      :host([variant="tertiary"]) button {
+        background: var(--button-background-tertiary);
+        color: var(--button-text-color-tertiary);
+        border: var(--button-border-tertiary); 
+      }
+
+      :host([variant="tertiary"]) button:hover {
+        background: var(--button-background-tertiary-hover);
+        color: var(--button-text-color-tertiary-hover);
+      }
+
+      :host([variant="tertiary"]) button:focus {
+        background: var(--button-background-tertiary-focus);
+        color: var(--button-text-color-tertiary-focus);
+      }
+
+      :host([variant="tertiary"]) button:disabled {
+        background: var(--button-background-tertiary-disabled);
+        color: var(--button-text-color-tertiary-disabled);
+      }
+
 
       /* Warning
       ========================================= */
-      :host([variant="warning"]) button {
-        background: var(--button-background-warning);
-        color: var(--button-text-color-warning);
-        border: var(--button-border-warning); 
+      :host([variant="attention"]) button {
+        background: var(--button-background-attention);
+        color: var(--button-text-color-attention);
+        border: var(--button-border-attention); 
       }
 
-      :host([variant="warning"]) button:hover {
-        background: var(--button-background-warning-hover);
-        color: var(--button-text-color-warning-hover);
+      :host([variant="attention"]) button:hover {
+        background: var(--button-background-attention-hover);
+        color: var(--button-text-color-attention-hover);
       }
 
-      :host([variant="warning"]) button:focus {
-        background: var(--button-background-warning-focus);
-        color: var(--button-text-color-warning-focus);
+      :host([variant="attention"]) button:focus {
+        background: var(--button-background-attention-focus);
+        color: var(--button-text-color-attention-focus);
       }
 
-      :host([variant="warning"]) button:disabled {
-        background: var(--button-background-warning-disabled);
-        color: var(--button-text-color-warning-disabled);
+      :host([variant="attention"]) button:disabled {
+        background: var(--button-background-attention-disabled);
+        color: var(--button-text-color-attention-disabled);
       }
 
       /* Icon only

@@ -19,6 +19,7 @@ class muiLink extends HTMLElement {
       a {
         font-size: var(--link-font-size);
         color: var(--link-text-color-default);
+        font-weight: var(--link-font-weight);
       }
       a:active, a:hover { outline: var(--spacing-000); }
 
@@ -50,7 +51,7 @@ class muiLink extends HTMLElement {
         border: none;
         cursor: pointer;
         width: auto;
-        border-radius: var(--button-radius);
+        border-radius: var(--link-radius);
         padding: var(--spacing-200) var(--spacing-500);
         text-decoration: none;
         line-height: var(--body-line-height);
@@ -58,6 +59,8 @@ class muiLink extends HTMLElement {
         box-sizing: border-box;
         background-color: var(--link-background-primary);
         color: var(--link-text-color-primary);
+        font-size: var(--link-button-font-size);
+        font-weight: var(--link-button-font-weight);
       }
 
       :host([as="button"]) a:hover {
@@ -139,33 +142,33 @@ class muiLink extends HTMLElement {
         background: var(--link-background-secondary-disabled); 
       }
 
-      /* Button Warning 
+      /* Button Attention
       ========================================= */
-      :host([variant="warning"]) a {
-        background-color: var(--link-background-warning);
-        color: var(--link-text-color-warning);
-        border: var(--link-border-warning); 
+      :host([variant="attention"]) a {
+        background-color: var(--link-background-attention);
+        color: var(--link-text-color-attention);
+        border: var(--link-border-attention); 
       }
 
-      :host([variant="warning"]) a:hover {
-        color: var(--link-text-color-warning-hover);
-        background: var(--link-background-warning-hover); 
+      :host([variant="attention"]) a:hover {
+        color: var(--link-text-color-attention-hover);
+        background: var(--link-background-attention-hover); 
       }
 
-      :host([variant="warning"]) a:focus {
-        color: var(--link-text-color-warning-focus);
-        background: var(--link-background-warning-focus); 
+      :host([variant="attention"]) a:focus {
+        color: var(--link-text-color-attention-focus);
+        background: var(--link-background-attention-focus); 
       }
 
-      :host([variant="warning"]) a:focus-visible {
+      :host([variant="attention"]) a:focus-visible {
         outline: var(--outline-thick);
-        color: var(--link-text-color-warning-focus);
-        background: var(--link-background-warning-focus); 
+        color: var(--link-text-color-attention-focus);
+        background: var(--link-background-attention-focus); 
       }
 
-      :host([variant="warning"]) a:disabled {
-        color: var(--link-text-color-warning-disabled);
-        background: var(--link-background-warning-disabled); 
+      :host([variant="attention"]) a:disabled {
+        color: var(--link-text-color-attention-disabled);
+        background: var(--link-background-attention-disabled); 
       }
 
       /* ===================================== */  

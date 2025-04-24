@@ -12,7 +12,19 @@ class muiIconToggle extends HTMLElement {
 
       // Blur the button after click to remove persistent focus
       const button = this.shadowRoot.querySelector("button");
-      if (button) button.blur();
+      if (button) {
+        button.blur();
+        requestAnimationFrame(() => {
+          button.focus({ preventScroll: true });
+        });
+      }
+    });
+
+    this.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        this.click(); // triggers toggle on Space key press
+      }
     });
   }
 
@@ -41,10 +53,7 @@ class muiIconToggle extends HTMLElement {
       colorMap[rawColor] || rawColor || "var(--icon-color-default)";
 
     const sizeMap = {
-      tiny: "2.4rem",
-      small: "3.6rem",
-      medium: "4.8rem",
-      large: "5.0rem",
+      small: "4.4rem",
     };
 
     const size = sizeMap[variant] || sizeMap.small;
@@ -71,6 +80,7 @@ class muiIconToggle extends HTMLElement {
           display: flex;
           align-items: center;
           justify-content: center;
+          border-radius: var(--button-radius);
         }
 
         button:focus {
@@ -82,7 +92,7 @@ class muiIconToggle extends HTMLElement {
         /* Show outline only if user is tabbing */
         :host-context(body[data-user-is-tabbing]) button:focus {
           outline: var(--outline-medium);
-          outline-color: var(--stroke-color-focus);
+          outline-color: var(--feedback-focus-stroke-color);
         }
 
         ::slotted(*) {

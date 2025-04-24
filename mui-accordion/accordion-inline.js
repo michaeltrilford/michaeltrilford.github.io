@@ -4,6 +4,7 @@ class muiAccordionInline extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
   }
+
   connectedCallback() {
     let html = `
     <style>
@@ -57,7 +58,7 @@ class muiAccordionInline extends HTMLElement {
 
     </style>
 
-    <mui-accordion-summary tabindex="0" role="button" aria-pressed="false">
+    <mui-accordion-summary tabindex="0" role="button" aria-expanded="false">
       <mui-icon-right-chevron variant="tiny"></mui-icon-right-chevron>  
       <mui-heading nomargin size="5">
         <slot name="title">Ridiculus Inceptos</slot>
@@ -71,7 +72,7 @@ class muiAccordionInline extends HTMLElement {
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
         </slot>
       </mui-accordion-detail-inner>
-    </mui-accordion-detail> 
+    </mui-accordion-detail>
     
     `;
 
@@ -81,15 +82,21 @@ class muiAccordionInline extends HTMLElement {
     this.detailEl = this.shadowRoot.querySelector("mui-accordion-detail");
     this.chevronEl = this.shadowRoot.querySelector("mui-icon-right-chevron");
 
-    this.titleEl.addEventListener("click", () => {
-      this.detailEl.toggleAttribute("open");
-      this.chevronEl.toggleAttribute("open");
-    });
+    this.titleEl.addEventListener("click", this.toggleAccordion.bind(this));
 
-    this.titleEl.addEventListener("keydown", () => {
-      this.detailEl.toggleAttribute("open");
-      this.chevronEl.toggleAttribute("open");
+    this.titleEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        this.toggleAccordion();
+      }
     });
+  }
+
+  toggleAccordion() {
+    const isOpen = this.detailEl.hasAttribute("open");
+    this.detailEl.toggleAttribute("open");
+    this.chevronEl.toggleAttribute("open");
+    this.titleEl.setAttribute("aria-expanded", String(!isOpen));
   }
 }
 
