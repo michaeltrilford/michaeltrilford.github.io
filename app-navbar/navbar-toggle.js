@@ -15,7 +15,6 @@ class muiNavbarToggle extends HTMLElement {
 
       :host {
         width: 100%;
-        display: block;
         margin-bottom: 0;
         position: fixed;
         bottom: 0;
@@ -26,6 +25,7 @@ class muiNavbarToggle extends HTMLElement {
         justify-content: space-between;
         z-index: 2;
         box-sizing: border-box;
+        align-items: center;
       }
 
       a {
