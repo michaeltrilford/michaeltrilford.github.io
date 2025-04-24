@@ -20,9 +20,9 @@ class muiGrid extends HTMLElement {
     `;
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <div style="--col: ${this.getAttribute("col") || col}; --gap: ${
-      this.getAttribute("gap") || gap
-    };">
+      <div part="internal" style="--col: ${
+        this.getAttribute("col") || col
+      }; --gap: ${this.getAttribute("gap") || gap};">
         <slot></slot>
       </div>
     `;

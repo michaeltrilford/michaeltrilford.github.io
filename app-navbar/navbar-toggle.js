@@ -26,27 +26,29 @@ class muiNavbarToggle extends HTMLElement {
         z-index: 2;
         box-sizing: border-box;
         align-items: center;
+
+        @media (min-width: 961px) {
+          display: none;
+        }
       }
 
-      a {
-        width: auto;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        display: block;
-        margin-bottom: 0;
-        color: var(--mui-brand); 
+      mui-link::part(internal) {
+        color: var(--mui-brand);
         text-decoration: none;
       }
-      a:hover {
+
+      mui-link::part(internal):hover {
         color: var(--mui-brand);
+        text-decoration: underline;
       }
 
     </style>
 
     <!-- Navigation Bar Toggle -->
     <slot></slot>
-    <a href="${this.getAttribute("link")}">${this.getAttribute("title")}</a> 
+    <mui-link href="${this.getAttribute("link")}">${this.getAttribute(
+      "title"
+    )}</mui-link>
 
     `;
 

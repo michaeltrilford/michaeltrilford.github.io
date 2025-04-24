@@ -4,6 +4,16 @@ class storyIcon extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: "open" });
     const styles = `
       :host { display: block; }
+
+      mui-grid::part(internal) {
+        grid-template-columns: 1fr;
+      }
+
+      @media (min-width: 600px) {
+        mui-grid::part(internal) {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
     `;
 
     shadowRoot.innerHTML = `
@@ -17,7 +27,7 @@ class storyIcon extends HTMLElement {
 
           <story-card title="Default" noFooter>
 
-            <mui-grid col="1fr 1fr" slot="body">
+            <mui-grid slot="body">
 
               <story-icon-grid>              
                 <mui-icon-menu slot="body"></mui-icon-menu>

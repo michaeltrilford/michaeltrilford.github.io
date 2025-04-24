@@ -86,14 +86,12 @@ class muiNavbar extends HTMLElement {
         </mui-navbar-menu>
       </mui-responsive>
 
-      <mui-responsive breakpoint="960">
-        <mui-navbar-toggle slot="showBelow" link="index.html" title="michaeltrilford.mui">
-          <mui-icon-toggle color="var(--mui-brand)" rotate>
-            <mui-icon-menu slot="primary" variant="tiny"></mui-icon-menu>
-            <mui-icon-close slot="secondary" variant="tiny"></mui-icon-close>
-          </mui-icon-toggle>
-        </mui-navbar-toggle>
-      </mui-responsive>
+      <mui-navbar-toggle link="index.html" title="michaeltrilford.mui">
+        <mui-icon-toggle color="var(--mui-brand)" rotate>
+          <mui-icon-menu slot="primary" variant="tiny"></mui-icon-menu>
+          <mui-icon-close slot="secondary" variant="tiny"></mui-icon-close>
+        </mui-icon-toggle>
+      </mui-navbar-toggle>
     `;
 
     // Query elements

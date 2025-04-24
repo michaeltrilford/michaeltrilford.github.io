@@ -171,17 +171,9 @@ class muiLink extends HTMLElement {
         background: var(--link-background-attention-disabled); 
       }
 
-      /* ===================================== */  
-      
-      /* Rounded 
-      ========================================= */
-      :host([rounded]) a {
-        border-radius: 1.5em; }
-      /* ===================================== */
-
-
     </style>
-    <a 
+    <a
+      part="internal" 
       target="${this.getAttribute("target") || "_self"}" 
       href="${this.getAttribute("href") || "#"}"
       >

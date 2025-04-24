@@ -1,8 +1,6 @@
-
 class muiR extends HTMLElement {
-
   static get observedAttributes() {
-    return ['breakpoint'];
+    return ["breakpoint"];
   }
 
   constructor() {
@@ -19,25 +17,27 @@ class muiR extends HTMLElement {
 
     this.slotEl = this.shadowRoot.querySelector("slot");
 
-    var mql = window.matchMedia(`(max-width: ${this.getAttribute('breakpoint')}px)`);
-    var mqlMatches = window.matchMedia(`(max-width: ${this.getAttribute('breakpoint')}px)`).matches;
+    var mql = window.matchMedia(
+      `(max-width: ${this.getAttribute("breakpoint")}px)`
+    );
+    var mqlMatches = window.matchMedia(
+      `(max-width: ${this.getAttribute("breakpoint")}px)`
+    ).matches;
 
     if (mqlMatches) {
-      this.slotEl.setAttribute("name", "showBelow");     
+      this.slotEl.setAttribute("name", "showBelow");
     } else {
-      this.slotEl.setAttribute("name", "showAbove");  
+      this.slotEl.setAttribute("name", "showAbove");
     }
 
-    mql.addEventListener( "change", (e) => {
+    mql.addEventListener("change", (e) => {
       if (e.matches) {
-        this.slotEl.setAttribute("name", "showBelow");  
+        this.slotEl.setAttribute("name", "showBelow");
       } else {
-        this.slotEl.setAttribute("name", "showAbove");     
+        this.slotEl.setAttribute("name", "showAbove");
       }
-    })
-
+    });
   }
-  
 }
 
 customElements.define("mui-responsive", muiR);
