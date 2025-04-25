@@ -10,6 +10,9 @@ class muiLink extends HTMLElement {
   }
 
   connectedCallback() {
+    // Get all parts globally defined in window.AllParts
+    const partMap = window.Parts.join(" ");
+
     let html = `
     <style>
 
@@ -173,7 +176,7 @@ class muiLink extends HTMLElement {
 
     </style>
     <a
-      part="internal" 
+      part="${partMap}" 
       target="${this.getAttribute("target") || "_self"}" 
       href="${this.getAttribute("href") || "#"}"
       >

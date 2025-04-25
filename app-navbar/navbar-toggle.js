@@ -32,13 +32,16 @@ class muiNavbarToggle extends HTMLElement {
         }
       }
 
-      mui-link::part(internal) {
+      mui-link::part(color),
+      mui-link::part(color):hover {
         color: var(--mui-brand);
+      }
+
+      mui-link::part(text-decoration) {
         text-decoration: none;
       }
 
-      mui-link::part(internal):hover {
-        color: var(--mui-brand);
+      mui-link::part(text-decoration):hover {
         text-decoration: underline;
       }
 

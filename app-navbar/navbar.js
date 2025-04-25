@@ -42,6 +42,13 @@ class muiNavbar extends HTMLElement {
       </mui-navbar-group>
     `;
 
+    const Parts = `
+      <mui-navbar-group id="part-types" groupname="Part Selectors">
+        <mui-navbar-link link="part-types-text.html" title="Text"></mui-navbar-link>
+        <mui-navbar-link link="part-types-spacing.html" title="Spacing"></mui-navbar-link>
+      </mui-navbar-group>
+    `;
+
     const Components = `
       <mui-navbar-group id="web-components" groupname="Web Components">
         <mui-navbar-link link="alert.html" title="Alerts"></mui-navbar-link>
@@ -78,10 +85,12 @@ class muiNavbar extends HTMLElement {
         <mui-navbar-menu desktop slot="showAbove">
           ${Home}
           ${Required}
+          ${Parts}
           ${Components}
         </mui-navbar-menu>
         <mui-navbar-menu mobile id="mobile" slot="showBelow">
           ${Required}
+          ${Parts}
           ${Components}
         </mui-navbar-menu>
       </mui-responsive>

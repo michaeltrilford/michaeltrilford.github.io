@@ -55,6 +55,8 @@ const StoryArray = [
   "mui-tokens/story-semantic.js",
   "mui-tokens/story-contextual.js",
   "mui-tokens/story-components.js",
+  "mui-parts/story-parts-text.js",
+  "mui-parts/story-parts-spacing.js",
 ];
 
 const Story = StoryArray.map((Items) => {
@@ -94,6 +96,9 @@ const AppComponent = AppCompArray.map((Items) => {
 AppComponent;
 
 const MuiCompArray = [
+  // Add part-types.js here
+  "mui-parts/index.js",
+
   "mui-accordion/accordion-inline.js",
   "mui-accordion/accordion-block.js",
   "mui-accordion/accordion-group.js",
