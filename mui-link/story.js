@@ -81,7 +81,7 @@ class storyLink extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Part Selectors" description="Ideal for building custom web-component compositions using MUI and scopped css styles.">
+        <story-card title="Part Selectors" description="Ideal for building custom web-component compositions using MUI and scoped CSS styles.">
           <div slot="body">
             <mui-link class="custom-wc" target="_blank" href="links.html">Unsubscribe</mui-link>
           </div>
@@ -113,7 +113,7 @@ class storyLink extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/////////////////////////////////////////////////
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// If there is only one mui-link, you can directly select the component and style it without conflicts.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Scopping CSS in a Web Component ensures styles don't leak out and effect other mui-link components you app might use.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Scoped CSS in a Web Component ensures styles don't leak out and effect other mui-link components you app might use.<br>
             <br />
             <br />
 

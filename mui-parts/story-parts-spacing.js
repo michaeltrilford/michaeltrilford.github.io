@@ -11,7 +11,7 @@ class storyPartsSpacing extends HTMLElement {
 
       <story-container 
         title="Spacing Parts"
-        description="Defines a set of customisable part names to apply to web components, enabling easy styling overrides through the part attribute in a flexible, trust-based system that encourages thoughtful and responsible use of these styling entry points."
+        description="Provides customisable part names for easy styling overrides via the part attribute, promoting flexible, trust-based customisation. Best for building custom web component compositions with MUI and scoped CSS styles."
       >
         <mui-v-stack space="var(--spacing-700)">
 
