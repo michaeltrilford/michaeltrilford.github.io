@@ -56,6 +56,25 @@ const reveal = () => {
   }, 1000);
 };
 
+// Utility function to add static head elements
+const addHeadElements = () => {
+  // Favicon
+  const favicon = document.createElement("link");
+  favicon.setAttribute("rel", "icon");
+  favicon.setAttribute("type", "image/svg+xml");
+  favicon.setAttribute("href", "public/favicon.ico");
+  document.head.appendChild(favicon);
+
+  // Apple touch icon
+  const appleTouchIcon = document.createElement("link");
+  appleTouchIcon.setAttribute("rel", "apple-touch-icon");
+  appleTouchIcon.setAttribute("href", "public/logo192.png");
+  document.head.appendChild(appleTouchIcon);
+
+  // Page title
+  document.title = "MUI"; // Sets <title>
+};
+
 // Arrays containing your resources
 const HomeArray = ["mui-home/index.js"];
 const UtilArray = ["mui-utils/index.js"];
@@ -153,6 +172,8 @@ const MuiCompArray = [
   "mui-slat/index.js",
 ];
 const RecipeArray = ["mui-table/recipe/table.js"];
+
+addHeadElements();
 
 // Load all resources asynchronously
 Promise.all([
