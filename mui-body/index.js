@@ -19,7 +19,7 @@ class muiBody extends HTMLElement {
       }
 
       :host p {
-        margin: var(--spacing-000);
+        margin: var(--space-000);
         display: block;
         width: 100%;
       }

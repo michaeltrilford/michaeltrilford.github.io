@@ -17,7 +17,7 @@ class muiImage extends HTMLElement {
         background: #eee;
         display: block;
         width: 100%;
-        margin: var(--spacing-000);
+        margin: var(--space-000);
       }
       ::slotted(img) {
         width: 100%;
@@ -28,7 +28,7 @@ class muiImage extends HTMLElement {
         vertical-align: middle;
       }
       ::slotted(figcaption) {
-        padding: var(--spacing-500);
+        padding: var(--space-500);
         text-align: center;
         display: block;
       }

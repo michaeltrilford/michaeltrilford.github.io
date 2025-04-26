@@ -14,7 +14,7 @@ class storyTable extends HTMLElement {
         description="An HTML table consists of one table element and one or more tr, th, and td elements."
       >
 
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
 
           <story-card title="Table">
             <app-table slot="body"></app-table>
@@ -64,13 +64,13 @@ class storyTable extends HTMLElement {
               <app-table slot="showAbove"></app-table>
               <mui-slat slot="showBelow">
                 <mui-heading slot="start" size="6">Whalen</mui-heading>      
-                <mui-h-stack space="var(--spacing-800)" alignX="flex-end" alignY="center" slot="end">
-                  <mui-v-stack space="var(--spacing-000)">
-                    <mui-h-stack space="var(--spacing-400)" alignX="flex-end">
+                <mui-h-stack space="var(--space-800)" alignX="flex-end" alignY="center" slot="end">
+                  <mui-v-stack space="var(--space-000)">
+                    <mui-h-stack space="var(--space-400)" alignX="flex-end">
                       <mui-body weight="bold" size="small">Revenue:</mui-body>
                       <mui-body size="small">$4,400.00</mui-body>
                     </mui-h-stack>
-                    <mui-h-stack space="var(--spacing-400)" alignX="flex-end">
+                    <mui-h-stack space="var(--space-400)" alignX="flex-end">
                       <mui-body weight="bold" size="small">Cost:</mui-body>
                       <mui-body size="small">$1,100.00</mui-body>
                     </mui-h-stack>
@@ -78,16 +78,16 @@ class storyTable extends HTMLElement {
                   <mui-button variant="tertiary" iconOnly> <mui-icon-menu size="x-small"></mui-icon-menu></mui-button>
                 </mui-h-stack>
               </mui-slat>
-              <mui-rule slot="showBelow" direction="horizontal" length="100%" style="margin: var(--spacing-300) 0;"></mui-rule>
+              <mui-rule slot="showBelow" direction="horizontal" length="100%" style="margin: var(--space-300) 0;"></mui-rule>
               <mui-slat slot="showBelow">      
                 <mui-heading slot="start" size="6">Whalen</mui-heading>      
-                <mui-h-stack space="var(--spacing-800)" alignX="flex-end" alignY="center" slot="end">
-                  <mui-v-stack space="var(--spacing-000)">
-                    <mui-h-stack space="var(--spacing-400)" alignX="flex-end">
+                <mui-h-stack space="var(--space-800)" alignX="flex-end" alignY="center" slot="end">
+                  <mui-v-stack space="var(--space-000)">
+                    <mui-h-stack space="var(--space-400)" alignX="flex-end">
                       <mui-body weight="bold" size="small">Revenue:</mui-body>
                       <mui-body size="small">$4,400.00</mui-body>
                     </mui-h-stack>
-                    <mui-h-stack space="var(--spacing-400)" alignX="flex-end">
+                    <mui-h-stack space="var(--space-400)" alignX="flex-end">
                       <mui-body weight="bold" size="small">Cost:</mui-body>
                       <mui-body size="small">$1,100.00</mui-body>
                     </mui-h-stack>
@@ -145,7 +145,7 @@ class storyTable extends HTMLElement {
                 <br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="end" width="20px"&gt;
                 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-h-stack slot="end" space="var(--spacing-400)" alignX="flex-end"&gt;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-h-stack slot="end" space="var(--space-400)" alignX="flex-end"&gt;
                   <br />  
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-body width="20px"&gt;Body&lt;/mui-body&gt;
                     <br />

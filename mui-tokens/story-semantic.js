@@ -13,7 +13,7 @@ class storyTokensSemantic extends HTMLElement {
         title="Semantic Tokens"
         description="Semantic tokens express the intended meaning or purpose of a design element, independent of its visual implementation. Rather than referring to a specific color, size, or spacing value, semantic tokens describe what the design is trying to communicate."
       >
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
   
           <story-card title="Feedback States" description="User feedback (alerts, forms, etc.)" nofooter>
             <mui-token-local-slat slot="body" token="--feedback-neutral-color" output="var(--grey-200)"></mui-token-local-slat>  

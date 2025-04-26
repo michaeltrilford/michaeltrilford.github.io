@@ -14,7 +14,7 @@ class storyQuote extends HTMLElement {
         description="The mui-quote specifies a section that is quoted from another source."
       >
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card title="Quote">
 

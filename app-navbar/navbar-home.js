@@ -15,7 +15,7 @@ class muiNavbarHome extends HTMLElement {
 
       :host { 
         display: block;
-        margin-bottom: var(--spacing-500);
+        margin-bottom: var(--space-500);
         position: sticky; 
         top: 0; 
         background: #191919; 
@@ -23,7 +23,7 @@ class muiNavbarHome extends HTMLElement {
       }
       a {
         color: var(--mui-brand); 
-        padding: 1.5rem var(--spacing-500);
+        padding: 1.5rem var(--space-500);
         box-shadow: 0 0 96px 0 black;
         display: block;
         font-weight: bold;

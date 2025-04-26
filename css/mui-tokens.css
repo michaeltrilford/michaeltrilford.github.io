@@ -130,16 +130,16 @@
   --radius-400: 24px;
 
   /* Spacing */
-  --spacing-000: 0;
-  --spacing-050: 0.4rem;
-  --spacing-100: 0.6rem;
-  --spacing-200: 0.8rem;
-  --spacing-300: 1.2rem;
-  --spacing-400: 1.6rem;
-  --spacing-500: 2.4rem;
-  --spacing-600: 3.6rem;
-  --spacing-700: 4.8rem;
-  --spacing-800: 6rem;
+  --space-000: 0;
+  --space-050: 0.4rem;
+  --space-100: 0.6rem;
+  --space-200: 0.8rem;
+  --space-300: 1.2rem;
+  --space-400: 1.6rem;
+  --space-500: 2.4rem;
+  --space-600: 3.6rem;
+  --space-700: 4.8rem;
+  --space-800: 6rem;
 
   /* Stroke */
   --stroke-size-100: 1px;

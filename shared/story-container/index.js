@@ -14,9 +14,9 @@ class storyContainer extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
       <mui-navbar>
-        <mui-container slot="main-content" center style="padding-top: var(--spacing-600);">
-          <mui-v-stack space="var(--spacing-700)">
-            <mui-v-stack space="var(--spacing-400)">
+        <mui-container slot="main-content" center style="padding-top: var(--space-600);">
+          <mui-v-stack space="var(--space-700)">
+            <mui-v-stack space="var(--space-400)">
               <mui-heading size="1" weight="800">${this.getAttribute(
                 "title"
               )}</mui-heading>

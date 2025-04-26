@@ -11,7 +11,7 @@ class storyCards extends HTMLElement {
 
       <story-container title="Card" description="The Card provides the ability to group items or components. ">
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card title="Card">
           <div slot="body">
@@ -55,7 +55,7 @@ class storyCards extends HTMLElement {
                   fermentum massa justo sit amet risus.
                 </mui-body>
               </mui-card-body>
-              <mui-card-footer style="padding: var(--spacing-500) var(--spacing-600)">
+              <mui-card-footer style="padding: var(--space-500) var(--space-600)">
                 <mui-button-group right>
                   <mui-button variant="secondary">Cancel</mui-button>
                   <mui-button variant="primary">Submit</mui-button>
@@ -75,7 +75,7 @@ class storyCards extends HTMLElement {
             <br />
             &nbsp;&nbsp;&lt;mui-card-body&gt;...&lt;/mui-card-body&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-card-footer style="padding: var(--spacing-500) var(--spacing-600)"&gt;
+            &nbsp;&nbsp;&lt;mui-card-footer style="padding: var(--space-500) var(--space-600)"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button-group right&gt;
             <br />

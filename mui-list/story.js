@@ -14,7 +14,7 @@ class storyList extends HTMLElement {
         description="The component defines an ordered or unordered list."
       >
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card title="Unordered">
 

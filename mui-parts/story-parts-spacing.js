@@ -13,14 +13,14 @@ class storyPartsSpacing extends HTMLElement {
         title="Spacing Parts"
         description="Provides customisable part names for easy styling overrides via the part attribute, promoting flexible, trust-based customisation. Best for building custom web component compositions with MUI and scoped CSS styles."
       >
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
 
           <story-card title="Padding">
             <mui-token-local-slat slot="body" token="part(padding)" usage="Links, Stacks" output="Defines the padding of the element." ></mui-token-local-slat>
             <mui-code slot="footer">
               mui-link::part(padding) {
               <br />
-              &nbsp;&nbsp;padding: var(--spacing-100);
+              &nbsp;&nbsp;padding: var(--space-100);
               <br />
               }
             </mui-code>
@@ -31,7 +31,7 @@ class storyPartsSpacing extends HTMLElement {
             <mui-code slot="footer">
               mui-link::part(margin) {
               <br />
-              &nbsp;&nbsp;margin: var(--spacing-100);
+              &nbsp;&nbsp;margin: var(--space-100);
               <br />
               }
             </mui-code>

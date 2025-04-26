@@ -34,12 +34,12 @@ class storyLink extends HTMLElement {
         description="The mui-link defines a hyperlink, which is used to link from one page to another."
       >
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card title="Sizes">
 
             <div slot="body">
-              <mui-v-stack space="var(--spacing-500)">
+              <mui-v-stack space="var(--space-500)">
                 <div>
                   <mui-heading size="4" tinymargin>X-Small</mui-heading>
                   <mui-link size="x-small">Risus Mollis Dapibus</mui-link>

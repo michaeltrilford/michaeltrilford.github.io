@@ -13,7 +13,7 @@ class storyPartsText extends HTMLElement {
         title="Text Parts"
         description="Provides customisable part names for easy styling overrides via the part attribute, promoting flexible, trust-based customisation. Best for building custom web component compositions with MUI and scoped CSS styles."
       >
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
 
           <story-card title="Color">
             <mui-token-local-slat slot="body" token="part(color)" usage="Links" output="Defines the color of the element." ></mui-token-local-slat>

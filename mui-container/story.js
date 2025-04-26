@@ -13,7 +13,7 @@ class storyContainers extends HTMLElement {
       title="Container" 
       description="The Container is a layout helper to provide the base page structure for a web experience.">
 
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
 
           <story-card title="Small">
             <mui-container small slot="body">

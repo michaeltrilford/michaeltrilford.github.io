@@ -7,7 +7,7 @@ class muiGrid extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
     let col = `1fr 1fr`;
-    let gap = `var(--spacing-500)`;
+    let gap = `var(--space-500)`;
     const styles = `
       :host {
         display: block;

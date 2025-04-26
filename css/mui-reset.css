@@ -21,7 +21,7 @@
 }
 
 body {
-  margin: var(--spacing-000);
+  margin: var(--space-000);
   font-size: var(--body-font-size-m);
   min-height: 100vh;
 }
@@ -39,7 +39,7 @@ input,
 optgroup,
 select,
 textarea {
-  margin: var(--spacing-000);
+  margin: var(--space-000);
 }
 
 :focus-visible,
@@ -110,12 +110,12 @@ video {
 }
 img,
 legend {
-  border: var(--spacing-000);
+  border: var(--space-000);
 }
 body,
 figure,
 form {
-  margin: var(--spacing-000);
+  margin: var(--space-000);
 }
 audio,
 canvas,
@@ -124,7 +124,7 @@ video {
   vertical-align: middle;
 }
 audio:not([controls]) {
-  height: var(--spacing-000);
+  height: var(--space-000);
 }
 
 dfn {

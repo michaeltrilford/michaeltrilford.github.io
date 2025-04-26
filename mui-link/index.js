@@ -32,7 +32,7 @@ class muiLink extends HTMLElement {
         color: var(--link-text-color-default);
         font-weight: var(--link-font-weight);
       }
-      a:active, a:hover { outline: var(--spacing-000); }
+      a:active, a:hover { outline: var(--space-000); }
 
       a:hover {
         color: var(--link-text-color-default-hover);
@@ -90,7 +90,7 @@ class muiLink extends HTMLElement {
         cursor: pointer;
         width: auto;
         border-radius: var(--link-radius);
-        padding: var(--spacing-200) var(--spacing-500);
+        padding: var(--space-200) var(--space-500);
         text-decoration: none;
         line-height: var(--body-line-height);
         display: inline-block;

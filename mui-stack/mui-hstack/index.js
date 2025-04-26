@@ -8,7 +8,7 @@ class muiHStack extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
 
-    this.space = `var(--spacing-500)`;
+    this.space = `var(--space-500)`;
     this.alignY = `flex-start`;
     this.alignX = `flex-start`;
 

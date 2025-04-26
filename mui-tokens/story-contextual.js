@@ -13,7 +13,7 @@ class storyTokensContextual extends HTMLElement {
         title="Contextual Tokens"
         description="Contextual tokens bridge the gap between raw base tokens and specific use cases. They are tied to a particular context or element, reflecting how a base token is applied in a specific environment or scenario."
       >
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
 
           <story-card title="Summary" nofooter>
             <mui-token-local-slat slot="body" token="--summary-background" output="var(--white)"></mui-token-local-slat>

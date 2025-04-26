@@ -48,6 +48,17 @@ const reveal = () => {
   }, 500);
 };
 
+// Define your custom elements or components • Index.html file components only
+const DefinedArray = [
+  "mui-navbar",
+  "mui-container",
+  "mui-responsive",
+  "mui-v-stack",
+  "mui-link",
+  "mui-body",
+  // Add more custom elements here
+];
+
 // Arrays containing your resources
 const UtilArray = ["mui-utils/index.js"];
 const StylesArray = [
@@ -144,17 +155,6 @@ const MuiCompArray = [
   "mui-slat/index.js",
 ];
 const RecipeArray = ["mui-table/recipe/table.js"];
-
-// Define your custom elements or components
-const DefinedArray = [
-  "mui-navbar",
-  "mui-container",
-  "mui-responsive",
-  "mui-v-stack",
-  "mui-link",
-  "mui-body",
-  // Add more custom elements here
-];
 
 // You can now include these in your script loading process if needed, like this:
 const CustomElementsArray = DefinedArray.map((component) => {

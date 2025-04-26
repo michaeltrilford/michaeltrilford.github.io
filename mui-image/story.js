@@ -15,7 +15,7 @@ class storyImage extends HTMLElement {
         description="Defines a image."
       >
 
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
 
           <story-card title="Single image">
             <div slot="body">

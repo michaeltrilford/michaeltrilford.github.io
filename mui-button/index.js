@@ -13,7 +13,7 @@ class muiButton extends HTMLElement {
         cursor: pointer;
         width: auto;
         border-radius: var(--button-radius);
-        padding: var(--spacing-200) var(--spacing-500);
+        padding: var(--space-200) var(--space-500);
         text-decoration: none;
         line-height: var(--body-line-height);
         display: inline-block;
@@ -28,7 +28,7 @@ class muiButton extends HTMLElement {
         border: var(--button-border-primary); 
       }
 
-      button:active, button:hover { outline: var(--spacing-000); }
+      button:active, button:hover { outline: var(--space-000); }
 
       button:hover {
         background: var(--button-background-primary-hover);
@@ -154,7 +154,7 @@ class muiButton extends HTMLElement {
         align-items: center;
         height: 44px;
         width: 44px;
-        padding: var(--spacing-000)
+        padding: var(--space-000)
       }
       /* ===================================== */
     `;

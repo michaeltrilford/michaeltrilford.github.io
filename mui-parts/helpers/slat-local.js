@@ -11,7 +11,7 @@ class muiTokenLocalSlat extends HTMLElement {
     const styles = `
       :host { 
         display: block;
-        padding: var(--spacing-300);
+        padding: var(--space-300);
         border-bottom: var(--border-thin);
       }
 
@@ -27,7 +27,7 @@ class muiTokenLocalSlat extends HTMLElement {
         background: var(--mui-brand);
         box-shadow: 0 1px 0 0 var(--mui-brand);
         border-radius: var(--radius-100);
-        padding: 0 var(--spacing-200);
+        padding: 0 var(--space-200);
       }
 
       mui-h-stack::part(align-items) {
@@ -52,7 +52,7 @@ class muiTokenLocalSlat extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <mui-v-stack space="var(--spacing-100)">
+      <mui-v-stack space="var(--space-100)">
 
         <mui-body size="x-small">
           <code>${this.getAttribute("token")}</code>
@@ -62,7 +62,7 @@ class muiTokenLocalSlat extends HTMLElement {
           ${this.getAttribute("output")}
         </mui-body>
 
-        <mui-h-stack space="var(--spacing-100)">
+        <mui-h-stack space="var(--space-100)">
           <mui-body size="x-small">Usage:</mui-body>
           ${
             usageLinks ||

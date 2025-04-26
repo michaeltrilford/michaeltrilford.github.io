@@ -11,7 +11,7 @@ class storyButton extends HTMLElement {
 
       <story-container title="Buttons" description="Buttons are essential UI elements that trigger actions when clicked or tapped. They should be easily recognisable, provide clear feedback, and be accessible to all users.">
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card title="Primary Button">
         <mui-button variant="primary" slot="body">Submit</mui-button>

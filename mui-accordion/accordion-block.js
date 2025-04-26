@@ -14,8 +14,8 @@ class muiAccordionBlock extends HTMLElement {
       mui-accordion-summary {
         display: flex;
         align-items: center;
-        margin-bottom: var(--spacing-000);
-        padding: var(--spacing-400) var(--spacing-500); 
+        margin-bottom: var(--space-000);
+        padding: var(--space-400) var(--space-500); 
         border-bottom: var(--border-thin);
       }
 
@@ -32,11 +32,11 @@ class muiAccordionBlock extends HTMLElement {
       }
   
       mui-icon-right-chevron {
-        margin-right: var(--spacing-100);
+        margin-right: var(--space-100);
         transition: transform 0.2s ease-in-out;
         fill: var(--grey-700);
         transform: rotate(90deg);
-        padding: var(--spacing-200);
+        padding: var(--space-200);
         border-radius: var(--radius-200);
       }
 
@@ -46,7 +46,7 @@ class muiAccordionBlock extends HTMLElement {
           
       mui-accordion-detail {
         display: block;
-        margin-bottom: var(--spacing-000);
+        margin-bottom: var(--space-000);
         max-height: 0;
         transition: max-height .10s ease-in-out;
         overflow-y: hidden;
@@ -60,11 +60,11 @@ class muiAccordionBlock extends HTMLElement {
         
       mui-accordion-detail-inner {
         display: block;
-        padding: var(--spacing-500);
+        padding: var(--space-500);
       }
 
       mui-accordion-detail-inner > *:last-child {
-        margin-bottom: var(--spacing-000);
+        margin-bottom: var(--space-000);
       }
 
     </style>

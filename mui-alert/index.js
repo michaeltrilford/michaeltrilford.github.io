@@ -10,7 +10,7 @@ class muiAlert extends HTMLElement {
       :host {
         display: block;
         border-radius: var(--alert-radius);
-        padding: var(--spacing-400) var(--spacing-500);
+        padding: var(--space-400) var(--space-500);
         background: var(--white);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
       }

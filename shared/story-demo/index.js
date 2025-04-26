@@ -12,7 +12,7 @@ class storyDemo extends HTMLElement {
       :host { display: block; }
       slot {
         display: flex;
-        padding: var(--spacing-050) var(--spacing-400);
+        padding: var(--space-050) var(--space-400);
         box-sizing: border-box;
         justify-content: center;
         align-items: center;

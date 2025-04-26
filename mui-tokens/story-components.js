@@ -13,7 +13,7 @@ class storyTokensComponents extends HTMLElement {
         title="Components Tokens"
         description="Component tokens are contextual tokens scoped to a specific UI component, defining how foundational design decisions are applied within that component’s unique structure and states."
       >
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
 
           <story-card title="Icon" nofooter>
             <mui-token-local-slat slot="body" token="--icon-color-default" output="var(--black)"></mui-token-local-slat>

@@ -14,7 +14,7 @@ class storyAccordion extends HTMLElement {
         description="The Accordion is a component stores content underneath a collapsible heading, revealing it through progressive disclosure in the user interface."
       >
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card 
           title="Accordion Inline" 
@@ -23,7 +23,7 @@ class storyAccordion extends HTMLElement {
           <div slot="body">
             <mui-accordion-inline>
               <span slot="title">Hello</span>
-              <div slot="detail" style="padding-left: var(--spacing-050); padding-right: var(--spacing-050);">
+              <div slot="detail" style="padding-left: var(--space-050); padding-right: var(--space-050);">
                 <mui-list as="ul">
                   <mui-list-item>Coffee</mui-list-item>
                   <mui-list-item>Tea</mui-list-item>

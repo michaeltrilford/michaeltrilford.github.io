@@ -16,11 +16,11 @@ class storyRule extends HTMLElement {
         description="A horizontal rule to divide a page"
       >
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card title="Horizontal">
           <div slot="body">
-            <mui-rule direction="horizontal" length="100%" style="margin: var(--spacing-700) 0;"></mui-rule>
+            <mui-rule direction="horizontal" length="100%" style="margin: var(--space-700) 0;"></mui-rule>
           </div>
           <mui-code slot="footer">
             &lt;mui-rule
@@ -50,7 +50,7 @@ class storyRule extends HTMLElement {
 
         <story-card title="Horizontal">
           <div slot="body">
-            <mui-rule direction="horizontal" length="100%" weight="2px" style="margin: var(--spacing-700) 0;"></mui-rule>
+            <mui-rule direction="horizontal" length="100%" weight="2px" style="margin: var(--space-700) 0;"></mui-rule>
           </div>
           <mui-code slot="footer">
             &lt;mui-rule

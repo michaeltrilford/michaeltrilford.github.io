@@ -11,10 +11,10 @@ class muiQuote extends HTMLElement {
       :host { display: block; }
       blockquote {
         border-left: var(--border-thick);
-        padding-left: var(--spacing-500);
-        font-size: var(--spacing-500);
+        padding-left: var(--space-500);
+        font-size: var(--space-500);
         line-height: 1.5;
-        margin: var(--spacing-500) var(--spacing-000);
+        margin: var(--space-500) var(--space-000);
         font-style: italic;
       }
     </style>

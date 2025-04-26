@@ -27,7 +27,7 @@ class muiNavbarLink extends HTMLElement {
         margin: 0;
         color: white;
         display: block;
-        padding: 0.75rem var(--spacing-500);
+        padding: 0.75rem var(--space-500);
         transition: opacity 400ms ease-in, transform 100ms ease-in;
         opacity: 0.3;
         font-weight: bold;

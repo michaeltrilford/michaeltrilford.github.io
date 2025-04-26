@@ -14,7 +14,7 @@ class storyHeading extends HTMLElement {
         description="The Heading component includes six levels (H1–H6) for structured heading usage, supporting a range of hierarchies in text presentation."
       >
         
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
         
           <story-card noHeader>
             <div slot="body">

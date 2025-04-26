@@ -14,8 +14,8 @@ class muiList extends HTMLElement {
           display: block;
           width: 100%;
           list-style-position: inside;
-          padding: var(--spacing-000);
-          margin: var(--spacing-000);
+          padding: var(--space-000);
+          margin: var(--space-000);
         }
         
         :host([as="ol"]) {

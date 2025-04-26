@@ -6,7 +6,7 @@ class muiVStack extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
-    let space = `var(--spacing-500)`;
+    let space = `var(--space-500)`;
     const styles = `
       :host {
         display: block;

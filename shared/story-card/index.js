@@ -18,14 +18,14 @@ class storyCard extends HTMLElement {
 
 
       mui-card-header {
-        padding: var(--spacing-500);
+        padding: var(--space-500);
       }
 
 
 
       mui-card-body {
         background: var(--grey-100);
-        padding: var(--spacing-500);
+        padding: var(--space-500);
         border-bottom-right-radius: var(--radius-200);
         border-bottom-left-radius: var(--radius-200);
       }

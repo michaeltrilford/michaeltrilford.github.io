@@ -14,7 +14,7 @@ class storyCode extends HTMLElement {
         description="The component defines a code view."
       >
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card title="Large">
           <div slot="body">

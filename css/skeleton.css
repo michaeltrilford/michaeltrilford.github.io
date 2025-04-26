@@ -1,5 +1,5 @@
 body {
-  margin: var(--spacing-000);
+  margin: var(--space-000);
   font-size: var(--body-font-size-m);
   min-height: 100vh;
 }

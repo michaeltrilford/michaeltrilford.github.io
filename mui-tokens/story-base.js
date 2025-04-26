@@ -14,7 +14,7 @@ class storyTokensBase extends HTMLElement {
         description="Base tokens are the foundational values of a design system. They represent raw, unchanging definitions for core design attributes such as colors, typography, spacing, and sizes."
       >
 
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
 
           <story-card title="Font Family" nofooter>
             <mui-token-local-slat 
@@ -151,16 +151,16 @@ class storyTokensBase extends HTMLElement {
           </story-card>
 
           <story-card title="Spacing" nofooter>
-            <mui-token-local-slat slot="body" token="--spacing-000" output="0"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-050" output="0.4rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-100" output="0.6rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-200" output="0.8rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-300" output="1.2rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-400" output="1.6rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-500" output="2.4rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-600" output="3.6rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-700" output="4.8rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--spacing-800" output="6rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-000" output="0"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-050" output="0.4rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-100" output="0.6rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-200" output="0.8rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-300" output="1.2rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-400" output="1.6rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-500" output="2.4rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-600" output="3.6rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-700" output="4.8rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-800" output="6rem"></mui-token-local-slat>
           </story-card>
 
           <story-card title="Stroke" nofooter>

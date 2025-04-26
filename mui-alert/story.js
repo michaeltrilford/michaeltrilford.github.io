@@ -14,7 +14,7 @@ class storyAlert extends HTMLElement {
         description="Alerts are to surface meaningful system messages related to the users' current task or action."
       >
 
-        <mui-v-stack space="var(--spacing-700)">
+        <mui-v-stack space="var(--space-700)">
 
           <story-card title="Success">
             <div slot="body">

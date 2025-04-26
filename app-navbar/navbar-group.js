@@ -15,7 +15,7 @@ class muiNavbarGroup extends HTMLElement {
 
       :host {
         display: block;
-        margin-top: var(--spacing-500); 
+        margin-top: var(--space-500); 
       }
 
       :host(:last-of-type) {
@@ -27,13 +27,13 @@ class muiNavbarGroup extends HTMLElement {
         text-transform: uppercase;
         font-weight: bold;
         color: #bbbbbb;
-        padding: 0 var(--spacing-500);
+        padding: 0 var(--space-500);
         font-size: var(--font-size-50);
         
       }
       @media (min-width: 961px) {
         :host {
-          margin-top: var(--spacing-500); 
+          margin-top: var(--space-500); 
         }
         span {
           font-size: var(--font-size-50);

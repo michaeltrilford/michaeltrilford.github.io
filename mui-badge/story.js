@@ -14,7 +14,7 @@ class storyBadge extends HTMLElement {
         description="Badges are non-interactive and indicate counts or statuses."
       >
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card title="Badge / Default">
           <div slot="body">

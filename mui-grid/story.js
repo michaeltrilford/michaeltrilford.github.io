@@ -20,7 +20,7 @@ class storyGrid extends HTMLElement {
         description="Layout component to enable grid layouts"
       >
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
       
         <story-card title="Default">
         
@@ -60,13 +60,13 @@ class storyGrid extends HTMLElement {
         </story-card>
 
         <story-card title="Custom gap">
-          <mui-grid col="1fr 1fr 1fr" gap="var(--spacing-800)" slot="body">
+          <mui-grid col="1fr 1fr 1fr" gap="var(--space-800)" slot="body">
             ${Box}
             ${Box}
             ${Box}
           </mui-grid>
           <mui-code slot="footer">
-            &lt;mui-grid col="1fr 1fr 1fr" gap="var(--spacing-800)"&gt;
+            &lt;mui-grid col="1fr 1fr 1fr" gap="var(--space-800)"&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />

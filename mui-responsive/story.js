@@ -50,7 +50,7 @@ class storyResponsive extends HTMLElement {
         <mui-row-group> 
           <mui-row columns="${ProgressTableColumns}"> 
             <mui-cell align-y="center"><mui-body size="small">Alison Max</mui-body></mui-cell> 
-            <mui-cell align-y="center"><mui-v-stack space="var(--spacing-050)"><mui-body size="small">27/07/2020</mui-body><mui-badge>Quarterly</mui-badge></mui-v-stack></mui-cell> 
+            <mui-cell align-y="center"><mui-v-stack space="var(--space-050)"><mui-body size="small">27/07/2020</mui-body><mui-badge>Quarterly</mui-badge></mui-v-stack></mui-cell> 
             <mui-cell align-y="center"><mui-badge>Unlodged</mui-badge></mui-cell> 
             <mui-cell align-y="center">${LocalRing}</mui-cell> 
           </mui-row> 
@@ -59,7 +59,7 @@ class storyResponsive extends HTMLElement {
     `;
 
     const ProgressSlat = `
-        <mui-v-stack space="var(--spacing-400)">
+        <mui-v-stack space="var(--space-400)">
           ${LocalRing}
           <mui-heading 
             size="6" 
@@ -71,15 +71,15 @@ class storyResponsive extends HTMLElement {
           <mui-rule></mui-rule>
 
           <mui-grid col="1fr 1fr 1fr">
-          <mui-v-stack space="var(--spacing-100)">
+          <mui-v-stack space="var(--space-100)">
             <mui-body size="small"><strong>Client</strong></mui-body>
             <mui-body size="small">Alison Max</mui-body>
           </mui-v-stack>
-          <mui-v-stack space="var(--spacing-100)">
+          <mui-v-stack space="var(--space-100)">
             <mui-body size="small" style="text-align: center;"><strong>Due date</strong></mui-body>
             <mui-body size="small" style="text-align: center;">27/07/2020</mui-body>
           </mui-v-stack>
-          <mui-v-stack space="var(--spacing-100)">
+          <mui-v-stack space="var(--space-100)">
             <mui-body size="small" style="text-align: right;"><strong>Status</strong></mui-body>
             <mui-body size="small" style="text-align: right;">Unlodged</mui-body>
           </mui-v-stack>
@@ -101,7 +101,7 @@ class storyResponsive extends HTMLElement {
         description="Dynamically render UI based on viewport size"
       >
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
       
         <story-card title="Basic example">
           <mui-responsive slot="body" breakpoint="600">

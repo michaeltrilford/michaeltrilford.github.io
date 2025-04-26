@@ -9,7 +9,7 @@ class storyX extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <mui-v-stack space="var(--spacing-700)">
+      <mui-v-stack space="var(--space-700)">
 
         <story-card title="...">
 

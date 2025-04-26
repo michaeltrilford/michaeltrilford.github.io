@@ -11,7 +11,7 @@ class muiCardHeader extends HTMLElement {
         display: block;
         width: 100%;
         box-sizing: border-box;
-        padding: var(--spacing-500) var(--spacing-600);
+        padding: var(--space-500) var(--space-600);
         border-bottom: var(--border-thin);
       }
     </style>

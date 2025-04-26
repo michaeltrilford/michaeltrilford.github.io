@@ -16,7 +16,7 @@ class muiCell extends HTMLElement {
       text-align: left;
     }
     :host(*:first-of-type) {
-      padding-left: var(--spacing-400);
+      padding-left: var(--space-400);
     }
 
     :host([checkbox]) {
@@ -28,7 +28,7 @@ class muiCell extends HTMLElement {
       width: 4.4rem;
       height: 4.4rem;
       padding: 0;
-      padding-right: var(--spacing-300);
+      padding-right: var(--space-300);
     }
     :host([heading]) {
       font-weight: bold;

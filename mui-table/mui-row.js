@@ -16,9 +16,9 @@ class muiRow extends HTMLElement {
       :host {
         display: grid;
         grid-template-columns: ${this.getAttribute("columns")};
-        grid-gap: var(--spacing-500);
-        margin-bottom: var(--spacing-000);
-        padding: var(--spacing-300) var(--spacing-000);
+        grid-gap: var(--space-500);
+        margin-bottom: var(--space-000);
+        padding: var(--space-300) var(--space-000);
         border-bottom: 1px solid var(--grey-200);
         align-items: center;
       }
