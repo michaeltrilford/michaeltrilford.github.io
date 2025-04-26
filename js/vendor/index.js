@@ -1,16 +1,10 @@
-// Wait for DOM content before adding listeners
-// Used to ensure focus state doesn't appear on Icon Toggle but still works on Keyboard
-document.addEventListener("DOMContentLoaded", () => {
-  // --- Focus visibility detection (keep outlines for keyboard users only)
-  document.body.addEventListener("keydown", (e) => {
-    if (e.key === "Tab") {
-      document.body.dataset.userIsTabbing = "true";
-    }
-  });
+const UtilArray = ["mui-utils/index.js"];
 
-  document.body.addEventListener("mousedown", () => {
-    delete document.body.dataset.userIsTabbing;
-  });
+UtilArray.forEach((src) => {
+  const script = document.createElement("script");
+  script.setAttribute("src", src);
+  script.setAttribute("defer", "true"); // Optional: defers execution until after HTML parsing
+  document.head.appendChild(script);
 });
 
 const StylesArray = [
@@ -25,6 +19,14 @@ const Styles = StylesArray.map((Items) => {
   Styles.setAttribute("rel", "stylesheet");
   Styles.setAttribute("href", Items);
   document.head.appendChild(Styles);
+});
+
+const PartsArray = ["mui-parts/index.js"];
+
+const Parts = PartsArray.map((Items) => {
+  const Parts = document.createElement("script");
+  Parts.setAttribute("src", Items);
+  document.head.appendChild(Parts);
 });
 
 const StoryArray = [
@@ -96,9 +98,6 @@ const AppComponent = AppCompArray.map((Items) => {
 AppComponent;
 
 const MuiCompArray = [
-  // Add part-types.js here
-  "mui-parts/index.js",
-
   "mui-accordion/accordion-inline.js",
   "mui-accordion/accordion-block.js",
   "mui-accordion/accordion-group.js",

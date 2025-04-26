@@ -49,3 +49,11 @@ window.PartTypes = {
 };
 
 window.Parts = Object.values(window.PartTypes).flat();
+
+// Utility to get parts for a set of types
+window.getPartMap = function (...types) {
+  return types
+    .map((type) => window.PartTypes[type] || [])
+    .flat()
+    .join(" ");
+};

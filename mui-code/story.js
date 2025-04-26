@@ -16,9 +16,9 @@ class storyCode extends HTMLElement {
 
       <mui-v-stack space="var(--spacing-700)">
 
-        <story-card title="Default">
+        <story-card title="Large">
           <div slot="body">
-            <mui-code>
+            <mui-code variant="large">
             Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis
             euismod. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu
             leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Cum
@@ -26,13 +26,27 @@ class storyCode extends HTMLElement {
           </mui-code>
           </div>
           <mui-code slot="footer">
-            &lt;mui-code&gt;...&lt;/mui-code&gt;
+            &lt;mui-code variant="large"&gt;...&lt;/mui-code&gt;
+          </mui-code>
+        </story-card>
+
+       <story-card title="Medium">
+          <div slot="body">
+            <mui-code variant="medium">
+            Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis
+            euismod. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu
+            leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Cum
+            sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          </mui-code>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-code variant="medium"&gt;...&lt;/mui-code&gt;
           </mui-code>
         </story-card>
 
         <story-card title="Small">
           <div slot="body">
-            <mui-code small>
+            <mui-code variant="small">
             Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis
             euismod. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu
             leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Cum
@@ -40,13 +54,13 @@ class storyCode extends HTMLElement {
           </mui-code>
           </div>
           <mui-code slot="footer">
-            &lt;mui-code small&gt;...&lt;/mui-code&gt;
+            &lt;mui-code variant="small"&gt;...&lt;/mui-code&gt;
           </mui-code>
         </story-card>
 
-        <story-card title="Tiny">
+        <story-card title="X-Small">
           <div slot="body">
-            <mui-code tiny>
+            <mui-code variant="x-small">
             Donec ullamcorper nulla non metus auctor fringilla. Etiam porta sem malesuada magna mollis
             euismod. Maecenas faucibus mollis interdum. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu
             leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas faucibus mollis interdum. Cum
@@ -54,7 +68,7 @@ class storyCode extends HTMLElement {
           </mui-code>
           </div>
           <mui-code slot="footer">
-            &lt;mui-code tiny&gt;...&lt;/mui-code&gt;
+            &lt;mui-code variant="x-small"&gt;...&lt;/mui-code&gt;
           </mui-code>
         </story-card>
 

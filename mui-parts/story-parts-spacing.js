@@ -16,8 +16,8 @@ class storyPartsSpacing extends HTMLElement {
         <mui-v-stack space="var(--spacing-700)">
 
           <story-card title="Padding">
-            <mui-token-local-slat slot="body" token="part(padding)" usage="mui-link" output="Defines the padding of the element’s text." ></mui-token-local-slat>
-            <mui-code slot="footer" small>
+            <mui-token-local-slat slot="body" token="part(padding)" usage="Links, Stacks" output="Defines the padding of the element." ></mui-token-local-slat>
+            <mui-code slot="footer">
               mui-link::part(padding) {
               <br />
               &nbsp;&nbsp;padding: var(--spacing-100);
@@ -27,8 +27,8 @@ class storyPartsSpacing extends HTMLElement {
           </story-card>
 
           <story-card title="Margin">
-            <mui-token-local-slat slot="body" token="part(margin)" usage="mui-link" output="Defines the margin of the element’s text." ></mui-token-local-slat>
-            <mui-code slot="footer" small>
+            <mui-token-local-slat slot="body" token="part(margin)" usage="Links, Stacks" output="Defines the margin of the element." ></mui-token-local-slat>
+            <mui-code slot="footer">
               mui-link::part(margin) {
               <br />
               &nbsp;&nbsp;margin: var(--spacing-100);

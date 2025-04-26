@@ -1,23 +1,31 @@
 /* Mui Link */
 class muiLink extends HTMLElement {
   static get observedAttributes() {
-    return ["target", "href"];
+    return ["target", "href", "variant, weight"];
   }
 
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+
+    // Set defaults
+    const variant = this.getAttribute("variant") || "medium";
+    const weight = this.getAttribute("weight") || "regular";
+    this.setAttribute("variant", variant);
+    this.setAttribute("weight", weight);
   }
 
-  connectedCallback() {
-    // Get all parts globally defined in window.AllParts
-    const partMap = window.Parts.join(" ");
+  async connectedCallback() {
+    await this.waitForPartMap();
+
+    const partMap = getPartMap("text", "spacing", "layout");
 
     let html = `
     <style>
 
       :host {
-        display: inline;
+        // display: inline;
+        display: inline-flex;
       }
       a {
         font-size: var(--link-font-size);
@@ -42,6 +50,33 @@ class muiLink extends HTMLElement {
 
       a:focus-visible {
         outline: var(--outline-thick);
+      }
+
+      :host([variant="medium"]) a {
+        font-size: var(--body-font-size-m);
+      }
+      :host([variant="large"]) a {
+        font-size: var(--body-font-size-l); 
+        line-height: 1.714285714285714;
+      }
+      :host([variant="small"]) a {
+        font-size: var(--body-font-size-s); 
+        line-height: 1.714285714285714;
+      }
+      :host([variant="tiny"]) a {
+        font-size: var(--body-font-size-xs); 
+      }
+
+      :host([weight="regular"]) a {
+        font-weight: 400;
+      }
+
+      :host([weight="medium"]) a {
+        font-weight: 500;
+      }
+
+      :host([weight="bold"]) a {
+        font-weight: 700;
       }
 
       /* Button
@@ -185,6 +220,19 @@ class muiLink extends HTMLElement {
     `;
 
     this.shadowRoot.innerHTML = html;
+  }
+  waitForPartMap() {
+    return new Promise((resolve) => {
+      if (typeof getPartMap === "function") return resolve();
+      const check = () => {
+        if (typeof getPartMap === "function") {
+          resolve();
+        } else {
+          requestAnimationFrame(check);
+        }
+      };
+      check();
+    });
   }
 }
 

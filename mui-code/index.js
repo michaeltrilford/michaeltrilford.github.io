@@ -1,21 +1,32 @@
 /* Mui Code */
 class muiCode extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
+  static get observedAttributes() {
+    return ["variant"];
   }
 
-  connectedCallback() {
-    let html = `
-    <style>
+  constructor() {
+    super();
+    const shadowRoot = this.attachShadow({ mode: "open" });
+
+    // Set defaults
+    const variant = this.getAttribute("variant") || "x-small";
+    this.setAttribute("variant", variant);
+
+    const styles = `
       :host {
         display: block;
       }
-      :host([small]) code {
+      :host([variant="x-small"]) code {
+        font-size: var(--code-font-size-xs);
+      }
+      :host([variant="small"]) code {
         font-size: var(--code-font-size-s);
       }
-      :host([tiny]) code {
-        font-size: var(--code-font-size-xs);
+      :host([variant="medium"]) code {
+        font-size: var(--code-font-size-m);
+      }
+      :host([variant="large"]) code {
+        font-size: var(--code-font-size-l);
       }
       code {
         display: block;
@@ -26,14 +37,13 @@ class muiCode extends HTMLElement {
         background: var(--code-background);
         padding: var(--spacing-400) var(--spacing-600) var(--spacing-400) var(--spacing-600);
       }
-      ::slotted(hr) {
-        margin-top: calc(var(--spacing-500) - 1px);
-      }     
-    </style>
-    <code><slot></slot></code>
-    `;
+   
 
-    this.shadowRoot.innerHTML = html;
+    `;
+    shadowRoot.innerHTML = `
+      <style>${styles}</style>
+      <code><slot></slot></code>
+  `;
   }
 }
 

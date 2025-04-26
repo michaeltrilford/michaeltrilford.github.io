@@ -30,9 +30,24 @@ class muiTokenLocalSlat extends HTMLElement {
         padding: 0 var(--spacing-200);
       }
 
-
+      mui-h-stack::part(align-items) {
+        align-items: center;
+      }
 
     `;
+
+    const usageAttr = this.getAttribute("usage") || "";
+    const usageItems = usageAttr
+      .split(",")
+      .map((item) => item.trim())
+      .filter((item) => item.length > 0);
+
+    const usageLinks = usageItems
+      .map((label) => {
+        const url = label.toLowerCase().replace(/\s+/g, "") + ".html";
+        return `<mui-link variant="tiny" weight="bold" href="${url}">${label}</mui-link>`;
+      })
+      .join("");
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -44,18 +59,18 @@ class muiTokenLocalSlat extends HTMLElement {
         </mui-body>
 
         <mui-body variant="tiny">
-        ${this.getAttribute("output")}
+          ${this.getAttribute("output")}
         </mui-body>
 
         <mui-h-stack space="var(--spacing-100)">
           <mui-body variant="tiny">Usage:</mui-body>
-          <mui-body variant="tiny" weight="bold">${
-            this.getAttribute("usage") || ``
-          }</mui-body>
+          ${
+            usageLinks ||
+            `<mui-body variant="tiny" weight="bold">None</mui-body>`
+          }
         </mui-h-stack>
 
       </mui-v-stack>
-
     `;
   }
 }

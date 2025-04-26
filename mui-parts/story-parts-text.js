@@ -16,8 +16,8 @@ class storyPartsText extends HTMLElement {
         <mui-v-stack space="var(--spacing-700)">
 
           <story-card title="Color">
-            <mui-token-local-slat slot="body" token="part(color)" usage="mui-link" output="Defines the color of the element’s text." ></mui-token-local-slat>
-            <mui-code slot="footer" small>
+            <mui-token-local-slat slot="body" token="part(color)" usage="Links" output="Defines the color of the element." ></mui-token-local-slat>
+            <mui-code slot="footer">
               mui-link::part(color) {
               <br />
               &nbsp;&nbsp;color: var(--grey-100);
@@ -34,8 +34,8 @@ class storyPartsText extends HTMLElement {
           </story-card>
 
           <story-card title="Font Size">
-            <mui-token-local-slat slot="body" token="part(font-size)" usage="mui-link" output="Defines the font size of the element’s text."></mui-token-local-slat>
-            <mui-code slot="footer" small>
+            <mui-token-local-slat slot="body" token="part(font-size)" usage="Links" output="Defines the font size of the element."></mui-token-local-slat>
+            <mui-code slot="footer">
               mui-link::part(font-size) {
               <br />
               &nbsp;&nbsp;font-size: var(--size-100);
@@ -45,9 +45,21 @@ class storyPartsText extends HTMLElement {
 
           </story-card>
 
+          <story-card title="Font Weight">
+            <mui-token-local-slat slot="body" token="part(font-weight)" usage="Links" output="Defines the font weight of the element."></mui-token-local-slat>
+            <mui-code slot="footer">
+              mui-link::part(font-weight) {
+              <br />
+              &nbsp;&nbsp;font-weight: var(--font-weight-600)
+              <br />
+              }
+            </mui-code>
+
+          </story-card>
+
           <story-card title="Text Decoration">
-            <mui-token-local-slat slot="body" token="part(text-decoration)" usage="mui-link" output="Controls the text decoration style (e.g., underline, none)."></mui-token-local-slat>
-            <mui-code slot="footer" small>
+            <mui-token-local-slat slot="body" token="part(text-decoration)" usage="Links" output="Controls the text decoration style (e.g., underline, none)."></mui-token-local-slat>
+            <mui-code slot="footer">
               mui-link::part(text-decoration) {
               <br />
               &nbsp;&nbsp;text-decoration: none;

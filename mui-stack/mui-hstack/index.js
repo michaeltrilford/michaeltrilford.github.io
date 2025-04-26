@@ -1,3 +1,4 @@
+/* Mui H Stack */
 class muiHStack extends HTMLElement {
   static get observedAttributes() {
     return ["space", "alignY", "alignX"];
@@ -5,11 +6,13 @@ class muiHStack extends HTMLElement {
 
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    let space = `var(--spacing-500)`;
-    let alignY = `flex-start`;
-    let alignX = `flex-start`;
-    const styles = `
+    this.attachShadow({ mode: "open" });
+
+    this.space = `var(--spacing-500)`;
+    this.alignY = `flex-start`;
+    this.alignX = `flex-start`;
+
+    this.styles = `
       :host {
         display: block;
       }
@@ -17,15 +20,41 @@ class muiHStack extends HTMLElement {
         display: flex;
         gap: var(--space);
         align-items: var(--alignY);
-        justify-content: var(--alignX)
+        justify-content: var(--alignX);
       }
     `;
-    shadowRoot.innerHTML = `
-      <style>${styles}</style>
-      <slot style="--space: ${this.getAttribute("space") || space}; --alignY: ${
-      this.getAttribute("alignY") || alignY
-    }; --alignX: ${this.getAttribute("alignX") || alignX}"></slot>
+  }
+
+  async connectedCallback() {
+    await this.waitForPartMap();
+
+    const partMap = getPartMap("spacing", "layout", "alignment", "visual");
+
+    this.shadowRoot.innerHTML = `
+      <style>${this.styles}</style>
+      <slot 
+        part="${partMap}" 
+        style="
+          --space: ${this.getAttribute("space") || this.space};
+          --alignY: ${this.getAttribute("alignY") || this.alignY};
+          --alignX: ${this.getAttribute("alignX") || this.alignX};
+        ">
+      </slot>
     `;
+  }
+
+  waitForPartMap() {
+    return new Promise((resolve) => {
+      if (typeof getPartMap === "function") return resolve();
+      const check = () => {
+        if (typeof getPartMap === "function") {
+          resolve();
+        } else {
+          requestAnimationFrame(check);
+        }
+      };
+      check();
+    });
   }
 }
 
