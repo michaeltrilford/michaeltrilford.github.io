@@ -82,7 +82,7 @@ class muiNavbar extends HTMLElement {
       </mui-navbar-body>
 
       <mui-responsive breakpoint="960">
-        <mui-navbar-menu desktop slot="showAbove">
+        <mui-navbar-menu desktop slot="showAbove" part="menu">
           ${Home}
           ${Required}
           ${Parts}

@@ -30,36 +30,27 @@ const loadStyles = (styleArray) => {
   );
 };
 
-// Helper function to manage the loader fade-out and reveal content
 const reveal = () => {
   const loader = document.getElementById("loader");
-  const app = document.getElementById("app");
+  const body = document.body;
 
-  loader.style.willChange = "opacity"; // Tell the browser ahead of time
-
-  app.style.display = "block"; // Show app content
-
-  loader.style.transition = "opacity .5s ease-out";
-  loader.style.opacity = "0";
+  if (document.startViewTransition) {
+    document.startViewTransition(() => {
+      loader.style.opacity = "0"; // Hide loader
+      body.classList.add("ready"); // Trigger fade-in transition
+    });
+  } else {
+    loader.style.opacity = "0"; // Hide loader
+    body.classList.add("ready"); // Trigger fade-in transition
+  }
 
   setTimeout(() => {
-    loader.style.display = "none";
-    loader.style.willChange = "auto"; // Reset once the transition is done (optional good practice)
-  }, 500);
+    loader.style.display = "none"; // Remove loader after fade-out transition
+  }, 1000);
 };
 
-// Define your custom elements or components • Index.html file components only
-const DefinedArray = [
-  "mui-navbar",
-  "mui-container",
-  "mui-responsive",
-  "mui-v-stack",
-  "mui-link",
-  "mui-body",
-  // Add more custom elements here
-];
-
 // Arrays containing your resources
+const HomeArray = ["mui-home/index.js"];
 const UtilArray = ["mui-utils/index.js"];
 const StylesArray = [
   "css/mui-tokens.css",
@@ -156,15 +147,9 @@ const MuiCompArray = [
 ];
 const RecipeArray = ["mui-table/recipe/table.js"];
 
-// You can now include these in your script loading process if needed, like this:
-const CustomElementsArray = DefinedArray.map((component) => {
-  const script = document.createElement("script");
-  script.setAttribute("src", `${component}/index.js`); // Assuming these components are in respective directories
-  document.head.appendChild(script);
-});
-
 // Load all resources asynchronously
 Promise.all([
+  loadScripts(HomeArray),
   loadScripts(UtilArray),
   loadScripts(PartsArray),
   loadScripts(StoryArray),

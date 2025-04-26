@@ -11,7 +11,7 @@ body {
   height: 100vh;
   position: absolute;
   background: var(--mui-brand);
-  z-index: 1000;
+  z-index: 10000;
 }
 
 @media (max-width: 960px) {
@@ -26,9 +26,11 @@ body {
 
 .skeleton > div:first-child {
   background: #191919;
+  animation: pulse 2s infinite ease-in-out;
 }
 .skeleton > div:last-child {
   background: transparent;
+  animation: pulse 2s infinite ease-in-out;
 }
 
 @media (max-width: 960px) {
@@ -37,5 +39,16 @@ body {
   }
   .skeleton > div:last-child {
     background: #191919;
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
   }
 }
