@@ -32,15 +32,20 @@ const loadStyles = (styleArray) => {
 
 // Helper function to manage the loader fade-out and reveal content
 const reveal = () => {
-  // Show app content immediately
-  document.getElementById("app").style.display = "block";
-
-  // Fading out the loader
   const loader = document.getElementById("loader");
-  loader.style.opacity = "0"; // Fade out
+  const app = document.getElementById("app");
+
+  loader.style.willChange = "opacity"; // Tell the browser ahead of time
+
+  app.style.display = "block"; // Show app content
+
+  loader.style.transition = "opacity .5s ease-out";
+  loader.style.opacity = "0";
+
   setTimeout(() => {
-    loader.style.display = "none"; // Hide after fading out
-  }, 500); // Wait 1 second before hiding
+    loader.style.display = "none";
+    loader.style.willChange = "auto"; // Reset once the transition is done (optional good practice)
+  }, 500);
 };
 
 // Arrays containing your resources

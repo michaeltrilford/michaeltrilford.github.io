@@ -12,9 +12,6 @@ body {
   position: absolute;
   background: var(--mui-brand);
   z-index: 1000;
-  opacity: 100%;
-  transition: opacity 1s ease-out;
-  pointer-events: none;
 }
 
 @media (max-width: 960px) {
