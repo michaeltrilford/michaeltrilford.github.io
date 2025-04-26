@@ -57,9 +57,9 @@ class storyCards extends HTMLElement {
               </mui-card-body>
               <mui-card-footer style="padding: var(--spacing-500) var(--spacing-600)">
                 <mui-button-group right>
-                  <mui-button secondary>Cancel</mui-button>
-                  <mui-button primary>Submit</mui-button>
-                  <mui-button warning>Delete</mui-button>
+                  <mui-button variant="secondary">Cancel</mui-button>
+                  <mui-button variant="primary">Submit</mui-button>
+                  <mui-button variant="attention">Delete</mui-button>
                 </mui-button-group>
               </mui-card-footer>
             </mui-card>
@@ -80,13 +80,13 @@ class storyCards extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button-group right&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button
-            secondary>Cancel&lt;/mui-button&gt;
+            variant="secondary">Cancel&lt;/mui-button&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button
-            primary>Submit&lt;/mui-button&gt;
+            variant="primary">Submit&lt;/mui-button&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button
-            warning>Delete&lt;/mui-button&gt;
+            variant="attention">Delete&lt;/mui-button&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button-group&gt;
             <br />
