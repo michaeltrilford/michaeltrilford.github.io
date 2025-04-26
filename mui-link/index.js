@@ -13,9 +13,6 @@ class muiLink extends HTMLElement {
     const weight = this.getAttribute("weight") || "regular";
     this.setAttribute("size", size);
     this.setAttribute("weight", weight);
-
-    // Create the <a> element immediately
-    this.anchor = document.createElement("a");
   }
 
   async connectedCallback() {
@@ -23,15 +20,7 @@ class muiLink extends HTMLElement {
 
     const partMap = getPartMap("text", "spacing", "layout");
 
-    // Set part attribute and slot
-    this.anchor.setAttribute("part", partMap);
-    this.anchor.innerHTML = `<slot></slot>`;
-
-    // Apply initial attributes
-    this.updateLinkAttributes();
-
-    // Inject styles + anchor
-    this.shadowRoot.innerHTML = `
+    let html = `
     <style>
 
       :host {
@@ -221,23 +210,17 @@ class muiLink extends HTMLElement {
       }
 
     </style>
+    <a
+      part="${partMap}" 
+      target="${this.getAttribute("target") || "_self"}" 
+      href="${this.getAttribute("href") || "#"}"
+      >
+      <slot></slot>
+    </a>
     `;
-    this.shadowRoot.appendChild(this.anchor);
-  }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (this.anchor) {
-      this.updateLinkAttributes();
-    }
+    this.shadowRoot.innerHTML = html;
   }
-
-  updateLinkAttributes() {
-    const target = this.getAttribute("target") || "_self";
-    const href = this.getAttribute("href") || "#";
-    this.anchor.setAttribute("target", target);
-    this.anchor.setAttribute("href", href);
-  }
-
   waitForPartMap() {
     return new Promise((resolve) => {
       if (typeof getPartMap === "function") return resolve();

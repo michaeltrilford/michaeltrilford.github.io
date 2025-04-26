@@ -1,6 +1,5 @@
 /* Mui H Stack */
 class muiHStack extends HTMLElement {
-  usesPartMap = true; // or false if the component doesn't need it
   static get observedAttributes() {
     return ["space", "alignY", "alignX"];
   }
@@ -27,17 +26,9 @@ class muiHStack extends HTMLElement {
   }
 
   async connectedCallback() {
-    if (this.usesPartMap) {
-      await this.waitForPartMap();
-    }
-    this.render();
-  }
+    await this.waitForPartMap();
 
-  render() {
-    const partMap =
-      typeof getPartMap === "function"
-        ? getPartMap("spacing", "layout", "alignment", "visual")
-        : "";
+    const partMap = getPartMap("spacing", "layout", "alignment", "visual");
 
     this.shadowRoot.innerHTML = `
       <style>${this.styles}</style>
@@ -52,18 +43,13 @@ class muiHStack extends HTMLElement {
     `;
   }
 
-  waitForPartMap(maxTries = 60) {
+  waitForPartMap() {
     return new Promise((resolve) => {
       if (typeof getPartMap === "function") return resolve();
-      let tries = 0;
       const check = () => {
         if (typeof getPartMap === "function") {
           resolve();
-        } else if (tries > maxTries) {
-          console.warn("getPartMap not found, continuing anyway");
-          resolve();
         } else {
-          tries++;
           requestAnimationFrame(check);
         }
       };

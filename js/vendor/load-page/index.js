@@ -5,16 +5,21 @@
 //   document.getElementById("app").style.display = "block";
 // }
 
-const reveal = () => { time = setTimeout(loadViewStep, 1); }
+// js/vendor/load-page/index.js
+
+const reveal = () => {
+  setTimeout(loadViewStep, 1);
+};
+
 const loadViewStep = () => {
   document.getElementById("app").style.display = "block";
-  setTimeout(function(){
-    document.getElementById("loader").style.display = "none";
-},500);
+  setTimeout(() => {
+    document.getElementById("loader").style.opacity = "0";
+  }, 200);
+};
 
-
-  
-}
+// Call it immediately because scripts are deferred
+reveal();
 
 // const hide = () => { time2 = setTimeout(loadViewStep2, 2); }
 // const loadViewStep2 = () => {
