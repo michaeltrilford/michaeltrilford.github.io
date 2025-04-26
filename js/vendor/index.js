@@ -54,7 +54,10 @@ const reveal = () => {
 };
 
 // Utility function to add static head elements
-const addHeadElements = () => {
+const addHeadElements = ({
+  titleText = "MUI",
+  descriptionContent = "",
+} = {}) => {
   // Favicon
   const favicon = document.createElement("link");
   favicon.setAttribute("rel", "icon");
@@ -69,7 +72,22 @@ const addHeadElements = () => {
   document.head.appendChild(appleTouchIcon);
 
   // Page title
-  document.title = "MUI"; // Sets <title>
+  document.title = titleText;
+
+  // Meta: description
+  const descriptionMeta = document.createElement("meta");
+  descriptionMeta.setAttribute("name", "description");
+  descriptionMeta.setAttribute("content", descriptionContent);
+  document.head.appendChild(descriptionMeta);
+
+  // Meta: viewport
+  const viewportMeta = document.createElement("meta");
+  viewportMeta.setAttribute("name", "viewport");
+  viewportMeta.setAttribute(
+    "content",
+    "width=device-width, initial-scale=1, viewport-fit=cover"
+  );
+  document.head.appendChild(viewportMeta);
 };
 
 // Arrays containing your resources
@@ -170,21 +188,25 @@ const MuiCompArray = [
 ];
 const RecipeArray = ["mui-table/recipe/table.js"];
 
-addHeadElements();
-
 // Load all resources asynchronously
 Promise.all([
   loadScripts(HomeArray),
   loadScripts(UtilArray),
+  loadStyles(StylesArray),
   loadScripts(PartsArray),
   loadScripts(StoryArray),
   loadScripts(SharedArray),
   loadScripts(AppCompArray),
   loadScripts(MuiCompArray),
   loadScripts(RecipeArray),
-  loadStyles(StylesArray),
 ])
   .then(() => {
+    addHeadElements({
+      titleText: "MUI", // Customize here
+      descriptionContent:
+        "MUI is an experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS", // Customize here
+    });
+
     // Once everything is loaded, reveal the content
     reveal();
   })
