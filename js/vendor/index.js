@@ -1,34 +1,57 @@
+// Utility function to load scripts
+const loadScripts = (scriptArray) => {
+  return Promise.all(
+    scriptArray.map((src) => {
+      return new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+        script.setAttribute("src", src);
+        script.setAttribute("defer", "true"); // Optional: defers execution until after HTML parsing
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+    })
+  );
+};
+
+// Utility function to load styles
+const loadStyles = (styleArray) => {
+  return Promise.all(
+    styleArray.map((href) => {
+      return new Promise((resolve, reject) => {
+        const link = document.createElement("link");
+        link.setAttribute("rel", "stylesheet");
+        link.setAttribute("href", href);
+        link.onload = resolve;
+        link.onerror = reject;
+        document.head.appendChild(link);
+      });
+    })
+  );
+};
+
+// Helper function to manage the loader fade-out and reveal content
+const reveal = () => {
+  // Show app content immediately
+  document.getElementById("app").style.display = "block";
+
+  // Fading out the loader
+  const loader = document.getElementById("loader");
+  loader.style.opacity = "0"; // Fade out
+  setTimeout(() => {
+    loader.style.display = "none"; // Hide after fading out
+  }, 500); // Wait 1 second before hiding
+};
+
+// Arrays containing your resources
 const UtilArray = ["mui-utils/index.js"];
-
-UtilArray.forEach((src) => {
-  const script = document.createElement("script");
-  script.setAttribute("src", src);
-  script.setAttribute("defer", "true"); // Optional: defers execution until after HTML parsing
-  document.head.appendChild(script);
-});
-
 const StylesArray = [
   "css/mui-tokens.css",
   "css/mui-reset.css",
   "css/mui-base.css",
   "css/author.css",
 ];
-
-const Styles = StylesArray.map((Items) => {
-  const Styles = document.createElement("link");
-  Styles.setAttribute("rel", "stylesheet");
-  Styles.setAttribute("href", Items);
-  document.head.appendChild(Styles);
-});
-
 const PartsArray = ["mui-parts/index.js"];
-
-const Parts = PartsArray.map((Items) => {
-  const Parts = document.createElement("script");
-  Parts.setAttribute("src", Items);
-  document.head.appendChild(Parts);
-});
-
 const StoryArray = [
   "mui-responsive/story.js",
   "mui-button/story.js",
@@ -60,25 +83,11 @@ const StoryArray = [
   "mui-parts/story-parts-text.js",
   "mui-parts/story-parts-spacing.js",
 ];
-
-const Story = StoryArray.map((Items) => {
-  const Story = document.createElement("script");
-  Story.setAttribute("src", Items);
-  document.head.appendChild(Story);
-});
-
 const SharedArray = [
   "shared/story-container/index.js",
   "shared/story-card/index.js",
   "shared/story-demo/index.js",
 ];
-
-const Shared = SharedArray.map((Items) => {
-  const Shared = document.createElement("script");
-  Shared.setAttribute("src", Items);
-  document.head.appendChild(Shared);
-});
-
 const AppCompArray = [
   "app-navbar/navbar.js",
   "app-navbar/navbar-home.js",
@@ -88,15 +97,6 @@ const AppCompArray = [
   "app-navbar/navbar-body.js",
   "app-navbar/navbar-menu.js",
 ];
-
-const AppComponent = AppCompArray.map((Items) => {
-  const AppComponent = document.createElement("script");
-  AppComponent.setAttribute("src", Items);
-  document.head.appendChild(AppComponent);
-});
-
-AppComponent;
-
 const MuiCompArray = [
   "mui-accordion/accordion-inline.js",
   "mui-accordion/accordion-block.js",
@@ -138,21 +138,41 @@ const MuiCompArray = [
   "mui-table/mui-thead.js",
   "mui-slat/index.js",
 ];
-
-const MuiComponent = MuiCompArray.map((Items) => {
-  const MuiComponent = document.createElement("script");
-  MuiComponent.setAttribute("src", Items);
-  document.head.appendChild(MuiComponent);
-});
-
-MuiComponent;
-
 const RecipeArray = ["mui-table/recipe/table.js"];
 
-const Recipe = RecipeArray.map((Items) => {
-  const Recipe = document.createElement("script");
-  Recipe.setAttribute("src", Items);
-  document.head.appendChild(Recipe);
+// Define your custom elements or components
+const DefinedArray = [
+  "mui-navbar",
+  "mui-container",
+  "mui-responsive",
+  "mui-v-stack",
+  "mui-link",
+  "mui-body",
+  // Add more custom elements here
+];
+
+// You can now include these in your script loading process if needed, like this:
+const CustomElementsArray = DefinedArray.map((component) => {
+  const script = document.createElement("script");
+  script.setAttribute("src", `${component}/index.js`); // Assuming these components are in respective directories
+  document.head.appendChild(script);
 });
 
-RecipeArray;
+// Load all resources asynchronously
+Promise.all([
+  loadScripts(UtilArray),
+  loadScripts(PartsArray),
+  loadScripts(StoryArray),
+  loadScripts(SharedArray),
+  loadScripts(AppCompArray),
+  loadScripts(MuiCompArray),
+  loadScripts(RecipeArray),
+  loadStyles(StylesArray),
+])
+  .then(() => {
+    // Once everything is loaded, reveal the content
+    reveal();
+  })
+  .catch((err) => {
+    console.error("Error loading resources:", err);
+  });
