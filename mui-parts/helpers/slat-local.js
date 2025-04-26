@@ -45,7 +45,7 @@ class muiTokenLocalSlat extends HTMLElement {
     const usageLinks = usageItems
       .map((label) => {
         const url = label.toLowerCase().replace(/\s+/g, "") + ".html";
-        return `<mui-link variant="tiny" weight="bold" href="${url}">${label}</mui-link>`;
+        return `<mui-link size="x-small" weight="bold" href="${url}">${label}</mui-link>`;
       })
       .join("");
 
@@ -54,19 +54,19 @@ class muiTokenLocalSlat extends HTMLElement {
 
       <mui-v-stack space="var(--spacing-100)">
 
-        <mui-body variant="tiny">
+        <mui-body size="x-small">
           <code>${this.getAttribute("token")}</code>
         </mui-body>
 
-        <mui-body variant="tiny">
+        <mui-body size="x-small">
           ${this.getAttribute("output")}
         </mui-body>
 
         <mui-h-stack space="var(--spacing-100)">
-          <mui-body variant="tiny">Usage:</mui-body>
+          <mui-body size="x-small">Usage:</mui-body>
           ${
             usageLinks ||
-            `<mui-body variant="tiny" weight="bold">None</mui-body>`
+            `<mui-body size="x-small" weight="bold">None</mui-body>`
           }
         </mui-h-stack>
 

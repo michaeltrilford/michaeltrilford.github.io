@@ -20,6 +20,7 @@ class muiRow extends HTMLElement {
         margin-bottom: var(--spacing-000);
         padding: var(--spacing-300) var(--spacing-000);
         border-bottom: 1px solid var(--grey-200);
+        align-items: center;
       }
     </style>
     <slot></slot>

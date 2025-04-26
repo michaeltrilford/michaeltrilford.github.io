@@ -15,14 +15,18 @@ class muiCell extends HTMLElement {
       align-self: ${this.getAttribute("align-y") || "initial"};
       text-align: left;
     }
+    :host(*:first-of-type) {
+      padding-left: var(--spacing-400);
+    }
+
     :host([checkbox]) {
       width: auto;
       padding: 0;
-      padding-left: var(--spacing-400);
       text-align: center;
     }
     :host([action]) {
-      width: auto;
+      width: 4.4rem;
+      height: 4.4rem;
       padding: 0;
       padding-right: var(--spacing-300);
     }

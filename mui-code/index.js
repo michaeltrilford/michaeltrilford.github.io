@@ -1,7 +1,7 @@
 /* Mui Code */
 class muiCode extends HTMLElement {
   static get observedAttributes() {
-    return ["variant"];
+    return ["size"];
   }
 
   constructor() {
@@ -9,23 +9,23 @@ class muiCode extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: "open" });
 
     // Set defaults
-    const variant = this.getAttribute("variant") || "x-small";
-    this.setAttribute("variant", variant);
+    const size = this.getAttribute("size") || "x-small";
+    this.setAttribute("size", size);
 
     const styles = `
       :host {
         display: block;
       }
-      :host([variant="x-small"]) code {
+      :host([size="x-small"]) code {
         font-size: var(--code-font-size-xs);
       }
-      :host([variant="small"]) code {
+      :host([size="small"]) code {
         font-size: var(--code-font-size-s);
       }
-      :host([variant="medium"]) code {
+      :host([size="medium"]) code {
         font-size: var(--code-font-size-m);
       }
-      :host([variant="large"]) code {
+      :host([size="large"]) code {
         font-size: var(--code-font-size-l);
       }
       code {

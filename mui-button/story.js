@@ -62,12 +62,12 @@ class storyButton extends HTMLElement {
 
         <story-card title="Icon Only / Primary Button">
           <mui-button variant="primary" iconOnly slot="body">
-            <mui-icon-add color="primaryButton" variant="tiny"></mui-icon-add>
+            <mui-icon-add color="primaryButton" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
             &lt;mui-button variant="primary"&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-icon-add color="primaryButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
+            &nbsp;&nbsp;&lt;mui-icon-add color="primaryButton" size="x-small"&gt;&lt;/mui-icon-add&gt;
             <br />
             &lt;/mui-button&gt;
           </mui-code>
@@ -75,12 +75,12 @@ class storyButton extends HTMLElement {
 
         <story-card title="Icon Only / Secondary Button">
           <mui-button variant="secondary" iconOnly slot="body">
-            <mui-icon-add color="secondaryButton" variant="tiny"></mui-icon-add>
+            <mui-icon-add color="secondaryButton" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
             &lt;mui-button variant="secondary"&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-icon-add color="secondaryButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
+            &nbsp;&nbsp;&lt;mui-icon-add color="secondaryButton" size="x-small"&gt;&lt;/mui-icon-add&gt;
             <br />
             &lt;/mui-button&gt;
           </mui-code>
@@ -88,12 +88,12 @@ class storyButton extends HTMLElement {
 
         <story-card title="Icon Only / Tertiary Button">
           <mui-button variant="tertiary" iconOnly slot="body">
-            <mui-icon-add color="tertiaryButton" variant="tiny"></mui-icon-add>
+            <mui-icon-add color="tertiaryButton" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
             &lt;mui-button variant="tertiary"&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-icon-add color="tertiaryButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
+            &nbsp;&nbsp;&lt;mui-icon-add color="tertiaryButton" size="x-small"&gt;&lt;/mui-icon-add&gt;
             <br />
             &lt;/mui-button&gt;
           </mui-code>
@@ -101,12 +101,12 @@ class storyButton extends HTMLElement {
 
         <story-card title="Icon Only / Attention Button">
           <mui-button variant="attention" iconOnly slot="body">
-            <mui-icon-add color="attentionButton" variant="tiny"></mui-icon-add>
+            <mui-icon-add color="attentionButton" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
             &lt;mui-button variant="attention"&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-icon-add color="attentionButton" variant="tiny"&gt;&lt;/mui-icon-add&gt;
+            &nbsp;&nbsp;&lt;mui-icon-add color="attentionButton" size="x-small"&gt;&lt;/mui-icon-add&gt;
             <br />
             &lt;/mui-button&gt;
           </mui-code>

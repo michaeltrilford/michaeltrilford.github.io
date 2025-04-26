@@ -1,7 +1,7 @@
 /* Mui Link */
 class muiLink extends HTMLElement {
   static get observedAttributes() {
-    return ["target", "href", "variant, weight"];
+    return ["target", "href", "variant, weight, size"];
   }
 
   constructor() {
@@ -9,9 +9,9 @@ class muiLink extends HTMLElement {
     this.attachShadow({ mode: "open" });
 
     // Set defaults
-    const variant = this.getAttribute("variant") || "medium";
+    const size = this.getAttribute("size") || "medium";
     const weight = this.getAttribute("weight") || "regular";
-    this.setAttribute("variant", variant);
+    this.setAttribute("size", size);
     this.setAttribute("weight", weight);
   }
 
@@ -52,18 +52,18 @@ class muiLink extends HTMLElement {
         outline: var(--outline-thick);
       }
 
-      :host([variant="medium"]) a {
+      :host([size="medium"]) a {
         font-size: var(--body-font-size-m);
       }
-      :host([variant="large"]) a {
+      :host([size="large"]) a {
         font-size: var(--body-font-size-l); 
         line-height: 1.714285714285714;
       }
-      :host([variant="small"]) a {
+      :host([size="small"]) a {
         font-size: var(--body-font-size-s); 
         line-height: 1.714285714285714;
       }
-      :host([variant="tiny"]) a {
+      :host([size="x-small"]) a {
         font-size: var(--body-font-size-xs); 
       }
 

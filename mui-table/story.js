@@ -63,13 +63,37 @@ class storyTable extends HTMLElement {
             <mui-responsive breakpoint="1024" slot="body">
               <app-table slot="showAbove"></app-table>
               <mui-slat slot="showBelow">
-                <mui-heading slot="start" size="5">Heading</mui-heading>
-                <div slot="end" width="20px">
-                  <mui-h-stack slot="end" space="var(--spacing-400)" alignX="flex-end">
-                    <mui-body width="20px">Body</mui-body>
-                    <mui-body width="20px">Body</mui-body>
-                  </mui-h-stack>
-                </div>
+                <mui-heading slot="start" size="6">Whalen</mui-heading>      
+                <mui-h-stack space="var(--spacing-800)" alignX="flex-end" alignY="center" slot="end">
+                  <mui-v-stack space="var(--spacing-000)">
+                    <mui-h-stack space="var(--spacing-400)" alignX="flex-end">
+                      <mui-body weight="bold" size="small">Revenue:</mui-body>
+                      <mui-body size="small">$4,400.00</mui-body>
+                    </mui-h-stack>
+                    <mui-h-stack space="var(--spacing-400)" alignX="flex-end">
+                      <mui-body weight="bold" size="small">Cost:</mui-body>
+                      <mui-body size="small">$1,100.00</mui-body>
+                    </mui-h-stack>
+                  </mui-v-stack>
+                  <mui-button variant="tertiary" iconOnly> <mui-icon-menu size="x-small"></mui-icon-menu></mui-button>
+                </mui-h-stack>
+              </mui-slat>
+              <mui-rule slot="showBelow" direction="horizontal" length="100%" style="margin: var(--spacing-300) 0;"></mui-rule>
+              <mui-slat slot="showBelow">      
+                <mui-heading slot="start" size="6">Whalen</mui-heading>      
+                <mui-h-stack space="var(--spacing-800)" alignX="flex-end" alignY="center" slot="end">
+                  <mui-v-stack space="var(--spacing-000)">
+                    <mui-h-stack space="var(--spacing-400)" alignX="flex-end">
+                      <mui-body weight="bold" size="small">Revenue:</mui-body>
+                      <mui-body size="small">$4,400.00</mui-body>
+                    </mui-h-stack>
+                    <mui-h-stack space="var(--spacing-400)" alignX="flex-end">
+                      <mui-body weight="bold" size="small">Cost:</mui-body>
+                      <mui-body size="small">$1,100.00</mui-body>
+                    </mui-h-stack>
+                  </mui-v-stack>
+                  <mui-button variant="tertiary" iconOnly> <mui-icon-menu size="x-small"></mui-icon-menu></mui-button>
+                </mui-h-stack>
               </mui-slat>
             </mui-responsive>
 

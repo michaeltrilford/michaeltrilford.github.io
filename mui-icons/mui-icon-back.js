@@ -1,7 +1,7 @@
 /* Mui Icon: Back */
 class muiIconBack extends HTMLElement {
   static get observedAttributes() {
-    return ["variant", "color"];
+    return ["size", "color"];
   }
 
   constructor() {
@@ -14,13 +14,13 @@ class muiIconBack extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if ((name === "variant" || name === "color") && oldValue !== newValue) {
+    if ((name === "size" || name === "color") && oldValue !== newValue) {
       this.render();
     }
   }
 
   render() {
-    const variant = this.getAttribute("variant") || "small";
+    const size = this.getAttribute("size") || "small";
     const rawColor = this.getAttribute("color");
 
     // Map semantic names to actual token values
@@ -38,19 +38,19 @@ class muiIconBack extends HTMLElement {
       colorMap[rawColor] || rawColor || "var(--icon-color-default)";
 
     const sizeMap = {
-      tiny: "1.6rem",
+      "x-small": "1.6rem",
       small: "2.4rem",
       medium: "3.6rem",
       large: "4.8rem",
     };
 
-    const size = sizeMap[variant] || sizeMap.small;
+    const sizeStyleMap = sizeMap[size] || sizeMap.small;
 
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-          width: ${size};
-          height: ${size};
+          width: ${sizeStyleMap};
+          height: ${sizeStyleMap};
           display: inline-flex;
           align-items: center;
           justify-content: center;

@@ -29,35 +29,37 @@ class storyBody extends HTMLElement {
 
         </story-card>
 
-        <story-card title="Variants">
+        <story-card title="Sizes">
 
             <div slot="body">
               <mui-v-stack space="var(--spacing-500)">
                 <div>
-                  <mui-heading size="4" tinymargin>Large</mui-heading>
-                  <mui-body variant="large">Risus Mollis Dapibus</mui-body>
-                </div>
-                <div>
-                  <mui-heading size="4" tinymargin>Medium</mui-heading>
-                  <mui-body variant="medium">Risus Mollis Dapibus</mui-body>
+                  <mui-heading size="4" tinymargin>X-Small</mui-heading>
+                  <mui-body size="x-small">Risus Mollis Dapibus</mui-body>
                 </div>
                 <div>
                   <mui-heading size="4" tinymargin>Small</mui-heading>
-                  <mui-body variant="small">Risus Mollis Dapibus</mui-body>
+                  <mui-body size="small">Risus Mollis Dapibus</mui-body>
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Tiny</mui-heading>
-                  <mui-body variant="tiny">Risus Mollis Dapibus</mui-body>
+                  <mui-heading size="4" tinymargin>Medium</mui-heading>
+                  <mui-body size="medium">Risus Mollis Dapibus</mui-body>
+                </div>
+                <div>
+                  <mui-heading size="4" tinymargin>Large</mui-heading>
+                  <mui-body size="large">Risus Mollis Dapibus</mui-body>
                 </div>
               </mui-v-stack>
             </div>
 
             <mui-code slot="footer">
-              &lt;mui-body&gt; ... &lt;/mui-body&gt;
+              &lt;mui-body size="x-small"&gt; ... &lt;/mui-body&gt;
               <br />
-              &lt;mui-body small&gt; ... &lt;/mui-body&gt;
+              &lt;mui-body size="small"&gt; ... &lt;/mui-body&gt;
               <br />
-              &lt;mui-body tiny&gt; ... &lt;/mui-body&gt;
+              &lt;mui-body size="medium"&gt; ... &lt;/mui-body&gt;
+              <br />
+              &lt;mui-body size="large"&gt; ... &lt;/mui-body&gt;
             </mui-code>
 
           </story-card>

@@ -22,7 +22,7 @@ class storyDemo extends HTMLElement {
         height: var(--height);
       }
     `;
-    const description = `<mui-body variant="small">${this.getAttribute(
+    const description = `<mui-body size="small">${this.getAttribute(
       "description"
     )}</mui-body>`;
 

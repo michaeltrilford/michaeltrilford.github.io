@@ -36,6 +36,44 @@ class storyLink extends HTMLElement {
 
       <mui-v-stack space="var(--spacing-700)">
 
+        <story-card title="Sizes">
+
+            <div slot="body">
+              <mui-v-stack space="var(--spacing-500)">
+                <div>
+                  <mui-heading size="4" tinymargin>X-Small</mui-heading>
+                  <mui-link size="x-small">Risus Mollis Dapibus</mui-link>
+                </div>
+                <div>
+                  <mui-heading size="4" tinymargin>Small</mui-heading>
+                  <mui-link size="small">Risus Mollis Dapibus</mui-link>
+                </div>
+                <div>
+                  <mui-heading size="4" tinymargin>Medium</mui-heading>
+                  <mui-link size="medium">Risus Mollis Dapibus</mui-link>
+                </div>
+                <div>
+                  <mui-heading size="4" tinymargin>Large</mui-heading>
+                  <mui-link size="large">Risus Mollis Dapibus</mui-link>
+                </div>
+              </mui-v-stack>
+            </div>
+
+            <mui-code slot="footer">
+              &lt;mui-link size="x-small"&gt; ... &lt;/mui-link&gt;
+              <br />
+              &lt;mui-link size="small"&gt; ... &lt;/mui-link&gt;
+              <br />
+              &lt;mui-link size="medium"&gt; ... &lt;/mui-link&gt;
+              <br />
+              &lt;mui-link size="large"&gt; ... &lt;/mui-link&gt;
+            </mui-code>
+
+          </story-card>
+
+
+
+
         <story-card title="URL">
           <div slot="body">
             <mui-link target="_blank" href="links.html">Unsubscribe</mui-link>

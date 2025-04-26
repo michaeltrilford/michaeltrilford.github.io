@@ -97,8 +97,8 @@ class muiNavbar extends HTMLElement {
 
       <mui-navbar-toggle link="index.html" title="michaeltrilford.mui">
         <mui-icon-toggle color="var(--mui-brand)" rotate>
-          <mui-icon-menu slot="primary" variant="tiny"></mui-icon-menu>
-          <mui-icon-close slot="secondary" variant="tiny"></mui-icon-close>
+          <mui-icon-menu slot="primary" size="x-small"></mui-icon-menu>
+          <mui-icon-close slot="secondary" size="x-small"></mui-icon-close>
         </mui-icon-toggle>
       </mui-navbar-toggle>
     `;

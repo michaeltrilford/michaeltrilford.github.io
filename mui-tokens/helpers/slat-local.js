@@ -38,10 +38,10 @@ class muiTokenLocalSlat extends HTMLElement {
       <style>${styles}</style>
 
       <mui-slat style="grid-template-columns: 0.8fr 1.2fr;">
-        <mui-body slot="start" variant="tiny"><code>${this.getAttribute(
+        <mui-body slot="start" size="x-small"><code>${this.getAttribute(
           "token"
         )}</code></mui-body>
-        <mui-body variant="tiny" slot="end">
+        <mui-body size="x-small" slot="end">
             ${this.getAttribute("output")}
         </mui-body>
       </mui-slat>

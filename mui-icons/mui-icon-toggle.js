@@ -1,6 +1,6 @@
 class muiIconToggle extends HTMLElement {
   static get observedAttributes() {
-    return ["variant", "color"];
+    return ["size", "color"];
   }
 
   constructor() {
@@ -33,13 +33,13 @@ class muiIconToggle extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if ((name === "variant" || name === "color") && oldValue !== newValue) {
+    if ((name === "size" || name === "color") && oldValue !== newValue) {
       this.render();
     }
   }
 
   render() {
-    const variant = this.getAttribute("variant") || "small";
+    const size = this.getAttribute("size") || "small";
     const rawColor = this.getAttribute("color");
 
     // Map semantic names to actual token values
@@ -56,7 +56,7 @@ class muiIconToggle extends HTMLElement {
       small: "4.4rem",
     };
 
-    const size = sizeMap[variant] || sizeMap.small;
+    const sizeStyleMap = sizeMap[size] || sizeMap.small;
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -64,8 +64,8 @@ class muiIconToggle extends HTMLElement {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: ${size};
-          height: ${size};
+          width: ${sizeStyleMap};
+          height: ${sizeStyleMap};
           --icon-color-map: ${iconColor};
         }
 
