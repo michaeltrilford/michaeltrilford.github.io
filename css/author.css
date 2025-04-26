@@ -8,13 +8,3 @@
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
 }
-
-/* Transition for .home page */
-/* body:not(.ready) #app {
-  opacity: 0;
-}
-
-body.ready #app {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-} */

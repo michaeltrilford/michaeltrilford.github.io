@@ -3,7 +3,7 @@
   grid-template-rows: 1fr;
   grid-template-columns: 240px 1fr;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   background: var(--mui-brand);
   z-index: 10000;
 }

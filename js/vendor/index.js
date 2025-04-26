@@ -32,26 +32,23 @@ const loadStyles = (styleArray) => {
 
 const reveal = () => {
   const loader = document.getElementById("loader");
-  const body = document.body;
 
   if (document.startViewTransition) {
     document.startViewTransition(() => {
       if (loader) {
         loader.style.opacity = "0"; // Hide loader
       }
-      body.classList.add("ready"); // Trigger fade-in transition
     });
   } else {
     if (loader) {
       loader.style.opacity = "0"; // Hide loader
     }
-    body.classList.add("ready"); // Trigger fade-in transition
   }
 
   setTimeout(() => {
     const loaderCheck = document.getElementById("loader");
     if (loaderCheck) {
-      loaderCheck.style.display = "none"; // Remove loader after fade-out transition
+      loaderCheck.style.display = "none"; // Fully remove loader after fade-out
     }
   }, 1000);
 };
