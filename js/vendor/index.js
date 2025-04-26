@@ -36,16 +36,23 @@ const reveal = () => {
 
   if (document.startViewTransition) {
     document.startViewTransition(() => {
-      loader.style.opacity = "0"; // Hide loader
+      if (loader) {
+        loader.style.opacity = "0"; // Hide loader
+      }
       body.classList.add("ready"); // Trigger fade-in transition
     });
   } else {
-    loader.style.opacity = "0"; // Hide loader
+    if (loader) {
+      loader.style.opacity = "0"; // Hide loader
+    }
     body.classList.add("ready"); // Trigger fade-in transition
   }
 
   setTimeout(() => {
-    loader.style.display = "none"; // Remove loader after fade-out transition
+    const loaderCheck = document.getElementById("loader");
+    if (loaderCheck) {
+      loaderCheck.style.display = "none"; // Remove loader after fade-out transition
+    }
   }, 1000);
 };
 
