@@ -44,7 +44,7 @@ class muiPartLocalSlat extends HTMLElement {
 
     const usageLinks = usageItems
       .map((label) => {
-        const url = label.toLowerCase().replace(/\s+/g, "") + ".html";
+        const url = `#/${label.toLowerCase().replace(/\s+/g, "")}`;
         return `<mui-link size="x-small" weight="bold" href="${url}">${label}</mui-link>`;
       })
       .join("");
