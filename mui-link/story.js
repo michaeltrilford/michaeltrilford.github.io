@@ -42,31 +42,50 @@ class storyLink extends HTMLElement {
               <mui-v-stack space="var(--space-500)">
                 <div>
                   <mui-heading size="4" tinymargin>X-Small</mui-heading>
-                  <mui-link size="x-small">Risus Mollis Dapibus</mui-link>
+                  <mui-link size="x-small">Link text</mui-link>
                 </div>
                 <div>
                   <mui-heading size="4" tinymargin>Small</mui-heading>
-                  <mui-link size="small">Risus Mollis Dapibus</mui-link>
+                  <mui-link size="small">Link text</mui-link>
                 </div>
                 <div>
                   <mui-heading size="4" tinymargin>Medium</mui-heading>
-                  <mui-link size="medium">Risus Mollis Dapibus</mui-link>
+                  <mui-link size="medium">Link text</mui-link>
                 </div>
                 <div>
                   <mui-heading size="4" tinymargin>Large</mui-heading>
-                  <mui-link size="large">Risus Mollis Dapibus</mui-link>
+                  <mui-link size="large">Link text</mui-link>
                 </div>
               </mui-v-stack>
             </div>
 
             <mui-code slot="footer">
-              &lt;mui-link size="x-small"&gt; ... &lt;/mui-link&gt;
+              &lt;mui-link size="x-small"&gt;
               <br />
-              &lt;mui-link size="small"&gt; ... &lt;/mui-link&gt;
+              &nbsp;&nbsp;Link text
               <br />
-              &lt;mui-link size="medium"&gt; ... &lt;/mui-link&gt;
+              &lt;/mui-link&gt;
               <br />
-              &lt;mui-link size="large"&gt; ... &lt;/mui-link&gt;
+              <br />
+              &lt;mui-link size="small"&gt;
+              <br />
+              &nbsp;&nbsp;Link text
+              <br />
+              &lt;/mui-link&gt;
+              <br />
+              <br />
+              &lt;mui-link size="medium"&gt;
+              <br />
+              &nbsp;&nbsp;Link text
+              <br />
+              &lt;/mui-link&gt;
+              <br />
+              <br />
+              &lt;mui-link size="large"&gt;
+              <br />
+              &nbsp;&nbsp;Link text
+              <br />
+              &lt;/mui-link&gt;
             </mui-code>
 
           </story-card>
@@ -129,14 +148,19 @@ class storyLink extends HTMLElement {
             <br />
             <br />
 
-            class myCustomLinkComponent extends HTMLElement {<br>
+            class customUI extends HTMLElement {<br>
             &nbsp;&nbsp;static get observedAttributes() {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;return ["link", "title"];<br>
             &nbsp;&nbsp;}<br><br>
 
             &nbsp;&nbsp;constructor() {<br>
             &nbsp;&nbsp;&nbsp;&nbsp;super();<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;const shadowRoot = this.attachShadow({ mode: "open" });<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;const shadowRoot = this.attachShadow({
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mode: "open"
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;});
+            <br><br>
 
             &nbsp;&nbsp;&nbsp;&nbsp;// Set defaults<br>
             &nbsp;&nbsp;&nbsp;&nbsp;const variant = this.getAttribute("variant") || "x-small";<br>
@@ -145,13 +169,12 @@ class storyLink extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;const styles = &#96;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:host { display: block; }<br><br>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/////////////////////////////////////////////////
             <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Part Selector Example Use<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/////////////////////////////////////////////////
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/////////////////////////////
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// If there is only one mui-link, you can directly select the component and style it without conflicts.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Scoped CSS in a Web Component ensures styles don't leak out and effect other mui-link components you app might use.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Select the Web Component and style it without conflicts.<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Scoped CSS ensures styles don't leak outside of this component.<br>
             <br />
             <br />
 
@@ -185,7 +208,7 @@ class storyLink extends HTMLElement {
             &nbsp;&nbsp;}<br>
             }<br><br>
 
-            customElements.define("my-custom-link-component", myCustomLinkComponent);
+            customElements.define("custom-ui", customUI);
 
 
           </mui-code>

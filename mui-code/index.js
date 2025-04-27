@@ -35,7 +35,8 @@ class muiCode extends HTMLElement {
         font-size: var(--code-font-size-m);
         color: var(--code-text-color);
         background: var(--code-background);
-        padding: var(--space-400) var(--space-600) var(--space-400) var(--space-600);
+        padding: var(--space-400);
+        box-sizing: border-box;
       }
    
 
