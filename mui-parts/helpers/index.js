@@ -1,8 +1,7 @@
-class muiTokenCodeColumn extends HTMLElement {
-
+class muiPartCodeColumn extends HTMLElement {
   constructor() {
     super();
-    
+
     const shadowRoot = this.attachShadow({ mode: "open" });
 
     const styles = `
@@ -22,7 +21,7 @@ class muiTokenCodeColumn extends HTMLElement {
       <slot></slot>
     </mui-code>
     `;
-  }  
+  }
 }
 
-customElements.define('mui-token-code-column', muiTokenCodeColumn );
+customElements.define("mui-part-code-column", muiPartCodeColumn);

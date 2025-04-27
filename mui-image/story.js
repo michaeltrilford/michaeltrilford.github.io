@@ -10,7 +10,7 @@ class storyImage extends HTMLElement {
       <style>${styles}</style>
 
 
-      <story-container 
+      <story-template 
         title="Image"
         description="Defines a image."
       >
@@ -52,7 +52,7 @@ class storyImage extends HTMLElement {
 
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
 
     `;
   }

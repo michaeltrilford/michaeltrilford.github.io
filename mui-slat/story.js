@@ -9,7 +9,7 @@ class storySlat extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Slat"
         description="Slat is a composable component designed to display table data on mobile devices. It provides flexible start and end slots, enabling consumers to tailor how data is presented in a mobile-friendly, stacked format. Slat is ideal for adapting complex table layouts into a clearer, more accessible experience on smaller screens."
       >
@@ -43,7 +43,7 @@ class storySlat extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

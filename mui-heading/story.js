@@ -9,7 +9,7 @@ class storyHeading extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Heading" 
         description="The Heading component includes six levels (H1–H6) for structured heading usage, supporting a range of hierarchies in text presentation."
       >
@@ -72,7 +72,7 @@ class storyHeading extends HTMLElement {
         
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

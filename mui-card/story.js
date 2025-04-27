@@ -9,7 +9,7 @@ class storyCards extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container title="Card" description="The Card provides the ability to group items or components. ">
+      <story-template title="Card" description="The Card provides the ability to group items or components. ">
 
       <mui-v-stack space="var(--space-700)">
 
@@ -134,7 +134,7 @@ class storyCards extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

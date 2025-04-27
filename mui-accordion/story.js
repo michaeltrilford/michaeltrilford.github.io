@@ -9,7 +9,7 @@ class storyAccordion extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Accordion"
         description="The Accordion is a component stores content underneath a collapsible heading, revealing it through progressive disclosure in the user interface."
       >
@@ -147,7 +147,7 @@ class storyAccordion extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

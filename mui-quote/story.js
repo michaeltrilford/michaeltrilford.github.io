@@ -9,7 +9,7 @@ class storyQuote extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Quote"
         description="The mui-quote specifies a section that is quoted from another source."
       >
@@ -41,7 +41,7 @@ class storyQuote extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

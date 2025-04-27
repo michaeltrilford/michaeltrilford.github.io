@@ -9,7 +9,7 @@ class storyTable extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Table"
         description="An HTML table consists of one table element and one or more tr, th, and td elements."
       >
@@ -170,7 +170,7 @@ class storyTable extends HTMLElement {
 
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

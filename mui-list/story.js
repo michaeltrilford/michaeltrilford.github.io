@@ -9,7 +9,7 @@ class storyList extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="List"
         description="The component defines an ordered or unordered list."
       >
@@ -66,7 +66,7 @@ class storyList extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

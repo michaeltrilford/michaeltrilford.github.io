@@ -11,7 +11,7 @@ class storyRule extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Rule"
         description="A horizontal rule to divide a page"
       >
@@ -109,7 +109,7 @@ class storyRule extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

@@ -1,4 +1,4 @@
-class muiTokenLocalSlat extends HTMLElement {
+class muiPartLocalSlat extends HTMLElement {
   static get observedAttributes() {
     return ["token", "output", "usage"];
   }
@@ -75,4 +75,4 @@ class muiTokenLocalSlat extends HTMLElement {
   }
 }
 
-customElements.define("mui-token-local-slat", muiTokenLocalSlat);
+customElements.define("mui-part-local-slat", muiPartLocalSlat);

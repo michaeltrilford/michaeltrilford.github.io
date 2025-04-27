@@ -9,14 +9,14 @@ class storyPartsSpacing extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Spacing Parts"
         description="Provides customisable part names for easy styling overrides via the part attribute, promoting flexible, trust-based customisation. Best for building custom web component compositions with MUI and scoped CSS styles."
       >
         <mui-v-stack space="var(--space-700)">
 
           <story-card title="Padding">
-            <mui-token-local-slat slot="body" token="part(padding)" usage="Links, Stacks" output="Defines the padding of the element." ></mui-token-local-slat>
+            <mui-part-local-slat slot="body" token="part(padding)" usage="Links, Stacks" output="Defines the padding of the element." ></mui-part-local-slat>
             <mui-code slot="footer">
               mui-link::part(padding) {
               <br />
@@ -27,7 +27,7 @@ class storyPartsSpacing extends HTMLElement {
           </story-card>
 
           <story-card title="Margin">
-            <mui-token-local-slat slot="body" token="part(margin)" usage="Links, Stacks" output="Defines the margin of the element." ></mui-token-local-slat>
+            <mui-part-local-slat slot="body" token="part(margin)" usage="Links, Stacks" output="Defines the margin of the element." ></mui-part-local-slat>
             <mui-code slot="footer">
               mui-link::part(margin) {
               <br />
@@ -39,7 +39,7 @@ class storyPartsSpacing extends HTMLElement {
 
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

@@ -9,7 +9,7 @@ class storyBadge extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Badge"
         description="Badges are non-interactive and indicate counts or statuses."
       >
@@ -83,7 +83,7 @@ class storyBadge extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

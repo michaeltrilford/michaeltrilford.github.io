@@ -11,7 +11,7 @@ class storyTokens extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Design Tokens"
         description="Design tokens are all the values needed to construct and maintain a design system — spacing, color, typography, object styles, animation, etc"
       >
@@ -28,7 +28,7 @@ class storyTokens extends HTMLElement {
           <mui-body style="margin-bottom: var(--space-500)">Contextual tokens bridge the gap between raw base tokens and specific use cases. They are tied to a particular context or element, reflecting how a base token is applied in a specific environment or scenario.</mui-body>
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

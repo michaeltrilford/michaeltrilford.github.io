@@ -9,14 +9,14 @@ class storyPartsText extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Text Parts"
         description="Provides customisable part names for easy styling overrides via the part attribute, promoting flexible, trust-based customisation. Best for building custom web component compositions with MUI and scoped CSS styles."
       >
         <mui-v-stack space="var(--space-700)">
 
           <story-card title="Color">
-            <mui-token-local-slat slot="body" token="part(color)" usage="Links" output="Defines the color of the element." ></mui-token-local-slat>
+            <mui-part-local-slat slot="body" token="part(color)" usage="Links" output="Defines the color of the element." ></mui-part-local-slat>
             <mui-code slot="footer">
               mui-link::part(color) {
               <br />
@@ -34,7 +34,7 @@ class storyPartsText extends HTMLElement {
           </story-card>
 
           <story-card title="Font Size">
-            <mui-token-local-slat slot="body" token="part(font-size)" usage="Links" output="Defines the font size of the element."></mui-token-local-slat>
+            <mui-part-local-slat slot="body" token="part(font-size)" usage="Links" output="Defines the font size of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-link::part(font-size) {
               <br />
@@ -46,7 +46,7 @@ class storyPartsText extends HTMLElement {
           </story-card>
 
           <story-card title="Font Weight">
-            <mui-token-local-slat slot="body" token="part(font-weight)" usage="Links" output="Defines the font weight of the element."></mui-token-local-slat>
+            <mui-part-local-slat slot="body" token="part(font-weight)" usage="Links" output="Defines the font weight of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-link::part(font-weight) {
               <br />
@@ -58,7 +58,7 @@ class storyPartsText extends HTMLElement {
           </story-card>
 
           <story-card title="Text Decoration">
-            <mui-token-local-slat slot="body" token="part(text-decoration)" usage="Links" output="Controls the text decoration style (e.g., underline, none)."></mui-token-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-decoration)" usage="Links" output="Controls the text decoration style (e.g., underline, none)."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-link::part(text-decoration) {
               <br />
@@ -79,7 +79,7 @@ class storyPartsText extends HTMLElement {
 
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

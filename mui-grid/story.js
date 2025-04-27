@@ -15,7 +15,7 @@ class storyGrid extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Grid"
         description="Layout component to enable grid layouts"
       >
@@ -80,7 +80,7 @@ class storyGrid extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

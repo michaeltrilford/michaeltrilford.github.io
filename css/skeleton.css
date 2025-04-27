@@ -6,6 +6,8 @@
   position: fixed;
   background: var(--mui-brand);
   z-index: 10000;
+  left: 0;
+  top: 0;
 }
 
 @media (max-width: 960px) {

@@ -9,7 +9,7 @@ class storyTokensComponents extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Components Tokens"
         description="Component tokens are contextual tokens scoped to a specific UI component, defining how foundational design decisions are applied within that component’s unique structure and states."
       >
@@ -170,7 +170,7 @@ class storyTokensComponents extends HTMLElement {
 
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

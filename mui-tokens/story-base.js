@@ -9,7 +9,7 @@ class storyTokensBase extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Base Tokens"
         description="Base tokens are the foundational values of a design system. They represent raw, unchanging definitions for core design attributes such as colors, typography, spacing, and sizes."
       >
@@ -179,7 +179,7 @@ class storyTokensBase extends HTMLElement {
 
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

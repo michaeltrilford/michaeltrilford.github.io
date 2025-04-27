@@ -30,47 +30,47 @@ class muiNavbar extends HTMLElement {
     `;
 
     const Home = `
-      <mui-navbar-home  link="./index.html" title="michaeltrilford.mui"></mui-navbar-home>
+      <mui-navbar-home  link="#/home" title="michaeltrilford.mui"></mui-navbar-home>
     `;
 
     const Required = `
       <mui-navbar-group id="design-tokens" groupname="Design Tokens">
-        <mui-navbar-link link="tokens-base.html" title="Base"></mui-navbar-link>
-        <mui-navbar-link link="tokens-semantic.html" title="Semantic"></mui-navbar-link>
-        <mui-navbar-link link="tokens-contextual.html" title="Contextual"></mui-navbar-link>
-        <mui-navbar-link link="tokens-components.html" title="Components"></mui-navbar-link>
+        <mui-navbar-link link="#/base-design-tokens" title="Base"></mui-navbar-link>
+        <mui-navbar-link link="#/semantic-design-tokens" title="Semantic"></mui-navbar-link>
+        <mui-navbar-link link="#/contextual-design-tokens" title="Contextual"></mui-navbar-link>
+        <mui-navbar-link link="#/components-design-tokens" title="Components"></mui-navbar-link>
       </mui-navbar-group>
     `;
 
     const Parts = `
       <mui-navbar-group id="part-types" groupname="Part Selectors">
-        <mui-navbar-link link="part-types-text.html" title="Text"></mui-navbar-link>
-        <mui-navbar-link link="part-types-spacing.html" title="Spacing"></mui-navbar-link>
+        <mui-navbar-link link="#/text-part-selectors" title="Text"></mui-navbar-link>
+        <mui-navbar-link link="#/spacing-part-selectors" title="Spacing"></mui-navbar-link>
       </mui-navbar-group>
     `;
 
     const Components = `
       <mui-navbar-group id="web-components" groupname="Web Components">
-        <mui-navbar-link link="alert.html" title="Alerts"></mui-navbar-link>
-        <mui-navbar-link link="badge.html" title="Badge"></mui-navbar-link>
-        <mui-navbar-link link="button.html" title="Buttons"></mui-navbar-link>
-        <mui-navbar-link link="responsive.html" title="Responsive"></mui-navbar-link>
-        <mui-navbar-link link="stacks.html" title="Stacks"></mui-navbar-link>
-        <mui-navbar-link link="grid.html" title="Grid"></mui-navbar-link>
-        <mui-navbar-link link="card.html" title="Cards"></mui-navbar-link>
-        <mui-navbar-link link="container.html" title="Container"></mui-navbar-link>
-        <mui-navbar-link link="headings.html" title="Headings"></mui-navbar-link>
-        <mui-navbar-link link="body.html" title="Body"></mui-navbar-link>
-        <mui-navbar-link link="image.html" title="Image"></mui-navbar-link>
-        <mui-navbar-link link="links.html" title="Links"></mui-navbar-link>
-        <mui-navbar-link link="list.html" title="List"></mui-navbar-link>
-        <mui-navbar-link link="quote.html" title="Quote"></mui-navbar-link>
-        <mui-navbar-link link="rule.html" title="Rule"></mui-navbar-link>
-        <mui-navbar-link link="icons.html" title="Icons"></mui-navbar-link>
-        <mui-navbar-link link="code.html" title="Code"></mui-navbar-link>
-        <mui-navbar-link link="accordion.html" title="Accordion"></mui-navbar-link>
-        <mui-navbar-link link="table.html" title="Table"></mui-navbar-link>
-        <mui-navbar-link link="slat.html" title="Slat"></mui-navbar-link>
+        <mui-navbar-link link="#/alerts" title="Alerts"></mui-navbar-link>
+        <mui-navbar-link link="#/badge" title="Badge"></mui-navbar-link>
+        <mui-navbar-link link="#/buttons" title="Buttons"></mui-navbar-link>
+        <mui-navbar-link link="#/responsive" title="Responsive"></mui-navbar-link>
+        <mui-navbar-link link="#/stacks" title="Stacks"></mui-navbar-link>
+        <mui-navbar-link link="#/grid" title="Grid"></mui-navbar-link>
+        <mui-navbar-link link="#/cards" title="Cards"></mui-navbar-link>
+        <mui-navbar-link link="#/container" title="Container"></mui-navbar-link>
+        <mui-navbar-link link="#/headings" title="Headings"></mui-navbar-link>
+        <mui-navbar-link link="#/body" title="Body"></mui-navbar-link>
+        <mui-navbar-link link="#/image" title="Image"></mui-navbar-link>
+        <mui-navbar-link link="#/links" title="Links"></mui-navbar-link>
+        <mui-navbar-link link="#/list" title="List"></mui-navbar-link>
+        <mui-navbar-link link="#/quote" title="Quote"></mui-navbar-link>
+        <mui-navbar-link link="#/rule" title="Rule"></mui-navbar-link>
+        <mui-navbar-link link="#/icons" title="Icons"></mui-navbar-link>
+        <mui-navbar-link link="#/code" title="Code"></mui-navbar-link>
+        <mui-navbar-link link="#/accordion" title="Accordion"></mui-navbar-link>
+        <mui-navbar-link link="#/table" title="Table"></mui-navbar-link>
+        <mui-navbar-link link="#/slat" title="Slat"></mui-navbar-link>
       </mui-navbar-group>
     `;
 
@@ -95,7 +95,7 @@ class muiNavbar extends HTMLElement {
         </mui-navbar-menu>
       </mui-responsive>
 
-      <mui-navbar-toggle link="index.html" title="michaeltrilford.mui">
+      <mui-navbar-toggle link="#/home-page" title="michaeltrilford.mui">
         <mui-icon-toggle color="var(--mui-brand)" rotate>
           <mui-icon-menu slot="primary" size="x-small"></mui-icon-menu>
           <mui-icon-close slot="secondary" size="x-small"></mui-icon-close>
@@ -119,6 +119,24 @@ class muiNavbar extends HTMLElement {
         }
       });
     };
+
+    // Close mobile menu when a link is clicked
+    const mobileLinks = this.navbarEl.querySelectorAll("mui-navbar-link");
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (this.navbarEl.hasAttribute("open")) {
+          // 1. Close the mobile menu
+          this.navbarEl.removeAttribute("open");
+
+          // 2. Update tabindex
+          this.updateTabIndexForMenuLinks(this.navbarEl, false);
+
+          // 3. Reset the menu icon toggle state
+          this.menuIconEl.toggle = false;
+          this.menuIconEl.removeAttribute("toggle"); // <-- clear the attribute too if necessary
+        }
+      });
+    });
 
     // Method to handle responsive behavior
     this.handleResponsiveTabIndex = () => {

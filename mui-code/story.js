@@ -9,7 +9,7 @@ class storyCode extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Code"
         description="The component defines a code view."
       >
@@ -74,7 +74,7 @@ class storyCode extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

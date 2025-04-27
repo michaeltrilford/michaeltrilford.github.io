@@ -6,25 +6,10 @@ const loadScripts = (scriptArray) => {
         const script = document.createElement("script");
         script.setAttribute("src", src);
         script.setAttribute("defer", "true"); // Optional: defers execution until after HTML parsing
+        script.setAttribute("type", "module"); // Add this line to ensure it is loaded as an ES module
         script.onload = resolve;
         script.onerror = reject;
         document.head.appendChild(script);
-      });
-    })
-  );
-};
-
-// Utility function to load styles
-const loadStyles = (styleArray) => {
-  return Promise.all(
-    styleArray.map((href) => {
-      return new Promise((resolve, reject) => {
-        const link = document.createElement("link");
-        link.setAttribute("rel", "stylesheet");
-        link.setAttribute("href", href);
-        link.onload = resolve;
-        link.onerror = reject;
-        document.head.appendChild(link);
       });
     })
   );
@@ -91,50 +76,19 @@ const addHeadElements = ({
 };
 
 // Arrays containing your resources
-const HomeArray = ["mui-home/index.js"];
+// const HomeArray = ["mui-home/index.js"];
 const UtilArray = ["mui-utils/index.js"];
-const StylesArray = [
-  "css/mui-tokens.css",
-  "css/mui-reset.css",
-  "css/mui-base.css",
-  "css/author.css",
-];
+
 const PartsArray = ["mui-parts/index.js"];
-const StoryArray = [
-  "mui-responsive/story.js",
-  "mui-button/story.js",
-  "mui-grid/story.js",
-  "mui-stack/story.js",
-  "mui-accordion/story.js",
-  "mui-alert/story.js",
-  "mui-badge/story.js",
-  "mui-button-group/story.js",
-  "mui-card/story.js",
-  "mui-code/story.js",
-  "mui-container/story.js",
-  "mui-heading/story.js",
-  "mui-icons/story.js",
-  "mui-icons/story-icon-grid.js",
-  "mui-image/story.js",
-  "mui-link/story.js",
-  "mui-list/story.js",
-  "mui-body/story.js",
-  "mui-quote/story.js",
-  "mui-rule/story.js",
-  "mui-table/story.js",
-  "mui-slat/story.js",
-  "mui-tokens/story.js",
-  "mui-tokens/story-base.js",
-  "mui-tokens/story-semantic.js",
-  "mui-tokens/story-contextual.js",
-  "mui-tokens/story-components.js",
-  "mui-parts/story-parts-text.js",
-  "mui-parts/story-parts-spacing.js",
-];
+
 const SharedArray = [
-  "shared/story-container/index.js",
+  "shared/story-template/index.js",
   "shared/story-card/index.js",
   "shared/story-demo/index.js",
+  "mui-tokens/helpers/index.js",
+  "mui-tokens/helpers/slat-local.js",
+  "mui-parts/helpers/index.js",
+  "mui-parts/helpers/slat-local.js",
 ];
 const AppCompArray = [
   "app-navbar/navbar.js",
@@ -188,17 +142,51 @@ const MuiCompArray = [
 ];
 const RecipeArray = ["mui-table/recipe/table.js"];
 
+// New array for those pages
+const PageArray = [
+  "app-container/index.js",
+  "mui-home/page.js",
+  "mui-responsive/story.js",
+  "mui-button/story.js",
+  "mui-grid/story.js",
+  "mui-stack/story.js",
+  "mui-accordion/story.js",
+  "mui-alert/story.js",
+  "mui-badge/story.js",
+  "mui-button-group/story.js",
+  "mui-card/story.js",
+  "mui-code/story.js",
+  "mui-container/story.js",
+  "mui-heading/story.js",
+  "mui-icons/story.js",
+  "mui-icons/story-icon-grid.js",
+  "mui-image/story.js",
+  "mui-link/story.js",
+  "mui-list/story.js",
+  "mui-body/story.js",
+  "mui-quote/story.js",
+  "mui-rule/story.js",
+  "mui-table/story.js",
+  "mui-slat/story.js",
+  "mui-tokens/story.js",
+  "mui-tokens/story-base.js",
+  "mui-tokens/story-semantic.js",
+  "mui-tokens/story-contextual.js",
+  "mui-tokens/story-components.js",
+  "mui-parts/story-parts-text.js",
+  "mui-parts/story-parts-spacing.js",
+];
+
 // Load all resources asynchronously
 Promise.all([
-  loadScripts(HomeArray),
+  // loadScripts(HomeArray),
   loadScripts(UtilArray),
-  loadStyles(StylesArray),
   loadScripts(PartsArray),
-  loadScripts(StoryArray),
   loadScripts(SharedArray),
   loadScripts(AppCompArray),
   loadScripts(MuiCompArray),
   loadScripts(RecipeArray),
+  loadScripts(PageArray),
 ])
   .then(() => {
     addHeadElements({

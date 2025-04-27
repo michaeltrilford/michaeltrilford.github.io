@@ -1,4 +1,4 @@
-class storyContainers extends HTMLElement {
+class storyContainer extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
@@ -9,7 +9,7 @@ class storyContainers extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
       title="Container" 
       description="The Container is a layout helper to provide the base page structure for a web experience.">
 
@@ -62,9 +62,9 @@ class storyContainers extends HTMLElement {
 
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }
 
-customElements.define("story-containers", storyContainers);
+customElements.define("story-container", storyContainer);

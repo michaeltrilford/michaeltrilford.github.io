@@ -1,9 +1,9 @@
-class indexHome extends HTMLElement {
+class HomePage extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
     const styles = `
-      :host { display: block; }
+      :host { display: flex; width: 100%; }
 
       mui-responsive {
         display: grid;
@@ -165,28 +165,73 @@ class indexHome extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <mui-navbar>
-        <mui-container slot="main-content" center fluid>
-          <mui-responsive breakpoint="960">
-            
-            <!-- Main content above -->
-            <main slot="showAbove">
+      <mui-container slot="main-content" center fluid>
+        <mui-responsive breakpoint="960">
+          
+          <!-- Main content above -->
+          <main slot="showAbove">
+            <div class="logo-wrapper">
+              <img class="logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
+            </div>
+
+            <mui-v-stack class="actions" space="var(--space-050)">
+              <mui-link 
+                class="github-link" 
+                target="_blank" 
+                href="https://github.com/michaeltrilford/michaeltrilford.github.io" 
+                as="button" 
+                variant="primary" 
+                rounded>
+                Fork on GitHub
+              </mui-link>
+
+              <mui-v-stack class="actions__secondary" space="var(--space-000)">
+                <mui-body size="small" weight="medium">
+                  <mui-link target="_blank" href="https://codepen.io/trilm/">Codepen.io/trilm</mui-link>
+                </mui-body>
+                <mui-body size="small" weight="medium">
+                  <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
+                </mui-body>
+              </mui-v-stack>
+            </mui-v-stack>
+
+            <mui-body class="introduction" size="small" weight="bold">
+              MUI is an experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS.
+            </mui-body>
+            <mui-body class="technology" size="small" weight="bold">
+              The components are based on past explorations shared at 
+              <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">codepen.io/trilm</mui-link>
+            </mui-body>
+          </main>
+
+          <!-- Main content below -->
+          <main slot="showBelow">
+            <mui-v-stack space="var(--space-700)" style="text-align: center;">
               <div class="logo-wrapper">
                 <img class="logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
               </div>
+              
+              <mui-v-stack space="var(--space-500)" style="max-width: 31rem; padding-left: var(--space-300); padding-right: var(--space-300);">
+                <mui-body class="introduction" size="small" weight="medium">
+                  MUI is an experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS.
+                </mui-body>
+                <mui-body class="technology" size="small" weight="medium">
+                  The components are based on past explorations shared at 
+                  <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="medium">codepen.io/trilm</mui-link>
+                </mui-body>
+              </mui-v-stack>
 
-              <mui-v-stack class="actions" space="var(--space-050)">
+              <mui-v-stack class="actions" space="var(--space-300)">
                 <mui-link 
                   class="github-link" 
                   target="_blank" 
                   href="https://github.com/michaeltrilford/michaeltrilford.github.io" 
                   as="button" 
-                  variant="primary" 
-                  rounded>
+                  variant="primary">
                   Fork on GitHub
                 </mui-link>
 
-                <mui-v-stack class="actions__secondary" space="var(--space-000)">
+                <mui-v-stack class="actions__secondary" space="var(--space-050)">
                   <mui-body size="small" weight="medium">
                     <mui-link target="_blank" href="https://codepen.io/trilm/">Codepen.io/trilm</mui-link>
                   </mui-body>
@@ -195,60 +240,14 @@ class indexHome extends HTMLElement {
                   </mui-body>
                 </mui-v-stack>
               </mui-v-stack>
+            </mui-v-stack>
+          </main>
 
-              <mui-body class="introduction" size="small" weight="bold">
-                MUI is an experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS.
-              </mui-body>
-              <mui-body class="technology" size="small" weight="bold">
-                The components are based on past explorations shared at 
-                <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">codepen.io/trilm</mui-link>
-              </mui-body>
-            </main>
+        </mui-responsive>
+      </mui-container>
 
-            <!-- Main content below -->
-            <main slot="showBelow">
-              <mui-v-stack space="var(--space-700)" style="text-align: center;">
-                <div class="logo-wrapper">
-                  <img class="logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
-                </div>
-                
-                <mui-v-stack space="var(--space-500)" style="max-width: 31rem; padding-left: var(--space-300); padding-right: var(--space-300);">
-                  <mui-body class="introduction" size="small" weight="medium">
-                    MUI is an experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS.
-                  </mui-body>
-                  <mui-body class="technology" size="small" weight="medium">
-                    The components are based on past explorations shared at 
-                    <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="medium">codepen.io/trilm</mui-link>
-                  </mui-body>
-                </mui-v-stack>
-
-                <mui-v-stack class="actions" space="var(--space-300)">
-                  <mui-link 
-                    class="github-link" 
-                    target="_blank" 
-                    href="https://github.com/michaeltrilford/michaeltrilford.github.io" 
-                    as="button" 
-                    variant="primary">
-                    Fork on GitHub
-                  </mui-link>
-
-                  <mui-v-stack class="actions__secondary" space="var(--space-050)">
-                    <mui-body size="small" weight="medium">
-                      <mui-link target="_blank" href="https://codepen.io/trilm/">Codepen.io/trilm</mui-link>
-                    </mui-body>
-                    <mui-body size="small" weight="medium">
-                      <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
-                    </mui-body>
-                  </mui-v-stack>
-                </mui-v-stack>
-              </mui-v-stack>
-            </main>
-
-          </mui-responsive>
-        </mui-container>
-      </mui-navbar>
     `;
   }
 }
 
-customElements.define("index-home", indexHome);
+customElements.define("home-page", HomePage);

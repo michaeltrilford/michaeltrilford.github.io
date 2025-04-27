@@ -63,7 +63,7 @@ class storyStack extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Stacks" 
         description="A layout component that arranges its children in a horizontal or vertical flow"
       >
@@ -140,7 +140,7 @@ class storyStack extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

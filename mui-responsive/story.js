@@ -96,7 +96,7 @@ class storyResponsive extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Responsive"
         description="Dynamically render UI based on viewport size"
       >
@@ -143,7 +143,7 @@ class storyResponsive extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

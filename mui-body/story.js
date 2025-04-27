@@ -10,7 +10,7 @@ class storyBody extends HTMLElement {
       <style>${styles}</style>
 
 
-      <story-container 
+      <story-template 
         title="Body"
         description="Use the Body component for clear and readable paragraph text across the UI. It’s ideal for longer-form content such as descriptions, explanations, or supporting information. Variant styles are also available for status messages and other contextual needs."
       >
@@ -66,7 +66,7 @@ class storyBody extends HTMLElement {
 
         </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }

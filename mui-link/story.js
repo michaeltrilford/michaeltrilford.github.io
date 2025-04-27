@@ -29,7 +29,7 @@ class storyLink extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-container 
+      <story-template 
         title="Links"
         description="The mui-link defines a hyperlink, which is used to link from one page to another."
       >
@@ -193,7 +193,7 @@ class storyLink extends HTMLElement {
 
       </mui-v-stack>
 
-      </story-container>
+      </story-template>
     `;
   }
 }
