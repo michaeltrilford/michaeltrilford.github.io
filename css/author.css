@@ -3,8 +3,8 @@
 }
 
 /* Default View Transition (for pages with .home class) */
-::view-transition-old(body),
+/* ::view-transition-old(body),
 ::view-transition-new(body) {
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
-}
+} */

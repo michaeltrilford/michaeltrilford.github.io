@@ -15,28 +15,29 @@ const loadScripts = (scriptArray) => {
   );
 };
 
-const reveal = () => {
-  const loader = document.getElementById("loader");
+// OLD Skeleton
+// const reveal = () => {
+//   const loader = document.getElementById("loader");
 
-  if (document.startViewTransition) {
-    document.startViewTransition(() => {
-      if (loader) {
-        loader.style.opacity = "0"; // Hide loader
-      }
-    });
-  } else {
-    if (loader) {
-      loader.style.opacity = "0"; // Hide loader
-    }
-  }
+//   if (document.startViewTransition) {
+//     document.startViewTransition(() => {
+//       if (loader) {
+//         loader.style.opacity = "0";
+//       }
+//     });
+//   } else {
+//     if (loader) {
+//       loader.style.opacity = "0";
+//     }
+//   }
 
-  setTimeout(() => {
-    const loaderCheck = document.getElementById("loader");
-    if (loaderCheck) {
-      loaderCheck.style.display = "none"; // Fully remove loader after fade-out
-    }
-  }, 1000);
-};
+//   setTimeout(() => {
+//     const loaderCheck = document.getElementById("loader");
+//     if (loaderCheck) {
+//       loaderCheck.style.display = "none";
+//     }
+//   }, 1000);
+// };
 
 // Utility function to add static head elements
 const addHeadElements = ({
