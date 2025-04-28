@@ -13,7 +13,7 @@ class storyTemplate extends HTMLElement {
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <mui-container center style="padding-top: var(--space-600);">
+      <mui-container center>
         <mui-v-stack space="var(--space-700)">
           <mui-v-stack space="var(--space-400)">
             <mui-heading size="1" weight="800">${this.getAttribute(

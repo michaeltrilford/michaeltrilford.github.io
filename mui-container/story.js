@@ -4,6 +4,8 @@ class storyContainer extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: "open" });
     const styles = `
       :host { display: block; }
+
+      mui-container::part(width) { min-width: initial;} 
     `;
 
     shadowRoot.innerHTML = `

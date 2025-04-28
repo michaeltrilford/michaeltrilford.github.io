@@ -6,7 +6,7 @@ class storyGrid extends HTMLElement {
 
     const Box = `
       <mui-card>
-        <mui-card-body>{content}</mui-card-body>
+        <mui-card-body>.</mui-card-body>
       </mui-card>
     `;
 
@@ -61,12 +61,9 @@ class storyGrid extends HTMLElement {
           <mui-grid col="1fr 1fr 1fr" gap="var(--space-800)" slot="body">
             ${Box}
             ${Box}
-            ${Box}
           </mui-grid>
           <mui-code slot="footer">
             &lt;mui-grid col="1fr 1fr 1fr" gap="var(--space-800)"&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />

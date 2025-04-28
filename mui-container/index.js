@@ -4,56 +4,81 @@ class muiContainer extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
   }
-  connectedCallback() {
+
+  async connectedCallback() {
+    await this.waitForPartMap();
+
+    const partMap = getPartMap("spacing");
+
     let html = `
     <style>
 
-      @import url("./css/mui-reset.css");
-
       :host {
+        display: flex;
+        width: 100%;
+      }
+
+      .container {
         display: block;
         width: 95%;
-        width: calc( 100% - 4.8rem );
+        width: calc(100% - 4.8rem);
         max-width: 118.0rem;
         padding-top: 2.4rem;
         padding-bottom: 2.4rem;
         min-width: 30.0rem;
-        margin: 0 2.4rem; }
+        margin: 0 2.4rem;
+      }
 
       /* Center
       ========================================= */
-      :host([center]) {
-        margin: 0 auto; }
-      /* ===================================== */
+      :host([center]) .container {
+        margin: 0 auto;
+      }
 
       /* Fluid
       ========================================= */
-      :host([fluid]) {
-        max-width: 100%; }
-      /* ===================================== */
+      :host([fluid]) .container {
+        max-width: 100%;
+      }
 
       /* Small
       ========================================= */
-      :host([small]) {
-        max-width: 54.0rem; }
-      /* ===================================== */
+      :host([small]) .container {
+        max-width: 54.0rem;
+      }
 
       /* Medium
       ========================================= */
-      :host([medium]) {
-        max-width: 70.0rem; }
-      /* ===================================== */
+      :host([medium]) .container {
+        max-width: 70.0rem;
+      }
 
       /* Large
       ========================================= */
-      :host([large]) {
-        max-width: 118.0rem; }
-      /* ===================================== */
+      :host([large]) .container {
+        max-width: 118.0rem;
+      }
     </style>
-    <slot></slot>
+    <div class="container" part="${partMap}">
+      <slot></slot>
+    </div>
     `;
 
     this.shadowRoot.innerHTML = html;
+  }
+
+  waitForPartMap() {
+    return new Promise((resolve) => {
+      if (typeof getPartMap === "function") return resolve();
+      const check = () => {
+        if (typeof getPartMap === "function") {
+          resolve();
+        } else {
+          requestAnimationFrame(check);
+        }
+      };
+      check();
+    });
   }
 }
 
