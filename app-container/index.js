@@ -73,6 +73,9 @@ export class AppContainer extends HTMLElement {
 
       this.shadowRoot.appendChild(page);
     }
+
+    // Scroll to top when page route changes
+    window.scrollTo(0, 0);
   }
 
   connectedCallback() {

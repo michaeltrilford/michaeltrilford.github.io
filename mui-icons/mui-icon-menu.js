@@ -1,7 +1,7 @@
 /* Mui Icon: Menu */
 class muiIconMenu extends HTMLElement {
   static get observedAttributes() {
-    return ["size", "color"];
+    return ["size", "color", "variant"];
   }
 
   constructor() {
@@ -14,29 +14,41 @@ class muiIconMenu extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if ((name === "size" || name === "color") && oldValue !== newValue) {
+    if (
+      (name === "size" || name === "color" || name === "variant") &&
+      oldValue !== newValue
+    ) {
       this.render();
     }
   }
 
   render() {
-    const size = this.getAttribute("size") || "small";
-    const rawColor = this.getAttribute("color");
+    const size = this.getAttribute("size") || "small"; // Default size
+    const rawColor = this.getAttribute("color"); // Raw color
+    const variant = this.getAttribute("variant"); // Variant name
 
-    // Map semantic names to actual token values
+    // Color map for predefined color options
     const colorMap = {
       default: "var(--icon-color-default)",
       inverted: "var(--icon-color-inverted)",
-      primaryButton: "var(--icon-color-inverted)",
-      secondaryButton: "var(--icon-color-default)",
-      tertiaryButton: "var(--icon-color-default)",
-      attentionButton: "var(--icon-color-inverted)",
     };
 
-    // If rawColor matches a semantic key, use it; otherwise use the raw value or default
-    const iconColor =
-      colorMap[rawColor] || rawColor || "var(--icon-color-default)";
+    // Variant-to-color map for variants
+    const variantColorMap = {
+      primary: "var(--icon-color-inverted)",
+      secondary: "var(--icon-color-default)",
+      tertiary: "var(--icon-color-default)",
+      attention: "var(--icon-color-inverted)",
+    };
 
+    // Resolve color based on the provided variant or color attribute
+    let iconColor =
+      variantColorMap[variant] ||
+      colorMap[rawColor] ||
+      rawColor ||
+      "var(--icon-color-default)";
+
+    // Map size to actual values
     const sizeMap = {
       "x-small": "1.6rem",
       small: "2.4rem",

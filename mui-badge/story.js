@@ -16,7 +16,7 @@ class storyBadge extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Badge / Default">
+        <story-card title="Default">
           <div slot="body">
             <mui-badge>New</mui-badge>
           </div>
@@ -29,7 +29,7 @@ class storyBadge extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Badge / Neutral">
+        <story-card title="Neutral">
           <div slot="body">
             <mui-badge variant="neutral">Offline</mui-badge>
           </div>
@@ -42,7 +42,7 @@ class storyBadge extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Badge / Positive">
+        <story-card title="Positive">
           <div slot="body">
             <mui-badge variant="positive">Offline</mui-badge>
           </div>
@@ -55,7 +55,7 @@ class storyBadge extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Badge / Warning">
+        <story-card title="Warning">
           <div slot="body">
             <mui-badge variant="warning">Busy</mui-badge>
           </div>
@@ -68,7 +68,7 @@ class storyBadge extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Badge / Attention">
+        <story-card title="Attention">
           <div slot="body">
             <mui-badge variant="attention">Urgent</mui-badge>
           </div>

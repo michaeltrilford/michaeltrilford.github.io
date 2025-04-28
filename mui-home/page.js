@@ -178,8 +178,7 @@ class HomePage extends HTMLElement {
               <mui-link 
                 class="github-link" 
                 target="_blank" 
-                href="https://github.com/michaeltrilford/michaeltrilford.github.io" 
-                as="button" 
+                href="https://github.com/michaeltrilford/michaeltrilford.github.io"
                 variant="primary" 
                 rounded>
                 Fork on GitHub
@@ -226,7 +225,6 @@ class HomePage extends HTMLElement {
                   class="github-link" 
                   target="_blank" 
                   href="https://github.com/michaeltrilford/michaeltrilford.github.io" 
-                  as="button" 
                   variant="primary">
                   Fork on GitHub
                 </mui-link>

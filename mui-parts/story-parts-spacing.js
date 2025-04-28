@@ -37,6 +37,74 @@ class storyPartsSpacing extends HTMLElement {
             </mui-code>
           </story-card>
 
+          <story-card title="Gap">
+            <mui-part-local-slat slot="body" token="part(gap)" usage="Links, Stacks" output="Defines the gap between items when using Flex or Grid" ></mui-part-local-slat>
+            <mui-code slot="footer">
+              mui-link::part(gap) {
+              <br />
+              &nbsp;&nbsp;gap: var(--space-100);
+              <br />
+              }
+            </mui-code>
+          </story-card>
+
+          <story-card title="Width">
+            <mui-part-local-slat slot="body" token="part(width)" usage="Links, Stacks" output="Defines the width of elements"></mui-part-local-slat>
+            <mui-code slot="footer">
+              mui-link::part(width) {
+              <br />
+              &nbsp;&nbsp;width: 50rem;
+              <br />
+              }
+            </mui-code>
+          </story-card>
+
+          <story-card title="Height">
+            <mui-part-local-slat slot="body" token="part(height)" usage="Links, Stacks" output="Defines the height of elements"></mui-part-local-slat>
+            <mui-code slot="footer">
+              mui-link::part(height) {
+              <br />
+              &nbsp;&nbsp;height: 50rem;
+              <br />
+              }
+            </mui-code>
+          </story-card>
+
+          <story-card title="Box Sizing">
+            <mui-part-local-slat slot="body" token="part(box-sizing)" usage="Links, Stacks" output="Defines how the object reacts to padding."></mui-part-local-slat>
+            <mui-code slot="footer">
+              mui-link::part(box-sizing) {
+              <br />
+              &nbsp;&nbsp;box-sizing: border-box;
+              <br />
+              }
+            </mui-code>
+          </story-card>
+
+          <story-card title="Position">
+            <mui-part-local-slat slot="body" token="part(position)" usage="Links, Stacks" output="Defines how the object reacts to the viewport or surrounding elements."></mui-part-local-slat>
+            <mui-code slot="footer">
+              mui-link::part(position) {
+              <br />
+              &nbsp;&nbsp;position: absolute;
+              <br />
+              }
+            </mui-code>
+          </story-card>
+
+          <story-card title="Z-Index">
+            <mui-part-local-slat slot="body" token="part(z-index)" usage="Links, Stacks" output="Useful for ignoring tabbed elements when hidden and also controlling z-order of items in the viewport. "></mui-part-local-slat>
+            <mui-code slot="footer">
+              mui-link::part(z-index) {
+              <br />
+              &nbsp;&nbsp;z-index: -1;
+              <br />
+              }
+            </mui-code>
+          </story-card>
+
+
+
         </mui-v-stack>
 
       </story-template>

@@ -4,38 +4,38 @@ class storyStack extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: "open" });
     const styles = `:host { display: block; }`;
 
-    const Box = `
-      <story-demo description="Content" width="100px" height="100px"></story-demo>
-    `;
-
     const BlockBox = `
-      <story-demo description="Content" width="100%" height="60px"></story-demo>
+      <mui-card>
+        <mui-card-body>{content}</mui-card-body>
+      </mui-card>
     `;
 
-    const HStack = `
-      <mui-v-stack space="var(--space-700)" slot="body">
+    const Box = `
+      <mui-card>
+        <mui-card-body>{content}</mui-card-body>
+      </mui-card>
+    `;
+
+    const DefaultHStack = `
+      <mui-v-stack slot="body">
         <mui-v-stack space="8px">
-          <mui-heading size="6">Default prop:</mui-heading>
-          <mui-code style="border-radius: 8px;">space="var(--space-500)"</mui-code>
+          <mui-code style="border-radius: 8px;">
+            Default Size: space="var(--space-500)"
+          </mui-code>
         </mui-v-stack>
         <mui-h-stack>
-          ${Box}
-          ${Box}
           ${Box}
           ${Box}
         </mui-h-stack>
       </mui-v-stack>
     `;
 
-    const VStack = `
-      <mui-v-stack space="var(--space-700)" slot="body">
+    const DefaultVStack = `
+      <mui-v-stack slot="body">
         <mui-v-stack space="8px">
-          <mui-heading size="6">Default prop:</mui-heading>
-          <mui-code style="border-radius: 8px;">space="var(--space-500)"</mui-code>
+          <mui-code style="border-radius: 8px;">Default Size: space="var(--space-500)"</mui-code>
         </mui-v-stack>
         <mui-v-stack>
-          ${BlockBox}
-          ${BlockBox}
           ${BlockBox}
           ${BlockBox}
         </mui-v-stack>
@@ -43,18 +43,14 @@ class storyStack extends HTMLElement {
   `;
 
     const HStackSpace = `
-    <mui-h-stack  space="var(--space-700)" slot="body">
-      ${Box}
-      ${Box}
+    <mui-h-stack  space="var(--space-400)" slot="body">
       ${Box}
       ${Box}
     </mui-h-stack>
   `;
 
     const VStackSpace = `
-    <mui-v-stack slot="body" space="var(--space-700)">
-      ${BlockBox}
-      ${BlockBox}
+    <mui-v-stack slot="body" space="var(--space-400)">
       ${BlockBox}
       ${BlockBox}
     </mui-v-stack>
@@ -68,71 +64,55 @@ class storyStack extends HTMLElement {
         description="A layout component that arranges its children in a horizontal or vertical flow"
       >
 
-      <mui-v-stack space="var(--space-700)">
+      <mui-v-stack space="var(--space-400)">
 
-        <story-card title="Horizontal – Default">
-          ${HStack}
+        <story-card title="Horizontal: Default">
+          ${DefaultHStack}
           <mui-code slot="footer">
             &lt;mui-h-stack&gt;
             <br />
-            &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
+            &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />
-            &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
-            <br />
-            &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
-            <br />
-            &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
+            &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />
             &lt;/mui-h-stack&gt;
           </mui-code>
         </story-card>
 
-        <story-card title="Vertical – Default">
-          ${VStack}
+        <story-card title="Vertical: Default">
+          ${DefaultVStack}
           <mui-code slot="footer">
             &lt;mui-v-stack&gt;
             <br />
-            &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
+            &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />
-            &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
-            <br />
-            &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
-            <br />
-            &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
+            &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />
             &lt;/mui-v-stack&gt;
           </mui-code>
         </story-card>
 
-      <story-card title="Horizontal – Bespoke space">
+      <story-card title="Horizontal: Custom Space">
         ${HStackSpace}
         <mui-code slot="footer">
-          &lt;mui-h-stack space="var(--space-700)"&gt;
+          &lt;mui-h-stack space="var(--space-400)"&gt;
           <br />
-          &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
+          &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
           <br />
-          &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
-          <br />
-          &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
-          <br />
-          &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
+          &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
           <br />
           &lt;/mui-h-stack&gt;
         </mui-code>
       </story-card>
 
-      <story-card title="Vertical - Bespoke space">
+      <story-card title="Vertical: Custom Space">
         ${VStackSpace}
         <mui-code slot="footer">
-          &lt;mui-v-stack space="var(--space-700)"&gt;
+          &lt;mui-v-stack space="var(--space-400)"&gt;
           <br />
-          &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
+          &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
           <br />
-          &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
-          <br />
-          &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
-          <br />
-          &nbsp;&nbsp;&lt;div&gt;...&lt;/div&gt;
+          &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
           <br />
           &lt;/mui-v-stack&gt;
         </mui-code>

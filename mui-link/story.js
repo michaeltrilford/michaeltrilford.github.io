@@ -113,28 +113,37 @@ class storyLink extends HTMLElement {
 
         <story-card title="Primary Link">
           <div slot="body">
-            <mui-link target="_blank" as="button" variant="primary">Fork Github</mui-link>
+            <mui-link target="_blank" variant="primary">Fork Github</mui-link>
           </div>
           <mui-code slot="footer">
-            &lt;mui-link as="button" variant="primary" href="links.html"&gt;...&lt;/mui-link&gt;
+            &lt;mui-link variant="primary" href="links.html"&gt;...&lt;/mui-link&gt;
           </mui-code>
         </story-card>
 
         <story-card title="Secondary Link">
           <div slot="body">
-            <mui-link target="_blank" as="button" variant="secondary">View report</mui-link>
+            <mui-link target="_blank" variant="secondary">View report</mui-link>
           </div>
           <mui-code slot="footer">
-            &lt;mui-link as="button" variant="secondary" href="links.html"&gt;...&lt;/mui-link&gt;
+            &lt;mui-link variant="secondary" href="links.html"&gt;...&lt;/mui-link&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Tertiary Link">
+          <div slot="body">
+            <mui-link target="_blank" variant="tertiary">View report</mui-link>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-link variant="tertiary" href="links.html"&gt;...&lt;/mui-link&gt;
           </mui-code>
         </story-card>
 
         <story-card title="Attention Link">
           <div slot="body">
-            <mui-link target="_blank" as="button" variant="attention">Fork Github</mui-link>
+            <mui-link target="_blank" variant="attention">Fork Github</mui-link>
           </div>
           <mui-code slot="footer">
-            &lt;mui-link as="button" variant="attention" href="links.html"&gt;...&lt;/mui-link&gt;
+            &lt;mui-link variant="attention" href="links.html"&gt;...&lt;/mui-link&gt;
           </mui-code>
         </story-card>
 

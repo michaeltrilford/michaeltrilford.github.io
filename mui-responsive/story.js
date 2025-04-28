@@ -37,7 +37,7 @@ class storyResponsive extends HTMLElement {
 
     const ProgressTableColumns = `1fr 1fr 1fr 92px`;
 
-    const ProgressTable = `
+    const ProgressTableView = `
       <mui-table> 
         <mui-row-group heading> 
           <mui-row columns="${ProgressTableColumns}"> 
@@ -58,7 +58,7 @@ class storyResponsive extends HTMLElement {
       </mui-table>
     `;
 
-    const ProgressSlat = `
+    const ProgressSlatView = `
         <mui-v-stack space="var(--space-400)">
           ${LocalRing}
           <mui-heading 
@@ -86,11 +86,6 @@ class storyResponsive extends HTMLElement {
         </mui-grid>
 
         </mui-v-stack>
-
-        
-
-
-
     `;
 
     shadowRoot.innerHTML = `
@@ -103,7 +98,7 @@ class storyResponsive extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
       
-        <story-card title="Basic example">
+        <story-card title="Basic">
           <mui-responsive slot="body" breakpoint="600">
             <mui-heading slot="showBelow" size="6">Mobile / Below 600</mui-heading>
             <mui-heading slot="showAbove" size="6">Desktop / Above 600</mui-heading>
@@ -119,23 +114,34 @@ class storyResponsive extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Advanced example">
+        <story-card title="Table to Mobile Layout">
 
           <mui-responsive slot="body" breakpoint="1080">
             <mui-h-stack slot="showAbove" space="16px" alignY="center">
-              ${ProgressTable}
+              ${ProgressTableView}
             </mui-h-stack>
             <div slot="showBelow">
-              ${ProgressSlat}
+              ${ProgressSlatView}
             </div>
           </mui-responsive>
 
           <mui-code slot="footer">
             &lt;mui-responsive breakpoint="600"&gt;
             <br />
-            &nbsp;&nbsp;&lt;div slot="showAbove"&gt;...&lt;/div&gt;
             <br />
-            &nbsp;&nbsp;&lt;div slot="showBelow"&gt;...&lt;/div&gt;
+            &nbsp;&nbsp;&lt;div slot="showAbove"&gt;
+            <br />
+              &nbsp;&nbsp;&nbsp;&nbsp;&#x24;{ProgressTableView}
+            <br />
+            &nbsp;&nbsp;&lt;/div&gt;
+            <br />
+            <br />
+            &nbsp;&nbsp;&lt;div slot="showBelow"&gt;
+            <br />
+             &nbsp;&nbsp;&nbsp;&nbsp; &#x24;{ProgressSlatView}
+            <br />
+            &nbsp;&nbsp;&lt;/div&gt;
+            <br />
             <br />
             &lt;/mui-responsive&gt;
           </mui-code>

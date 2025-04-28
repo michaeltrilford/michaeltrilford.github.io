@@ -5,10 +5,8 @@ class storyGrid extends HTMLElement {
     const styles = `:host { display: block; }`;
 
     const Box = `
-      <mui-card 
-        style="height: 100px"
-      >
-        <mui-card-body>...</mui-card-body>
+      <mui-card>
+        <mui-card-body>{content}</mui-card-body>
       </mui-card>
     `;
 

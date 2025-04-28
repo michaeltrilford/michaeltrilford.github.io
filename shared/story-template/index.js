@@ -7,7 +7,7 @@ class storyTemplate extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
     const styles = `:host { display: block; width: 100%; }`;
-    const description = `<mui-body large style="letter-spacing: 0.75px;">${this.getAttribute(
+    const description = `<mui-body large style="letter-spacing: 0.75px; max-width: 75ch;">${this.getAttribute(
       "description"
     )}</mui-body>`;
 

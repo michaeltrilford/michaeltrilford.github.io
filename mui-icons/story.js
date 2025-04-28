@@ -79,22 +79,35 @@ class storyIcon extends HTMLElement {
                 <mui-code slot="footer">&lt;mui-icon-menu color="inverted"&gt;&lt;/mui-icon-menu&gt;</mui-code>
               </story-icon-grid>
 
-              <story-icon-grid theme="primaryButton">              
-                <mui-icon-menu slot="body" color="primaryButton"></mui-icon-menu>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-primary)" slot="body">Only Icon w/ Primary Button</mui-body>
-                <mui-code slot="footer">&lt;mui-icon-menu color="primaryButton"&gt;&lt;/mui-icon-menu&gt;</mui-code>
+              <story-icon-grid>              
+                <mui-icon-menu slot="body" color="var(--green-500)"></mui-icon-menu>
+                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Custom Color</mui-body>
+                <mui-code slot="footer">&lt;mui-icon-menu color="var(--green-500)"&gt;&lt;/mui-icon-menu&gt;</mui-code>
               </story-icon-grid>
 
-              <story-icon-grid theme="secondaryButton">              
-                <mui-icon-menu slot="body" color="secondaryButton"></mui-icon-menu>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-secondary)" slot="body">Only Icon w/ Secondary Button</mui-body>
-                <mui-code slot="footer">&lt;mui-icon-menu color="secondaryButton"&gt;&lt;/mui-icon-menu&gt;</mui-code>
+
+              <story-icon-grid theme="primary">              
+                <mui-icon-add slot="body" variant="primary"></mui-icon-add>
+                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-primary)" slot="body">Primary Button Usage</mui-body>
+                <mui-code slot="footer">&lt;mui-icon-add variant="primary"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 
-              <story-icon-grid theme="attentionButton">              
-                <mui-icon-menu slot="body" color="attentionButton"></mui-icon-menu>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-attention)" slot="body">Only Icon w/ Attention Button</mui-body>
-                <mui-code slot="footer">&lt;mui-icon-menu color="attentionButton"&gt;&lt;/mui-icon-menu&gt;</mui-code>
+              <story-icon-grid theme="secondary">              
+                <mui-icon-add slot="body" variant="secondary"></mui-icon-add>
+                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-secondary)" slot="body">Secondary Button Usage</mui-body>
+                <mui-code slot="footer">&lt;mui-icon-add variant="secondary"&gt;&lt;/mui-icon-add&gt;</mui-code>
+              </story-icon-grid>
+
+              <story-icon-grid theme="tertiary">              
+                <mui-icon-add slot="body" variant="tertiary"></mui-icon-add>
+                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-tertiary)" slot="body">Tertiary Button Usage</mui-body>
+                <mui-code slot="footer">&lt;mui-icon-add variant="tertiary"&gt;&lt;/mui-icon-add&gt;</mui-code>
+              </story-icon-grid>
+
+              <story-icon-grid theme="attention">              
+                <mui-icon-add slot="body" variant="attention"></mui-icon-add>
+                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-attention)" slot="body">Attention Button Usage</mui-body>
+                <mui-code slot="footer">&lt;mui-icon-add variant="attention"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 
             </mui-grid> 

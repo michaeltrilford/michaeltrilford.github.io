@@ -17,46 +17,46 @@ class storyContainer extends HTMLElement {
 
           <story-card title="Small">
             <mui-container small slot="body">
-              <mui-card><mui-card-body>...Content...</mui-card-body></mui-card>
+              <mui-card><mui-card-body>{Content}</mui-card-body></mui-card>
             </mui-container>
             <mui-code slot="footer">
-              &lt;mui-container small&gt;&lt;/mui-container&gt;
+              &lt;mui-container small&gt;...&lt;/mui-container&gt;
             </mui-code>
           </story-card>
 
           <story-card title="Medium">
           <mui-container medium slot="body">
-            <mui-card><mui-card-body>...Content...</mui-card-body></mui-card>
+            <mui-card><mui-card-body>{Content}</mui-card-body></mui-card>
           </mui-container>
             <mui-code slot="footer">
-              &lt;mui-container medium&gt;&lt;/mui-container&gt;
+              &lt;mui-container medium&gt;...&lt;/mui-container&gt;
             </mui-code>
           </story-card>
 
           <story-card title="Large">
             <mui-container large slot="body">
-              <mui-card><mui-card-body>...Content...</mui-card-body></mui-card>
+              <mui-card><mui-card-body>{Content}</mui-card-body></mui-card>
             </mui-container>
             <mui-code slot="footer">
-              &lt;mui-container large&gt;&lt;/mui-container&gt;
+              &lt;mui-container large&gt;...&lt;/mui-container&gt;
             </mui-code>
           </story-card>
 
           <story-card title="Fluid">
             <mui-container fluid slot="body">
-              <mui-card><mui-card-body>...Content...</mui-card-body></mui-card>
+              <mui-card><mui-card-body>{Content}</mui-card-body></mui-card>
             </mui-container>
             <mui-code slot="footer">
-              &lt;mui-container fluid&gt;&lt;/mui-container&gt;
+              &lt;mui-container fluid&gt;...&lt;/mui-container&gt;
             </mui-code>
           </story-card>
 
           <story-card title="Center">
             <mui-container small center slot="body">
-              <mui-card><mui-card-body>...Content...</mui-card-body></mui-card>
+              <mui-card><mui-card-body>{Content}</mui-card-body></mui-card>
             </mui-container>
             <mui-code slot="footer">
-              &lt;mui-container center&gt;&lt;/mui-container&gt;
+              &lt;mui-container center&gt;...&lt;/mui-container&gt;
             </mui-code>
           </story-card>
 

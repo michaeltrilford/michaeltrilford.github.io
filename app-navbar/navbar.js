@@ -27,6 +27,20 @@ class muiNavbar extends HTMLElement {
         transform: translate(0, 0);
         transition: transform 200ms ease-in, width 200ms ease-in, opacity 200ms ease-in; 
       }
+
+      mui-link::part(color),
+      mui-link::part(color):hover {
+        color: var(--mui-brand);
+      }
+
+      mui-link::part(text-decoration) {
+        text-decoration: none;
+      }
+
+      mui-link::part(text-decoration):hover {
+        text-decoration: underline;
+      }
+
     `;
 
     const Home = `
@@ -95,11 +109,12 @@ class muiNavbar extends HTMLElement {
         </mui-navbar-menu>
       </mui-responsive>
 
-      <mui-navbar-toggle link="#/home-page" title="michaeltrilford.mui">
+      <mui-navbar-toggle>
         <mui-icon-toggle color="var(--mui-brand)" rotate>
           <mui-icon-menu slot="primary" size="x-small"></mui-icon-menu>
           <mui-icon-close slot="secondary" size="x-small"></mui-icon-close>
         </mui-icon-toggle>
+        <mui-link slot="home-link" data-close-menu link="#/home-page">michaeltrilford.mui</mui-link>
       </mui-navbar-toggle>
     `;
 
@@ -123,6 +138,27 @@ class muiNavbar extends HTMLElement {
     // Close mobile menu when a link is clicked
     const mobileLinks = this.navbarEl.querySelectorAll("mui-navbar-link");
     mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (this.navbarEl.hasAttribute("open")) {
+          // 1. Close the mobile menu
+          this.navbarEl.removeAttribute("open");
+
+          // 2. Update tabindex
+          this.updateTabIndexForMenuLinks(this.navbarEl, false);
+
+          // 3. Reset the menu icon toggle state
+          this.menuIconEl.toggle = false;
+          this.menuIconEl.removeAttribute("toggle"); // <-- clear the attribute too if necessary
+        }
+      });
+    });
+
+    // Close mobile menu when a home link is clicked
+    const homeLinks = this.shadowRoot.querySelectorAll(
+      "mui-link[data-close-menu]"
+    );
+
+    homeLinks.forEach((link) => {
       link.addEventListener("click", () => {
         if (this.navbarEl.hasAttribute("open")) {
           // 1. Close the mobile menu

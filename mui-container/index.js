@@ -18,7 +18,7 @@ class muiContainer extends HTMLElement {
         padding-top: 2.4rem;
         padding-bottom: 2.4rem;
         min-width: 30.0rem;
-        margin: 0 4.8rem; }
+        margin: 0 2.4rem; }
 
       /* Center
       ========================================= */

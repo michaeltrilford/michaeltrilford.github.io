@@ -1,7 +1,7 @@
 /* Mui Link */
 class muiLink extends HTMLElement {
   static get observedAttributes() {
-    return ["target", "href", "variant", "weight", "size", "as"];
+    return ["target", "href", "variant", "weight", "size"];
   }
 
   constructor() {
@@ -24,13 +24,16 @@ class muiLink extends HTMLElement {
     <style>
 
       :host {
-        // display: inline;
         display: inline-flex;
       }
       a {
         font-size: var(--link-font-size);
         color: var(--link-text-color-default);
         font-weight: var(--link-font-weight);
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-sizing: border-box;
       }
       a:active, a:hover { outline: var(--space-000); }
 
@@ -79,55 +82,24 @@ class muiLink extends HTMLElement {
         font-weight: 700;
       }
 
-      /* Button
+      /* Button Primary 
       ========================================= */
-      :host([as="button"]) {
+
+      :host([variant="primary"]) {
         display: inline-block;
       }
 
-      :host([as="button"]) a {
-        border: none;
-        cursor: pointer;
-        width: auto;
-        border-radius: var(--link-radius);
-        padding: var(--space-200) var(--space-500);
-        text-decoration: none;
-        line-height: var(--body-line-height);
+      :host([variant="primary"]) a {
         display: inline-block;
-        box-sizing: border-box;
+        text-decoration: none;
+        border: var(--link-border-primary); 
+        padding: var(--space-200) var(--space-500);
+        border-radius: var(--link-radius);
         background-color: var(--link-background-primary);
         color: var(--link-text-color-primary);
         font-size: var(--link-button-font-size);
         font-weight: var(--link-button-font-weight);
-      }
-
-      :host([as="button"]) a:hover {
-        background-color: var(--link-background-primary-hover);
-        color: var(--link-text-color-primary-hover);
-      } 
-
-      :host([as="button"]) a:focus {
-        background-color: var(--link-background-primary-focus);
-        color: var(--link-text-color-primary-focus);
-      }
-
-      :host([as="button"]) a:focus-visible {
-        outline: var(--outline-thick);
-        background-color: var(--link-background-primary-focus);
-        color: var(--link-text-color-primary-focus);
-      }
-
-      :host([variant="primary"]) a:disabled {
-        color: var(--link-text-color-primary-disabled);
-        background: var(--link-background-primary-disabled); 
-      }
-
-      /* Button Primary 
-      ========================================= */
-      :host([variant="primary"]) a {
-        background-color: var(--link-background-primary);
-        color: var(--link-text-color-primary);
-        border: var(--link-border-primary); 
+        line-height: var(--body-line-height);
       }
 
       :host([variant="primary"]) a:hover {
@@ -153,10 +125,21 @@ class muiLink extends HTMLElement {
 
       /* Button Secondary 
       ========================================= */
+      :host([variant="secondary"]) {
+        display: inline-block;
+      }
+
       :host([variant="secondary"]) a {
+        display: inline-block;
+        text-decoration: none;
+        border: var(--link-border-secondary);
+        padding: var(--space-200) var(--space-500);
+        border-radius: var(--link-radius);
         background-color: var(--link-background-secondary);
         color: var(--link-text-color-secondary);
-        border: var(--link-border-secondary); 
+        font-size: var(--link-button-font-size);
+        font-weight: var(--link-button-font-weight);
+        line-height: var(--body-line-height);
       }
 
       :host([variant="secondary"]) a:hover {
@@ -180,12 +163,63 @@ class muiLink extends HTMLElement {
         background: var(--link-background-secondary-disabled); 
       }
 
+      /* Button Tertiary
+      ========================================= */
+      :host([variant="tertiary"]) {
+        display: inline-block;
+      }
+
+      :host([variant="tertiary"]) a {
+        display: inline-block;
+        text-decoration: none;
+        border: var(--link-border-tertiary);
+        padding: var(--space-200) var(--space-500);
+        border-radius: var(--link-radius);
+        background-color: var(--link-background-tertiary);
+        color: var(--link-text-color-tertiary);
+        font-size: var(--link-button-font-size);
+        font-weight: var(--link-button-font-weight);
+        line-height: var(--body-line-height);
+      }
+
+      :host([variant="tertiary"]) a:hover {
+        color: var(--link-text-color-tertiary-hover);
+        background: var(--link-background-tertiary-hover); 
+      }
+
+      :host([variant="tertiary"]) a:focus {
+        color: var(--link-text-color-tertiary-focus);
+        background: var(--link-background-tertiary-focus); 
+      }
+
+      :host([variant="tertiary"]) a:focus-visible {
+        outline: var(--outline-thick);
+        color: var(--link-text-color-tertiary-focus);
+        background: var(--link-background-tertiary-focus); 
+      }
+
+      :host([variant="tertiary"]) a:disabled {
+        color: var(--link-text-color-tertiary-disabled);
+        background: var(--link-background-tertiary-disabled); 
+      }
+
       /* Button Attention
       ========================================= */
+      :host([variant="attention"]) {
+        display: inline-block;
+      }
+
       :host([variant="attention"]) a {
+        display: inline-block;
+        text-decoration: none;
+        border: var(--link-border-tertiary);
+        padding: var(--space-200) var(--space-500);
+        border-radius: var(--link-radius);
         background-color: var(--link-background-attention);
         color: var(--link-text-color-attention);
-        border: var(--link-border-attention); 
+        font-size: var(--link-button-font-size);
+        font-weight: var(--link-button-font-weight);
+        line-height: var(--body-line-height);
       }
 
       :host([variant="attention"]) a:hover {
