@@ -153,13 +153,13 @@ class storyLink extends HTMLElement {
           </div>
           <mui-code slot="footer">
       
-            // EXAMPLE: Scopped CSS (Web component)
+            // Scoped CSS (Web component)
             <br />
             <br />
 
             class customUI extends HTMLElement {<br>
             &nbsp;&nbsp;static get observedAttributes() {<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;return ["link", "title"];<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return [...];<br>
             &nbsp;&nbsp;}<br><br>
 
             &nbsp;&nbsp;constructor() {<br>
@@ -171,19 +171,10 @@ class storyLink extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;});
             <br><br>
 
-            &nbsp;&nbsp;&nbsp;&nbsp;// Set defaults<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;const variant = this.getAttribute("variant") || "x-small";<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;this.setAttribute("variant", variant);<br><br>
-
             &nbsp;&nbsp;&nbsp;&nbsp;const styles = &#96;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:host { display: block; }<br><br>
-
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Part Selector Example Use<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:host { ... }<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Part Selector<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/////////////////////////////
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Select the Web Component and style it without conflicts.<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Scoped CSS ensures styles don't leak outside of this component.<br>
             <br />
             <br />
 
@@ -210,8 +201,8 @@ class storyLink extends HTMLElement {
 
             &nbsp;&nbsp;&nbsp;&nbsp;shadowRoot.innerHTML = &#96;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;style&gt;&#36;{styles}&lt;/style&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-link href="&#36;{this.getAttribute(&quot;link&quot;)}"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#36;{this.getAttribute(&quot;title&quot;)}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-link href="..."&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-link&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&#96;;<br>
             &nbsp;&nbsp;}<br>
