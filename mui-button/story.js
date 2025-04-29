@@ -14,7 +14,7 @@ class storyButton extends HTMLElement {
       <mui-v-stack space="var(--space-700)">
 
         <story-card title="Primary">
-        <mui-button disabled variant="primary" slot="body">Submit</mui-button>
+        <mui-button variant="primary" slot="body">Submit</mui-button>
           <mui-code slot="footer">
             &lt;mui-button variant="primary"&gt;
             <br />
