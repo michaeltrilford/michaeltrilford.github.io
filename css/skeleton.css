@@ -15,36 +15,3 @@
     flex-direction: row;
   }
 }
-
-/* .skeleton_first {
-  background: var(--mui-brand);
-  animation: pulse 2s infinite ease-in-out;
-  flex: 1;
-}
-.skeleton_second {
-  background: var(--grey-1000);
-  flex: 0 0 7.6rem;
-  animation: pulse 2s infinite ease-in-out;
-}
-
-@media (min-width: 960px) {
-  .skeleton_first {
-    background: var(--grey-1000);
-    flex: 0 0 24rem;
-  }
-  .skeleton_second {
-    background: var(--mui-brand);
-    flex: 1;
-  }
-} */
-
-/* Pulse animation */
-/* @keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.6;
-  }
-} */
