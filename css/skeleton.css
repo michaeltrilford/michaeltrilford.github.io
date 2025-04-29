@@ -16,7 +16,7 @@
   }
 }
 
-.skeleton_first {
+/* .skeleton_first {
   background: var(--mui-brand);
   animation: pulse 2s infinite ease-in-out;
   flex: 1;
@@ -36,10 +36,10 @@
     background: var(--mui-brand);
     flex: 1;
   }
-}
+} */
 
 /* Pulse animation */
-@keyframes pulse {
+/* @keyframes pulse {
   0%,
   100% {
     opacity: 1;
@@ -47,4 +47,4 @@
   50% {
     opacity: 0.6;
   }
-}
+} */
