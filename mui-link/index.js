@@ -18,7 +18,7 @@ class muiLink extends HTMLElement {
   async connectedCallback() {
     await this.waitForPartMap();
 
-    const partMap = getPartMap("text", "spacing", "layout");
+    const partMap = getPartMap("text", "spacing", "layout", "visual");
 
     let html = `
     <style>

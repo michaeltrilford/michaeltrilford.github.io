@@ -3,13 +3,28 @@ export class AppContainer extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
 
+    this.setAttribute("tabindex", "-1"); // Make the app-container focusable
+    this.setAttribute("role", "main"); // Helps with screen reader navigation
+
     const style = document.createElement("style");
     style.textContent = `
       :host {
-        width: 100%;
         display: grid;
-        align-content: stretch;
       }
+
+      :host(.focused) {
+        outline-offset: calc(var(--stroke-size-500) * -1);
+      }
+
+      @media (min-width: 960px) {
+        :host {
+          padding: var(--space-500);         
+          padding-left: var(--space-500);
+          padding-right: var(--space-500);
+          padding-bottom: var(--space-500);
+        } 
+      }
+
     `;
 
     this.shadowRoot.appendChild(style);
@@ -26,6 +41,8 @@ export class AppContainer extends HTMLElement {
       "/components-design-tokens": "story-tokens-components",
       "/text-part-selectors": "story-parts-text",
       "/spacing-part-selectors": "story-parts-spacing",
+      "/layout-part-selectors": "story-parts-layout",
+      "/visual-part-selectors": "story-parts-visual",
 
       "/alerts": "story-alert",
       "/badge": "story-badge",
@@ -48,6 +65,12 @@ export class AppContainer extends HTMLElement {
       "/table": "story-table",
       "/slat": "story-slat",
     };
+
+    // ✨ NEW CHECK ✨
+    if (!path.startsWith("/")) {
+      // It's just a hash fragment (e.g., "main-content") — don't reload a page!
+      return;
+    }
 
     const tagName = routes[path] || routes["/home"]; // fallback to home if not found
 

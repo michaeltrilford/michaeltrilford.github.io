@@ -12,3 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
     delete document.body.dataset.userIsTabbing;
   });
 });
+
+// Skip to main
+document.addEventListener("DOMContentLoaded", () => {
+  // Optional: Detect keyboard navigation for focus styles
+  document.body.addEventListener("keydown", (e) => {
+    if (e.key === "Tab") {
+      document.body.dataset.userIsTabbing = "true";
+    }
+  });
+
+  document.body.addEventListener("mousedown", () => {
+    delete document.body.dataset.userIsTabbing;
+  });
+});

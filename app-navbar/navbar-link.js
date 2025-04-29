@@ -17,57 +17,59 @@ class muiNavbarLink extends HTMLElement {
         display: block;
       }
 
-      a {
-        text-decoration: none;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        display: block;
-        background: transparent;
-        margin: 0;
-        color: white;
-        display: block;
-        padding: 0.75rem var(--space-500);
+      mui-link {
         transition: opacity 400ms ease-in, transform 100ms ease-in;
         opacity: 0.3;
-        font-weight: bold;
-        font-size: var(--font-size-100);
-        margin: 0; 
+        display: block;
       }
 
-      :host([active]) a { 
-        background: black; 
-        opacity: 1 !important; 
-      }
-      
-      a:hover { 
+      mui-link:hover { 
         opacity: 1; 
-        color: var(--white); 
       }
 
-      a:focus { 
-        color: var(--white);
+      mui-link:focus { 
         background: var(--black);
         opacity: 1; 
       }
 
-      @media (min-width: 961px) {
-        a {
-          font-size: var(--font-size-100);
-          margin: 0;
-        }
-        :host([active]) {
-          opacity: 1;
-          transform-origin: 20% 50%; 
-        }
-        a:hover { 
+      @media (min-width: 960px) {
+        mui-link:hover { 
           transform: scale(1.1); 
         } 
-      }  
+      } 
+
+      /* Text Parts */
+      mui-link::part(color) {
+        color: var(--white);
+      }
+      mui-link::part(text-decoration) {
+        text-decoration: none;
+      }
+      mui-link::part(font-weight) {
+        font-weight: var(--font-weight-700);
+      }
+
+      /* Spacing Parts */
+      mui-link::part(padding) {
+        padding: var(--space-200) var(--space-500);
+      }
+      mui-link::part(margin) {
+        margin: var(--space-000);
+      }
+      mui-link::part(width) {
+        width: 100%;
+      }
+
+      /* Layout Parts */
+      mui-link::part(display) {
+        display: block;
+      } 
 
     </style>
 
-    <a href="${this.getAttribute("link")}">${this.getAttribute("title")}</a> 
+    <mui-link href="${this.getAttribute("link")}">${this.getAttribute(
+      "title"
+    )}</mui-link> 
 
     `;
 

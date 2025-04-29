@@ -31,7 +31,7 @@ class muiPartLocalSlat extends HTMLElement {
       }
 
       mui-h-stack::part(align-items) {
-        align-items: center;
+        align-items: end;
       }
 
     `;

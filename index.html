@@ -7,20 +7,22 @@
     <link rel="stylesheet" href="css/mui-reset.css" />
     <link rel="stylesheet" href="css/mui-base.css" />
     <link rel="stylesheet" href="css/author.css" />
-    <!-- <link rel="stylesheet" href="css/skeleton.css"></link> -->
+    <link rel="stylesheet" href="css/skeleton.css"></link>
     <meta name="theme-color" content="var(--mui-brand)" />
     <script src="js/vendor/index.js" type="module" defer></script>
+    <script src="mui-utils/index.js" type="module" defer></script>
   </head>
 
   <body>
-    <!-- <div id="loader" class="skeleton">
+    <div id="loader" class="skeleton">
       <div class="skeleton_nav"></div>
       <div class="skeleton_body"></div>
-    </div> -->
+    </div>
     <div id="app">
       <mui-navbar>
-        <app-container slot="main-content"></app-container>
+        <mui-navbar-skip href="#user-skipped-menu" slot="skip"></mui-navbar-skip>
       </mui-navbar>
+      <app-container></app-container>
     </div>
   </body>
 </html>

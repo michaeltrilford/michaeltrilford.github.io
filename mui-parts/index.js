@@ -35,8 +35,8 @@ window.PartTypes = {
     "grid-row",
     "place-items",
     "place-content",
+    "vertical-align",
   ],
-  alignment: ["vertical-align"],
   visual: [
     "background",
     "border",

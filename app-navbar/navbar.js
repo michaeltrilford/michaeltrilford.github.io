@@ -7,13 +7,34 @@ class muiNavbar extends HTMLElement {
     const styles = `
       :host { 
         display: grid;
-        grid-template-rows: 1fr 7.6rem;
-        min-height: 100vh; 
+        position: fixed;
+        z-index: 100;
+        bottom: 0;
+        left: 0;
+        width: 100%;
       }
-      @media (min-width: 961px) {
-        :host { 
-          grid-template-rows: 1fr;
-          grid-template-columns: 24rem 1fr;
+
+      #desktop {
+        display: none;
+      }
+      #mobile {
+        display: block;
+      }
+
+      @media (min-width: 960px) {
+
+      :host { 
+        position: static;
+        bottom: 0;
+        left: 0;
+        min-height: 100vh;
+      }
+
+        #desktop {
+          display: block;
+        }
+        #mobile {
+          display: none;
         }
       }
     
@@ -60,6 +81,8 @@ class muiNavbar extends HTMLElement {
       <mui-navbar-group id="part-types" groupname="Part Selectors">
         <mui-navbar-link link="#/text-part-selectors" title="Text"></mui-navbar-link>
         <mui-navbar-link link="#/spacing-part-selectors" title="Spacing"></mui-navbar-link>
+        <mui-navbar-link link="#/layout-part-selectors" title="Layout"></mui-navbar-link>
+        <mui-navbar-link link="#/visual-part-selectors" title="Visual"></mui-navbar-link>
       </mui-navbar-group>
     `;
 
@@ -91,23 +114,21 @@ class muiNavbar extends HTMLElement {
     // We provide the shadow root with some HTML
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <mui-navbar-body>
-        <slot name="main-content"></slot>
-      </mui-navbar-body>
 
-      <mui-responsive breakpoint="960">
-        <mui-navbar-menu desktop slot="showAbove" part="menu">
-          ${Home}
-          ${Required}
-          ${Parts}
-          ${Components}
-        </mui-navbar-menu>
-        <mui-navbar-menu mobile id="mobile" slot="showBelow">
-          ${Required}
-          ${Parts}
-          ${Components}
-        </mui-navbar-menu>
-      </mui-responsive>
+      <mui-navbar-menu desktop id="desktop">
+        <slot name="skip"></slot>
+        ${Home}
+        ${Required}
+        ${Parts}
+        ${Components}
+      </mui-navbar-menu>
+      
+      <mui-navbar-menu mobile id="mobile">
+        <slot name="skip"></slot>
+        ${Required}
+        ${Parts}
+        ${Components}
+      </mui-navbar-menu>
 
       <mui-navbar-toggle>
         <mui-icon-toggle color="var(--mui-brand)" rotate>
@@ -121,7 +142,6 @@ class muiNavbar extends HTMLElement {
     // Query elements
     this.menuIconEl = this.shadowRoot.querySelector("mui-icon-toggle");
     this.navbarEl = this.shadowRoot.getElementById("mobile");
-    this.navbarMainEl = this.shadowRoot.querySelector("mui-navbar-body");
 
     // Helper method to update tabindex
     this.updateTabIndexForMenuLinks = (container, enable) => {
@@ -201,16 +221,6 @@ class muiNavbar extends HTMLElement {
           if (homeLink) homeLink.focus();
         });
       }
-    });
-
-    // On mouse over of main content, remove defined scroll attributes
-    this.navbarMainEl.addEventListener("mouseover", () => {
-      this.navbarMainEl.removeAttribute("onscroll", "fixed-view");
-    });
-
-    // On scroll of the navigation, add scroll attributes
-    this.navbarEl.addEventListener("scroll", () => {
-      this.navbarMainEl.setAttribute("onscroll", "fixed-view");
     });
   }
 }

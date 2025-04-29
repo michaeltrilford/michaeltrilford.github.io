@@ -5,7 +5,7 @@ class storyContainer extends HTMLElement {
     const styles = `
       :host { display: block; }
 
-      mui-container::part(width) { min-width: initial;} 
+      mui-container { min-width: initial; } 
     `;
 
     shadowRoot.innerHTML = `

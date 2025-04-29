@@ -12,9 +12,6 @@ class muiNavbarToggle extends HTMLElement {
       :host {
         width: 100%;
         margin-bottom: 0;
-        position: fixed;
-        bottom: 0;
-        left: 0;
         background: #191919;
         padding: var(--space-400) var(--space-500);
         display: flex;

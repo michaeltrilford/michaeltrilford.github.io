@@ -15,30 +15,36 @@ const loadScripts = (scriptArray) => {
   );
 };
 
-// OLD Skeleton
-// const reveal = () => {
-//   const loader = document.getElementById("loader");
+const reveal = () => {
+  const loader = document.getElementById("loader");
 
-//   if (document.startViewTransition) {
-//     document.startViewTransition(() => {
-//       if (loader) {
-//         loader.style.opacity = "0";
-//       }
-//     });
-//   } else {
-//     if (loader) {
-//       loader.style.opacity = "0";
-//     }
-//   }
+  const transitionOutLoader = () => {
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        if (loader) {
+          loader.style.opacity = "0"; // Fade out
+        }
+      });
+    } else {
+      if (loader) {
+        loader.style.opacity = "0";
+      }
+    }
 
-//   setTimeout(() => {
-//     const loaderCheck = document.getElementById("loader");
-//     if (loaderCheck) {
-//       loaderCheck.style.display = "none";
-//     }
-//   }, 1000);
-// };
+    setTimeout(() => {
+      if (loader) {
+        loader.style.display = "none"; // Fully hide after fade-out
+      }
+    }, 1000); // ⏳ Fade-out duration match (1s for example)
+  };
 
+  // When the page has actually finished rendering
+  if (document.readyState === "complete") {
+    transitionOutLoader();
+  } else {
+    window.addEventListener("load", transitionOutLoader);
+  }
+};
 // Utility function to add static head elements
 const addHeadElements = ({
   titleText = "MUI",
@@ -97,7 +103,7 @@ const AppCompArray = [
   "app-navbar/navbar-group.js",
   "app-navbar/navbar-link.js",
   "app-navbar/navbar-toggle.js",
-  "app-navbar/navbar-body.js",
+  "app-navbar/navbar-skip.js",
   "app-navbar/navbar-menu.js",
 ];
 const MuiCompArray = [
@@ -176,6 +182,8 @@ const PageArray = [
   "mui-tokens/story-components.js",
   "mui-parts/story-parts-text.js",
   "mui-parts/story-parts-spacing.js",
+  "mui-parts/story-parts-layout.js",
+  "mui-parts/story-parts-visual.js",
 ];
 
 // Load all resources asynchronously
@@ -194,6 +202,36 @@ Promise.all([
       titleText: "MUI", // Customize here
       descriptionContent:
         "MUI is an experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS", // Customize here
+    });
+
+    // Wait for the skip button to be ready (inside Shadow DOM)
+    const navbarSkip = document.querySelector("mui-navbar-skip");
+
+    if (navbarSkip && navbarSkip.shadowRoot) {
+      const skipLink = navbarSkip.shadowRoot.querySelector(".skip-to-main");
+
+      if (skipLink) {
+        skipLink.addEventListener("click", (e) => {
+          e.preventDefault();
+          const appContainer = document.querySelector("app-container");
+          if (appContainer) {
+            appContainer.focus(); // Move focus to <app-container>
+            appContainer.classList.add("focused"); // Add 'focused' class when focused
+          }
+        });
+
+        skipLink.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            skipLink.click();
+          }
+        });
+      }
+    }
+
+    // Remove 'focused' class when focus is lost (optional, but helps in cleaning up styles)
+    document.querySelector("app-container").addEventListener("blur", (e) => {
+      e.target.classList.remove("focused");
     });
 
     // Once everything is loaded, reveal the content

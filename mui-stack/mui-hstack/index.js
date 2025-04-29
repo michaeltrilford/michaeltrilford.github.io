@@ -28,7 +28,7 @@ class muiHStack extends HTMLElement {
   async connectedCallback() {
     await this.waitForPartMap();
 
-    const partMap = getPartMap("spacing", "layout", "alignment", "visual");
+    const partMap = getPartMap("spacing", "layout", "visual");
 
     this.shadowRoot.innerHTML = `
       <style>${this.styles}</style>
