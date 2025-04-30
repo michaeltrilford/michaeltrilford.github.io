@@ -1,5 +1,4 @@
-/* Mui Icon: Back */
-class muiIconBack extends HTMLElement {
+class muiIconInfo extends HTMLElement {
   static get observedAttributes() {
     return ["size", "color", "variant"];
   }
@@ -27,7 +26,7 @@ class muiIconBack extends HTMLElement {
     const rawColor = this.getAttribute("color"); // Raw color
     const variant = this.getAttribute("variant"); // Variant name
 
-    // Color map for predefined color options
+    // Map semantic names to actual token values
     const colorMap = {
       default: "var(--icon-color-default)",
       inverted: "var(--icon-color-inverted)",
@@ -48,7 +47,7 @@ class muiIconBack extends HTMLElement {
       rawColor ||
       "var(--icon-color-default)";
 
-    // Map size to actual values
+    // Size map for different size options
     const sizeMap = {
       "x-small": "1.6rem",
       small: "2.4rem",
@@ -66,7 +65,7 @@ class muiIconBack extends HTMLElement {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          fill: ${iconColor};
+          fill: ${iconColor}; 
         }
         svg {
           width: 100%;
@@ -75,11 +74,18 @@ class muiIconBack extends HTMLElement {
         }
       </style>
 
-      <svg viewBox="0 0 36 30">
-        <path d="M36,12H10.2l7.6-7.6l-4.2-4.2L1.1,12.6C1.2,12.6,1,12.7,1,12.8l-0.1,0.1l0,0c0,0,0,0,0,0l0,0c0,0,0,0,0,0 c-0.1,0.1-0.2,0.3-0.4,0.4C0.2,13.8,0,14.4,0,15c0,0.6,0.2,1.1,0.5,1.6c0.1,0.2,0.3,0.4,0.4,0.5l0,0c0,0,0.1,0.1,0.1,0.1l0.1,0.1 l12.5,12.5l4.2-4.2L10.2,18H36V12z" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 36"
+        >
+          <path
+            d="M17.993 33C9.75 33 3 26.25 3 18.007S9.75 3 17.993 3 33 9.764 33 18.007 26.236 33 17.993 33m.042-19.177c1.269 0 2.315-1.074 2.315-2.33 0-1.324-1.046-2.356-2.315-2.356a2.35 2.35 0 0 0-2.343 2.357c0 1.255 1.074 2.329 2.343 2.329m-2.748 12.064h5.97c.85 0 1.52-.6 1.52-1.492 0-.823-.67-1.479-1.52-1.479h-1.074v-5.37c0-1.185-.558-1.924-1.674-1.924H15.58c-.864 0-1.52.642-1.52 1.465 0 .892.656 1.492 1.52 1.492h1.255v4.337h-1.548c-.85 0-1.52.656-1.52 1.479 0 .892.67 1.492 1.52 1.492"
+          ></path>
       </svg>
+      
+
     `;
   }
 }
 
-customElements.define("mui-icon-back", muiIconBack);
+customElements.define("mui-icon-info", muiIconInfo);

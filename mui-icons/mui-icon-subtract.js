@@ -1,4 +1,3 @@
-/* Mui Icon: Subtract */
 class muiIconSubtract extends HTMLElement {
   static get observedAttributes() {
     return ["size", "color", "variant"];
@@ -75,8 +74,13 @@ class muiIconSubtract extends HTMLElement {
         }
       </style>
 
-      <svg viewBox="0 0 36 30">
-        <rect x="3" y="12" width="30" height="6"/>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 36"
+      >
+        <path
+          d="M6.114 21C4.53 21 3 19.63 3 18s1.531-3 3.114-3h23.773C31.537 15 33 16.37 33 18s-1.462 3-3.113 3z"
+        ></path>
       </svg>
 
     `;

@@ -1,4 +1,4 @@
-class muiIconGrid extends HTMLElement {
+class muiIconUpChevron extends HTMLElement {
   static get observedAttributes() {
     return ["size", "color", "variant"];
   }
@@ -26,7 +26,7 @@ class muiIconGrid extends HTMLElement {
     const rawColor = this.getAttribute("color"); // Raw color
     const variant = this.getAttribute("variant"); // Variant name
 
-    // Color map for predefined color options
+    // Map semantic names to actual token values
     const colorMap = {
       default: "var(--icon-color-default)",
       inverted: "var(--icon-color-inverted)",
@@ -47,7 +47,7 @@ class muiIconGrid extends HTMLElement {
       rawColor ||
       "var(--icon-color-default)";
 
-    // Map size to actual values
+    // Size map for different size options
     const sizeMap = {
       "x-small": "1.6rem",
       small: "2.4rem",
@@ -79,7 +79,7 @@ class muiIconGrid extends HTMLElement {
         viewBox="0 0 36 36"
       >
         <path
-          d="M5.737 12.102C4.045 12.102 3 11.06 3 9.34V6.263C3 4.543 4.045 3.5 5.737 3.5h3.252c1.693 0 2.737 1.043 2.737 2.763V9.34c0 1.72-1.044 2.763-2.737 2.763zm10.63 0c-1.692 0-2.737-1.042-2.737-2.763V6.263c0-1.72 1.045-2.763 2.737-2.763h3.253c1.692 0 2.736 1.043 2.736 2.763V9.34c0 1.72-1.044 2.763-2.736 2.763zm10.644 0c-1.693 0-2.737-1.042-2.737-2.763V6.263c0-1.72 1.044-2.763 2.737-2.763h3.252C31.955 3.5 33 4.543 33 6.263V9.34c0 1.72-1.044 2.763-2.737 2.763zM5.737 22.308C4.045 22.308 3 21.252 3 19.544v-3.088c0-1.708 1.045-2.764 2.737-2.764h3.252c1.693 0 2.737 1.056 2.737 2.764v3.089c0 1.707-1.044 2.763-2.737 2.763zm10.63 0c-1.692 0-2.737-1.056-2.737-2.764v-3.088c0-1.708 1.045-2.764 2.737-2.764h3.253c1.692 0 2.736 1.056 2.736 2.764v3.089c0 1.707-1.044 2.763-2.736 2.763zm10.644 0c-1.693 0-2.737-1.056-2.737-2.764v-3.088c0-1.708 1.044-2.764 2.737-2.764h3.252c1.692 0 2.737 1.056 2.737 2.764v3.089c0 1.707-1.044 2.763-2.737 2.763zM5.737 32.5C4.045 32.5 3 31.444 3 29.737V26.66c0-1.72 1.045-2.776 2.737-2.776h3.252c1.693 0 2.737 1.055 2.737 2.776v3.076c0 1.707-1.044 2.763-2.737 2.763zm10.63 0c-1.692 0-2.737-1.056-2.737-2.763V26.66c0-1.72 1.045-2.776 2.737-2.776h3.253c1.692 0 2.736 1.055 2.736 2.776v3.076c0 1.707-1.044 2.763-2.736 2.763zm10.644 0c-1.693 0-2.737-1.056-2.737-2.763V26.66c0-1.72 1.044-2.776 2.737-2.776h3.252c1.692 0 2.737 1.055 2.737 2.776v3.076c0 1.707-1.044 2.763-2.737 2.763z"
+          d="m3.877 21.78 11.509-11.585C16.215 9.362 17.012 9 18 9c1.02.016 1.801.377 2.63 1.195L32.123 21.78c.606.597.877 1.273.877 2.122a3.111 3.111 0 0 1-5.404 2.09L18.032 16.2 8.42 25.994C7.766 26.654 6.97 27 6.108 27 4.403 27 3 25.6 3 23.903c0-.833.287-1.525.877-2.122"
         ></path>
       </svg>
 
@@ -87,4 +87,4 @@ class muiIconGrid extends HTMLElement {
   }
 }
 
-customElements.define("mui-icon-grid", muiIconGrid);
+customElements.define("mui-icon-up-chevron", muiIconUpChevron);

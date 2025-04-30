@@ -22,7 +22,15 @@ class muiBadge extends HTMLElement {
       attention: "var(--badge-background-attention)",
     };
 
+    const ariaLiveMap = {
+      neutral: "off", // not live
+      positive: "polite", // success-type
+      warning: "assertive", // higher urgency
+      attention: "assertive", // higher urgency
+    };
+
     const background = backgroundMap[variant] || backgroundMap.neutral;
+    const ariaLive = ariaLiveMap[variant] || "off";
 
     const styles = `
       :host {
@@ -35,6 +43,9 @@ class muiBadge extends HTMLElement {
         padding: var(--space-050) var(--space-200);
       }
     `;
+
+    this.setAttribute("role", "status");
+    this.setAttribute("aria-live", ariaLive);
 
     this._shadow.innerHTML = `
       <style>${styles}</style>

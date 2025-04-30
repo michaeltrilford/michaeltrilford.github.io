@@ -16,11 +16,9 @@ class storyAlert extends HTMLElement {
 
         <mui-v-stack space="var(--space-700)">
 
-          <story-card title="Success">
+          <story-card title="Success" description="Accessibility: The component has the role of aria-live of 'polite' for less important messaging.">
             <div slot="body">
-              <mui-alert variant="success">
-                Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
-              </mui-alert>
+              <mui-alert variant="success">Your message has been sent successfully.</mui-alert>
             </div>
             <mui-code slot="footer">
               &lt;mui-alert variant="success"&gt;
@@ -31,11 +29,9 @@ class storyAlert extends HTMLElement {
             </mui-code>
           </story-card>
 
-          <story-card title="Info">
+          <story-card title="Info"  description="Accessibility: The component has the role of aria-live of 'polite' for less important messaging.">
             <div slot="body">
-              <mui-alert variant="info">
-                Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
-              </mui-alert>
+              <mui-alert variant="info">A problem has occured while submitting your data.</mui-alert>
             </div>
             <mui-code slot="footer">
             &lt;mui-alert variant="info"&gt;
@@ -46,11 +42,9 @@ class storyAlert extends HTMLElement {
           </mui-code>
           </story-card>
 
-          <story-card title="Warning">
+          <story-card title="Warning" description="Accessibility: The component has the role of aria-live of 'assertive' for important messaging">
             <div slot="body">
-              <mui-alert variant="warning">
-                Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
-              </mui-alert>
+              <mui-alert variant="warning">There was a problem with your network connection.</mui-alert>
             </div>
             <mui-code slot="footer">
             &lt;mui-alert variant="warning"&gt;
@@ -61,11 +55,9 @@ class storyAlert extends HTMLElement {
           </mui-code>
           </story-card>
 
-          <story-card title="Error">
+          <story-card title="Error" description="Accessibility: The component has the role of aria-live of 'assertive' for important messaging">
             <div slot="body">
-              <mui-alert variant="error">
-                Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus.
-              </mui-alert>
+              <mui-alert variant="error">Please read the comments carefully.</mui-alert>
             </div>
             <mui-code slot="footer">
             &lt;mui-alert variant="error"&gt;

@@ -132,8 +132,8 @@ class muiNavbar extends HTMLElement {
 
       <mui-navbar-toggle>
         <mui-icon-toggle color="var(--mui-brand)" rotate>
-          <mui-icon-menu slot="primary" size="x-small"></mui-icon-menu>
-          <mui-icon-close slot="secondary" size="x-small"></mui-icon-close>
+          <mui-icon-menu slot="start"></mui-icon-menu>
+          <mui-icon-close slot="end"></mui-icon-close>
         </mui-icon-toggle>
         <mui-link slot="home-link" data-close-menu link="#/home-page">michaeltrilford.mui</mui-link>
       </mui-navbar-toggle>

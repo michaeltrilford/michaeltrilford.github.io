@@ -73,6 +73,11 @@ class storyTokensComponents extends HTMLElement {
             <mui-token-local-slat slot="body" token="--alert-background-info" output="color-mix(in srgb, var(--feedback-info-color) 10%, var(--white) 0%)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--alert-background-warning" output="color-mix(in srgb, var(--feedback-warning-color) 10%, var(--white) 0%)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--alert-background-error" output="color-mix(in srgb, var(--feedback-attention-color) 10%, var(--white) 0%)"></mui-token-local-slat>
+
+            <mui-token-local-slat slot="body" token="--alert-icon-success" output="color-mix(in srgb,var(--feedback-positive-color) 100%,var(--black) 20%);"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--alert-icon-info" output="color-mix(in srgb,var(--feedback-info-color) 100%,var(--black) 20%);"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--alert-icon-warning" output="color-mix(in srgb,var(--feedback-warning-color) 100%,var(--black) 20%);"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--alert-icon-error" output="color-mix(in srgb,var(--feedback-error-color) 100%,var(--black) 20%);"></mui-token-local-slat>
           </story-card>
 
           <story-card title="Button / Base" nofooter>

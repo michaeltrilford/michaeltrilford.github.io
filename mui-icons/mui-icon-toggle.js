@@ -104,35 +104,35 @@ class muiIconToggle extends HTMLElement {
           fill: var(--icon-color-map);
         }
 
-        ::slotted([slot="primary"]) {
+        ::slotted([slot="start"]) {
           transform: scale(1);
         }
 
-        ::slotted([slot="secondary"]) {
+        ::slotted([slot="end"]) {
           transform: scale(0);
         }
 
-        :host([toggle]) ::slotted([slot="primary"]) {
+        :host([toggle]) ::slotted([slot="start"]) {
           transform: scale(0);
         }
 
-        :host([toggle]) ::slotted([slot="secondary"]) {
+        :host([toggle]) ::slotted([slot="end"]) {
           transform: scale(1);
         }
 
-        :host([rotate]) ::slotted([slot="secondary"]) {
+        :host([rotate]) ::slotted([slot="end"]) {
           transform: scale(0) rotate(0deg);
         }
 
-        :host([toggle][rotate]) ::slotted([slot="secondary"]) {
+        :host([toggle][rotate]) ::slotted([slot="end"]) {
           transform: scale(1) rotate(-360deg);
         }
 
       </style>
 
       <button>
-        <slot name="primary"></slot>
-        <slot name="secondary"></slot>
+        <slot name="start"></slot>
+        <slot name="end"></slot>
       </button>
     `;
   }

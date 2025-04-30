@@ -330,6 +330,27 @@
     var(--white) 0%
   );
 
+  --alert-icon-success: color-mix(
+    in srgb,
+    var(--feedback-positive-color) 100%,
+    var(--black) 20%
+  );
+  --alert-icon-info: color-mix(
+    in srgb,
+    var(--feedback-info-color) 100%,
+    var(--black) 20%
+  );
+  --alert-icon-warning: color-mix(
+    in srgb,
+    var(--feedback-warning-color) 100%,
+    var(--black) 20%
+  );
+  --alert-icon-error: color-mix(
+    in srgb,
+    var(--feedback-attention-color) 100%,
+    var(--black) 20%
+  );
+
   /* Button */
   --button-radius: var(--interactive-radius);
   --button-font-size: var(--font-size-100);

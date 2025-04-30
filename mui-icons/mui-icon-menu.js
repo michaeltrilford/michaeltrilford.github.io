@@ -1,4 +1,3 @@
-/* Mui Icon: Menu */
 class muiIconMenu extends HTMLElement {
   static get observedAttributes() {
     return ["size", "color", "variant"];
@@ -74,11 +73,15 @@ class muiIconMenu extends HTMLElement {
           fill: inherit; 
         }
       </style>
-      <svg viewBox="0 0 36 30">
-        <rect width="36" height="6"/>
-        <rect y="24" width="36" height="6"/>
-        <rect y="12" width="36" height="6"/>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 36"
+      >
+        <path
+          d="M6.114 21C4.53 21 3 19.63 3 18s1.531-3 3.114-3h23.773C31.537 15 33 16.37 33 18s-1.462 3-3.113 3zM6.114 12C4.53 12 3 10.63 3 9s1.531-3 3.114-3h23.773C31.537 6 33 7.37 33 9s-1.462 3-3.113 3zM6.114 30C4.53 30 3 28.63 3 27s1.531-3 3.114-3h23.773C31.537 24 33 25.37 33 27s-1.462 3-3.113 3z"
+        ></path>
       </svg>
+      
     `;
   }
 }
