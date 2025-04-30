@@ -16,7 +16,7 @@ class storyPartsLayout extends HTMLElement {
         <mui-v-stack space="var(--space-700)">
 
           <story-card title="Display">
-            <mui-part-local-slat slot="body" token="part(display)" usage="Links, Buttons, Stacks" output="Defines the display type of the element." ></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(display)" usage="Links, Buttons, Stacks, Body" output="Defines the display type of the element." ></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(display) {
               <br />
@@ -27,7 +27,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Flex">
-            <mui-part-local-slat slot="body" token="part(flex)" usage="Links, Buttons, Stacks" output="..."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(flex)" usage="Links, Buttons, Stacks, Body" output="..."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(flex) {
               <br />
@@ -38,7 +38,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Flex Direction">
-            <mui-part-local-slat slot="body" token="part(flex-direction)" usage="Links, Buttons, Stacks" output="..."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(flex-direction)" usage="Links, Buttons, Stacks, Body" output="..."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(flex-direction) {
               <br />
@@ -49,7 +49,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Flex Wrap">
-            <mui-part-local-slat slot="body" token="part(flex-wrap)" usage="Links, Buttons, Stacks" output="..."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(flex-wrap)" usage="Links, Buttons, Stacks, Body" output="..."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(flex-wrap) {
               <br />
@@ -60,7 +60,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Justify Content">
-            <mui-part-local-slat slot="body" token="part(justify-content)" usage="Links, Buttons, Stacks" output="..."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(justify-content)" usage="Links, Buttons, Stacks, Body" output="..."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(justify-content) {
               <br />
@@ -71,7 +71,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Align Items">
-            <mui-part-local-slat slot="body" token="part(align-items)" usage="Links, Buttons, Stacks" output="Defines the line-height of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(align-items)" usage="Links, Buttons, Stacks, Body" output="Defines the line-height of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(align-items) {
               <br />
@@ -82,7 +82,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Align Content">
-            <mui-part-local-slat slot="body" token="part(text-transform)" usage="Links, Buttons, Stacks" output="Defines the case of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-transform)" usage="Links, Buttons, Stacks, Body" output="Defines the case of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-transform) {
               <br />
@@ -93,7 +93,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Align Self">
-            <mui-part-local-slat slot="body" token="part(text-decoration)" usage="Links, Buttons, Stacks" output="Controls the text decoration style (e.g., underline, none)."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-decoration)" usage="Links, Buttons, Stacks, Body" output="Controls the text decoration style (e.g., underline, none)."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-decoration) {
               <br />
@@ -112,7 +112,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Grid Template Columns">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-align) {
               <br />
@@ -124,7 +124,7 @@ class storyPartsLayout extends HTMLElement {
 
 
           <story-card title="Grid Template Rows">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-align) {
               <br />
@@ -136,7 +136,7 @@ class storyPartsLayout extends HTMLElement {
 
 
           <story-card title="Grid Column">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-align) {
               <br />
@@ -147,7 +147,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Grid Row">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-align) {
               <br />
@@ -158,7 +158,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Place Items">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-align) {
               <br />
@@ -169,7 +169,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Place Content">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-align) {
               <br />
@@ -180,7 +180,7 @@ class storyPartsLayout extends HTMLElement {
           </story-card>
 
           <story-card title="Text Align">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks" output="Defines the horizontal alignment of the text."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the text."></mui-part-local-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-align) {
               <br />

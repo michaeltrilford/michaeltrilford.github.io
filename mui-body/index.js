@@ -5,15 +5,22 @@ class muiBody extends HTMLElement {
 
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: "open" });
 
     // Set defaults
     const size = this.getAttribute("size") || "medium";
     const weight = this.getAttribute("weight") || "regular";
     this.setAttribute("size", size);
     this.setAttribute("weight", weight);
+  }
 
-    const styles = `
+  async connectedCallback() {
+    await this.waitForPartMap();
+
+    const partMap = getPartMap("spacing", "layout");
+
+    let html = `
+    <style>
       :host {
         display: block;
       }
@@ -49,12 +56,25 @@ class muiBody extends HTMLElement {
       :host([weight="bold"]) p {
         font-weight: 700;
       }
+    </style>
+    <p part="${partMap}"><slot></slot></p>
 
     `;
-    shadowRoot.innerHTML = `
-      <style>${styles}</style>
-      <p><slot></slot></p>
-  `;
+
+    this.shadowRoot.innerHTML = html;
+  }
+  waitForPartMap() {
+    return new Promise((resolve) => {
+      if (typeof getPartMap === "function") return resolve();
+      const check = () => {
+        if (typeof getPartMap === "function") {
+          resolve();
+        } else {
+          requestAnimationFrame(check);
+        }
+      };
+      check();
+    });
   }
 }
 

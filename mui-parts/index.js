@@ -10,16 +10,7 @@ window.PartTypes = {
     "text-decoration",
     "text-align",
   ],
-  spacing: [
-    "padding",
-    "margin",
-    "gap",
-    "width",
-    "height",
-    "box-sizing",
-    "position",
-    "z-index",
-  ],
+  spacing: ["padding", "margin", "gap", "width", "height", "box-sizing"],
   layout: [
     "display",
     "flex",

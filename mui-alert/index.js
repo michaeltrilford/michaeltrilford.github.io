@@ -57,7 +57,6 @@ class muiAlert extends HTMLElement {
 
     const styles = `
       :host {
-        display: block;
         border-radius: var(--alert-radius);
         padding: var(--space-400);
         background: var(--white);
@@ -68,10 +67,12 @@ class muiAlert extends HTMLElement {
         gap: var(--space-100);
       }
 
-      .alert__label {
-        font-weight: var(--font-weight-bold);
-        margin-right: var(--space-100);
-      } 
+      mui-body::part(display) {
+        display: flex;
+      }
+      mui-body::part(gap) {
+        gap: var(--space-100);
+      }
 
       ${["success", "info", "warning", "error"]
         .map(
@@ -90,7 +91,10 @@ class muiAlert extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
       <${iconTag} size="small" color="var(${iconColor})" class="alert__icon"></${iconTag}>
-      <mui-body><span class="alert__label" style="color: var(${labelColor});">${labelText}</span><slot></slot></mui-body>
+      <mui-body>
+        <span style="color: var(${labelColor}); font-weight: var(--font-weight-bold);">${labelText}</span>
+        <slot></slot>
+      </mui-body>
     `;
   }
 }
