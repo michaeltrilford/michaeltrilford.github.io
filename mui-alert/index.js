@@ -67,13 +67,13 @@ class muiAlert extends HTMLElement {
         gap: var(--space-300);
       }
 
-     @media (min-width: 768px) {
+     @media (min-width: 600px) {
         :host {
           gap: var(--space-100);
         }
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 600px) {
         .icon {
           margin-top: var(--space-000);
         }
@@ -83,14 +83,13 @@ class muiAlert extends HTMLElement {
         color: var(${labelColor}); font-weight: var(--font-weight-bold);
       }
 
-
       mui-body::part(display) {
         display: grid;
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 600px) {
         mui-body::part(display) {
-          display: flex;
+          display: inline;
         }
       }
 
@@ -98,7 +97,7 @@ class muiAlert extends HTMLElement {
         gap: var(--space-000);
       }
 
-      @media (min-width: 768px) {
+      @media (min-width: 600px) {
         mui-body::part(gap) {
           gap: var(--space-100);
         }

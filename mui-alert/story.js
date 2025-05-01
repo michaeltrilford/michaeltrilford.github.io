@@ -31,7 +31,7 @@ class storyAlert extends HTMLElement {
 
           <story-card title="Info"  description="Accessibility: The component has the role of aria-live of 'polite' for less important messaging.">
             <div slot="body">
-              <mui-alert variant="info">A problem has occured while submitting your data.</mui-alert>
+              <mui-alert variant="info">Please read the comments carefully.</mui-alert>
             </div>
             <mui-code slot="footer">
             &lt;mui-alert variant="info"&gt;
@@ -44,7 +44,7 @@ class storyAlert extends HTMLElement {
 
           <story-card title="Warning" description="Accessibility: The component has the role of aria-live of 'assertive' for important messaging">
             <div slot="body">
-              <mui-alert variant="warning">There was a problem with your network connection.</mui-alert>
+              <mui-alert variant="warning">There was a problem with your network connection. <mui-link href="#">Learn more</mui-link></mui-alert>
             </div>
             <mui-code slot="footer">
             &lt;mui-alert variant="warning"&gt;
@@ -57,7 +57,7 @@ class storyAlert extends HTMLElement {
 
           <story-card title="Error" description="Accessibility: The component has the role of aria-live of 'assertive' for important messaging">
             <div slot="body">
-              <mui-alert variant="error">Please read the comments carefully.</mui-alert>
+              <mui-alert variant="error">Please read the comments carefully. <mui-link href="#">Learn more</mui-link></mui-alert>
             </div>
             <mui-code slot="footer">
             &lt;mui-alert variant="error"&gt;
