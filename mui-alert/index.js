@@ -84,23 +84,11 @@ class muiAlert extends HTMLElement {
       }
 
       mui-body::part(display) {
-        display: grid;
-      }
-
-      @media (min-width: 600px) {
-        mui-body::part(display) {
-          display: inline;
-        }
+        display: inline;
       }
 
       mui-body::part(gap) {
         gap: var(--space-000);
-      }
-
-      @media (min-width: 600px) {
-        mui-body::part(gap) {
-          gap: var(--space-100);
-        }
       }
 
       ${["success", "info", "warning", "error"]
