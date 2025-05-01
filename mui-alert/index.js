@@ -64,14 +64,44 @@ class muiAlert extends HTMLElement {
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: start;
-        gap: var(--space-100);
+        gap: var(--space-300);
       }
 
-      mui-body::part(display) {
-        display: flex;
+     @media (min-width: 768px) {
+        :host {
+          gap: var(--space-100);
+        }
       }
+
+      @media (min-width: 768px) {
+        .icon {
+          margin-top: var(--space-000);
+        }
+      }
+
+      .label {
+        color: var(${labelColor}); font-weight: var(--font-weight-bold);
+      }
+
+
+      mui-body::part(display) {
+        display: grid;
+      }
+
+      @media (min-width: 768px) {
+        mui-body::part(display) {
+          display: flex;
+        }
+      }
+
       mui-body::part(gap) {
-        gap: var(--space-100);
+        gap: var(--space-000);
+      }
+
+      @media (min-width: 768px) {
+        mui-body::part(gap) {
+          gap: var(--space-100);
+        }
       }
 
       ${["success", "info", "warning", "error"]
@@ -90,9 +120,9 @@ class muiAlert extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <${iconTag} size="small" color="var(${iconColor})" class="alert__icon"></${iconTag}>
+      <${iconTag} size="small" color="var(${iconColor})" class="icon"></${iconTag}>
       <mui-body>
-        <span style="color: var(${labelColor}); font-weight: var(--font-weight-bold);">${labelText}</span>
+        <span class="label">${labelText}</span>
         <slot></slot>
       </mui-body>
     `;
