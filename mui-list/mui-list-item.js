@@ -22,8 +22,6 @@ class muiListItem extends HTMLElement {
     const styles = `
       :host {
         display: list-item;
-        padding-left: 1rem;
-        text-indent: -1rem;
         margin: var(--space-000);
       }
 

@@ -143,6 +143,7 @@ const MuiCompArray = [
   "mui-icons/mui-icon-subtract.js",
   "mui-icons/mui-icon-accessibility.js",
   "mui-icons/mui-icon-notification.js",
+  "mui-icons/mui-icon-message-group.js",
   "mui-image/index.js",
   "mui-link/index.js",
   "mui-list/mui-list.js",

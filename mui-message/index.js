@@ -59,7 +59,7 @@ class muiMessage extends HTMLElement {
     };
 
     const iconTags = {
-      default: "mui-icon-notification",
+      default: "mui-icon-message-group",
       positive: "mui-icon-check",
       info: "mui-icon-info",
       warning: "mui-icon-warning",
@@ -70,60 +70,103 @@ class muiMessage extends HTMLElement {
     const variantStyle = variantStyles[variant] || variantStyles.default;
     const iconColor = iconColors[variant] || iconColors.default;
     const headingColor = headingColors[variant] || headingColors.default;
+    const customIcon = this.getAttribute("icon");
     const iconTag = iconTags[variant] || iconTags.default;
+    const resolvedIconTag = customIcon || iconTag;
+    const usage = this.getAttribute("usage") || "page-level";
 
-    this.shadowRoot.innerHTML = `
-      <style>
-        :host { 
-          display: block;
-          width: 100%;
-          box-sizing: border-box;
-        }
-          
-        section {                
-          display: grid;
-          grid-template-columns: auto 1fr;
-          padding: var(--space-400) var(--space-400) var(--space-500) var(--space-400);
-          border-radius: var(--message-radius);
-          align-items: start;
-          gap: var(--space-300);
-          ${variantStyle}
-        }
+    const commonStyles = `
+    .icon {
+      margin-top: var(--space-025);
+      display: flex;
+    }
+    .heading {
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-200);
+      ${headingColor}
+    }
+  `;
 
-        .icon {
-          margin-top: var(--space-025);
-          display: flex;
-        }
-
-        .heading {
-          font-weight: var(--font-weight-bold);
-          font-size: var(--font-size-200);
-          ${headingColor}
-        }
-
-      </style>
-
-      <section aria-labelledby="message-heading" aria-live="${ariaLive}" role="${role}">
-        <mui-h-stack space="var(--space-300)">
-
-        <div class="icon">
-          <slot name="icon">
-            <${iconTag} color="var(${iconColor})"></${iconTag}>
-          </slot>
-        </div>
-
-          <mui-v-stack space="var(--space-100)">
+    if (usage === "notification") {
+      this.shadowRoot.innerHTML = `
+        <style>
+          :host {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+          }
+          section {
+            padding: var(--space-100) var(--space-100) var(--space-100) var(--space-400);
+            background: var(--message-background-info);
+            border-radius: var(--radius-200);
+            display: flex;
+            gap: var(--space-200);
+            align-items: start;
+            ${variantStyle}
+          }
+          ${commonStyles}
+        </style>
+    
+        <section aria-labelledby="message-heading" aria-live="${ariaLive}" role="${role}">
+          <div class="icon">
+            <${resolvedIconTag} color="var(${iconColor})"></${resolvedIconTag}>
+          </div>
+          <div>
             <div class="heading" id="message-heading">
               ${headingText}
             </div>
             <slot name="body">
-              <mui-body>Add content for the body.</mui-body>
+              <mui-body>Notification</mui-body>
             </slot>
-          </mui-v-stack>
+          </div>
+        </section>
+      `;
+    } else if (usage === "page-level") {
+      this.shadowRoot.innerHTML = `
+        <style>
+          :host { 
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+          }
+            
+          section {                
+            display: grid;
+            grid-template-columns: auto 1fr;
+            padding: var(--space-400) var(--space-400) var(--space-400) var(--space-400);
+            border-radius: var(--message-radius);
+            align-items: start;
+            gap: var(--space-300);
+            ${variantStyle}
+          }
 
-        </mui-v-stack>
-      </section>
-    `;
+          @media (min-width: 960px) {
+            section {
+              padding: var(--space-400);
+            } 
+          }
+
+          ${commonStyles}
+    
+        </style>
+    
+        <section aria-labelledby="message-heading" aria-live="${ariaLive}" role="${role}">
+          <mui-h-stack space="var(--space-300)">
+            <div class="icon">
+              <${resolvedIconTag} color="var(${iconColor})"></${resolvedIconTag}>
+            </div>
+            <mui-v-stack space="var(--space-100)">
+              <div class="heading" id="message-heading">
+                ${headingText}
+              </div>
+              <slot name="body">
+                <mui-body>Add content for the body.</mui-body>
+              </slot>
+            </mui-v-stack>
+          </mui-h-stack>
+        </section>
+      `;
+    }
   }
 }
 

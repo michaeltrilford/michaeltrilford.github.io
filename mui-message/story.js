@@ -11,7 +11,7 @@ class storyMessage extends HTMLElement {
 
       <story-template 
         title="Messages"
-        description="An inline message component for passive information that is static on the page."
+        description="A message component that provides page-level messaging to the user."
 
        accessibility-items='[
           "ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.", 
@@ -23,14 +23,7 @@ class storyMessage extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Default">
-          <mui-message slot="body"></mui-message>
-          <mui-code slot="footer">
-            &lt;mui-message&gt;...&lt;/mui-message&gt;
-          </mui-code>
-        </story-card>
-
-        <story-card title="Body Text">
+        <story-card title="Default w/ Body Text">
           <mui-message heading="Message heading" slot="body">
             <mui-body slot="body">This is an informational message about updates.</mui-body>
           </mui-message>
@@ -43,7 +36,7 @@ class storyMessage extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="List">
+        <story-card title="Default w/ List">
 
           <mui-message heading="Message heading" slot="body">
             <mui-list as="ul" slot="body">
@@ -68,49 +61,15 @@ class storyMessage extends HTMLElement {
 
         </story-card>
 
-        <story-card title="Image">
-
-          <mui-message heading="Message heading" slot="body">
-            <mui-v-stack slot="body" space="var(--space-200)">
-              <mui-body>This is an informational message about updates.</mui-body>
-              <mui-image>
-                <img slot="image" src="images/image.png" />
-              </mui-image>
-            </mui-v-stack>
-          </mui-message>
-
-          <mui-code slot="footer">
-            &lt;mui-message heading="Message heading"&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-v-stack slot="body" space="var(--space-200)"&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-body&gt;...&lt;/mui-body&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-image&gt;
-            <br /> 
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img slot="image" src="images/image.png" /&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-image&gt;
-            <br /> 
-            &nbsp;&nbsp;&lt;/mui-v-stack slot="body"&gt;
-            <br />
-            &lt;/mui-message&gt;
-          </mui-code>
-
-        </story-card>
-
-        <story-card title="Custom Icon" description="Only use a different icon with the default message state">
-          <mui-message heading="Message heading" slot="body">
-            <mui-icon-accessibility slot="icon"></mui-icon-accessibility>
+        <story-card title="Default w/ Custom Icon" description="Only use a different icon with the default message state">
+          <mui-message heading="Message heading" slot="body" icon="mui-icon-accessibility">
             <mui-list as="ul" slot="body">
               <mui-list-item size="small" size="small">Item 1</mui-list-item>
               <mui-list-item size="small" size="small">Item 2</mui-list-item>
             </mui-list>
           </mui-message>
           <mui-code slot="footer">
-            &lt;mui-message heading="Message heading"&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-icon-accessibility slot="icon"&gt;&lt;/mui-icon-accessibility&gt;
+            &lt;mui-message heading="Message heading" icon="mui-icon-accessibility"&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-list as="ul" slot="body"&gt;
             <br />
@@ -124,7 +83,7 @@ class storyMessage extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Variant / Postive">
+        <story-card title="Variant: Postive">
           <mui-message heading="Message heading" slot="body" variant="positive">
             <mui-body slot="body">This is an informational message about updates.</mui-body>
           </mui-message>
@@ -137,7 +96,7 @@ class storyMessage extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Variant / Info">
+        <story-card title="Variant: Info">
           <mui-message heading="Message heading" slot="body" variant="info">
             <mui-body slot="body">This is an informational message about updates.</mui-body>
           </mui-message>
@@ -150,7 +109,7 @@ class storyMessage extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Variant / Warning">
+        <story-card title="Variant: Warning">
           <mui-message heading="Message heading" slot="body" variant="warning">
             <mui-body slot="body">This is an informational message about updates.</mui-body>
           </mui-message>
@@ -163,7 +122,7 @@ class storyMessage extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Variant / Attention">
+        <story-card title="Variant: Attention">
           <mui-message heading="Message heading" slot="body" variant="attention">
             <mui-body slot="body">This is an informational message about updates.</mui-body>
           </mui-message>
@@ -173,6 +132,13 @@ class storyMessage extends HTMLElement {
             &nbsp;&nbsp;&lt;mui-body slot="body"&gt;...&lt;/mui-body&gt;
             <br />
             &lt;/mui-message&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Usage: Notification (Beta)">
+          <mui-message slot="body" usage="notification"></mui-message>
+          <mui-code slot="footer">
+            &lt;mui-message usage="notification"&gt;...&lt;/mui-message&gt;
           </mui-code>
         </story-card>
 

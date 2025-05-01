@@ -278,6 +278,7 @@
   --badge-background-attention: var(--feedback-attention-color);
 
   /* Heading */
+  --heading-text-color: var(--grey-900);
   --heading-line-height: var(--line-height-200);
 
   /* Body */
@@ -378,7 +379,7 @@
   --message-border: var(--stroke-size-200) var(--stroke-style-solid)
     var(--black);
 
-  --message-background-default: var(--white-opacity-20);
+  --message-background-default: var(--white-opacity-10);
   --message-border-default: var(--stroke-size-200) var(--stroke-style-solid)
     var(--black-opacity-30);
 
@@ -398,7 +399,7 @@
   --message-border-attention: var(--stroke-size-200) var(--stroke-style-solid)
     var(--feedback-attention-stroke-color);
 
-  --message-icon-default: var(--black);
+  --message-icon-default: var(--grey-800);
   --message-icon-positive: color-mix(
     in srgb,
     var(--feedback-positive-color) 100%,
@@ -420,7 +421,7 @@
     var(--black) 20%
   );
 
-  --message-text-color-default: var(--black);
+  --message-text-color-default: var(--grey-900);
   --message-text-color-positive: color-mix(
     in srgb,
     var(--feedback-positive-color) 100%,
