@@ -12,6 +12,11 @@ class storyAlert extends HTMLElement {
       <story-template
         title="Alerts"
         description="Alerts are to surface meaningful system messages related to the users' current task or action."
+
+        accessibility-items='[
+          "ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.", 
+          "The role is set to ALERT for immediate screen reader feedback."
+        ]'
       >
 
         <mui-v-stack space="var(--space-700)">

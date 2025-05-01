@@ -111,6 +111,7 @@ const MuiCompArray = [
   "mui-accordion/accordion-block.js",
   "mui-accordion/accordion-group.js",
   "mui-alert/index.js",
+  "mui-message/index.js",
   "mui-badge/index.js",
   "mui-button/index.js",
   "mui-button-group/index.js",
@@ -140,6 +141,8 @@ const MuiCompArray = [
   "mui-icons/mui-icon-down-chevron.js",
   "mui-icons/mui-icon-left-chevron.js",
   "mui-icons/mui-icon-subtract.js",
+  "mui-icons/mui-icon-accessibility.js",
+  "mui-icons/mui-icon-notification.js",
   "mui-image/index.js",
   "mui-link/index.js",
   "mui-list/mui-list.js",
@@ -191,6 +194,7 @@ const PageArray = [
   "mui-parts/story-parts-spacing.js",
   "mui-parts/story-parts-layout.js",
   "mui-parts/story-parts-visual.js",
+  "mui-message/story.js",
 ];
 
 // Load all resources asynchronously

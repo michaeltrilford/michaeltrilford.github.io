@@ -89,6 +89,7 @@ class muiNavbar extends HTMLElement {
     const Components = `
       <mui-navbar-group id="web-components" groupname="Web Components">
         <mui-navbar-link link="#/alerts" title="Alerts"></mui-navbar-link>
+        <mui-navbar-link link="#/messages" title="Messages"></mui-navbar-link>
         <mui-navbar-link link="#/badge" title="Badge"></mui-navbar-link>
         <mui-navbar-link link="#/buttons" title="Buttons"></mui-navbar-link>
         <mui-navbar-link link="#/responsive" title="Responsive"></mui-navbar-link>

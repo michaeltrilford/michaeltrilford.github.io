@@ -45,6 +45,7 @@ export class AppContainer extends HTMLElement {
       "/visual-part-selectors": "story-parts-visual",
 
       "/alerts": "story-alert",
+      "/messages": "story-message",
       "/badge": "story-badge",
       "/buttons": "story-button",
       "/responsive": "story-responsive",

@@ -152,6 +152,7 @@ class storyTokensBase extends HTMLElement {
 
           <story-card title="Spacing" nofooter>
             <mui-token-local-slat slot="body" token="--space-000" output="0"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--space-025" output="0.2rem"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--space-050" output="0.4rem"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--space-100" output="0.6rem"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--space-200" output="0.8rem"></mui-token-local-slat>

@@ -41,11 +41,11 @@ class muiAlert extends HTMLElement {
 
     const labelColor =
       {
-        success: "--alert-icon-success",
-        info: "--alert-icon-info",
-        warning: "--alert-icon-warning",
-        error: "--alert-icon-error",
-      }[variant] || "--alert-icon-success";
+        success: "--alert-text-color-success",
+        info: "--alert-text-color-info",
+        warning: "--alert-text-color-warning",
+        error: "--alert-text-color-error",
+      }[variant] || "--alert-text-color-success";
 
     const labelText =
       {
@@ -65,6 +65,7 @@ class muiAlert extends HTMLElement {
         grid-template-columns: auto 1fr;
         align-items: start;
         gap: var(--space-300);
+        box-sizing: border-box;
       }
 
      @media (min-width: 600px) {

@@ -131,6 +131,7 @@
 
   /* Spacing */
   --space-000: 0;
+  --space-025: 0.2rem;
   --space-050: 0.4rem;
   --space-100: 0.6rem;
   --space-200: 0.8rem;
@@ -349,6 +350,96 @@
     in srgb,
     var(--feedback-attention-color) 100%,
     var(--black) 20%
+  );
+
+  --alert-text-color-success: color-mix(
+    in srgb,
+    var(--feedback-positive-color) 100%,
+    var(--black) 40%
+  );
+  --alert-text-color-info: color-mix(
+    in srgb,
+    var(--feedback-info-color) 100%,
+    var(--black) 40%
+  );
+  --alert-text-color-warning: color-mix(
+    in srgb,
+    var(--feedback-warning-color) 100%,
+    var(--black) 40%
+  );
+  --alert-text-color-error: color-mix(
+    in srgb,
+    var(--feedback-attention-color) 100%,
+    var(--black) 40%
+  );
+
+  /* Messages */
+  --message-radius: var(--radius-150);
+  --message-border: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--black);
+
+  --message-background-default: var(--white-opacity-20);
+  --message-border-default: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--black-opacity-30);
+
+  --message-background-positive: var(--white);
+  --message-border-positive: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-positive-stroke-color);
+
+  --message-background-info: var(--white);
+  --message-border-info: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-info-stroke-color);
+
+  --message-background-warning: var(--white);
+  --message-border-warning: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-warning-stroke-color);
+
+  --message-background-attention: var(--white);
+  --message-border-attention: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-attention-stroke-color);
+
+  --message-icon-default: var(--black);
+  --message-icon-positive: color-mix(
+    in srgb,
+    var(--feedback-positive-color) 100%,
+    var(--black) 20%
+  );
+  --message-icon-info: color-mix(
+    in srgb,
+    var(--feedback-info-color) 100%,
+    var(--black) 20%
+  );
+  --message-icon-warning: color-mix(
+    in srgb,
+    var(--feedback-warning-color) 100%,
+    var(--black) 20%
+  );
+  --message-icon-attention: color-mix(
+    in srgb,
+    var(--feedback-attention-color) 100%,
+    var(--black) 20%
+  );
+
+  --message-text-color-default: var(--black);
+  --message-text-color-positive: color-mix(
+    in srgb,
+    var(--feedback-positive-color) 100%,
+    var(--black) 40%
+  );
+  --message-text-color-info: color-mix(
+    in srgb,
+    var(--feedback-info-color) 100%,
+    var(--black) 40%
+  );
+  --message-text-color-warning: color-mix(
+    in srgb,
+    var(--feedback-warning-color) 100%,
+    var(--black) 40%
+  );
+  --message-text-color-attention: color-mix(
+    in srgb,
+    var(--feedback-attention-color) 100%,
+    var(--black) 40%
   );
 
   /* Button */
