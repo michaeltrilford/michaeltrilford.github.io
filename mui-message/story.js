@@ -83,7 +83,7 @@ class storyMessage extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Variant: Postive">
+        <story-card title="Variant: Positive">
           <mui-message heading="Message heading" slot="body" variant="positive">
             <mui-body slot="body">This is an informational message about updates.</mui-body>
           </mui-message>
