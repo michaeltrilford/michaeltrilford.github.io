@@ -26,7 +26,7 @@ class storyMessage extends HTMLElement {
 
 
         <story-card title="Prop Types">
-          <mui-responsive breakpoint="740" slot="body">
+          <mui-responsive breakpoint="768" slot="body">
 
             <story-type-table slot="showAbove">
               <story-type-row
@@ -68,52 +68,67 @@ class storyMessage extends HTMLElement {
               </story-type-row>
             </story-type-table>
 
-            <mui-accordion-group slot="showBelow">
+            <mui-accordion-group exclusive slot="showBelow">
               <mui-accordion-block>
-                <span slot="title">View all</span>
-                <mui-v-stack style="padding: var(--space-200)" slot="detail">
-                  <story-type-slat
-                    required 
-                    name="heading"
-                    type="string" 
-                    options=""
-                    default=""
-                    description="Main header for message">
-                  </story-type-slat>
+                <span slot="title">Heading</span>
+                <story-type-slat
+                  slot="detail"
+                  required 
+                  name="heading"
+                  type="string" 
+                  options=""
+                  default=""
+                  description="Main header for message">
+                </story-type-slat>
+              </mui-accordion-block>
 
-                  <story-type-slat
-                    required 
-                    name="slot"
-                    type="string" 
-                    options="body"
-                    default=""
-                    description="Slot in body, list or custom elements">
-                  </story-type-slat>
+              <mui-accordion-block>
+                <span slot="title">Slot</span>
+                <story-type-slat
+                  slot="detail"
+                  required 
+                  name="slot"
+                  type="string" 
+                  options="body"
+                  default=""
+                  description="Slot in body, list or custom elements">
+                </story-type-slat>
+              </mui-accordion-block>
 
-                  <story-type-slat
-                    name="icon"
-                    type="string" 
-                    options="mui-icon-[name]"
-                    default="message"
-                    description="Choose an alternative mui-icon">
-                  </story-type-slat>
+              <mui-accordion-block>
+                <span slot="title">Icon</span>
+                <story-type-slat
+                  slot="detail"
+                  name="icon"
+                  type="string" 
+                  options="mui-icon-[name]"
+                  default="message"
+                  description="Choose an alternative mui-icon">
+                </story-type-slat>
+              </mui-accordion-block>
 
-                  <story-type-slat
-                    name="variant"
-                    type="string" 
-                    options="neutral, positive, info, warning, attention"
-                    default="neutral"
-                    description="Describe the intent or mood of a message">
-                  </story-type-slat>
+              <mui-accordion-block>
+                <span slot="title">Variant</span>
+                <story-type-slat
+                  slot="detail"
+                  name="variant"
+                  type="string" 
+                  options="neutral, positive, info, warning, attention"
+                  default="neutral"
+                  description="Describe the intent or mood of a message">
+                </story-type-slat>
+              </mui-accordion-block>
 
-                  <story-type-slat
-                    name="usage"
-                    type="string" 
-                    default="page"
-                    options="page, notification"
-                    description="Choose a page or notification message">
-                  </story-type-slat>
-                </mui-v-stack>
+              <mui-accordion-block>
+                <span slot="title">Usage</span>
+                <story-type-slat
+                  slot="detail"
+                  name="usage"
+                  type="string" 
+                  default="page"
+                  options="page, notification"
+                  description="Choose a page or notification message">
+                </story-type-slat>
               </mui-accordion-block>
             <mui-accordion-group>
 

@@ -38,10 +38,6 @@ class storyTypeSlat extends HTMLElement {
         border: 0;
         }
 
-      :host .border {
-        border-bottom: 1px solid var(--grey-200);
-        padding-bottom: 24px;
-      }
     `;
 
     const name = this.getAttribute("name") || "—";
@@ -67,18 +63,18 @@ class storyTypeSlat extends HTMLElement {
 
       <mui-responsive breakpoint="600">
 
-        <mui-v-stack space="var(--space-000)" slot="showAbove" class="border">
-          <mui-slat>
+        <mui-v-stack space="var(--space-000)" slot="showAbove">
+          <mui-slat style="gap: var(--space-600)">
             <div slot="start">
-              <mui-v-stack space="var(--space-000)">
-                <mui-heading size="500" level="3"><mui-h-stack space="var(--space-050)">${name} 
+              <mui-v-stack space="var(--space-200)">
+                <mui-body size="medium"><mui-h-stack space="var(--space-050)"><span class="title">Name:</span> ${name} 
                 ${
                   required
                     ? '<span aria-hidden="true" style="color: var(--red-500)">*</span><span class="visually-hidden">(required)</span>'
                     : ""
                 }
-                </mui-h-stack></mui-heading>
-                <mui-body size="small">${description}</mui-body>
+                </mui-h-stack></mui-body>
+                <mui-body size="x-small"><span class="title">Description:</span><br /> ${description}</mui-body>
               </mui-v-stack>
             </div>
 
@@ -90,16 +86,16 @@ class storyTypeSlat extends HTMLElement {
           </mui-slat>
         </mui-v-stack>
 
-        <mui-v-stack space="var(--space-100)" slot="showBelow" class="border">
-          <mui-v-stack space="var(--space-000)">
-            <mui-heading size="500" level="3"><mui-h-stack space="var(--space-050)">${name} 
-            ${
-              required
-                ? '<span aria-hidden="true" style="color: var(--red-500)">*</span><span class="visually-hidden">(required)</span>'
-                : ""
-            }
-            </mui-h-stack></mui-heading>
-            <mui-body size="small">${description}</mui-body>
+        <mui-v-stack space="var(--space-100)" slot="showBelow">
+          <mui-v-stack space="var(--space-200)">
+             <mui-body size="medium"><mui-h-stack space="var(--space-050)"><span class="title">Name:</span> ${name} 
+                ${
+                  required
+                    ? '<span aria-hidden="true" style="color: var(--red-500)">*</span><span class="visually-hidden">(required)</span>'
+                    : ""
+                }
+                </mui-h-stack></mui-body>
+            <mui-body size="x-small">${description}</mui-body>
           </mui-v-stack>
 
           <mui-v-stack space="var(--space-050)">
