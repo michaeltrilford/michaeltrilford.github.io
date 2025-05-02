@@ -18,6 +18,9 @@ class muiCell extends HTMLElement {
     :host(*:first-of-type) {
       padding-left: var(--space-400);
     }
+    :host(*:last-of-type) {
+      padding-right: var(--space-400);
+    }
 
     :host([checkbox]) {
       width: auto;

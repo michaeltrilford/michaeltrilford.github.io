@@ -7,12 +7,12 @@ class muiMessage extends HTMLElement {
 
   connectedCallback() {
     const headingText = this.getAttribute("heading") || "Heading...";
-    const variant = this.getAttribute("variant") || "default";
+    const variant = this.getAttribute("variant") || "neutral";
 
     // Define variant styles
     const variantStyles = {
-      default:
-        "background-color: var(--message-background-default); border: var(--message-border-default);",
+      neutral:
+        "background-color: var(--message-background-neutral); border: var(--message-border-neutral);",
       positive:
         "background-color:  var(--message-background-positive); border: var(--message-border-positive);",
       info:
@@ -24,7 +24,7 @@ class muiMessage extends HTMLElement {
     };
 
     const ariaLiveMap = {
-      default: "polite",
+      neutral: "polite",
       positive: "polite",
       info: "polite",
       warning: "assertive",
@@ -34,7 +34,7 @@ class muiMessage extends HTMLElement {
     const ariaLive = ariaLiveMap[variant] || "polite";
 
     const roleMap = {
-      default: "status",
+      neutral: "status",
       positive: "status",
       info: "status",
       warning: "alert",
@@ -44,7 +44,7 @@ class muiMessage extends HTMLElement {
     const role = roleMap[variant] || "status";
 
     const iconColors = {
-      default: "--message-icon-default",
+      neutral: "--message-icon-neutral",
       positive: "--message-icon-positive",
       info: "--message-icon-info",
       warning: "--message-icon-warning",
@@ -52,7 +52,7 @@ class muiMessage extends HTMLElement {
     };
 
     const headingColors = {
-      default: "color: var(--message-text-color-default);",
+      neutral: "color: var(--message-text-color-neutral);",
       positive: "color: var(--message-text-color-positive);",
       info: "color: var(--message-text-color-info);",
       warning: "color: var(--message-text-color-warning);",
@@ -60,7 +60,7 @@ class muiMessage extends HTMLElement {
     };
 
     const iconTags = {
-      default: "mui-icon-message",
+      neutral: "mui-icon-message",
       positive: "mui-icon-check",
       info: "mui-icon-info",
       warning: "mui-icon-warning",
@@ -68,13 +68,13 @@ class muiMessage extends HTMLElement {
     };
 
     // Get styles for the selected variant
-    const variantStyle = variantStyles[variant] || variantStyles.default;
-    const iconColor = iconColors[variant] || iconColors.default;
-    const headingColor = headingColors[variant] || headingColors.default;
+    const variantStyle = variantStyles[variant] || variantStyles.neutral;
+    const iconColor = iconColors[variant] || iconColors.neutral;
+    const headingColor = headingColors[variant] || headingColors.neutral;
     const customIcon = this.getAttribute("icon");
-    const iconTag = iconTags[variant] || iconTags.default;
+    const iconTag = iconTags[variant] || iconTags.neutral;
     const resolvedIconTag = customIcon || iconTag;
-    const usage = this.getAttribute("usage") || "page-level";
+    const usage = this.getAttribute("usage") || "page";
 
     const commonStyles = `
     .icon {
@@ -122,7 +122,7 @@ class muiMessage extends HTMLElement {
           </div>
         </section>
       `;
-    } else if (usage === "page-level") {
+    } else if (usage === "page") {
       this.shadowRoot.innerHTML = `
         <style>
           :host { 

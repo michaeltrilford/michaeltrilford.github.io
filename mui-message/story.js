@@ -25,29 +25,97 @@ class storyMessage extends HTMLElement {
       <mui-v-stack space="var(--space-700)">
 
 
-        <story-card title="Prop Types (Beta)">
-          <mui-responsive breakpoint="1024" slot="body">
-            <mui-table slot="showAbove">
-            
-              <mui-row-group heading>
-                <mui-row columns="minmax(10rem, 0.5fr) minmax(12rem, 1fr) minmax(12rem, 2fr) minmax(7rem, 0.5fr) 2fr">
-                  <mui-cell heading>Name</mui-cell>
-                  <mui-cell heading>Default</mui-cell>
-                  <mui-cell heading>Options</mui-cell>
-                  <mui-cell heading>Type</mui-cell>
-                  <mui-cell heading>Description</mui-cell>
-                </mui-row>
-              </mui-row-group>
+        <story-card title="Prop Types">
+          <mui-responsive breakpoint="740" slot="body">
 
-              <story-types required name="heading" type="string" value="" default="-" description="Main header for message"></story-types>
-              <story-types required name="slot" type="string" options="body" default="-" description="Slot in body, list or custom compositions"></story-types>
-              <story-types name="icon" type="string" options="mui-icon-[name]" default="mui-icon-message" description="Slot in body, list or custom compositions"></story-types>
-              <story-types name="variant" type="string" options="positive, info, warning, attention" default="default" description="Slot in body, list or custom compositions"></story-types>
-              <story-types name="usage" type="string" default="page-level" options="notification" description="Use for page-level or notification"></story-types>
+            <story-type-table slot="showAbove">
+              <story-type-row
+                required 
+                name="heading"
+                type="string" 
+                options=""
+                default=""
+                description="Main header for message">
+              </story-type-row>
+              <story-type-row
+                required 
+                name="slot"
+                type="string" 
+                options="body"
+                default=""
+                description="Slot in body, list or custom elements">
+              </story-type-row>
+              <story-type-row
+                name="icon"
+                type="string" 
+                options="mui-icon-[name]"
+                default="message"
+                description="Choose an alternative mui-icon">
+              </story-type-row>
+              <story-type-row
+                name="variant"
+                type="string" 
+                options="neutral, positive, info, warning, attention"
+                default="neutral"
+                description="Describe the intent or mood of a message">
+              </story-type-row>
+              <story-type-row
+                name="usage"
+                type="string" 
+                default="page"
+                options="page, notification"
+                description="Choose a page or notification message">
+              </story-type-row>
+            </story-type-table>
 
-            </mui-table>
+            <mui-accordion-group slot="showBelow">
+              <mui-accordion-block>
+                <span slot="title">View all</span>
+                <mui-v-stack style="padding: var(--space-200)" slot="detail">
+                  <story-type-slat
+                    required 
+                    name="heading"
+                    type="string" 
+                    options=""
+                    default=""
+                    description="Main header for message">
+                  </story-type-slat>
 
-            <mui-body width="20px" slot="showBelow">Mobile View Coming Soon</mui-body>
+                  <story-type-slat
+                    required 
+                    name="slot"
+                    type="string" 
+                    options="body"
+                    default=""
+                    description="Slot in body, list or custom elements">
+                  </story-type-slat>
+
+                  <story-type-slat
+                    name="icon"
+                    type="string" 
+                    options="mui-icon-[name]"
+                    default="message"
+                    description="Choose an alternative mui-icon">
+                  </story-type-slat>
+
+                  <story-type-slat
+                    name="variant"
+                    type="string" 
+                    options="neutral, positive, info, warning, attention"
+                    default="neutral"
+                    description="Describe the intent or mood of a message">
+                  </story-type-slat>
+
+                  <story-type-slat
+                    name="usage"
+                    type="string" 
+                    default="page"
+                    options="page, notification"
+                    description="Choose a page or notification message">
+                  </story-type-slat>
+                </mui-v-stack>
+              </mui-accordion-block>
+            <mui-accordion-group>
 
           </mui-responsive>
         </story-card>

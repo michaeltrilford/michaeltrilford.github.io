@@ -25,6 +25,7 @@ class storyTokensBase extends HTMLElement {
           </story-card>
             
           <story-card title="Font Scale" nofooter>
+            <mui-token-local-slat slot="body" token="--font-size-15" output="1.1rem"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--font-size-25" output="1.2rem"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--font-size-50" output="1.4rem"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--font-size-100" output="1.6rem"></mui-token-local-slat>

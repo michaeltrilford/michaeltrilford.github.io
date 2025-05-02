@@ -84,19 +84,19 @@ class storyTokensComponents extends HTMLElement {
           <story-card title="Message" nofooter>
             <mui-token-local-slat slot="body" token="--message-radius" output="var(--radius-150)"></mui-token-local-slat>
 
-            <mui-token-local-slat slot="body" token="--message-border-default" output="var(--stroke-size-200) var(--stroke-style-solid) var(--black-opacity-30)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--message-border-neutral" output="var(--stroke-size-200) var(--stroke-style-solid) var(--black-opacity-30)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-border-positive" output="var(--stroke-size-200) var(--stroke-style-solid) var(--feedback-positive-color)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-border-info" output="var(--stroke-size-200) var(--stroke-style-solid) var(--feedback-info-color)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-border-warning" output=" var(--stroke-size-200) var(--stroke-style-solid) var(--feedback-warning-color)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-border-error" output="var(--stroke-size-200) var(--stroke-style-solid) var(--feedback-attention-color)"></mui-token-local-slat>
             
-            <mui-token-local-slat slot="body" token="--message-background-default" output="var(--white-opacity-10)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--message-background-neutral" output="var(--white-opacity-10)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-background-positive" output="color-mix(in srgb, var(--feedback-positive-color) 10%, var(--white) 0%)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-background-info" output="color-mix(in srgb, var(--feedback-info-color) 10%, var(--white) 0%)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-background-warning" output="color-mix(in srgb, var(--feedback-warning-color) 10%, var(--white) 0%)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-background-error" output="color-mix(in srgb, var(--feedback-attention-color) 10%, var(--white) 0%)"></mui-token-local-slat>
 
-            <mui-token-local-slat slot="body" token="--message-icon-default" output="var(--grey-800)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--message-icon-neutral" output="var(--grey-800)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-icon-positive" output="color-mix(in srgb,var(--feedback-positive-color) 100%,var(--black) 20%);"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-icon-info" output="color-mix(in srgb,var(--feedback-info-color) 100%,var(--black) 20%);"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--message-icon-warning" output="color-mix(in srgb,var(--feedback-warning-color) 100%,var(--black) 20%);"></mui-token-local-slat>
