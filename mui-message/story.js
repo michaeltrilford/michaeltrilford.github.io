@@ -127,7 +127,7 @@ class storyMessage extends HTMLElement {
           <mui-code slot="footer">
             &lt;mui-message heading="Message heading"&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-body slot="body"&gt;...&lt;/mui-body&gt;
+            &nbsp;&nbsp;&lt;mui-body&gt;...&lt;/mui-body&gt;
             <br />
             &lt;/mui-message&gt;
           </mui-code>
@@ -145,7 +145,7 @@ class storyMessage extends HTMLElement {
           <mui-code slot="footer">
             &lt;mui-message heading="Message heading"&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-list as="ul" slot="body"&gt;
+            &nbsp;&nbsp;&lt;mui-list as="ul"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;...&lt;/mui-list-item&gt;
             <br />
