@@ -30,14 +30,14 @@ class storyCards extends HTMLElement {
           <mui-code slot="footer">
             &lt;mui-card&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-card-heading&gt;
+            &nbsp;&nbsp;&lt;mui-card-header&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-heading size="3"&gt;...&lt;/mui-heading&gt;            
             <br />
-            &nbsp;&nbsp;&lt;/mui-card-heading&gt;
+            &nbsp;&nbsp;&lt;/mui-card-header&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-body&gt;Basic
-            card&lt;/mui-body&gt;
+            &nbsp;&nbsp;&lt;mui-card-body&gt;Basic
+            card&lt;/mui-card-body&gt;
             <br />
             &lt;/mui-card&gt;
           </mui-code>
@@ -66,11 +66,11 @@ class storyCards extends HTMLElement {
           <mui-code slot="footer">
             &lt;mui-card footer&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-card-heading&gt;
+            &nbsp;&nbsp;&lt;mui-card-header&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-heading size="3"&gt;...&lt;/mui-heading&gt;            
             <br />
-            &nbsp;&nbsp;&lt;/mui-card-heading&gt;
+            &nbsp;&nbsp;&lt;/mui-card-header&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-card-body&gt;...&lt;/mui-card-body&gt;
             <br />
@@ -108,11 +108,11 @@ class storyCards extends HTMLElement {
           <mui-code slot="footer">
             &lt;mui-card footer&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-card-heading&gt;
+            &nbsp;&nbsp;&lt;mui-card-header&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-heading size="3"&gt;...&lt;/mui-heading&gt;            
             <br />
-            &nbsp;&nbsp;&lt;/mui-card-heading&gt;
+            &nbsp;&nbsp;&lt;/mui-card-header&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-card-body&gt;
             <br />

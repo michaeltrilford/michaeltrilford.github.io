@@ -6,7 +6,7 @@ class muiMessage extends HTMLElement {
   }
 
   connectedCallback() {
-    const headingText = this.getAttribute("heading") || "Add Heading";
+    const headingText = this.getAttribute("heading") || "Heading...";
     const variant = this.getAttribute("variant") || "default";
 
     // Define variant styles
@@ -15,7 +15,8 @@ class muiMessage extends HTMLElement {
         "background-color: var(--message-background-default); border: var(--message-border-default);",
       positive:
         "background-color:  var(--message-background-positive); border: var(--message-border-positive);",
-      info: "background-color: var(--message-background-info);  border: var(--message-border-info);",
+      info:
+        "background-color: var(--message-background-info);  border: var(--message-border-info);",
       warning:
         "background-color: var(--message-background-warning);   border: var(--message-border-warning);",
       attention:
@@ -59,7 +60,7 @@ class muiMessage extends HTMLElement {
     };
 
     const iconTags = {
-      default: "mui-icon-message-group",
+      default: "mui-icon-message",
       positive: "mui-icon-check",
       info: "mui-icon-info",
       warning: "mui-icon-warning",
@@ -160,7 +161,7 @@ class muiMessage extends HTMLElement {
                 ${headingText}
               </div>
               <slot name="body">
-                <mui-body>Add content for the body.</mui-body>
+                <mui-body>Body content...</mui-body>
               </slot>
             </mui-v-stack>
           </mui-h-stack>

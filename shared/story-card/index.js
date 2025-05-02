@@ -1,27 +1,26 @@
 class storyCard extends HTMLElement {
   static get observedAttributes() {
-    return ["title", "description"];
+    return ["title", "description", "list"];
   }
 
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
+
     const styles = `
       :host { display: block; }
-      mui-card {
-        box-shadow: none;
-        border-radius: var(--radius-200);
-        box-shadow: 6px 6px 16px var(--white-opacity-20), 
-        6px 6px 16px var(--black-opacity-10),
-                    -6px -6px 14px var(--black-opacity-10);
-      }
 
+      mui-card {
+        border-radius: var(--radius-200);
+        box-shadow:
+          6px 6px 16px var(--white-opacity-20),
+          6px 6px 16px var(--black-opacity-10),
+          -6px -6px 14px var(--black-opacity-10);
+      }
 
       mui-card-header {
         padding: var(--space-500);
       }
-
-
 
       mui-card-body {
         background: var(--grey-100);
@@ -30,7 +29,9 @@ class storyCard extends HTMLElement {
         border-bottom-left-radius: var(--radius-200);
       }
 
-
+      .story-body {
+        padding: 4px;
+      }
 
       section {
         background: white;
@@ -46,10 +47,6 @@ class storyCard extends HTMLElement {
         background: #12caff;
       }
 
-      div {
-        padding: 4px;
-      }
-
       section:before,
       section:after { height: 1px; }
       div:before,
@@ -61,49 +58,84 @@ class storyCard extends HTMLElement {
         right: 2px;
         width: calc(12px + 100% + 2px);
       }
+
       section:after {
         bottom: 0;
         left: -4px;
         right: 8px;
         width: calc(4px + 100% + 8px);
       }
+
       div:before {
         top: -4px;
         height: calc(4px + 100% + 4px);
-        bottom: 4px;
         left: 0;
       }
+
       div:after {
         top: -4px;
         height: calc(4px + 100% + 6px);
-        bottom: 6px;
         right: 0;
       }
     `;
+
+    const title = this.getAttribute("title") || "";
+    const description = this.hasAttribute("description")
+      ? `<mui-body>${this.getAttribute("description")}</mui-body>`
+      : "";
+
+    // Handle list
+    const listAttr = this.getAttribute("list");
+    let listItems = [];
+
+    if (listAttr) {
+      try {
+        listItems = JSON.parse(listAttr);
+      } catch {
+        listItems = listAttr.split(",").map((item) => item.trim());
+      }
+    }
+
+    const listContent = listItems.length
+      ? `
+        <mui-list as="ul">
+          ${listItems
+            .map(
+              (item) =>
+                `<mui-list-item size="small" weight="medium">${item}</mui-list-item>`
+            )
+            .join("")}
+        </mui-list>
+      `
+      : "";
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
       <mui-card>
         ${
           this.hasAttribute("noheader")
-            ? ``
+            ? ""
             : `
-        <mui-card-header>
-        <mui-heading size="3">${this.getAttribute("title")}</mui-heading>
-        ${
-          this.hasAttribute("description")
-            ? `<mui-body>${this.getAttribute("description")}</mui-body>`
-            : ``
-        }
-        </mui-card-header>
+          <mui-card-header>
+            <mui-heading size="3">${title}</mui-heading>
+            <mui-v-stack space="var(--space-100)">
+              ${description}
+              ${listContent}
+            </mui-v-stack>
+
+          </mui-card-header>
         `
         }
         <mui-card-body>
-          <section><div><slot name="body"></slot></div></section>
+          <section>
+            <div class="story-body">
+              <slot name="body"></slot>
+            </div>
+          </section>
         </mui-card-body>
         ${
-          this.hasAttribute("noFooter")
-            ? ``
+          this.hasAttribute("nofooter")
+            ? ""
             : `<mui-card-footer><slot name="footer"></slot></mui-card-footer>`
         }
       </mui-card>

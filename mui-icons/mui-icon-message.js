@@ -1,4 +1,4 @@
-class muiIconMessageGroup extends HTMLElement {
+class muiIconMessage extends HTMLElement {
   static get observedAttributes() {
     return ["size", "color", "variant"];
   }
@@ -87,4 +87,4 @@ class muiIconMessageGroup extends HTMLElement {
   }
 }
 
-customElements.define("mui-icon-message-group", muiIconMessageGroup);
+customElements.define("mui-icon-message", muiIconMessage);
