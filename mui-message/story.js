@@ -91,7 +91,7 @@ class storyMessage extends HTMLElement {
 
         accessibility-items='[
             "ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.", 
-            "Default, Postive, Info support the role of STATUS for screen reader feedback.",
+            "Neutral, Postive, Info support the role of STATUS for screen reader feedback.",
             "Warning, Attention support the role of ALERT for screen reader feedback."
           ]'
 
