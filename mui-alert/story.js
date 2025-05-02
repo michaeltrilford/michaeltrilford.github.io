@@ -6,6 +6,60 @@ class storyAlert extends HTMLElement {
       :host { display: block; }
     `;
 
+    const propItems = [
+      {
+        name: "variant",
+        type: "string",
+        options: "success, info, warning, error",
+        default: "success",
+        description: "Describe the intent or mood of a alert",
+      },
+      {
+        name: "children",
+        required: true,
+        type: "node",
+        options: "{text}, mui-links",
+        default: "",
+        description:
+          "Content placed inside the component. Can include mui-links and text nodes, or both.",
+      },
+    ];
+
+    const rows = propItems
+      .map(
+        (prop) => `
+          <story-type-row
+            ${prop.required ? "required" : ""}
+            name="${prop.name}"
+            type="${prop.type}" 
+            options="${prop.options || ""}"
+            default="${prop.default || ""}"
+            description="${prop.description}">
+          </story-type-row>
+        `
+      )
+      .join("");
+
+    const accordions = propItems
+      .map(
+        (prop) => `
+          <mui-accordion-block>
+            <span slot="title">${prop.name.charAt(0).toUpperCase() +
+              prop.name.slice(1)}</span>
+            <story-type-slat
+              slot="detail"
+              ${prop.required ? "required" : ""}
+              name="${prop.name}"
+              type="${prop.type}" 
+              options="${prop.options || ""}"
+              default="${prop.default || ""}"
+              description="${prop.description}">
+            </story-type-slat>
+          </mui-accordion-block>
+        `
+      )
+      .join("");
+
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
@@ -20,6 +74,17 @@ class storyAlert extends HTMLElement {
       >
 
         <mui-v-stack space="var(--space-700)">
+
+          <story-card title="Prop Types">
+            <mui-responsive breakpoint="768" slot="body">
+              <story-type-table slot="showAbove">
+                ${rows}
+              </story-type-table>
+              <mui-accordion-group exclusive slot="showBelow">
+                ${accordions}
+              </mui-accordion-group>
+            </mui-responsive>
+          </story-card>
 
           <story-card title="Success" description="Accessibility: The component has the role of aria-live of 'polite' for less important messaging.">
             <div slot="body">

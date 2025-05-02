@@ -30,7 +30,7 @@ class storyTemplate extends HTMLElement {
     const accessibilitySection = accessibilityArray.length
       ? `
         <mui-message heading="Accessibility Notes" icon="mui-icon-accessibility">
-            <mui-list as="ul" slot="body">
+            <mui-list as="ul">
               ${accessibilityArray
                 .map(
                   (item) =>

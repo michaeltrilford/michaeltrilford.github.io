@@ -160,7 +160,7 @@ class muiMessage extends HTMLElement {
               <div class="heading" id="message-heading">
                 ${headingText}
               </div>
-              <slot name="body">
+              <slot>
                 <mui-body>Body content...</mui-body>
               </slot>
             </mui-v-stack>
