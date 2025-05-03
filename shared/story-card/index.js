@@ -1,6 +1,6 @@
 class storyCard extends HTMLElement {
   static get observedAttributes() {
-    return ["title", "description", "list"];
+    return ["title", "description", "usage", "accessibility"];
   }
 
   constructor() {
@@ -81,28 +81,59 @@ class storyCard extends HTMLElement {
 
     const title = this.getAttribute("title") || "";
     const description = this.hasAttribute("description")
-      ? `<mui-body>${this.getAttribute("description")}</mui-body>`
+      ? `<mui-body style="max-width: 86ch;">${this.getAttribute(
+          "description"
+        )}</mui-body>`
       : "";
 
-    // Handle list
-    const listAttr = this.getAttribute("list");
-    let listItems = [];
+    // Handle usage list
+    const usageAttr = this.getAttribute("usage");
+    let usageItems = [];
 
-    if (listAttr) {
+    if (usageAttr) {
       try {
-        listItems = JSON.parse(listAttr);
+        usageItems = JSON.parse(usageAttr);
       } catch {
-        listItems = listAttr.split(",").map((item) => item.trim());
+        usageItems = usageAttr.split(",").map((usage) => usage.trim());
       }
     }
 
-    const listContent = listItems.length
+    const usageContent = usageItems.length
       ? `
-        <mui-list as="ul">
-          ${listItems
+        <mui-heading size="6" level="3" style="margin-top: var(--space-300); margin-bottom: var(--space-050);">Usage details</mui-heading>
+        <mui-list as="ul" style="max-width: 65ch;">
+          ${usageItems
             .map(
-              (item) =>
-                `<mui-list-item size="small" weight="medium">${item}</mui-list-item>`
+              (usage) =>
+                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${usage}</mui-list-item>`
+            )
+            .join("")}
+        </mui-list>
+      `
+      : "";
+
+    // Handle accessibility list
+    const accessibilityAttr = this.getAttribute("accessibility");
+    let accessibilityItems = [];
+
+    if (accessibilityAttr) {
+      try {
+        accessibilityItems = JSON.parse(accessibilityAttr);
+      } catch {
+        accessibilityItems = accessibilityAttr
+          .split(",")
+          .map((accessibility) => accessibility.trim());
+      }
+    }
+
+    const accessibilityContent = accessibilityItems.length
+      ? `
+        <mui-heading size="6" level="3" style="margin-top: var(--space-300); margin-bottom: var(--space-050);">Accessibility details</mui-heading>
+        <mui-list as="ul" style="max-width: 65ch;">
+          ${accessibilityItems
+            .map(
+              (accessibility) =>
+                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${accessibility}</mui-list-item>`
             )
             .join("")}
         </mui-list>
@@ -117,10 +148,11 @@ class storyCard extends HTMLElement {
             ? ""
             : `
           <mui-card-header>
-            <mui-heading size="3">${title}</mui-heading>
+            <mui-heading size="3" level="2">${title}</mui-heading>
             <mui-v-stack space="var(--space-100)">
               ${description}
-              ${listContent}
+              ${usageContent}
+              ${accessibilityContent}
             </mui-v-stack>
 
           </mui-card-header>

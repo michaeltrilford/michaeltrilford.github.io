@@ -15,7 +15,7 @@ class storyAlert extends HTMLElement {
         description: "Describe the intent or mood of a alert",
       },
       {
-        name: "children",
+        name: "slot",
         required: true,
         type: "node",
         options: "{text}, mui-links",
@@ -86,7 +86,12 @@ class storyAlert extends HTMLElement {
             </mui-responsive>
           </story-card>
 
-          <story-card title="Success" description="Accessibility: The component has the role of aria-live of 'polite' for less important messaging.">
+          <story-card 
+            title="Success" 
+            description="Indicates that an operation or action has been completed successfully." 
+            usage="Form submissions that have been processed without errors., Successful data updates or saves.,Confirmation of completed tasks or actions."
+            accessibility="ARIA-live of POLITE is set on this variant."
+          >
             <div slot="body">
               <mui-alert variant="success">Your message has been sent successfully.</mui-alert>
             </div>
@@ -99,7 +104,12 @@ class storyAlert extends HTMLElement {
             </mui-code>
           </story-card>
 
-          <story-card title="Info"  description="Accessibility: The component has the role of aria-live of 'polite' for less important messaging.">
+          <story-card
+            title="Info"
+            description="Provides general information or updates that are helpful but not critical."
+            usage="Announcing new features or updates., Providing contextual information or tips., Informing users about non-urgent system statuses."
+            accessibility="ARIA-live of POLITE is set on this variant."
+          >
             <div slot="body">
               <mui-alert variant="info">Please read the comments carefully.</mui-alert>
             </div>
@@ -112,7 +122,12 @@ class storyAlert extends HTMLElement {
           </mui-code>
           </story-card>
 
-          <story-card title="Warning" description="Accessibility: The component has the role of aria-live of 'assertive' for important messaging">
+          <story-card
+            title="Warning"
+            description="Alerts users to potential issues or situations that require caution."
+            usage="Notifying about unsaved changes., Indicating deprecated features or upcoming changes., Highlighting actions that may have unintended consequences."
+            accessibility="ARIA-live of ASSERTIVE is set on this variant."
+          >
             <div slot="body">
               <mui-alert variant="warning">There was a problem with your network connection. <mui-link href="#">Learn more</mui-link></mui-alert>
             </div>
@@ -125,7 +140,12 @@ class storyAlert extends HTMLElement {
           </mui-code>
           </story-card>
 
-          <story-card title="Error" description="Accessibility: The component has the role of aria-live of 'assertive' for important messaging">
+          <story-card
+            title="Error"
+            description="Indicates that an error has occurred, requiring user attention or action."
+            usage="Form validation errors., System failures or exceptions. Failed operations or transactions."
+            accessibility="ARIA-live of ASSERTIVE is set on this variant."
+          >
             <div slot="body">
               <mui-alert variant="error">Please read the comments carefully. <mui-link href="#">Learn more</mui-link></mui-alert>
             </div>

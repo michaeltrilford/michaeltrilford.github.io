@@ -87,7 +87,7 @@ class storyMessage extends HTMLElement {
 
       <story-template 
         title="Messages"
-        description="A message component that provides page-level messaging to the user."
+        description="The message component provides persistent, non-dismissible notifications that remain visible until the system determines they should be suspended. Unlike alerts, these messages are static elements integrated into the page layout, offering continuous information without disrupting the user’s workflow."
 
         accessibility-items='[
             "ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.", 
@@ -112,15 +112,20 @@ class storyMessage extends HTMLElement {
 
         <story-card
           title="Default" 
-          description="Use the default state to highlight important information on a page without visual emphasis."
+          description="The default uses the passive state offers a subtle, neutral tone, ideal for conveying general information without drawing undue attention."
+          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
         >
           <mui-message slot="body"></mui-message>
           <mui-code slot="footer">
-            &lt;mui-message&gt;&lt;/mui-message&gt;
+            &lt;mui-message&gt;...&lt;/mui-message&gt;
           </mui-code>
         </story-card>
 
-        <story-card title="Default w/ Body Text" description="Use the default state to highlight important information on a page without visual emphasis.">
+        <story-card 
+          title="Default: Body text" 
+          description="By default, content is customised via the Slot, which accepts the Body component or any valid child elements."
+          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+        >
           <mui-message heading="Message heading" slot="body">
             <mui-body>This is an informational message about updates.</mui-body>
           </mui-message>
@@ -133,7 +138,11 @@ class storyMessage extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Default w/ List" description="Use the default state to highlight important information on a page without visual emphasis.">
+        <story-card 
+          title="Default: List" 
+          description="By default, content is customised via the Slot, which accepts the List component or any valid child elements."
+          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+        >
 
           <mui-message heading="Message heading" slot="body">
             <mui-list as="ul">
@@ -145,20 +154,34 @@ class storyMessage extends HTMLElement {
           <mui-code slot="footer">
             &lt;mui-message heading="Message heading"&gt;
             <br />
+            <br />
             &nbsp;&nbsp;&lt;mui-list as="ul"&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;...&lt;/mui-list-item&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;...&lt;/mui-list-item&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 1
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-list-item&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Item 2
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-list-item&gt;
             <br />
             &nbsp;&nbsp;&lt;/mui-list&gt;
+            <br />
             <br />
             &lt;/mui-message&gt;
           </mui-code>
 
         </story-card>
 
-        <story-card title="Default w/ Custom Icon" description="Use the default state to highlight important information on a page without visual emphasis.">
+        <story-card 
+          title="Default: Customise icon" 
+          description="The component default supports icon customisation. Use the ‘icon’ prop to adjust the icon by specifying a name from the icon set, e.g., ‘mui-icon-[name]’."
+          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+        >
           <mui-message heading="Accessibility Notes" slot="body" icon="mui-icon-accessibility">
             <mui-list as="ul">
               <mui-list-item size="small" size="small">ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.</mui-list-item>
@@ -166,67 +189,177 @@ class storyMessage extends HTMLElement {
             </mui-list>
           </mui-message>
           <mui-code slot="footer">
-            &lt;mui-message heading="Message heading" icon="mui-icon-accessibility"&gt;
+            &lt;mui-message
+            <br />
+            &nbsp;&nbsp;heading="Accessibility Notes" 
+            <br />
+            &nbsp;&nbsp;icon="mui-icon-accessibility"&gt;
+            <br />
             <br />
             &nbsp;&nbsp;&lt;mui-list as="ul"&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;...&lt;/mui-list-item&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;...&lt;/mui-list-item&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARIA-live is built in...
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-list-item&gt;
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The role is set to...
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-list-item&gt;
             <br />
             &nbsp;&nbsp;&lt;/mui-list&gt;
             <br />
-            &lt;/mui-message&gt;
-          </mui-code>
-        </story-card>
-
-        <story-card title="Variant: Positive">
-          <mui-message heading="Message heading" slot="body" variant="positive">
-            <mui-body>This is an informational message about updates.</mui-body>
-          </mui-message>
-          <mui-code slot="footer">
-            &lt;mui-message heading="Message heading" variant="positive"&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-body&gt;...&lt;/mui-body&gt;
             <br />
             &lt;/mui-message&gt;
           </mui-code>
         </story-card>
 
-        <story-card title="Variant: Info">
-          <mui-message heading="Message heading" slot="body" variant="info">
-            <mui-body>This is an informational message about updates.</mui-body>
+        <story-card 
+          title="Variant: Neutral" 
+          description="The Neutral state offers a subtle, neutral tone, ideal for conveying general information without drawing undue attention." usage="Ideal for displaying general information or status updates that don’t require immediate user action., Suitable for background information like system status or routine updates."
+          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+        >
+          <mui-message heading="Accessibility Notes" slot="body" variant="neutral" icon="mui-icon-accessibility">
+            <mui-list as="ul">
+              <mui-list-item size="small" size="small">ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.</mui-list-item>
+              <mui-list-item size="small" size="small">The role is set to ALERT for immediate screen reader feedback.</mui-list-item>
+            </mui-list>
           </mui-message>
           <mui-code slot="footer">
-            &lt;mui-message heading="Message heading" variant="info"&gt;
+            &lt;mui-message
             <br />
-            &nbsp;&nbsp;&lt;mui-body&gt;...&lt;/mui-body&gt;
+            &nbsp;&nbsp;heading="Accessibility Notes" 
+            <br />
+            &nbsp;&nbsp;variant="neutral"&gt;
+            <br />
+            &nbsp;&nbsp;icon="mui-icon-accessibility"&gt;
+            <br />
+            <br />
+            &nbsp;&nbsp;&lt;mui-list as="ul"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARIA-live is built in...
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-list-item&gt;
+            <br />
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The role is set to...
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-list-item&gt;
+            <br />
+            &nbsp;&nbsp;&lt;/mui-list&gt;
+            <br />
             <br />
             &lt;/mui-message&gt;
           </mui-code>
         </story-card>
 
-        <story-card title="Variant: Warning">
-          <mui-message heading="Message heading" slot="body" variant="warning">
-            <mui-body>This is an informational message about updates.</mui-body>
+        <story-card 
+          title="Variant: Positive" 
+          description="The Positive state conveys successful actions, achievements, or confirmations, fostering a sense of accomplishment and satisfaction." usage="Indicate successful form submissions or completed tasks., Acknowledge user achievements or milestones."
+          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+        >
+          <mui-message heading="Report Ready for Download" slot="body" variant="positive">
+            <mui-body>The report has been generated and is ready for download.</mui-body>
+            <mui-link>Download Your Report</mui-link>
           </mui-message>
           <mui-code slot="footer">
-            &lt;mui-message heading="Message heading" variant="warning"&gt;
+            &lt;mui-message 
             <br />
-            &nbsp;&nbsp;&lt;mui-body&gt;...&lt;/mui-body&gt;
+            &nbsp;&nbsp;heading="Message heading" 
+            <br />
+            &nbsp;&nbsp;variant="positive"
+            <br />
+            &gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-body&gt;The report has been...&lt;/mui-body&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-link&gt;Download Your Report&lt;/mui-link&gt;
             <br />
             &lt;/mui-message&gt;
           </mui-code>
         </story-card>
 
-        <story-card title="Variant: Attention">
-          <mui-message heading="Message heading" slot="body" variant="attention">
-            <mui-body>This is an informational message about updates.</mui-body>
+        <story-card 
+          title="Variant: Info" 
+          description="The Info state provides informative messages that help users understand system status or feature updates, guiding them without urgency." usage="Use to announce new features | enhancements | system changes., Appropriate for onboarding tips or contextual help."
+          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+        >
+          <mui-message heading="New Feature Available" slot="body" variant="info">
+            <mui-body>A new dashboard layout is now available. Explore the enhanced features.</mui-body>
+            <mui-link>Try the New Layout</mui-link>
           </mui-message>
           <mui-code slot="footer">
-            &lt;mui-message heading="Message heading" variant="attention"&gt;
+            &lt;mui-message 
             <br />
-            &nbsp;&nbsp;&lt;mui-body&gt;...&lt;/mui-body&gt;
+            &nbsp;&nbsp;heading="Message heading" 
+            <br />
+            &nbsp;&nbsp;variant="info"
+            <br />
+            &gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-body&gt;A new dashboard layout...&lt;/mui-body&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-link&gt;Try the New Layout&lt;/mui-link&gt;
+            <br />
+            &lt;/mui-message&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card
+          title="Variant: Warning"
+          description="The Warning state alerts users to potential issues that may require attention, helping prevent errors or misunderstandings." usage="Notify users of actions that could lead to undesirable outcomes; like unsaved changes.,Warn about system limitations or upcoming expirations."
+          accessibility="ARIA-live of ASSERTIVE is set on this variant., Role of ALERT is set on this variant."
+        >
+          <mui-message heading="Password Expiry Warning" slot="body" variant="warning">
+            <mui-body>Your password will expire in 3 days. Please update it to maintain account security.</mui-body>
+            <mui-link>Update Your Password</mui-link>
+          </mui-message>
+          <mui-code slot="footer">
+            &lt;mui-message 
+            <br />
+            &nbsp;&nbsp;heading="Message heading" 
+            <br />
+            &nbsp;&nbsp;variant="warning"
+            <br />
+            &gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-body&gt;Your password will expire...&lt;/mui-body&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-link&gt;Update Your Password&lt;/mui-link&gt;
+            <br />
+            &lt;/mui-message&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card
+          title="Variant: Attention"
+          description="The Attention state demands immediate user focus, highlighting critical issues that require prompt action." usage="Alert users to urgent problems; such as system errors or security breaches., Use for time-sensitive notifications that impact user experience."
+          accessibility="ARIA-live of ASSERTIVE is set on this variant., Role of ALERT is set on this variant."
+        >
+          <mui-message heading="Scheduled Maintenance" slot="body" variant="attention">
+            <mui-body>Our website will be undergoing maintenance on [Date] from [Time] to [Time]. Some features may be unavailable during this period.</mui-body>
+            <mui-link>View Maintenance Schedule</mui-link>
+          </mui-message>
+          <mui-code slot="footer">
+            &lt;mui-message 
+            <br />
+            &nbsp;&nbsp;heading="Message heading" 
+            <br />
+            &nbsp;&nbsp;variant="attention"
+            <br />
+            &gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-body&gt;Our website will be undergoing...&lt;/mui-body&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-link&gt;View Maintenance Schedule&lt;/mui-link&gt;
             <br />
             &lt;/mui-message&gt;
           </mui-code>

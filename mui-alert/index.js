@@ -50,7 +50,7 @@ class muiAlert extends HTMLElement {
     const labelText =
       {
         success: "Success!",
-        info: "Info!",
+        info: "Info:",
         warning: "Warning!",
         error: "Error!",
       }[variant] || "Success!";
