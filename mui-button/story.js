@@ -6,12 +6,108 @@ class storyButton extends HTMLElement {
       :host { display: block; }
     `;
 
+    const propItems = [
+      {
+        name: "slot",
+        required: true,
+        type: "node",
+        options: "{text}, mui-icon-[name]",
+        default: "",
+        description: "Slot in text or icon for the call-to-action",
+      },
+      {
+        name: "variant",
+        type: "string",
+        options: "primary, secondary, tertiary, attention",
+        default: "primary",
+        description: "Describe the intent or mood of a message",
+      },
+      {
+        name: "iconOnly",
+        type: "boolean",
+        options: "iconOnly",
+        default: "",
+        description: "Utilise a compact button with a mui-icon option.",
+      },
+      {
+        name: "style",
+        type: "string",
+        options: "Valid CSS",
+        default: "",
+        description:
+          "You are able to use styles to add layout based CSS to the host element.",
+      },
+      {
+        name: "class",
+        type: "CSS",
+        options: "Valid CSS",
+        default: "",
+        description:
+          "You are able to use add a classname to add layout based CSS to the host element.",
+      },
+      {
+        name: "part",
+        type: "CSS",
+        options: "E.g. mui-link::part(display)",
+        default: "",
+        description:
+          "Controlled trust-based customisation for modifying internal aspects of a button.",
+      },
+    ];
+
+    const rows = propItems
+      .map(
+        (prop) => `
+          <story-type-row
+            ${prop.required ? "required" : ""}
+            name="${prop.name}"
+            type="${prop.type}" 
+            options="${prop.options || ""}"
+            default="${prop.default || ""}"
+            description="${prop.description}">
+          </story-type-row>
+        `
+      )
+      .join("");
+
+    const accordions = propItems
+      .map(
+        (prop) => `
+          <mui-accordion-block>
+            <span slot="title">${prop.name.charAt(0).toUpperCase() +
+              prop.name.slice(1)}</span>
+            <story-type-slat
+              slot="detail"
+              ${prop.required ? "required" : ""}
+              name="${prop.name}"
+              type="${prop.type}" 
+              options="${prop.options || ""}"
+              default="${prop.default || ""}"
+              description="${prop.description}">
+            </story-type-slat>
+          </mui-accordion-block>
+        `
+      )
+      .join("");
+
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
       <story-template title="Buttons" description="Buttons are essential UI elements that trigger actions when clicked or tapped. They should be easily recognisable, provide clear feedback, and be accessible to all users.">
 
       <mui-v-stack space="var(--space-700)">
+
+
+        <story-card title="Prop Types">
+          <mui-responsive breakpoint="768" slot="body">
+            <story-type-table slot="showAbove">
+              ${rows}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${accordions}
+            </mui-accordion-group>
+          </mui-responsive>
+        </story-card>
 
         <story-card title="Primary">
         <mui-button variant="primary" slot="body">Submit</mui-button>
@@ -78,7 +174,7 @@ class storyButton extends HTMLElement {
             <mui-icon-add variant="primary" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="primary"&gt;
+            &lt;mui-button variant="primary" iconOnly&gt;
             <br />
             <br />
             &nbsp;&nbsp;&lt;mui-icon-add
@@ -99,7 +195,7 @@ class storyButton extends HTMLElement {
             <mui-icon-add variant="secondary" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="secondary"&gt;
+            &lt;mui-button variant="secondary" iconOnly&gt;
             <br />
             <br />
             &nbsp;&nbsp;&lt;mui-icon-add
@@ -120,7 +216,7 @@ class storyButton extends HTMLElement {
             <mui-icon-add variant="tertiary" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="tertiary"&gt;
+            &lt;mui-button variant="tertiary" iconOnly&gt;
             <br />
             <br />
             &nbsp;&nbsp;&lt;mui-icon-add
@@ -141,7 +237,7 @@ class storyButton extends HTMLElement {
             <mui-icon-add variant="attention" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="attention"&gt;
+            &lt;mui-button variant="attention" iconOnly&gt;
             <br />
             <br />
             &nbsp;&nbsp;&lt;mui-icon-add

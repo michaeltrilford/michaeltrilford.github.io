@@ -45,6 +45,22 @@ class storyMessage extends HTMLElement {
         default: "page",
         description: "Choose a page or notification message",
       },
+      {
+        name: "style",
+        type: "string",
+        options: "Valid CSS",
+        default: "",
+        description:
+          "You are able to use styles to add layout based CSS to the host element.",
+      },
+      {
+        name: "class",
+        type: "string",
+        options: "Valid CSS",
+        default: "",
+        description:
+          "You are able to use add a classname to add layout based CSS to the host element.",
+      },
     ];
 
     const rows = propItems

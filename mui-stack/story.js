@@ -56,6 +56,160 @@ class storyStack extends HTMLElement {
     </mui-v-stack>
   `;
 
+    const propItemsHStack = [
+      {
+        name: "space",
+        type: "string",
+        options: "var(--space-100) etc...",
+        default: "var(--space-500)",
+        description:
+          "Apply a design tokens to apply a gap between slotted elements",
+      },
+      {
+        name: "alignX",
+        type: "string",
+        options: "flex-start etc...",
+        default: "message",
+        description: "Horizontal align using CSS flex properties.",
+      },
+      {
+        name: "alignY",
+        type: "string",
+        options: "flex-start etc...",
+        default: "neutral",
+        description: "Vertical align using CSS flex properties.",
+      },
+      {
+        name: "slot",
+        required: true,
+        type: "node",
+        options: "elements",
+        default: "",
+        description: "Slot in any elements",
+      },
+      {
+        name: "style",
+        type: "string",
+        options: "Valid CSS",
+        default: "",
+        description:
+          "You are able to use styles to add layout based CSS to the host element.",
+      },
+      {
+        name: "class",
+        type: "string",
+        options: "Valid CSS",
+        default: "",
+        description:
+          "You are able to use add a classname to add layout based CSS to the host element.",
+      },
+    ];
+
+    const propItemsVStack = [
+      {
+        name: "space",
+        type: "string",
+        options: "var(--space-100) etc...",
+        default: "var(--space-500)",
+        description:
+          "Apply a design tokens to apply a gap between slotted elements",
+      },
+      {
+        name: "slot",
+        required: true,
+        type: "node",
+        options: "elements",
+        default: "",
+        description: "Slot in any elements",
+      },
+      {
+        name: "style",
+        type: "string",
+        options: "Valid CSS",
+        default: "",
+        description:
+          "You are able to use styles to add layout based CSS to the host element.",
+      },
+      {
+        name: "class",
+        type: "string",
+        options: "Valid CSS",
+        default: "",
+        description:
+          "You are able to use add a classname to add layout based CSS to the host element.",
+      },
+    ];
+
+    const rowsHStack = propItemsHStack
+      .map(
+        (prop) => `
+        <story-type-row
+          ${prop.required ? "required" : ""}
+          name="${prop.name}"
+          type="${prop.type}" 
+          options="${prop.options || ""}"
+          default="${prop.default || ""}"
+          description="${prop.description}">
+        </story-type-row>
+      `
+      )
+      .join("");
+
+    const accordionsHStack = propItemsHStack
+      .map(
+        (prop) => `
+        <mui-accordion-block>
+          <span slot="title">${prop.name.charAt(0).toUpperCase() +
+            prop.name.slice(1)}</span>
+          <story-type-slat
+            slot="detail"
+            ${prop.required ? "required" : ""}
+            name="${prop.name}"
+            type="${prop.type}" 
+            options="${prop.options || ""}"
+            default="${prop.default || ""}"
+            description="${prop.description}">
+          </story-type-slat>
+        </mui-accordion-block>
+      `
+      )
+      .join("");
+
+    const rowsVStack = propItemsVStack
+      .map(
+        (prop) => `
+        <story-type-row
+          ${prop.required ? "required" : ""}
+          name="${prop.name}"
+          type="${prop.type}" 
+          options="${prop.options || ""}"
+          default="${prop.default || ""}"
+          description="${prop.description}">
+        </story-type-row>
+      `
+      )
+      .join("");
+
+    const accordionsVStack = propItemsVStack
+      .map(
+        (prop) => `
+        <mui-accordion-block>
+          <span slot="title">${prop.name.charAt(0).toUpperCase() +
+            prop.name.slice(1)}</span>
+          <story-type-slat
+            slot="detail"
+            ${prop.required ? "required" : ""}
+            name="${prop.name}"
+            type="${prop.type}" 
+            options="${prop.options || ""}"
+            default="${prop.default || ""}"
+            description="${prop.description}">
+          </story-type-slat>
+        </mui-accordion-block>
+      `
+      )
+      .join("");
+
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
@@ -64,7 +218,18 @@ class storyStack extends HTMLElement {
         description="A layout component that arranges its children in a horizontal or vertical flow"
       >
 
-      <mui-v-stack space="var(--space-400)">
+      <mui-v-stack space="var(--space-700)">
+
+        <story-card title="Prop Types: Horizontal Stack">
+          <mui-responsive breakpoint="768" slot="body">
+            <story-type-table slot="showAbove">
+              ${rowsHStack}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${accordionsHStack}
+            </mui-accordion-group>
+          </mui-responsive>
+        </story-card>
 
         <story-card title="Horizontal: Default">
           ${DefaultHStack}
@@ -77,6 +242,17 @@ class storyStack extends HTMLElement {
             <br />
             &lt;/mui-h-stack&gt;
           </mui-code>
+        </story-card>
+
+        <story-card title="Prop Types: Vertical Stack">
+          <mui-responsive breakpoint="768" slot="body">
+            <story-type-table slot="showAbove">
+              ${rowsVStack}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${accordionsVStack}
+            </mui-accordion-group>
+          </mui-responsive>
         </story-card>
 
         <story-card title="Vertical: Default">
