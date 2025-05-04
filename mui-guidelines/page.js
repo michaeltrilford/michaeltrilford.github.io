@@ -8,7 +8,7 @@ class GuidelinesPage extends HTMLElement {
       .banner {
         display: flex;
         justify-content: center;
-        padding: var(--space-600) var(--space-600) var(--space-000) var(--space-600);
+        padding: var(--space-500) var(--space-600) var(--space-600);
         border-radius: var(--radius-300);
         background: var(--mui-brand);
         background: linear-gradient(-45deg, var(--mui-brand-dark) 0%, var(--mui-brand) 100%);
@@ -21,7 +21,13 @@ class GuidelinesPage extends HTMLElement {
           -6px -6px 14px var(--black-opacity-10);
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: 1150px) {
+        .banner {
+          padding: var(--space-600) var(--space-700) var(--space-000) var(--space-600);
+        } 
+      }
+
+      @media (min-width: 1300px) {
         .banner {
           padding: var(--space-700) var(--space-800) var(--space-000) var(--space-800);
         } 
@@ -35,11 +41,13 @@ class GuidelinesPage extends HTMLElement {
         align-items: center;
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: 1150px) {
         mui-grid::part(align-items) {
           align-items: start;
         }
       }
+
+
 
       mui-grid::part(width) {
         max-width: 118.0rem;
@@ -58,24 +66,25 @@ class GuidelinesPage extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <mui-responsive breakpoint="1300" class="banner">
+        <mui-responsive breakpoint="1150" class="banner">
           <mui-grid slot="showBelow" gap="var(--space-600)" col="1fr">
-            <mui-v-stack space="var(--space-400)" alignY="start">
-              <mui-h-stack space="var(--space-400)" alignY="center">
-                <mui-h-stack style="width: 38px;">
-                  <img src="./images/guides.svg" alt="Guru Guides" style="width: 100%; height: auto;" />
+            <mui-v-stack space="var(--space-500)" alignY="start">
+              <mui-v-stack  space="var(--space-100)">
+                <mui-h-stack space="var(--space-200)" alignY="center">
+                  <mui-h-stack style="width: 28px;">
+                    <img src="./images/guides.svg" alt="Guru Guides" style="width: 100%; height: auto;" />
+                  </mui-h-stack>
+                  <mui-heading size="3" level="2">Guru Guides</mui-heading>
                 </mui-h-stack>
-                <mui-heading size="3" level="2">Guru Guides</mui-heading>
-              </mui-h-stack>
-              <mui-body size="medium">A Figma plugin that delivers UX guidelines and customisable content, seamlessly integrating design system guides into Figma workflows.</mui-body>
+                <mui-body size="medium">A Figma plugin that delivers UX guidelines and customisable content, seamlessly integrating design system guides into Figma workflows.</mui-body>
+              </mui-v-stack>
               <mui-button-group>
                 <mui-link variant="primary" href="https://www.figma.com/community/plugin/1471341082690554711/guru-guides" target="_blank">Install</mui-link>
                 <mui-link variant="secondary" href="https://gurusuite.xyz/guides" target="_blank">Learn more</mui-link>
               <mui-button-group>
             </mui-v-stack>
-            <img src="./images/hero.png" style="width: 100%; height: auto;" />
           </mui-grid>
-          <mui-grid slot="showAbove" gap="var(--space-800)" col="1fr 400px">
+          <mui-grid slot="showAbove" gap="var(--space-600)" col="1fr 400px">
             <mui-v-stack  space="var(--space-600)"  alignY="start" style="max-width: 41ch;">
               <mui-v-stack  space="var(--space-400)">
                 <mui-h-stack space="var(--space-400)" alignY="center">
