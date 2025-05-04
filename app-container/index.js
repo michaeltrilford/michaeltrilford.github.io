@@ -34,7 +34,9 @@ export class AppContainer extends HTMLElement {
     const path = window.location.hash.slice(1) || "/home";
     const routes = {
       "/home": "home-page",
-      "/link": "story-link",
+
+      "/ux-guides": "guidelines-page",
+
       "/base-design-tokens": "story-tokens-base",
       "/semantic-design-tokens": "story-tokens-semantic",
       "/contextual-design-tokens": "story-tokens-contextual",
@@ -44,6 +46,7 @@ export class AppContainer extends HTMLElement {
       "/layout-part-selectors": "story-parts-layout",
       "/visual-part-selectors": "story-parts-visual",
 
+      "/link": "story-link",
       "/alerts": "story-alert",
       "/messages": "story-message",
       "/badge": "story-badge",

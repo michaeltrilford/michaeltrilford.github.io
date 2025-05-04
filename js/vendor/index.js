@@ -89,6 +89,7 @@ const UtilArray = ["mui-utils/index.js"];
 const PartsArray = ["mui-parts/index.js"];
 
 const SharedArray = [
+  "shared/page-card/index.js",
   "shared/story-template/index.js",
   "shared/story-card/index.js",
   "shared/story-demo/index.js",
@@ -158,6 +159,7 @@ const MuiCompArray = [
   "mui-table/mui-table.js",
   "mui-table/mui-thead.js",
   "mui-slat/index.js",
+  "mui-input/index.js",
 ];
 const RecipeArray = ["mui-table/recipe/table.js"];
 
@@ -165,6 +167,7 @@ const RecipeArray = ["mui-table/recipe/table.js"];
 const PageArray = [
   "app-container/index.js",
   "mui-home/page.js",
+  "mui-guidelines/page.js",
   "mui-responsive/story.js",
   "mui-button/story.js",
   "mui-grid/story.js",

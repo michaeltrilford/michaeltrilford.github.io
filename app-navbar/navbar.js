@@ -68,6 +68,12 @@ class muiNavbar extends HTMLElement {
       <mui-navbar-home  link="#/home" title="michaeltrilford.mui"></mui-navbar-home>
     `;
 
+    const Guidelines = `
+      <mui-navbar-group id="design-tokens" groupname="Resources">
+        <mui-navbar-link link="#/ux-guides" title="UX Guides"></mui-navbar-link>
+      </mui-navbar-group>
+    `;
+
     const Required = `
       <mui-navbar-group id="design-tokens" groupname="Design Tokens">
         <mui-navbar-link link="#/base-design-tokens" title="Base"></mui-navbar-link>
@@ -119,6 +125,7 @@ class muiNavbar extends HTMLElement {
       <mui-navbar-menu desktop id="desktop">
         <slot name="skip"></slot>
         ${Home}
+        ${Guidelines}
         ${Required}
         ${Parts}
         ${Components}
@@ -126,6 +133,7 @@ class muiNavbar extends HTMLElement {
       
       <mui-navbar-menu mobile id="mobile">
         <slot name="skip"></slot>
+        ${Guidelines}
         ${Required}
         ${Parts}
         ${Components}

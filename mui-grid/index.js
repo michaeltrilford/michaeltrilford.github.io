@@ -5,9 +5,16 @@ class muiGrid extends HTMLElement {
 
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    let col = `1fr 1fr`;
-    let gap = `var(--space-500)`;
+    this.attachShadow({ mode: "open" });
+  }
+
+  async connectedCallback() {
+    await this.waitForPartMap();
+
+    const col = this.getAttribute("col") || "1fr 1fr";
+    const gap = this.getAttribute("gap") || "var(--space-500)";
+    const partMap = getPartMap("layout", "spacing");
+
     const styles = `
       :host {
         display: block;
@@ -18,14 +25,27 @@ class muiGrid extends HTMLElement {
         gap: var(--gap);
       }
     `;
-    shadowRoot.innerHTML = `
+
+    this.shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <div part="internal" style="--col: ${
-        this.getAttribute("col") || col
-      }; --gap: ${this.getAttribute("gap") || gap};">
+      <div part="${partMap}" style="--col: ${col}; --gap: ${gap};">
         <slot></slot>
       </div>
     `;
+  }
+
+  waitForPartMap() {
+    return new Promise((resolve) => {
+      if (typeof getPartMap === "function") return resolve();
+      const check = () => {
+        if (typeof getPartMap === "function") {
+          resolve();
+        } else {
+          requestAnimationFrame(check);
+        }
+      };
+      check();
+    });
   }
 }
 
