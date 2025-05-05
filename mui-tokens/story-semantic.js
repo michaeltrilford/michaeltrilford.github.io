@@ -16,14 +16,14 @@ class storyTokensSemantic extends HTMLElement {
         <mui-v-stack space="var(--space-700)">
   
           <story-card title="Feedback States" description="User feedback (alerts, forms, etc.)" nofooter>
-            <mui-token-local-slat slot="body" token="--feedback-neutral-color" output="var(--grey-200)"></mui-token-local-slat>  
+            <mui-token-local-slat slot="body" token="--feedback-neutral-color" output="var(--grey-500)"></mui-token-local-slat>  
             <mui-token-local-slat slot="body" token="--feedback-positive-color" output="var(--green-500)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-info-color" output="var(--blue-500)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-warning-color" output="var(--orange-500)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-attention-color" output="var(--red-500)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-focus-stroke-color" output="var(--blue-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-neutral-stroke-color" output="var(--green-500))"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-positive-stroke-color" output="var(--green-500))"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-neutral-stroke-color" output="var(--green-500)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-positive-stroke-color" output="var(--green-500)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-info-stroke-color" output="var(--blue-500)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-warning-stroke-color" output="var(--orange-500)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-attention-stroke-color" output="var(--red-600)"></mui-token-local-slat>
@@ -58,6 +58,17 @@ class storyTokensSemantic extends HTMLElement {
             <mui-token-local-slat slot="body" token="--interactive-secondary-text-disabled" output="var(--grey-400)"></mui-token-local-slat>
           </story-card>
 
+          <story-card title="Interactive / Tertiary" description="Interactive tokens define the visual behavior of user-interactable elements like links and buttons." nofooter>
+            <mui-token-local-slat slot="body" token="--interactive-tertiary-stroke" output="var(--white-opacity-0)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--interactive-tertiary-bg" output="var(--white-opacity-0)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--interactive-tertiary-bg-hover" output="var(--black-opacity-10)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--interactive-tertiary-bg-focus" output="var(--black-opacity-10)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--interactive-tertiary-bg-disabled" output="var(--grey-100)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--interactive-tertiary-text" output="var(--grey-900)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--interactive-tertiary-text-hover" output="var(--grey-1000)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--interactive-tertiary-text-focus" output="var(--grey-1000)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--interactive-tertiary-text-disabled" output="var(--grey-400)"></mui-token-local-slat>
+          </story-card>
 
           <story-card title="Interactive / Attention" description="Interactive tokens define the visual behavior of user-interactable elements like links and buttons." nofooter>
             <mui-token-local-slat slot="body" token="--interactive-attention-stroke" output="var(--black-opacity-0)"></mui-token-local-slat>

@@ -30,7 +30,7 @@ class muiInput extends HTMLElement {
           font-size: var(--body-font-size-m);
           font-weight: 500;
           margin-bottom: var(--space-100);
-          color: var(--text-color-default);
+          color: var(--label-text-color);
           display: block;
         }
 

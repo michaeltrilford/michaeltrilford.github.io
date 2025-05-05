@@ -147,6 +147,7 @@
   --stroke-size-100: 1px;
   --stroke-size-200: 2px;
   --stroke-size-300: 3px;
+  --stroke-size-400: 4px;
   --stroke-size-500: 5px;
 
   --stroke-style-solid: solid;
@@ -192,8 +193,8 @@
   --interactive-secondary-bg-focus: var(--grey-100);
   --interactive-secondary-bg-disabled: var(--grey-100);
   --interactive-secondary-text: var(--grey-900);
-  --interactive-secondary-text-hover: var(--grey-900);
-  --interactive-secondary-text-focus: var(--grey-900);
+  --interactive-secondary-text-hover: var(--grey-1000);
+  --interactive-secondary-text-focus: var(--grey-1000);
   --interactive-secondary-text-disabled: var(--grey-400);
 
   --interactive-tertiary-stroke: var(--white-opacity-0);
@@ -264,13 +265,17 @@
   /* CSS Usage Example: background: var(--button-background-primary); */
 
   /* Icon */
+  /* ///////////////////////////////////////////////////////////////////// */
   --icon-color-default: var(--black);
   --icon-color-inverted: var(--white);
 
   /* Card */
+  /* ///////////////////////////////////////////////////////////////////// */
   --card-radius: var(--radius-150);
+  --card-background: var(--white);
 
   /* Badge */
+  /* ///////////////////////////////////////////////////////////////////// */
   --badge-radius: var(--radius-300);
   --badge-font-weight: var(--font-weight-bold);
   --badge-background-neutral: var(--feedback-neutral-color);
@@ -279,10 +284,12 @@
   --badge-background-attention: var(--feedback-attention-color);
 
   /* Heading */
+  /* ///////////////////////////////////////////////////////////////////// */
   --heading-text-color: var(--grey-900);
   --heading-line-height: var(--line-height-200);
 
   /* Body */
+  /* ///////////////////////////////////////////////////////////////////// */
   --body-line-height: var(--line-height-300);
   --body-text-color: var(--grey-900);
   --body-font-size-xs: var(--font-size-25);
@@ -290,7 +297,12 @@
   --body-font-size-m: var(--font-size-100);
   --body-font-size-l: var(--font-size-200);
 
+  /* Label */
+  /* ///////////////////////////////////////////////////////////////////// */
+  --label-text-color: var(--grey-900);
+
   /* Code */
+  /* ///////////////////////////////////////////////////////////////////// */
   --code-text-color: var(--white);
   --code-font-size-xs: var(--font-size-25);
   --code-font-size-s: var(--font-size-50);
@@ -299,152 +311,77 @@
   --code-background: var(--grey-900);
 
   /* Table */
+  /* ///////////////////////////////////////////////////////////////////// */
   --table-background: var(--white);
 
   /* Alert */
+  /* ///////////////////////////////////////////////////////////////////// */
+  --alert-background-success: var(--green-100);
+  --alert-background-info: var(--blue-100);
+  --alert-background-warning: var(--orange-100);
+  --alert-background-error: var(--red-100);
+
+  --alert-icon-success: var(--green-600);
+  --alert-icon-info: var(--blue-600);
+  --alert-icon-warning: var(--orange-600);
+  --alert-icon-error: var(--red-600);
+
+  --alert-text-color-success: var(--green-900);
+  --alert-text-color-info: var(--blue-900);
+  --alert-text-color-warning: var(--orange-900);
+  --alert-text-color-error: var(--red-900);
+
   --alert-radius: var(--radius-100);
   --alert-border-success: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--feedback-positive-color);
+    var(--feedback-positive-stroke-color);
   --alert-border-info: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--feedback-info-color);
+    var(--feedback-info-stroke-color);
   --alert-border-warning: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--feedback-warning-color);
+    var(--feedback-warning-stroke-color);
   --alert-border-error: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--feedback-attention-color);
-
-  --alert-background-success: color-mix(
-    in srgb,
-    var(--feedback-positive-color) 10%,
-    var(--white) 0%
-  );
-  --alert-background-info: color-mix(
-    in srgb,
-    var(--feedback-info-color) 10%,
-    var(--white) 0%
-  );
-  --alert-background-warning: color-mix(
-    in srgb,
-    var(--feedback-warning-color) 10%,
-    var(--white) 0%
-  );
-  --alert-background-error: color-mix(
-    in srgb,
-    var(--feedback-attention-color) 10%,
-    var(--white) 0%
-  );
-
-  --alert-icon-success: color-mix(
-    in srgb,
-    var(--feedback-positive-color) 100%,
-    var(--black) 20%
-  );
-  --alert-icon-info: color-mix(
-    in srgb,
-    var(--feedback-info-color) 100%,
-    var(--black) 20%
-  );
-  --alert-icon-warning: color-mix(
-    in srgb,
-    var(--feedback-warning-color) 100%,
-    var(--black) 20%
-  );
-  --alert-icon-error: color-mix(
-    in srgb,
-    var(--feedback-attention-color) 100%,
-    var(--black) 20%
-  );
-
-  --alert-text-color-success: color-mix(
-    in srgb,
-    var(--feedback-positive-color) 100%,
-    var(--black) 40%
-  );
-  --alert-text-color-info: color-mix(
-    in srgb,
-    var(--feedback-info-color) 100%,
-    var(--black) 40%
-  );
-  --alert-text-color-warning: color-mix(
-    in srgb,
-    var(--feedback-warning-color) 100%,
-    var(--black) 40%
-  );
-  --alert-text-color-error: color-mix(
-    in srgb,
-    var(--feedback-attention-color) 100%,
-    var(--black) 40%
-  );
+    var(--feedback-attention-stroke-color);
 
   /* Messages */
+  /* ///////////////////////////////////////////////////////////////////// */
   --message-radius: var(--radius-150);
   --message-border: var(--stroke-size-200) var(--stroke-style-solid)
     var(--black);
 
   --message-background-neutral: var(--white-opacity-10);
+  --message-background-positive: var(--green-100);
+  --message-background-info: var(--blue-100);
+  --message-background-warning: var(--orange-100);
+  --message-background-attention: var(--red-100);
+
+  --message-icon-neutral: var(--grey-800);
+  --message-icon-positive: var(--green-600);
+  --message-icon-info: var(--blue-600);
+  --message-icon-warning: var(--orange-600);
+  --message-icon-attention: var(--red-600);
+
+  --message-text-color-neutral: var(--grey-900);
+  --message-text-color-positive: var(--green-900);
+  --message-text-color-info: var(--blue-900);
+  --message-text-color-warning: var(--orange-900);
+  --message-text-color-attention: var(--red-900);
+
   --message-border-neutral: var(--stroke-size-200) var(--stroke-style-solid)
     var(--black-opacity-30);
 
-  --message-background-positive: var(--white);
   --message-border-positive: var(--stroke-size-200) var(--stroke-style-solid)
     var(--feedback-positive-stroke-color);
 
-  --message-background-info: var(--white);
   --message-border-info: var(--stroke-size-200) var(--stroke-style-solid)
     var(--feedback-info-stroke-color);
 
-  --message-background-warning: var(--white);
   --message-border-warning: var(--stroke-size-200) var(--stroke-style-solid)
     var(--feedback-warning-stroke-color);
 
-  --message-background-attention: var(--white);
   --message-border-attention: var(--stroke-size-200) var(--stroke-style-solid)
     var(--feedback-attention-stroke-color);
 
-  --message-icon-neutral: var(--grey-800);
-  --message-icon-positive: color-mix(
-    in srgb,
-    var(--feedback-positive-color) 100%,
-    var(--black) 20%
-  );
-  --message-icon-info: color-mix(
-    in srgb,
-    var(--feedback-info-color) 100%,
-    var(--black) 20%
-  );
-  --message-icon-warning: color-mix(
-    in srgb,
-    var(--feedback-warning-color) 100%,
-    var(--black) 20%
-  );
-  --message-icon-attention: color-mix(
-    in srgb,
-    var(--feedback-attention-color) 100%,
-    var(--black) 20%
-  );
-
-  --message-text-color-neutral: var(--grey-900);
-  --message-text-color-positive: color-mix(
-    in srgb,
-    var(--feedback-positive-color) 100%,
-    var(--black) 40%
-  );
-  --message-text-color-info: color-mix(
-    in srgb,
-    var(--feedback-info-color) 100%,
-    var(--black) 40%
-  );
-  --message-text-color-warning: color-mix(
-    in srgb,
-    var(--feedback-warning-color) 100%,
-    var(--black) 40%
-  );
-  --message-text-color-attention: color-mix(
-    in srgb,
-    var(--feedback-attention-color) 100%,
-    var(--black) 40%
-  );
-
   /* Button */
+  /* ///////////////////////////////////////////////////////////////////// */
   --button-radius: var(--interactive-radius);
   --button-font-size: var(--font-size-100);
   --button-font-weight: var(--font-weight-medium);
@@ -519,8 +456,15 @@
     var(--stroke-color-button-icon-only);
 
   /* Link */
+  /* ///////////////////////////////////////////////////////////////////// */
   --link-font-size: inherit;
   --link-font-weight: inherit;
+
+  --link-font-size-xs: var(--body-font-size-xs);
+  --link-font-size-s: var(--body-font-size-s);
+  --link-font-size-m: var(--body-font-size-m);
+  --link-font-size-l: var(--body-font-size-l);
+
   --link-button-font-size: var(--font-size-100);
   --link-button-radius: var(--interactive-radius);
   --link-button-font-weight: var(--font-weight-medium);

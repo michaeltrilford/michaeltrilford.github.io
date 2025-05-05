@@ -37,6 +37,10 @@ class GuidelinesPage extends HTMLElement {
         width: 100%;
       }
 
+      .mui-button-secondary::part(background) {
+        background: var(--mui-brand);
+      }
+
       mui-grid::part(align-items) {
         align-items: center;
       }
@@ -47,13 +51,11 @@ class GuidelinesPage extends HTMLElement {
         }
       }
 
-
-
       mui-grid::part(width) {
         max-width: 118.0rem;
       }
     
-      `;
+    `;
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -80,7 +82,7 @@ class GuidelinesPage extends HTMLElement {
               </mui-v-stack>
               <mui-button-group>
                 <mui-link variant="primary" href="https://www.figma.com/community/plugin/1471341082690554711/guru-guides" target="_blank">Install</mui-link>
-                <mui-link variant="secondary" href="https://gurusuite.xyz/guides" target="_blank">Learn more</mui-link>
+                <mui-link class="mui-button-secondary" variant="secondary" href="https://gurusuite.xyz/guides" target="_blank">Learn more</mui-link>
               <mui-button-group>
             </mui-v-stack>
           </mui-grid>
@@ -97,7 +99,7 @@ class GuidelinesPage extends HTMLElement {
               </mui-v-stack>
               <mui-button-group>
                 <mui-link variant="primary" href="https://www.figma.com/community/plugin/1471341082690554711/guru-guides" target="_blank">Install</mui-link>
-                <mui-link variant="secondary" href="https://gurusuite.xyz/guides" target="_blank">Learn more</mui-link>
+                <mui-link class="mui-button-secondary" variant="secondary" href="https://gurusuite.xyz/guides" target="_blank">Learn more</mui-link>
               <mui-button-group>
             </mui-v-stack>
             <img src="./images/hero.png" style="width: 100%; height: auto;" />
