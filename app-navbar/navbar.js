@@ -71,6 +71,7 @@ class muiNavbar extends HTMLElement {
     const Guidelines = `
       <mui-navbar-group id="design-tokens" groupname="Resources">
         <mui-navbar-link link="#/ux-guides" title="UX Guides"></mui-navbar-link>
+        <mui-navbar-link link="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=0-1&t=5A8fWmORS1XTiPBQ-1" title="MUI Kit"></mui-navbar-link>
       </mui-navbar-group>
     `;
 
