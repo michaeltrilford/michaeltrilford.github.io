@@ -54,6 +54,12 @@ class GuidelinesPage extends HTMLElement {
       mui-grid::part(width) {
         max-width: 118.0rem;
       }
+
+      .hero {
+        margin-top: -8rem;
+        width: 100%;
+        height: auto;
+      }
     
     `;
 
@@ -102,7 +108,7 @@ class GuidelinesPage extends HTMLElement {
                 <mui-link class="mui-button-secondary" variant="secondary" href="https://gurusuite.xyz/guides" target="_blank">Learn more</mui-link>
               <mui-button-group>
             </mui-v-stack>
-            <img src="./images/hero.png" style="width: 100%; height: auto;" />
+            <img class="hero" src="./images/hero.png" />
           </mui-grid>
         </mui-responsive>
 
