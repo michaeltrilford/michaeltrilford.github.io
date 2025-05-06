@@ -9,14 +9,25 @@ class muiAlert extends HTMLElement {
   }
 
   connectedCallback() {
-    const variant = this.getAttribute("variant") || "success";
+    const rawVariant = this.getAttribute("variant") || "positive";
+
+    // Map aliases to internal token values
+    const variantAliases = {
+      success: "positive",
+      error: "attention",
+    };
+
+    const variant = variantAliases[rawVariant] || rawVariant;
+
+    // Normalize the attribute so :host([variant=...]) CSS works
+    this.setAttribute("variant", variant);
 
     // Define aria-live mapping based on variant
     const ariaLiveMapping = {
-      success: "polite", // Success is typically less urgent
+      positive: "polite", // Success is typically less urgent
       info: "polite", // Info is typically less urgent
       warning: "assertive", // Warnings may need immediate attention
-      error: "assertive", // Errors require immediate attention
+      attention: "assertive", // Errors require immediate attention
     };
 
     // Apply accessibility attributes to the host element
@@ -25,34 +36,34 @@ class muiAlert extends HTMLElement {
 
     const iconTag =
       {
-        success: "mui-icon-check",
+        positive: "mui-icon-check",
         info: "mui-icon-info",
         warning: "mui-icon-warning",
-        error: "mui-icon-attention",
+        attention: "mui-icon-attention",
       }[variant] || "mui-icon-check";
 
     const iconColor =
       {
-        success: "--alert-icon-success",
-        info: "--alert-icon-info",
-        warning: "--alert-icon-warning",
-        error: "--alert-icon-error",
-      }[variant] || "--alert-icon-success";
+        positive: "--feedback-positive-icon",
+        info: "--feedback-info-icon",
+        warning: "--feedback-warning-icon",
+        attention: "--feedback-attention-icon",
+      }[variant] || "--feedback-positive-icon";
 
     const labelColor =
       {
-        success: "--alert-text-color-success",
-        info: "--alert-text-color-info",
-        warning: "--alert-text-color-warning",
-        error: "--alert-text-color-error",
-      }[variant] || "--alert-text-color-success";
+        positive: "--feedback-positive-text",
+        info: "--feedback-info-text",
+        warning: "--feedback-warning-text",
+        attention: "--feedback-attention-text",
+      }[variant] || "--feedback-positive-text";
 
     const labelText =
       {
-        success: "Success!",
+        positive: "Success!",
         info: "Info:",
         warning: "Warning!",
-        error: "Error!",
+        attention: "Error!",
       }[variant] || "Success!";
 
     const styles = `
@@ -92,12 +103,12 @@ class muiAlert extends HTMLElement {
         gap: var(--space-000);
       }
 
-      ${["success", "info", "warning", "error"]
+      ${["positive", "info", "warning", "attention"]
         .map(
           (v) => `
         :host([variant="${v}"]) {
-          border: var(--alert-border-${v});
-          background: var(--alert-background-${v});
+          border: var(--feedback-${v}-border);
+          background: var(--feedback-${v}-background);
         }
       `
         )

@@ -21,42 +21,40 @@ class muiBody extends HTMLElement {
 
     let html = `
     <style>
-      :host {
-        display: block;
-      }
+      :host { display: block; }
 
       :host p {
         margin: var(--space-000);
         display: block;
         width: 100%;
       }
-      :host([size="medium"]) p {
-        font-size: var(--body-font-size-m);
-      }
-      :host([size="large"]) p {
-        font-size: var(--body-font-size-l); 
-        line-height: 1.714285714285714;
-      }
-      :host([size="small"]) p {
-        font-size: var(--body-font-size-s); 
-        line-height: 1.714285714285714;
-      }
+
       :host([size="x-small"]) p {
-        font-size: var(--body-font-size-xs); 
+        font-size: var(--text-font-size-xs);
+        line-height: var(--text-line-height-xs);
       }
 
-      :host([weight="regular"]) p {
-        font-weight: 400;
+      :host([size="small"]) p {
+        font-size: var(--text-font-size-s); 
+        line-height: var(--text-line-height-s);
       }
 
-      :host([weight="medium"]) p {
-        font-weight: 500;
+      :host([size="medium"]) p {
+        font-size: var(--text-font-size-m);
+        line-height: var(--text-line-height-m);
       }
 
-      :host([weight="bold"]) p {
-        font-weight: 700;
+      :host([size="large"]) p {
+        font-size: var(--text-font-size-l); 
+        line-height: var(--text-line-height-l);
       }
+
+      :host([weight="regular"]) p { font-weight: var(--font-weight-regular); }
+      :host([weight="medium"]) p { font-weight: var(--font-weight-medium); }
+      :host([weight="bold"]) p { font-weight: var(--font-weight-bold); }
+
     </style>
+    
     <p part="${partMap}"><slot></slot></p>
 
     `;

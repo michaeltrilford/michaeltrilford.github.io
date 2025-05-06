@@ -88,7 +88,7 @@ class storyLink extends HTMLElement {
               &lt;/mui-link&gt;
             </mui-code>
 
-          </story-card>
+        </story-card>
 
 
 

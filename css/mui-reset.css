@@ -1,6 +1,6 @@
 :root {
   font-size: var(--root-font-size);
-  line-height: var(--body-line-height);
+  line-height: var(--text-line-height);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-feature-settings: kern 1, liga 1;
@@ -13,7 +13,7 @@
   background: var(--white);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  color: var(--body-text-color);
+  color: var(--text-color);
 }
 
 :root {
@@ -22,7 +22,7 @@
 
 body {
   margin: var(--space-000);
-  font-size: var(--body-font-size-m);
+  font-size: var(--text-font-size);
   min-height: 100vh;
 }
 
@@ -32,8 +32,8 @@ optgroup,
 select,
 textarea {
   font-family: var(--font-family);
-  font-size: var(--body-font-size-m);
-  line-height: var(--body-line-height);
+  font-size: var(--text-font-size);
+  line-height: var(--text-line-height);
 }
 input,
 optgroup,

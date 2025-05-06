@@ -8,6 +8,16 @@ class muiListItem extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.setAttribute("role", "listitem");
+
+    // Set default attributes if they’re not provided
+    if (!this.hasAttribute("size")) {
+      this.setAttribute("size", "medium");
+    }
+
+    if (!this.hasAttribute("weight")) {
+      this.setAttribute("weight", "regular");
+    }
+
     this.render();
   }
 
@@ -23,26 +33,31 @@ class muiListItem extends HTMLElement {
       :host {
         display: list-item;
         margin: var(--space-000);
+        color: var(--list-text-color);
       }
 
       /* Size styles */
-      :host([size="medium"]) {
-        font-size: var(--body-font-size-m);
-      }
 
-      :host([size="large"]) {
-        font-size: var(--body-font-size-l);
-        line-height: 1.714285714285714;
+      :host([size="x-small"]) {
+        font-size: var(--text-font-size-xs);
+        line-height: var(--text-line-height-xs);
       }
 
       :host([size="small"]) {
-        font-size: var(--body-font-size-s);
-        line-height: 1.714285714285714;
+        font-size: var(--text-font-size-s);
+        line-height: var(--text-line-height-s);
       }
 
-      :host([size="x-small"]) {
-        font-size: var(--body-font-size-xs);
+      :host([size="medium"]) {
+        font-size: var(--text-font-size-m);
+        line-height: var(--text-line-height-m);
       }
+
+      :host([size="large"]) {
+        font-size: var(--text-font-size-l);
+        line-height: var(--text-line-height-l);
+      }
+
 
       /* Weight styles */
       :host([weight="regular"]) {

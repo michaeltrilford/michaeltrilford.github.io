@@ -15,6 +15,23 @@ class storyTokensContextual extends HTMLElement {
       >
         <mui-v-stack space="var(--space-700)">
 
+          <story-card title="Text" nofooter>
+            <mui-token-local-slat slot="body" token="--text-color" output="var(--grey-900)"></mui-token-local-slat>
+
+            <mui-token-local-slat slot="body" token="--text-font-size" output="var(--text-font-size-m)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--text-line-height" output="var(--text-line-height-m)"></mui-token-local-slat>
+
+            <mui-token-local-slat slot="body" token="--text-line-height-xs" output="var(--line-height-300)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--text-line-height-s" output="var(--line-height-400)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--text-line-height-m" output="var(--line-height-300)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--text-line-height-l" output="var(--line-height-400)"></mui-token-local-slat>
+
+            <mui-token-local-slat slot="body" token="--text-font-size-xs" output="var(--font-size-25)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--text-font-size-s" output="var(--font-size-50)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--text-font-size-m" output="var(--font-size-100)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--text-font-size-l" output="var(--font-size-200)"></mui-token-local-slat>
+          </story-card>
+
           <story-card title="Summary" nofooter>
             <mui-token-local-slat slot="body" token="--summary-background" output="var(--white)"></mui-token-local-slat>
           </story-card>

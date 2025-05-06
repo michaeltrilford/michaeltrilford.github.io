@@ -12,15 +12,15 @@ class muiMessage extends HTMLElement {
     // Define variant styles
     const variantStyles = {
       neutral:
-        "background-color: var(--message-background-neutral); border: var(--message-border-neutral);",
+        "background-color: var(--feedback-neutral-background); border: var(--feedback-neutral-border);",
       positive:
-        "background-color:  var(--message-background-positive); border: var(--message-border-positive);",
+        "background-color:  var(--feedback-positive-background); border: var(--feedback-positive-border);",
       info:
-        "background-color: var(--message-background-info);  border: var(--message-border-info);",
+        "background-color: var(--feedback-info-background);  border: var(--feedback-info-border);",
       warning:
-        "background-color: var(--message-background-warning);   border: var(--message-border-warning);",
+        "background-color: var(--feedback-warning-background);   border: var(--feedback-warning-border);",
       attention:
-        "background-color: var(--message-background-attention);  border: var(--message-border-attention);",
+        "background-color: var(--feedback-attention-background);  border: var(--feedback-attention-border);",
     };
 
     const ariaLiveMap = {
@@ -44,19 +44,19 @@ class muiMessage extends HTMLElement {
     const role = roleMap[variant] || "status";
 
     const iconColors = {
-      neutral: "--message-icon-neutral",
-      positive: "--message-icon-positive",
-      info: "--message-icon-info",
-      warning: "--message-icon-warning",
-      attention: "--message-icon-attention",
+      neutral: "--feedback-neutral-icon",
+      positive: "--feedback-positive-icon",
+      info: "--feedback-info-icon",
+      warning: "--feedback-warning-icon",
+      attention: "--feedback-attention-icon",
     };
 
     const headingColors = {
-      neutral: "color: var(--message-text-color-neutral);",
-      positive: "color: var(--message-text-color-positive);",
-      info: "color: var(--message-text-color-info);",
-      warning: "color: var(--message-text-color-warning);",
-      attention: "color: var(--message-text-color-attention);",
+      neutral: "color: var(--feedback-neutral-text);",
+      positive: "color: var(--feedback-positive-text);",
+      info: "color: var(--feedback-info-text);",
+      warning: "color: var(--feedback-warning-text);",
+      attention: "color: var(--feedback-attention-text);",
     };
 
     const iconTags = {
@@ -98,7 +98,6 @@ class muiMessage extends HTMLElement {
           }
           section {
             padding: var(--space-100) var(--space-100) var(--space-100) var(--space-400);
-            background: var(--message-background-info);
             border-radius: var(--radius-200);
             display: flex;
             gap: var(--space-200);

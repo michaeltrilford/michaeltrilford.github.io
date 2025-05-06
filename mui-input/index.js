@@ -27,8 +27,8 @@ class muiInput extends HTMLElement {
         }
 
         label {
-          font-size: var(--body-font-size-m);
-          font-weight: 500;
+          font-size: var(--text-font-size);
+          font-weight: var(--font-weight-medium);
           margin-bottom: var(--space-100);
           color: var(--label-text-color);
           display: block;
@@ -36,11 +36,11 @@ class muiInput extends HTMLElement {
 
         input {
           padding: var(--space-300);
-          font-size: var(--body-font-size-m);
+          font-size: var(--text-font-size);
           border: var(--border-thin);
           border-color: var(--grey-300);
           border-radius: var(--radius-100);
-          color: var(--body-text-color);
+          color: var(--text-color);
           background: var(--white);
           width: 100%;
           box-sizing: border-box;

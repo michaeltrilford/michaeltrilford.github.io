@@ -80,7 +80,7 @@ class muiIconToggle extends HTMLElement {
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: var(--button-radius);
+          border-radius: var(--interactive-radius);
         }
 
         button:focus {
@@ -89,11 +89,16 @@ class muiIconToggle extends HTMLElement {
           box-shadow: none;
         }
 
-        /* Show outline only if user is tabbing */
-        :host-context(body[data-user-is-tabbing]) button:focus {
+        button:focus-visible {
           outline: var(--outline-medium);
           outline-color: var(--feedback-focus-stroke-color);
         }
+
+        /* Show outline only if user is tabbing */
+        /* :host-context(body[data-user-is-tabbing]) button:focus {
+          outline: var(--outline-medium);
+          outline-color: var(--feedback-focus-stroke-color);
+        } */
 
         ::slotted(*) {
           position: absolute;

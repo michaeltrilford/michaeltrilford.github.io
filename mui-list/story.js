@@ -16,6 +16,85 @@ class storyList extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
+        <story-card title="Sizes">
+
+            <div slot="body">
+              <mui-v-stack space="var(--space-500)">
+                <div>
+                  <mui-heading size="4" tinymargin>X-Small</mui-heading>
+
+                  <mui-list as="ol">
+                    <mui-list-item size="x-small">Coffee</mui-list-item>
+                    <mui-list-item size="x-small">Tea</mui-list-item>
+                    <mui-list-item size="x-small">Milk</mui-list-item>
+                  </mui-list>
+
+                </div>
+                <div>
+                  <mui-heading size="4" tinymargin>Small</mui-heading>
+
+                  <mui-list as="ol">
+                    <mui-list-item size="small">Coffee</mui-list-item>
+                    <mui-list-item size="small">Tea</mui-list-item>
+                    <mui-list-item size="small">Milk</mui-list-item>
+                  </mui-list>
+
+                </div>
+                <div>
+                  <mui-heading size="4" tinymargin>Medium</mui-heading>
+
+                  <mui-list as="ol">
+                    <mui-list-item size="medium">Coffee</mui-list-item>
+                    <mui-list-item size="medium">Tea</mui-list-item>
+                    <mui-list-item size="medium">Milk</mui-list-item>
+                  </mui-list>
+
+                </div>
+                <div>
+                  <mui-heading size="4" tinymargin>Large</mui-heading>
+
+                  <mui-list as="ol">
+                    <mui-list-item size="large">Coffee</mui-list-item>
+                    <mui-list-item size="large">Tea</mui-list-item>
+                    <mui-list-item size="large">Milk</mui-list-item>
+                  </mui-list>
+
+                </div>
+              </mui-v-stack>
+            </div>
+
+            <mui-code slot="footer">
+              &lt;mui-list-item size="x-small"&gt;
+              <br />
+              &nbsp;&nbsp;List item text
+              <br />
+              &lt;/mui-list-item&gt;
+              <br />
+              <br />
+              &lt;mui-list-item size="small"&gt;
+              <br />
+              &nbsp;&nbsp;List item text
+              <br />
+              &lt;/mui-list-item&gt;
+              <br />
+              <br />
+              &lt;mui-list-item size="medium"&gt;
+              <br />
+              &nbsp;&nbsp;List item text
+              <br />
+              &lt;/mui-list-item&gt;
+              <br />
+              <br />
+              &lt;mui-list-item size="large"&gt;
+              <br />
+              &nbsp;&nbsp;List item text
+              <br />
+              &lt;/mui-list-item&gt;
+            </mui-code>
+
+        </story-card>
+
+
         <story-card title="Unordered">
 
           <div slot="body">

@@ -100,25 +100,25 @@ class storyIcon extends HTMLElement {
 
               <story-icon-grid theme="primary">              
                 <mui-icon-add slot="body" variant="primary"></mui-icon-add>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-primary)" slot="body">Primary Button Usage</mui-body>
+                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--interactive-primary-text-color)" slot="body">Primary Button Usage</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-add variant="primary"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 
               <story-icon-grid theme="secondary">              
                 <mui-icon-add slot="body" variant="secondary"></mui-icon-add>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-secondary)" slot="body">Secondary Button Usage</mui-body>
+                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--interactive-secondary-text-color)" slot="body">Secondary Button Usage</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-add variant="secondary"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 
               <story-icon-grid theme="tertiary">              
                 <mui-icon-add slot="body" variant="tertiary"></mui-icon-add>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-tertiary)" slot="body">Tertiary Button Usage</mui-body>
+                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--interactive-tertiary-text-color)" slot="body">Tertiary Button Usage</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-add variant="tertiary"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 
               <story-icon-grid theme="attention">              
                 <mui-icon-add slot="body" variant="attention"></mui-icon-add>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--button-text-color-attention)" slot="body">Attention Button Usage</mui-body>
+                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--interactive-attention-text-color)" slot="body">Attention Button Usage</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-add variant="attention"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 

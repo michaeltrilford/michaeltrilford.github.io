@@ -23,227 +23,186 @@ class muiLink extends HTMLElement {
     let html = `
     <style>
 
-      :host {
-        display: inline-flex;
-      }
+      :host { display: inline-flex; }
+
       a {
+        /* Inherit when nested in Body */
         font-size: var(--link-font-size);
-        color: var(--link-text-color-default);
         font-weight: var(--link-font-weight);
+        color: var(--link-text-color-default);
         align-items: center;
         justify-content: center;
         cursor: pointer;
         box-sizing: border-box;
       }
-      a:active, a:hover { outline: var(--space-000); }
 
-      a:hover {
-        color: var(--link-text-color-default-hover);
-      }
-
-      a:focus {
-        color: var(--link-text-color-default-focus);
-      }
-
-      a:disabled {
-        color: var(--link-text-color-default-disabled);
-      }
-
+      // Turned back on for focus-visible
+      a:focus, a:active, a:hover { outline: var(--space-000); }
+      a:hover { color: var(--link-text-color-default-hover); }
+      a:focus { color: var(--link-text-color-default-focus); }
+      a:disabled { color: var(--link-text-color-default-disabled); cursor: not-allowed; }
       a, a:before, a:after {box-sizing: border-box;}
+      a:focus-visible { outline: var(--outline-thick); }
 
-      a:focus-visible {
-        outline: var(--outline-thick);
+      :host([size="x-small"]) a {
+        font-size: var(--text-font-size-xs);
+        line-height: var(--text-line-height-xs);
+      }
+
+      :host([size="small"]) a {
+        font-size: var(--text-font-size-s); 
+        line-height: var(--text-line-height-s);
       }
 
       :host([size="medium"]) a {
-        font-size: var(--body-font-size-m);
+        font-size: var(--text-font-size-m);
+        line-height: var(--text-line-height-m);
       }
       :host([size="large"]) a {
-        font-size: var(--body-font-size-l); 
-        line-height: 1.714285714285714;
-      }
-      :host([size="small"]) a {
-        font-size: var(--body-font-size-s); 
-        line-height: 1.714285714285714;
-      }
-      :host([size="x-small"]) a {
-        font-size: var(--body-font-size-xs); 
+        font-size: var(--text-font-size-l); 
+        line-height: var(--text-line-height-l);
       }
 
-      :host([weight="regular"]) a {
-        font-weight: 400;
-      }
-
-      :host([weight="medium"]) a {
-        font-weight: 500;
-      }
-
-      :host([weight="bold"]) a {
-        font-weight: 700;
-      }
+      :host([weight="regular"]) a { font-weight: var(--font-weight-regular); }
+      :host([weight="medium"]) a { font-weight: var(--font-weight-medium); }
+      :host([weight="bold"]) a { font-weight: var(--font-weight-bold); }
 
       /* Button Primary 
       ========================================= */
 
-      :host([variant="primary"]) {
-        display: inline-block;
-      }
+      :host([variant="primary"]) { display: inline-block; }
 
       :host([variant="primary"]) a {
         display: inline-block;
         text-decoration: none;
-        border: var(--link-border-primary); 
+        border: var(--interactive-primary-stroke); 
         padding: var(--space-200) var(--space-500);
-        border-radius: var(--link-radius);
-        background-color: var(--link-background-primary);
-        color: var(--link-text-color-primary);
-        font-size: var(--link-button-font-size);
-        font-weight: var(--link-button-font-weight);
-        line-height: var(--body-line-height);
+        border-radius: var(--interactive-radius);
+        background-color: var(--interactive-primary-background);
+        color: var(--interactive-primary-text-color);
+        font-size: var(--interactive-font-size);
+        font-weight: var(--interactive-font-weight);
+        line-height: var(--interactive-line-height);
       }
 
       :host([variant="primary"]) a:hover {
-        color: var(--link-text-color-primary-hover);
-        background: var(--link-background-primary-hover); 
+        background: var(--interactive-primary-background-hover); 
+        color: var(--interactive-primary-text-color-hover);
       }
 
-      :host([variant="primary"]) a:focus {
-        color: var(--link-text-color-primary-focus);
-        background: var(--link-background-primary-focus); 
-      }
-
-      :host([variant="primary"]) a:focus-visible {
-        outline: var(--outline-thick);
-        color: var(--link-text-color-primary-focus);
-        background: var(--link-background-primary-focus); 
+      :host([variant="primary"]) a:focus,
+      :host([variant="tertiary"]) a:focus-visible {
+        background: var(--interactive-primary-background-focus); 
+        color: var(--interactive-primary-text-color-focus);
       }
 
       :host([variant="primary"]) a:disabled {
-        color: var(--link-text-color-primary-disabled);
-        background: var(--link-background-primary-disabled); 
+        background: var(--interactive-primary-background-disabled); 
+        color: var(--interactive-primary-text-color-disabled);
+        cursor: not-allowed;
       }
 
       /* Button Secondary 
       ========================================= */
-      :host([variant="secondary"]) {
-        display: inline-block;
-      }
+      :host([variant="secondary"]) { display: inline-block; }
 
       :host([variant="secondary"]) a {
         display: inline-block;
         text-decoration: none;
-        border: var(--link-border-secondary);
+        border: var(--interactive-secondary-stroke);
         padding: var(--space-200) var(--space-500);
-        border-radius: var(--link-radius);
-        background-color: var(--link-background-secondary);
-        color: var(--link-text-color-secondary);
-        font-size: var(--link-button-font-size);
-        font-weight: var(--link-button-font-weight);
-        line-height: var(--body-line-height);
+        border-radius: var(--interactive-radius);
+        background-color: var(--interactive-secondary-background);
+        color: var(--interactive-secondary-text-color);
+        font-size: var(--interactive-font-size);
+        font-weight: var(--interactive-font-weight);
+        line-height: var(--interactive-line-height);
       }
 
       :host([variant="secondary"]) a:hover {
-        color: var(--link-text-color-secondary-hover);
-        background: var(--link-background-secondary-hover); 
+        color: var(--interactive-secondary-text-color-hover);
+        background: var(--interactive-secondary-background-hover); 
       }
 
-      :host([variant="secondary"]) a:focus {
-        color: var(--link-text-color-secondary-focus);
-        background: var(--link-background-secondary-focus); 
-      }
-
+      :host([variant="secondary"]) a:focus,
       :host([variant="secondary"]) a:focus-visible {
-        outline: var(--outline-thick);
-        color: var(--link-text-color-secondary-focus);
-        background: var(--link-background-secondary-focus); 
+        color: var(--interactive-secondary-text-color-focus);
+        background: var(--interactive-secondary-background-focus); 
       }
 
       :host([variant="secondary"]) a:disabled {
-        color: var(--link-text-color-secondary-disabled);
-        background: var(--link-background-secondary-disabled); 
+        background: var(--interactive-secondary-background-disabled);
+        color: var(--interactive-secondary-text-color-disabled);
       }
 
       /* Button Tertiary
       ========================================= */
-      :host([variant="tertiary"]) {
-        display: inline-block;
-      }
+      :host([variant="tertiary"]) { display: inline-block; }
 
       :host([variant="tertiary"]) a {
         display: inline-block;
         text-decoration: none;
-        border: var(--link-border-tertiary);
+        border: var(--interactive-tertiary-stroke);
         padding: var(--space-200) var(--space-500);
-        border-radius: var(--link-radius);
-        background-color: var(--link-background-tertiary);
-        color: var(--link-text-color-tertiary);
-        font-size: var(--link-button-font-size);
-        font-weight: var(--link-button-font-weight);
-        line-height: var(--body-line-height);
+        border-radius: var(--interactive-radius);
+        background-color: var(--interactive-tertiary-background);
+        color: var(--interactive-tertiary-text-color);
+        font-size: var(--interactive-font-size);
+        font-weight: var(--interactive-font-weight);
+        line-height: var(--interactive-line-height);
       }
 
       :host([variant="tertiary"]) a:hover {
-        color: var(--link-text-color-tertiary-hover);
-        background: var(--link-background-tertiary-hover); 
+        color: var(--interactive-tertiary-text-color-hover);
+        background: var(--interactive-tertiary-background-hover); 
       }
 
-      :host([variant="tertiary"]) a:focus {
-        color: var(--link-text-color-tertiary-focus);
-        background: var(--link-background-tertiary-focus); 
-      }
-
+      :host([variant="tertiary"]) a:focus,
       :host([variant="tertiary"]) a:focus-visible {
-        outline: var(--outline-thick);
-        color: var(--link-text-color-tertiary-focus);
-        background: var(--link-background-tertiary-focus); 
+        color: var(--interactive-tertiary-text-color-focus);
+        background: var(--interactive-tertiary-background-focus); 
       }
 
       :host([variant="tertiary"]) a:disabled {
-        color: var(--link-text-color-tertiary-disabled);
-        background: var(--link-background-tertiary-disabled); 
+        background: var(--interactive-tertiary-background-disabled);
+        color: var(--interactive-tertiary-text-color-disabled);
       }
 
       /* Button Attention
       ========================================= */
-      :host([variant="attention"]) {
-        display: inline-block;
-      }
+      :host([variant="attention"]) { display: inline-block; }
 
       :host([variant="attention"]) a {
         display: inline-block;
         text-decoration: none;
-        border: var(--link-border-tertiary);
+        border: var(--interactive-attention-stroke);
         padding: var(--space-200) var(--space-500);
-        border-radius: var(--link-radius);
-        background-color: var(--link-background-attention);
-        color: var(--link-text-color-attention);
-        font-size: var(--link-button-font-size);
-        font-weight: var(--link-button-font-weight);
-        line-height: var(--body-line-height);
+        border-radius: var(--interactive-radius);
+        background-color: var(--interactive-attention-background);
+        color: var(--interactive-attention-text-color);
+        font-size: var(--interactive-font-size);
+        font-weight: var(--interactive-font-weight);
+        line-height: var(--interactive-line-height);
       }
 
       :host([variant="attention"]) a:hover {
-        color: var(--link-text-color-attention-hover);
-        background: var(--link-background-attention-hover); 
+        color: var(--interactive-attention-text-color-hover);
+        background: var(--interactive-attention-background-hover); 
       }
 
-      :host([variant="attention"]) a:focus {
-        color: var(--link-text-color-attention-focus);
-        background: var(--link-background-attention-focus); 
-      }
-
-      :host([variant="attention"]) a:focus-visible {
-        outline: var(--outline-thick);
-        color: var(--link-text-color-attention-focus);
-        background: var(--link-background-attention-focus); 
+      :host([variant="attention"]) a:focus,
+      :host([variant="attention"]) a:focus-visible  {
+        color: var(--interactive-attention-text-color-focus);
+        background: var(--interactive-attention-background-focus); 
       }
 
       :host([variant="attention"]) a:disabled {
-        color: var(--link-text-color-attention-disabled);
-        background: var(--link-background-attention-disabled); 
+        background: var(--interactive-attention-background-disabled);
+        color: var(--interactive-attention-text-color-disabled);
       }
 
     </style>
+
     <a
       part="${partMap}" 
       target="${this.getAttribute("target") || "_self"}" 

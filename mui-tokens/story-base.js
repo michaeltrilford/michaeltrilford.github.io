@@ -20,7 +20,7 @@ class storyTokensBase extends HTMLElement {
             <mui-token-local-slat 
               slot="body" 
               token="--font-family" 
-              output="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji", 'Segoe UI Symbol'">
+              output="system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'">
             </mui-token-local-slat>
           </story-card>
             
@@ -179,6 +179,7 @@ class storyTokensBase extends HTMLElement {
             <mui-token-local-slat slot="body" token="--line-height-100" output="1"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--line-height-200" output="1.25"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--line-height-300" output="1.5"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-400" output="1.714285714285714"></mui-token-local-slat>
           </story-card>
 
         </mui-v-stack>
