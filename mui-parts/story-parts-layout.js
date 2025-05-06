@@ -75,48 +75,41 @@ class storyPartsLayout extends HTMLElement {
             <mui-code slot="footer">
               mui-v-stack::part(align-items) {
               <br />
-              &nbsp;&nbsp;align-items: var(--line-height-100);
+              &nbsp;&nbsp;align-items: center;
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Align Content">
-            <mui-part-local-slat slot="body" token="part(text-transform)" usage="Links, Buttons, Stacks, Body" output="Defines the case of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(align-content)" usage="Links, Buttons, Stacks, Body" output="Defines the case of the element."></mui-part-local-slat>
             <mui-code slot="footer">
-              mui-v-stack::part(text-transform) {
+              mui-v-stack::part(align-content) {
               <br />
-              &nbsp;&nbsp;text-transform: uppercase;
+              &nbsp;&nbsp;align-content: center;
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Align Self">
-            <mui-part-local-slat slot="body" token="part(text-decoration)" usage="Links, Buttons, Stacks, Body" output="Controls the text decoration style (e.g., underline, none)."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(align-self)" usage="Links, Buttons, Stacks, Body" output="Controls the text decoration style (e.g., underline, none)."></mui-part-local-slat>
             <mui-code slot="footer">
-              mui-v-stack::part(text-decoration) {
+              mui-v-stack::part(align-self) {
               <br />
-              &nbsp;&nbsp;text-decoration: none;
-              <br />
-              }
-              <br />
-              <br />
-              mui-v-stack::part(text-decoration):hover {
-              <br />
-              &nbsp;&nbsp;text-decoration: none;
+              &nbsp;&nbsp;align-self: center;
               <br />
               }
-
+              <br />
             </mui-code>
           </story-card>
 
           <story-card title="Grid Template Columns">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(grid-template-columns)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
             <mui-code slot="footer">
-              mui-v-stack::part(text-align) {
+              mui-v-stack::part(grid-template-columns) {
               <br />
-              &nbsp;&nbsp;text-align: center;
+              &nbsp;&nbsp;grid-template-columns: 1fr 1fr;
               <br />
               }
             </mui-code>
@@ -124,11 +117,11 @@ class storyPartsLayout extends HTMLElement {
 
 
           <story-card title="Grid Template Rows">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(grid-template-rows)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
             <mui-code slot="footer">
-              mui-v-stack::part(text-align) {
+              mui-v-stack::part(grid-template-rows) {
               <br />
-              &nbsp;&nbsp;text-align: center;
+              &nbsp;&nbsp;grid-template-rows: 1fr 1fr;
               <br />
               }
             </mui-code>
@@ -136,44 +129,44 @@ class storyPartsLayout extends HTMLElement {
 
 
           <story-card title="Grid Column">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(grid-column)" usage="Links, Buttons, Stacks, Body" output="grid-column defines a grid item’s horizontal position and span within a CSS Grid layout. It specifies which columns the item starts and ends on."></mui-part-local-slat>
             <mui-code slot="footer">
-              mui-v-stack::part(text-align) {
+              mui-v-stack::part(grid-column) {
               <br />
-              &nbsp;&nbsp;text-align: center;
+              &nbsp;&nbsp;grid-column:  1 / 3;
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Grid Row">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(grid-row)" usage="Links, Buttons, Stacks, Body" output="grid-row defines a grid item’s vertical position and span within a CSS Grid layout. It sets which rows the item starts and ends on."></mui-part-local-slat>
             <mui-code slot="footer">
-              mui-v-stack::part(text-align) {
+              mui-v-stack::part(grid-row) {
               <br />
-              &nbsp;&nbsp;text-align: center;
+              &nbsp;&nbsp;grid-row:  1 / 3;
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Place Items">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(place-items)" usage="Links, Buttons, Stacks, Body" output="place-items sets how items are aligned inside their grid or flex container both vertically and horizontally."></mui-part-local-slat>
             <mui-code slot="footer">
-              mui-v-stack::part(text-align) {
+              mui-v-stack::part(place-items) {
               <br />
-              &nbsp;&nbsp;text-align: center;
+              &nbsp;&nbsp;place-items: center;
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Place Content">
-            <mui-part-local-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></mui-part-local-slat>
+            <mui-part-local-slat slot="body" token="part(place-content)" usage="Links, Buttons, Stacks, Body" output="place-content sets how grid content is aligned vertically and horizontally."></mui-part-local-slat>
             <mui-code slot="footer">
-              mui-v-stack::part(text-align) {
+              mui-v-stack::part(place-content) {
               <br />
-              &nbsp;&nbsp;text-align: center;
+              &nbsp;&nbsp;place-content: center;
               <br />
               }
             </mui-code>

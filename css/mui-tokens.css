@@ -288,6 +288,7 @@
   /* Font-Weight */
   --font-weight-regular: var(--font-weight-400);
   --font-weight-medium: var(--font-weight-500);
+  --font-weight-semi-bold: var(--font-weight-600);
   --font-weight-bold: var(--font-weight-700);
 
   /* Border */
