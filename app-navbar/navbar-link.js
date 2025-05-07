@@ -1,5 +1,5 @@
 /* myApp */
-class muiNavbarLink extends HTMLElement {
+class appNavbarLink extends HTMLElement {
   static get observedAttributes() {
     return ["link", "title"];
   }
@@ -77,4 +77,4 @@ class muiNavbarLink extends HTMLElement {
   }
 }
 
-customElements.define("mui-navbar-link", muiNavbarLink);
+customElements.define("app-navbar-link", appNavbarLink);

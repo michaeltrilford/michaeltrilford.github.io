@@ -1,5 +1,5 @@
 /* myApp */
-class muiNavbarSkip extends HTMLElement {
+class appNavbarSkip extends HTMLElement {
   constructor() {
     super();
 
@@ -71,4 +71,4 @@ class muiNavbarSkip extends HTMLElement {
   }
 }
 
-customElements.define("mui-navbar-skip", muiNavbarSkip);
+customElements.define("app-navbar-skip", appNavbarSkip);

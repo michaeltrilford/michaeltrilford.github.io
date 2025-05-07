@@ -1,5 +1,5 @@
 /* myApp */
-class muiNavbarToggle extends HTMLElement {
+class appNavbarToggle extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -38,4 +38,4 @@ class muiNavbarToggle extends HTMLElement {
   }
 }
 
-customElements.define("mui-navbar-toggle", muiNavbarToggle);
+customElements.define("app-navbar-toggle", appNavbarToggle);

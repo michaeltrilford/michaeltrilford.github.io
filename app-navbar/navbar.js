@@ -1,4 +1,4 @@
-class muiNavbar extends HTMLElement {
+class appNavbar extends HTMLElement {
   constructor() {
     super();
 
@@ -65,88 +65,88 @@ class muiNavbar extends HTMLElement {
     `;
 
     const Home = `
-      <mui-navbar-home  link="#/home" title="michaeltrilford.mui"></mui-navbar-home>
+      <app-navbar-home  link="#/home" title="michaeltrilford.mui"></app-navbar-home>
     `;
 
     const Guidelines = `
-      <mui-navbar-group id="design-tokens" groupname="Resources">
-        <mui-navbar-link link="#/ux-guides" title="UX Guides"></mui-navbar-link>
-        <mui-navbar-link link="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=0-1&t=5A8fWmORS1XTiPBQ-1" title="MUI Kit"></mui-navbar-link>
-      </mui-navbar-group>
+      <app-navbar-group id="design-tokens" groupname="Resources">
+        <app-navbar-link link="#/ux-guides" title="UX Guides"></app-navbar-link>
+        <app-navbar-link link="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=0-1&t=5A8fWmORS1XTiPBQ-1" title="MUI Kit"></app-navbar-link>
+      </app-navbar-group>
     `;
 
     const Required = `
-      <mui-navbar-group id="design-tokens" groupname="Design Tokens">
-        <mui-navbar-link link="#/base-design-tokens" title="Base"></mui-navbar-link>
-        <mui-navbar-link link="#/semantic-design-tokens" title="Semantic"></mui-navbar-link>
-        <mui-navbar-link link="#/contextual-design-tokens" title="Contextual"></mui-navbar-link>
-        <mui-navbar-link link="#/components-design-tokens" title="Components"></mui-navbar-link>
-      </mui-navbar-group>
+      <app-navbar-group id="design-tokens" groupname="Design Tokens">
+        <app-navbar-link link="#/base-design-tokens" title="Base"></app-navbar-link>
+        <app-navbar-link link="#/semantic-design-tokens" title="Semantic"></app-navbar-link>
+        <app-navbar-link link="#/contextual-design-tokens" title="Contextual"></app-navbar-link>
+        <app-navbar-link link="#/components-design-tokens" title="Components"></app-navbar-link>
+      </app-navbar-group>
     `;
 
     const Parts = `
-      <mui-navbar-group id="part-types" groupname="Part Selectors">
-        <mui-navbar-link link="#/text-part-selectors" title="Text"></mui-navbar-link>
-        <mui-navbar-link link="#/spacing-part-selectors" title="Spacing"></mui-navbar-link>
-        <mui-navbar-link link="#/layout-part-selectors" title="Layout"></mui-navbar-link>
-        <mui-navbar-link link="#/visual-part-selectors" title="Visual"></mui-navbar-link>
-      </mui-navbar-group>
+      <app-navbar-group id="part-types" groupname="Part Selectors">
+        <app-navbar-link link="#/text-part-selectors" title="Text"></app-navbar-link>
+        <app-navbar-link link="#/spacing-part-selectors" title="Spacing"></app-navbar-link>
+        <app-navbar-link link="#/layout-part-selectors" title="Layout"></app-navbar-link>
+        <app-navbar-link link="#/visual-part-selectors" title="Visual"></app-navbar-link>
+      </app-navbar-group>
     `;
 
     const Components = `
-      <mui-navbar-group id="web-components" groupname="Web Components">
-        <mui-navbar-link link="#/alerts" title="Alerts"></mui-navbar-link>
-        <mui-navbar-link link="#/messages" title="Messages"></mui-navbar-link>
-        <mui-navbar-link link="#/badge" title="Badge"></mui-navbar-link>
-        <mui-navbar-link link="#/buttons" title="Buttons"></mui-navbar-link>
-        <mui-navbar-link link="#/responsive" title="Responsive"></mui-navbar-link>
-        <mui-navbar-link link="#/stacks" title="Stacks"></mui-navbar-link>
-        <mui-navbar-link link="#/grid" title="Grid"></mui-navbar-link>
-        <mui-navbar-link link="#/cards" title="Cards"></mui-navbar-link>
-        <mui-navbar-link link="#/container" title="Container"></mui-navbar-link>
-        <mui-navbar-link link="#/headings" title="Headings"></mui-navbar-link>
-        <mui-navbar-link link="#/body" title="Body"></mui-navbar-link>
-        <mui-navbar-link link="#/image" title="Image"></mui-navbar-link>
-        <mui-navbar-link link="#/links" title="Links"></mui-navbar-link>
-        <mui-navbar-link link="#/list" title="List"></mui-navbar-link>
-        <mui-navbar-link link="#/quote" title="Quote"></mui-navbar-link>
-        <mui-navbar-link link="#/rule" title="Rule"></mui-navbar-link>
-        <mui-navbar-link link="#/icons" title="Icons"></mui-navbar-link>
-        <mui-navbar-link link="#/code" title="Code"></mui-navbar-link>
-        <mui-navbar-link link="#/accordion" title="Accordion"></mui-navbar-link>
-        <mui-navbar-link link="#/table" title="Table"></mui-navbar-link>
-        <mui-navbar-link link="#/slat" title="Slat"></mui-navbar-link>
-      </mui-navbar-group>
+      <app-navbar-group id="web-components" groupname="Web Components">
+        <app-navbar-link link="#/alerts" title="Alerts"></app-navbar-link>
+        <app-navbar-link link="#/messages" title="Messages"></app-navbar-link>
+        <app-navbar-link link="#/badge" title="Badge"></app-navbar-link>
+        <app-navbar-link link="#/buttons" title="Buttons"></app-navbar-link>
+        <app-navbar-link link="#/responsive" title="Responsive"></app-navbar-link>
+        <app-navbar-link link="#/stacks" title="Stacks"></app-navbar-link>
+        <app-navbar-link link="#/grid" title="Grid"></app-navbar-link>
+        <app-navbar-link link="#/cards" title="Cards"></app-navbar-link>
+        <app-navbar-link link="#/container" title="Container"></app-navbar-link>
+        <app-navbar-link link="#/headings" title="Headings"></app-navbar-link>
+        <app-navbar-link link="#/body" title="Body"></app-navbar-link>
+        <app-navbar-link link="#/image" title="Image"></app-navbar-link>
+        <app-navbar-link link="#/links" title="Links"></app-navbar-link>
+        <app-navbar-link link="#/list" title="List"></app-navbar-link>
+        <app-navbar-link link="#/quote" title="Quote"></app-navbar-link>
+        <app-navbar-link link="#/rule" title="Rule"></app-navbar-link>
+        <app-navbar-link link="#/icons" title="Icons"></app-navbar-link>
+        <app-navbar-link link="#/code" title="Code"></app-navbar-link>
+        <app-navbar-link link="#/accordion" title="Accordion"></app-navbar-link>
+        <app-navbar-link link="#/table" title="Table"></app-navbar-link>
+        <app-navbar-link link="#/slat" title="Slat"></app-navbar-link>
+      </app-navbar-group>
     `;
 
     // We provide the shadow root with some HTML
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <mui-navbar-menu desktop id="desktop">
+      <app-navbar-menu desktop id="desktop">
         <slot name="skip"></slot>
         ${Home}
         ${Guidelines}
         ${Required}
         ${Parts}
         ${Components}
-      </mui-navbar-menu>
+      </app-navbar-menu>
       
-      <mui-navbar-menu mobile id="mobile">
+      <app-navbar-menu mobile id="mobile">
         <slot name="skip"></slot>
         ${Guidelines}
         ${Required}
         ${Parts}
         ${Components}
-      </mui-navbar-menu>
+      </app-navbar-menu>
 
-      <mui-navbar-toggle>
+      <app-navbar-toggle>
         <mui-icon-toggle color="var(--mui-brand)" rotate>
           <mui-icon-menu slot="start"></mui-icon-menu>
           <mui-icon-close slot="end"></mui-icon-close>
         </mui-icon-toggle>
         <mui-link slot="home-link" data-close-menu link="#/home-page">michaeltrilford.mui</mui-link>
-      </mui-navbar-toggle>
+      </app-navbar-toggle>
     `;
 
     // Query elements
@@ -155,7 +155,7 @@ class muiNavbar extends HTMLElement {
 
     // Helper method to update tabindex
     this.updateTabIndexForMenuLinks = (container, enable) => {
-      const links = container.querySelectorAll("mui-navbar-link");
+      const links = container.querySelectorAll("app-navbar-link");
       links.forEach((link) => {
         if (enable) {
           link.removeAttribute("tabindex");
@@ -166,7 +166,7 @@ class muiNavbar extends HTMLElement {
     };
 
     // Close mobile menu when a link is clicked
-    const mobileLinks = this.navbarEl.querySelectorAll("mui-navbar-link");
+    const mobileLinks = this.navbarEl.querySelectorAll("app-navbar-link");
     mobileLinks.forEach((link) => {
       link.addEventListener("click", () => {
         if (this.navbarEl.hasAttribute("open")) {
@@ -227,7 +227,7 @@ class muiNavbar extends HTMLElement {
 
       if (isNowOpen) {
         requestAnimationFrame(() => {
-          const homeLink = this.shadowRoot.querySelector("mui-navbar-home");
+          const homeLink = this.shadowRoot.querySelector("app-navbar-home");
           if (homeLink) homeLink.focus();
         });
       }
@@ -235,4 +235,4 @@ class muiNavbar extends HTMLElement {
   }
 }
 
-customElements.define("mui-navbar", muiNavbar);
+customElements.define("app-navbar", appNavbar);

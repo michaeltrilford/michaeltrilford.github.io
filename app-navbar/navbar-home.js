@@ -1,5 +1,5 @@
 /* myApp */
-class muiNavbarHome extends HTMLElement {
+class appNavbarHome extends HTMLElement {
   static get observedAttributes() {
     return ["link", "title"];
   }
@@ -77,4 +77,4 @@ class muiNavbarHome extends HTMLElement {
   }
 }
 
-customElements.define("mui-navbar-home", muiNavbarHome);
+customElements.define("app-navbar-home", appNavbarHome);

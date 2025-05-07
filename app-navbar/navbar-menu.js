@@ -1,5 +1,5 @@
 /* myApp */
-class muiNavbarMenu extends HTMLElement {
+class appNavbarMenu extends HTMLElement {
   constructor() {
     super();
 
@@ -43,4 +43,4 @@ class muiNavbarMenu extends HTMLElement {
   }
 }
 
-customElements.define("mui-navbar-menu", muiNavbarMenu);
+customElements.define("app-navbar-menu", appNavbarMenu);

@@ -221,7 +221,7 @@ Promise.all([
     });
 
     // Wait for the skip button to be ready (inside Shadow DOM)
-    const navbarSkip = document.querySelector("mui-navbar-skip");
+    const navbarSkip = document.querySelector("app-navbar-skip");
 
     if (navbarSkip && navbarSkip.shadowRoot) {
       const skipLink = navbarSkip.shadowRoot.querySelector(".skip-to-main");

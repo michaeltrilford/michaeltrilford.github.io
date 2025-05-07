@@ -1,5 +1,5 @@
 /* myApp */
-class muiNavbarGroup extends HTMLElement {
+class appNavbarGroup extends HTMLElement {
   static get observedAttributes() {
     return ["groupname"];
   }
@@ -51,4 +51,4 @@ class muiNavbarGroup extends HTMLElement {
   }
 }
 
-customElements.define("mui-navbar-group", muiNavbarGroup);
+customElements.define("app-navbar-group", appNavbarGroup);
