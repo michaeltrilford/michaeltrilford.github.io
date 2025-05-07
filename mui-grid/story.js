@@ -16,6 +16,7 @@ class storyGrid extends HTMLElement {
       <story-template 
         title="Grid"
         description="Layout component to enable grid layouts"
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-grid/index.js"
       >
 
       <mui-v-stack space="var(--space-700)">

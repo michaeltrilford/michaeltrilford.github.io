@@ -13,6 +13,7 @@ class storyImage extends HTMLElement {
       <story-template 
         title="Image"
         description="Defines a image."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-image/index.js"
       >
 
         <mui-v-stack space="var(--space-700)">

@@ -12,6 +12,7 @@ class storyHeading extends HTMLElement {
       <story-template 
         title="Heading" 
         description="The Heading component includes six levels (H1–H6) for structured heading usage, supporting a range of hierarchies in text presentation."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-heading/index.js"
       >
         
         <mui-v-stack space="var(--space-700)">

@@ -12,7 +12,8 @@ class storyPartsLayout extends HTMLElement {
       <story-template 
         title="Layout Parts"
         description="Provides customisable part names for easy styling overrides via the part attribute, promoting flexible, trust-based customisation. Best for building custom web component compositions with MUI and scoped CSS styles."
-      >
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-parts/index.js"
+        >
         <mui-v-stack space="var(--space-700)">
 
           <story-card title="Display">

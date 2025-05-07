@@ -216,6 +216,7 @@ class storyStack extends HTMLElement {
       <story-template 
         title="Stacks" 
         description="A layout component that arranges its children in a horizontal or vertical flow"
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-stack"
       >
 
       <mui-v-stack space="var(--space-700)">

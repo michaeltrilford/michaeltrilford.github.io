@@ -12,6 +12,7 @@ class storyQuote extends HTMLElement {
       <story-template 
         title="Quote"
         description="The mui-quote specifies a section that is quoted from another source."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-quote/index.js"
       >
 
       <mui-v-stack space="var(--space-700)">

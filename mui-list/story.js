@@ -12,6 +12,7 @@ class storyList extends HTMLElement {
       <story-template 
         title="List"
         description="The component defines an ordered or unordered list."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-list"
       >
 
       <mui-v-stack space="var(--space-700)">
