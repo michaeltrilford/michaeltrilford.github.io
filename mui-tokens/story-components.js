@@ -90,7 +90,7 @@ class storyTokensComponents extends HTMLElement {
             <mui-token-local-slat slot="body" token="--heading-line-height-600" variant="line-height" font-size="--heading-font-size-600" font-weight="--heading-font-weight" output="var(--line-height-100)"></mui-token-local-slat>
           </story-card>
 
-          <story-card title="Body" nofooter>
+          <story-card title="Body" github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-body/index.js" nofooter>
             <mui-body size="x-small" style="padding: var(--space-300);" slot="body">Refer to <mui-link size="x-small" href="/#/contextual-design-tokens">Text Contextual</mui-link> tokens</mui-body>
           </story-card>
 

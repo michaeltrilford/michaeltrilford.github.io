@@ -1,18 +1,36 @@
 class storyTemplate extends HTMLElement {
   static get observedAttributes() {
-    return ["title", "description", "accessibility-items"];
+    return ["title", "description", "accessibility-items", "github"];
   }
 
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
-    const styles = `:host { display: block; width: 100%; }`;
+    const styles = `
+      :host { display: block; width: 100%; }
+
+      .github::part(display) {
+        display: flex;
+        gap: var(--space-200);
+        padding: var(--space-200) var(--space-300);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-50);
+        line-height: var(--line-height-50);
+        background: var(--mui-brand);
+      }
+
+    `;
     const description = `<mui-body large style="letter-spacing: 0.75px; max-width: 65ch;">${this.getAttribute(
       "description"
     )}</mui-body>`;
 
     const accessibilityItems = this.getAttribute("accessibility-items");
     let accessibilityArray = [];
+
+    const githubLink = this.getAttribute("github");
+    const githubContent = githubLink
+      ? `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="secondary">View Code<img style="display: flex;" src="../images/github-mark.svg" height="21" width="21" /></mui-link>`
+      : "";
 
     try {
       // Preprocess to remove unwanted quotes
@@ -50,9 +68,13 @@ class storyTemplate extends HTMLElement {
           <mui-v-stack space="var(--space-600)">
 
             <mui-v-stack space="var(--space-200)">
-              <mui-heading size="1" weight="800">${this.getAttribute(
-                "title"
-              )}</mui-heading>
+              <mui-h-stack alignX="space-between" alignY="center">
+                <mui-heading size="1" weight="800">${this.getAttribute(
+                  "title"
+                )}</mui-heading>
+                ${githubContent}
+              </mui-h-stack >
+
               ${this.getAttribute("description") ? description : ""}
             </mui-v-stack>
             

@@ -1,6 +1,6 @@
 class storyCard extends HTMLElement {
   static get observedAttributes() {
-    return ["title", "description", "usage", "accessibility"];
+    return ["title", "description", "usage", "accessibility", "github"];
   }
 
   constructor() {
@@ -77,6 +77,16 @@ class storyCard extends HTMLElement {
         height: calc(4px + 100% + 6px);
         right: 0;
       }
+
+
+      .github::part(display) {
+        display: flex;
+        gap: var(--space-200);
+        padding: var(--space-200) var(--space-300);
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-50);
+        line-height: var(--line-height-50);
+      }
     `;
 
     const title = this.getAttribute("title") || "";
@@ -84,6 +94,11 @@ class storyCard extends HTMLElement {
       ? `<mui-body style="max-width: 86ch;">${this.getAttribute(
           "description"
         )}</mui-body>`
+      : "";
+
+    const githubLink = this.getAttribute("github");
+    const githubContent = githubLink
+      ? `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="secondary">View Code<img style="display: flex;" src="../images/github-mark.svg" height="21" width="21" /></mui-link>`
       : "";
 
     // Handle usage list
@@ -148,7 +163,10 @@ class storyCard extends HTMLElement {
             ? ""
             : `
           <mui-card-header>
-            <mui-heading size="3" level="2">${title}</mui-heading>
+            <mui-h-stack alignX="space-between" alignY="center">
+              <mui-heading size="3" level="2">${title}</mui-heading>
+              ${githubContent}
+            </mui-h-stack>
             <mui-v-stack space="var(--space-100)">
               ${description}
               ${usageContent}

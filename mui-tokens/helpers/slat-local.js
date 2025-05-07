@@ -102,7 +102,7 @@ class muiTokenLocalSlat extends HTMLElement {
               class="line-height-preview" 
               style="line-height: ${output}; font-size: var(${fontSize}); font-weight: var(${fontWeight});"
             >
-              The quick brown fox jumps over the lazy dog.
+              Aa
             </div>`;
         break;
 
