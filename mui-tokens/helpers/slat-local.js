@@ -1,6 +1,13 @@
 class muiTokenLocalSlat extends HTMLElement {
   static get observedAttributes() {
-    return ["token", "output", "variant"];
+    return [
+      "token",
+      "output",
+      "variant",
+      "font-size",
+      "line-height",
+      "font-weight",
+    ];
   }
 
   constructor() {
@@ -12,6 +19,9 @@ class muiTokenLocalSlat extends HTMLElement {
     const token = this.getAttribute("token");
     const output = this.getAttribute("output");
     const variant = this.getAttribute("variant");
+    const fontSize = this.getAttribute("font-size");
+    const lineHeight = this.getAttribute("line-height");
+    const fontWeight = this.getAttribute("font-weight");
 
     const styles = `
       :host {
@@ -77,8 +87,25 @@ class muiTokenLocalSlat extends HTMLElement {
         visualPreview = `<div class="text-preview" style="color: ${output};">Aa</div>`;
         break;
       case "text-size":
-        visualPreview = `<div class="text-preview" style="font-size: ${output};">Aa</div>`;
+        visualPreview = `
+            <div 
+              class="text-preview" 
+              style="font-size: ${output}; line-height: var(${lineHeight}); font-weight: var(${fontWeight});"
+            >
+              Aa
+            </div>`;
         break;
+
+      case "line-height":
+        visualPreview = `
+            <div 
+              class="line-height-preview" 
+              style="line-height: ${output}; font-size: var(${fontSize}); font-weight: var(${fontWeight});"
+            >
+              The quick brown fox jumps over the lazy dog.
+            </div>`;
+        break;
+
       case "font-weight":
         visualPreview = `<div class="text-preview" style="font-weight: ${output};">Aa</div>`;
         break;
@@ -108,9 +135,6 @@ class muiTokenLocalSlat extends HTMLElement {
         break;
       case "outline":
         visualPreview = `<div class="outline-preview" style="outline: ${output};"></div>`;
-        break;
-      case "line-height":
-        visualPreview = `<div class="line-height-preview" style="line-height: ${output};">The quick brown fox jumps over the lazy dog.</div>`;
         break;
     }
 

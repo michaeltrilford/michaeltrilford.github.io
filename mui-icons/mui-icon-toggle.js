@@ -91,13 +91,13 @@ class muiIconToggle extends HTMLElement {
 
         button:focus-visible {
           outline: var(--outline-medium);
-          outline-color: var(--feedback-focus-stroke-color);
+          outline-color: var(--feedback-focus-stroke-base);
         }
 
         /* Show outline only if user is tabbing */
         /* :host-context(body[data-user-is-tabbing]) button:focus {
           outline: var(--outline-medium);
-          outline-color: var(--feedback-focus-stroke-color);
+          outline-color: var(--feedback-focus-stroke-base);
         } */
 
         ::slotted(*) {

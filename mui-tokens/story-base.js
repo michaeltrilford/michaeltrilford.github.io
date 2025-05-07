@@ -25,20 +25,36 @@ class storyTokensBase extends HTMLElement {
             </mui-token-local-slat>
           </story-card>
             
-          <story-card title="Font Scale" nofooter>
-            <mui-token-local-slat slot="body" token="--font-size-15" variant="text-size" output="1.1rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-25" variant="text-size" output="1.2rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-50" variant="text-size" output="1.4rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-100" variant="text-size" output="1.6rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-200" variant="text-size" output="1.8rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-300" variant="text-size" output="2.1rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-400" variant="text-size" output="2.4rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-500" variant="text-size" output="3.6rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-600" variant="text-size" output="4.8rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-700" variant="text-size" output="6rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-800" variant="text-size" output="7.2rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-900" variant="text-size" output="8.4rem"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--font-size-1000" variant="text-size" output="9.6rem"></mui-token-local-slat>
+          <story-card title="Font Scale" nofooter description="The font size scale follows a consistent type ramp, using fluid rem values to establish visual hierarchy. Each step in the scale pairs directly with a calculated line-height, enabling predictable, harmonious typography across components and layouts." usage="E.g. --font-size-15 and --line-height-15 is paired.">
+            <mui-token-local-slat slot="body" token="--font-size-15" variant="text-size" line-height="--line-height-15" output="1.1rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-25" variant="text-size" line-height="--line-height-25" output="1.2rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-50" variant="text-size" line-height="--line-height-50" output="1.4rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-100" variant="text-size" line-height="--line-height-100" output="1.6rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-200" variant="text-size" line-height="--line-height-200" output="1.8rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-300" variant="text-size" line-height="--line-height-300" output="2.1rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-400" variant="text-size" line-height="--line-height-400" output="2.4rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-500" variant="text-size" line-height="--line-height-500" output="3.6rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-600" variant="text-size" line-height="--line-height-600" output="4.8rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-700" variant="text-size" line-height="--line-height-700" output="6rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-800" variant="text-size" line-height="--line-height-800" output="7.2rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-900" variant="text-size" line-height="--line-height-900" output="8.4rem"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--font-size-1000" variant="text-size" line-height="--line-height-1000" output="9.6rem"></mui-token-local-slat>
+          </story-card>
+
+          <story-card title="Line-height" nofooter description="Line heights are ratio-based and mapped to their corresponding font sizes, ensuring clear vertical rhythm and legibility. This alignment supports scalable, accessible typography that remains balanced at any size." usage="E.g. --font-size-15 and --line-height-15 is paired.">
+            <mui-token-local-slat slot="body" token="--line-height-15" variant="line-height" font-size="--font-size-15" output="2.18181818"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-25" variant="line-height" font-size="--font-size-25" output="2"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-50" variant="line-height" font-size="--font-size-50" output="1.71428571"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-100" variant="line-height" font-size="--font-size-100" output="1.5"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-200" variant="line-height" font-size="--font-size-200" output="1.33333333"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-300" variant="line-height" font-size="--font-size-300" output="1.14285714"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-400" variant="line-height" font-size="--font-size-400" output="1.5"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-500" variant="line-height" font-size="--font-size-500" output="1.33333333"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-600" variant="line-height" font-size="--font-size-600" output="1.25"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-700" variant="line-height" font-size="--font-size-700" output="1.2"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-800" variant="line-height" font-size="--font-size-800" output="1.16666667"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-900" variant="line-height" font-size="--font-size-900" output="1.14285714"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--line-height-1000" variant="line-height" font-size="--font-size-1000" output="1.125"></mui-token-local-slat>
           </story-card>
 
           <story-card title="Font Weight" nofooter>
@@ -142,7 +158,7 @@ class storyTokensBase extends HTMLElement {
             <mui-token-local-slat slot="body" token="--blue-300" variant="color" output="#99CAFF"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-400" variant="color" output="#85BFFB"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-500" variant="color" output="#62B7FB"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--blue-600" variant="color" output="#4DA6F3"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--blue-600" variant="color" output="##338fe0"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-700" variant="color" output="#3396EB"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-800" variant="color" output="#1A86E3"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-900" variant="color" output="#0076DB"></mui-token-local-slat> 
@@ -178,13 +194,6 @@ class storyTokensBase extends HTMLElement {
             <mui-token-local-slat slot="body" token="--stroke-size-300" variant="border-width" output="3px"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--stroke-size-400" variant="border-width" output="4px"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--stroke-size-500" variant="border-width" output="5px"></mui-token-local-slat>
-          </story-card>
-
-          <story-card title="Line-height" nofooter>
-            <mui-token-local-slat slot="body" token="--line-height-100" variant="line-height" output="1"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--line-height-200" variant="line-height" output="1.25"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--line-height-300" variant="line-height" output="1.5"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--line-height-400" variant="line-height" output="1.714285714285714"></mui-token-local-slat>
           </story-card>
 
         </mui-v-stack>

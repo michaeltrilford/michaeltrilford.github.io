@@ -33,7 +33,7 @@ class muiListItem extends HTMLElement {
       :host {
         display: list-item;
         margin: var(--space-000);
-        color: var(--list-text-color);
+        color: var(--text-color);
       }
 
       /* Size styles */

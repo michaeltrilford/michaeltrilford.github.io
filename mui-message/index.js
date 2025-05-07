@@ -11,6 +11,8 @@ class muiMessage extends HTMLElement {
 
     // Define variant styles
     const variantStyles = {
+      plain:
+        "background-color: var(--feedback-plain-background);  border: var(--feedback-plain-border);",
       neutral:
         "background-color: var(--feedback-neutral-background); border: var(--feedback-neutral-border);",
       positive:
@@ -24,6 +26,7 @@ class muiMessage extends HTMLElement {
     };
 
     const ariaLiveMap = {
+      plain: "polite",
       neutral: "polite",
       positive: "polite",
       info: "polite",
@@ -34,6 +37,7 @@ class muiMessage extends HTMLElement {
     const ariaLive = ariaLiveMap[variant] || "polite";
 
     const roleMap = {
+      plain: "status",
       neutral: "status",
       positive: "status",
       info: "status",
@@ -44,6 +48,7 @@ class muiMessage extends HTMLElement {
     const role = roleMap[variant] || "status";
 
     const iconColors = {
+      plain: "--feedback-plain-icon",
       neutral: "--feedback-neutral-icon",
       positive: "--feedback-positive-icon",
       info: "--feedback-info-icon",
@@ -52,6 +57,7 @@ class muiMessage extends HTMLElement {
     };
 
     const headingColors = {
+      plain: "color: var(--feedback-plain-text);",
       neutral: "color: var(--feedback-neutral-text);",
       positive: "color: var(--feedback-positive-text);",
       info: "color: var(--feedback-info-text);",
@@ -60,6 +66,7 @@ class muiMessage extends HTMLElement {
     };
 
     const iconTags = {
+      plain: "mui-icon-message",
       neutral: "mui-icon-message",
       positive: "mui-icon-check",
       info: "mui-icon-info",

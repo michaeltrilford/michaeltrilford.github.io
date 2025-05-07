@@ -12,7 +12,7 @@ class GuidelinesPage extends HTMLElement {
         border-radius: var(--radius-300);
         background: var(--mui-brand);
         background: linear-gradient(-45deg, var(--mui-brand-dark) 0%, var(--mui-brand) 100%);
-        border: var(--message-border-neutral);
+        border: var(--feedback-neutral-border);
         border-bottom: var(--border-thick);
         border-color: var(--black-opacity-30);
         box-shadow:

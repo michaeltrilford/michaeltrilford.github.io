@@ -26,9 +26,6 @@ class muiLink extends HTMLElement {
       :host { display: inline-flex; }
 
       a {
-        /* Inherit when nested in Body */
-        font-size: var(--link-font-size);
-        font-weight: var(--link-font-weight);
         color: var(--link-text-color-default);
         align-items: center;
         justify-content: center;

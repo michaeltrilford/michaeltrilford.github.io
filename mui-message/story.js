@@ -34,7 +34,7 @@ class storyMessage extends HTMLElement {
       {
         name: "variant",
         type: "string",
-        options: "neutral, positive, info, warning, attention",
+        options: "plain, neutral, positive, info, warning, attention",
         default: "neutral",
         description: "Describe the intent or mood of a message",
       },
@@ -128,7 +128,7 @@ class storyMessage extends HTMLElement {
 
         <story-card
           title="Default" 
-          description="The default uses the passive state offers a subtle, neutral tone, ideal for conveying general information without drawing undue attention."
+          description="The default uses the neutral state offers a subtle, neutral tone, ideal for conveying general information without drawing undue attention."
           accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
         >
           <mui-message slot="body"></mui-message>
@@ -138,9 +138,8 @@ class storyMessage extends HTMLElement {
         </story-card>
 
         <story-card 
-          title="Default: Body text" 
-          description="By default, content is customised via the Slot, which accepts the Body component or any valid child elements."
-          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+          title="Slot: Body text" 
+          description="Content is customised via the Slot, which accepts the Body component or any valid child elements."
         >
           <mui-message heading="Message heading" slot="body">
             <mui-body>This is an informational message about updates.</mui-body>
@@ -155,9 +154,8 @@ class storyMessage extends HTMLElement {
         </story-card>
 
         <story-card 
-          title="Default: List" 
-          description="By default, content is customised via the Slot, which accepts the List component or any valid child elements."
-          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+          title="Slot: List" 
+          description="Content is customised via the Slot, which accepts the List component or any valid child elements."
         >
 
           <mui-message heading="Message heading" slot="body">
@@ -194,14 +192,25 @@ class storyMessage extends HTMLElement {
         </story-card>
 
         <story-card 
-          title="Default: Customise icon" 
-          description="The component default supports icon customisation. Use the ‘icon’ prop to adjust the icon by specifying a name from the icon set, e.g., ‘mui-icon-[name]’."
-          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+          title="Slot: Icon" 
+          description="Icon is customised via the icon property, which accepts any mui-icon-[name] from the mui icon-set."
         >
-          <mui-message heading="Accessibility Notes" slot="body" icon="mui-icon-accessibility">
+          <mui-message slot="body" icon="mui-icon-accessibility"></mui-message>
+          <mui-code slot="footer">
+            &lt;mui-message icon="mui-icon-accessibility"&gt;...&lt;/mui-message&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card 
+          title="Variant: Plain" 
+          description="A subtle, transparent style suited for vibrant backgrounds where minimal visual impact is preferred."
+          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+          usage="Use for passive messages such as accessibility notes system status or routine updates., Best for non-critical information that doesn’t require immediate attention or user action."
+        >
+          <mui-message heading="Accessibility Notes" slot="body" icon="mui-icon-accessibility" variant="plain">
             <mui-list as="ul">
-              <mui-list-item size="small" size="small">ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.</mui-list-item>
-              <mui-list-item size="small" size="small">The role is set to ALERT for immediate screen reader feedback.</mui-list-item>
+              <mui-list-item size="small">ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.</mui-list-item>
+              <mui-list-item size="small">The role is set to ALERT for immediate screen reader feedback.</mui-list-item>
             </mui-list>
           </mui-message>
           <mui-code slot="footer">
@@ -209,7 +218,11 @@ class storyMessage extends HTMLElement {
             <br />
             &nbsp;&nbsp;heading="Accessibility Notes" 
             <br />
-            &nbsp;&nbsp;icon="mui-icon-accessibility"&gt;
+            &nbsp;&nbsp;variant="plain" 
+            <br />
+            &nbsp;&nbsp;icon="mui-icon-accessibility"
+            <br />
+            &gt;
             <br />
             <br />
             &nbsp;&nbsp;&lt;mui-list as="ul"&gt;
@@ -236,41 +249,23 @@ class storyMessage extends HTMLElement {
 
         <story-card 
           title="Variant: Neutral" 
-          description="The Neutral state offers a subtle, neutral tone, ideal for conveying general information without drawing undue attention." usage="Ideal for displaying general information or status updates that don’t require immediate user action., Suitable for background information like system status or routine updates."
+          description="A calm, balanced tone for non-critical, persistent messages." usage="Use on settings or system pages to display non-urgent information., Suitable for background status like sync confirmation or feature explanations."
           accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
         >
-          <mui-message heading="Accessibility Notes" slot="body" variant="neutral" icon="mui-icon-accessibility">
-            <mui-list as="ul">
-              <mui-list-item size="small" size="small">ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.</mui-list-item>
-              <mui-list-item size="small" size="small">The role is set to ALERT for immediate screen reader feedback.</mui-list-item>
-            </mui-list>
+          <mui-message heading="Sync Settings" slot="body" variant="neutral">
+              <mui-body size="small">Your preferences are backed up and synced across devices.</mui-body>
           </mui-message>
           <mui-code slot="footer">
             &lt;mui-message
             <br />
-            &nbsp;&nbsp;heading="Accessibility Notes" 
+            &nbsp;&nbsp;heading="Sync Settings" 
             <br />
-            &nbsp;&nbsp;variant="neutral"&gt;
+            &nbsp;&nbsp;variant="neutral"
             <br />
-            &nbsp;&nbsp;icon="mui-icon-accessibility"&gt;
-            <br />
-            <br />
-            &nbsp;&nbsp;&lt;mui-list as="ul"&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARIA-live is built in...
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-list-item&gt;
+            &gt;
             <br />
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-list-item size="small"&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The role is set to...
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-list-item&gt;
-            <br />
-            &nbsp;&nbsp;&lt;/mui-list&gt;
+            &nbsp;&nbsp;&lt;mui-body&gt;...&lt;/mui-body&gt;
             <br />
             <br />
             &lt;/mui-message&gt;
@@ -387,6 +382,8 @@ class storyMessage extends HTMLElement {
             &lt;mui-message usage="notification"&gt;...&lt;/mui-message&gt;
           </mui-code>
         </story-card>
+
+
 
       </mui-v-stack>
 

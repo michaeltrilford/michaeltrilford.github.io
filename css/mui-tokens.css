@@ -28,6 +28,35 @@
   --font-size-900: 8.4rem;
   --font-size-1000: 9.6rem;
 
+  /* Line-height math
+  24 / 11 = 2.18181818
+  24 / 12 = 2
+  24 / 14 = 1.71428571
+  24 / 16 = 1.5
+  36 / 18 = 1.33333333
+  24 / 21 = 1.14285714
+  36 / 24 = 1.5
+  48 / 36 = 48÷36
+  60 / 48 = 1.25
+  72 / 60 = 1.2
+  84 / 72 = 1.16666667
+  96 / 84 = 1.14285714
+  108 / 96 = 1.125  */
+
+  --line-height-15: 2.18181818;
+  --line-height-25: 2;
+  --line-height-50: 1.71428571;
+  --line-height-100: 1.5;
+  --line-height-200: 1.33333333;
+  --line-height-300: 1.14285714;
+  --line-height-400: 1.5;
+  --line-height-500: 1.33333333;
+  --line-height-600: 1.25;
+  --line-height-700: 1.2;
+  --line-height-800: 1.16666667;
+  --line-height-900: 1.14285714;
+  --line-height-1000: 1.125;
+
   /* Weight */
   --font-weight-400: 400;
   --font-weight-500: 500;
@@ -115,7 +144,7 @@
   --blue-300: #99caff;
   --blue-400: #85bffb;
   --blue-500: #62b7fb;
-  --blue-600: #4da6f3;
+  --blue-600: #338fe0;
   --blue-700: #3396eb;
   --blue-800: #1a86e3;
   --blue-900: #0076db;
@@ -152,12 +181,6 @@
   --stroke-style-solid: solid;
   --stroke-style-outset: outset;
 
-  /* Line-height */
-  --line-height-100: 1;
-  --line-height-200: 1.25;
-  --line-height-300: 1.5;
-  --line-height-400: 1.714285714285714;
-
   /* Semantic Tokens - Expresses meaning or state
 =======================================================================================*/
 
@@ -165,45 +188,53 @@
   /* Token Example: --primary-background */
   /* Token Key: [identifier (Optional)]-[variant]-[property-name]-[state] */
 
-  /* GENERAL STATE COLORS (used in badges, icons) */
+  /* FEEDBACK BASE • BADGES, BORDERS, FOCUS */
   --feedback-focus-base: var(--blue-500);
+  --feedback-plain-base: var(--black-opacity-50);
+
   --feedback-neutral-base: var(--grey-600);
   --feedback-positive-base: var(--green-600);
   --feedback-info-base: var(--blue-600);
   --feedback-warning-base: var(--orange-600);
   --feedback-attention-base: var(--red-600);
 
-  --feedback-focus-stroke-color: var(--feedback-focus-base);
-  --feedback-neutral-stroke-color: var(--feedback-neutral-base);
-  --feedback-positive-stroke-color: var(--feedback-positive-base);
-  --feedback-info-stroke-color: var(--feedback-info-base);
-  --feedback-warning-stroke-color: var(--feedback-warning-base);
-  --feedback-attention-stroke-color: var(--feedback-attention-base);
+  --feedback-focus-stroke-base: var(--feedback-focus-base);
+  --feedback-plain-stroke-base: var(--feedback-plain-base);
+  --feedback-neutral-stroke-base: var(--feedback-neutral-base);
+  --feedback-positive-stroke-base: var(--feedback-positive-base);
+  --feedback-info-stroke-base: var(--feedback-info-base);
+  --feedback-warning-stroke-base: var(--feedback-warning-base);
+  --feedback-attention-stroke-base: var(--feedback-attention-base);
 
-  /* ALERTS & MESSAGES */
+  /* FEEDBACK • ALERTS & MESSAGES */
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-plain-stroke-base);
   --feedback-neutral-border: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--black-opacity-30);
+    var(--feedback-neutral-stroke-base);
   --feedback-positive-border: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--feedback-positive-stroke-color);
+    var(--feedback-positive-stroke-base);
   --feedback-info-border: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--feedback-info-stroke-color);
+    var(--feedback-info-stroke-base);
   --feedback-warning-border: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--feedback-warning-stroke-color);
+    var(--feedback-warning-stroke-base);
   --feedback-attention-border: var(--stroke-size-200) var(--stroke-style-solid)
-    var(--feedback-attention-stroke-color);
+    var(--feedback-attention-stroke-base);
 
-  --feedback-neutral-background: var(--white-opacity-10);
+  --feedback-plain-background: var(--white-opacity-0);
+  --feedback-neutral-background: var(--grey-100);
   --feedback-positive-background: var(--green-100);
   --feedback-info-background: var(--blue-100);
   --feedback-warning-background: var(--orange-100);
   --feedback-attention-background: var(--red-100);
 
-  --feedback-neutral-icon: var(--grey-800);
+  --feedback-plain-icon: var(--black);
+  --feedback-neutral-icon: var(--grey-600);
   --feedback-positive-icon: var(--green-600);
   --feedback-info-icon: var(--blue-600);
   --feedback-warning-icon: var(--orange-600);
   --feedback-attention-icon: var(--red-600);
 
+  --feedback-plain-text: var(--black);
   --feedback-neutral-text: var(--grey-900);
   --feedback-positive-text: var(--green-900);
   --feedback-info-text: var(--blue-900);
@@ -273,10 +304,10 @@
 
   /* Text */
   --text-color: var(--grey-900);
-  --text-line-height-xs: var(--line-height-300);
-  --text-line-height-s: var(--line-height-400);
-  --text-line-height-m: var(--line-height-300);
-  --text-line-height-l: var(--line-height-400);
+  --text-line-height-xs: var(--line-height-25);
+  --text-line-height-s: var(--line-height-50);
+  --text-line-height-m: var(--line-height-100);
+  --text-line-height-l: var(--line-height-200);
   --text-font-size-xs: var(--font-size-25);
   --text-font-size-s: var(--font-size-50);
   --text-font-size-m: var(--font-size-100);
@@ -299,7 +330,7 @@
     var(--border-color);
 
   /* Outline */
-  --outline-color: var(--feedback-focus-stroke-color);
+  --outline-color: var(--feedback-focus-stroke-base);
   --outline-thin: var(--stroke-size-100) var(--stroke-style-outset)
     var(--outline-color);
   --outline-medium: var(--stroke-size-300) var(--stroke-style-outset)
@@ -339,8 +370,22 @@
 
   /* Heading */
   /* ///////////////////////////////////////////////////////////////////// */
-  --heading-text-color: var(--grey-900);
-  --heading-line-height: var(--line-height-200);
+  --heading-text-color: var(--grey-1000);
+  --heading-font-weight: var(--font-weight-bold);
+
+  --heading-font-size-100: var(--font-size-600);
+  --heading-font-size-200: var(--font-size-500);
+  --heading-font-size-300: var(--font-size-400);
+  --heading-font-size-400: var(--font-size-300);
+  --heading-font-size-500: var(--font-size-200);
+  --heading-font-size-600: var(--font-size-100);
+
+  --heading-line-height-100: var(--line-height-600);
+  --heading-line-height-200: var(--line-height-500);
+  --heading-line-height-300: var(--line-height-400);
+  --heading-line-height-400: var(--line-height-300);
+  --heading-line-height-500: var(--line-height-200);
+  --heading-line-height-600: var(--line-height-100);
 
   /* Body */
   /* ///////////////////////////////////////////////////////////////////// */
@@ -377,10 +422,6 @@
 
   /* Link */
   /* ///////////////////////////////////////////////////////////////////// */
-
-  /* Inherit when nested in Body */
-  --link-font-size: inherit;
-  --link-font-weight: inherit;
 
   --link-text-color-default: var(--grey-900);
   --link-text-color-default-hover: var(--grey-1000);

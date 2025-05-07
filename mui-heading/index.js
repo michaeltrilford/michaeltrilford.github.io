@@ -1,6 +1,6 @@
 class muiHeading extends HTMLElement {
   static get observedAttributes() {
-    return ["size", "weight", "level"];
+    return ["size", "level"];
   }
 
   constructor() {
@@ -9,7 +9,6 @@ class muiHeading extends HTMLElement {
   }
 
   connectedCallback() {
-    const weight = this.getAttribute("weight") || "bold";
     const size = this.getAttribute("size") || "1";
     const level = this.getAttribute("level") || size; // fallback if level isn't provided
 
@@ -22,15 +21,16 @@ class muiHeading extends HTMLElement {
 
         h1, h2, h3, h4, h5, h6 {
           margin: var(--space-000);
-          font-weight: ${weight};
+          font-weight: var(--heading-font-weight);
+          color: var(--heading-text-color);
         }
 
-        .size-1 { font-size: var(--font-size-600); line-height: 1.25; }
-        .size-2 { font-size: var(--font-size-500); line-height: 1.333; }
-        .size-3 { font-size: var(--font-size-400); line-height: 1.5; }
-        .size-4 { font-size: var(--font-size-300); line-height: 1.143; }
-        .size-5 { font-size: var(--font-size-200); line-height: 1.333; }
-        .size-6 { font-size: var(--font-size-100); line-height: 1.5; }
+        .size-1 { font-size: var(--heading-font-size-100); line-height: var(--heading-line-height-100); }
+        .size-2 { font-size: var(--heading-font-size-200); line-height: var(--heading-line-height-200); }
+        .size-3 { font-size: var(--heading-font-size-300); line-height: var(--heading-line-height-300); }
+        .size-4 { font-size: var(--heading-font-size-400); line-height: var(--heading-line-height-400); }
+        .size-5 { font-size: var(--heading-font-size-500); line-height: var(--heading-line-height-500); }
+        .size-6 { font-size: var(--heading-font-size-600); line-height: var(--heading-line-height-600); }
       </style>
       <${tag} class="size-${size}">
         <slot></slot>

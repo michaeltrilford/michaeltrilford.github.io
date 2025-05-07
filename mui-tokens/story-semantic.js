@@ -17,37 +17,51 @@ class storyTokensSemantic extends HTMLElement {
   
           <story-card title="Feedback States" description="User feedback (alerts, messages, forms, badges etc.)" nofooter>
             <mui-token-local-slat slot="body" token="--feedback-focus-base" variant="color" output="var(--blue-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-neutral-base" variant="color" output="var(--grey-500)"></mui-token-local-slat>  
-            <mui-token-local-slat slot="body" token="--feedback-positive-base" variant="color" output="var(--green-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-info-base" variant="color" output="var(--blue-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-warning-base" variant="color" output="var(--orange-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-attention-base" variant="color" output="var(--red-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-focus-stroke-color" variant="border-color" output="var(--blue-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-neutral-stroke-color" variant="border-color" output="var(--green-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-positive-stroke-color" variant="border-color" output="var(--green-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-info-stroke-color" variant="border-color" output="var(--blue-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-warning-stroke-color" variant="border-color" output="var(--orange-500)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--feedback-attention-stroke-color" variant="border-color" output="var(--red-600)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-plain-base" variant="color" output="var(--black-opacity-50)"></mui-token-local-slat>
 
+            <mui-token-local-slat slot="body" token="--feedback-neutral-base" variant="color" output="var(--grey-600)"></mui-token-local-slat>  
+            <mui-token-local-slat slot="body" token="--feedback-positive-base" variant="color" output="var(--green-600)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-info-base" variant="color" output="var(--blue-600)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-warning-base" variant="color" output="var(--orange-600)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-attention-base" variant="color" output="var(--red-600)"></mui-token-local-slat>
+
+            <mui-token-local-slat slot="body" token="--feedback-focus-stroke-base" variant="border-color" output="var(--feedback-focus-base)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-plain-stroke-base" variant="border-color" output="var(--feedback-plain-base)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-neutral-stroke-base" variant="border-color" output="var(--feedback-neutral-base)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-positive-stroke-base" variant="border-color" output="var(--feedback-positive-base)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-info-stroke-base" variant="border-color" output="var(--feedback-info-base)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-warning-stroke-base" variant="border-color" output="var(--feedback-warning-base)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-attention-stroke-base" variant="border-color" output="var(--feedback-attention-base)"></mui-token-local-slat>
+
+            <mui-token-local-slat slot="body" token="--feedback-plain-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
+            var(--feedback-plain-stroke-base)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-neutral-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
+            var(--feedback-neutral-stroke-base)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-positive-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
-            var(--feedback-positive-stroke-color)"></mui-token-local-slat>
+            var(--feedback-positive-stroke-base)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-info-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
-            var(--feedback-info-stroke-color)"></mui-token-local-slat>
+            var(--feedback-info-stroke-base)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-warning-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
-            var(--feedback-warning-stroke-color)"></mui-token-local-slat>
+            var(--feedback-warning-stroke-base)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-attention-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
-            var(--feedback-attention-stroke-color)"></mui-token-local-slat>
+            var(--feedback-attention-stroke-base)"></mui-token-local-slat>
 
+            <mui-token-local-slat slot="body" token="--feedback-plain-background" variant="color" output="var(--white-opacity-0)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-neutral-background" variant="color" output="var(--grey-100)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-positive-background" variant="color" output="var(--green-100)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-info-background" variant="color" output="var(--blue-100)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-warning-background" variant="color" output="var(--orange-100)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-attention-background" variant="color" output="var(--red-100)"></mui-token-local-slat>
 
+            <mui-token-local-slat slot="body" token="--feedback-plain-icon" variant="color" output="var(--black)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-neutral-icon" variant="color" output="var(--grey-600)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-positive-icon" variant="color" output="var(--green-600)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-info-icon" variant="color" output="var(--blue-600)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-warning-icon" variant="color" output="var(--orange-600)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-attention-icon" variant="color" output="var(--red-600)"></mui-token-local-slat>
 
+            <mui-token-local-slat slot="body" token="--feedback-plain-text" variant="text-color" output="var(--black)"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--feedback-neutral-text" variant="text-color" output="var(--grey-900)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-positive-text" variant="text-color" output="var(--green-900)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-info-text" variant="text-color" output="var(--blue-900)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--feedback-warning-text" variant="text-color" output="var(--orange-900)"></mui-token-local-slat>

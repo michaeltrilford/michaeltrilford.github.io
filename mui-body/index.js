@@ -24,6 +24,7 @@ class muiBody extends HTMLElement {
       :host { display: block; }
 
       :host p {
+        color: var(--text-color);
         margin: var(--space-000);
         display: block;
         width: 100%;
