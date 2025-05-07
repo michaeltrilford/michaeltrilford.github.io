@@ -11,7 +11,7 @@ class storyTokensComponents extends HTMLElement {
 
       <story-template 
         title="Components"
-        description="Component tokens are contextual tokens scoped to a specific UI component, defining how foundational design decisions are applied within that component’s unique structure and states."
+        description="Contextual tokens scoped to a specific UI component and its states."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/css/mui-tokens.css"
       >
         <mui-v-stack space="var(--space-700)">

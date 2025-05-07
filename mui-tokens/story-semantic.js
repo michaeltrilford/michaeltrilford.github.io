@@ -11,7 +11,7 @@ class storyTokensSemantic extends HTMLElement {
 
       <story-template 
         title="Semantic"
-        description="Semantic tokens express the intended meaning or purpose of a design element, independent of its visual implementation. Rather than referring to a specific color, size, or spacing value, semantic tokens describe what the design is trying to communicate."
+        description="Express meaning or state without tying it to a specific implementation."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/css/mui-tokens.css"
       >
         <mui-v-stack space="var(--space-700)">

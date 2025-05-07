@@ -11,7 +11,7 @@ class storyTokensBase extends HTMLElement {
 
       <story-template 
         title="Base"
-        description="Base tokens are the foundational values of a design system. They represent raw, unchanging definitions for core design attributes such as colors, typography, spacing, and sizes."
+        description="Raw values for core attributes like color, typography, spacing, and size."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/css/mui-tokens.css"
       >
 
