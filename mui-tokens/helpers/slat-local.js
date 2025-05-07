@@ -72,7 +72,7 @@ class muiTokenLocalSlat extends HTMLElement {
       .border-preview,
       .outline-preview { width: var(--space-700); }
 
-      .line-height-preview { width: 10ch; }
+      .line-height-preview { }
 
       mui-grid::part(align-items) { align-items: center; }
     `;
@@ -110,7 +110,7 @@ class muiTokenLocalSlat extends HTMLElement {
         visualPreview = `<div class="text-preview" style="font-weight: ${output};">Aa</div>`;
         break;
       case "font-family":
-        visualPreview = `<div class="text-preview" style="font-family: ${output};">The quick brown fox jumps over the lazy dog.</div>`;
+        visualPreview = `<div class="text-preview" style="font-family: ${output};">Aa</div>`;
         break;
       case "size":
         visualPreview = `<div class="spacer" style="height: ${output}; width: ${output};"></div>`;
