@@ -12,20 +12,21 @@ class storyTokensComponents extends HTMLElement {
       <story-template 
         title="Components Tokens"
         description="Component tokens are contextual tokens scoped to a specific UI component, defining how foundational design decisions are applied within that component’s unique structure and states."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/css/mui-tokens.css"
       >
         <mui-v-stack space="var(--space-700)">
 
-          <story-card title="Icon" nofooter>
+          <story-card title="Icon" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-icons">
             <mui-token-local-slat slot="body" token="--icon-color-default" variant="color" output="var(--black)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--icon-color-inverted" variant="color" output="var(--white)"></mui-token-local-slat>
           </story-card>
 
-          <story-card title="Card" nofooter>
+          <story-card title="Card" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-card">
             <mui-token-local-slat slot="body" token="--card-radius" variant="radius" output="var(--radius-150)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--card-background" variant="color" output="var(--white)"></mui-token-local-slat>
           </story-card>
 
-          <story-card title="Badge" nofooter>
+          <story-card title="Badge" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-badge/index.js">
             <mui-token-local-slat slot="body" token="--badge-radius" variant="radius" output="var(--radius-100)"></mui-token-local-slat>
 
             <mui-token-local-slat slot="body" token="--badge-text-color" variant="text-color" output="var(--white)"></mui-token-local-slat>
@@ -37,7 +38,7 @@ class storyTokensComponents extends HTMLElement {
             <mui-token-local-slat slot="body" token="--badge-background-attention" variant="color" output="var(--feedback-attention-base)"></mui-token-local-slat>
           </story-card>
 
-          <story-card title="Table" nofooter>
+          <story-card title="Table" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-table">
             <mui-token-local-slat slot="body" token="--table-background" variant="color" output="var(--white)"></mui-token-local-slat>
           </story-card>
 
@@ -46,25 +47,25 @@ class storyTokensComponents extends HTMLElement {
             <mui-token-local-slat slot="body" token="--code-background" variant="color" output="var(--grey-900)"></mui-token-local-slat>
           </story-card>
 
-          <story-card title="Alert" nofooter>
+          <story-card title="Alert" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-alert/index.js">
             <mui-token-local-slat slot="body" token="--alert-radius" variant="radius" output="var(--radius-100)"></mui-token-local-slat>
             <mui-body size="x-small" style="padding: var(--space-300); border-top: var(--border-thin);" slot="body">Refer to <mui-link size="x-small" href="/#/semantic-design-tokens">Feedback Semantic</mui-link> tokens</mui-body>
           </story-card>
 
-          <story-card title="Message" nofooter>
+          <story-card title="Message" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-message/index.js">
             <mui-token-local-slat slot="body" token="--message-radius" variant="radius" output="var(--radius-150)"></mui-token-local-slat>
             <mui-body size="x-small" style="padding: var(--space-300); border-top: var(--border-thin);" slot="body">Refer to <mui-link size="x-small" href="/#/semantic-design-tokens">Feedback Semantic</mui-link> tokens</mui-body>
           </story-card>
 
-          <story-card title="Button" nofooter description="Button uses the 'Interactive' tokens to define the visual behavior of call-to-action button elements.">
+          <story-card title="Button" nofooter description="Button uses the 'Interactive' tokens to define the visual behavior of call-to-action button elements." github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-button/index.js">
             <mui-body size="x-small" style="padding: var(--space-300);" slot="body">Refer to <mui-link size="x-small" href="/#/semantic-design-tokens">Interactive Semantic</mui-link> tokens</mui-body>
           </story-card>
 
-          <story-card title="Link Button" nofooter nofooter description="Link button uses the 'Interactive' tokens to define the visual behavior of call-to-action button elements.">
+          <story-card title="Link Button" nofooter nofooter description="Link button uses the 'Interactive' tokens to define the visual behavior of call-to-action button elements." github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-link/index.js">
             <mui-body size="x-small" style="padding: var(--space-300);" slot="body">Refer to <mui-link size="x-small" href="/#/semantic-design-tokens">Interactive Semantic</mui-link> tokens</mui-body>
           </story-card>
 
-          <story-card title="Link Default" nofooter>
+          <story-card title="Link Default" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-link/index.js">
             <mui-token-local-slat slot="body" token="--link-text-color-default" variant="text-color" output="var(--grey-900)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--link-text-color-default-hover" variant="text-color" output="var(--grey-1000)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--link-text-color-default-focus" variant="text-color" output="var(--grey-1000)"></mui-token-local-slat>

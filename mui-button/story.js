@@ -93,7 +93,10 @@ class storyButton extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-template title="Buttons" description="Buttons are essential UI elements that trigger actions when clicked or tapped. They should be easily recognisable, provide clear feedback, and be accessible to all users.">
+      <story-template title="Buttons" 
+        description="Buttons are essential UI elements that trigger actions when clicked or tapped. They should be easily recognisable, provide clear feedback, and be accessible to all users." 
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-button/index.js"
+      >
 
       <mui-v-stack space="var(--space-700)">
 

@@ -98,7 +98,7 @@ class storyCard extends HTMLElement {
 
     const githubLink = this.getAttribute("github");
     const githubContent = githubLink
-      ? `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="secondary">View Code<img style="display: flex;" src="../images/github-mark.svg" height="21" width="21" /></mui-link>`
+      ? `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="tertiary">View Usage<img style="display: flex;" src="../images/github-mark.svg" height="21" width="21" /></mui-link>`
       : "";
 
     // Handle usage list

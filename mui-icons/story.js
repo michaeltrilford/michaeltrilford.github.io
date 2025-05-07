@@ -21,6 +21,7 @@ class storyIcon extends HTMLElement {
 
       <story-template 
         title="Icons"
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-icons"
       >
 
         <mui-v-stack space="var(--space-700)">

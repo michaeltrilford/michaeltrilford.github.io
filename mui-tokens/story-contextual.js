@@ -12,6 +12,7 @@ class storyTokensContextual extends HTMLElement {
       <story-template 
         title="Contextual Tokens"
         description="Contextual tokens bridge the gap between raw base tokens and specific use cases. They are tied to a particular context or element, reflecting how a base token is applied in a specific environment or scenario."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/css/mui-tokens.css"
       >
         <mui-v-stack space="var(--space-700)">
 

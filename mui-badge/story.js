@@ -12,6 +12,7 @@ class storyBadge extends HTMLElement {
       <story-template 
         title="Badge"
         description="Badges are non-interactive and indicate counts or statuses."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-badge/index.js"
       >
 
       <mui-v-stack space="var(--space-700)">

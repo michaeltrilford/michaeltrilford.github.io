@@ -32,6 +32,7 @@ class storyLink extends HTMLElement {
       <story-template 
         title="Links"
         description="The mui-link defines a hyperlink, which is used to link from one page to another."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-link/index.js"
       >
 
       <mui-v-stack space="var(--space-700)">

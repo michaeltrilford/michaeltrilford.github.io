@@ -82,6 +82,7 @@ class storyAlert extends HTMLElement {
       <story-template
         title="Alerts"
         description="Alerts are to surface meaningful system messages related to the users' current task or action."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-alert/index.js"
 
         accessibility-items='[
           "ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.", 
