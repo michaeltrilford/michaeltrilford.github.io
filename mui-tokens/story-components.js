@@ -10,7 +10,7 @@ class storyTokensComponents extends HTMLElement {
       <style>${styles}</style>
 
       <story-template 
-        title="Components Tokens"
+        title="Components"
         description="Component tokens are contextual tokens scoped to a specific UI component, defining how foundational design decisions are applied within that component’s unique structure and states."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/css/mui-tokens.css"
       >
@@ -42,7 +42,7 @@ class storyTokensComponents extends HTMLElement {
             <mui-token-local-slat slot="body" token="--table-background" variant="color" output="var(--white)"></mui-token-local-slat>
           </story-card>
 
-          <story-card title="Code" nofooter>
+          <story-card title="Code" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-code/index.js">
             <mui-token-local-slat slot="body" token="--code-text-color" variant="text-color" output="var(--white)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--code-background" variant="color" output="var(--grey-900)"></mui-token-local-slat>
           </story-card>
@@ -72,7 +72,7 @@ class storyTokensComponents extends HTMLElement {
             <mui-token-local-slat slot="body" token="--link-text-color-default-disabled" variant="text-color" output="var(--grey-800)"></mui-token-local-slat>
           </story-card>
 
-          <story-card title="Heading" nofooter>
+          <story-card title="Heading" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-heading/index.js">
             <mui-token-local-slat slot="body" token="--heading-text-color" variant="text-color" output="var(--grey-1000)"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--heading-font-weight" variant="font-weight" output="var(--font-weight-bold)"></mui-token-local-slat>
 
@@ -95,11 +95,11 @@ class storyTokensComponents extends HTMLElement {
             <mui-body size="x-small" style="padding: var(--space-300);" slot="body">Refer to <mui-link size="x-small" href="/#/contextual-design-tokens">Text Contextual</mui-link> tokens</mui-body>
           </story-card>
 
-          <story-card title="Label" nofooter>
+          <story-card title="Label" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-input/index.js">
             <mui-body size="x-small" style="padding: var(--space-300);" slot="body">Refer to <mui-link size="x-small" href="/#/contextual-design-tokens">Text Contextual</mui-link> tokens</mui-body>
           </story-card>
 
-          <story-card title="List" nofooter>
+          <story-card title="List" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-list">
             <mui-body size="x-small" style="padding: var(--space-300);" slot="body">Refer to <mui-link size="x-small" href="/#/contextual-design-tokens">Text Contextual</mui-link> tokens</mui-body>
           </story-card>
 

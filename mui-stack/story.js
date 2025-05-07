@@ -158,9 +158,9 @@ class storyStack extends HTMLElement {
     const accordionsHStack = propItemsHStack
       .map(
         (prop) => `
-        <mui-accordion-block>
-          <span slot="title">${prop.name.charAt(0).toUpperCase() +
-            prop.name.slice(1)}</span>
+        <mui-accordion-block size="x-small" heading=${prop.name
+          .charAt(0)
+          .toUpperCase() + prop.name.slice(1)}>
           <story-type-slat
             slot="detail"
             ${prop.required ? "required" : ""}
@@ -193,9 +193,9 @@ class storyStack extends HTMLElement {
     const accordionsVStack = propItemsVStack
       .map(
         (prop) => `
-        <mui-accordion-block>
-          <span slot="title">${prop.name.charAt(0).toUpperCase() +
-            prop.name.slice(1)}</span>
+        <mui-accordion-block size="x-small" heading=${prop.name
+          .charAt(0)
+          .toUpperCase() + prop.name.slice(1)}>
           <story-type-slat
             slot="detail"
             ${prop.required ? "required" : ""}
@@ -220,7 +220,7 @@ class storyStack extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types: Horizontal Stack">
+        <story-card title="Prop Types: HStack">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsHStack}
@@ -244,7 +244,7 @@ class storyStack extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Prop Types: Vertical Stack">
+        <story-card title="Prop Types: VStack">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsVStack}

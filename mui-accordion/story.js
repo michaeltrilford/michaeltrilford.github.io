@@ -21,27 +21,22 @@ class storyAccordion extends HTMLElement {
           description="The inline accordion is typically used within a block layout as a secondary UI element to a block element."
         >
           <div slot="body">
-            <mui-accordion-inline>
-              <span slot="title">Hello</span>
-              <div slot="detail" style="padding-left: var(--space-050); padding-right: var(--space-050);">
-                <mui-list as="ul">
-                  <mui-list-item>Coffee</mui-list-item>
-                  <mui-list-item>Tea</mui-list-item>
-                  <mui-list-item>Milk</mui-list-item>
-                </mui-list>
-              </div>
+            <mui-accordion-inline heading="Heading">
+              <mui-list as="ul" slot="detail">
+                <mui-list-item>Coffee</mui-list-item>
+                <mui-list-item>Tea</mui-list-item>
+                <mui-list-item>Milk</mui-list-item>
+              </mui-list>
             </mui-accordion-inline>
           </div>
           <mui-code slot="footer">
-            &lt;mui-accordion-inline&gt;
+            &lt;mui-accordion-inline heading="Heading"&gt;
             <br />
-            &nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
-            <br />
-            &nbsp;&nbsp;&lt;div slot="detail"&gt;
+            &nbsp;&nbsp;&lt;mui-list as="ul" slot="detail"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;...
             <br />
-            &nbsp;&nbsp;&lt;/div&gt;
+            &nbsp;&nbsp;&lt;/mui-list&gt;
             <br />
             &lt;/mui-accordion-inline&gt;
           </mui-code>
@@ -52,25 +47,21 @@ class storyAccordion extends HTMLElement {
           description="The block accordion is typically used within a page layout full-width to the parent container."
         >
           <mui-accordion-group slot="body">
-            <mui-accordion-block>
-              <span slot="title">Hello</span>
+            <mui-accordion-block heading="Heading">
               <div slot="detail">
-                  Hello
+                  Content
               </div>
             </mui-accordion-block>
-            <mui-accordion-block>
-              <span slot="title">Hello</span>
+            <mui-accordion-block heading="Heading">
               <div slot="detail">
-                  Hello
+                  Content
               </div>
             </mui-accordion-block>
           </mui-accordion-group>
           <mui-code slot="footer">
             &lt;mui-accordion-group&gt;
             <br />  
-            &nbsp;&nbsp;&lt;mui-accordion-block&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
+            &nbsp;&nbsp;&lt;mui-accordion-block heading="Heading"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;
             <br />
@@ -80,9 +71,7 @@ class storyAccordion extends HTMLElement {
             <br />
             &nbsp;&nbsp;&lt;/mui-accordion-block&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-accordion-block&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
+            &nbsp;&nbsp;&lt;mui-accordion-block heading="Heading"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;
             <br />
@@ -101,25 +90,21 @@ class storyAccordion extends HTMLElement {
           description="The block accordion is typically used within a page layout full-width to the parent container."
         >
           <mui-accordion-group exclusive slot="body">
-            <mui-accordion-block>
-              <span slot="title">Hello</span>
+            <mui-accordion-block heading="Heading">
               <div slot="detail">
-                  Hello
+                  Content
               </div>
             </mui-accordion-block>
-            <mui-accordion-block>
-              <span slot="title">Hello</span>
+            <mui-accordion-block heading="Heading">
               <div slot="detail">
-                  Hello
+                  Content
               </div>
             </mui-accordion-block>
           </mui-accordion-group>
           <mui-code slot="footer">
             &lt;mui-accordion-group exclusive&gt;
             <br />  
-            &nbsp;&nbsp;&lt;mui-accordion-block&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
+            &nbsp;&nbsp;&lt;mui-accordion-block heading="Heading"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;
             <br />
@@ -129,9 +114,7 @@ class storyAccordion extends HTMLElement {
             <br />
             &nbsp;&nbsp;&lt;/mui-accordion-block&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-accordion-block&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;span slot="title">Hello&lt;/span&gt;
+            &nbsp;&nbsp;&lt;mui-accordion-block heading="Heading"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;
             <br />

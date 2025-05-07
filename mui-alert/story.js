@@ -59,9 +59,9 @@ class storyAlert extends HTMLElement {
     const accordions = propItems
       .map(
         (prop) => `
-          <mui-accordion-block>
-            <span slot="title">${prop.name.charAt(0).toUpperCase() +
-              prop.name.slice(1)}</span>
+          <mui-accordion-block size="x-small" heading=${prop.name
+            .charAt(0)
+            .toUpperCase() + prop.name.slice(1)}>
             <story-type-slat
               slot="detail"
               ${prop.required ? "required" : ""}

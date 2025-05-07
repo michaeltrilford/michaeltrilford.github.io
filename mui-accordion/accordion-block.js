@@ -3,36 +3,38 @@ class muiAccordionBlock extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this.accordionId = `accordion-detail-${Math.random()
+      .toString(36)
+      .substring(2, 9)}`;
   }
 
   connectedCallback() {
+    const headingText = this.getAttribute("heading") || "Heading...";
+    const size = this.getAttribute("size") || "medium";
+    const headingLevel = this.getAttribute("level") || "3";
+
     let html = `
     <style>
 
       :host { display: block; }
 
-      mui-accordion-summary {
+      .accordion-summary {
         display: flex;
         align-items: center;
-        margin-bottom: var(--space-000);
-        padding: var(--space-400) var(--space-500); 
+        justify-content: space-between;
         border-bottom: var(--border-thin);
-      }
-
-      mui-accordion-summary:hover {
         cursor: pointer;
       }
 
-      mui-accordion-summary:hover mui-icon-right-chevron {
+      .accordion-summary:focus-visible {
+        outline: var(--outline-thick);
+      }
+
+      .accordion-summary:hover mui-icon-right-chevron {
         background: rgba(0 0 0 / 5%);
       }
 
-      mui-accordion-summary mui-heading:hover {
-        cursor: pointer;
-      }
-  
       mui-icon-right-chevron {
-        margin-right: var(--space-100);
         transition: transform 0.2s ease-in-out;
         fill: var(--grey-700);
         transform: rotate(90deg);
@@ -40,62 +42,96 @@ class muiAccordionBlock extends HTMLElement {
         border-radius: var(--radius-200);
       }
 
+      mui-heading {
+        width: 100%;
+      }
+
       mui-icon-right-chevron[open] {
         transform: rotate(-90deg);
       }
-          
-      mui-accordion-detail {
-        display: block;
-        margin-bottom: var(--space-000);
-        max-height: 0;
-        transition: max-height .10s ease-in-out;
-        overflow-y: hidden;
-      }
 
-      mui-accordion-detail[open] {
-        max-height: 200vh;
-        transition: max-height .4s ease-in-out;
+      .accordion-detail {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
         border-bottom: var(--border-thin);
       }
-        
-      mui-accordion-detail-inner {
-        display: block;
+
+      .accordion-detail[open] {
+        max-height: 200vh;
+      }
+
+      .accordion-detail-inner {
         padding: var(--space-500);
       }
 
-      mui-accordion-detail-inner > *:last-child {
-        margin-bottom: var(--space-000);
+      .accordion-detail-inner > *:last-child {
+        margin-bottom: 0;
+      }
+
+      .size-x-small-summary {
+        padding: var(--space-200) var(--space-300);
+      }
+
+
+      .size-small-summary {
+        padding: var(--space-300) var(--space-400);
+      }
+
+      .size-medium-summary {
+        padding: var(--space-400) var(--space-500);
+      }
+
+      .size-large-summary {
+        padding: var(--space-500) var(--space-600);
+      }
+
+      .size-x-small-detail {
+        padding: var(--space-300);
+      }
+
+      .size-small-detail {
+        padding: var(--space-400);
+      }
+
+      .size-medium-detail {
+        padding: var(--space-500);
+      }
+
+      .size-large-detail {
+        padding: var(--space-600);
       }
 
     </style>
 
-    <mui-accordion-summary tabindex="0" role="button" aria-expanded="false">
-      <mui-heading nomargin size="5" style="width: 100%;">
-        <slot name="title">Ridiculus Inceptos</slot>
-      </mui-heading>
-      <mui-icon-right-chevron size="x-small"></mui-icon-right-chevron>  
-    </mui-accordion-summary> 
+    <div
+      class="accordion-summary size-${size}-summary"
+      role="button"
+      tabindex="0"
+      aria-expanded="false"
+      aria-controls="${this.accordionId}"
+    >
+      <mui-heading nomargin size="5" level="${headingLevel}">${headingText}</mui-heading>
+      <mui-icon-right-chevron size="x-small"></mui-icon-right-chevron>
+    </div>
 
-    <mui-accordion-detail>
-      <mui-accordion-detail-inner>
-        <slot name="detail">
-          <h6>Sollicitudin Elit</h6>  
-          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-        </slot>
-      </mui-accordion-detail-inner>
-    </mui-accordion-detail> 
+    <div id="${this.accordionId}" class="accordion-detail">
+      <div class="accordion-detail-inner size-${size}-detail">
+        <slot name="detail">Insert Content</slot>
+      </div>
+    </div>
     
     `;
 
     this.shadowRoot.innerHTML = html;
 
-    this.titleEl = this.shadowRoot.querySelector("mui-accordion-summary");
-    this.detailEl = this.shadowRoot.querySelector("mui-accordion-detail");
-    this.chevronEl = this.shadowRoot.querySelector("mui-icon-right-chevron");
+    this.summary = this.shadowRoot.querySelector(".accordion-summary");
+    this.detail = this.shadowRoot.querySelector(".accordion-detail");
+    this.chevron = this.shadowRoot.querySelector("mui-icon-right-chevron");
 
-    this.titleEl.addEventListener("click", this.toggleAccordion.bind(this));
+    this.summary.addEventListener("click", () => this.toggleAccordion());
 
-    this.titleEl.addEventListener("keydown", (e) => {
+    this.summary.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         this.toggleAccordion();
@@ -104,24 +140,23 @@ class muiAccordionBlock extends HTMLElement {
   }
 
   toggleAccordion() {
-    const isOpen = this.detailEl.hasAttribute("open");
+    const isOpen = this.detail.hasAttribute("open");
     this.setOpen(!isOpen);
   }
 
   setOpen(state) {
     if (state) {
-      this.detailEl.setAttribute("open", "");
-      this.chevronEl.setAttribute("open", "");
-      this.titleEl.setAttribute("aria-expanded", "true");
+      this.detail.setAttribute("open", "");
+      this.chevron.setAttribute("open", "");
+      this.summary.setAttribute("aria-expanded", "true");
 
-      // 🔥 Emit event so parent knows this one opened
       this.dispatchEvent(
         new CustomEvent("accordion-opened", { bubbles: true, composed: true })
       );
     } else {
-      this.detailEl.removeAttribute("open");
-      this.chevronEl.removeAttribute("open");
-      this.titleEl.setAttribute("aria-expanded", "false");
+      this.detail.removeAttribute("open");
+      this.chevron.removeAttribute("open");
+      this.summary.setAttribute("aria-expanded", "false");
     }
   }
 
