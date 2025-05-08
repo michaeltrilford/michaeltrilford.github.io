@@ -79,11 +79,15 @@ class storyMessage extends HTMLElement {
       .join("");
 
     const accordions = propItems
-      .map(
-        (prop) => `
-          <mui-accordion-block size="x-small" heading=${prop.name
-            .charAt(0)
-            .toUpperCase() + prop.name.slice(1)}>
+      .map((prop, index) => {
+        // Check if it's the last item in the array
+        const isLastChild = index === propItems.length - 1 ? "last-child" : "";
+
+        return `
+          <mui-accordion-block 
+            size="x-small" 
+            heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
+            ${isLastChild}>
             <story-type-slat
               slot="detail"
               ${prop.required ? "required" : ""}
@@ -94,8 +98,8 @@ class storyMessage extends HTMLElement {
               description="${prop.description}">
             </story-type-slat>
           </mui-accordion-block>
-        `
-      )
+        `;
+      })
       .join("");
 
     shadowRoot.innerHTML = `

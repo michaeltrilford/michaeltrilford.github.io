@@ -54,7 +54,7 @@ class muiAccordionBlock extends HTMLElement {
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        border-bottom: var(--border-thin);
+        box-shadow: inset 0 -1px 0 0 var(--border-color);
       }
 
       .accordion-detail[open] {
@@ -100,6 +100,11 @@ class muiAccordionBlock extends HTMLElement {
 
       .size-large-detail {
         padding: var(--space-600);
+      }
+
+      :host([last-child]) .accordion-summary,
+      :host([last-child]) .accordion-detail {
+        border-bottom: none;
       }
 
     </style>
