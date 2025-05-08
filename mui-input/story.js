@@ -36,7 +36,6 @@ class storyInput extends HTMLElement {
       },
       {
         name: "id",
-        required: true,
         type: "string",
         options: "{text}",
         default: "",
