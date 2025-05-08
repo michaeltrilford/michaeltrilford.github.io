@@ -9,10 +9,24 @@ class muiInput extends HTMLElement {
   }
 
   connectedCallback() {
-    const type = this.getAttribute("type") || "text";
+    const allowedTypes = [
+      "text",
+      "password",
+      "email",
+      "number",
+      "search",
+      "tel",
+      "url",
+      "date",
+      "time",
+    ];
+    const rawType = this.getAttribute("type") || "text";
+    const type = allowedTypes.includes(rawType) ? rawType : "text";
+
     const name = this.getAttribute("name") || "";
     const value = this.getAttribute("value") || "";
     const placeholder = this.getAttribute("placeholder") || "";
+
     const id =
       this.getAttribute("id") ||
       `mui-input-${Math.random()

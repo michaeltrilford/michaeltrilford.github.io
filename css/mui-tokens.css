@@ -2,18 +2,30 @@
   /* Base Tokens
 =======================================================================================*/
 
-  /* Raw, foundational value (no context) */
+  /* Raw values for core attributes like color, typography, spacing, and size. */
+  /* Organized by category: typography, colors, spacing, radius and stroke. */
 
-  /* These tokens provide the foundational values for design properties. */
-  /* They are raw values without contextual meaning, intended to be reused by semantic and component tokens. */
-  /* Organized by category: typography, palette, spacing, radius, border, and line height. */
+  /* Typography on the Web • Orchestrating Vertical Rhythm
+  *
+  * An introduction to baseline grids and vertical rhythm in web typography.
+  * This video explores the history of type through letterpress and how these
+  * traditional principles can guide modern decisions in establishing a 
+  * consistent vertical rhythm using a baseline grid.
+  *
+  * Apply these techniques in your foundational CSS, websites, web apps,
+  * or as part of a Design System.
+  *
+  * Watch: https://youtu.be/FFGSy0EfA9Y
+  * By Michael Trilford
+  */
+
+  /* Font-family */
+  --font-family: system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
   /* Type Scale Reminder */
   /* 6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120, 132, 144, 156, 168, 180, 192 */
 
-  /* Typography */
-  --font-family: system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-
+  /* Font-size */
   --font-size-15: 1.1rem;
   --font-size-25: 1.2rem;
   --font-size-50: 1.4rem;
@@ -28,21 +40,25 @@
   --font-size-900: 8.4rem;
   --font-size-1000: 9.6rem;
 
-  /* Line-height math
-  18 / 11 = 1.63636364
-  18 / 12 = 1.5
-  21 / 14 = 1.5
-  24 / 16 = 1.5
-  24 / 18 = 1.33333333
-  24 / 21 = 1.14285714
-  36 / 24 = 1.5
-  48 / 36 = 48÷36
-  60 / 48 = 1.25
-  72 / 60 = 1.2
-  84 / 72 = 1.16666667
-  96 / 84 = 1.14285714
-  108 / 96 = 1.125  */
+  /* Math for Line-height
+  *  px / px   =  unitless line-height
+  * -------------------------------
+  *  18 / 11    =  1.636
+  *  18 / 12    =  1.500
+  *  21 / 14    =  1.500
+  *  24 / 16    =  1.500
+  *  24 / 18    =  1.333
+  *  24 / 21    =  1.143
+  *  36 / 24    =  1.500
+  *  48 / 36    =  1.333
+  *  60 / 48    =  1.250
+  *  72 / 60    =  1.200
+  *  84 / 72    =  1.167
+  *  96 / 84    =  1.143
+  * 108 / 96    =  1.125
+  */
 
+  /* Line-height */
   --line-height-15: 1.63636364;
   --line-height-25: 1.5;
   --line-height-50: 1.5;
@@ -57,7 +73,7 @@
   --line-height-900: 1.14285714;
   --line-height-1000: 1.125;
 
-  /* Weight */
+  /* Font Weight */
   --font-weight-400: 400;
   --font-weight-500: 500;
   --font-weight-600: 600;
@@ -185,10 +201,9 @@
 =======================================================================================*/
 
   /* TOKEN STRUCTURE */
-  /* Token Example: --primary-background */
   /* Token Key: [identifier (Optional)]-[variant]-[property-name]-[state] */
 
-  /* FEEDBACK BASE • BADGES, BORDERS, FOCUS */
+  /* Feedback Base • Badges, Borders, Focus */
   --feedback-focus-base: var(--blue-500);
   --feedback-plain-base: var(--black-opacity-50);
 
@@ -206,7 +221,7 @@
   --feedback-warning-stroke-base: var(--feedback-warning-base);
   --feedback-attention-stroke-base: var(--feedback-attention-base);
 
-  /* FEEDBACK • ALERTS & MESSAGES */
+  /* Feedback • Alerts, Messages, Notifciations */
   --feedback-plain-border: var(--stroke-size-200) var(--stroke-style-solid)
     var(--feedback-plain-stroke-base);
   --feedback-neutral-border: var(--stroke-size-200) var(--stroke-style-solid)
@@ -241,6 +256,7 @@
   --feedback-warning-text: var(--orange-900);
   --feedback-attention-text: var(--red-900);
 
+  /* Call to Actions • Buttons and Link Buttons */
   --interactive-primary-stroke: var(--stroke-size-200) var(--stroke-style-solid)
     var(--black-opacity-0);
   --interactive-primary-background: var(--grey-900);
@@ -294,13 +310,7 @@
   =======================================================================================*/
 
   /* TOKEN STRUCTURE */
-  /* Token Example: ---border-thin */
   /* Token Key: [context]-[property-name]-[state (Optional)] */
-  --summary-background: var(--white);
-  --mark-background: var(--grey-900);
-  --mark-text-color: var(--white);
-  --legend-background: var(--white);
-  --selection-text-color: var(--white);
 
   /* Text */
   --text-color: var(--grey-900);
@@ -312,7 +322,6 @@
   --text-font-size-s: var(--font-size-50);
   --text-font-size-m: var(--font-size-100);
   --text-font-size-l: var(--font-size-200);
-
   --text-font-size: var(--text-font-size-m);
   --text-line-height: var(--text-line-height-m);
 

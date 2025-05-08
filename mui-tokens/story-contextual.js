@@ -58,23 +58,6 @@ class storyTokensContextual extends HTMLElement {
           var(--outline-color)"></mui-token-local-slat>
           </story-card>
 
-          <story-card title="Summary" nofooter>
-            <mui-token-local-slat slot="body" token="--summary-background" variant="color" output="var(--white)"></mui-token-local-slat>
-          </story-card>
-
-          <story-card title="Mark" nofooter>
-            <mui-token-local-slat slot="body" token="--mark-background" variant="color" output="var(--grey-900)"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--mark-text-color" variant="text-color" output="var(--white)"></mui-token-local-slat>
-          </story-card>
-
-          <story-card title="Legend" nofooter>
-            <mui-token-local-slat slot="body" token="--legend-background" variant="color" output="var(--white)"></mui-token-local-slat>
-          </story-card>
-
-          <story-card title="Selection" nofooter>
-            <mui-token-local-slat slot="body" token="--selection-text-color" variant="text-color" output="var(--white)"></mui-token-local-slat>
-          </story-card>
-
         </mui-v-stack>
 
       </story-template>

@@ -95,6 +95,7 @@ class appNavbar extends HTMLElement {
 
     const Components = `
       <app-navbar-group id="web-components" groupname="Web Components">
+        <app-navbar-link link="#/input" title="Input"></app-navbar-link>  
         <app-navbar-link link="#/alerts" title="Alerts"></app-navbar-link>
         <app-navbar-link link="#/messages" title="Messages"></app-navbar-link>
         <app-navbar-link link="#/badge" title="Badge"></app-navbar-link>

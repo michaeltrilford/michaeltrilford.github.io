@@ -1,16 +1,5 @@
-/* Baseline rhythm
-========================================================================== */
-label {
-  margin-bottom: var(--space-200);
-}
-summary,
-details p {
-  margin-bottom: var(--space-000);
-}
-
 /* Typography:
 =======================================================================================*/
-
 sub,
 sup,
 small {
@@ -89,7 +78,6 @@ textarea {
 legend {
   padding: var(--space-000) var(--space-200);
   margin-left: -0.8rem;
-  background: var(--legend-background);
 }
 
 /* Fieldset styles & File Upload style */
