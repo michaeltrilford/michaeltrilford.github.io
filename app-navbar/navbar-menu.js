@@ -18,7 +18,7 @@ class appNavbarMenu extends HTMLElement {
         top: 0;
       }
       :host([mobile]) {
-        height: (100vh - 7.6rem);
+        height: calc(100vh - 7.6rem);
         z-index: 1;
         width: 100%;
       }
