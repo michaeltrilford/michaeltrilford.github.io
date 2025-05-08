@@ -10,8 +10,8 @@ class GuidelinesPage extends HTMLElement {
         justify-content: center;
         padding: var(--space-500) var(--space-600) var(--space-600);
         border-radius: var(--radius-300);
-        background: var(--mui-brand);
-        background: linear-gradient(-45deg, var(--mui-brand-dark) 0%, var(--mui-brand) 100%);
+        background: var(--mui-brand-200);
+        background: linear-gradient(0deg, var(--mui-brand-400) 0%, var(--mui-brand-300) 100%);
         border: var(--feedback-neutral-border);
         border-bottom: var(--border-thick);
         border-color: var(--black-opacity-30);
@@ -40,6 +40,19 @@ class GuidelinesPage extends HTMLElement {
       .mui-button-secondary::part(background) {
         background: var(--mui-brand);
       }
+
+      .mui-button-secondary::part(display) {
+        display: flex;
+        gap: var(--space-200);
+        padding: var(--space-200) var(--space-300);
+        background: var(--mui-brand-200);
+        background: linear-gradient(0deg, var(--mui-brand-300) 0%, var(--mui-brand-200) 100%);
+      }
+      .mui-button-secondary::part(display):hover {
+        background: var(--mui-brand-300);
+        background: linear-gradient(0deg, var(--mui-brand-400) 0%, var(--mui-brand-100) 100%);
+      }
+
 
       mui-grid::part(align-items) {
         align-items: center;
