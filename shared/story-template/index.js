@@ -46,7 +46,7 @@ class storyTemplate extends HTMLElement {
 
     const guidesLink = this.hasAttribute("guides");
     const guidesContent = guidesLink
-      ? `<mui-link class="resources" href="/#/ux-guides" target="_blank" rel="noopener" variant="secondary">Guides<img style="display: flex;" src="../images/guides-mark.svg" height="21" width="21" /></mui-link>`
+      ? `<mui-link class="resources" href="/#/ux-guides" variant="secondary">Guides<img style="display: flex;" src="../images/guides-mark.svg" height="21" width="21" /></mui-link>`
       : "";
 
     try {
