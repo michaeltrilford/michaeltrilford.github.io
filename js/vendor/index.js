@@ -88,6 +88,16 @@ const UtilArray = ["mui-utils/index.js"];
 
 const PartsArray = ["mui-parts/index.js"];
 
+const AppCompArray = [
+  "app-navbar/navbar.js",
+  "app-navbar/navbar-home.js",
+  "app-navbar/navbar-group.js",
+  "app-navbar/navbar-link.js",
+  "app-navbar/navbar-toggle.js",
+  "app-navbar/navbar-skip.js",
+  "app-navbar/navbar-menu.js",
+];
+
 const SharedArray = [
   "shared/page-card/index.js",
   "shared/story-template/index.js",
@@ -99,15 +109,7 @@ const SharedArray = [
   "mui-parts/helpers/index.js",
   "mui-parts/helpers/slat-local.js",
 ];
-const AppCompArray = [
-  "app-navbar/navbar.js",
-  "app-navbar/navbar-home.js",
-  "app-navbar/navbar-group.js",
-  "app-navbar/navbar-link.js",
-  "app-navbar/navbar-toggle.js",
-  "app-navbar/navbar-skip.js",
-  "app-navbar/navbar-menu.js",
-];
+
 const MuiCompArray = [
   "mui-accordion/accordion-inline.js",
   "mui-accordion/accordion-block.js",
@@ -208,8 +210,8 @@ Promise.all([
   // loadScripts(HomeArray),
   loadScripts(UtilArray),
   loadScripts(PartsArray),
-  loadScripts(SharedArray),
   loadScripts(AppCompArray),
+  loadScripts(SharedArray),
   loadScripts(MuiCompArray),
   loadScripts(RecipeArray),
   loadScripts(PageArray),
