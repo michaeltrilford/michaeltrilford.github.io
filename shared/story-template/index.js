@@ -1,6 +1,13 @@
 class storyTemplate extends HTMLElement {
   static get observedAttributes() {
-    return ["title", "description", "accessibility-items", "github"];
+    return [
+      "title",
+      "description",
+      "accessibility-items",
+      "github",
+      "figma",
+      "guides",
+    ];
   }
 
   constructor() {
@@ -9,14 +16,14 @@ class storyTemplate extends HTMLElement {
     const styles = `
       :host { display: block; width: 100%; }
 
-      .github::part(display) {
+      .resources::part(display) {
         display: flex;
         gap: var(--space-200);
         padding: var(--space-200) var(--space-300);
-        font-weight: var(--font-weight-bold);
-        font-size: var(--font-size-50);
-        line-height: var(--line-height-50);
         background: var(--mui-brand);
+      }
+      .resources::part(display):hover {
+        background: var(--mui-brand-400);
       }
 
     `;
@@ -29,7 +36,17 @@ class storyTemplate extends HTMLElement {
 
     const githubLink = this.getAttribute("github");
     const githubContent = githubLink
-      ? `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="secondary">View Code<img style="display: flex;" src="../images/github-mark.svg" height="21" width="21" /></mui-link>`
+      ? `<mui-link class="resources" href="${githubLink}" target="_blank" rel="noopener" variant="secondary">Github<img style="display: flex;" src="../images/github-mark.svg" height="21" width="21" /></mui-link>`
+      : "";
+
+    const figmaLink = this.getAttribute("figma");
+    const figmaContent = figmaLink
+      ? `<mui-link class="resources" href="${figmaLink}" target="_blank" rel="noopener" variant="secondary">Figma<img style="display: flex;" src="../images/figma-mark.svg" height="21" width="21" /></mui-link>`
+      : "";
+
+    const guidesLink = this.hasAttribute("guides");
+    const guidesContent = guidesLink
+      ? `<mui-link class="resources" href="/#/ux-guides" target="_blank" rel="noopener" variant="secondary">Guides<img style="display: flex;" src="../images/guides-mark.svg" height="21" width="21" /></mui-link>`
       : "";
 
     try {
@@ -68,12 +85,29 @@ class storyTemplate extends HTMLElement {
           <mui-v-stack space="var(--space-600)">
 
             <mui-v-stack space="var(--space-200)">
-              <mui-h-stack alignX="space-between" alignY="center">
-                <mui-heading size="1" weight="800">${this.getAttribute(
-                  "title"
-                )}</mui-heading>
-                ${githubContent}
-              </mui-h-stack >
+
+              <mui-responsive breakpoint="768">
+                <mui-v-stack slot="showBelow" space="var(--space-300)">
+                  <mui-heading size="1" weight="800">${this.getAttribute(
+                    "title"
+                  )}</mui-heading>
+                  <mui-h-stack space="var(--space-100)">
+                    ${guidesContent}
+                    ${figmaContent}
+                    ${githubContent}
+                  </mui-h-stack>
+                </mui-v-stack>
+                <mui-h-stack slot="showAbove" alignX="space-between" alignY="center">
+                  <mui-heading size="1" weight="800">${this.getAttribute(
+                    "title"
+                  )}</mui-heading>
+                  <mui-h-stack space="var(--space-100)">
+                    ${guidesContent}
+                    ${figmaContent}
+                    ${githubContent}
+                  </mui-h-stack>
+                </mui-h-stack>
+              <mui-responsive>
 
               ${this.getAttribute("description") ? description : ""}
             </mui-v-stack>

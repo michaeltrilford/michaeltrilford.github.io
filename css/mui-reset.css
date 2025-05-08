@@ -6,8 +6,6 @@
   color: var(--text-color);
   line-height: var(--text-line-height);
 
-  font-feature-settings: kern, liga;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 

@@ -104,6 +104,8 @@ class storyMessage extends HTMLElement {
       <story-template 
         title="Messages"
         description="The message component provides persistent, non-dismissible notifications that remain visible until the system determines they should be suspended. Unlike alerts, these messages are static elements integrated into the page layout, offering continuous information without disrupting the user’s workflow."
+        figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=9-1053&t=ZA9uH4LK37tSuk6r-1"
+        guides
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-message/index.js"
         accessibility-items='
             ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.;

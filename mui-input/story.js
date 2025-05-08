@@ -113,6 +113,7 @@ class storyInput extends HTMLElement {
       <story-template 
         title="Input"
         description="An input component for capturing user text, styled for consistency across your UI."
+        guides
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-input/index.js"
       >
 
