@@ -21,6 +21,7 @@ class storyIcon extends HTMLElement {
 
       <story-template 
         title="Icons"
+        figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=3-311&t=fSFYVey9aCoE5oQa-1"
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-icons"
       >
 

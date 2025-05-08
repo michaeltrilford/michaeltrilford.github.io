@@ -98,7 +98,8 @@ class storyButton extends HTMLElement {
       <style>${styles}</style>
 
       <story-template title="Buttons" 
-        description="Buttons are essential UI elements that trigger actions when clicked or tapped. They should be easily recognisable, provide clear feedback, and be accessible to all users." 
+        description="Buttons are essential UI elements that trigger actions when clicked or tapped. They should be easily recognisable, provide clear feedback, and be accessible to all users."
+        figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=3-570&t=fSFYVey9aCoE5oQa-1" 
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-button/index.js"
       >
 

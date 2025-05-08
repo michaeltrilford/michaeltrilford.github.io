@@ -20,10 +20,17 @@ class storyTemplate extends HTMLElement {
         display: flex;
         gap: var(--space-200);
         padding: var(--space-200) var(--space-300);
-        background: var(--mui-brand);
+        background: var(--mui-brand-200);
+        background: linear-gradient(0deg, var(--mui-brand-300) 0%, var(--mui-brand-200) 100%);
+        box-shadow: 0 var(--space-050) var(--space-100) 0 var(--black-opacity-10);
       }
       .resources::part(display):hover {
-        background: var(--mui-brand-400);
+        background: var(--mui-brand-300);
+        background: linear-gradient(0deg, var(--mui-brand-400) 0%, var(--mui-brand-100) 100%);
+        box-shadow: 0 var(--space-100) var(--space-100) 0 var(--black-opacity-10);
+      }
+      .resources::part(display):active {
+        box-shadow: none;
       }
 
     `;

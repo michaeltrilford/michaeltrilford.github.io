@@ -9,7 +9,12 @@ class storyCards extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-template title="Card" description="The Card provides the ability to group items or components." github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-card">
+      <story-template 
+        title="Card" 
+        description="The Card provides the ability to group items or components." 
+        figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=3-861&t=fSFYVey9aCoE5oQa-1"
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-card"
+      >
 
       <mui-v-stack space="var(--space-700)">
 

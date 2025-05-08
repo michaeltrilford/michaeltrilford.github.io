@@ -100,6 +100,7 @@ class appNavbar extends HTMLElement {
         <app-navbar-link link="#/messages" title="Messages"></app-navbar-link>
         <app-navbar-link link="#/badge" title="Badge"></app-navbar-link>
         <app-navbar-link link="#/buttons" title="Buttons"></app-navbar-link>
+        <app-navbar-link link="#/links" title="Links"></app-navbar-link>
         <app-navbar-link link="#/responsive" title="Responsive"></app-navbar-link>
         <app-navbar-link link="#/stacks" title="Stacks"></app-navbar-link>
         <app-navbar-link link="#/grid" title="Grid"></app-navbar-link>
@@ -108,7 +109,6 @@ class appNavbar extends HTMLElement {
         <app-navbar-link link="#/headings" title="Headings"></app-navbar-link>
         <app-navbar-link link="#/body" title="Body"></app-navbar-link>
         <app-navbar-link link="#/image" title="Image"></app-navbar-link>
-        <app-navbar-link link="#/links" title="Links"></app-navbar-link>
         <app-navbar-link link="#/list" title="List"></app-navbar-link>
         <app-navbar-link link="#/quote" title="Quote"></app-navbar-link>
         <app-navbar-link link="#/rule" title="Rule"></app-navbar-link>
