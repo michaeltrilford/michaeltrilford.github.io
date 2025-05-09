@@ -13,7 +13,6 @@ class storyCard extends HTMLElement {
       mui-card {
         border-radius: var(--radius-200);
         box-shadow:
-          6px 6px 16px var(--white-opacity-20),
           6px 6px 16px var(--black-opacity-10),
           -6px -6px 14px var(--black-opacity-10);
       }
@@ -23,10 +22,8 @@ class storyCard extends HTMLElement {
       }
 
       mui-card-body {
-        background: var(--grey-100);
+        background: var(--app-story-card-background);
         padding: var(--space-500);
-        border-bottom-right-radius: var(--radius-200);
-        border-bottom-left-radius: var(--radius-200);
       }
 
       .story-body {
@@ -34,7 +31,7 @@ class storyCard extends HTMLElement {
       }
 
       section {
-        background: white;
+        background: var(--app-story-card-canvas);
         position: relative;
       }
 
@@ -83,9 +80,6 @@ class storyCard extends HTMLElement {
         display: flex;
         gap: var(--space-200);
         padding: var(--space-200) var(--space-300);
-        font-weight: var(--font-weight-bold);
-        font-size: var(--font-size-50);
-        line-height: var(--line-height-50);
       }
     `;
 
@@ -98,7 +92,7 @@ class storyCard extends HTMLElement {
 
     const githubLink = this.getAttribute("github");
     const githubContent = githubLink
-      ? `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="tertiary">View Usage<img style="display: flex;" src="../images/github-mark.svg" height="21" width="21" /></mui-link>`
+      ? `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="tertiary">View Usage<github-mark></github-mark></mui-link>`
       : "";
 
     // Handle usage list

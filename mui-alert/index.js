@@ -69,19 +69,19 @@ class muiAlert extends HTMLElement {
     const styles = `
       :host {
         border-radius: var(--alert-radius);
-        padding: var(--space-400);
+        padding: var(--alert-padding);
         background: var(--white);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: start;
-        gap: var(--space-300);
+        gap: var(--message-gap-horizontal-mobile);
         box-sizing: border-box;
       }
 
      @media (min-width: 600px) {
         :host {
-          gap: var(--space-100);
+          gap: var(--message-gap-horizontal-desktop);
         }
       }
 

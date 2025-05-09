@@ -39,10 +39,11 @@ class muiTokenLocalSlat extends HTMLElement {
       }
 
       code {
-        background: var(--mui-brand);
-        box-shadow: 0 1px 0 0 var(--mui-brand);
+        background: var(--app-story-code-bg);
         border-radius: var(--radius-100);
-        padding: 0 var(--space-200);
+        color: var(--app-story-code-text);
+        padding: var(--space-050) var(--space-100);
+        font-size: var(--font-size-15);
       }
 
       .swatch {
@@ -59,14 +60,14 @@ class muiTokenLocalSlat extends HTMLElement {
       .spacer {
         height: 16px;
         width: 100%;
-        background: var(--mui-brand);
+        background: var(--mui-brand-300);
         border-radius: var(--radius-200);
       }
 
       .radius-preview {
         width: var(--space-700);
         height: var(--space-700);
-        background: var(--mui-brand);
+        background: var(--mui-brand-300);
       }
 
       .border-preview,

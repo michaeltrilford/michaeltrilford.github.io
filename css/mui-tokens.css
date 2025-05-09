@@ -1,9 +1,9 @@
-:root {
+:where(html) {
   /* Base Tokens
 =======================================================================================*/
 
   /* Raw values for core attributes like color, typography, spacing, and size. */
-  /* Organized by category: typography, colors, spacing, radius and stroke. */
+  /* Organised by category: typography, colors, spacing, radius and stroke. */
 
   /* Typography on the Web • Orchestrating Vertical Rhythm
   *
@@ -204,15 +204,6 @@
   /* Token Key: [identifier (Optional)]-[variant]-[property-name]-[state] */
 
   /* Feedback Base • Badges, Borders, Focus */
-  --feedback-focus-base: var(--blue-500);
-  --feedback-plain-base: var(--black-opacity-50);
-
-  --feedback-neutral-base: var(--grey-600);
-  --feedback-positive-base: var(--green-600);
-  --feedback-info-base: var(--blue-600);
-  --feedback-warning-base: var(--orange-600);
-  --feedback-attention-base: var(--red-600);
-
   --feedback-focus-stroke-base: var(--feedback-focus-base);
   --feedback-plain-stroke-base: var(--feedback-plain-base);
   --feedback-neutral-stroke-base: var(--feedback-neutral-base);
@@ -235,7 +226,29 @@
   --feedback-attention-border: var(--stroke-size-200) var(--stroke-style-solid)
     var(--feedback-attention-stroke-base);
 
-  --feedback-plain-background: var(--white-opacity-0);
+  /* Call to Actions • Buttons and Link Buttons */
+
+  /* Space */
+  --interactive-padding: var(--space-200) var(--space-500);
+  --interactive-icon-only-padding: var(--space-000);
+  --interactive-radius: var(--radius-100);
+  --interactive-font-size: var(--text-font-size);
+  --interactive-line-height: var(--text-line-height);
+  --interactive-font-weight: var(--font-weight-medium);
+}
+
+html[data-theme="light"] {
+  /* Feedback Base • Badges, Borders, Focus */
+  --feedback-focus-base: var(--blue-500);
+  --feedback-plain-base: var(--black-opacity-50);
+  --feedback-neutral-base: var(--grey-600);
+  --feedback-positive-base: var(--green-600);
+  --feedback-info-base: var(--blue-600);
+  --feedback-warning-base: var(--orange-600);
+  --feedback-attention-base: var(--red-600);
+
+  /* Feedback • Alerts, Messages, Notifciations */
+  --feedback-plain-background: var(--white-opacity-20);
   --feedback-neutral-background: var(--grey-100);
   --feedback-positive-background: var(--green-100);
   --feedback-info-background: var(--blue-100);
@@ -256,7 +269,7 @@
   --feedback-warning-text: var(--orange-900);
   --feedback-attention-text: var(--red-900);
 
-  /* Call to Actions • Buttons and Link Buttons */
+  /* Interactive */
   --interactive-primary-stroke: var(--stroke-size-200) var(--stroke-style-solid)
     var(--black-opacity-0);
   --interactive-primary-background: var(--grey-900);
@@ -270,7 +283,7 @@
 
   --interactive-secondary-stroke: var(--stroke-size-200)
     var(--stroke-style-solid) var(--grey-800);
-  --interactive-secondary-background: var(--white);
+  --interactive-secondary-background: var(--white-opacity-0);
   --interactive-secondary-background-hover: var(--grey-100);
   --interactive-secondary-background-focus: var(--grey-100);
   --interactive-secondary-background-disabled: var(--grey-100);
@@ -300,18 +313,94 @@
   --interactive-attention-text-color-hover: var(--white);
   --interactive-attention-text-color-focus: var(--white);
   --interactive-attention-text-color-disabled: var(--red-300);
+}
 
-  --interactive-radius: var(--radius-100);
-  --interactive-font-size: var(--text-font-size);
-  --interactive-line-height: var(--text-line-height);
-  --interactive-font-weight: var(--font-weight-medium);
+html[data-theme="dark"] {
+  /* Feedback Base – Badges, Borders, Focus */
+  --feedback-focus-base: var(--blue-300);
+  --feedback-plain-base: var(--white-opacity-50);
+  --feedback-neutral-base: var(--grey-400);
+  --feedback-positive-base: var(--green-400);
+  --feedback-info-base: var(--blue-400);
+  --feedback-warning-base: var(--orange-400);
+  --feedback-attention-base: var(--red-400);
 
-  /* Contextual tokens - Applies a primitive to a specific use
+  /* Feedback – Alerts, Messages, Notifications */
+  --feedback-plain-background: var(--white-opacity-10);
+  --feedback-neutral-background: var(--grey-800);
+  --feedback-positive-background: var(--green-800);
+  --feedback-info-background: var(--blue-800);
+  --feedback-warning-background: var(--orange-800);
+  --feedback-attention-background: var(--red-800);
+
+  --feedback-plain-icon: var(--white);
+  --feedback-neutral-icon: var(--grey-300);
+  --feedback-positive-icon: var(--green-300);
+  --feedback-info-icon: var(--blue-300);
+  --feedback-warning-icon: var(--orange-300);
+  --feedback-attention-icon: var(--red-300);
+
+  --feedback-plain-text: var(--white);
+  --feedback-neutral-text: var(--grey-100);
+  --feedback-positive-text: var(--green-100);
+  --feedback-info-text: var(--blue-100);
+  --feedback-warning-text: var(--orange-100);
+  --feedback-attention-text: var(--red-100);
+
+  /* Interactive */
+  --interactive-primary-stroke: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--black-opacity-0);
+  --interactive-primary-background: var(--grey-200);
+  --interactive-primary-background-hover: var(--grey-100);
+  --interactive-primary-background-focus: var(--grey-100);
+  --interactive-primary-background-disabled: var(--grey-800);
+  --interactive-primary-text-color: var(--grey-900);
+  --interactive-primary-text-color-hover: var(--grey-900);
+  --interactive-primary-text-color-focus: var(--grey-900);
+  --interactive-primary-text-color-disabled: var(--grey-400);
+
+  --interactive-secondary-stroke: var(--stroke-size-200)
+    var(--stroke-style-solid) var(--grey-200);
+  --interactive-secondary-background: var(--black-opacity-0);
+  --interactive-secondary-background-hover: var(--grey-800);
+  --interactive-secondary-background-focus: var(--grey-800);
+  --interactive-secondary-background-disabled: var(--grey-900);
+  --interactive-secondary-text-color: var(--grey-100);
+  --interactive-secondary-text-color-hover: var(--grey-50);
+  --interactive-secondary-text-color-focus: var(--grey-50);
+  --interactive-secondary-text-color-disabled: var(--grey-600);
+
+  --interactive-tertiary-stroke: var(--stroke-size-200)
+    var(--stroke-style-solid) var(--black-opacity-0);
+  --interactive-tertiary-background: transparent;
+  --interactive-tertiary-background-hover: var(--white-opacity-10);
+  --interactive-tertiary-background-focus: var(--white-opacity-10);
+  --interactive-tertiary-background-disabled: var(--grey-900);
+  --interactive-tertiary-text-color: var(--grey-100);
+  --interactive-tertiary-text-color-hover: var(--grey-50);
+  --interactive-tertiary-text-color-focus: var(--grey-50);
+  --interactive-tertiary-text-color-disabled: var(--grey-600);
+
+  --interactive-attention-stroke: var(--stroke-size-200)
+    var(--stroke-style-solid) var(--black-opacity-0);
+  --interactive-attention-background: var(--red-600);
+  --interactive-attention-background-hover: var(--red-700);
+  --interactive-attention-background-focus: var(--red-700);
+  --interactive-attention-background-disabled: var(--red-900);
+  --interactive-attention-text-color: var(--white);
+  --interactive-attention-text-color-hover: var(--white);
+  --interactive-attention-text-color-focus: var(--white);
+  --interactive-attention-text-color-disabled: var(--red-300);
+}
+
+/* Contextual tokens - Applies a primitive to a specific use
   =======================================================================================*/
 
-  /* TOKEN STRUCTURE */
-  /* Token Key: [context]-[property-name]-[state (Optional)] */
+/* TOKEN STRUCTURE */
+/* Token Key: [context]-[property-name]-[state (Optional)] */
 
+/* BASE */
+:where(html) {
   /* Text */
   --text-color: var(--grey-900);
   --text-line-height-xs: var(--line-height-25);
@@ -332,7 +421,6 @@
   --font-weight-bold: var(--font-weight-700);
 
   /* Border */
-  --border-color: var(--grey-200);
   --border-thin: var(--stroke-size-100) var(--stroke-style-solid)
     var(--border-color);
   --border-thick: var(--stroke-size-200) var(--stroke-style-solid)
@@ -346,30 +434,39 @@
     var(--outline-color);
   --outline-thick: var(--stroke-size-500) var(--stroke-style-outset)
     var(--outline-color);
+}
 
-  /* Component tokens - Tied to specific UI components
+html[data-theme="light"] {
+  /* Text */
+  --text-color: var(--grey-900);
+  /* Border */
+  --border-color: var(--grey-200);
+}
+
+html[data-theme="dark"] {
+  /* Text */
+  --text-color: var(--grey-200);
+  /* Border */
+  --border-color: var(--grey-600);
+}
+
+/* Component tokens - Tied to specific UI components
   =======================================================================================*/
 
-  /* TOKEN STRUCTURE */
-  /* Token Example: --button-background-primary */
-  /* Token Key: [component]-[property-name]-[variant]-[state] */
+/* TOKEN STRUCTURE */
+/* Token Example: --button-background-primary */
+/* Token Key: [component]-[property-name]-[variant]-[state] */
 
-  /* USING THE TOKEN */
-  /* Using the property name helps indicate what CSS property the token is mapped to. */
-  /* CSS Usage Example: background: var(--button-background-primary); */
+/* USING THE TOKEN */
+/* Using the property name helps indicate what CSS property the token is mapped to. */
+/* CSS Usage Example: background: var(--button-background-primary); */
 
-  /* Icon */
-  /* ///////////////////////////////////////////////////////////////////// */
-  --icon-color-default: var(--black);
-  --icon-color-inverted: var(--white);
-
+/* BASE */
+:where(html) {
   /* Card */
-  /* ///////////////////////////////////////////////////////////////////// */
   --card-radius: var(--radius-150);
-  --card-background: var(--white);
 
   /* Badge */
-  /* ///////////////////////////////////////////////////////////////////// */
   --badge-radius: var(--radius-300);
   --badge-font-weight: var(--font-weight-bold);
   --badge-background-neutral: var(--feedback-neutral-base);
@@ -378,8 +475,6 @@
   --badge-background-attention: var(--feedback-attention-base);
 
   /* Heading */
-  /* ///////////////////////////////////////////////////////////////////// */
-  --heading-text-color: var(--grey-1000);
   --heading-font-weight: var(--font-weight-bold);
 
   --heading-font-size-100: var(--font-size-600);
@@ -396,47 +491,128 @@
   --heading-line-height-500: var(--line-height-200);
   --heading-line-height-600: var(--line-height-100);
 
-  /* Body */
-  /* ///////////////////////////////////////////////////////////////////// */
-  --body-text-color: var(--text-color);
-
-  /* Label */
-  /* ///////////////////////////////////////////////////////////////////// */
-  --label-text-color: var(--text-color);
-
-  /* Code */
-  /* ///////////////////////////////////////////////////////////////////// */
-  --code-text-color: var(--white);
-  --code-background: var(--grey-900);
-
-  /* List */
-  /* ///////////////////////////////////////////////////////////////////// */
-  --list-text-color: var(--text-color);
-
-  /* Table */
-  /* ///////////////////////////////////////////////////////////////////// */
-  --table-background: var(--white);
-
   /* Alert */
-  /* ///////////////////////////////////////////////////////////////////// */
   --alert-radius: var(--radius-100);
 
   /* Messages */
-  /* ///////////////////////////////////////////////////////////////////// */
   --message-radius: var(--radius-150);
 
-  /* Button */
-  /* ///////////////////////////////////////////////////////////////////// */
-  /* Refer to interactive semantic tokens */
+  /* Notification */
+  --notification-radius: var(--radius-200);
+}
+
+/* COMFORTABLE Density - DEFAULT
+  =========================================================================*/
+
+/* Required on the HTML Tag --> [data-density="comfortable"] */
+/* OR */
+/* Create a Toggle Switch to control density */
+
+html[data-density="comfortable"] {
+  /* Alert */
+  --alert-padding: var(--space-400);
+  --message-gap-horizontal-mobile: var(--space-300);
+  --message-gap-horizontal-desktop: var(--space-100);
+
+  /* Messages */
+  --message-padding: var(--space-400);
+  --message-gap-horizontal: var(--space-300);
+  --message-gap-vertical: var(--space-100);
+
+  /* Notification */
+  --notification-padding: var(--space-100) var(--space-100) var(--space-100)
+    var(--space-400);
+  --notification-gap-horizontal: var(--space-200);
+}
+
+/* LIGHT THEME - DEFAULT
+  =========================================================================*/
+
+/* Required on the HTML Tag --> [data-theme="light"] */
+/* OR */
+/* Create a Toggle Switch to control theme */
+
+html[data-theme="light"] {
+  /* Icon */
+  --icon-color-default: var(--black);
+  --icon-color-inverted: var(--white);
+
+  /* Badge */
+  --badge-text-color: var(--grey-100);
+
+  /* Heading */
+  --heading-text-color: var(--grey-1000);
+  --border-color: var(--grey-200);
 
   /* Link */
-  /* ///////////////////////////////////////////////////////////////////// */
-
   --link-text-color-default: var(--grey-900);
   --link-text-color-default-hover: var(--grey-1000);
   --link-text-color-default-focus: var(--grey-1000);
   --link-text-color-default-disabled: var(--grey-800);
 
+  /* Button */
+  /* Refer to interactive semantic tokens */
+
   /* Button Styles */
   /* Refer to interactive semantic tokens */
+
+  /* Card */
+  --card-background: var(--white);
+
+  /* Code */
+  --code-text-color: var(--white);
+  --code-background: var(--grey-900);
+
+  /* Table */
+  --table-background: var(--white);
+  --table-border: var(--border-color);
+
+  /* Input */
+  --input-background: var(--white);
+}
+
+/* DARK THEME
+  =========================================================================*/
+
+/* Required on the HTML Tag --> [data-theme="dark"] */
+/* OR */
+/* Create a Toggle Switch to control theme */
+
+html[data-theme="dark"] {
+  /* Icon */
+  --icon-color-default: var(--white);
+  --icon-color-inverted: var(--black);
+
+  /* Badge */
+  --badge-text-color: var(--grey-900);
+
+  /* Heading */
+  --heading-text-color: var(--grey-100);
+  --border-color: var(--grey-600);
+
+  /* Link */
+  --link-text-color-default: var(--grey-200);
+  --link-text-color-default-hover: var(--grey-100);
+  --link-text-color-default-focus: var(--grey-100);
+  --link-text-color-default-disabled: var(--grey-600);
+
+  /* Button */
+  /* Refer to interactive semantic tokens */
+
+  /* Button Styles */
+  /* Refer to interactive semantic tokens */
+
+  /* Card */
+  --card-background: var(--grey-1000);
+
+  /* Code */
+  --code-text-color: var(--white);
+  --code-background: var(--grey-800);
+
+  /* Table */
+  --table-background: var(--grey-800);
+  --table-border: var(--border-color);
+
+  /* Input */
+  --input-background: var(--grey-800);
 }

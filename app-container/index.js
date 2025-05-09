@@ -50,6 +50,7 @@ export class AppContainer extends HTMLElement {
       "/link": "story-link",
       "/alerts": "story-alert",
       "/messages": "story-message",
+      "/notification": "story-notification",
       "/badge": "story-badge",
       "/buttons": "story-button",
       "/responsive": "story-responsive",

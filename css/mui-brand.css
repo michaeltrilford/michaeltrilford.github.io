@@ -1,0 +1,356 @@
+/* THIRD-PARTY BRAND */
+html[data-brand="jal"] {
+  --font-family: Tahoma, sans-serif;
+
+  /* Neutral Greys */
+  --jal-grey-50: #fafafa;
+  --jal-grey-100: #f4f4f4;
+  --jal-grey-200: #e0e0e0;
+  --jal-grey-300: #c2c2c2;
+  --jal-grey-400: #a3a3a3;
+  --jal-grey-500: #8a8a8a;
+  --jal-grey-600: #707070;
+  --jal-grey-700: #494949;
+  --jal-grey-800: #3a3a3a;
+  --jal-grey-900: #1a1a1a;
+  --jal-grey-1000: #0b0b0b;
+
+  /* Brand Red Scale */
+  --jal-red-50: #fcebec;
+  --jal-red-100: #f3d6db;
+  --jal-red-200: #ffb2b9;
+  --jal-red-300: #d34856;
+  --jal-red-400: #c32c3b;
+  --jal-red-500: #b11b24;
+  --jal-red-600: #9e1b32;
+  --jal-red-700: #801528;
+  --jal-red-800: #6a0c21;
+  --jal-red-900: #4a0b11;
+
+  /* Brand Blue Scale */
+  --jal-blue-50: #e5f3fc;
+  --jal-blue-100: #cfe9f9;
+  --jal-blue-200: #a2d4f2;
+  --jal-blue-300: #74b8ec;
+  --jal-blue-400: #4184e2;
+  --jal-blue-500: #2567b7;
+  --jal-blue-600: #1e549c;
+  --jal-blue-700: #163f7d;
+  --jal-blue-800: #0e2a5f;
+  --jal-blue-900: #001a44;
+
+  /* Brand Green Scale */
+  --jal-green-50: #e8f5e9;
+  --jal-green-100: #c8e6c9;
+  --jal-green-200: #a5d6a7;
+  --jal-green-300: #81c784;
+  --jal-green-400: #66bb6a;
+  --jal-green-500: #4caf50;
+  --jal-green-600: #43a047;
+  --jal-green-700: #388e3c;
+  --jal-green-800: #2c6e2f;
+  --jal-green-900: #1b4c1d;
+
+  /* Brand Yellow Scale */
+  --jal-yellow-50: #fff9e5;
+  --jal-yellow-100: #fff2cc;
+  --jal-yellow-200: #ffeb99;
+  --jal-yellow-300: #ffe066;
+  --jal-yellow-400: #ffd32b;
+  --jal-yellow-500: #ffc107;
+  --jal-yellow-600: #ffb300;
+  --jal-yellow-700: #ffa000;
+  --jal-yellow-800: #ff8f00;
+  --jal-yellow-900: #ff6f00;
+
+  /* White & Black */
+  --jal-white: #ffffff;
+  --jal-black: #000000;
+
+  /* Call to Actions • Buttons and Link Buttons */
+  --interactive-radius: var(--radius-400);
+  --interactive-font-weight: var(--font-weight-regular);
+  --interactive-primary-stroke: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--jal-action-primary-stroke);
+  --interactive-primary-background: var(--jal-action-primary-bg);
+  --interactive-primary-background-hover: var(--jal-action-primary-bg-hover);
+  --interactive-primary-background-focus: var(--jal-action-primary-bg-focus);
+  --interactive-primary-background-disabled: var(
+    --jal-action-primary-bg-disabled
+  );
+  --interactive-primary-text-color: var(--jal-action-primary-text);
+  --interactive-primary-text-color-hover: var(--jal-action-primary-text);
+  --interactive-primary-text-color-focus: var(--jal-action-primary-text);
+  --interactive-primary-text-color-disabled: var(--jal-action-primary-text);
+
+  --interactive-secondary-stroke: var(--stroke-size-200)
+    var(--stroke-style-solid) var(--jal-action-secondary-stroke);
+  --interactive-secondary-background: var(--jal-action-secondary-bg);
+  --interactive-secondary-background-hover: var(
+    --jal-action-secondary-bg-hover
+  );
+  --interactive-secondary-background-focus: var(
+    --jal-action-secondary-bg-focus
+  );
+  --interactive-secondary-background-disabled: var(
+    --jal-action-secondary-bg-disabled
+  );
+  --interactive-secondary-text-color: var(--jal-action-secondary-text);
+  --interactive-secondary-text-color-hover: var(--jal-action-secondary-text);
+  --interactive-secondary-text-color-focus: var(--jal-action-secondary-text);
+  --interactive-secondary-text-color-disabled: var(--jal-action-secondary-text);
+  --interactive-tertiary-stroke: var(--jal-action-tertiary-stroke)
+    var(--stroke-style-solid) var(--jal-action-tertiary-stroke);
+  --interactive-tertiary-background: var(--jal-action-tertiary-bg);
+  --interactive-tertiary-background-hover: var(--jal-action-tertiary-bg-hover);
+  --interactive-tertiary-background-focus: var(--jal-action-tertiary-bg-focus);
+  --interactive-tertiary-background-disabled: var(
+    --jal-action-tertiary-bg-disabled
+  );
+  --interactive-tertiary-text-color: var(--jal-action-tertiary-text);
+  --interactive-tertiary-text-color-hover: var(--jal-action-tertiary-text);
+  --interactive-tertiary-text-color-focus: var(--jal-action-tertiary-text);
+  --interactive-tertiary-text-color-disabled: var(--jal-action-tertiary-text);
+  --interactive-attention-stroke: var(--jal-action-important-stroke)
+    var(--stroke-style-solid) var(--jal-action-important-stroke);
+  --interactive-important-background: var(--jal-action-important-bg);
+  --interactive-important-background-hover: var(
+    --jal-action-important-bg-hover
+  );
+  --interactive-attention-background-focus: var(
+    --jal-action-important-bg-focus
+  );
+  --interactive-attention-background-disabled: var(
+    --jal-action-important-bg-disabled
+  );
+  --interactive-attention-text-color: var(--jal-action-important-text);
+  --interactive-attention-text-color-hover: var(--jal-action-important-text);
+  --interactive-attention-text-color-focus: var(--jal-action-important-text);
+  --interactive-attention-text-color-disabled: var(--jal-action-important-text);
+
+  /* Feedback • Alerts and Messages */
+  --feedback-focus-base: var(--jal-focus-outline);
+  --feedback-plain-base: var(--jal-alert-plain-border);
+  --feedback-neutral-base: var(--jal-alert-neutral-border);
+  --feedback-positive-base: var(--jal-alert-success-border);
+  --feedback-info-base: var(--jal-alert-info-border);
+  --feedback-warning-base: var(--jal-alert-warning-border);
+  --feedback-attention-base: var(--jal-alert-error-border);
+
+  --feedback-plain-background: var(--jal-alert-plain-bg);
+  --feedback-neutral-background: var(--jal-alert-neutral-bg);
+  --feedback-positive-background: var(--jal-alert-success-bg);
+  --feedback-info-background: var(--jal-alert-info-bg);
+  --feedback-warning-background: var(--jal-alert-warning-bg);
+  --feedback-attention-background: var(--jal-alert-error-bg);
+
+  --feedback-plain-icon: var(--jal-alert-plain-icon);
+  --feedback-neutral-icon: var(--jal-alert-neutral-icon);
+  --feedback-positive-icon: var(--jal-alert-success-icon);
+  --feedback-info-icon: var(--jal-alert-info-icon);
+  --feedback-warning-icon: var(--jal-alert-warning-icon);
+  --feedback-attention-icon: var(--jal-alert-error-icon);
+
+  --feedback-plain-text: var(--jal-alert-plain-text);
+  --feedback-neutral-text: var(--jal-alert-neutral-text);
+  --feedback-positive-text: var(--jal-alert-success-text);
+  --feedback-info-text: var(--jal-alert-info-text);
+  --feedback-warning-text: var(--jal-alert-warning-text);
+  --feedback-attention-text: var(--jal-alert-error-text);
+}
+
+/* LIGHT */
+html[data-brand="jal"][data-theme="light"] {
+  --app-base: var(--jal-grey-200);
+  --app-meta-theme-color: var(--app-base);
+  --app-skeleton: var(--app-base);
+  --app-background: var(--app-base);
+  --nav-accent: var(--jal-red-600);
+  --nav-background: var(--jal-white);
+  --nav-link-color: var(--jal-red-600);
+  --nav-group-color: var(--black-opacity-50);
+  --nav-background-hover: var(--jal-grey-100);
+  --nav-background-focus: var(--jal-grey-100);
+  --nav-home-shadow: var(--black-opacity-30);
+  --app-story-code-bg: var(--jal-red-300);
+  --app-story-code-text: var(--jal-white);
+
+  /* MUI COMPONENTS */
+
+  --badge-text-color: var(--jal-grey-900);
+  --text-color: var(--jal-grey-900);
+  --heading-text-color: var(--jal-red-500);
+
+  /* Focus Ring */
+  --jal-focus-outline: var(--jal-red-300);
+
+  /* Alert */
+  --jal-alert-plain-bg: var(--white-opacity-10);
+  --jal-alert-plain-text: var(--jal-grey-700);
+  --jal-alert-plain-border: var(--black-opacity-20);
+  --jal-alert-plain-icon: var(--jal-grey-700);
+  --jal-alert-neutral-bg: var(--jal-grey-50);
+  --jal-alert-neutral-text: var(--jal-grey-700);
+  --jal-alert-neutral-border: var(--jal-grey-100);
+  --jal-alert-neutral-icon: var(--jal-grey-500);
+  --jal-alert-info-bg: var(--jal-blue-50);
+  --jal-alert-info-text: var(--jal-blue-700);
+  --jal-alert-info-border: var(--jal-blue-100);
+  --jal-alert-info-icon: var(--jal-blue-500);
+  --jal-alert-success-bg: var(--jal-green-50);
+  --jal-alert-success-text: var(--jal-green-700);
+  --jal-alert-success-border: var(--jal-green-100);
+  --jal-alert-success-icon: var(--jal-green-500);
+  --jal-alert-warning-bg: var(--jal-yellow-50);
+  --jal-alert-warning-text: var(--jal-yellow-700);
+  --jal-alert-warning-border: var(--jal-yellow-100);
+  --jal-alert-warning-icon: var(--jal-yellow-500);
+  --jal-alert-error-bg: var(--jal-error-50);
+  --jal-alert-error-text: var(--jal-error-700);
+  --jal-alert-error-border: var(--jal-error-100);
+  --jal-alert-error-icon: var(--jal-error-500);
+
+  /* Icon */
+  --icon-color-default: var(--jal-red-300);
+  --icon-color-inverted: var(--jal-white);
+
+  /* Action */
+  --jal-action-primary-stroke: transparent;
+  --jal-action-primary-text: var(--jal-white);
+  --jal-action-primary-bg: var(--jal-red-500);
+  --jal-action-primary-bg-hover: var(--jal-red-600);
+  --jal-action-primary-bg-focus: var(--jal-red-600);
+  --jal-action-primary-bg-disabled: var(--jal-red-800);
+  --jal-action-secondary-stroke: var(--jal-red-300);
+  --jal-action-secondary-text: var(--jal-red-300);
+  --jal-action-secondary-bg: transparent;
+  --jal-action-secondary-bg-hover: var(--jal-grey-100);
+  --jal-action-secondary-bg-focus: var(--jal-grey-100);
+  --jal-action-secondary-bg-disabled: var(--jal-grey-600);
+  --jal-action-tertiary-stroke: transparent;
+  --jal-action-tertiary-text: var(--jal-red-300);
+  --jal-action-tertiary-bg: transparent;
+  --jal-action-tertiary-bg-hover: var(--jal-grey-100);
+  --jal-action-tertiary-bg-focus: var(--jal-grey-100);
+  --jal-action-tertiary-bg-disabled: var(--jal-grey-600);
+  --jal-action-important-stroke: var(--jal-error-400);
+  --jal-action-important-text: var(--jal-white);
+  --jal-action-important-bg: var(--jal-error-500);
+  --jal-action-important-bg-hover: var(--jal-error-600);
+  --jal-action-important-bg-focus: var(--jal-error-600);
+  --jal-action-important-bg-disabled: var(--jal-error-700);
+
+  /* Border */
+  --border-color: var(--jal-grey-200);
+
+  /* Outline */
+  --outline-color: var(--feedback-focus-stroke-base);
+
+  /* Code */
+  --code-background: var(--jal-red-500);
+
+  /* Table */
+  --table-background: var(--jal-white);
+}
+
+/* DARK */
+html[data-brand="jal"][data-theme="dark"] {
+  /* App Adjustment */
+  --app-base: var(--jal-grey-900);
+  --app-meta-theme-color: var(--app-base);
+  --app-skeleton: var(--app-base);
+  --app-background: var(--app-base);
+  --nav-accent: var(--jal-red-200);
+  --nav-background: var(--jal-black);
+  --nav-link-color: var(--jal-red-200);
+  --nav-group-color: var(--white-opacity-80);
+  --nav-background-hover: var(--jal-grey-1000);
+  --nav-background-focus: var(--jal-grey-1000);
+  --nav-home-shadow: var(--jal-black);
+  --app-story-code-bg: var(--jal-red-300);
+  --app-story-code-text: var(--jal-white);
+  --app-story-card-background: var(--jal-black);
+  --app-story-card-canvas: var(--jal-grey-900);
+
+  /* MUI COMPONENTS */
+
+  --badge-text-color: var(--jal-white);
+  --text-color: var(--jal-grey-200);
+  --heading-text-color: var(--jal-red-100);
+
+  /* Focus Ring */
+  --jal-focus-outline: var(--jal-red-100);
+
+  /* Alert */
+  --jal-alert-plain-bg: var(--white-opacity-10);
+  --jal-alert-plain-text: var(--jal-grey-100);
+  --jal-alert-plain-border: var(--white-opacity-20);
+  --jal-alert-plain-icon: var(--jal-grey-300);
+  --jal-alert-neutral-bg: var(--jal-grey-900);
+  --jal-alert-neutral-text: var(--jal-grey-100);
+  --jal-alert-neutral-border: var(--jal-grey-800);
+  --jal-alert-neutral-icon: var(--jal-grey-300);
+  --jal-alert-info-bg: var(--jal-blue-900);
+  --jal-alert-info-text: var(--jal-blue-100);
+  --jal-alert-info-border: var(--jal-blue-800);
+  --jal-alert-info-icon: var(--jal-blue-300);
+  --jal-alert-success-bg: var(--jal-green-900);
+  --jal-alert-success-text: var(--jal-green-100);
+  --jal-alert-success-border: var(--jal-green-800);
+  --jal-alert-success-icon: var(--jal-green-300);
+  --jal-alert-warning-bg: var(--jal-yellow-900);
+  --jal-alert-warning-text: var(--jal-yellow-100);
+  --jal-alert-warning-border: var(--jal-yellow-800);
+  --jal-alert-warning-icon: var(--jal-yellow-300);
+  --jal-alert-error-bg: var(--jal-red-900);
+  --jal-alert-error-text: var(--jal-red-100);
+  --jal-alert-error-border: var(--jal-red-800);
+  --jal-alert-error-icon: var(--jal-red-300);
+
+  /* Icon */
+  --icon-color-default: var(--jal-red-200);
+  --icon-color-inverted: var(--jal-white);
+
+  /* Action */
+  --jal-action-primary-stroke: transparent;
+  --jal-action-primary-text: var(--jal-white);
+  --jal-action-primary-bg: var(--jal-red-400);
+  --jal-action-primary-bg-hover: var(--jal-red-600);
+  --jal-action-primary-bg-focus: var(--jal-red-600);
+  --jal-action-primary-bg-disabled: var(--jal-red-100);
+  --jal-action-secondary-stroke: var(--jal-red-200);
+  --jal-action-secondary-text: var(--jal-red-200);
+  --jal-action-secondary-bg: transparent;
+  --jal-action-secondary-bg-hover: var(--jal-black);
+  --jal-action-secondary-bg-focus: var(--jal-black);
+  --jal-action-secondary-bg-disabled: var(--jal-grey-200);
+  --jal-action-tertiary-stroke: transparent;
+  --jal-action-tertiary-text: var(--jal-red-200);
+  --jal-action-tertiary-bg: transparent;
+  --jal-action-tertiary-bg-hover: var(--jal-black);
+  --jal-action-tertiary-bg-focus: var(--jal-black);
+  --jal-action-tertiary-bg-disabled: var(--jal-grey-300);
+  --jal-action-important-stroke: var(--jal-error-500);
+  --jal-action-important-text: var(--jal-white);
+  --jal-action-important-bg: var(--jal-error-500);
+  --jal-action-important-bg-hover: var(--jal-error-700);
+  --jal-action-important-bg-focus: var(--jal-error-700);
+  --jal-action-important-bg-disabled: var(--jal-error-100);
+
+  /* Border */
+  --border-color: var(--jal-grey-700);
+
+  /* Outline */
+  --outline-color: var(--feedback-focus-stroke-base);
+
+  /* Card */
+  --card-radius: var(--radius-150);
+  --card-background: var(--jal-black);
+
+  /* Code */
+  --code-background: var(--jal-grey-1000);
+  --code-text-color: var(--jal-red-200);
+
+  /* Table */
+  --table-background: var(--jal-grey-900);
+}

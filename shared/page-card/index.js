@@ -13,7 +13,6 @@ class pageCard extends HTMLElement {
       mui-card {
         border-radius: var(--radius-200);
         box-shadow:
-          6px 6px 16px var(--white-opacity-20),
           6px 6px 16px var(--black-opacity-10),
           -6px -6px 14px var(--black-opacity-10);
       }
@@ -23,7 +22,7 @@ class pageCard extends HTMLElement {
       }
 
       mui-card-body {
-        background: var(--grey-100);
+        background: var(--app-story-card-background);
         padding: var(--space-500);
         padding-bottom: var(--space-600);
         border-bottom-right-radius: var(--radius-200);

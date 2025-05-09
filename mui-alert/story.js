@@ -98,7 +98,7 @@ class storyAlert extends HTMLElement {
 
         <mui-v-stack space="var(--space-700)">
 
-          <story-card title="Prop Types">
+          <story-card title="Prop Types" nofooter>
             <mui-responsive breakpoint="768" slot="body">
               <story-type-table slot="showAbove">
                 ${rows}

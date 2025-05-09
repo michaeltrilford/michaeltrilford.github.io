@@ -14,7 +14,7 @@ class muiRowGroup extends HTMLElement {
       }
       :host([heading]) {
         display: block;
-        border-bottom: 1px solid var(--grey-200);
+        border-bottom: 1px solid var(--table-border);
       }
     </style>
     <slot></slot>

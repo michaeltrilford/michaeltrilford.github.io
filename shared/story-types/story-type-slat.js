@@ -18,7 +18,7 @@ class storyTypeSlat extends HTMLElement {
       }
 
       code {
-        background: var(--mui-brand);
+        background: var(--mui-brand-300);
         box-shadow: 0 1px 0 0 var(--grey-100);
         border-radius: var(--radius-100);
         padding: 0 var(--space-200);

@@ -49,8 +49,15 @@ class appNavbarSkip extends HTMLElement {
         border-radius: var(--radius-000);
       }
 
-
-
+      mui-button::part(background) {
+        background: var(--nav-background);
+      }
+      mui-button::part(color) {
+        color: var(--nav-link-color);
+      }
+      mui-button::part(border) {
+        border: none;
+      }
 
     `;
 

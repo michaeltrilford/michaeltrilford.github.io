@@ -39,13 +39,6 @@ class storyMessage extends HTMLElement {
         description: "Describe the intent or mood of a message",
       },
       {
-        name: "usage",
-        type: "string",
-        options: "page, notification",
-        default: "page",
-        description: "Choose a page or notification message",
-      },
-      {
         name: "style",
         type: "string",
         options: "Valid CSS",
@@ -121,7 +114,7 @@ class storyMessage extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
       
-        <story-card title="Prop Types">
+        <story-card title="Prop Types" nofooter>
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rows}

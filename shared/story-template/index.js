@@ -20,17 +20,6 @@ class storyTemplate extends HTMLElement {
         display: flex;
         gap: var(--space-200);
         padding: var(--space-200) var(--space-300);
-        background: var(--mui-brand-200);
-        background: linear-gradient(0deg, var(--mui-brand-300) 0%, var(--mui-brand-200) 100%);
-        box-shadow: 0 var(--space-050) var(--space-100) 0 var(--black-opacity-10);
-      }
-      .resources::part(display):hover {
-        background: var(--mui-brand-300);
-        background: linear-gradient(0deg, var(--mui-brand-400) 0%, var(--mui-brand-100) 100%);
-        box-shadow: 0 var(--space-100) var(--space-100) 0 var(--black-opacity-10);
-      }
-      .resources::part(display):active {
-        box-shadow: none;
       }
 
     `;
@@ -43,17 +32,17 @@ class storyTemplate extends HTMLElement {
 
     const githubLink = this.getAttribute("github");
     const githubContent = githubLink
-      ? `<mui-link class="resources" href="${githubLink}" target="_blank" rel="noopener" variant="secondary">Github<img style="display: flex;" src="../images/github-mark.svg" height="21" width="21" /></mui-link>`
+      ? `<mui-link class="resources" href="${githubLink}" target="_blank" rel="noopener" variant="secondary">Github<github-mark></github-mark></mui-link>`
       : "";
 
     const figmaLink = this.getAttribute("figma");
     const figmaContent = figmaLink
-      ? `<mui-link class="resources" href="${figmaLink}" target="_blank" rel="noopener" variant="secondary">Figma<img style="display: flex;" src="../images/figma-mark.svg" height="21" width="21" /></mui-link>`
+      ? `<mui-link class="resources" href="${figmaLink}" target="_blank" rel="noopener" variant="secondary">Figma<figma-mark></figma-mark></mui-link>`
       : "";
 
     const guidesLink = this.hasAttribute("guides");
     const guidesContent = guidesLink
-      ? `<mui-link class="resources" href="/#/ux-guides" variant="secondary">Guides<img style="display: flex;" src="../images/guides-mark.svg" height="21" width="21" /></mui-link>`
+      ? `<mui-link class="resources" href="/#/ux-guides" variant="secondary">Guides<guides-mark></guides-mark></mui-link>`
       : "";
 
     try {

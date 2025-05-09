@@ -18,7 +18,7 @@ class appNavbarHome extends HTMLElement {
         margin-bottom: var(--space-500);
         position: sticky; 
         top: 0; 
-        background: #191919; 
+        background: var(--nav-background); 
         z-index: 1; 
       }
 
@@ -28,7 +28,7 @@ class appNavbarHome extends HTMLElement {
 
       /* Text Parts */
       mui-link::part(color) {
-        color: var(--mui-brand);
+        color: var(--nav-accent);
       }
       mui-link::part(text-decoration) {
         text-decoration: none;
@@ -55,13 +55,13 @@ class appNavbarHome extends HTMLElement {
 
       /* Visual Parts */
       mui-link::part(box-shadow) {
-         box-shadow: 0 0 96px 0 black;
+         box-shadow: 0 0 var(--space-700) 0 var(--nav-home-shadow);
       } 
       mui-link:hover::part(box-shadow) {
-        box-shadow: 0 1px 0 0 var(--grey-900);
+        box-shadow: 0 0 var(--space-300) 0 var(--nav-home-shadow);
       } 
       mui-link:hover::part(background) {
-        background: var(--black);
+        background: var(--nav-background-hover);
       }
 
 

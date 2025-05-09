@@ -1,0 +1,121 @@
+/* GLOBAL DATA-THEME */
+
+/* LIGHT by DEFAULT */
+html[data-theme="light"] {
+  /* Text */
+  --text-color: var(--grey-900);
+
+  /* Border */
+  --border-color: var(--grey-200);
+
+  /* Feedback */
+  --feedback-focus-base: var(--blue-500);
+  --feedback-plain-base: var(--black-opacity-50);
+
+  --feedback-neutral-base: var(--grey-600);
+  --feedback-positive-base: var(--green-600);
+  --feedback-info-base: var(--blue-600);
+  --feedback-warning-base: var(--orange-600);
+  --feedback-attention-base: var(--red-600);
+
+  --feedback-focus-stroke-base: var(--feedback-focus-base);
+  --feedback-plain-stroke-base: var(--feedback-plain-base);
+  --feedback-neutral-stroke-base: var(--feedback-neutral-base);
+  --feedback-positive-stroke-base: var(--feedback-positive-base);
+  --feedback-info-stroke-base: var(--feedback-info-base);
+  --feedback-warning-stroke-base: var(--feedback-warning-base);
+  --feedback-attention-stroke-base: var(--feedback-attention-base);
+
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-plain-stroke-base);
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-neutral-stroke-base);
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-positive-stroke-base);
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-info-stroke-base);
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-warning-stroke-base);
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-style-solid)
+    var(--feedback-attention-stroke-base);
+
+  --feedback-plain-background: var(--white-opacity-0);
+  --feedback-neutral-background: var(--grey-100);
+  --feedback-positive-background: var(--green-100);
+  --feedback-info-background: var(--blue-100);
+  --feedback-warning-background: var(--orange-100);
+  --feedback-attention-background: var(--red-100);
+
+  --feedback-plain-icon: var(--black);
+  --feedback-neutral-icon: var(--grey-600);
+  --feedback-positive-icon: var(--green-600);
+  --feedback-info-icon: var(--blue-600);
+  --feedback-warning-icon: var(--orange-600);
+  --feedback-attention-icon: var(--red-600);
+
+  --feedback-plain-text: var(--black);
+  --feedback-neutral-text: var(--grey-900);
+  --feedback-positive-text: var(--green-900);
+  --feedback-info-text: var(--blue-900);
+  --feedback-warning-text: var(--orange-900);
+  --feedback-attention-text: var(--red-900);
+
+  /* Outline */
+  --outline-color: var(--feedback-focus-stroke-base);
+}
+
+/* DARK */
+html[data-theme="dark"] {
+}
+
+/* COMPACT */
+html[data-theme="compact"] {
+  --font-size-s: var(--font-size-015);
+  --font-size-xs: var(--font-size-025);
+  --font-size-m: var(--font-size-050);
+  --font-size-l: var(--font-size-100);
+
+  /* Alert */
+  --alert-radius: var(--radius-100);
+  --alert-padding: var(--space-400);
+  --message-gap-horizontal-mobile: var(--space-300);
+  --message-gap-horizontal-desktop: var(--space-100);
+
+  /* Messages */
+  --message-radius: var(--radius-150);
+  --message-padding: var(--space-400);
+  --message-gap-horizontal: var(--space-300);
+  --message-gap-vertical: var(--space-100);
+
+  /* Notification */
+  --notification-radius: var(--radius-200);
+  --notification-padding: var(--space-100) var(--space-100) var(--space-100)
+    var(--space-400);
+  --notification-gap-horizontal: var(--space-200);
+}
+
+/* SPACIOUS */
+html[data-theme="spacious"] {
+  --font-size-s: var(--font-size-050);
+  --font-size-xs: var(--font-size-100);
+  --font-size-m: var(--font-size-200);
+  --font-size-l: var(--font-size-300);
+
+  /* Alert */
+  --alert-radius: var(--radius-100);
+  --alert-padding: var(--space-400);
+  --message-gap-horizontal-mobile: var(--space-300);
+  --message-gap-horizontal-desktop: var(--space-100);
+
+  /* Messages */
+  --message-radius: var(--radius-150);
+  --message-padding: var(--space-400);
+  --message-gap-horizontal: var(--space-300);
+  --message-gap-vertical: var(--space-100);
+
+  /* Notification */
+  --notification-radius: var(--radius-200);
+  --notification-padding: var(--space-100) var(--space-100) var(--space-100)
+    var(--space-400);
+  --notification-gap-horizontal: var(--space-200);
+}

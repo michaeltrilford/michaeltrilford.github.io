@@ -51,7 +51,7 @@ class appNavbar extends HTMLElement {
 
       mui-link::part(color),
       mui-link::part(color):hover {
-        color: var(--mui-brand);
+        color: var(--nav-accent);
       }
 
       mui-link::part(text-decoration) {
@@ -98,6 +98,7 @@ class appNavbar extends HTMLElement {
         <app-navbar-link link="#/input" title="Input"></app-navbar-link>  
         <app-navbar-link link="#/alerts" title="Alerts"></app-navbar-link>
         <app-navbar-link link="#/messages" title="Messages"></app-navbar-link>
+        <app-navbar-link link="#/notification" title="Notification"></app-navbar-link>
         <app-navbar-link link="#/badge" title="Badge"></app-navbar-link>
         <app-navbar-link link="#/buttons" title="Buttons"></app-navbar-link>
         <app-navbar-link link="#/links" title="Links"></app-navbar-link>
@@ -142,7 +143,7 @@ class appNavbar extends HTMLElement {
       </app-navbar-menu>
 
       <app-navbar-toggle>
-        <mui-icon-toggle color="var(--mui-brand)" rotate>
+        <mui-icon-toggle color="var(--nav-accent)" rotate>
           <mui-icon-menu slot="start"></mui-icon-menu>
           <mui-icon-close slot="end"></mui-icon-close>
         </mui-icon-toggle>

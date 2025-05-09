@@ -39,7 +39,7 @@ class muiBadge extends HTMLElement {
         background: ${background};
         font-size: var(--text-font-size-xs);
         font-weight: var(--badge-font-weight);
-        color: var(--white);
+        color: var(--badge-text-color);
         padding: var(--space-050) var(--space-200);
       }
     `;

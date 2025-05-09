@@ -231,7 +231,7 @@ class storyStack extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types: HStack">
+        <story-card title="Prop Types: HStack" nofooter>
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsHStack}
@@ -255,7 +255,7 @@ class storyStack extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Prop Types: VStack">
+        <story-card title="Prop Types: VStack" nofooter>
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsVStack}

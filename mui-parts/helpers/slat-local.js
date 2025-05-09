@@ -24,10 +24,11 @@ class muiPartLocalSlat extends HTMLElement {
       }
 
       code {
-        background: var(--mui-brand);
-        box-shadow: 0 1px 0 0 var(--mui-brand);
+        background: var(--app-story-code-bg);
         border-radius: var(--radius-100);
-        padding: 0 var(--space-200);
+        color: var(--app-story-code-text);
+        padding: var(--space-050) var(--space-100);
+        font-size: var(--font-size-15);
       }
 
       mui-h-stack::part(align-items) {
@@ -64,10 +65,8 @@ class muiPartLocalSlat extends HTMLElement {
 
         <mui-h-stack space="var(--space-100)">
           <mui-body size="x-small">Usage:</mui-body>
-          ${
-            usageLinks ||
-            `<mui-body size="x-small" weight="bold">None</mui-body>`
-          }
+          ${usageLinks ||
+            `<mui-body size="x-small" weight="bold">None</mui-body>`}
         </mui-h-stack>
 
       </mui-v-stack>

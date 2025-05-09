@@ -1,0 +1,83 @@
+/* APP THEME */
+:where(html) {
+  --mui-brand-100: #fffde7;
+  --mui-brand-200: #fff59d;
+  --mui-brand-300: #ffeb3b;
+  --mui-brand-400: #ffd600;
+  --mui-brand-500: #ffbb00;
+  --mui-brand-600: #ffa500;
+  --mui-brand-700: #ff9800;
+
+  /* APP Background */
+  background: var(--app-background);
+}
+
+::view-transition-old(body),
+::view-transition-new(body) {
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+#app {
+  display: grid;
+  grid-template-rows: 1fr 7.6rem;
+  min-height: 100vh;
+}
+@media (min-width: 960px) {
+  #app {
+    grid-template-rows: 1fr;
+    grid-template-columns: 24rem 1fr;
+  }
+}
+
+/* Light */
+html[data-theme="light"] {
+  --app-base: var(--mui-brand-300);
+  --app-meta-theme-color: var(--app-base);
+  --app-skeleton: var(--app-base);
+  --app-background: var(--app-base);
+
+  --nav-accent: var(--app-base);
+  --nav-background: var(--grey-1000);
+  --nav-link-color: var(--white-opacity-50);
+  --nav-group-color: var(--white-opacity-80);
+  --nav-background-hover: var(--grey-900);
+  --nav-background-focus: var(--grey-900);
+  --nav-home-shadow: var(--black);
+
+  --app-home-logo: none;
+
+  --app-story-card-background: var(--grey-100);
+  --app-story-card-canvas: var(--white);
+  --app-story-code-bg: var(--app-base);
+  --app-story-code-text: var(--black);
+  --app-story-banner-gradient-start: var(--black-opacity-10);
+  --app-story-banner-gradient-end: var(--white-opacity-20);
+  --app-story-banner-border-color: var(--black-opacity-40);
+}
+
+/* Dark */
+html[data-theme="dark"] {
+  --app-base: var(--grey-1000);
+  --app-meta-theme-color: var(--mui-brand-300);
+  --app-skeleton: var(--mui-brand-300);
+  --app-background: var(--black);
+
+  --nav-accent: var(--mui-brand-300);
+  --nav-background: var(--grey-1000);
+  --nav-link-color: var(--white-opacity-50);
+  --nav-group-color: var(--white-opacity-80);
+  --nav-background-hover: var(--grey-900);
+  --nav-background-focus: var(--grey-900);
+  --nav-home-shadow: var(--black);
+
+  --app-home-logo: invert(1);
+
+  --app-story-card-background: var(--grey-900);
+  --app-story-card-canvas: var(--grey-1000);
+  --app-story-code-bg: var(--mui-brand-300);
+  --app-story-code-text: var(--black);
+  --app-story-banner-gradient-start: var(--white-opacity-10);
+  --app-story-banner-gradient-end: var(--black-opacity-20);
+  --app-story-banner-border-color: var(--white-opacity-20);
+}

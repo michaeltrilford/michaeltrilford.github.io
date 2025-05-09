@@ -17,6 +17,7 @@ class muiList extends HTMLElement {
           padding: var(--space-000);
           margin: var(--space-000);
           padding-left: var(--space-400);
+          box-sizing: border-box;
         }
         
         :host([as="ol"]) {

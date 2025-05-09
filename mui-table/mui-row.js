@@ -19,7 +19,7 @@ class muiRow extends HTMLElement {
         grid-gap: var(--space-500);
         margin-bottom: var(--space-000);
         padding: var(--space-300) var(--space-000);
-        border-bottom: 1px solid var(--grey-200);
+        border-bottom: 1px solid var(--table-border);
         align-items: center;
       }
     </style>

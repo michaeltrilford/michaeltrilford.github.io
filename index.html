@@ -6,9 +6,11 @@
     <link rel="stylesheet" href="css/mui-tokens.css" />
     <link rel="stylesheet" href="css/mui-reset.css" />
     <link rel="stylesheet" href="css/mui-base.css" />
-    <link rel="stylesheet" href="css/author.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
-    <meta name="theme-color" content="var(--mui-brand)" />
+    <link rel="stylesheet" href="css/mui-brand.css" />
+    <!-- <link rel="stylesheet" href="css/mui-themes.css" /> -->
+    <meta name="theme-color" content="var(--app-meta-theme-color)" />
     <script src="js/vendor/index.js" type="module" defer></script>
     <script src="mui-utils/index.js" type="module" defer></script>
   </head>
@@ -16,6 +18,7 @@
   <body>
     <div id="loader" class="skeleton"></div>
     <div id="app">
+      <theme-switcher></theme-switcher>
       <app-navbar>
         <app-navbar-skip slot="skip"></app-navbar-skip>
       </app-navbar>

@@ -34,7 +34,7 @@ class muiButton extends HTMLElement {
       cursor: pointer;
       width: auto;
       border-radius: var(--interactive-radius);
-      padding: var(--space-200) var(--space-500);
+      padding: var(--interactive-padding);
       text-decoration: none;
       line-height: var(--interactive-line-height);
       display: inline-block;
@@ -45,7 +45,7 @@ class muiButton extends HTMLElement {
       font-size: var(--interactive-font-size);
       font-weight: var(--interactive-font-weight);
       background: var(--interactive-primary-background);
-      color: var(-interactive-primary-text-color);
+      color: var(--interactive-primary-text-color);
       border: var(--interactive-primary-stroke); 
     }
 
@@ -59,12 +59,12 @@ class muiButton extends HTMLElement {
 
     button:focus {
       background: var(--interactive-primary-background-focus);
-      color: var(-interactive-primary-text-color-focus);
+      color: var(--interactive-primary-text-color-focus);
     }
 
     button:disabled {
       background: var(--interactive-primary-background-disabled);
-      color: var(-interactive-primary-text-color-disabled);
+      color: var(--interactive-primary-text-color-disabled);
     }
 
     button, button:before, button:after {box-sizing: border-box;}
@@ -83,17 +83,17 @@ class muiButton extends HTMLElement {
 
     :host([variant="primary"]) button:hover {
       background: var(--interactive-primary-background-hover);
-      color: var(-interactive-primary-text-color-hover);
+      color: var(--interactive-primary-text-color-hover);
     }
 
     :host([variant="primary"]) button:focus {
       background: var(--interactive-primary-background-focus);
-      color: var(-interactive-primary-text-color-focus);
+      color: var(--interactive-primary-text-color-focus);
     }
 
     :host([variant="primary"]) button:disabled {
       background: var(--interactive-primary-background-disabled);
-      color: var(-interactive-primary-text-color-disabled);
+      color: var(--interactive-primary-text-color-disabled);
       cursor: not-allowed;
     }
 
@@ -180,7 +180,7 @@ class muiButton extends HTMLElement {
       align-items: center;
       height: 44px;
       width: 44px;
-      padding: var(--space-000)
+      padding: var(--interactive-icon-only-padding);
     }
     /* ===================================== */
 

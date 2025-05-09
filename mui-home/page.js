@@ -60,6 +60,7 @@ class HomePage extends HTMLElement {
       /* Grid */
       .logo {
         width: 70%;
+        filter: var(--app-home-logo);
       }
 
       @media (min-width: 640px) {

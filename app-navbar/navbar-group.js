@@ -26,7 +26,7 @@ class appNavbarGroup extends HTMLElement {
         display: block;
         text-transform: uppercase;
         font-weight: bold;
-        color: #bbbbbb;
+        color: var(--nav-group-color);
         padding: 0 var(--space-500);
         font-size: var(--font-size-50);
         

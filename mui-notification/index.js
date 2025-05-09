@@ -1,5 +1,5 @@
-/* Mui Message */
-class muiMessage extends HTMLElement {
+/* Mui Notification */
+class muiNotification extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
@@ -96,39 +96,37 @@ class muiMessage extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
         <style>
-          :host { 
+          :host {
             display: block;
             width: 100%;
             box-sizing: border-box;
           }
-            
-          section {                
-            padding: var(--message-padding);
-            border-radius: var(--message-radius);
+          section {
+            display: flex;
+            align-items: start;
+            padding: var(--notification-padding);
+            border-radius: var(--notification-radius);
+            gap: var(--notification-gap-horizontal);
             ${variantStyle}
           }
-
           ${commonStyles}
-    
         </style>
     
         <section aria-labelledby="message-heading" aria-live="${ariaLive}" role="${role}">
-          <mui-h-stack space="var(--message-gap-horizontal)">
-            <div class="icon">
-              <${resolvedIconTag} color="var(${iconColor})"></${resolvedIconTag}>
+          <div class="icon">
+            <${resolvedIconTag} color="var(${iconColor})"></${resolvedIconTag}>
+          </div>
+          <div>
+            <div class="heading" id="message-heading">
+              ${headingText}
             </div>
-            <mui-v-stack space="var(--message-gap-vertical)">
-              <div class="heading" id="message-heading">
-                ${headingText}
-              </div>
-              <slot>
-                <mui-body>Body content...</mui-body>
-              </slot>
-            </mui-v-stack>
-          </mui-h-stack>
+            <slot name="body">
+              <mui-body>Notification</mui-body>
+            </slot>
+          </div>
         </section>
       `;
   }
 }
 
-customElements.define("mui-message", muiMessage);
+customElements.define("mui-notification", muiNotification);

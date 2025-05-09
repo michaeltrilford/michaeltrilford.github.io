@@ -19,7 +19,7 @@ class appNavbarLink extends HTMLElement {
 
       mui-link {
         transition: opacity 400ms ease-in, transform 100ms ease-in;
-        opacity: 0.3;
+        opacity: 1;
         display: block;
       }
 
@@ -28,7 +28,7 @@ class appNavbarLink extends HTMLElement {
       }
 
       mui-link:focus { 
-        background: var(--black);
+        background: var(--nav-background-focus);
         opacity: 1; 
       }
 
@@ -40,13 +40,10 @@ class appNavbarLink extends HTMLElement {
 
       /* Text Parts */
       mui-link::part(color) {
-        color: var(--white);
+        color: var(--nav-link-color);
       }
       mui-link::part(text-decoration) {
         text-decoration: none;
-      }
-      mui-link::part(font-weight) {
-        font-weight: var(--font-weight-700);
       }
 
       /* Spacing Parts */

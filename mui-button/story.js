@@ -106,7 +106,7 @@ class storyButton extends HTMLElement {
       <mui-v-stack space="var(--space-700)">
 
 
-        <story-card title="Prop Types">
+        <story-card title="Prop Types" nofooter>
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rows}
@@ -242,7 +242,7 @@ class storyButton extends HTMLElement {
 
         <story-card title="Attention Icon-Only">
           <mui-button variant="attention" iconOnly slot="body">
-            <mui-icon-add variant="attention" size="x-small"></mui-icon-add>
+            <mui-icon-close variant="attention" size="x-small"></mui-icon-close>
           </mui-button>
           <mui-code slot="footer">
             &lt;mui-button variant="attention" iconOnly&gt;

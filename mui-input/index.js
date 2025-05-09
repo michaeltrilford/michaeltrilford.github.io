@@ -55,7 +55,7 @@ class muiInput extends HTMLElement {
           border-color: var(--grey-300);
           border-radius: var(--radius-100);
           color: var(--text-color);
-          background: var(--white);
+          background: var(--input-background);
           width: 100%;
           box-sizing: border-box;
         }

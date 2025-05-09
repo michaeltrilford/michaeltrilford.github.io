@@ -88,6 +88,8 @@ const UtilArray = ["mui-utils/index.js"];
 
 const PartsArray = ["mui-parts/index.js"];
 
+const ThemeSwitcherArray = ["app-theme/index.js"];
+
 const AppCompArray = [
   "app-navbar/navbar.js",
   "app-navbar/navbar-home.js",
@@ -100,6 +102,7 @@ const AppCompArray = [
 
 const SharedArray = [
   "shared/page-card/index.js",
+  "shared/page-banner/index.js",
   "shared/story-template/index.js",
   "shared/story-card/index.js",
   "shared/story-demo/index.js",
@@ -108,6 +111,10 @@ const SharedArray = [
   "mui-tokens/helpers/slat-local.js",
   "mui-parts/helpers/index.js",
   "mui-parts/helpers/slat-local.js",
+  "images/github-mark.js",
+  "images/figma-mark.js",
+  "images/guides-mark.js",
+  "images/guides.js",
 ];
 
 const MuiCompArray = [
@@ -116,6 +123,7 @@ const MuiCompArray = [
   "mui-accordion/accordion-group.js",
   "mui-alert/index.js",
   "mui-message/index.js",
+  "mui-notification/index.js",
   "mui-badge/index.js",
   "mui-button/index.js",
   "mui-button-group/index.js",
@@ -176,6 +184,8 @@ const PageArray = [
   "mui-stack/story.js",
   "mui-accordion/story.js",
   "mui-alert/story.js",
+  "mui-message/story.js",
+  "mui-notification/story.js",
   "mui-badge/story.js",
   "mui-button-group/story.js",
   "mui-card/story.js",
@@ -202,12 +212,12 @@ const PageArray = [
   "mui-parts/story-parts-spacing.js",
   "mui-parts/story-parts-layout.js",
   "mui-parts/story-parts-visual.js",
-  "mui-message/story.js",
 ];
 
 // Load all resources asynchronously
 Promise.all([
   // loadScripts(HomeArray),
+  loadScripts(ThemeSwitcherArray),
   loadScripts(UtilArray),
   loadScripts(PartsArray),
   loadScripts(AppCompArray),
