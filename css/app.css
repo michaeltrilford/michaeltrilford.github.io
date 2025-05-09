@@ -54,6 +54,10 @@ html[data-theme="light"] {
   --app-story-banner-gradient-start: var(--black-opacity-10);
   --app-story-banner-gradient-end: var(--white-opacity-20);
   --app-story-banner-border-color: var(--black-opacity-40);
+  --app-story-icon-grid-background: var(--white);
+  --app-story-icon-grid-text: var(--grey-900);
+  --app-story-icon-grid-text-inverted: var(--grey-100);
+  --app-story-icon-grid-background-inverted: var(--grey-900);
 }
 
 /* Dark */
@@ -80,4 +84,8 @@ html[data-theme="dark"] {
   --app-story-banner-gradient-start: var(--white-opacity-10);
   --app-story-banner-gradient-end: var(--black-opacity-20);
   --app-story-banner-border-color: var(--white-opacity-20);
+  --app-story-icon-grid-background: var(--black);
+  --app-story-icon-grid-text: var(--grey-100);
+  --app-story-icon-grid-text-inverted: var(--grey-900);
+  --app-story-icon-grid-background-inverted: var(--grey-200);
 }

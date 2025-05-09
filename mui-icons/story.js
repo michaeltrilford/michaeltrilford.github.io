@@ -14,6 +14,17 @@ class storyIcon extends HTMLElement {
           grid-template-columns: 1fr 1fr;
         }
       }
+
+      .title::part(color) {
+        color: var(--app-story-icon-grid-text);
+        margin-top: var(--space-100);
+      }
+
+      .title.inverted::part(color) {
+        color: var(--app-story-icon-grid-text-inverted);
+        margin-top: var(--space-100);
+      }
+
     `;
 
     shadowRoot.innerHTML = `
@@ -76,19 +87,19 @@ class storyIcon extends HTMLElement {
 
               <story-icon-grid>              
                 <mui-icon-menu slot="body"></mui-icon-menu>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Default Color</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Default Color</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-menu&gt;&lt;/mui-icon-menu&gt;</mui-code>
               </story-icon-grid>
 
               <story-icon-grid theme="inverted">              
                 <mui-icon-menu slot="body" color="inverted"></mui-icon-menu>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--grey-100)" slot="body">Inverted Color</mui-body>
+                <mui-body size="x-small" weight="bold" class="title inverted" slot="body">Inverted Color</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-menu color="inverted"&gt;&lt;/mui-icon-menu&gt;</mui-code>
               </story-icon-grid>
 
               <story-icon-grid>              
                 <mui-icon-menu slot="body" color="var(--green-500)"></mui-icon-menu>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Custom Color</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Custom Color</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-menu color="var(--green-500)"&gt;&lt;/mui-icon-menu&gt;</mui-code>
               </story-icon-grid>
 
@@ -102,25 +113,25 @@ class storyIcon extends HTMLElement {
 
               <story-icon-grid theme="primary">              
                 <mui-icon-add slot="body" variant="primary"></mui-icon-add>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--interactive-primary-text-color)" slot="body">Primary Button Usage</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" style="color: var(--interactive-primary-text-color)" slot="body">Primary Button Usage</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-add variant="primary"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 
               <story-icon-grid theme="secondary">              
                 <mui-icon-add slot="body" variant="secondary"></mui-icon-add>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--interactive-secondary-text-color)" slot="body">Secondary Button Usage</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" style="color: var(--interactive-secondary-text-color)" slot="body">Secondary Button Usage</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-add variant="secondary"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 
               <story-icon-grid theme="tertiary">              
                 <mui-icon-add slot="body" variant="tertiary"></mui-icon-add>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--interactive-tertiary-text-color)" slot="body">Tertiary Button Usage</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" style="color: var(--interactive-tertiary-text-color)" slot="body">Tertiary Button Usage</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-add variant="tertiary"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 
               <story-icon-grid theme="attention">              
                 <mui-icon-add slot="body" variant="attention"></mui-icon-add>
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--interactive-attention-text-color)" slot="body">Attention Button Usage</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" style="color: var(--interactive-attention-text-color)" slot="body">Attention Button Usage</mui-body>
                 <mui-code slot="footer">&lt;mui-icon-add variant="attention"&gt;&lt;/mui-icon-add&gt;</mui-code>
               </story-icon-grid>
 
@@ -138,7 +149,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-close slot="end" size="small"></mui-icon-close>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Menu / Close</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Menu / Close</mui-body>
 
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle size="small"&gt;
@@ -158,7 +169,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-subtract slot="end" size="small"></mui-icon-subtract>
                 </mui-icon-toggle>
               
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Add / Subtract</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Add / Subtract</mui-body>
 
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle size="small"&gt;
@@ -178,7 +189,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-left-arrow slot="end" size="small"></mui-icon-left-arrow>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Grid / Back</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Grid / Back</mui-body>
               
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle size="small"&gt;
@@ -198,7 +209,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-close slot="end" size="small"></mui-icon-close>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Grid / Close</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Grid / Close</mui-body>
               
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle size="small"&gt;
@@ -227,7 +238,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-close slot="end" size="small"></mui-icon-close>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Menu / Close</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Menu / Close</mui-body>
               
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle rotate size="small"&gt;
@@ -247,7 +258,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-subtract slot="end" size="small"></mui-icon-subtract>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Add / Subtract</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Add / Subtract</mui-body>
               
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle rotate size="small"&gt;
@@ -267,7 +278,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-left-arrow slot="end" size="small"></mui-icon-left-arrow>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Grid / Back</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Grid / Back</mui-body>
               
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle rotate size="small"&gt;
@@ -287,7 +298,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-close slot="end" size="small"></mui-icon-close>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Grid / Close</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Grid / Close</mui-body>
               
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle rotate size="small"&gt;
@@ -314,7 +325,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-close slot="end" size="small"></mui-icon-close>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100);" slot="body">Default</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Default</mui-body>
 
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle size="small" color="inverted"&gt;
@@ -333,7 +344,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-close slot="end" size="small"></mui-icon-close>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100); color: var(--grey-100)" slot="body">Inverted</mui-body>
+                <mui-body size="x-small" weight="bold" class="title inverted" slot="body">Inverted</mui-body>
 
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle size="small" color="inverted"&gt;
@@ -352,7 +363,7 @@ class storyIcon extends HTMLElement {
                   <mui-icon-close slot="end" size="small"></mui-icon-close>
                 </mui-icon-toggle>
 
-                <mui-body size="x-small" weight="bold" style="margin-top: var(--space-100)" slot="body">Custom</mui-body>
+                <mui-body size="x-small" weight="bold" class="title" slot="body">Custom</mui-body>
 
                 <mui-code slot="footer">
                   &lt;mui-icon-toggle size="small" color="var(--green-600)"&gt;

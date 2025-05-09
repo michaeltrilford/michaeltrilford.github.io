@@ -17,7 +17,7 @@ class muiBody extends HTMLElement {
   async connectedCallback() {
     await this.waitForPartMap();
 
-    const partMap = getPartMap("spacing", "layout");
+    const partMap = getPartMap("spacing", "layout", "visual");
 
     let html = `
     <style>

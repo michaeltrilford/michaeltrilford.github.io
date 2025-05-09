@@ -309,14 +309,14 @@ html[data-brand="jal"][data-theme="dark"] {
 
   /* Icon */
   --icon-color-default: var(--jal-red-200);
-  --icon-color-inverted: var(--jal-white);
+  --icon-color-inverted: var(--jal-black);
 
   /* Action */
   --jal-action-primary-stroke: transparent;
   --jal-action-primary-text: var(--jal-white);
-  --jal-action-primary-bg: var(--jal-red-400);
-  --jal-action-primary-bg-hover: var(--jal-red-600);
-  --jal-action-primary-bg-focus: var(--jal-red-600);
+  --jal-action-primary-bg: var(--jal-red-300);
+  --jal-action-primary-bg-hover: var(--jal-red-400);
+  --jal-action-primary-bg-focus: var(--jal-red-400);
   --jal-action-primary-bg-disabled: var(--jal-red-100);
   --jal-action-secondary-stroke: var(--jal-red-200);
   --jal-action-secondary-text: var(--jal-red-200);

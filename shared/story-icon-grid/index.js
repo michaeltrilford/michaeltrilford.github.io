@@ -23,8 +23,8 @@ class storyIconGrid extends HTMLElement {
 
     // Map semantic theme names to token values
     const colorMap = {
-      default: "var(--white)",
-      inverted: "var(--grey-900)",
+      default: "var(--app-story-icon-grid-background)",
+      inverted: "var(--app-story-icon-grid-background-inverted)",
       primary: "var(--interactive-primary-background)",
       secondary: "var(--interactive-secondary-background)",
       tertiary: "var(--interactive-tertiary-background)",

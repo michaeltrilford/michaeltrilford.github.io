@@ -36,13 +36,14 @@ window.PartTypes = {
     "opacity",
     "transition",
     "outline",
+    "color",
   ],
 };
 
 window.Parts = Object.values(window.PartTypes).flat();
 
 // Utility to get parts for a set of types
-window.getPartMap = function (...types) {
+window.getPartMap = function(...types) {
   return types
     .map((type) => window.PartTypes[type] || [])
     .flat()
