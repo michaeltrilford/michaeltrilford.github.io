@@ -95,10 +95,10 @@ class muiIconToggle extends HTMLElement {
         }
 
         /* Show outline only if user is tabbing */
-        /* :host-context(body[data-user-is-tabbing]) button:focus {
+        :host-context(body[data-user-is-tabbing]) button:focus {
           outline: var(--outline-medium);
           outline-color: var(--feedback-focus-stroke-base);
-        } */
+        }
 
         ::slotted(*) {
           position: absolute;

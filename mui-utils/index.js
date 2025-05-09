@@ -1,17 +1,17 @@
 // Wait for DOM content before adding listeners
 // Used to ensure focus state doesn't appear on Icon Toggle but still works on Keyboard
 // --- Focus visibility detection (keep outlines for keyboard users only)
-// document.addEventListener("DOMContentLoaded", () => {
-//   document.body.addEventListener("keydown", (e) => {
-//     if (e.key === "Tab") {
-//       document.body.dataset.userIsTabbing = "true";
-//     }
-//   });
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.addEventListener("keydown", (e) => {
+    if (e.key === "Tab") {
+      document.body.dataset.userIsTabbing = "true";
+    }
+  });
 
-//   document.body.addEventListener("mousedown", () => {
-//     delete document.body.dataset.userIsTabbing;
-//   });
-// });
+  document.body.addEventListener("mousedown", () => {
+    delete document.body.dataset.userIsTabbing;
+  });
+});
 
 // Skip to main
 document.addEventListener("DOMContentLoaded", () => {

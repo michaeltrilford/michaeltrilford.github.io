@@ -19,7 +19,7 @@ class appNavbarGroup extends HTMLElement {
       }
 
       :host(:last-of-type) {
-        padding-bottom: 2.4rem;
+        padding-bottom: 6rem;
       }
 
       span {
