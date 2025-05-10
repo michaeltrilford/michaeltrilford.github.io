@@ -38,18 +38,12 @@ class DarkModeToggle extends HTMLElement {
           display: block;
         } 
 
-      @media (min-width: 1600px) {
-        :host {
-          position: fixed;
-          top: 24px;
-          right: 24px;
-        } 
-      }
+
 
       </style>
       <mui-switch ${isDark ? "checked" : ""}>
-        <mui-icon-menu slot="off-icon"></mui-icon-menu>
-        <mui-icon-add slot="on-icon"></mui-icon-add>
+        <mui-icon-sun slot="off-icon"></mui-icon-sun>
+        <mui-icon-moon slot="on-icon"></mui-icon-moon>
       </mui-switch>
     `;
   }

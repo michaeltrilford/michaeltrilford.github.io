@@ -18,6 +18,10 @@ class appNavbarGroup extends HTMLElement {
         margin-top: var(--space-500); 
       }
 
+      :host(:first-of-type) {
+        margin-top: var(--space-000); 
+      }
+
       :host(:last-of-type) {
         padding-bottom: 6rem;
       }

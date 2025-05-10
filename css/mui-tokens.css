@@ -582,6 +582,8 @@ html[data-theme="light"] {
 
   /* Input */
   --input-background: var(--white);
+  --input-background-disabled: var(--grey-100);
+  --input-icon: var(--black);
 }
 
 /* DARK THEME
@@ -634,4 +636,6 @@ html[data-theme="dark"] {
 
   /* Input */
   --input-background: var(--grey-800);
+  --input-background-disabled: var(--grey-800);
+  --input-icon: var(--white);
 }

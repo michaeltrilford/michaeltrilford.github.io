@@ -18,8 +18,10 @@ class appNavbarTheme extends HTMLElement {
     // We provide the shadow root with some HTML
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <theme-switcher></theme-switcher>
-      <dark-mode-toggle></dark-mode-toggle>
+      <mui-v-stack space="var(--space-400)">
+        <theme-switcher></theme-switcher>
+        <dark-mode-toggle></dark-mode-toggle>
+      </mui-v-stack>
     `;
   }
 }

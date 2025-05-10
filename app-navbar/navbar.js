@@ -65,7 +65,7 @@ class appNavbar extends HTMLElement {
     `;
 
     const Home = `
-      <app-navbar-home  link="#/home" title="michaeltrilford.mui"></app-navbar-home>
+      <app-navbar-home  link="#/home" title="michael.ui"></app-navbar-home>
     `;
 
     const Theme = `

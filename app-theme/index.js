@@ -2,7 +2,6 @@ class ThemeSwitcher extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-
     // Define brand capabilities
     this.brandCapabilities = {
       default: { theme: true, density: false },
@@ -23,23 +22,9 @@ class ThemeSwitcher extends HTMLElement {
         :host {
           display: block;
         }
-
-
-        label {
-          display: flex;
-          align-items: center;
-          font-size: var(--font-size-25);
-          gap: var(--space-100);
-          color: var(--text-color);
-          font-weight: var(--font-weight-bold);
+        .grid {
+          gap: var(--space-000);
         }
-
-        select {
-          font-size: var(--font-size-25);
-          padding: var(--space-100) var(--space-200);
-          width: 100%;
-        }
-
         .vh {
           position: absolute;
           width: 1px;
@@ -51,64 +36,68 @@ class ThemeSwitcher extends HTMLElement {
           white-space: nowrap;
           border: 0;
         }
-
-        .grid {
-          gap: var(--space-000);
-        }
-
       </style>
-
       <mui-grid class="grid" col="1fr" gap="var(--space-100)">
-        <label>
-          <span class="vh">Brand</span>
-          <select id="brand-switcher">
-            <option value="default">Mui</option>
-            <option value="jal">JAL</option>
-            <option value="plain">Plain</option>
-          </select>
-        </label>
-
-        <label>
-          <span class="vh">Density</span>
-          <select id="density-switcher">
-            <option value="comfortable">Comfortable</option>
-            <option value="compact">Compact</option>
-          </select>
-        </label>
-      <mui-grid>
-
+        <mui-select 
+          id="brand-switcher" 
+          label="Brand"
+          hide-label
+          options='[
+            {"value": "default", "label": "Mui"},
+            {"value": "jal", "label": "JAL"},
+            {"value": "plain", "label": "Plain"}
+          ]'>
+        </mui-select>
+        
+        <mui-select 
+          id="density-switcher" 
+          label="Density"
+          hide-label
+          options='[
+            {"value": "comfortable", "label": "Comfortable"},
+            {"value": "compact", "label": "Compact"}
+          ]'>
+        </mui-select>
+      </mui-grid>
     `;
   }
 
   setupListeners() {
-    const $ = (id) => this.shadowRoot.getElementById(id);
+    const brandSwitcher = this.shadowRoot.getElementById("brand-switcher");
+    const densitySwitcher = this.shadowRoot.getElementById("density-switcher");
 
-    $("brand-switcher").addEventListener("change", (e) => {
-      const val = e.target.value;
+    brandSwitcher.addEventListener("change", (e) => {
+      const val = e.detail.value;
       localStorage.setItem("brand", val);
       document.documentElement.setAttribute("data-brand", val);
-
       // Update theme and density switchers based on brand capabilities
       this.updateSwitchers(val);
     });
 
-    $("density-switcher").addEventListener("change", (e) => {
-      const val = e.target.value;
+    densitySwitcher.addEventListener("change", (e) => {
+      const val = e.detail.value;
       localStorage.setItem("density", val);
       document.documentElement.setAttribute("data-density", val);
     });
   }
 
   applySettings() {
-    const $ = (id) => this.shadowRoot.getElementById(id);
     const brand = localStorage.getItem("brand") || "default";
     const density = localStorage.getItem("density") || "comfortable";
 
     document.documentElement.setAttribute("data-brand", brand);
     document.documentElement.setAttribute("data-density", density);
 
-    $("brand-switcher").value = brand;
-    $("density-switcher").value = density;
+    const brandSwitcher = this.shadowRoot.getElementById("brand-switcher");
+    const densitySwitcher = this.shadowRoot.getElementById("density-switcher");
+
+    if (brandSwitcher) {
+      brandSwitcher.setAttribute("value", brand);
+    }
+
+    if (densitySwitcher) {
+      densitySwitcher.setAttribute("value", density);
+    }
 
     // Update theme and density switchers based on brand capabilities
     this.updateSwitchers(brand);
@@ -124,12 +113,12 @@ class ThemeSwitcher extends HTMLElement {
 
     // Update density switcher
     if (capabilities.density) {
-      densitySwitcher.disabled = false;
+      densitySwitcher.removeAttribute("disabled");
     } else {
-      densitySwitcher.disabled = true;
-      densitySwitcher.value = "comfortable";
+      densitySwitcher.setAttribute("disabled", "true");
       localStorage.setItem("density", "comfortable");
       document.documentElement.setAttribute("data-density", "comfortable");
+      densitySwitcher.setAttribute("value", "comfortable");
     }
 
     // Dispatch event to inform dark-mode-toggle about theme capability

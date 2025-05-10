@@ -38,7 +38,7 @@ html[data-theme="light"] {
   --app-background: var(--app-base);
   --nav-accent: var(--app-base);
   --nav-background: var(--grey-1000);
-  --nav-background-toggle: var(--black-opacity-40);
+  --nav-background-toggle: var(--grey-1000);
   --nav-link-color: var(--white-opacity-50);
   --nav-group-color: var(--white-opacity-80);
   --nav-background-hover: var(--grey-900);
@@ -65,7 +65,7 @@ html[data-theme="dark"] {
   --app-background: var(--grey-1000);
   --nav-accent: var(--mui-brand-300);
   --nav-background: var(--grey-1100);
-  --nav-background-toggle: var(--black-opacity-60);
+  --nav-background-toggle: var(--grey-1100);
   --nav-link-color: var(--white-opacity-50);
   --nav-group-color: var(--white-opacity-80);
   --nav-background-hover: var(--grey-900);
@@ -89,7 +89,7 @@ html[data-brand="jal"][data-theme="light"] {
   --app-meta-theme-color: var(--app-base);
   --app-skeleton: var(--app-base);
   --app-background: var(--app-base);
-  --nav-background-toggle: var(--grey-100);
+  --nav-background-toggle: var(--jal-white);
   --nav-accent: var(--jal-red-600);
   --nav-background: var(--jal-white);
   --nav-link-color: var(--jal-red-600);
@@ -105,7 +105,7 @@ html[data-brand="jal"][data-theme="dark"] {
   --app-meta-theme-color: var(--app-base);
   --app-skeleton: var(--app-base);
   --app-background: var(--app-base);
-  --nav-background-toggle: var(--grey-1100);
+  --nav-background-toggle: var(--jal-black);
   --nav-accent: var(--jal-red-200);
   --nav-background: var(--jal-black);
   --nav-link-color: var(--jal-red-200);
@@ -123,7 +123,7 @@ html[data-brand="plain"][data-theme="light"] {
   --app-meta-theme-color: var(--app-base);
   --app-skeleton: var(--app-base);
   --app-background: var(--plain-grey-100);
-  --nav-background-toggle: var(--grey-100);
+  --nav-background-toggle: var(--plain-white);
   --nav-accent: var(--plain-black);
   --nav-background: var(--plain-white);
   --nav-link-color: var(--plain-black);
@@ -141,7 +141,7 @@ html[data-brand="plain"][data-theme="dark"] {
   --app-meta-theme-color: var(--app-base);
   --app-skeleton: var(--app-base);
   --app-background: var(--plain-grey-900);
-  --nav-background-toggle: var(--grey-1100);
+  --nav-background-toggle: var(--black);
   --nav-accent: var(--plain-white);
   --nav-background: var(--plain-black);
   --nav-link-color: var(--plain-white);

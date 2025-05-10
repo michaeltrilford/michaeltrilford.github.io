@@ -95,6 +95,10 @@ class MuiSwitch extends HTMLElement {
           height: 0;
         }
 
+        .switch input:focus-visible + .track {
+          outline: var(--outline-thick);
+        }
+
         .track {
           position: absolute;
           cursor: pointer;

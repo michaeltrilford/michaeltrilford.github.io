@@ -160,6 +160,8 @@ const MuiCompArray = [
   "mui-icons/mui-icon-subtract.js",
   "mui-icons/mui-icon-accessibility.js",
   "mui-icons/mui-icon-notification.js",
+  "mui-icons/mui-icon-sun.js",
+  "mui-icons/mui-icon-moon.js",
   "mui-icons/mui-icon-message.js",
   "mui-image/index.js",
   "mui-link/index.js",
@@ -175,6 +177,7 @@ const MuiCompArray = [
   "mui-table/mui-thead.js",
   "mui-slat/index.js",
   "mui-input/index.js",
+  "mui-select/index.js",
   "mui-switch/index.js",
 ];
 const RecipeArray = ["mui-table/recipe/table.js"];

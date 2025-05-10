@@ -1,12 +1,11 @@
-class muiInput extends HTMLElement {
+class muiSelect extends HTMLElement {
   static get observedAttributes() {
     return [
-      "type",
       "name",
       "value",
-      "placeholder",
       "id",
       "label",
+      "options",
       "disabled",
       "hide-label",
     ];
@@ -24,28 +23,21 @@ class muiInput extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (this.shadowRoot) {
-      const inputEl = this.shadowRoot.querySelector("input");
+      const selectEl = this.shadowRoot.querySelector("select");
 
-      if (!inputEl) return;
-
-      if (name === "value") {
-        inputEl.value = newValue || "";
+      if (name === "value" && selectEl) {
+        selectEl.value = newValue;
       }
 
-      if (name === "disabled") {
+      if (name === "disabled" && selectEl) {
         if (newValue === null || newValue === "false") {
-          inputEl.removeAttribute("disabled");
+          selectEl.removeAttribute("disabled");
         } else {
-          inputEl.setAttribute("disabled", "");
+          selectEl.setAttribute("disabled", "");
         }
       }
 
-      if (
-        name === "type" ||
-        name === "placeholder" ||
-        name === "label" ||
-        name === "hide-label"
-      ) {
+      if (name === "options" || name === "label" || name === "hide-label") {
         this.render();
         this.setupListener();
       }
@@ -53,25 +45,13 @@ class muiInput extends HTMLElement {
   }
 
   setupListener() {
-    const inputEl = this.shadowRoot.querySelector("input");
-    if (inputEl) {
+    const selectEl = this.shadowRoot.querySelector("select");
+    if (selectEl) {
       // Remove previous event listener to prevent duplicates
-      const newInputEl = inputEl.cloneNode(true);
-      inputEl.parentNode.replaceChild(newInputEl, inputEl);
+      const newSelectEl = selectEl.cloneNode(true);
+      selectEl.parentNode.replaceChild(newSelectEl, selectEl);
 
-      // Add input event listener
-      newInputEl.addEventListener("input", (e) => {
-        this.dispatchEvent(
-          new CustomEvent("input", {
-            detail: { value: e.target.value },
-            bubbles: true,
-            composed: true,
-          })
-        );
-      });
-
-      // Add change event listener
-      newInputEl.addEventListener("change", (e) => {
+      newSelectEl.addEventListener("change", (e) => {
         this.dispatchEvent(
           new CustomEvent("change", {
             detail: { value: e.target.value },
@@ -84,31 +64,33 @@ class muiInput extends HTMLElement {
   }
 
   render() {
-    const allowedTypes = [
-      "text",
-      "password",
-      "email",
-      "number",
-      "search",
-      "tel",
-      "url",
-      "date",
-      "time",
-    ];
-
-    const rawType = this.getAttribute("type") || "text";
-    const type = allowedTypes.includes(rawType) ? rawType : "text";
     const name = this.getAttribute("name") || "";
-    const value = this.getAttribute("value") || "";
-    const placeholder = this.getAttribute("placeholder") || "";
     const id =
       this.getAttribute("id") ||
-      `mui-input-${Math.random()
+      `mui-select-${Math.random()
         .toString(36)
         .substr(2, 9)}`;
     const label = this.getAttribute("label") || "";
+    const value = this.getAttribute("value") || "";
     const hideLabel = this.hasAttribute("hide-label");
     const disabled = this.hasAttribute("disabled");
+    const optionsAttr = this.getAttribute("options") || "[]";
+
+    let options = [];
+    try {
+      options = JSON.parse(optionsAttr);
+    } catch (e) {
+      console.error("Invalid JSON in options attribute", e);
+    }
+
+    const optionsHTML = options
+      .map(
+        (opt) =>
+          `<option value="${opt.value}" ${
+            opt.value === value ? "selected" : ""
+          }>${opt.label}</option>`
+      )
+      .join("");
 
     const html = `
       <style>
@@ -123,7 +105,7 @@ class muiInput extends HTMLElement {
           color: var(--text-color);
           display: block;
         }
-        input {
+        select {
           padding: var(--space-300);
           font-size: var(--text-font-size);
           border: var(--border-thin);
@@ -133,11 +115,16 @@ class muiInput extends HTMLElement {
           background: var(--input-background);
           width: 100%;
           box-sizing: border-box;
+          appearance: none;
+          background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5" viewBox="0 0 10 5"><path fill="%23666" d="M0 0l5 5 5-5z"/></svg>');
+          background-repeat: no-repeat;
+          background-position: right var(--space-300) center;
+          background-size: 10px 5px;
         }
-        input:focus {
+        select:focus {
           outline: var(--outline-thick);
         }
-        input:disabled {
+        select:disabled {
           opacity: 0.4;
           background-color: var(--input-background-disabled);
           cursor: not-allowed;
@@ -161,18 +148,13 @@ class muiInput extends HTMLElement {
             }">${label}</label>`
           : ""
       }
-      <input
-        type="${type}"
-        name="${name}"
-        id="${id}"
-        value="${value}"
-        placeholder="${placeholder}"
-        ${disabled ? "disabled" : ""}
-      />
+      <select name="${name}" id="${id}" ${disabled ? "disabled" : ""}>
+        ${optionsHTML}
+      </select>
     `;
 
     this.shadowRoot.innerHTML = html;
   }
 }
 
-customElements.define("mui-input", muiInput);
+customElements.define("mui-select", muiSelect);
