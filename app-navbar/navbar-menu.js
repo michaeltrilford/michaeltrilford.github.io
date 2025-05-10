@@ -12,7 +12,7 @@ class appNavbarMenu extends HTMLElement {
         overflow-x: hidden;
         overflow-y: scroll;
         -webkit-overflow-scrolling: touch;
-        background: var(--nav-background);
+        background: var(--app-nav-background);
         position: fixed;
         bottom: 0;
         top: 0;

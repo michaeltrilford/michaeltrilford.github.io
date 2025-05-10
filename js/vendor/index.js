@@ -82,27 +82,14 @@ const addHeadElements = ({
   document.head.appendChild(viewportMeta);
 };
 
-// Arrays containing your resources
-// const HomeArray = ["mui-home/index.js"];
 const UtilArray = ["mui-utils/index.js"];
-
-const PartsArray = ["mui-parts/index.js"];
-
-const ThemeSwitcherArray = [
-  "app-theme/index.js",
-  "app-theme/dark-mode-toggle.js",
+const PartsArray = [
+  "mui-parts/index.js",
+  "mui-parts/helpers/index.js",
+  "mui-parts/helpers/slat-local.js",
 ];
-
-const AppCompArray = [
-  "app-navbar/navbar.js",
-  "app-navbar/navbar-home.js",
-  "app-navbar/navbar-group.js",
-  "app-navbar/navbar-link.js",
-  "app-navbar/navbar-toggle.js",
-  "app-navbar/navbar-skip.js",
-  "app-navbar/navbar-menu.js",
-  "app-navbar/navbar-theme.js",
-];
+const ThemeSwitcherArray = ["app-theme/index.js"];
+const AppCompArray = ["app-navbar/index.js"];
 
 const SharedArray = [
   "shared/page-card/index.js",
@@ -112,10 +99,14 @@ const SharedArray = [
   "shared/story-demo/index.js",
   "shared/story-types/index.js",
   "shared/story-icon-grid/index.js",
+];
+
+const TokensArray = [
   "mui-tokens/helpers/index.js",
   "mui-tokens/helpers/slat-local.js",
-  "mui-parts/helpers/index.js",
-  "mui-parts/helpers/slat-local.js",
+];
+
+const ImagesArray = [
   "images/github-mark.js",
   "images/figma-mark.js",
   "images/guides-mark.js",
@@ -230,6 +221,8 @@ Promise.all([
   loadScripts(PartsArray),
   loadScripts(AppCompArray),
   loadScripts(SharedArray),
+  loadScripts(TokensArray),
+  loadScripts(ImagesArray),
   loadScripts(MuiCompArray),
   loadScripts(RecipeArray),
   loadScripts(PageArray),

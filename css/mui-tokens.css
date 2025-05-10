@@ -466,7 +466,7 @@ html[data-theme="dark"] {
 :where(html) {
   /* Switch */
   --switch-offset: 1px;
-  --switch-thumb-size: 3.2rem;
+  --switch-thumb-size: 3.6rem;
   --switch-width: calc(var(--switch-height) * 1.6);
   --switch-height: calc(var(--switch-thumb-size) + (var(--switch-offset) * 2));
 

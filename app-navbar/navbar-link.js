@@ -28,7 +28,7 @@ class appNavbarLink extends HTMLElement {
       }
 
       mui-link:focus { 
-        background: var(--nav-background-focus);
+        background: var(--app-nav-link-focus);
         opacity: 1; 
       }
 
@@ -40,7 +40,7 @@ class appNavbarLink extends HTMLElement {
 
       /* Text Parts */
       mui-link::part(color) {
-        color: var(--nav-link-color);
+        color: var(--app-nav-link);
       }
       mui-link::part(text-decoration) {
         text-decoration: none;

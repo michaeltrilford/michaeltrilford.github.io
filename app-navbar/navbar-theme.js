@@ -10,7 +10,12 @@ class appNavbarTheme extends HTMLElement {
       :host {
         display: block;
         padding: var(--space-500);
-        background: var(--nav-background-toggle);
+        background: var(--app-nav-background);
+        border-bottom: var(--stroke-size-100) var(--stroke-style-solid) var(--app-nav-border);
+      }
+
+      mui-grid::part(align-items) {
+        align-items: center;
       }
 
     `;
@@ -18,10 +23,10 @@ class appNavbarTheme extends HTMLElement {
     // We provide the shadow root with some HTML
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <mui-v-stack space="var(--space-400)">
+      <mui-grid col="1fr auto" gap="var(--space-400)">
         <theme-switcher></theme-switcher>
         <dark-mode-toggle></dark-mode-toggle>
-      </mui-v-stack>
+      </mui-grid>
     `;
   }
 }
