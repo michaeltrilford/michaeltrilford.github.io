@@ -153,7 +153,7 @@ class appNavbar extends HTMLElement {
           <mui-icon-menu slot="start"></mui-icon-menu>
           <mui-icon-close slot="end"></mui-icon-close>
         </mui-icon-toggle>
-        <mui-link slot="home-link" data-close-menu link="#/home-page">michaeltrilford.mui</mui-link>
+        <mui-link slot="home-link" data-close-menu link="#/home-page">michael.mui</mui-link>
       </app-navbar-toggle>
     `;
 

@@ -483,14 +483,12 @@ html[data-theme="dark"] {
 
   /* Heading */
   --heading-font-weight: var(--font-weight-bold);
-
   --heading-font-size-100: var(--font-size-600);
   --heading-font-size-200: var(--font-size-500);
   --heading-font-size-300: var(--font-size-400);
   --heading-font-size-400: var(--font-size-300);
   --heading-font-size-500: var(--font-size-200);
   --heading-font-size-600: var(--font-size-100);
-
   --heading-line-height-100: var(--line-height-600);
   --heading-line-height-200: var(--line-height-500);
   --heading-line-height-300: var(--line-height-400);
@@ -548,12 +546,6 @@ html[data-theme="light"] {
   --link-text-color-default-focus: var(--grey-1000);
   --link-text-color-default-disabled: var(--grey-800);
 
-  /* Button */
-  /* Refer to interactive semantic tokens */
-
-  /* Button Styles */
-  /* Refer to interactive semantic tokens */
-
   /* Card */
   --card-background: var(--white);
 
@@ -601,12 +593,6 @@ html[data-theme="dark"] {
   --link-text-color-default-hover: var(--grey-100);
   --link-text-color-default-focus: var(--grey-100);
   --link-text-color-default-disabled: var(--grey-600);
-
-  /* Button */
-  /* Refer to interactive semantic tokens */
-
-  /* Button Styles */
-  /* Refer to interactive semantic tokens */
 
   /* Card */
   --card-background: var(--grey-900);
