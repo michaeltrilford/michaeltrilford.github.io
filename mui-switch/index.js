@@ -102,7 +102,7 @@ class MuiSwitch extends HTMLElement {
           left: 0;
           right: 0;
           bottom: 0;
-          background-color: var(--track-bg);
+          background-color: var(--switch-track-bg);
           transition: background-color 0.2s;
           border-radius: var(--switch-height);
         }
@@ -111,9 +111,9 @@ class MuiSwitch extends HTMLElement {
           position: absolute;
           top: var(--switch-offset);
           left: var(--switch-offset);
-          width: var(--thumb-size);
-          height: var(--thumb-size);
-          background-color: var(--thumb-bg);
+          width: var(--switch-thumb-size);
+          height: var(--switch-thumb-size);
+          background-color: var(--switch-thumb-bg);
           transition: transform 0.2s;
           border-radius: 50%;
           display: flex;
@@ -122,18 +122,18 @@ class MuiSwitch extends HTMLElement {
         }
 
         input:checked + .track {
-          background-color: var(--track-bg-checked);
+          background-color: var(--switch-track-bg-checked);
         }
 
         input:checked + .track .thumb {
-          transform: translateX(calc(var(--switch-width) - var(--thumb-size) - (var(--switch-offset) * 2)));
+          transform: translateX(calc(var(--switch-width) - var(--switch-thumb-size) - (var(--switch-offset) * 2)));
         }
 
         ::slotted([slot="on-icon"]),
         ::slotted([slot="off-icon"]) {
           width: 16px;
           height: 16px;
-          fill: var(--black);
+          fill: var(--switch-icon);
         }
       </style>
       <label class="switch">

@@ -133,9 +133,9 @@ html[data-brand="jal"][data-theme="light"] {
   --border-color: var(--jal-grey-200);
   --outline-color: var(--feedback-focus-stroke-base);
   --code-background: var(--jal-red-500);
+  --code-text-color: var(--jal-white);
   --table-background: var(--jal-white);
   --card-background: var(--jal-white);
-  --code-text-color: var(--jal-red-600);
 }
 
 /* ================================================================================ */

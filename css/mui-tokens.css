@@ -466,12 +466,9 @@ html[data-theme="dark"] {
 :where(html) {
   /* Switch */
   --switch-offset: 1px;
-  --thumb-size: 3.2rem;
+  --switch-thumb-size: 3.2rem;
   --switch-width: calc(var(--switch-height) * 1.6);
-  --switch-height: calc(var(--thumb-size) + (var(--switch-offset) * 2));
-  --track-bg: var(--grey-200);
-  --track-bg-checked: var(--grey-500);
-  --thumb-bg: var(--white);
+  --switch-height: calc(var(--switch-thumb-size) + (var(--switch-offset) * 2));
 
   /* Card */
   --card-radius: var(--radius-150);
@@ -543,6 +540,12 @@ html[data-density="comfortable"] {
 /* Create a Toggle Switch to control theme */
 
 html[data-theme="light"] {
+  /* Switch */
+  --switch-track-bg: var(--grey-200);
+  --switch-track-bg-checked: var(--grey-500);
+  --switch-thumb-bg: var(--white);
+  --switch-icon: var(--icon-color-default);
+
   /* Icon */
   --icon-color-default: var(--black);
   --icon-color-inverted: var(--white);
@@ -589,6 +592,12 @@ html[data-theme="light"] {
 /* Create a Toggle Switch to control theme */
 
 html[data-theme="dark"] {
+  /* Switch */
+  --switch-track-bg: var(--grey-600);
+  --switch-track-bg-checked: var(--grey-700);
+  --switch-thumb-bg: var(--black);
+  --switch-icon: var(--icon-color-default);
+
   /* Icon */
   --icon-color-default: var(--white);
   --icon-color-inverted: var(--black);
