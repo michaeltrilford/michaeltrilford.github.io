@@ -88,7 +88,10 @@ const UtilArray = ["mui-utils/index.js"];
 
 const PartsArray = ["mui-parts/index.js"];
 
-const ThemeSwitcherArray = ["app-theme/index.js"];
+const ThemeSwitcherArray = [
+  "app-theme/index.js",
+  "app-theme/dark-mode-toggle.js",
+];
 
 const AppCompArray = [
   "app-navbar/navbar.js",
@@ -98,6 +101,7 @@ const AppCompArray = [
   "app-navbar/navbar-toggle.js",
   "app-navbar/navbar-skip.js",
   "app-navbar/navbar-menu.js",
+  "app-navbar/navbar-theme.js",
 ];
 
 const SharedArray = [
@@ -171,6 +175,7 @@ const MuiCompArray = [
   "mui-table/mui-thead.js",
   "mui-slat/index.js",
   "mui-input/index.js",
+  "mui-switch/index.js",
 ];
 const RecipeArray = ["mui-table/recipe/table.js"];
 

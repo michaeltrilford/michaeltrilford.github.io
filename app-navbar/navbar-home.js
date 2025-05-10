@@ -15,7 +15,6 @@ class appNavbarHome extends HTMLElement {
 
       :host { 
         display: block;
-        margin-bottom: var(--space-500);
         position: sticky; 
         top: 0; 
         background: var(--nav-background); 
@@ -54,12 +53,6 @@ class appNavbarHome extends HTMLElement {
       } 
 
       /* Visual Parts */
-      mui-link::part(box-shadow) {
-         box-shadow: 0 0 var(--space-700) 0 var(--nav-home-shadow);
-      } 
-      mui-link:hover::part(box-shadow) {
-        box-shadow: 0 0 var(--space-300) 0 var(--nav-home-shadow);
-      } 
       mui-link:hover::part(background) {
         background: var(--nav-background-hover);
       }

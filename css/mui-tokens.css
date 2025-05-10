@@ -117,6 +117,7 @@
   --grey-800: #444;
   --grey-900: #333;
   --grey-1000: #222;
+  --grey-1100: #111;
 
   /* Red scale */
   --red-100: #ffe5e5;
@@ -463,6 +464,15 @@ html[data-theme="dark"] {
 
 /* BASE */
 :where(html) {
+  /* Switch */
+  --switch-offset: 1px;
+  --thumb-size: 3.2rem;
+  --switch-width: calc(var(--switch-height) * 1.6);
+  --switch-height: calc(var(--thumb-size) + (var(--switch-offset) * 2));
+  --track-bg: var(--grey-200);
+  --track-bg-checked: var(--grey-500);
+  --thumb-bg: var(--white);
+
   /* Card */
   --card-radius: var(--radius-150);
 
@@ -588,7 +598,7 @@ html[data-theme="dark"] {
 
   /* Heading */
   --heading-text-color: var(--grey-100);
-  --border-color: var(--grey-600);
+  --border-color: var(--grey-700);
 
   /* Link */
   --link-text-color-default: var(--grey-200);
@@ -603,7 +613,7 @@ html[data-theme="dark"] {
   /* Refer to interactive semantic tokens */
 
   /* Card */
-  --card-background: var(--grey-1000);
+  --card-background: var(--grey-900);
 
   /* Code */
   --code-text-color: var(--white);

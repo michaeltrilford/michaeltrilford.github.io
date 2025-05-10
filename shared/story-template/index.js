@@ -76,6 +76,7 @@ class storyTemplate extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
       <mui-container center>
+
         <mui-v-stack space="var(--space-700)">
 
           <mui-v-stack space="var(--space-600)">

@@ -68,6 +68,10 @@ class appNavbar extends HTMLElement {
       <app-navbar-home  link="#/home" title="michaeltrilford.mui"></app-navbar-home>
     `;
 
+    const Theme = `
+      <app-navbar-theme></app-navbar-theme>
+    `;
+
     const Guidelines = `
       <app-navbar-group id="design-tokens" groupname="Resources">
         <app-navbar-link link="#/ux-guides" title="UX Guides"></app-navbar-link>
@@ -128,6 +132,7 @@ class appNavbar extends HTMLElement {
       <app-navbar-menu desktop id="desktop">
         <slot name="skip"></slot>
         ${Home}
+        ${Theme}
         ${Guidelines}
         ${Required}
         ${Parts}
@@ -136,6 +141,7 @@ class appNavbar extends HTMLElement {
       
       <app-navbar-menu mobile id="mobile">
         <slot name="skip"></slot>
+        ${Theme}
         ${Guidelines}
         ${Required}
         ${Parts}

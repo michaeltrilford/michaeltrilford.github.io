@@ -160,7 +160,7 @@ class storyTokensBase extends HTMLElement {
             <mui-token-local-slat slot="body" token="--blue-300" variant="color" output="#99CAFF"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-400" variant="color" output="#85BFFB"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-500" variant="color" output="#62B7FB"></mui-token-local-slat>
-            <mui-token-local-slat slot="body" token="--blue-600" variant="color" output="##338fe0"></mui-token-local-slat>
+            <mui-token-local-slat slot="body" token="--blue-600" variant="color" output="#338fe0"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-700" variant="color" output="#3396EB"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-800" variant="color" output="#1A86E3"></mui-token-local-slat>
             <mui-token-local-slat slot="body" token="--blue-900" variant="color" output="#0076DB"></mui-token-local-slat> 
