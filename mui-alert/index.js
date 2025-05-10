@@ -75,13 +75,13 @@ class muiAlert extends HTMLElement {
         display: grid;
         grid-template-columns: auto 1fr;
         align-items: start;
-        gap: var(--message-gap-horizontal-mobile);
+        gap: var(--alert-gap-horizontal-mobile);
         box-sizing: border-box;
       }
 
      @media (min-width: 600px) {
         :host {
-          gap: var(--message-gap-horizontal-desktop);
+          gap: var(--alert-gap-horizontal-desktop);
         }
       }
 

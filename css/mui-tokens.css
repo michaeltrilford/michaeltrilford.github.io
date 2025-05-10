@@ -500,33 +500,18 @@ html[data-theme="dark"] {
 
   /* Alert */
   --alert-radius: var(--radius-100);
+  --alert-padding: var(--space-400);
+  --alert-gap-horizontal-mobile: var(--space-300);
+  --alert-gap-horizontal-desktop: var(--space-100);
 
   /* Messages */
   --message-radius: var(--radius-150);
-
-  /* Notification */
-  --notification-radius: var(--radius-200);
-}
-
-/* COMFORTABLE Density - DEFAULT
-  =========================================================================*/
-
-/* Required on the HTML Tag --> [data-density="comfortable"] */
-/* OR */
-/* Create a Toggle Switch to control density */
-
-html[data-density="comfortable"] {
-  /* Alert */
-  --alert-padding: var(--space-400);
-  --message-gap-horizontal-mobile: var(--space-300);
-  --message-gap-horizontal-desktop: var(--space-100);
-
-  /* Messages */
   --message-padding: var(--space-400);
   --message-gap-horizontal: var(--space-300);
   --message-gap-vertical: var(--space-100);
 
   /* Notification */
+  --notification-radius: var(--radius-200);
   --notification-padding: var(--space-100) var(--space-100) var(--space-100)
     var(--space-400);
   --notification-gap-horizontal: var(--space-200);
