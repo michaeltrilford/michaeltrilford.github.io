@@ -34,7 +34,7 @@
 }
 
 /* Light */
-html[data-theme="light"] {
+html[data-theme='light'] {
   --app-home-logo: none;
   --app-meta-theme-color: var(--mui-brand-300);
   --app-skeleton: var(--mui-brand-300);
@@ -64,7 +64,7 @@ html[data-theme="light"] {
 }
 
 /* Dark */
-html[data-theme="dark"] {
+html[data-theme='dark'] {
   --app-home-logo: invert(1);
   --app-meta-theme-color: var(--mui-brand-300);
   --app-skeleton: var(--mui-brand-300);
@@ -97,7 +97,7 @@ html[data-theme="dark"] {
 /*   Theme Storefront: JAL                                                         */
 /*   Component theme alignment across storefront                                   */
 /* =============================================================================== */
-html[data-brand="jal"][data-theme="light"] {
+html[data-brand='jal'][data-theme='light'] {
   --app-meta-theme-color: var(--jal-grey-200);
   --app-skeleton: var(--jal-grey-200);
   --app-background: var(--jal-grey-200);
@@ -116,7 +116,7 @@ html[data-brand="jal"][data-theme="light"] {
   --app-story-code-text: var(--jal-white);
 }
 
-html[data-brand="jal"][data-theme="dark"] {
+html[data-brand='jal'][data-theme='dark'] {
   --app-meta-theme-color: var(--jal-grey-900);
   --app-skeleton: var(--jal-grey-900);
   --app-background: var(--jal-grey-900);
@@ -141,7 +141,7 @@ html[data-brand="jal"][data-theme="dark"] {
 /*   Theme Storefront: ANA                                                         */
 /*   Component theme alignment across storefront                                   */
 /* =============================================================================== */
-html[data-brand="ana"][data-theme="light"] {
+html[data-brand='ana'][data-theme='light'] {
   --app-meta-theme-color: var(--ana-grey-200);
   --app-skeleton: var(--ana-grey-200);
   --app-background: var(--ana-grey-200);
@@ -160,7 +160,7 @@ html[data-brand="ana"][data-theme="light"] {
   --app-story-code-text: var(--ana-white);
 }
 
-html[data-brand="ana"][data-theme="dark"] {
+html[data-brand='ana'][data-theme='dark'] {
   --app-meta-theme-color: var(--ana-grey-900);
   --app-skeleton: var(--ana-grey-900);
   --app-background: var(--ana-grey-900);
@@ -185,7 +185,7 @@ html[data-brand="ana"][data-theme="dark"] {
 /*   Theme Storefront: Plain                                                       */
 /*   Component theme alignment across storefront                                   */
 /* =============================================================================== */
-html[data-brand="plain"][data-theme="light"] {
+html[data-brand='plain'][data-theme='light'] {
   --app-meta-theme-color: var(--plain-black);
   --app-skeleton: var(--plain-black);
   --app-background: var(--plain-grey-100);
@@ -206,7 +206,7 @@ html[data-brand="plain"][data-theme="light"] {
   --app-story-card-canvas: var(--plain-white);
 }
 
-html[data-brand="plain"][data-theme="dark"] {
+html[data-brand='plain'][data-theme='dark'] {
   --app-meta-theme-color: var(--plain-black);
   --app-skeleton: var(--plain-black);
   --app-background: var(--plain-grey-900);

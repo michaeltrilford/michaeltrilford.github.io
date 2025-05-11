@@ -7,8 +7,8 @@
 /* 1. BRAND PRIMITIVES                                                             */
 /*    Map primitive values to specific roles depending on the mode                 */
 /* =============================================================================== */
-html[data-brand="jal"] {
-  --font-family: "Noto Sans JP", "メイリオ", sans-serif;
+html[data-brand='jal'] {
+  --font-family: 'Noto Sans JP', 'メイリオ', sans-serif;
   /* Neutral Greys */
   --jal-grey-50: #fafafa;
   --jal-grey-100: #f4f4f4;
@@ -85,7 +85,7 @@ html[data-brand="jal"] {
 /* 2. LIGHT MODE THEME (COLOR ONLY)                                                */
 /*    Map primitive values to specific roles depending on the mode                 */
 /* =============================================================================== */
-html[data-brand="jal"][data-theme="light"] {
+html[data-brand='jal'][data-theme='light'] {
   --jal-focus-outline: var(--jal-red-300);
   --jal-alert-plain-bg: var(--white-opacity-10);
   --jal-alert-plain-text: var(--jal-grey-700);
@@ -156,7 +156,7 @@ html[data-brand="jal"][data-theme="light"] {
 /* 3. DARK MODE THEME (COLOR ONLY)                                                  */
 /*    Map primitive values to specific roles depending on the mode                  */
 /* ================================================================================ */
-html[data-brand="jal"][data-theme="dark"] {
+html[data-brand='jal'][data-theme='dark'] {
   --jal-focus-outline: var(--jal-red-100);
   --jal-alert-plain-bg: var(--white-opacity-10);
   --jal-alert-plain-text: var(--jal-grey-100);
@@ -227,12 +227,11 @@ html[data-brand="jal"][data-theme="dark"] {
 /* 4. SET THE FOUNDATION                                             */
 /* Map tokens to semantic or component contexts .                    */
 /* ================================================================= */
-html[data-brand="jal"] {
+html[data-brand='jal'] {
   --card-radius: var(--radius-150);
   --action-radius: var(--radius-400);
   --action-font-weight: var(--font-weight-bold);
-  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--jal-action-primary-stroke);
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--jal-action-primary-stroke);
   --action-primary-background: var(--jal-action-primary-bg);
   --action-primary-background-hover: var(--jal-action-primary-bg-hover);
   --action-primary-background-focus: var(--jal-action-primary-bg-focus);
@@ -242,20 +241,16 @@ html[data-brand="jal"] {
   --action-primary-text-color-focus: var(--jal-action-primary-text);
   --action-primary-text-color-disabled: var(--jal-action-primary-text);
 
-  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--jal-action-secondary-stroke);
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--jal-action-secondary-stroke);
   --action-secondary-background: var(--jal-action-secondary-bg);
   --action-secondary-background-hover: var(--jal-action-secondary-bg-hover);
   --action-secondary-background-focus: var(--jal-action-secondary-bg-focus);
-  --action-secondary-background-disabled: var(
-    --jal-action-secondary-bg-disabled
-  );
+  --action-secondary-background-disabled: var(--jal-action-secondary-bg-disabled);
   --action-secondary-text-color: var(--jal-action-secondary-text);
   --action-secondary-text-color-hover: var(--jal-action-secondary-text);
   --action-secondary-text-color-focus: var(--jal-action-secondary-text);
   --action-secondary-text-color-disabled: var(--jal-action-secondary-text);
-  --action-tertiary-stroke: var(--jal-action-tertiary-stroke)
-    var(--stroke-solid) var(--jal-action-tertiary-stroke);
+  --action-tertiary-stroke: var(--jal-action-tertiary-stroke) var(--stroke-solid) var(--jal-action-tertiary-stroke);
   --action-tertiary-background: var(--jal-action-tertiary-bg);
   --action-tertiary-background-hover: var(--jal-action-tertiary-bg-hover);
   --action-tertiary-background-focus: var(--jal-action-tertiary-bg-focus);
@@ -264,14 +259,11 @@ html[data-brand="jal"] {
   --action-tertiary-text-color-hover: var(--jal-action-tertiary-text);
   --action-tertiary-text-color-focus: var(--jal-action-tertiary-text);
   --action-tertiary-text-color-disabled: var(--jal-action-tertiary-text);
-  --action-attention-stroke: var(--jal-action-important-stroke)
-    var(--stroke-solid) var(--jal-action-important-stroke);
+  --action-attention-stroke: var(--jal-action-important-stroke) var(--stroke-solid) var(--jal-action-important-stroke);
   --action-important-background: var(--jal-action-important-bg);
   --action-important-background-hover: var(--jal-action-important-bg-hover);
   --action-attention-background-focus: var(--jal-action-important-bg-focus);
-  --action-attention-background-disabled: var(
-    --jal-action-important-bg-disabled
-  );
+  --action-attention-background-disabled: var(--jal-action-important-bg-disabled);
   --action-attention-text-color: var(--jal-action-important-text);
   --action-attention-text-color-hover: var(--jal-action-important-text);
   --action-attention-text-color-focus: var(--jal-action-important-text);
@@ -290,18 +282,12 @@ html[data-brand="jal"] {
   --feedback-info-stroke-base: var(--feedback-info-base);
   --feedback-warning-stroke-base: var(--feedback-warning-base);
   --feedback-attention-stroke-base: var(--feedback-attention-base);
-  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-plain-stroke-base);
-  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-neutral-stroke-base);
-  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-positive-stroke-base);
-  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-info-stroke-base);
-  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-warning-stroke-base);
-  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-attention-stroke-base);
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-stroke-base);
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-stroke-base);
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-stroke-base);
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-info-stroke-base);
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-warning-stroke-base);
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-attention-stroke-base);
   --feedback-plain-background: var(--jal-alert-plain-bg);
   --feedback-neutral-background: var(--jal-alert-neutral-bg);
   --feedback-positive-background: var(--jal-alert-success-bg);
@@ -331,8 +317,8 @@ html[data-brand="jal"] {
 /* 1. BRAND PRIMITIVES                                                             */
 /*    Map primitive values to specific roles depending on the mode                 */
 /* =============================================================================== */
-html[data-brand="plain"] {
-  --font-family: "Courier New";
+html[data-brand='plain'] {
+  --font-family: 'Courier New';
   /* Greyscale Palette */
   --plain-white: #ffffff;
   --plain-black: #000000;
@@ -352,7 +338,7 @@ html[data-brand="plain"] {
 /* 2. LIGHT MODE THEME (COLOR ONLY)                                                */
 /*    Map primitive values to specific roles depending on the mode                 */
 /* =============================================================================== */
-html[data-brand="plain"][data-theme="light"] {
+html[data-brand='plain'][data-theme='light'] {
   /* Buttons */
   --plain-action-primary-bg: var(--plain-black);
   --plain-action-primary-text: var(--plain-white);
@@ -390,7 +376,7 @@ html[data-brand="plain"][data-theme="light"] {
 /* 3. DARK MODE THEME (COLOR ONLY)                                                  */
 /*    Map primitive values to specific roles depending on the mode                  */
 /* ================================================================================ */
-html[data-brand="plain"][data-theme="dark"] {
+html[data-brand='plain'][data-theme='dark'] {
   /* Buttons */
   --plain-action-primary-bg: var(--plain-white);
   --plain-action-primary-text: var(--plain-black);
@@ -428,10 +414,9 @@ html[data-brand="plain"][data-theme="dark"] {
 /* 4. SET THE FOUNDATION                                                           */
 /*    Map tokens to semantic or component contexts .                               */
 /* =============================================================================== */
-html[data-brand="plain"] {
+html[data-brand='plain'] {
   /* Action */
-  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--plain-action-primary-border);
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-action-primary-border);
   --action-primary-background: var(--plain-action-primary-bg);
   --action-primary-background-hover: var(--plain-action-primary-bg);
   --action-primary-background-focus: var(--plain-action-primary-bg);
@@ -440,8 +425,7 @@ html[data-brand="plain"] {
   --action-primary-text-color-hover: var(--plain-action-primary-text);
   --action-primary-text-color-focus: var(--plain-action-primary-text);
   --action-primary-text-color-disabled: var(--plain-action-primary-text);
-  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--plain-action-secondary-border);
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-action-secondary-border);
   --action-secondary-background: var(--plain-action-secondary-bg);
   --action-secondary-background-hover: var(--plain-action-secondary-bg);
   --action-secondary-background-focus: var(--plain-action-secondary-bg);
@@ -450,8 +434,7 @@ html[data-brand="plain"] {
   --action-secondary-text-color-hover: var(--plain-action-secondary-text);
   --action-secondary-text-color-focus: var(--plain-action-secondary-text);
   --action-secondary-text-color-disabled: var(--plain-action-secondary-text);
-  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--plain-action-tertiary-border);
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-action-tertiary-border);
   --action-tertiary-background: var(--plain-action-tertiary-bg);
   --action-tertiary-background-hover: var(--plain-action-tertiary-bg);
   --action-tertiary-background-focus: var(--plain-action-tertiary-bg);
@@ -460,8 +443,7 @@ html[data-brand="plain"] {
   --action-tertiary-text-color-hover: var(--plain-action-tertiary-text);
   --action-tertiary-text-color-focus: var(--plain-action-tertiary-text);
   --action-tertiary-text-color-disabled: var(--plain-action-tertiary-text);
-  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--plain-action-important-border);
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-action-important-border);
   --action-attention-background: var(--plain-action-important-bg);
   --action-attention-background-hover: var(--plain-action-important-bg);
   --action-attention-background-focus: var(--plain-action-important-bg);
@@ -484,18 +466,12 @@ html[data-brand="plain"] {
   --feedback-info-stroke-base: var(--feedback-info-base);
   --feedback-warning-stroke-base: var(--feedback-warning-base);
   --feedback-attention-stroke-base: var(--feedback-attention-base);
-  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-plain-stroke-base);
-  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-neutral-stroke-base);
-  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-positive-stroke-base);
-  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-info-stroke-base);
-  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-warning-stroke-base);
-  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-attention-stroke-base);
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-stroke-base);
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-stroke-base);
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-stroke-base);
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-info-stroke-base);
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-warning-stroke-base);
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-attention-stroke-base);
   --feedback-plain-background: var(--alert-background);
   --feedback-neutral-background: var(--alert-background);
   --feedback-positive-background: var(--alert-background);
@@ -520,11 +496,10 @@ html[data-brand="plain"] {
 /* =============================================================================== */
 /* 1. BRAND PRIMITIVES                                                             */
 /* =============================================================================== */
-html[data-brand="ana"] {
-  --font-family: "Myriad Pro", "Segoe UI", Helvetica, Arial, Verdana, Roboto,
-    "Droid Sans", "Hiragino Sans", "Hiragino Kaku Gothic ProN", HiraKakuProN-W3,
-    "Hiragino Kaku Gothic Pro", HiraKakuPro-W3, "Noto Sans CJK JP", Meiryo,
-    Osaka, "MS PGothic", "sans-serif";
+html[data-brand='ana'] {
+  --font-family: 'Myriad Pro', 'Segoe UI', Helvetica, Arial, Verdana, Roboto, 'Droid Sans', 'Hiragino Sans',
+    'Hiragino Kaku Gothic ProN', HiraKakuProN-W3, 'Hiragino Kaku Gothic Pro', HiraKakuPro-W3, 'Noto Sans CJK JP', Meiryo,
+    Osaka, 'MS PGothic', 'sans-serif';
 
   /* Neutral Greys */
   --ana-grey-50: #f9f9f9;
@@ -577,7 +552,7 @@ html[data-brand="ana"] {
 /* =============================================================================== */
 /* 2. LIGHT MODE                                                                   */
 /* =============================================================================== */
-html[data-brand="ana"][data-theme="light"] {
+html[data-brand='ana'][data-theme='light'] {
   --ana-focus-outline: var(--ana-blue-300);
 
   /* Icon Colors */
@@ -655,7 +630,7 @@ html[data-brand="ana"][data-theme="light"] {
 /* =============================================================================== */
 /* 3. DARK MODE                                                                    */
 /* =============================================================================== */
-html[data-brand="ana"][data-theme="dark"] {
+html[data-brand='ana'][data-theme='dark'] {
   --ana-focus-outline: var(--ana-blue-200);
 
   /* Icon Colors */
@@ -736,12 +711,11 @@ html[data-brand="ana"][data-theme="dark"] {
 /* 4. SET THE FOUNDATION                                             */
 /* Map tokens to semantic or component contexts .                    */
 /* ================================================================= */
-html[data-brand="ana"] {
+html[data-brand='ana'] {
   --card-radius: var(--radius-150);
   --action-radius: var(--radius-400);
   --action-font-weight: var(--font-weight-bold);
-  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--ana-action-primary-stroke);
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-action-primary-stroke);
   --action-primary-background: var(--ana-action-primary-bg);
   --action-primary-background-hover: var(--ana-action-primary-bg-hover);
   --action-primary-background-focus: var(--ana-action-primary-bg-focus);
@@ -751,21 +725,17 @@ html[data-brand="ana"] {
   --action-primary-text-color-focus: var(--ana-action-primary-text);
   --action-primary-text-color-disabled: var(--ana-action-primary-text);
 
-  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--ana-action-secondary-stroke);
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-action-secondary-stroke);
   --action-secondary-background: var(--ana-action-secondary-bg);
   --action-secondary-background-hover: var(--ana-action-secondary-bg-hover);
   --action-secondary-background-focus: var(--ana-action-secondary-bg-focus);
-  --action-secondary-background-disabled: var(
-    --ana-action-secondary-bg-disabled
-  );
+  --action-secondary-background-disabled: var(--ana-action-secondary-bg-disabled);
   --action-secondary-text-color: var(--ana-action-secondary-text);
   --action-secondary-text-color-hover: var(--ana-action-secondary-text);
   --action-secondary-text-color-focus: var(--ana-action-secondary-text);
   --action-secondary-text-color-disabled: var(--ana-action-secondary-text);
 
-  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--ana-action-tertiary-stroke);
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-action-tertiary-stroke);
   --action-tertiary-background: var(--ana-action-tertiary-bg);
   --action-tertiary-background-hover: var(--ana-action-tertiary-bg-hover);
   --action-tertiary-background-focus: var(--ana-action-tertiary-bg-focus);
@@ -775,14 +745,11 @@ html[data-brand="ana"] {
   --action-tertiary-text-color-focus: var(--ana-action-tertiary-text);
   --action-tertiary-text-color-disabled: var(--ana-action-tertiary-text);
 
-  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--ana-action-important-stroke);
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-action-important-stroke);
   --action-important-background: var(--ana-action-important-bg);
   --action-important-background-hover: var(--ana-action-important-bg-hover);
   --action-attention-background-focus: var(--ana-action-important-bg-focus);
-  --action-attention-background-disabled: var(
-    --ana-action-important-bg-disabled
-  );
+  --action-attention-background-disabled: var(--ana-action-important-bg-disabled);
   --action-attention-text-color: var(--ana-action-important-text);
   --action-attention-text-color-hover: var(--ana-action-important-text);
   --action-attention-text-color-focus: var(--ana-action-important-text);
@@ -803,18 +770,12 @@ html[data-brand="ana"] {
   --feedback-warning-stroke-base: var(--feedback-warning-base);
   --feedback-attention-stroke-base: var(--feedback-attention-base);
 
-  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-plain-stroke-base);
-  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-neutral-stroke-base);
-  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-positive-stroke-base);
-  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-info-stroke-base);
-  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-warning-stroke-base);
-  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-attention-stroke-base);
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-stroke-base);
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-stroke-base);
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-stroke-base);
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-info-stroke-base);
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-warning-stroke-base);
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-attention-stroke-base);
 
   --feedback-plain-background: var(--ana-alert-plain-bg);
   --feedback-neutral-background: var(--ana-alert-neutral-bg);

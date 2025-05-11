@@ -1,12 +1,12 @@
 /* myApp */
 class appNavbarHome extends HTMLElement {
   static get observedAttributes() {
-    return ["link", "title"];
+    return ['link', 'title'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -61,8 +61,8 @@ class appNavbarHome extends HTMLElement {
 
     </style>
 
-    <mui-link href="${this.getAttribute("link")}">${this.getAttribute(
-      "title"
+    <mui-link href="${this.getAttribute('link')}">${this.getAttribute(
+      'title',
     )}</mui-link>
 
     `;
@@ -71,4 +71,4 @@ class appNavbarHome extends HTMLElement {
   }
 }
 
-customElements.define("app-navbar-home", appNavbarHome);
+customElements.define('app-navbar-home', appNavbarHome);

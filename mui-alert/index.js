@@ -1,70 +1,70 @@
 class muiAlert extends HTMLElement {
   static get observedAttributes() {
-    return ["variant"];
+    return ['variant'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    const rawVariant = this.getAttribute("variant") || "positive";
+    const rawVariant = this.getAttribute('variant') || 'positive';
 
     // Map aliases to internal token values
     const variantAliases = {
-      success: "positive",
-      error: "attention",
+      success: 'positive',
+      error: 'attention',
     };
 
     const variant = variantAliases[rawVariant] || rawVariant;
 
     // Normalize the attribute so :host([variant=...]) CSS works
-    this.setAttribute("variant", variant);
+    this.setAttribute('variant', variant);
 
     // Define aria-live mapping based on variant
     const ariaLiveMapping = {
-      positive: "polite", // Success is typically less urgent
-      info: "polite", // Info is typically less urgent
-      warning: "assertive", // Warnings may need immediate attention
-      attention: "assertive", // Errors require immediate attention
+      positive: 'polite', // Success is typically less urgent
+      info: 'polite', // Info is typically less urgent
+      warning: 'assertive', // Warnings may need immediate attention
+      attention: 'assertive', // Errors require immediate attention
     };
 
     // Apply accessibility attributes to the host element
-    this.setAttribute("role", "alert");
-    this.setAttribute("aria-live", ariaLiveMapping[variant] || "polite");
+    this.setAttribute('role', 'alert');
+    this.setAttribute('aria-live', ariaLiveMapping[variant] || 'polite');
 
     const iconTag =
       {
-        positive: "mui-icon-check",
-        info: "mui-icon-info",
-        warning: "mui-icon-warning",
-        attention: "mui-icon-attention",
-      }[variant] || "mui-icon-check";
+        positive: 'mui-icon-check',
+        info: 'mui-icon-info',
+        warning: 'mui-icon-warning',
+        attention: 'mui-icon-attention',
+      }[variant] || 'mui-icon-check';
 
     const iconColor =
       {
-        positive: "--feedback-positive-icon",
-        info: "--feedback-info-icon",
-        warning: "--feedback-warning-icon",
-        attention: "--feedback-attention-icon",
-      }[variant] || "--feedback-positive-icon";
+        positive: '--feedback-positive-icon',
+        info: '--feedback-info-icon',
+        warning: '--feedback-warning-icon',
+        attention: '--feedback-attention-icon',
+      }[variant] || '--feedback-positive-icon';
 
     const labelColor =
       {
-        positive: "--feedback-positive-text",
-        info: "--feedback-info-text",
-        warning: "--feedback-warning-text",
-        attention: "--feedback-attention-text",
-      }[variant] || "--feedback-positive-text";
+        positive: '--feedback-positive-text',
+        info: '--feedback-info-text',
+        warning: '--feedback-warning-text',
+        attention: '--feedback-attention-text',
+      }[variant] || '--feedback-positive-text';
 
     const labelText =
       {
-        positive: "Success!",
-        info: "Info:",
-        warning: "Warning!",
-        attention: "Error!",
-      }[variant] || "Success!";
+        positive: 'Success!',
+        info: 'Info:',
+        warning: 'Warning!',
+        attention: 'Error!',
+      }[variant] || 'Success!';
 
     const styles = `
       :host {
@@ -103,16 +103,16 @@ class muiAlert extends HTMLElement {
         gap: var(--space-000);
       }
 
-      ${["positive", "info", "warning", "attention"]
+      ${['positive', 'info', 'warning', 'attention']
         .map(
           (v) => `
         :host([variant="${v}"]) {
           border: var(--feedback-${v}-border);
           background: var(--feedback-${v}-background);
         }
-      `
+      `,
         )
-        .join("")}
+        .join('')}
     `;
 
     // Add the feedback states to body
@@ -128,4 +128,4 @@ class muiAlert extends HTMLElement {
   }
 }
 
-customElements.define("mui-alert", muiAlert);
+customElements.define('mui-alert', muiAlert);

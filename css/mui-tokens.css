@@ -20,7 +20,7 @@
   */
 
   /* Font-family */
-  --font-family: system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-family: system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 
   /* Type Scale Reminder */
   /* 6px, 7px, 8px, 9px, 10px, 11px, 12px, 14px, 16px, 18px, 21px, 24px, 36px, 48px, 60px, 72px, 84px, 96px, 108, 120, 132, 144, 156, 168, 180, 192 */
@@ -198,11 +198,11 @@
   --stroke-solid: solid;
   --stroke-outset: outset;
 
-  /* Semantic Tokens - Expresses meaning or state
-=======================================================================================*/
-
-  /* TOKEN STRUCTURE */
-  /* Token Key: [identifier (Optional)]-[variant]-[property-name]-[state] */
+  /* SEMANTIC TOKENS - Expresses meaning or state                                    */
+  /* =============================================================================== */
+  /* TOKEN STRUCTURE                                                               */
+  /* Token Key: [identifier (Optional)]-[variant]-[property-name]-[state]          */
+  /* =============================================================================== */
 
   /* Feedback Base • Badges, Borders, Focus */
   --feedback-focus-stroke-base: var(--feedback-focus-base);
@@ -214,18 +214,12 @@
   --feedback-attention-stroke-base: var(--feedback-attention-base);
 
   /* Feedback • Alerts, Messages, Notifciations */
-  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-plain-stroke-base);
-  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-neutral-stroke-base);
-  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-positive-stroke-base);
-  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-info-stroke-base);
-  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-warning-stroke-base);
-  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid)
-    var(--feedback-attention-stroke-base);
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-stroke-base);
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-stroke-base);
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-stroke-base);
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-info-stroke-base);
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-warning-stroke-base);
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-attention-stroke-base);
 
   /* Call to Actions • Buttons and Link Buttons */
 
@@ -238,7 +232,7 @@
   --action-font-weight: var(--font-weight-medium);
 }
 
-html[data-theme="light"] {
+html[data-theme='light'] {
   /* Feedback Base • Badges, Borders, Focus */
   --feedback-focus-base: var(--blue-500);
   --feedback-plain-base: var(--black-opacity-50);
@@ -271,8 +265,7 @@ html[data-theme="light"] {
   --feedback-attention-text: var(--red-900);
 
   /* Action */
-  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--black-opacity-0);
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-background: var(--grey-900);
   --action-primary-background-hover: var(--grey-1000);
   --action-primary-background-focus: var(--grey-1000);
@@ -282,8 +275,7 @@ html[data-theme="light"] {
   --action-primary-text-color-focus: var(--white);
   --action-primary-text-color-disabled: var(--grey-400);
 
-  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--grey-800);
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--grey-800);
   --action-secondary-background: var(--white-opacity-0);
   --action-secondary-background-hover: var(--grey-100);
   --action-secondary-background-focus: var(--grey-100);
@@ -293,8 +285,7 @@ html[data-theme="light"] {
   --action-secondary-text-color-focus: var(--grey-1000);
   --action-secondary-text-color-disabled: var(--grey-400);
 
-  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--white-opacity-0);
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-background: var(--white-opacity-0);
   --action-tertiary-background-hover: var(--black-opacity-10);
   --action-tertiary-background-focus: var(--black-opacity-10);
@@ -304,8 +295,7 @@ html[data-theme="light"] {
   --action-tertiary-text-color-focus: var(--grey-1000);
   --action-tertiary-text-color-disabled: var(--grey-400);
 
-  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--black-opacity-0);
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-attention-background: var(--red-500);
   --action-attention-background-hover: var(--red-600);
   --action-attention-background-focus: var(--red-600);
@@ -316,7 +306,7 @@ html[data-theme="light"] {
   --action-attention-text-color-disabled: var(--red-300);
 }
 
-html[data-theme="dark"] {
+html[data-theme='dark'] {
   /* Feedback Base – Badges, Borders, Focus */
   --feedback-focus-base: var(--blue-300);
   --feedback-plain-base: var(--white-opacity-50);
@@ -349,8 +339,7 @@ html[data-theme="dark"] {
   --feedback-attention-text: var(--red-100);
 
   /* Action */
-  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--black-opacity-0);
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-background: var(--grey-200);
   --action-primary-background-hover: var(--grey-100);
   --action-primary-background-focus: var(--grey-100);
@@ -360,8 +349,7 @@ html[data-theme="dark"] {
   --action-primary-text-color-focus: var(--grey-900);
   --action-primary-text-color-disabled: var(--grey-400);
 
-  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--grey-200);
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--grey-200);
   --action-secondary-background: var(--black-opacity-0);
   --action-secondary-background-hover: var(--grey-800);
   --action-secondary-background-focus: var(--grey-800);
@@ -371,8 +359,7 @@ html[data-theme="dark"] {
   --action-secondary-text-color-focus: var(--grey-50);
   --action-secondary-text-color-disabled: var(--grey-600);
 
-  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--black-opacity-0);
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-tertiary-background: transparent;
   --action-tertiary-background-hover: var(--white-opacity-10);
   --action-tertiary-background-focus: var(--white-opacity-10);
@@ -382,8 +369,7 @@ html[data-theme="dark"] {
   --action-tertiary-text-color-focus: var(--grey-50);
   --action-tertiary-text-color-disabled: var(--grey-600);
 
-  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid)
-    var(--black-opacity-0);
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-attention-background: var(--red-600);
   --action-attention-background-hover: var(--red-700);
   --action-attention-background-focus: var(--red-700);
@@ -394,13 +380,11 @@ html[data-theme="dark"] {
   --action-attention-text-color-disabled: var(--red-300);
 }
 
-/* Contextual tokens - Applies a primitive to a specific use
-  =======================================================================================*/
-
-/* TOKEN STRUCTURE */
-/* Token Key: [context]-[property-name]-[state (Optional)] */
-
-/* BASE */
+/* CONTEXTUAL TOKENS - Applies a primitive to a specific use                       */
+/* =============================================================================== */
+/* TOKEN STRUCTURE                                                                 */
+/* Token Key: [context]-[property-name]-[state (Optional)]                         */
+/* =============================================================================== */
 :where(html) {
   /* Text */
   --text-color: var(--grey-900);
@@ -427,40 +411,35 @@ html[data-theme="dark"] {
 
   /* Outline */
   --outline-color: var(--feedback-focus-stroke-base);
-  --outline-thin: var(--stroke-size-100) var(--stroke-outset)
-    var(--outline-color);
-  --outline-medium: var(--stroke-size-300) var(--stroke-outset)
-    var(--outline-color);
-  --outline-thick: var(--stroke-size-500) var(--stroke-outset)
-    var(--outline-color);
+  --outline-thin: var(--stroke-size-100) var(--stroke-outset) var(--outline-color);
+  --outline-medium: var(--stroke-size-300) var(--stroke-outset) var(--outline-color);
+  --outline-thick: var(--stroke-size-500) var(--stroke-outset) var(--outline-color);
 }
 
-html[data-theme="light"] {
+html[data-theme='light'] {
   /* Text */
   --text-color: var(--grey-900);
   /* Border */
   --border-color: var(--grey-200);
 }
 
-html[data-theme="dark"] {
+html[data-theme='dark'] {
   /* Text */
   --text-color: var(--grey-200);
   /* Border */
   --border-color: var(--grey-600);
 }
 
-/* Component tokens - Tied to specific UI components
-  =======================================================================================*/
-
-/* TOKEN STRUCTURE */
-/* Token Example: --button-background-primary */
-/* Token Key: [component]-[property-name]-[variant]-[state] */
-
-/* USING THE TOKEN */
-/* Using the property name helps indicate what CSS property the token is mapped to. */
-/* CSS Usage Example: background: var(--button-background-primary); */
-
-/* BASE */
+/* COMPONENT TOKENS - Tied to specific UI components */
+/* =============================================================================== */
+/* TOKEN STRUCTURE                                                                 */
+/* Token Example: --button-background-primary                                      */
+/* Token Key: [component]-[property-name]-[variant]-[state]                        */
+/*                                                                                 */
+/* USING THE TOKEN                                                                 */
+/* Using the property name helps indicate what CSS property the token is mapped to.*/
+/* CSS Usage Example: background: var(--button-background-primary);                */
+/* =============================================================================== */
 :where(html) {
   /* Switch */
   --switch-offset: 1px;
@@ -508,19 +487,16 @@ html[data-theme="dark"] {
 
   /* Notification */
   --notification-radius: var(--radius-200);
-  --notification-padding: var(--space-100) var(--space-100) var(--space-100)
-    var(--space-400);
+  --notification-padding: var(--space-100) var(--space-100) var(--space-100) var(--space-400);
   --notification-gap-horizontal: var(--space-200);
 }
 
-/* LIGHT THEME - DEFAULT
-  =========================================================================*/
-
-/* Required on the HTML Tag --> [data-theme="light"] */
-/* OR */
-/* Create a Toggle Switch to control theme */
-
-html[data-theme="light"] {
+/* LIGHT THEME - DEFAULT */
+/* =============================================================================== */
+/* Apply [data-theme="light"] to HTML
+/* Create a Toggle Switch to control theme                                         */
+/* =============================================================================== */
+html[data-theme='light'] {
   /* Switch */
   --switch-track-background: var(--grey-300);
   --switch-track-background-checked: var(--green-500);
@@ -561,14 +537,11 @@ html[data-theme="light"] {
   --input-icon: var(--black);
 }
 
-/* DARK THEME
-  =========================================================================*/
-
-/* Required on the HTML Tag --> [data-theme="dark"] */
-/* OR */
-/* Create a Toggle Switch to control theme */
-
-html[data-theme="dark"] {
+/* DARK THEME */
+/* =============================================================================== */
+/* Create a Toggle Switch to control theme                                         */
+/* =============================================================================== */
+html[data-theme='dark'] {
   /* Switch */
   --switch-track-background: var(--grey-600);
   --switch-track-background-checked: var(--green-600);
