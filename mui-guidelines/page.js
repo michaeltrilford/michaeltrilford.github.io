@@ -1,7 +1,7 @@
 class GuidelinesPage extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     
@@ -22,21 +22,41 @@ class GuidelinesPage extends HTMLElement {
 
         <page-card title="Access UX Guides" description="MUI integrates with Guru Guides to provide in-context UX guidance for designers working in Figma.">
           <mui-v-stack slot="body" space="var(--space-600)">  
+
+            <mui-responsive breakpoint="900">
+
+              <mui-grid gap="var(--space-700)" style="padding: var(--space-200) var(--space-500) var(--space-000) var(--space-500)" slot="showAbove">
+                <mui-v-stack space="var(--space-200)">
+                  <mui-heading size="4" level="4">Figma Plugin</mui-heading>  
+                  <mui-body size="medium">Install via <mui-link size="medium" weight="bold" href="https://www.figma.com/community/plugin/1471341082690554711/guru-guides" target="_blank">Figma</mui-link> and access MUI Guides directly in Figma.</mui-body>
+                </mui-v-stack>
+                <mui-v-stack space="var(--space-200)">
+                  <mui-heading size="4" level="4">Website</mui-heading>
+                  <mui-body size="medium">Visit <mui-link size="medium" weight="bold" href="https://guides.gurusuite.xyz/" target="_blank">guides.gurusuite.xyz</mui-link> and view Mui Guides in-browser.</mui-body>
+                </mui-v-stack>
+              </mui-grid>
+
+              <mui-v-stack space="var(--space-400)" slot="showBelow">  
+                <mui-v-stack space="var(--space-200)">
+                  <mui-heading size="4" level="4">Figma Plugin</mui-heading>  
+                  <mui-body size="medium">Install via <mui-link size="medium" weight="bold" href="https://www.figma.com/community/plugin/1471341082690554711/guru-guides" target="_blank">Figma Community</mui-link> and access MUI Guides directly in Figma.</mui-body>
+                </mui-v-stack>
+                <mui-v-stack space="var(--space-200)">
+                  <mui-heading size="4" level="4">Website</mui-heading>
+                  <mui-body size="medium">Visit <mui-link size="medium" weight="bold" href="https://guides.gurusuite.xyz/" target="_blank">guides.gurusuite.xyz</mui-link> and view Mui Guides in-browser.</mui-body>
+                </mui-v-stack>
+              </mui-v-stack>
+
+            </mui-responsive>
+
+
             <mui-message 
               heading="Sign in to view MUI Guidelines" 
               variant="info"
             >
               To view the MUI Guidelines in Guru Guides, you must be logged in.
             </mui-message>
-            <mui-v-stack space="var(--space-200)">
-              <mui-heading size="4" level="4">Figma Plugin</mui-heading>  
-              <mui-body size="medium">Install via <mui-link size="medium" weight="bold" href="https://www.figma.com/community/plugin/1471341082690554711/guru-guides" target="_blank">Figma Community</mui-link> and access MUI Guides directly in Figma.</mui-body>
-            </mui-v-stack>
-            <mui-v-stack space="var(--space-200)">
-              <mui-heading size="4" level="4">Website</mui-heading>
-              <mui-body size="medium">Visit <mui-link size="medium" weight="bold" href="https://guides.gurusuite.xyz/" target="_blank">guides.gurusuite.xyz</mui-link> and view Mui Guides in-browser.</mui-body>
-            </mui-v-stack>
-            <mui-rule></mui-rule>
+
             <mui-v-stack space="var(--space-400)">
               <mui-heading size="4" level="4">Login Credentials</mui-heading>  
               <mui-v-stack space="var(--space-400)">        
@@ -56,4 +76,4 @@ class GuidelinesPage extends HTMLElement {
   }
 }
 
-customElements.define("guidelines-page", GuidelinesPage);
+customElements.define('guidelines-page', GuidelinesPage);

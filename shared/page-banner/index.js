@@ -1,7 +1,7 @@
 class pageBanner extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styles = `
       :host { display: block; }
@@ -52,7 +52,7 @@ class pageBanner extends HTMLElement {
       }
 
       .hero {
-        margin-top: -8rem;
+        margin-top: -10rem;
         width: 100%;
         height: auto;
       }
@@ -102,4 +102,4 @@ class pageBanner extends HTMLElement {
   }
 }
 
-customElements.define("page-banner", pageBanner);
+customElements.define('page-banner', pageBanner);
