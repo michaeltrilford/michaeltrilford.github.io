@@ -600,6 +600,16 @@ html[data-brand="ana"][data-theme="light"] {
   --icon-color-default: var(--ana-blue-800);
   --icon-color-inverted: var(--ana-white);
 
+  --ana-alert-plain-bg: var(--ana-grey-50);
+  --ana-alert-plain-text: var(--ana-grey-700);
+  --ana-alert-plain-border: var(--ana-grey-300);
+  --ana-alert-plain-icon: var(--ana-grey-500);
+
+  --ana-alert-neutral-bg: var(--ana-grey-50);
+  --ana-alert-neutral-text: var(--ana-grey-700);
+  --ana-alert-neutral-border: var(--ana-grey-100);
+  --ana-alert-neutral-icon: var(--ana-grey-500);
+
   --ana-alert-info-bg: var(--ana-blue-50);
   --ana-alert-info-text: var(--ana-blue-700);
   --ana-alert-info-border: var(--ana-blue-100);
@@ -667,6 +677,16 @@ html[data-brand="ana"][data-theme="dark"] {
   /* Icon Colors */
   --icon-color-default: var(--ana-blue-300);
   --icon-color-inverted: var(--ana-white);
+
+  --ana-alert-plain-bg: var(--ana-grey-900);
+  --ana-alert-plain-text: var(--ana-grey-100);
+  --ana-alert-plain-border: var(--ana-grey-800);
+  --ana-alert-plain-icon: var(--ana-grey-300);
+
+  --ana-alert-neutral-bg: var(--ana-grey-900);
+  --ana-alert-neutral-text: var(--ana-grey-100);
+  --ana-alert-neutral-border: var(--ana-grey-800);
+  --ana-alert-neutral-icon: var(--ana-grey-300);
 
   --ana-alert-info-bg: var(--ana-blue-900);
   --ana-alert-info-text: var(--ana-blue-100);

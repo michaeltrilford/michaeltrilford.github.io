@@ -11,13 +11,14 @@ class storyCodeSnippet extends HTMLElement {
     const styles = `
       :host { 
         display: inline-flex;
+        margin:  var(--space-025) var(--space-000);
       }
 
       code {
         background: var(--app-story-code-snippet-background);
         border-radius: var(--radius-100);
         color: var(--app-story-code-text);
-        padding: var(--space-050) var(--space-100);
+        padding: var(--space-025) var(--space-100);
         font-size: var(--font-size-15);
       }
 

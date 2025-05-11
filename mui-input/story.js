@@ -50,6 +50,20 @@ class storyInput extends HTMLElement {
         description: "Provide the input with a unique label",
       },
       {
+        name: "hideLabel",
+        type: "boolean",
+        options: "hide-label",
+        default: "",
+        description: "Hide the label",
+      },
+      {
+        name: "disabled",
+        type: "boolean",
+        options: "disabled",
+        default: "",
+        description: "Disable the input",
+      },
+      {
         name: "name",
         type: "string",
         options: "{text}",

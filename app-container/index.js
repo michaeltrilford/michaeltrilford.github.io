@@ -47,6 +47,7 @@ export class AppContainer extends HTMLElement {
       "/visual-part-selectors": "story-parts-visual",
 
       "/input": "story-input",
+      "/select": "story-select",
       "/switch": "story-switch",
       "/link": "story-link",
       "/alerts": "story-alert",

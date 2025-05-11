@@ -38,7 +38,9 @@ class storyTypeRow extends HTMLElement {
       rawOptions !== "-"
         ? rawOptions
             .split(",")
-            .map((opt) => `<code>${opt.trim()}</code>`)
+            .map(
+              (opt) => `<story-code-snippet>${opt.trim()}</story-code-snippet>`
+            )
             .join(" ")
         : "-";
 
