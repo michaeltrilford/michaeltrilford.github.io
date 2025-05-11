@@ -52,7 +52,7 @@ html[data-theme="light"] {
 
   --app-story-card-background: var(--grey-100);
   --app-story-card-canvas: var(--white);
-  --app-story-code-bg: var(--mui-brand-300);
+  --app-story-code-snippet-background: var(--mui-brand-300);
   --app-story-code-text: var(--black);
   --app-story-banner-gradient-start: var(--black-opacity-10);
   --app-story-banner-gradient-end: var(--white-opacity-20);
@@ -82,7 +82,7 @@ html[data-theme="dark"] {
 
   --app-story-card-background: var(--grey-900);
   --app-story-card-canvas: var(--grey-1000);
-  --app-story-code-bg: var(--mui-brand-300);
+  --app-story-code-snippet-background: var(--mui-brand-300);
   --app-story-code-text: var(--black);
   --app-story-banner-gradient-start: var(--white-opacity-10);
   --app-story-banner-gradient-end: var(--black-opacity-20);
@@ -112,7 +112,7 @@ html[data-brand="jal"][data-theme="light"] {
 
   --app-theme-toggle-bg: var(--jal-grey-200);
 
-  --app-story-code-bg: var(--jal-red-300);
+  --app-story-code-snippet-background: var(--jal-red-300);
   --app-story-code-text: var(--jal-white);
 }
 
@@ -131,10 +131,54 @@ html[data-brand="jal"][data-theme="dark"] {
 
   --app-theme-toggle-bg: var(--jal-red-200);
 
-  --app-story-code-bg: var(--jal-red-300);
+  --app-story-code-snippet-background: var(--jal-red-300);
   --app-story-code-text: var(--jal-white);
   --app-story-card-background: var(--jal-black);
   --app-story-card-canvas: var(--jal-grey-900);
+}
+
+/* =============================================================================== */
+/*   Theme Storefront: ANA                                                         */
+/*   Component theme alignment across storefront                                   */
+/* =============================================================================== */
+html[data-brand="ana"][data-theme="light"] {
+  --app-meta-theme-color: var(--ana-grey-200);
+  --app-skeleton: var(--ana-grey-200);
+  --app-background: var(--ana-grey-200);
+
+  --app-nav-accent: var(--ana-blue-600);
+  --app-nav-background: var(--ana-white);
+  --app-nav-border: var(--ana-grey-200);
+  --app-nav-home-hover: var(--ana-grey-100);
+  --app-nav-link: var(--ana-blue-600);
+  --app-nav-link-focus: var(--ana-grey-100);
+  --app-nav-group-color: var(--black-opacity-50);
+
+  --app-theme-toggle-bg: var(--ana-grey-200);
+
+  --app-story-code-snippet-background: var(--ana-blue-500);
+  --app-story-code-text: var(--ana-white);
+}
+
+html[data-brand="ana"][data-theme="dark"] {
+  --app-meta-theme-color: var(--ana-grey-900);
+  --app-skeleton: var(--ana-grey-900);
+  --app-background: var(--ana-grey-900);
+
+  --app-nav-accent: var(--ana-blue-200);
+  --app-nav-background: var(--ana-black);
+  --app-nav-border: var(--ana-grey-900);
+  --app-nav-home-hover: var(--ana-grey-1000);
+  --app-nav-link: var(--ana-blue-200);
+  --app-nav-link-focus: var(--ana-grey-1000);
+  --app-nav-group-color: var(--white-opacity-80);
+
+  --app-theme-toggle-bg: var(--ana-blue-200);
+
+  --app-story-code-snippet-background: var(--ana-blue-500);
+  --app-story-code-text: var(--ana-white);
+  --app-story-card-background: var(--ana-black);
+  --app-story-card-canvas: var(--ana-grey-900);
 }
 
 /* =============================================================================== */
@@ -156,7 +200,7 @@ html[data-brand="plain"][data-theme="light"] {
 
   --app-theme-toggle-bg: var(--plain-grey-200);
 
-  --app-story-code-bg: var(--plain-grey-200);
+  --app-story-code-snippet-background: var(--plain-grey-200);
   --app-story-code-text: var(--plain-black);
   --app-story-card-background: var(--plain-grey-100);
   --app-story-card-canvas: var(--plain-white);
@@ -177,7 +221,7 @@ html[data-brand="plain"][data-theme="dark"] {
 
   --app-theme-toggle-bg: var(--plain-grey-200);
 
-  --app-story-code-bg: var(--plain-white);
+  --app-story-code-snippet-background: var(--plain-white);
   --app-story-code-text: var(--plain-black);
   --app-story-card-background: var(--plain-grey-800);
   --app-story-card-canvas: var(--plain-grey-900);

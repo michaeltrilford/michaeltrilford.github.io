@@ -8,6 +8,24 @@ class ThemeSwitcher extends HTMLElement {
       jal: { theme: true },
       plain: { theme: true },
     };
+
+    // Define font links per brand
+    this.brandFontLinks = {
+      jal: [
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossOrigin: "anonymous",
+        },
+        {
+          rel: "stylesheet",
+          href:
+            "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap",
+        },
+      ],
+      // Add more brands as needed
+    };
   }
 
   connectedCallback() {
@@ -41,6 +59,7 @@ class ThemeSwitcher extends HTMLElement {
           options='[
             {"value": "default", "label": "Mui"},
             {"value": "jal", "label": "JAL"},
+            {"value": "ana", "label": "ANA"},
             {"value": "plain", "label": "Plain"}
           ]'>
         </mui-select>
@@ -62,16 +81,13 @@ class ThemeSwitcher extends HTMLElement {
 
   applySettings() {
     const brand = localStorage.getItem("brand") || "default";
-
     document.documentElement.setAttribute("data-brand", brand);
 
     const brandSwitcher = this.shadowRoot.getElementById("brand-switcher");
-
     if (brandSwitcher) {
       brandSwitcher.setAttribute("value", brand);
     }
 
-    // Update theme switchers based on brand capabilities
     this.updateSwitchers(brand);
   }
 
@@ -79,6 +95,9 @@ class ThemeSwitcher extends HTMLElement {
     const capabilities = this.brandCapabilities[brand] || {
       theme: true,
     };
+
+    this.removeFontLinks();
+    this.injectFontLinksForBrand(brand);
 
     // Dispatch event to inform dark-mode-toggle about theme capability
     this.dispatchEvent(
@@ -88,6 +107,33 @@ class ThemeSwitcher extends HTMLElement {
         composed: true,
       })
     );
+  }
+
+  injectFontLinksForBrand(brand) {
+    const links = this.brandFontLinks[brand];
+    if (!links) return;
+
+    const alreadyInjected = links.some((link) =>
+      document.head.querySelector(`link[href="${link.href}"]`)
+    );
+    if (alreadyInjected) return;
+
+    links.forEach(({ rel, href, crossOrigin }) => {
+      const linkEl = document.createElement("link");
+      linkEl.rel = rel;
+      linkEl.href = href;
+      if (crossOrigin) linkEl.crossOrigin = crossOrigin;
+      document.head.appendChild(linkEl);
+    });
+  }
+
+  removeFontLinks() {
+    Object.values(this.brandFontLinks)
+      .flat()
+      .forEach(({ href }) => {
+        const link = document.head.querySelector(`link[href="${href}"]`);
+        if (link) document.head.removeChild(link);
+      });
   }
 }
 
