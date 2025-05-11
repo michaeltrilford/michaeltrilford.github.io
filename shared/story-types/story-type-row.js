@@ -13,14 +13,6 @@ class storyTypeRow extends HTMLElement {
         display: block;
       }
 
-      code {
-        background: var(--app-story-code-bg);
-        border-radius: var(--radius-100);
-        padding: var(--space-050) var(--space-100);
-        font-size: var(--font-size-15);
-        color: var(--app-story-code-text);
-      }
-
       .visually-hidden {
         position: absolute;
         inset: 0;
@@ -51,7 +43,10 @@ class storyTypeRow extends HTMLElement {
         : "-";
 
     const rawDefault = this.getAttribute("default") || "-";
-    const defaultVal = rawDefault !== "-" ? `<code>${rawDefault}</code>` : "-";
+    const defaultVal =
+      rawDefault !== "-"
+        ? `<story-code-snippet>${rawDefault}</story-code-snippet>`
+        : "-";
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>

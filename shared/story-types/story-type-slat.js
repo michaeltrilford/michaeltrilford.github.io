@@ -17,15 +17,6 @@ class storyTypeSlat extends HTMLElement {
         font-weight: var(--font-weight-bold);
       }
 
-      code {
-        background: var(--app-story-code-bg);
-        color: var(--app-story-code-text);
-        box-shadow: 0 1px 0 0 var(--grey-100);
-        border-radius: var(--radius-100);
-        padding: var(--space-050) var(--space-100);
-        font-size: var(--font-size-15);
-      }
-
       .visually-hidden {
         position: absolute;
         inset: 0;
@@ -51,12 +42,17 @@ class storyTypeSlat extends HTMLElement {
       rawOptions !== "-"
         ? rawOptions
             .split(",")
-            .map((opt) => `<code>${opt.trim()}</code>`)
+            .map(
+              (opt) => `<story-code-snippet>${opt.trim()}</story-code-snippet>`
+            )
             .join(" ")
         : "-";
 
     const rawDefault = this.getAttribute("default") || "-";
-    const defaultVal = rawDefault !== "-" ? `<code>${rawDefault}</code>` : "-";
+    const defaultVal =
+      rawDefault !== "-"
+        ? `<story-code-snippet>${rawDefault}</story-code-snippet>`
+        : "-";
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>

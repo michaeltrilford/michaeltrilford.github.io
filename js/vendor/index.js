@@ -83,11 +83,7 @@ const addHeadElements = ({
 };
 
 const UtilArray = ["mui-utils/index.js"];
-const PartsArray = [
-  "mui-parts/index.js",
-  "mui-parts/helpers/index.js",
-  "mui-parts/helpers/slat-local.js",
-];
+const PartsArray = ["mui-parts/index.js"];
 const ThemeSwitcherArray = ["app-theme/index.js"];
 const AppCompArray = ["app-navbar/index.js"];
 
@@ -99,11 +95,9 @@ const SharedArray = [
   "shared/story-demo/index.js",
   "shared/story-types/index.js",
   "shared/story-icon-grid/index.js",
-];
-
-const TokensArray = [
-  "mui-tokens/helpers/index.js",
-  "mui-tokens/helpers/slat-local.js",
+  "shared/story-token-slat/index.js",
+  "shared/story-part-slat/index.js",
+  "shared/story-code-snippet/index.js",
 ];
 
 const ImagesArray = [
@@ -222,7 +216,6 @@ Promise.all([
   loadScripts(PartsArray),
   loadScripts(AppCompArray),
   loadScripts(SharedArray),
-  loadScripts(TokensArray),
   loadScripts(ImagesArray),
   loadScripts(MuiCompArray),
   loadScripts(RecipeArray),

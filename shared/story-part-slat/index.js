@@ -1,4 +1,4 @@
-class muiPartLocalSlat extends HTMLElement {
+class storyPartSlat extends HTMLElement {
   static get observedAttributes() {
     return ["token", "output", "usage"];
   }
@@ -21,14 +21,6 @@ class muiPartLocalSlat extends HTMLElement {
 
       mui-slat {
         align-items: start;
-      }
-
-      code {
-        background: var(--app-story-code-bg);
-        border-radius: var(--radius-100);
-        color: var(--app-story-code-text);
-        padding: var(--space-050) var(--space-100);
-        font-size: var(--font-size-15);
       }
 
       mui-h-stack::part(align-items) {
@@ -56,7 +48,7 @@ class muiPartLocalSlat extends HTMLElement {
       <mui-v-stack space="var(--space-100)">
 
         <mui-body size="x-small">
-          <code>${this.getAttribute("token")}</code>
+          <story-code-snippet>${this.getAttribute("token")}</story-code-snippet>
         </mui-body>
 
         <mui-body size="x-small">
@@ -74,4 +66,4 @@ class muiPartLocalSlat extends HTMLElement {
   }
 }
 
-customElements.define("mui-part-local-slat", muiPartLocalSlat);
+customElements.define("story-part-slat", storyPartSlat);

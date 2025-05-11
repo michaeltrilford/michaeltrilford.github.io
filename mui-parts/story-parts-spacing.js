@@ -17,7 +17,7 @@ class storyPartsSpacing extends HTMLElement {
         <mui-v-stack space="var(--space-700)">
 
           <story-card title="Padding">
-            <mui-part-local-slat slot="body" token="part(padding)" usage="Links, Buttons, Stacks, Body" output="Defines the padding of the element." ></mui-part-local-slat>
+            <story-part-slat slot="body" token="part(padding)" usage="Links, Buttons, Stacks, Body" output="Defines the padding of the element." ></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(padding) {
               <br />
@@ -28,7 +28,7 @@ class storyPartsSpacing extends HTMLElement {
           </story-card>
 
           <story-card title="Margin">
-            <mui-part-local-slat slot="body" token="part(margin)" usage="Links, Buttons, Stacks, Body" output="Defines the margin of the element." ></mui-part-local-slat>
+            <story-part-slat slot="body" token="part(margin)" usage="Links, Buttons, Stacks, Body" output="Defines the margin of the element." ></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(margin) {
               <br />
@@ -39,7 +39,7 @@ class storyPartsSpacing extends HTMLElement {
           </story-card>
 
           <story-card title="Gap">
-            <mui-part-local-slat slot="body" token="part(gap)" usage="Links, Buttons, Stacks, Body" output="Defines the gap between items when using Flex or Grid" ></mui-part-local-slat>
+            <story-part-slat slot="body" token="part(gap)" usage="Links, Buttons, Stacks, Body" output="Defines the gap between items when using Flex or Grid" ></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(gap) {
               <br />
@@ -50,7 +50,7 @@ class storyPartsSpacing extends HTMLElement {
           </story-card>
 
           <story-card title="Width">
-            <mui-part-local-slat slot="body" token="part(width)" usage="Links, Buttons, Stacks, Body" output="Defines the width of elements"></mui-part-local-slat>
+            <story-part-slat slot="body" token="part(width)" usage="Links, Buttons, Stacks, Body" output="Defines the width of elements"></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(width) {
               <br />
@@ -61,7 +61,7 @@ class storyPartsSpacing extends HTMLElement {
           </story-card>
 
           <story-card title="Height">
-            <mui-part-local-slat slot="body" token="part(height)" usage="Links, Buttons, Stacks, Body" output="Defines the height of elements"></mui-part-local-slat>
+            <story-part-slat slot="body" token="part(height)" usage="Links, Buttons, Stacks, Body" output="Defines the height of elements"></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(height) {
               <br />
@@ -72,7 +72,7 @@ class storyPartsSpacing extends HTMLElement {
           </story-card>
 
           <story-card title="Box Sizing">
-            <mui-part-local-slat slot="body" token="part(box-sizing)" usage="Links, Buttons, Stacks, Body" output="Defines how the object reacts to padding."></mui-part-local-slat>
+            <story-part-slat slot="body" token="part(box-sizing)" usage="Links, Buttons, Stacks, Body" output="Defines how the object reacts to padding."></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(box-sizing) {
               <br />

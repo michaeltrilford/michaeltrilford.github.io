@@ -1,4 +1,4 @@
-class muiTokenLocalSlat extends HTMLElement {
+class storyTokenSlat extends HTMLElement {
   static get observedAttributes() {
     return [
       "token",
@@ -36,14 +36,6 @@ class muiTokenLocalSlat extends HTMLElement {
 
       mui-slat {
         align-items: start;
-      }
-
-      code {
-        background: var(--app-story-code-bg);
-        border-radius: var(--radius-100);
-        color: var(--app-story-code-text);
-        padding: var(--space-050) var(--space-100);
-        font-size: var(--font-size-15);
       }
 
       .swatch {
@@ -145,7 +137,7 @@ class muiTokenLocalSlat extends HTMLElement {
       <mui-responsive breakpoint="767">
         <mui-slat slot="showAbove" style="grid-template-columns: 0.8fr 1.2fr; align-items: center;">
           <mui-body slot="start" size="x-small">
-            <code>${token}</code>
+            <story-code-snippet>${token}</story-code-snippet>
           </mui-body>
           <div slot="end">
             <mui-grid col="1fr 1fr">
@@ -158,7 +150,7 @@ class muiTokenLocalSlat extends HTMLElement {
 
         <mui-h-stack slot="showBelow" space="var(--space-200)" alignX="space-between" alignY="center" >
           <mui-v-stack space="var(--space-200)">
-            <mui-body size="x-small"><code>${token}</code></mui-body>
+            <mui-body size="x-small"><story-code-snippet>${token}</story-code-snippet></mui-body>
             <mui-body size="x-small">${output}</mui-body>
           </mui-v-stack>
           <mui-h-stack>
@@ -172,4 +164,4 @@ class muiTokenLocalSlat extends HTMLElement {
   }
 }
 
-customElements.define("mui-token-local-slat", muiTokenLocalSlat);
+customElements.define("story-token-slat", storyTokenSlat);
