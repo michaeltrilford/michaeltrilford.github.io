@@ -80,7 +80,7 @@ class muiIconToggle extends HTMLElement {
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: var(--interactive-radius);
+          border-radius: var(--action-radius);
         }
 
         button:focus {

@@ -229,65 +229,53 @@ html[data-brand="jal"][data-theme="dark"] {
 /* ================================================================= */
 html[data-brand="jal"] {
   --card-radius: var(--radius-150);
-  --interactive-radius: var(--radius-400);
-  --interactive-font-weight: var(--font-weight-bold);
-  --interactive-primary-stroke: var(--stroke-size-200) var(--stroke-style-solid)
+  --action-radius: var(--radius-400);
+  --action-font-weight: var(--font-weight-bold);
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid)
     var(--jal-action-primary-stroke);
-  --interactive-primary-background: var(--jal-action-primary-bg);
-  --interactive-primary-background-hover: var(--jal-action-primary-bg-hover);
-  --interactive-primary-background-focus: var(--jal-action-primary-bg-focus);
-  --interactive-primary-background-disabled: var(
-    --jal-action-primary-bg-disabled
-  );
-  --interactive-primary-text-color: var(--jal-action-primary-text);
-  --interactive-primary-text-color-hover: var(--jal-action-primary-text);
-  --interactive-primary-text-color-focus: var(--jal-action-primary-text);
-  --interactive-primary-text-color-disabled: var(--jal-action-primary-text);
+  --action-primary-background: var(--jal-action-primary-bg);
+  --action-primary-background-hover: var(--jal-action-primary-bg-hover);
+  --action-primary-background-focus: var(--jal-action-primary-bg-focus);
+  --action-primary-background-disabled: var(--jal-action-primary-bg-disabled);
+  --action-primary-text-color: var(--jal-action-primary-text);
+  --action-primary-text-color-hover: var(--jal-action-primary-text);
+  --action-primary-text-color-focus: var(--jal-action-primary-text);
+  --action-primary-text-color-disabled: var(--jal-action-primary-text);
 
-  --interactive-secondary-stroke: var(--stroke-size-200)
-    var(--stroke-style-solid) var(--jal-action-secondary-stroke);
-  --interactive-secondary-background: var(--jal-action-secondary-bg);
-  --interactive-secondary-background-hover: var(
-    --jal-action-secondary-bg-hover
-  );
-  --interactive-secondary-background-focus: var(
-    --jal-action-secondary-bg-focus
-  );
-  --interactive-secondary-background-disabled: var(
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid)
+    var(--jal-action-secondary-stroke);
+  --action-secondary-background: var(--jal-action-secondary-bg);
+  --action-secondary-background-hover: var(--jal-action-secondary-bg-hover);
+  --action-secondary-background-focus: var(--jal-action-secondary-bg-focus);
+  --action-secondary-background-disabled: var(
     --jal-action-secondary-bg-disabled
   );
-  --interactive-secondary-text-color: var(--jal-action-secondary-text);
-  --interactive-secondary-text-color-hover: var(--jal-action-secondary-text);
-  --interactive-secondary-text-color-focus: var(--jal-action-secondary-text);
-  --interactive-secondary-text-color-disabled: var(--jal-action-secondary-text);
-  --interactive-tertiary-stroke: var(--jal-action-tertiary-stroke)
-    var(--stroke-style-solid) var(--jal-action-tertiary-stroke);
-  --interactive-tertiary-background: var(--jal-action-tertiary-bg);
-  --interactive-tertiary-background-hover: var(--jal-action-tertiary-bg-hover);
-  --interactive-tertiary-background-focus: var(--jal-action-tertiary-bg-focus);
-  --interactive-tertiary-background-disabled: var(
-    --jal-action-tertiary-bg-disabled
-  );
-  --interactive-tertiary-text-color: var(--jal-action-tertiary-text);
-  --interactive-tertiary-text-color-hover: var(--jal-action-tertiary-text);
-  --interactive-tertiary-text-color-focus: var(--jal-action-tertiary-text);
-  --interactive-tertiary-text-color-disabled: var(--jal-action-tertiary-text);
-  --interactive-attention-stroke: var(--jal-action-important-stroke)
-    var(--stroke-style-solid) var(--jal-action-important-stroke);
-  --interactive-important-background: var(--jal-action-important-bg);
-  --interactive-important-background-hover: var(
-    --jal-action-important-bg-hover
-  );
-  --interactive-attention-background-focus: var(
-    --jal-action-important-bg-focus
-  );
-  --interactive-attention-background-disabled: var(
+  --action-secondary-text-color: var(--jal-action-secondary-text);
+  --action-secondary-text-color-hover: var(--jal-action-secondary-text);
+  --action-secondary-text-color-focus: var(--jal-action-secondary-text);
+  --action-secondary-text-color-disabled: var(--jal-action-secondary-text);
+  --action-tertiary-stroke: var(--jal-action-tertiary-stroke)
+    var(--stroke-solid) var(--jal-action-tertiary-stroke);
+  --action-tertiary-background: var(--jal-action-tertiary-bg);
+  --action-tertiary-background-hover: var(--jal-action-tertiary-bg-hover);
+  --action-tertiary-background-focus: var(--jal-action-tertiary-bg-focus);
+  --action-tertiary-background-disabled: var(--jal-action-tertiary-bg-disabled);
+  --action-tertiary-text-color: var(--jal-action-tertiary-text);
+  --action-tertiary-text-color-hover: var(--jal-action-tertiary-text);
+  --action-tertiary-text-color-focus: var(--jal-action-tertiary-text);
+  --action-tertiary-text-color-disabled: var(--jal-action-tertiary-text);
+  --action-attention-stroke: var(--jal-action-important-stroke)
+    var(--stroke-solid) var(--jal-action-important-stroke);
+  --action-important-background: var(--jal-action-important-bg);
+  --action-important-background-hover: var(--jal-action-important-bg-hover);
+  --action-attention-background-focus: var(--jal-action-important-bg-focus);
+  --action-attention-background-disabled: var(
     --jal-action-important-bg-disabled
   );
-  --interactive-attention-text-color: var(--jal-action-important-text);
-  --interactive-attention-text-color-hover: var(--jal-action-important-text);
-  --interactive-attention-text-color-focus: var(--jal-action-important-text);
-  --interactive-attention-text-color-disabled: var(--jal-action-important-text);
+  --action-attention-text-color: var(--jal-action-important-text);
+  --action-attention-text-color-hover: var(--jal-action-important-text);
+  --action-attention-text-color-focus: var(--jal-action-important-text);
+  --action-attention-text-color-disabled: var(--jal-action-important-text);
   --feedback-focus-base: var(--jal-focus-outline);
   --feedback-plain-base: var(--jal-alert-plain-border);
   --feedback-neutral-base: var(--jal-alert-neutral-border);
@@ -302,17 +290,17 @@ html[data-brand="jal"] {
   --feedback-info-stroke-base: var(--feedback-info-base);
   --feedback-warning-stroke-base: var(--feedback-warning-base);
   --feedback-attention-stroke-base: var(--feedback-attention-base);
-  --feedback-plain-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-plain-stroke-base);
-  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-neutral-stroke-base);
-  --feedback-positive-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-positive-stroke-base);
-  --feedback-info-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-info-stroke-base);
-  --feedback-warning-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-warning-stroke-base);
-  --feedback-attention-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-attention-stroke-base);
   --feedback-plain-background: var(--jal-alert-plain-bg);
   --feedback-neutral-background: var(--jal-alert-neutral-bg);
@@ -441,51 +429,47 @@ html[data-brand="plain"][data-theme="dark"] {
 /*    Map tokens to semantic or component contexts .                               */
 /* =============================================================================== */
 html[data-brand="plain"] {
-  /* Interactive */
-  --interactive-primary-stroke: var(--stroke-size-200) var(--stroke-style-solid)
+  /* Action */
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid)
     var(--plain-action-primary-border);
-  --interactive-primary-background: var(--plain-action-primary-bg);
-  --interactive-primary-background-hover: var(--plain-action-primary-bg);
-  --interactive-primary-background-focus: var(--plain-action-primary-bg);
-  --interactive-primary-background-disabled: var(--plain-action-primary-bg);
-  --interactive-primary-text-color: var(--plain-action-primary-text);
-  --interactive-primary-text-color-hover: var(--plain-action-primary-text);
-  --interactive-primary-text-color-focus: var(--plain-action-primary-text);
-  --interactive-primary-text-color-disabled: var(--plain-action-primary-text);
-  --interactive-secondary-stroke: var(--stroke-size-200)
-    var(--stroke-style-solid) var(--plain-action-secondary-border);
-  --interactive-secondary-background: var(--plain-action-secondary-bg);
-  --interactive-secondary-background-hover: var(--plain-action-secondary-bg);
-  --interactive-secondary-background-focus: var(--plain-action-secondary-bg);
-  --interactive-secondary-background-disabled: var(--plain-action-secondary-bg);
-  --interactive-secondary-text-color: var(--plain-action-secondary-text);
-  --interactive-secondary-text-color-hover: var(--plain-action-secondary-text);
-  --interactive-secondary-text-color-focus: var(--plain-action-secondary-text);
-  --interactive-secondary-text-color-disabled: var(
-    --plain-action-secondary-text
-  );
-  --interactive-tertiary-stroke: var(--stroke-size-200)
-    var(--stroke-style-solid) var(--plain-action-tertiary-border);
-  --interactive-tertiary-background: var(--plain-action-tertiary-bg);
-  --interactive-tertiary-background-hover: var(--plain-action-tertiary-bg);
-  --interactive-tertiary-background-focus: var(--plain-action-tertiary-bg);
-  --interactive-tertiary-background-disabled: var(--plain-action-tertiary-bg);
-  --interactive-tertiary-text-color: var(--plain-action-tertiary-text);
-  --interactive-tertiary-text-color-hover: var(--plain-action-tertiary-text);
-  --interactive-tertiary-text-color-focus: var(--plain-action-tertiary-text);
-  --interactive-tertiary-text-color-disabled: var(--plain-action-tertiary-text);
-  --interactive-attention-stroke: var(--stroke-size-200)
-    var(--stroke-style-solid) var(--plain-action-important-border);
-  --interactive-attention-background: var(--plain-action-important-bg);
-  --interactive-attention-background-hover: var(--plain-action-important-bg);
-  --interactive-attention-background-focus: var(--plain-action-important-bg);
-  --interactive-attention-background-disabled: var(--plain-action-important-bg);
-  --interactive-attention-text-color: var(--plain-action-important-text);
-  --interactive-attention-text-color-hover: var(--plain-action-important-text);
-  --interactive-attention-text-color-focus: var(--plain-action-important-text);
-  --interactive-attention-text-color-disabled: var(
-    --plain-action-important-text
-  );
+  --action-primary-background: var(--plain-action-primary-bg);
+  --action-primary-background-hover: var(--plain-action-primary-bg);
+  --action-primary-background-focus: var(--plain-action-primary-bg);
+  --action-primary-background-disabled: var(--plain-action-primary-bg);
+  --action-primary-text-color: var(--plain-action-primary-text);
+  --action-primary-text-color-hover: var(--plain-action-primary-text);
+  --action-primary-text-color-focus: var(--plain-action-primary-text);
+  --action-primary-text-color-disabled: var(--plain-action-primary-text);
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid)
+    var(--plain-action-secondary-border);
+  --action-secondary-background: var(--plain-action-secondary-bg);
+  --action-secondary-background-hover: var(--plain-action-secondary-bg);
+  --action-secondary-background-focus: var(--plain-action-secondary-bg);
+  --action-secondary-background-disabled: var(--plain-action-secondary-bg);
+  --action-secondary-text-color: var(--plain-action-secondary-text);
+  --action-secondary-text-color-hover: var(--plain-action-secondary-text);
+  --action-secondary-text-color-focus: var(--plain-action-secondary-text);
+  --action-secondary-text-color-disabled: var(--plain-action-secondary-text);
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid)
+    var(--plain-action-tertiary-border);
+  --action-tertiary-background: var(--plain-action-tertiary-bg);
+  --action-tertiary-background-hover: var(--plain-action-tertiary-bg);
+  --action-tertiary-background-focus: var(--plain-action-tertiary-bg);
+  --action-tertiary-background-disabled: var(--plain-action-tertiary-bg);
+  --action-tertiary-text-color: var(--plain-action-tertiary-text);
+  --action-tertiary-text-color-hover: var(--plain-action-tertiary-text);
+  --action-tertiary-text-color-focus: var(--plain-action-tertiary-text);
+  --action-tertiary-text-color-disabled: var(--plain-action-tertiary-text);
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid)
+    var(--plain-action-important-border);
+  --action-attention-background: var(--plain-action-important-bg);
+  --action-attention-background-hover: var(--plain-action-important-bg);
+  --action-attention-background-focus: var(--plain-action-important-bg);
+  --action-attention-background-disabled: var(--plain-action-important-bg);
+  --action-attention-text-color: var(--plain-action-important-text);
+  --action-attention-text-color-hover: var(--plain-action-important-text);
+  --action-attention-text-color-focus: var(--plain-action-important-text);
+  --action-attention-text-color-disabled: var(--plain-action-important-text);
   --feedback-focus-base: var(--alert-border);
   --feedback-plain-base: var(--alert-border);
   --feedback-neutral-base: var(--alert-border);
@@ -500,17 +484,17 @@ html[data-brand="plain"] {
   --feedback-info-stroke-base: var(--feedback-info-base);
   --feedback-warning-stroke-base: var(--feedback-warning-base);
   --feedback-attention-stroke-base: var(--feedback-attention-base);
-  --feedback-plain-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-plain-stroke-base);
-  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-neutral-stroke-base);
-  --feedback-positive-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-positive-stroke-base);
-  --feedback-info-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-info-stroke-base);
-  --feedback-warning-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-warning-stroke-base);
-  --feedback-attention-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-attention-stroke-base);
   --feedback-plain-background: var(--alert-background);
   --feedback-neutral-background: var(--alert-background);
@@ -754,67 +738,55 @@ html[data-brand="ana"][data-theme="dark"] {
 /* ================================================================= */
 html[data-brand="ana"] {
   --card-radius: var(--radius-150);
-  --interactive-radius: var(--radius-400);
-  --interactive-font-weight: var(--font-weight-bold);
-  --interactive-primary-stroke: var(--stroke-size-200) var(--stroke-style-solid)
+  --action-radius: var(--radius-400);
+  --action-font-weight: var(--font-weight-bold);
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid)
     var(--ana-action-primary-stroke);
-  --interactive-primary-background: var(--ana-action-primary-bg);
-  --interactive-primary-background-hover: var(--ana-action-primary-bg-hover);
-  --interactive-primary-background-focus: var(--ana-action-primary-bg-focus);
-  --interactive-primary-background-disabled: var(
-    --ana-action-primary-bg-disabled
-  );
-  --interactive-primary-text-color: var(--ana-action-primary-text);
-  --interactive-primary-text-color-hover: var(--ana-action-primary-text);
-  --interactive-primary-text-color-focus: var(--ana-action-primary-text);
-  --interactive-primary-text-color-disabled: var(--ana-action-primary-text);
+  --action-primary-background: var(--ana-action-primary-bg);
+  --action-primary-background-hover: var(--ana-action-primary-bg-hover);
+  --action-primary-background-focus: var(--ana-action-primary-bg-focus);
+  --action-primary-background-disabled: var(--ana-action-primary-bg-disabled);
+  --action-primary-text-color: var(--ana-action-primary-text);
+  --action-primary-text-color-hover: var(--ana-action-primary-text);
+  --action-primary-text-color-focus: var(--ana-action-primary-text);
+  --action-primary-text-color-disabled: var(--ana-action-primary-text);
 
-  --interactive-secondary-stroke: var(--stroke-size-200)
-    var(--stroke-style-solid) var(--ana-action-secondary-stroke);
-  --interactive-secondary-background: var(--ana-action-secondary-bg);
-  --interactive-secondary-background-hover: var(
-    --ana-action-secondary-bg-hover
-  );
-  --interactive-secondary-background-focus: var(
-    --ana-action-secondary-bg-focus
-  );
-  --interactive-secondary-background-disabled: var(
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid)
+    var(--ana-action-secondary-stroke);
+  --action-secondary-background: var(--ana-action-secondary-bg);
+  --action-secondary-background-hover: var(--ana-action-secondary-bg-hover);
+  --action-secondary-background-focus: var(--ana-action-secondary-bg-focus);
+  --action-secondary-background-disabled: var(
     --ana-action-secondary-bg-disabled
   );
-  --interactive-secondary-text-color: var(--ana-action-secondary-text);
-  --interactive-secondary-text-color-hover: var(--ana-action-secondary-text);
-  --interactive-secondary-text-color-focus: var(--ana-action-secondary-text);
-  --interactive-secondary-text-color-disabled: var(--ana-action-secondary-text);
+  --action-secondary-text-color: var(--ana-action-secondary-text);
+  --action-secondary-text-color-hover: var(--ana-action-secondary-text);
+  --action-secondary-text-color-focus: var(--ana-action-secondary-text);
+  --action-secondary-text-color-disabled: var(--ana-action-secondary-text);
 
-  --interactive-tertiary-stroke: var(--stroke-size-200)
-    var(--stroke-style-solid) var(--ana-action-tertiary-stroke);
-  --interactive-tertiary-background: var(--ana-action-tertiary-bg);
-  --interactive-tertiary-background-hover: var(--ana-action-tertiary-bg-hover);
-  --interactive-tertiary-background-focus: var(--ana-action-tertiary-bg-focus);
-  --interactive-tertiary-background-disabled: var(
-    --ana-action-tertiary-bg-disabled
-  );
-  --interactive-tertiary-text-color: var(--ana-action-tertiary-text);
-  --interactive-tertiary-text-color-hover: var(--ana-action-tertiary-text);
-  --interactive-tertiary-text-color-focus: var(--ana-action-tertiary-text);
-  --interactive-tertiary-text-color-disabled: var(--ana-action-tertiary-text);
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid)
+    var(--ana-action-tertiary-stroke);
+  --action-tertiary-background: var(--ana-action-tertiary-bg);
+  --action-tertiary-background-hover: var(--ana-action-tertiary-bg-hover);
+  --action-tertiary-background-focus: var(--ana-action-tertiary-bg-focus);
+  --action-tertiary-background-disabled: var(--ana-action-tertiary-bg-disabled);
+  --action-tertiary-text-color: var(--ana-action-tertiary-text);
+  --action-tertiary-text-color-hover: var(--ana-action-tertiary-text);
+  --action-tertiary-text-color-focus: var(--ana-action-tertiary-text);
+  --action-tertiary-text-color-disabled: var(--ana-action-tertiary-text);
 
-  --interactive-attention-stroke: var(--stroke-size-200)
-    var(--stroke-style-solid) var(--ana-action-important-stroke);
-  --interactive-important-background: var(--ana-action-important-bg);
-  --interactive-important-background-hover: var(
-    --ana-action-important-bg-hover
-  );
-  --interactive-attention-background-focus: var(
-    --ana-action-important-bg-focus
-  );
-  --interactive-attention-background-disabled: var(
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid)
+    var(--ana-action-important-stroke);
+  --action-important-background: var(--ana-action-important-bg);
+  --action-important-background-hover: var(--ana-action-important-bg-hover);
+  --action-attention-background-focus: var(--ana-action-important-bg-focus);
+  --action-attention-background-disabled: var(
     --ana-action-important-bg-disabled
   );
-  --interactive-attention-text-color: var(--ana-action-important-text);
-  --interactive-attention-text-color-hover: var(--ana-action-important-text);
-  --interactive-attention-text-color-focus: var(--ana-action-important-text);
-  --interactive-attention-text-color-disabled: var(--ana-action-important-text);
+  --action-attention-text-color: var(--ana-action-important-text);
+  --action-attention-text-color-hover: var(--ana-action-important-text);
+  --action-attention-text-color-focus: var(--ana-action-important-text);
+  --action-attention-text-color-disabled: var(--ana-action-important-text);
 
   --feedback-focus-base: var(--ana-focus-outline);
   --feedback-plain-base: var(--ana-alert-plain-border);
@@ -831,17 +803,17 @@ html[data-brand="ana"] {
   --feedback-warning-stroke-base: var(--feedback-warning-base);
   --feedback-attention-stroke-base: var(--feedback-attention-base);
 
-  --feedback-plain-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-plain-stroke-base);
-  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-neutral-stroke-base);
-  --feedback-positive-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-positive-stroke-base);
-  --feedback-info-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-info-stroke-base);
-  --feedback-warning-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-warning-stroke-base);
-  --feedback-attention-border: var(--stroke-size-200) var(--stroke-style-solid)
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid)
     var(--feedback-attention-stroke-base);
 
   --feedback-plain-background: var(--ana-alert-plain-bg);

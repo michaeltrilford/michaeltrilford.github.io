@@ -25,10 +25,10 @@ class storyIconGrid extends HTMLElement {
     const colorMap = {
       default: "var(--app-story-icon-grid-background)",
       inverted: "var(--app-story-icon-grid-background-inverted)",
-      primary: "var(--interactive-primary-background)",
-      secondary: "var(--interactive-secondary-background)",
-      tertiary: "var(--interactive-tertiary-background)",
-      attention: "var(--interactive-attention-background)",
+      primary: "var(--action-primary-background)",
+      secondary: "var(--action-secondary-background)",
+      tertiary: "var(--action-tertiary-background)",
+      attention: "var(--action-attention-background)",
     };
 
     const backgroundColor = colorMap[theme] || colorMap.default;

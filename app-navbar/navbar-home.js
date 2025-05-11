@@ -19,7 +19,7 @@ class appNavbarHome extends HTMLElement {
         z-index: 1;
         top: 0; 
         background: var(--app-nav-background);
-        border-bottom: var(--stroke-size-100) var(--stroke-style-solid) var(--app-nav-border);
+        border-bottom: var(--stroke-size-100) var(--stroke-solid) var(--app-nav-border);
       }
 
       mui-link {

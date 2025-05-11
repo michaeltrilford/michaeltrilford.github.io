@@ -72,30 +72,30 @@ class muiLink extends HTMLElement {
       :host([variant="primary"]) a {
         display: inline-block;
         text-decoration: none;
-        border: var(--interactive-primary-stroke); 
+        border: var(--action-primary-stroke); 
         padding: var(--space-200) var(--space-500);
-        border-radius: var(--interactive-radius);
-        background-color: var(--interactive-primary-background);
-        color: var(--interactive-primary-text-color);
-        font-size: var(--interactive-font-size);
-        font-weight: var(--interactive-font-weight);
-        line-height: var(--interactive-line-height);
+        border-radius: var(--action-radius);
+        background-color: var(--action-primary-background);
+        color: var(--action-primary-text-color);
+        font-size: var(--action-font-size);
+        font-weight: var(--action-font-weight);
+        line-height: var(--action-line-height);
       }
 
       :host([variant="primary"]) a:hover {
-        background: var(--interactive-primary-background-hover); 
-        color: var(--interactive-primary-text-color-hover);
+        background: var(--action-primary-background-hover); 
+        color: var(--action-primary-text-color-hover);
       }
 
       :host([variant="primary"]) a:focus,
       :host([variant="tertiary"]) a:focus-visible {
-        background: var(--interactive-primary-background-focus); 
-        color: var(--interactive-primary-text-color-focus);
+        background: var(--action-primary-background-focus); 
+        color: var(--action-primary-text-color-focus);
       }
 
       :host([variant="primary"]) a:disabled {
-        background: var(--interactive-primary-background-disabled); 
-        color: var(--interactive-primary-text-color-disabled);
+        background: var(--action-primary-background-disabled); 
+        color: var(--action-primary-text-color-disabled);
         cursor: not-allowed;
       }
 
@@ -106,30 +106,30 @@ class muiLink extends HTMLElement {
       :host([variant="secondary"]) a {
         display: inline-block;
         text-decoration: none;
-        border: var(--interactive-secondary-stroke);
+        border: var(--action-secondary-stroke);
         padding: var(--space-200) var(--space-500);
-        border-radius: var(--interactive-radius);
-        background-color: var(--interactive-secondary-background);
-        color: var(--interactive-secondary-text-color);
-        font-size: var(--interactive-font-size);
-        font-weight: var(--interactive-font-weight);
-        line-height: var(--interactive-line-height);
+        border-radius: var(--action-radius);
+        background-color: var(--action-secondary-background);
+        color: var(--action-secondary-text-color);
+        font-size: var(--action-font-size);
+        font-weight: var(--action-font-weight);
+        line-height: var(--action-line-height);
       }
 
       :host([variant="secondary"]) a:hover {
-        color: var(--interactive-secondary-text-color-hover);
-        background: var(--interactive-secondary-background-hover); 
+        color: var(--action-secondary-text-color-hover);
+        background: var(--action-secondary-background-hover); 
       }
 
       :host([variant="secondary"]) a:focus,
       :host([variant="secondary"]) a:focus-visible {
-        color: var(--interactive-secondary-text-color-focus);
-        background: var(--interactive-secondary-background-focus); 
+        color: var(--action-secondary-text-color-focus);
+        background: var(--action-secondary-background-focus); 
       }
 
       :host([variant="secondary"]) a:disabled {
-        background: var(--interactive-secondary-background-disabled);
-        color: var(--interactive-secondary-text-color-disabled);
+        background: var(--action-secondary-background-disabled);
+        color: var(--action-secondary-text-color-disabled);
       }
 
       /* Button Tertiary
@@ -139,30 +139,30 @@ class muiLink extends HTMLElement {
       :host([variant="tertiary"]) a {
         display: inline-block;
         text-decoration: none;
-        border: var(--interactive-tertiary-stroke);
+        border: var(--action-tertiary-stroke);
         padding: var(--space-200) var(--space-500);
-        border-radius: var(--interactive-radius);
-        background-color: var(--interactive-tertiary-background);
-        color: var(--interactive-tertiary-text-color);
-        font-size: var(--interactive-font-size);
-        font-weight: var(--interactive-font-weight);
-        line-height: var(--interactive-line-height);
+        border-radius: var(--action-radius);
+        background-color: var(--action-tertiary-background);
+        color: var(--action-tertiary-text-color);
+        font-size: var(--action-font-size);
+        font-weight: var(--action-font-weight);
+        line-height: var(--action-line-height);
       }
 
       :host([variant="tertiary"]) a:hover {
-        color: var(--interactive-tertiary-text-color-hover);
-        background: var(--interactive-tertiary-background-hover); 
+        color: var(--action-tertiary-text-color-hover);
+        background: var(--action-tertiary-background-hover); 
       }
 
       :host([variant="tertiary"]) a:focus,
       :host([variant="tertiary"]) a:focus-visible {
-        color: var(--interactive-tertiary-text-color-focus);
-        background: var(--interactive-tertiary-background-focus); 
+        color: var(--action-tertiary-text-color-focus);
+        background: var(--action-tertiary-background-focus); 
       }
 
       :host([variant="tertiary"]) a:disabled {
-        background: var(--interactive-tertiary-background-disabled);
-        color: var(--interactive-tertiary-text-color-disabled);
+        background: var(--action-tertiary-background-disabled);
+        color: var(--action-tertiary-text-color-disabled);
       }
 
       /* Button Attention
@@ -172,30 +172,30 @@ class muiLink extends HTMLElement {
       :host([variant="attention"]) a {
         display: inline-block;
         text-decoration: none;
-        border: var(--interactive-attention-stroke);
+        border: var(--action-attention-stroke);
         padding: var(--space-200) var(--space-500);
-        border-radius: var(--interactive-radius);
-        background-color: var(--interactive-attention-background);
-        color: var(--interactive-attention-text-color);
-        font-size: var(--interactive-font-size);
-        font-weight: var(--interactive-font-weight);
-        line-height: var(--interactive-line-height);
+        border-radius: var(--action-radius);
+        background-color: var(--action-attention-background);
+        color: var(--action-attention-text-color);
+        font-size: var(--action-font-size);
+        font-weight: var(--action-font-weight);
+        line-height: var(--action-line-height);
       }
 
       :host([variant="attention"]) a:hover {
-        color: var(--interactive-attention-text-color-hover);
-        background: var(--interactive-attention-background-hover); 
+        color: var(--action-attention-text-color-hover);
+        background: var(--action-attention-background-hover); 
       }
 
       :host([variant="attention"]) a:focus,
       :host([variant="attention"]) a:focus-visible  {
-        color: var(--interactive-attention-text-color-focus);
-        background: var(--interactive-attention-background-focus); 
+        color: var(--action-attention-text-color-focus);
+        background: var(--action-attention-background-focus); 
       }
 
       :host([variant="attention"]) a:disabled {
-        background: var(--interactive-attention-background-disabled);
-        color: var(--interactive-attention-text-color-disabled);
+        background: var(--action-attention-background-disabled);
+        color: var(--action-attention-text-color-disabled);
       }
 
     </style>

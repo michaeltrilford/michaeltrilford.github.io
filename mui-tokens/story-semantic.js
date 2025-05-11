@@ -35,17 +35,17 @@ class storyTokensSemantic extends HTMLElement {
             <story-token-slat slot="body" token="--feedback-warning-stroke-base" variant="border-color" output="var(--feedback-warning-base)"></story-token-slat>
             <story-token-slat slot="body" token="--feedback-attention-stroke-base" variant="border-color" output="var(--feedback-attention-base)"></story-token-slat>
 
-            <story-token-slat slot="body" token="--feedback-plain-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
+            <story-token-slat slot="body" token="--feedback-plain-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
             var(--feedback-plain-stroke-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-neutral-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
+            <story-token-slat slot="body" token="--feedback-neutral-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
             var(--feedback-neutral-stroke-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-positive-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
+            <story-token-slat slot="body" token="--feedback-positive-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
             var(--feedback-positive-stroke-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-info-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
+            <story-token-slat slot="body" token="--feedback-info-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
             var(--feedback-info-stroke-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-warning-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
+            <story-token-slat slot="body" token="--feedback-warning-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
             var(--feedback-warning-stroke-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-attention-border" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
+            <story-token-slat slot="body" token="--feedback-attention-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
             var(--feedback-attention-stroke-base)"></story-token-slat>
 
             <story-token-slat slot="body" token="--feedback-plain-background" variant="color" output="var(--white-opacity-0)"></story-token-slat>
@@ -71,60 +71,60 @@ class storyTokensSemantic extends HTMLElement {
 
           </story-card>
 
-          <story-card title="Interactive" description="Interactive tokens define the visual behavior of call-to-action button and link button elements." nofooter>
-            <story-token-slat slot="body" token="--interactive-font-size" variant="text-size" output="var(--text-font-size)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-line-height" variant="line-height" output="var(--text-line-height)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-font-weight" variant="font-weight" output="var(--font-weight-medium)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-radius" variant="radius" output="var(--radius-100)"></story-token-slat>
+          <story-card title="Action" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+            <story-token-slat slot="body" token="--action-font-size" variant="text-size" output="var(--text-font-size)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-line-height" variant="line-height" output="var(--text-line-height)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-font-weight" variant="font-weight" output="var(--font-weight-medium)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-radius" variant="radius" output="var(--radius-100)"></story-token-slat>
           </story-card>
 
-          <story-card title="Interactive / Primary" description="Interactive tokens define the visual behavior of call-to-action button and link button elements." nofooter>
-            <story-token-slat slot="body" token="--interactive-primary-stroke" variant="border-color" output="var(--black-opacity-0)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-primary-background" variant="color" output="var(--grey-900)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-primary-background-hover" variant="color" output="var(--grey-1000)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-primary-background-focus" variant="color" output="var(--grey-1000)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-primary-background-disabled" variant="color" output="var(--grey-200)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-primary-text-color" variant="text-color" output="var(--white)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-primary-text-color-hover" variant="text-color" output="var(--white)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-primary-text-color-focus" variant="text-color" output="var(--white)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-primary-text-color-disabled" variant="text-color" output="var(--grey-400)"></story-token-slat>
+          <story-card title="Action / Primary" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+            <story-token-slat slot="body" token="--action-primary-stroke" variant="border-color" output="var(--black-opacity-0)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-primary-background" variant="color" output="var(--grey-900)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-primary-background-hover" variant="color" output="var(--grey-1000)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-primary-background-focus" variant="color" output="var(--grey-1000)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-primary-background-disabled" variant="color" output="var(--grey-200)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-primary-text-color" variant="text-color" output="var(--white)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-primary-text-color-hover" variant="text-color" output="var(--white)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-primary-text-color-focus" variant="text-color" output="var(--white)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-primary-text-color-disabled" variant="text-color" output="var(--grey-400)"></story-token-slat>
           </story-card>
 
 
-          <story-card title="Interactive / Secondary" description="Interactive tokens define the visual behavior of call-to-action button and link button elements." nofooter>
-            <story-token-slat slot="body" token="--interactive-secondary-stroke" variant="border-color" output="var(--grey-800)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-secondary-background" variant="color" output="var(--white)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-secondary-background-hover" variant="color" output="var(--grey-100)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-secondary-background-focus" variant="color" output="var(--grey-100)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-secondary-background-disabled" variant="color" output="var(--grey-100)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-secondary-text-color" variant="text-color" output="var(--grey-900)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-secondary-text-color-hover" variant="text-color" output="var(--grey-900)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-secondary-text-color-focus" variant="text-color" output="var(--grey-900)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-secondary-text-color-disabled" variant="text-color" output="var(--grey-400)"></story-token-slat>
+          <story-card title="Action / Secondary" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+            <story-token-slat slot="body" token="--action-secondary-stroke" variant="border-color" output="var(--grey-800)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-secondary-background" variant="color" output="var(--white)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-secondary-background-hover" variant="color" output="var(--grey-100)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-secondary-background-focus" variant="color" output="var(--grey-100)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-secondary-background-disabled" variant="color" output="var(--grey-100)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-secondary-text-color" variant="text-color" output="var(--grey-900)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-secondary-text-color-hover" variant="text-color" output="var(--grey-900)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-secondary-text-color-focus" variant="text-color" output="var(--grey-900)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-secondary-text-color-disabled" variant="text-color" output="var(--grey-400)"></story-token-slat>
           </story-card>
 
-          <story-card title="Interactive / Tertiary" description="Interactive tokens define the visual behavior of call-to-action button and link button elements." nofooter>
-            <story-token-slat slot="body" token="--interactive-tertiary-stroke" variant="border-color" output="var(--white-opacity-0)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-tertiary-background" variant="color" output="var(--white-opacity-0)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-tertiary-background-hover" variant="color" output="var(--black-opacity-10)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-tertiary-background-focus" variant="color" output="var(--black-opacity-10)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-tertiary-background-disabled" variant="color" output="var(--grey-100)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-tertiary-text-color" variant="text-color" output="var(--grey-900)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-tertiary-text-color-hover" variant="text-color" output="var(--grey-1000)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-tertiary-text-color-focus" variant="text-color" output="var(--grey-1000)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-tertiary-text-color-disabled" variant="text-color" output="var(--grey-400)"></story-token-slat>
+          <story-card title="Action / Tertiary" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+            <story-token-slat slot="body" token="--action-tertiary-stroke" variant="border-color" output="var(--white-opacity-0)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-tertiary-background" variant="color" output="var(--white-opacity-0)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-tertiary-background-hover" variant="color" output="var(--black-opacity-10)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-tertiary-background-focus" variant="color" output="var(--black-opacity-10)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-tertiary-background-disabled" variant="color" output="var(--grey-100)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-tertiary-text-color" variant="text-color" output="var(--grey-900)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-tertiary-text-color-hover" variant="text-color" output="var(--grey-1000)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-tertiary-text-color-focus" variant="text-color" output="var(--grey-1000)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-tertiary-text-color-disabled" variant="text-color" output="var(--grey-400)"></story-token-slat>
           </story-card>
 
-          <story-card title="Interactive / Attention" description="Interactive tokens define the visual behavior of call-to-action button and link button elements." nofooter>
-            <story-token-slat slot="body" token="--interactive-attention-stroke" variant="border-color" output="var(--black-opacity-0)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-attention-background" variant="color" output="var(--red-500)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-attention-background-hover" variant="color" output="var(--red-600)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-attention-background-focus" variant="color" output="var(--red-600)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-attention-background-disabled" variant="color" output="var(--red-100)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-attention-text-color" variant="text-color" output="var(--white)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-attention-text-color-hover" variant="text-color" output="var(--white)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-attention-text-color-focus" variant="text-color" output="var(--white)"></story-token-slat>
-            <story-token-slat slot="body" token="--interactive-attention-text-color-disabled" variant="text-color" output="var(--red-300)"></story-token-slat>
+          <story-card title="Action / Attention" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+            <story-token-slat slot="body" token="--action-attention-stroke" variant="border-color" output="var(--black-opacity-0)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-attention-background" variant="color" output="var(--red-500)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-attention-background-hover" variant="color" output="var(--red-600)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-attention-background-focus" variant="color" output="var(--red-600)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-attention-background-disabled" variant="color" output="var(--red-100)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-attention-text-color" variant="text-color" output="var(--white)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-attention-text-color-hover" variant="text-color" output="var(--white)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-attention-text-color-focus" variant="text-color" output="var(--white)"></story-token-slat>
+            <story-token-slat slot="body" token="--action-attention-text-color-disabled" variant="text-color" output="var(--red-300)"></story-token-slat>
           </story-card>
 
         </mui-v-stack>

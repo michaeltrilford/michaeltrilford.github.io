@@ -11,7 +11,7 @@ class appNavbarTheme extends HTMLElement {
         display: block;
         padding: var(--space-500);
         background: var(--app-nav-background);
-        border-bottom: var(--stroke-size-100) var(--stroke-style-solid) var(--app-nav-border);
+        border-bottom: var(--stroke-size-100) var(--stroke-solid) var(--app-nav-border);
       }
 
       mui-grid::part(align-items) {

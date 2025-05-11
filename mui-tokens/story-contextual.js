@@ -43,19 +43,19 @@ class storyTokensContextual extends HTMLElement {
 
           <story-card title="Border" nofooter>
           <story-token-slat slot="body" token="--border-color" variant="border-color" output="var(--grey-200)"></story-token-slat>
-          <story-token-slat slot="body" token="--border-thin" variant="border" output="var(--stroke-size-100) var(--stroke-style-solid)
+          <story-token-slat slot="body" token="--border-thin" variant="border" output="var(--stroke-size-100) var(--stroke-solid)
           var(--border-color)"></story-token-slat>
-          <story-token-slat slot="body" token="--border-thick" variant="border" output="var(--stroke-size-200) var(--stroke-style-solid)
+          <story-token-slat slot="body" token="--border-thick" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
           var(--border-color)"></story-token-slat>
           </story-card>
 
           <story-card title="Outline" nofooter>
           <story-token-slat slot="body" token="--outline-color" variant="outline-color" output="var(--feedback-focus-stroke-base)"></story-token-slat>
-          <story-token-slat slot="body" token="--outline-thin" variant="outline" output="var(--stroke-size-100) var(--stroke-style-outset)
+          <story-token-slat slot="body" token="--outline-thin" variant="outline" output="var(--stroke-size-100) var(--stroke-outset)
           var(--outline-color)"></story-token-slat>
-          <story-token-slat slot="body" token="--outline-medium" variant="outline" output="var(--stroke-size-200) var(--stroke-style-outset)
+          <story-token-slat slot="body" token="--outline-medium" variant="outline" output="var(--stroke-size-200) var(--stroke-outset)
           var(--outline-color)"></story-token-slat>
-          <story-token-slat slot="body" token="--outline-thick" variant="outline" output="var(--stroke-size-300) var(--stroke-style-outset)
+          <story-token-slat slot="body" token="--outline-thick" variant="outline" output="var(--stroke-size-300) var(--stroke-outset)
           var(--outline-color)"></story-token-slat>
           </story-card>
 
