@@ -1,13 +1,33 @@
 class HomePage extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+
+    const intro = `
+      <mui-body class="introduction" size="small" weight="bold">
+        An experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS.
+      </mui-body>
+    `;
+
+    const subcontent = `
+      <mui-body class="subcontent" size="small" weight="bold">
+        The Web Components are based on past exploration at <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">codepen.io/trilm</mui-link>
+      </mui-body>
+    `;
+
     const styles = `
       :host { display: flex; width: 100%; }
 
       mui-responsive {
         display: grid;
         min-height: 100%;
+      }
+
+      .introduction {
+        max-width: 45ch;
+      }
+      .subcontent {
+        max-width: 35ch;
       }
 
       main {
@@ -115,21 +135,21 @@ class HomePage extends HTMLElement {
       }
 
       @media (min-width: 961px) {
-        .technology {
+        .subcontent {
           grid-column: 5 / 13;
           grid-row: 3 / 4;
         }
       }
 
       @media (min-width: 1100px) {
-        .technology {
+        .subcontent {
           grid-column: 9 / 13;
           grid-row: initial;
         }
       }
 
       @media (min-width: 1400px) {
-        .technology {
+        .subcontent {
           grid-column: 9 / 12;
         }
       }
@@ -138,21 +158,19 @@ class HomePage extends HTMLElement {
 
       .logo,
       .introduction,
-      .technology {
+      .subcontent {
         margin-bottom: 0;
       }
 
       .actions {
         width: auto;
         text-align: center;
-        margin-top: 2.4rem;
-        margin-bottom: 2.4rem;
+        margin-top: var(--space-200);
       }
       @media (min-width: 961px) {
         .actions {
           text-align: left;
-          margin-top: 0;
-          margin-bottom: 0;
+          margin-top: var(--space-000);
         }
         .actions__secondary {
           margin-top: var(--space-200);
@@ -187,40 +205,24 @@ class HomePage extends HTMLElement {
 
               <mui-v-stack class="actions__secondary" space="var(--space-000)">
                 <mui-body size="small" weight="medium">
-                  <mui-link target="_blank" href="https://codepen.io/trilm/">Codepen.io/trilm</mui-link>
-                </mui-body>
-                <mui-body size="small" weight="medium">
                   <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
                 </mui-body>
               </mui-v-stack>
             </mui-v-stack>
-
-            <mui-body class="introduction" size="small" weight="bold">
-              MUI is an experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS.
-            </mui-body>
-            <mui-body class="technology" size="small" weight="bold">
-              The components are based on past explorations shared at 
-              <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">codepen.io/trilm</mui-link>
-            </mui-body>
+            ${intro}
+            ${subcontent}
           </main>
 
           <!-- Main content below -->
           <main slot="showBelow">
-            <mui-v-stack space="var(--space-700)" style="text-align: center;">
+            <mui-v-stack space="var(--space-600)" style="text-align: center;">
               <div class="logo-wrapper">
                 <img class="logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
               </div>
-              
               <mui-v-stack space="var(--space-500)" style="max-width: 31rem; padding-left: var(--space-300); padding-right: var(--space-300);">
-                <mui-body class="introduction" size="small" weight="medium">
-                  MUI is an experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS.
-                </mui-body>
-                <mui-body class="technology" size="small" weight="medium">
-                  The components are based on past explorations shared at 
-                  <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="medium">codepen.io/trilm</mui-link>
-                </mui-body>
+                ${intro}
+                ${subcontent}
               </mui-v-stack>
-
               <mui-v-stack class="actions" space="var(--space-300)">
                 <mui-link 
                   class="github-link" 
@@ -229,11 +231,7 @@ class HomePage extends HTMLElement {
                   variant="primary">
                   Fork on GitHub
                 </mui-link>
-
                 <mui-v-stack class="actions__secondary" space="var(--space-050)">
-                  <mui-body size="small" weight="medium">
-                    <mui-link target="_blank" href="https://codepen.io/trilm/">Codepen.io/trilm</mui-link>
-                  </mui-body>
                   <mui-body size="small" weight="medium">
                     <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
                   </mui-body>
@@ -249,4 +247,4 @@ class HomePage extends HTMLElement {
   }
 }
 
-customElements.define("home-page", HomePage);
+customElements.define('home-page', HomePage);
