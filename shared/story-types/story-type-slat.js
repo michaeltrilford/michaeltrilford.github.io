@@ -18,10 +18,11 @@ class storyTypeSlat extends HTMLElement {
       }
 
       code {
-        background: var(--mui-brand-300);
+        background: var(--app-story-code-bg);
+        color: var(--app-story-code-text);
         box-shadow: 0 1px 0 0 var(--grey-100);
         border-radius: var(--radius-100);
-        padding: 0 var(--space-200);
+        padding: var(--space-050) var(--space-100);
         font-size: var(--font-size-15);
       }
 

@@ -464,7 +464,7 @@ html[data-brand="plain"] {
     --plain-action-important-text
   );
   --feedback-focus-base: var(--alert-border);
-  --feedback-plain-base: var(---alert-border);
+  --feedback-plain-base: var(--alert-border);
   --feedback-neutral-base: var(--alert-border);
   --feedback-positive-base: var(--alert-border);
   --feedback-info-base: var(--alert-border);
