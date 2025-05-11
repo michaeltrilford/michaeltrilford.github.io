@@ -34,7 +34,15 @@ class DarkModeToggle extends HTMLElement {
     const isDark = theme === "dark";
     this.shadowRoot.innerHTML = `
       <style>
-        :host {display: block;}
+        :host {
+        display: block;
+        }
+
+        mui-switch {
+        --switch-track-background: var(--app-theme-toggle-bg);
+        --switch-track-background-checked: var(--app-theme-toggle-bg);
+        }
+
       </style>
 
       <mui-switch ${isDark ? "checked" : ""}>

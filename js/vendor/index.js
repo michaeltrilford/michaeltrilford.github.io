@@ -196,6 +196,7 @@ const PageArray = [
   "mui-image/story.js",
   "mui-link/story.js",
   "mui-input/story.js",
+  "mui-switch/story.js",
   "mui-list/story.js",
   "mui-body/story.js",
   "mui-quote/story.js",

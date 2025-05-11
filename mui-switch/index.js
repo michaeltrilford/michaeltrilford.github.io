@@ -106,7 +106,7 @@ class MuiSwitch extends HTMLElement {
           left: 0;
           right: 0;
           bottom: 0;
-          background-color: var(--switch-track-bg);
+          background-color: var(--switch-track-background);
           transition: background-color 0.2s;
           border-radius: var(--switch-height);
         }
@@ -126,7 +126,7 @@ class MuiSwitch extends HTMLElement {
         }
 
         input:checked + .track {
-          background-color: var(--switch-track-bg-checked);
+          background-color: var(--switch-track-background-checked);
         }
 
         input:checked + .track .thumb {

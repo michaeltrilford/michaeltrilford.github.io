@@ -136,6 +136,9 @@ html[data-brand="jal"][data-theme="light"] {
   --code-text-color: var(--jal-white);
   --table-background: var(--jal-white);
   --card-background: var(--jal-white);
+  /* Switch */
+  --switch-track-background: var(--jal-grey-300);
+  --switch-track-background-checked: var(--jal-red-400);
 }
 
 /* ================================================================================ */
@@ -204,6 +207,9 @@ html[data-brand="jal"][data-theme="dark"] {
   --table-background: var(--jal-grey-900);
   --card-background: var(--jal-black);
   --code-text-color: var(--jal-red-200);
+  /* Switch */
+  --switch-track-background: var(--jal-grey-500);
+  --switch-track-background-checked: var(--jal-red-300);
 }
 
 /* ================================================================= */
@@ -348,6 +354,19 @@ html[data-brand="plain"] {
 /*    Map primitive values to specific roles depending on the mode                 */
 /* =============================================================================== */
 html[data-brand="plain"][data-theme="light"] {
+  /* Buttons */
+  --plain-action-primary-bg: var(--plain-black);
+  --plain-action-primary-text: var(--plain-white);
+  --plain-action-primary-border: var(--plain-black);
+  --plain-action-secondary-bg: transparent;
+  --plain-action-secondary-text: var(--plain-black);
+  --plain-action-secondary-border: var(--plain-black);
+  --plain-action-tertiary-bg: transparent;
+  --plain-action-tertiary-text: var(--plain-black);
+  --plain-action-tertiary-border: var(--plain-black);
+  --plain-action-important-bg: var(--plain-black);
+  --plain-action-important-text: var(--plain-white);
+  --plain-action-important-border: var(--plain-black);
   /* Icon Colors */
   --icon-color-default: var(--plain-black);
   --icon-color-inverted: var(--plain-white);
@@ -363,19 +382,9 @@ html[data-brand="plain"][data-theme="light"] {
   /* Text */
   --text-color: var(--plain-black);
   --heading-text-color: var(--plain-black);
-  /* Buttons */
-  --plain-action-primary-bg: var(--plain-black);
-  --plain-action-primary-text: var(--plain-white);
-  --plain-action-primary-border: var(--plain-black);
-  --plain-action-secondary-bg: transparent;
-  --plain-action-secondary-text: var(--plain-black);
-  --plain-action-secondary-border: var(--plain-black);
-  --plain-action-tertiary-bg: transparent;
-  --plain-action-tertiary-text: var(--plain-black);
-  --plain-action-tertiary-border: var(--plain-black);
-  --plain-action-important-bg: var(--plain-black);
-  --plain-action-important-text: var(--plain-white);
-  --plain-action-important-border: var(--plain-black);
+  /* Switch */
+  --switch-track-background: var(--plain-grey-300);
+  --switch-track-background-checked: var(--plain-black);
 }
 
 /* ================================================================================ */
@@ -383,6 +392,19 @@ html[data-brand="plain"][data-theme="light"] {
 /*    Map primitive values to specific roles depending on the mode                  */
 /* ================================================================================ */
 html[data-brand="plain"][data-theme="dark"] {
+  /* Buttons */
+  --plain-action-primary-bg: var(--plain-white);
+  --plain-action-primary-text: var(--plain-black);
+  --plain-action-primary-border: var(--plain-white);
+  --plain-action-secondary-bg: transparent;
+  --plain-action-secondary-text: var(--plain-white);
+  --plain-action-secondary-border: var(--plain-white);
+  --plain-action-tertiary-bg: transparent;
+  --plain-action-tertiary-text: var(--plain-white);
+  --plain-action-tertiary-border: var(--plain-white);
+  --plain-action-important-bg: var(--plain-white);
+  --plain-action-important-text: var(--plain-black);
+  --plain-action-important-border: var(--plain-white);
   /* Icon Colors */
   --icon-color-default: var(--plain-white);
   --icon-color-inverted: var(--plain-black);
@@ -398,19 +420,9 @@ html[data-brand="plain"][data-theme="dark"] {
   /* Text */
   --text-color: var(--plain-white);
   --heading-text-color: var(--plain-white);
-  /* Buttons */
-  --plain-action-primary-bg: var(--plain-white);
-  --plain-action-primary-text: var(--plain-black);
-  --plain-action-primary-border: var(--plain-white);
-  --plain-action-secondary-bg: transparent;
-  --plain-action-secondary-text: var(--plain-white);
-  --plain-action-secondary-border: var(--plain-white);
-  --plain-action-tertiary-bg: transparent;
-  --plain-action-tertiary-text: var(--plain-white);
-  --plain-action-tertiary-border: var(--plain-white);
-  --plain-action-important-bg: var(--plain-white);
-  --plain-action-important-text: var(--plain-black);
-  --plain-action-important-border: var(--plain-white);
+  /* Switch */
+  --switch-track-background: var(--plain-grey-500);
+  --switch-track-background-checked: var(--plain-white);
 }
 
 /* =============================================================================== */

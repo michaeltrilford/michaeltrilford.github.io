@@ -1,4 +1,7 @@
-/* APP THEME */
+/* =============================================================================== */
+/*   Theme Storefront: MUI (DEFAULT)                                               */
+/*   Component theme alignment across storefront                                   */
+/* =============================================================================== */
 :where(html) {
   --mui-brand-100: #fffde7;
   --mui-brand-200: #fff59d;
@@ -45,6 +48,8 @@ html[data-theme="light"] {
   --app-nav-link-focus: var(--grey-900);
   --app-nav-group-color: var(--white-opacity-80);
 
+  --app-theme-toggle-bg: var(--black);
+
   --app-story-card-background: var(--grey-100);
   --app-story-card-canvas: var(--white);
   --app-story-code-bg: var(--mui-brand-300);
@@ -73,6 +78,8 @@ html[data-theme="dark"] {
   --app-nav-link-focus: var(--grey-900);
   --app-nav-group-color: var(--white-opacity-80);
 
+  --app-theme-toggle-bg: var(--mui-brand-300);
+
   --app-story-card-background: var(--grey-900);
   --app-story-card-canvas: var(--grey-1000);
   --app-story-code-bg: var(--mui-brand-300);
@@ -86,6 +93,10 @@ html[data-theme="dark"] {
   --app-story-icon-grid-background-inverted: var(--grey-200);
 }
 
+/* =============================================================================== */
+/*   Theme Storefront: JAL                                                         */
+/*   Component theme alignment across storefront                                   */
+/* =============================================================================== */
 html[data-brand="jal"][data-theme="light"] {
   --app-meta-theme-color: var(--jal-grey-200);
   --app-skeleton: var(--jal-grey-200);
@@ -98,6 +109,8 @@ html[data-brand="jal"][data-theme="light"] {
   --app-nav-link: var(--jal-red-600);
   --app-nav-link-focus: var(--jal-grey-100);
   --app-nav-group-color: var(--black-opacity-50);
+
+  --app-theme-toggle-bg: var(--jal-grey-200);
 
   --app-story-code-bg: var(--jal-red-300);
   --app-story-code-text: var(--jal-white);
@@ -116,12 +129,18 @@ html[data-brand="jal"][data-theme="dark"] {
   --app-nav-link-focus: var(--jal-grey-1000);
   --app-nav-group-color: var(--white-opacity-80);
 
+  --app-theme-toggle-bg: var(--jal-red-200);
+
   --app-story-code-bg: var(--jal-red-300);
   --app-story-code-text: var(--jal-white);
   --app-story-card-background: var(--jal-black);
   --app-story-card-canvas: var(--jal-grey-900);
 }
 
+/* =============================================================================== */
+/*   Theme Storefront: Plain                                                       */
+/*   Component theme alignment across storefront                                   */
+/* =============================================================================== */
 html[data-brand="plain"][data-theme="light"] {
   --app-meta-theme-color: var(--plain-black);
   --app-skeleton: var(--plain-black);
@@ -134,6 +153,8 @@ html[data-brand="plain"][data-theme="light"] {
   --app-nav-link: var(--plain-black);
   --app-nav-link-focus: var(--plain-grey-200);
   --app-nav-group-color: var(--black-opacity-80);
+
+  --app-theme-toggle-bg: var(--plain-grey-200);
 
   --app-story-code-bg: var(--plain-grey-200);
   --app-story-code-text: var(--plain-black);
@@ -153,6 +174,8 @@ html[data-brand="plain"][data-theme="dark"] {
   --app-nav-link: var(--plain-white);
   --app-nav-link-focus: var(--plain-grey-800);
   --app-nav-group-color: var(--white-opacity-40);
+
+  --app-theme-toggle-bg: var(--plain-grey-200);
 
   --app-story-code-bg: var(--plain-white);
   --app-story-code-text: var(--plain-black);
