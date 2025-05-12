@@ -17,84 +17,80 @@ class storyPartsVisual extends HTMLElement {
         <mui-v-stack space="var(--space-700)">
 
           <story-card title="Background">
-            <story-part-slat slot="body" token="part(color)" usage="Links, Buttons, Select" output="Defines the color of the element." ></story-part-slat>
+            <story-part-slat slot="body" token="part(background)" usage="Links, Buttons, Select" output="Defines the background of the element." ></story-part-slat>
             <mui-code slot="footer">
-              mui-link::part(color) {
+              mui-link::part(background) {
               <br />
-              &nbsp;&nbsp;color: var(--grey-100);
-              <br />
-              }
-              <br />
-              <br />
-              mui-link::part(color):hover {
-              <br />
-              &nbsp;&nbsp;color: var(--grey-200);
+              &nbsp;&nbsp;background-color: var(--app-nav-background);
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Border">
-            <story-part-slat slot="body" token="part(font-family)" usage="Links, Buttons, Select" output="Defines the font family of the element."></story-part-slat>
+            <story-part-slat slot="body" token="part(border)" usage="Links, Buttons, Select" output="Defines the border of the element."></story-part-slat>
             <mui-code slot="footer">
-              mui-link::part(font-family) {
+              mui-link::part(border) {
               <br />
-              &nbsp;&nbsp;font-family: var(--font-family);
+              &nbsp;&nbsp;border-color: var(--app-nav-border);
+              <br />
+              <br />
+              &nbsp;&nbsp;border: 4px solid var(--app-nav-border);
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Border Radius">
-            <story-part-slat slot="body" token="part(font-size)" usage="Links, Buttons, Select" output="Defines the font size of the element."></story-part-slat>
+            <story-part-slat slot="body" token="part(border-radius)" usage="Links, Buttons, Select" output="Defines the border radius of the element."></story-part-slat>
             <mui-code slot="footer">
-              mui-link::part(font-size) {
+              mui-link::part(border-radius) {
               <br />
-              &nbsp;&nbsp;font-size: var(--size-100);
+              &nbsp;&nbsp;border-radius: var(--radius-150);
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Box Shadow">
-            <story-part-slat slot="body" token="part(font-weight)" usage="Links, Buttons, Select" output="Defines the font weight of the element."></story-part-slat>
+            <story-part-slat slot="body" token="part(box-shadow)" usage="Links, Buttons, Select" output="Defines the box-shadow of the element."></story-part-slat>
             <mui-code slot="footer">
-              mui-link::part(font-weight) {
+              mui-link::part(box-shadow) {
               <br />
-              &nbsp;&nbsp;font-weight: var(--font-weight-600);
+              &nbsp;&nbsp;box-shadow: 0 2px 0 0 var(--grey-300);
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Opacity">
-            <story-part-slat slot="body" token="part(letter-spacing)" usage="Links, Buttons, Select" output="Defines the letter-spacing of the element."></story-part-slat>
+            <story-part-slat slot="body" token="part(opacity)" usage="Links, Buttons, Select" output="Defines the opacity of the element."></story-part-slat>
             <mui-code slot="footer">
-              mui-link::part(letter-spacing) {
+              mui-link::part(opacity) {
               <br />
-              &nbsp;&nbsp;letter-spacing: var(--space-100);
+              &nbsp;&nbsp;opacity: 0;
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Transition">
-            <story-part-slat slot="body" token="part(line-height)" usage="Links, Buttons, Select" output="Defines the line-height of the element."></story-part-slat>
+            <story-part-slat slot="body" token="part(transition)" usage="Links, Buttons, Select" output="Defines the transition of the element when animation is used."></story-part-slat>
             <mui-code slot="footer">
-              mui-link::part(line-height) {
+              mui-link::part(transition) {
               <br />
-              &nbsp;&nbsp;line-height: var(--line-height-100);
+              &nbsp;&nbsp;transition: opacity 400ms ease-in, transform 100ms ease-in;;
               <br />
               }
             </mui-code>
           </story-card>
 
           <story-card title="Outline">
-            <story-part-slat slot="body" token="part(text-transform)" usage="Links, Buttons, Select" output="Defines the case of the element."></story-part-slat>
+            <story-part-slat slot="body" token="part(outline)" usage="Links, Buttons, Select" output="Defines the outline of the element, typically for focus states."></story-part-slat>
             <mui-code slot="footer">
-              mui-link::part(text-transform) {
+              mui-link::part(outline) {
               <br />
-              &nbsp;&nbsp;text-transform: uppercase;
+              &nbsp;&nbsp;outline: var(outline-thin);
               <br />
               }
             </mui-code>

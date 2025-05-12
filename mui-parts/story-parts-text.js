@@ -21,7 +21,7 @@ class storyPartsText extends HTMLElement {
             <mui-code slot="footer">
               mui-link::part(color) {
               <br />
-              &nbsp;&nbsp;color: var(--grey-100);
+              &nbsp;&nbsp;color: var(--app-nav-link);
               <br />
               }
               <br />
