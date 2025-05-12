@@ -124,7 +124,11 @@ class storySelect extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-template title="Select" description="A versatile dropdown component for selecting from a list of options, supporting customisable styles and accessibility features.">
+      <story-template
+        title="Select" 
+        description="A versatile dropdown component for selecting from a list of options, supporting customisable styles and accessibility features."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-select/index.js"
+      >
 
       <mui-v-stack space="var(--space-700)">
 

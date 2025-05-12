@@ -16,7 +16,19 @@ class HomePage extends HTMLElement {
     `;
 
     const styles = `
-      :host { display: flex; width: 100%; }
+      :host { 
+        display: flex; 
+        width: 100%;
+        align-items: start;
+        padding-top: var(--space-800);
+      }
+
+      @media (min-height: 932px) {
+        :host { 
+          padding-top: var(--space-000);
+          align-items: normal;
+        }
+      }
 
       mui-responsive {
         display: grid;

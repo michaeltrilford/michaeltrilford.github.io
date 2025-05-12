@@ -1,7 +1,7 @@
 class storySwitch extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
 
@@ -28,25 +28,25 @@ class storySwitch extends HTMLElement {
 
     const propItems = [
       {
-        name: "checked",
-        type: "boolean",
-        options: "checked",
-        default: "",
-        description: "On / Off state",
+        name: 'checked',
+        type: 'boolean',
+        options: 'checked',
+        default: '',
+        description: 'On / Off state',
       },
       {
-        name: "slot (off)",
-        type: "string",
-        options: "off-icon",
-        default: "",
-        description: "Slot an icon in for the off state",
+        name: 'slot (off)',
+        type: 'string',
+        options: 'off-icon',
+        default: '',
+        description: 'Slot an icon in for the off state',
       },
       {
-        name: "slot (on)",
-        type: "string",
-        options: "on-icon",
-        default: "",
-        description: "Slot an icon in for the off state",
+        name: 'slot (on)',
+        type: 'string',
+        options: 'on-icon',
+        default: '',
+        description: 'Slot an icon in for the off state',
       },
     ];
 
@@ -54,21 +54,21 @@ class storySwitch extends HTMLElement {
       .map(
         (prop) => `
           <story-type-row
-            ${prop.required ? "required" : ""}
+            ${prop.required ? 'required' : ''}
             name="${prop.name}"
             type="${prop.type}" 
-            options="${prop.options || ""}"
-            default="${prop.default || ""}"
+            options="${prop.options || ''}"
+            default="${prop.default || ''}"
             description="${prop.description}">
           </story-type-row>
-        `
+        `,
       )
-      .join("");
+      .join('');
 
     const accordions = propItems
       .map((prop, index) => {
         // Check if it's the last item in the array
-        const isLastChild = index === propItems.length - 1 ? "last-child" : "";
+        const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
 
         return `
             <mui-accordion-block 
@@ -77,22 +77,26 @@ class storySwitch extends HTMLElement {
               ${isLastChild}>
               <story-type-slat
                 slot="detail"
-                ${prop.required ? "required" : ""}
+                ${prop.required ? 'required' : ''}
                 name="${prop.name}"
                 type="${prop.type}" 
-                options="${prop.options || ""}"
-                default="${prop.default || ""}"
+                options="${prop.options || ''}"
+                default="${prop.default || ''}"
                 description="${prop.description}">
               </story-type-slat>
             </mui-accordion-block>
           `;
       })
-      .join("");
+      .join('');
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
-      <story-template title="Switch" description="A component that allows users to switch a setting on or off with immediate effect.">
+      <story-template
+        title="Switch"
+        description="A component that allows users to switch a setting on or off with immediate effect."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-switch/index.js"
+      >
 
       <mui-v-stack space="var(--space-700)">
 
@@ -170,4 +174,4 @@ class storySwitch extends HTMLElement {
   }
 }
 
-customElements.define("story-switch", storySwitch);
+customElements.define('story-switch', storySwitch);
