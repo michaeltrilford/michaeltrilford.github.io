@@ -138,7 +138,6 @@ html[data-brand='jal'][data-theme='light'] {
   /* Component Specific */
   --icon-color-default: var(--jal-red-300);
   --icon-color-inverted: var(--jal-white);
-  --badge-text-color: var(--jal-grey-900);
   --text-color: var(--jal-grey-900);
   --heading-text-color: var(--jal-red-500);
   --border-color: var(--jal-grey-200);
@@ -150,6 +149,12 @@ html[data-brand='jal'][data-theme='light'] {
   /* Switch */
   --switch-track-background: var(--jal-grey-300);
   --switch-track-background-checked: var(--jal-red-400);
+  /* Badge */
+  --jal-badge-text-color: var(--jal-white);
+  --jal-badge-neutral-base: var(--jal-grey-500);
+  --jal-badge-positive-base: var(--jal-green-700);
+  --jal-badge-warning-base: var(--jal-yellow-900);
+  --jal-badge-attention-base: var(--jal-red-500);
 }
 
 /* ================================================================================ */
@@ -209,7 +214,6 @@ html[data-brand='jal'][data-theme='dark'] {
   /* Component Specific */
   --icon-color-default: var(--jal-red-200);
   --icon-color-inverted: var(--jal-black);
-  --badge-text-color: var(--jal-white);
   --text-color: var(--jal-grey-200);
   --heading-text-color: var(--jal-red-100);
   --border-color: var(--jal-grey-700);
@@ -221,6 +225,12 @@ html[data-brand='jal'][data-theme='dark'] {
   /* Switch */
   --switch-track-background: var(--jal-grey-500);
   --switch-track-background-checked: var(--jal-red-300);
+  /* Badge */
+  --jal-badge-text-color: var(--jal-black);
+  --jal-badge-neutral-base: var(--jal-grey-400);
+  --jal-badge-positive-base: var(--jal-green-600);
+  --jal-badge-warning-base: var(--jal-yellow-600);
+  --jal-badge-attention-base: var(--jal-red-300);
 }
 
 /* ================================================================= */
@@ -268,20 +278,12 @@ html[data-brand='jal'] {
   --action-attention-text-color-hover: var(--jal-action-important-text);
   --action-attention-text-color-focus: var(--jal-action-important-text);
   --action-attention-text-color-disabled: var(--jal-action-important-text);
-  --feedback-focus-base: var(--jal-focus-outline);
-  --feedback-plain-base: var(--jal-alert-plain-border);
-  --feedback-neutral-base: var(--jal-alert-neutral-border);
-  --feedback-positive-base: var(--jal-alert-success-border);
-  --feedback-info-base: var(--jal-alert-info-border);
-  --feedback-warning-base: var(--jal-alert-warning-border);
-  --feedback-attention-base: var(--jal-alert-error-border);
-  --feedback-focus-stroke-base: var(--feedback-focus-base);
-  --feedback-plain-stroke-base: var(--feedback-plain-base);
-  --feedback-neutral-stroke-base: var(--feedback-neutral-base);
-  --feedback-positive-stroke-base: var(--feedback-positive-base);
-  --feedback-info-stroke-base: var(--feedback-info-base);
-  --feedback-warning-stroke-base: var(--feedback-warning-base);
-  --feedback-attention-stroke-base: var(--feedback-attention-base);
+  --feedback-plain-stroke-base: var(--jal-alert-plain-border);
+  --feedback-neutral-stroke-base: var(--jal-alert-neutral-border);
+  --feedback-positive-stroke-base: var(--jal-alert-success-border);
+  --feedback-info-stroke-base: var(--jal-alert-info-border);
+  --feedback-warning-stroke-base: var(--jal-alert-warning-border);
+  --feedback-attention-stroke-base: var(--jal-alert-error-border);
   --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-stroke-base);
   --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-stroke-base);
   --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-stroke-base);
@@ -306,6 +308,13 @@ html[data-brand='jal'] {
   --feedback-info-text: var(--jal-alert-info-text);
   --feedback-warning-text: var(--jal-alert-warning-text);
   --feedback-attention-text: var(--jal-alert-error-text);
+
+  /* Badge */
+  --badge-text-color: var(--jal-badge-text-color);
+  --badge-background-neutral: var(--jal-badge-neutral-base);
+  --badge-background-positive: var(--jal-badge-positive-base);
+  --badge-background-warning: var(--jal-badge-warning-base);
+  --badge-background-attention: var(--jal-badge-attention-base);
 }
 
 /* PLAIN BRAND */
@@ -370,6 +379,12 @@ html[data-brand='plain'][data-theme='light'] {
   /* Switch */
   --switch-track-background: var(--plain-grey-300);
   --switch-track-background-checked: var(--plain-black);
+  /* Badge */
+  --plain-badge-text-color: var(--plain-white);
+  --plain-badge-neutral-base: var(--plain-grey-400);
+  --plain-badge-positive-base: var(--plain-grey-700);
+  --plain-badge-warning-base: var(--plain-grey-700);
+  --plain-badge-attention-base: var(--plain-grey-800);
 }
 
 /* ================================================================================ */
@@ -408,6 +423,12 @@ html[data-brand='plain'][data-theme='dark'] {
   /* Switch */
   --switch-track-background: var(--plain-grey-500);
   --switch-track-background-checked: var(--plain-white);
+  /* Badge */
+  --plain-badge-text-color: var(--plain-white);
+  --plain-badge-neutral-base: var(--plain-grey-400);
+  --plain-badge-positive-base: var(--plain-grey-700);
+  --plain-badge-warning-base: var(--plain-grey-700);
+  --plain-badge-attention-base: var(--plain-grey-800);
 }
 
 /* =============================================================================== */
@@ -452,20 +473,12 @@ html[data-brand='plain'] {
   --action-attention-text-color-hover: var(--plain-action-important-text);
   --action-attention-text-color-focus: var(--plain-action-important-text);
   --action-attention-text-color-disabled: var(--plain-action-important-text);
-  --feedback-focus-base: var(--alert-border);
-  --feedback-plain-base: var(--alert-border);
-  --feedback-neutral-base: var(--alert-border);
-  --feedback-positive-base: var(--alert-border);
-  --feedback-info-base: var(--alert-border);
-  --feedback-warning-base: var(--alert-border);
-  --feedback-attention-base: var(--alert-border);
-  --feedback-focus-stroke-base: var(--feedback-focus-base);
-  --feedback-plain-stroke-base: var(--feedback-plain-base);
-  --feedback-neutral-stroke-base: var(--feedback-neutral-base);
-  --feedback-positive-stroke-base: var(--feedback-positive-base);
-  --feedback-info-stroke-base: var(--feedback-info-base);
-  --feedback-warning-stroke-base: var(--feedback-warning-base);
-  --feedback-attention-stroke-base: var(--feedback-attention-base);
+  --feedback-plain-stroke-base: var(--alert-border);
+  --feedback-neutral-stroke-base: var(--alert-border);
+  --feedback-positive-stroke-base: var(--alert-border);
+  --feedback-info-stroke-base: var(--alert-border);
+  --feedback-warning-stroke-base: var(--alert-border);
+  --feedback-attention-stroke-base: var(--alert-border);
   --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-stroke-base);
   --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-stroke-base);
   --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-stroke-base);
@@ -490,6 +503,13 @@ html[data-brand='plain'] {
   --feedback-info-text: var(--alert-text);
   --feedback-warning-text: var(--alert-text);
   --feedback-attention-text: var(--alert-text);
+
+  /* Badge */
+  --badge-text-color: var(--plain-badge-text-color);
+  --badge-background-neutral: var(--plain-badge-neutral-base);
+  --badge-background-positive: var(--plain-badge-positive-base);
+  --badge-background-warning: var(--plain-badge-warning-base);
+  --badge-background-attention: var(--plain-badge-attention-base);
 }
 
 /* ANA BRAND */
@@ -625,6 +645,13 @@ html[data-brand='ana'][data-theme='light'] {
   --border-color: var(--ana-grey-200);
   --switch-track-background: var(--ana-grey-300);
   --switch-track-background-checked: var(--ana-blue-400);
+
+  /* Badge */
+  --ana-badge-text-color: var(--ana-white);
+  --ana-badge-neutral-base: var(--ana-grey-500);
+  --ana-badge-positive-base: var(--ana-green-700);
+  --ana-badge-warning-base: var(--ana-orange-700);
+  --ana-badge-attention-base: var(--ana-red-500);
 }
 
 /* =============================================================================== */
@@ -705,6 +732,13 @@ html[data-brand='ana'][data-theme='dark'] {
   --border-color: var(--ana-grey-700);
   --switch-track-background: var(--ana-grey-700);
   --switch-track-background-checked: var(--ana-blue-400);
+
+  /* Badge */
+  --ana-badge-text-color: var(--ana-white);
+  --ana-badge-neutral-base: var(--ana-grey-600);
+  --ana-badge-positive-base: var(--ana-green-700);
+  --ana-badge-warning-base: var(--ana-orange-700);
+  --ana-badge-attention-base: var(--ana-red-500);
 }
 
 /* ================================================================= */
@@ -755,20 +789,12 @@ html[data-brand='ana'] {
   --action-attention-text-color-focus: var(--ana-action-important-text);
   --action-attention-text-color-disabled: var(--ana-action-important-text);
 
-  --feedback-focus-base: var(--ana-focus-outline);
-  --feedback-plain-base: var(--ana-alert-plain-border);
-  --feedback-neutral-base: var(--ana-alert-neutral-border);
-  --feedback-positive-base: var(--ana-alert-success-border);
-  --feedback-info-base: var(--ana-alert-info-border);
-  --feedback-warning-base: var(--ana-alert-warning-border);
-  --feedback-attention-base: var(--ana-alert-error-border);
-  --feedback-focus-stroke-base: var(--feedback-focus-base);
-  --feedback-plain-stroke-base: var(--feedback-plain-base);
-  --feedback-neutral-stroke-base: var(--feedback-neutral-base);
-  --feedback-positive-stroke-base: var(--feedback-positive-base);
-  --feedback-info-stroke-base: var(--feedback-info-base);
-  --feedback-warning-stroke-base: var(--feedback-warning-base);
-  --feedback-attention-stroke-base: var(--feedback-attention-base);
+  --feedback-plain-stroke-base: var(--ana-alert-plain-border);
+  --feedback-neutral-stroke-base: var(--ana-alert-neutral-border);
+  --feedback-positive-stroke-base: var(--ana-alert-success-border);
+  --feedback-info-stroke-base: var(--ana-alert-info-border);
+  --feedback-warning-stroke-base: var(--ana-alert-warning-border);
+  --feedback-attention-stroke-base: var(--ana-alert-error-border);
 
   --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-stroke-base);
   --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-stroke-base);
@@ -797,4 +823,371 @@ html[data-brand='ana'] {
   --feedback-info-text: var(--ana-alert-info-text);
   --feedback-warning-text: var(--ana-alert-warning-text);
   --feedback-attention-text: var(--ana-alert-error-text);
+
+  /* Badge */
+  --badge-text-color: var(--ana-badge-text-color);
+  --badge-background-neutral: var(--ana-badge-neutral-base);
+  --badge-background-positive: var(--ana-badge-positive-base);
+  --badge-background-warning: var(--ana-badge-warning-base);
+  --badge-background-attention: var(--ana-badge-attention-base);
+}
+
+/* NEON FLUX BRAND */
+/* =============================================================================== */
+/* 1. BRAND PRIMITIVES                                                             */
+/* =============================================================================== */
+html[data-brand='neon'] {
+  --font-family: 'Orbitron', 'Segoe UI', Helvetica, Arial, sans-serif;
+
+  /* Neutral Greys – high contrast for neon aesthetic */
+  --neon-grey-50: #f8f9fa;
+  --neon-grey-100: #e1e1e1;
+  --neon-grey-200: #c4c4c4;
+  --neon-grey-300: #a6a6a6;
+  --neon-grey-400: #888888;
+  --neon-grey-500: #6a6a6a;
+  --neon-grey-600: #4c4c4c;
+  --neon-grey-700: #2e2e2e;
+  --neon-grey-800: #1a1a1a;
+  --neon-grey-900: #0a0a0a;
+  --neon-grey-1000: #000000;
+
+  /* Neon Pink */
+  --neon-pink-50: #ffe6f9;
+  --neon-pink-100: #ffb3ec;
+  --neon-pink-200: #ff99e6;
+  --neon-pink-300: #ff66d9;
+  --neon-pink-400: #ff4dd2;
+  --neon-pink-500: #ff00aa;
+  --neon-pink-600: #e60099;
+  --neon-pink-700: #cc0088;
+  --neon-pink-800: #b30077;
+  --neon-pink-900: #800050;
+  --neon-pink-1000: #4d0033;
+
+  /* Neon Blue */
+  --neon-blue-50: #e0f7ff;
+  --neon-blue-100: #b3ecff;
+  --neon-blue-200: #80e1ff;
+  --neon-blue-300: #4dd6ff;
+  --neon-blue-400: #33ccff;
+  --neon-blue-500: #00bfff;
+  --neon-blue-600: #00ade6;
+  --neon-blue-700: #009acd;
+  --neon-blue-800: #0080b3;
+  --neon-blue-900: #005580;
+  --neon-blue-1000: #00334d;
+
+  /* Neon Green */
+  --neon-green-50: #e6ffe6;
+  --neon-green-100: #b3ffb3;
+  --neon-green-200: #99ff99;
+  --neon-green-300: #66ff66;
+  --neon-green-400: #33ff33;
+  --neon-green-500: #00ff00;
+  --neon-green-600: #00e600;
+  --neon-green-700: #00cc00;
+  --neon-green-800: #00b300;
+  --neon-green-900: #008000;
+  --neon-green-1000: #004d00;
+
+  /* Neon Yellow */
+  --neon-yellow-50: #ffffe0;
+  --neon-yellow-100: #ffffb3;
+  --neon-yellow-200: #ffff99;
+  --neon-yellow-300: #ffff66;
+  --neon-yellow-400: #ffff33;
+  --neon-yellow-500: #ffff00;
+  --neon-yellow-600: #e6e600;
+  --neon-yellow-700: #cccc00;
+  --neon-yellow-800: #b3b300;
+  --neon-yellow-900: #808000;
+  --neon-yellow-1000: #4d4d00;
+
+  /* Neon Red */
+  --neon-red-50: #ffe6e6;
+  --neon-red-100: #ffcccc;
+  --neon-red-200: #ff9999;
+  --neon-red-300: #ff6666;
+  --neon-red-400: #ff3333;
+  --neon-red-500: #ff1a1a;
+  --neon-red-600: #e60000;
+  --neon-red-700: #cc0000;
+  --neon-red-800: #b30000;
+  --neon-red-900: #800000;
+  --neon-red-1000: #4d0000;
+
+  --neon-white: #ffffff;
+  --neon-black: #000000;
+}
+
+/* =============================================================================== */
+/* 3. LIGHT MODE                                                                   */
+/* =============================================================================== */
+html[data-brand='neon'][data-theme='light'] {
+  --neon-focus-outline: var(--neon-pink-300);
+
+  /* Icon Colors */
+  --icon-color-default: var(--neon-pink-500);
+  --icon-color-inverted: var(--neon-white);
+
+  --text-color: var(--neon-grey-900);
+  --heading-text-color: var(--neon-pink-500);
+  --card-background: var(--neon-white);
+  --code-background: var(--neon-white);
+  --input-background: var(--neon-pink-50);
+  --table-background: var(--neon-white);
+  --border-color: var(--neon-grey-200);
+  --switch-track-background: var(--neon-grey-300);
+  --switch-track-background-checked: var(--neon-pink-500);
+
+  /* Alerts */
+  --neon-alert-plain-bg: var(--white-opacity-10);
+  --neon-alert-plain-text: var(--neon-pink-700);
+  --neon-alert-plain-border: var(--neon-pink-400);
+  --neon-alert-plain-icon: var(--neon-pink-700);
+
+  --neon-alert-neutral-bg: var(--neon-grey-100);
+  --neon-alert-neutral-text: var(--neon-grey-900);
+  --neon-alert-neutral-border: var(--neon-grey-300);
+  --neon-alert-neutral-icon: var(--neon-grey-700);
+
+  --neon-alert-info-bg: var(--neon-blue-50);
+  --neon-alert-info-text: var(--neon-blue-900);
+  --neon-alert-info-border: var(--neon-blue-500);
+  --neon-alert-info-icon: var(--neon-blue-600);
+
+  --neon-alert-success-bg: var(--neon-green-50);
+  --neon-alert-success-text: var(--neon-green-900);
+  --neon-alert-success-border: var(--neon-green-700);
+  --neon-alert-success-icon: var(--neon-green-700);
+
+  --neon-alert-warning-bg: var(--neon-yellow-200);
+  --neon-alert-warning-text: var(--neon-yellow-900);
+  --neon-alert-warning-border: var(--neon-yellow-800);
+  --neon-alert-warning-icon: var(--neon-yellow-900);
+
+  --neon-alert-error-bg: var(--neon-red-100);
+  --neon-alert-error-text: var(--neon-red-900);
+  --neon-alert-error-border: var(--neon-red-300);
+  --neon-alert-error-icon: var(--neon-red-600);
+
+  /* Buttons */
+  --neon-action-primary-text: var(--neon-white);
+  --neon-action-primary-bg: var(--neon-pink-500);
+  --neon-action-primary-bg-hover: var(--neon-pink-700);
+  --neon-action-primary-bg-focus: var(--neon-pink-300);
+  --neon-action-primary-bg-disabled: var(--neon-grey-300);
+  --neon-action-primary-stroke: var(--neon-pink-500);
+
+  --neon-action-secondary-text: var(--neon-pink-500);
+  --neon-action-secondary-bg: transparent;
+  --neon-action-secondary-bg-hover: var(--neon-grey-50);
+  --neon-action-secondary-bg-focus: var(--neon-grey-200);
+  --neon-action-secondary-bg-disabled: var(--neon-grey-400);
+  --neon-action-secondary-stroke: var(--neon-pink-500);
+
+  --neon-action-tertiary-text: var(--neon-pink-500);
+  --neon-action-tertiary-bg: transparent;
+  --neon-action-tertiary-bg-hover: var(--neon-grey-50);
+  --neon-action-tertiary-bg-focus: var(--neon-grey-200);
+  --neon-action-tertiary-bg-disabled: var(--neon-grey-300);
+  --neon-action-tertiary-stroke: transparent;
+
+  --neon-action-important-text: var(--neon-white);
+  --neon-action-important-bg: var(--neon-red-500);
+  --neon-action-important-bg-hover: var(--neon-red-300);
+  --neon-action-important-bg-focus: var(--neon-red-100);
+  --neon-action-important-bg-disabled: var(--neon-grey-300);
+  --neon-action-important-stroke: var(--neon-red-500);
+
+  /* Badge */
+  --neon-badge-text-color: var(--neon-white);
+  --neon-badge-neutral-base: var(--neon-grey-400);
+  --neon-badge-positive-base: var(--neon-green-700);
+  --neon-badge-warning-base: var(--neon-yellow-800);
+  --neon-badge-attention-base: var(--neon-red-500);
+}
+
+/* =============================================================================== */
+/* 3. DARK MODE                                                                    */
+/* =============================================================================== */
+html[data-brand='neon'][data-theme='dark'] {
+  --neon-focus-outline: var(--neon-blue-300);
+
+  --icon-color-default: var(--neon-blue-300);
+  --icon-color-inverted: var(--neon-white);
+
+  --text-color: var(--neon-grey-100);
+  --heading-text-color: var(--neon-pink-200);
+  --card-background: var(--neon-grey-1000);
+  --code-background: var(--neon-grey-1000);
+  --input-background: var(--neon-pink-1000);
+  --table-background: var(--neon-grey-900);
+  --border-color: var(--neon-grey-700);
+  --switch-track-background: var(--neon-grey-700);
+  --switch-track-background-checked: var(--neon-pink-500);
+
+  /* Alerts */
+  --neon-alert-plain-bg: var(--black-opacity-10);
+  --neon-alert-plain-text: var(--neon-white);
+  --neon-alert-plain-border: var(--white-opacity-60);
+  --neon-alert-plain-icon: var(--white-opacity-80);
+
+  --neon-alert-neutral-bg: var(--neon-grey-700);
+  --neon-alert-neutral-text: var(--neon-white);
+  --neon-alert-neutral-border: var(--neon-grey-500);
+  --neon-alert-neutral-icon: var(--neon-grey-300);
+
+  --neon-alert-info-bg: var(--neon-blue-900);
+  --neon-alert-info-text: var(--neon-white);
+  --neon-alert-info-border: var(--neon-blue-500);
+  --neon-alert-info-icon: var(--neon-blue-300);
+
+  --neon-alert-success-bg: var(--neon-green-900);
+  --neon-alert-success-text: var(--neon-white);
+  --neon-alert-success-border: var(--neon-green-300);
+  --neon-alert-success-icon: var(--neon-green-500);
+
+  --neon-alert-warning-bg: var(--neon-yellow-900);
+  --neon-alert-warning-text: var(--neon-white);
+  --neon-alert-warning-border: var(--neon-yellow-100);
+  --neon-alert-warning-icon: var(--neon-yellow-500);
+
+  --neon-alert-error-bg: var(--neon-red-900);
+  --neon-alert-error-text: var(--neon-white);
+  --neon-alert-error-border: var(--neon-red-300);
+  --neon-alert-error-icon: var(--neon-red-300);
+
+  /* Buttons */
+  --neon-action-primary-text: var(--neon-white);
+  --neon-action-primary-bg: var(--neon-pink-500);
+  --neon-action-primary-bg-hover: var(--neon-pink-300);
+  --neon-action-primary-bg-focus: var(--neon-pink-100);
+  --neon-action-primary-bg-disabled: var(--neon-grey-700);
+  --neon-action-primary-stroke: var(--neon-pink-500);
+
+  --neon-action-secondary-text: var(--neon-blue-300);
+  --neon-action-secondary-bg: transparent;
+  --neon-action-secondary-bg-hover: var(--neon-grey-800);
+  --neon-action-secondary-bg-focus: var(--neon-grey-700);
+  --neon-action-secondary-bg-disabled: var(--neon-grey-600);
+  --neon-action-secondary-stroke: var(--neon-blue-300);
+
+  --neon-action-tertiary-text: var(--neon-blue-300);
+  --neon-action-tertiary-bg: transparent;
+  --neon-action-tertiary-bg-hover: var(--neon-grey-800);
+  --neon-action-tertiary-bg-focus: var(--neon-grey-700);
+  --neon-action-tertiary-bg-disabled: var(--neon-grey-600);
+  --neon-action-tertiary-stroke: var(--neon-blue-300);
+
+  --neon-action-important-text: var(--neon-white);
+  --neon-action-important-bg: var(--neon-red-500);
+  --neon-action-important-bg-hover: var(--neon-red-300);
+  --neon-action-important-bg-focus: var(--neon-red-100);
+  --neon-action-important-bg-disabled: var(--neon-grey-700);
+  --neon-action-important-stroke: var(--neon-red-500);
+
+  --neon-badge-text-color: var(--neon-white);
+  --neon-badge-neutral-base: var(--neon-grey-600);
+  --neon-badge-positive-base: var(--neon-green-900);
+  --neon-badge-warning-base: var(--neon-yellow-900);
+  --neon-badge-attention-base: var(--neon-red-700);
+}
+
+/* ================================================================= */
+/* 4. SET THE FOUNDATION                                             */
+/* Map tokens to semantic or component contexts .                    */
+/* ================================================================= */
+html[data-brand='neon'] {
+  --card-radius: var(--radius-150);
+  --action-radius: var(--radius-100);
+  --action-font-weight: var(--font-weight-bold);
+
+  /* Primary Action Styles */
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-action-primary-stroke);
+  --action-primary-background: var(--neon-action-primary-bg);
+  --action-primary-background-hover: var(--neon-action-primary-bg-hover);
+  --action-primary-background-focus: var(--neon-action-primary-bg-focus);
+  --action-primary-background-disabled: var(--neon-action-primary-bg-disabled);
+  --action-primary-text-color: var(--neon-action-primary-text);
+  --action-primary-text-color-hover: var(--neon-action-primary-text);
+  --action-primary-text-color-focus: var(--neon-action-primary-text);
+  --action-primary-text-color-disabled: var(--neon-action-primary-text);
+
+  /* Secondary Action Styles */
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-action-secondary-stroke);
+  --action-secondary-background: var(--neon-action-secondary-bg);
+  --action-secondary-background-hover: var(--neon-action-secondary-bg-hover);
+  --action-secondary-background-focus: var(--neon-action-secondary-bg-focus);
+  --action-secondary-background-disabled: var(--neon-action-secondary-bg-disabled);
+  --action-secondary-text-color: var(--neon-action-secondary-text);
+  --action-secondary-text-color-hover: var(--neon-action-secondary-text);
+  --action-secondary-text-color-focus: var(--neon-action-secondary-text);
+  --action-secondary-text-color-disabled: var(--neon-action-secondary-text);
+
+  /* Tertiary Action Styles */
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-action-tertiary-stroke);
+  --action-tertiary-background: var(--neon-action-tertiary-bg);
+  --action-tertiary-background-hover: var(--neon-action-tertiary-bg-hover);
+  --action-tertiary-background-focus: var(--neon-action-tertiary-bg-focus);
+  --action-tertiary-background-disabled: var(--neon-action-tertiary-bg-disabled);
+  --action-tertiary-text-color: var(--neon-action-tertiary-text);
+  --action-tertiary-text-color-hover: var(--neon-action-tertiary-text);
+  --action-tertiary-text-color-focus: var(--neon-action-tertiary-text);
+  --action-tertiary-text-color-disabled: var(--neon-action-tertiary-text);
+
+  /* Important Action Styles */
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-action-important-stroke);
+  --action-important-background: var(--neon-action-important-bg);
+  --action-important-background-hover: var(--neon-action-important-bg-hover);
+  --action-attention-background-focus: var(--neon-action-important-bg-focus);
+  --action-attention-background-disabled: var(--neon-action-important-bg-disabled);
+  --action-attention-text-color: var(--neon-action-important-text);
+  --action-attention-text-color-hover: var(--neon-action-important-text);
+  --action-attention-text-color-focus: var(--neon-action-important-text);
+  --action-attention-text-color-disabled: var(--neon-action-important-text);
+
+  /* Feedback Styles */
+  --feedback-plain-stroke-base: var(--neon-alert-plain-border);
+  --feedback-neutral-stroke-base: var(--neon-alert-neutral-border);
+  --feedback-positive-stroke-base: var(--neon-alert-success-border);
+  --feedback-info-stroke-base: var(--neon-alert-info-border);
+  --feedback-warning-stroke-base: var(--neon-alert-warning-border);
+  --feedback-attention-stroke-base: var(--neon-alert-error-border);
+
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-stroke-base);
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-stroke-base);
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-stroke-base);
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-info-stroke-base);
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-warning-stroke-base);
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-attention-stroke-base);
+
+  --feedback-plain-background: var(--neon-alert-plain-bg);
+  --feedback-neutral-background: var(--neon-alert-neutral-bg);
+  --feedback-positive-background: var(--neon-alert-success-bg);
+  --feedback-info-background: var(--neon-alert-info-bg);
+  --feedback-warning-background: var(--neon-alert-warning-bg);
+  --feedback-attention-background: var(--neon-alert-error-bg);
+
+  --feedback-plain-icon: var(--neon-alert-plain-icon);
+  --feedback-neutral-icon: var(--neon-alert-neutral-icon);
+  --feedback-positive-icon: var(--neon-alert-success-icon);
+  --feedback-info-icon: var(--neon-alert-info-icon);
+  --feedback-warning-icon: var(--neon-alert-warning-icon);
+  --feedback-attention-icon: var(--neon-alert-error-icon);
+
+  --feedback-plain-text: var(--neon-alert-plain-text);
+  --feedback-neutral-text: var(--neon-alert-neutral-text);
+  --feedback-positive-text: var(--neon-alert-success-text);
+  --feedback-info-text: var(--neon-alert-info-text);
+  --feedback-warning-text: var(--neon-alert-warning-text);
+  --feedback-attention-text: var(--neon-alert-error-text);
+
+  /* Badge */
+  --badge-text-color: var(--neon-badge-text-color);
+  --badge-background-neutral: var(--neon-badge-neutral-base);
+  --badge-background-positive: var(--neon-badge-positive-base);
+  --badge-background-warning: var(--neon-badge-warning-base);
+  --badge-background-attention: var(--neon-badge-attention-base);
 }
