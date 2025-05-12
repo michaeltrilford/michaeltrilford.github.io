@@ -1,7 +1,7 @@
 class ThemeSwitcher extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
     // Define brand capabilities
     this.brandCapabilities = {
       default: { theme: true },
@@ -12,16 +12,16 @@ class ThemeSwitcher extends HTMLElement {
     // Define font links per brand
     this.brandFontLinks = {
       jal: [
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossOrigin: "anonymous",
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossOrigin: 'anonymous',
         },
         {
-          rel: "stylesheet",
+          rel: 'stylesheet',
           href:
-            "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap",
+            'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap',
         },
       ],
       // Add more brands as needed
@@ -52,7 +52,7 @@ class ThemeSwitcher extends HTMLElement {
         }
       </style>
       <mui-grid class="grid" col="1fr" gap="var(--space-100)">
-        <mui-select 
+        <mui-select
           id="brand-switcher" 
           label="Brand"
           hide-label
@@ -68,24 +68,24 @@ class ThemeSwitcher extends HTMLElement {
   }
 
   setupListeners() {
-    const brandSwitcher = this.shadowRoot.getElementById("brand-switcher");
+    const brandSwitcher = this.shadowRoot.getElementById('brand-switcher');
 
-    brandSwitcher.addEventListener("change", (e) => {
+    brandSwitcher.addEventListener('change', (e) => {
       const val = e.detail.value;
-      localStorage.setItem("brand", val);
-      document.documentElement.setAttribute("data-brand", val);
+      localStorage.setItem('brand', val);
+      document.documentElement.setAttribute('data-brand', val);
       // Update theme switchers based on brand capabilities
       this.updateSwitchers(val);
     });
   }
 
   applySettings() {
-    const brand = localStorage.getItem("brand") || "default";
-    document.documentElement.setAttribute("data-brand", brand);
+    const brand = localStorage.getItem('brand') || 'default';
+    document.documentElement.setAttribute('data-brand', brand);
 
-    const brandSwitcher = this.shadowRoot.getElementById("brand-switcher");
+    const brandSwitcher = this.shadowRoot.getElementById('brand-switcher');
     if (brandSwitcher) {
-      brandSwitcher.setAttribute("value", brand);
+      brandSwitcher.setAttribute('value', brand);
     }
 
     this.updateSwitchers(brand);
@@ -101,11 +101,11 @@ class ThemeSwitcher extends HTMLElement {
 
     // Dispatch event to inform dark-mode-toggle about theme capability
     this.dispatchEvent(
-      new CustomEvent("brand-theme-capability", {
+      new CustomEvent('brand-theme-capability', {
         detail: { themeEnabled: capabilities.theme },
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   }
 
@@ -114,12 +114,12 @@ class ThemeSwitcher extends HTMLElement {
     if (!links) return;
 
     const alreadyInjected = links.some((link) =>
-      document.head.querySelector(`link[href="${link.href}"]`)
+      document.head.querySelector(`link[href="${link.href}"]`),
     );
     if (alreadyInjected) return;
 
     links.forEach(({ rel, href, crossOrigin }) => {
-      const linkEl = document.createElement("link");
+      const linkEl = document.createElement('link');
       linkEl.rel = rel;
       linkEl.href = href;
       if (crossOrigin) linkEl.crossOrigin = crossOrigin;
@@ -137,4 +137,4 @@ class ThemeSwitcher extends HTMLElement {
   }
 }
 
-customElements.define("theme-switcher", ThemeSwitcher);
+customElements.define('theme-switcher', ThemeSwitcher);

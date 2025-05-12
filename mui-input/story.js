@@ -1,7 +1,7 @@
 class storyInput extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
 
@@ -28,61 +28,61 @@ class storyInput extends HTMLElement {
 
     const propItems = [
       {
-        name: "types",
-        type: "string",
-        options: "text, password, email, number, search, tel, url, date, time",
-        default: "text",
-        description: "Define the data context that the input supports",
+        name: 'types',
+        type: 'string',
+        options: 'text, password, email, number, search, tel, url, date, time',
+        default: 'text',
+        description: 'Define the data context that the input supports',
       },
       {
-        name: "id",
-        type: "string",
-        options: "{text}",
-        default: "",
+        name: 'id',
+        type: 'string',
+        options: '{text}',
+        default: '',
         description:
-          "Identifier to group the label and input to allow user to focus on the input by clicking the label.",
+          'Identifier to group the label and input to allow user to focus on the input by clicking the label.',
       },
       {
-        name: "label",
-        type: "string",
-        options: "{text}",
-        default: "",
-        description: "Provide the input with a unique label",
+        name: 'label',
+        type: 'string',
+        options: '{text}',
+        default: '',
+        description: 'Provide the input with a unique label',
       },
       {
-        name: "hideLabel",
-        type: "boolean",
-        options: "hide-label",
-        default: "",
-        description: "Hide the label",
+        name: 'hide-label',
+        type: 'boolean',
+        options: 'hide-label',
+        default: '',
+        description: 'Hide the label',
       },
       {
-        name: "disabled",
-        type: "boolean",
-        options: "disabled",
-        default: "",
-        description: "Disable the input",
+        name: 'disabled',
+        type: 'boolean',
+        options: 'disabled',
+        default: '',
+        description: 'Disable the input',
       },
       {
-        name: "name",
-        type: "string",
-        options: "{text}",
-        default: "",
-        description: "The name attribute is used when submitting forms.",
+        name: 'name',
+        type: 'string',
+        options: '{text}',
+        default: '',
+        description: 'The name attribute is used when submitting forms.',
       },
       {
-        name: "value",
-        type: "string",
-        options: "{text}",
-        default: "",
-        description: "Sets the current value of the input field.",
+        name: 'value',
+        type: 'string',
+        options: '{text}',
+        default: '',
+        description: 'Sets the current value of the input field.',
       },
       {
-        name: "placeholder",
-        type: "string",
-        options: "{text}",
-        default: "",
-        description: "You want the input to start with pre-filled content.",
+        name: 'placeholder',
+        type: 'string',
+        options: '{text}',
+        default: '',
+        description: 'You want the input to start with pre-filled content.',
       },
     ];
 
@@ -90,21 +90,21 @@ class storyInput extends HTMLElement {
       .map(
         (prop) => `
           <story-type-row
-            ${prop.required ? "required" : ""}
+            ${prop.required ? 'required' : ''}
             name="${prop.name}"
             type="${prop.type}" 
-            options="${prop.options || ""}"
-            default="${prop.default || ""}"
+            options="${prop.options || ''}"
+            default="${prop.default || ''}"
             description="${prop.description}">
           </story-type-row>
-        `
+        `,
       )
-      .join("");
+      .join('');
 
     const accordions = propItems
       .map((prop, index) => {
         // Check if it's the last item in the array
-        const isLastChild = index === propItems.length - 1 ? "last-child" : "";
+        const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
 
         return `
             <mui-accordion-block 
@@ -113,17 +113,17 @@ class storyInput extends HTMLElement {
               ${isLastChild}>
               <story-type-slat
                 slot="detail"
-                ${prop.required ? "required" : ""}
+                ${prop.required ? 'required' : ''}
                 name="${prop.name}"
                 type="${prop.type}" 
-                options="${prop.options || ""}"
-                default="${prop.default || ""}"
+                options="${prop.options || ''}"
+                default="${prop.default || ''}"
                 description="${prop.description}">
               </story-type-slat>
             </mui-accordion-block>
           `;
       })
-      .join("");
+      .join('');
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -369,4 +369,4 @@ class storyInput extends HTMLElement {
   }
 }
 
-customElements.define("story-input", storyInput);
+customElements.define('story-input', storyInput);

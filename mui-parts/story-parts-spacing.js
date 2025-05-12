@@ -1,7 +1,7 @@
 class storyPartsSpacing extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -11,7 +11,7 @@ class storyPartsSpacing extends HTMLElement {
 
       <story-template 
         title="Spacing Parts"
-        description="Provides customisable part names for easy styling overrides via the part attribute, promoting flexible, trust-based customisation. Best for building custom web component compositions with MUI and scoped CSS styles."
+        description="Allows flexible styling overrides with customisable part names, supporting trusted customisation and scoped CSS in MUI web components."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-parts/index.js"
         >
         <mui-v-stack space="var(--space-700)">
@@ -89,4 +89,4 @@ class storyPartsSpacing extends HTMLElement {
   }
 }
 
-customElements.define("story-parts-spacing", storyPartsSpacing);
+customElements.define('story-parts-spacing', storyPartsSpacing);
