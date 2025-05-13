@@ -1,7 +1,7 @@
 class storyMessage extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
 
@@ -9,50 +9,50 @@ class storyMessage extends HTMLElement {
 
     const propItems = [
       {
-        name: "heading",
+        name: 'heading',
         required: true,
-        type: "string",
-        options: "{text}",
-        default: "Heading...",
-        description: "Main header for message",
+        type: 'string',
+        options: '{text}',
+        default: 'Heading...',
+        description: 'Main header for message',
       },
       {
-        name: "slot",
+        name: 'slot',
         required: true,
-        type: "node",
-        options: "mui-body, mui-list, elements",
-        default: "Body content...",
-        description: "Slot in body, list or custom elements",
+        type: 'node',
+        options: 'mui-body, mui-list, elements',
+        default: 'Body content...',
+        description: 'Slot in body, list or custom elements',
       },
       {
-        name: "icon",
-        type: "string",
-        options: "mui-icon-[name]",
-        default: "message",
-        description: "Choose an alternative mui-icon",
+        name: 'icon',
+        type: 'string',
+        options: 'mui-icon-[name]',
+        default: 'message',
+        description: 'Choose an alternative mui-icon',
       },
       {
-        name: "variant",
-        type: "string",
-        options: "plain, neutral, positive, info, warning, attention",
-        default: "neutral",
-        description: "Describe the intent or mood of a message",
+        name: 'variant',
+        type: 'string',
+        options: 'plain, neutral, positive, info, warning, attention',
+        default: 'neutral',
+        description: 'Describe the intent or mood of a message',
       },
       {
-        name: "style",
-        type: "string",
-        options: "Valid CSS",
-        default: "",
+        name: 'style',
+        type: 'string',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use styles to add layout based CSS to the host element.",
+          'You are able to use styles to add layout based CSS to the host element.',
       },
       {
-        name: "class",
-        type: "string",
-        options: "Valid CSS",
-        default: "",
+        name: 'class',
+        type: 'string',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use add a classname to add layout based CSS to the host element.",
+          'You are able to use add a classname to add layout based CSS to the host element.',
       },
     ];
 
@@ -60,21 +60,21 @@ class storyMessage extends HTMLElement {
       .map(
         (prop) => `
           <story-type-row
-            ${prop.required ? "required" : ""}
+            ${prop.required ? 'required' : ''}
             name="${prop.name}"
             type="${prop.type}" 
-            options="${prop.options || ""}"
-            default="${prop.default || ""}"
+            options="${prop.options || ''}"
+            default="${prop.default || ''}"
             description="${prop.description}">
           </story-type-row>
-        `
+        `,
       )
-      .join("");
+      .join('');
 
     const accordions = propItems
       .map((prop, index) => {
         // Check if it's the last item in the array
-        const isLastChild = index === propItems.length - 1 ? "last-child" : "";
+        const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
 
         return `
           <mui-accordion-block 
@@ -83,17 +83,17 @@ class storyMessage extends HTMLElement {
             ${isLastChild}>
             <story-type-slat
               slot="detail"
-              ${prop.required ? "required" : ""}
+              ${prop.required ? 'required' : ''}
               name="${prop.name}"
               type="${prop.type}" 
-              options="${prop.options || ""}"
-              default="${prop.default || ""}"
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
               description="${prop.description}">
             </story-type-slat>
           </mui-accordion-block>
         `;
       })
-      .join("");
+      .join('');
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -375,15 +375,6 @@ class storyMessage extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Usage: Notification (Beta)">
-          <mui-message slot="body" usage="notification"></mui-message>
-          <mui-code slot="footer">
-            &lt;mui-message usage="notification"&gt;...&lt;/mui-message&gt;
-          </mui-code>
-        </story-card>
-
-
-
       </mui-v-stack>
 
       </story-template>
@@ -391,4 +382,4 @@ class storyMessage extends HTMLElement {
   }
 }
 
-customElements.define("story-message", storyMessage);
+customElements.define('story-message', storyMessage);

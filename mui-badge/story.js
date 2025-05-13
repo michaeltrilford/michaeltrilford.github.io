@@ -1,7 +1,7 @@
 class storyBadge extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -45,7 +45,7 @@ class storyBadge extends HTMLElement {
 
         <story-card title="Positive">
           <div slot="body">
-            <mui-badge variant="positive">Offline</mui-badge>
+            <mui-badge variant="positive">Paid</mui-badge>
           </div>
           <mui-code slot="footer">
             &lt;mui-badge variant="positive"&gt;
@@ -89,4 +89,4 @@ class storyBadge extends HTMLElement {
   }
 }
 
-customElements.define("story-badge", storyBadge);
+customElements.define('story-badge', storyBadge);

@@ -1,7 +1,7 @@
 class storyTokensSemantic extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -18,35 +18,25 @@ class storyTokensSemantic extends HTMLElement {
         <mui-v-stack space="var(--space-700)">
   
           <story-card title="Feedback States" description="User feedback (alerts, messages, forms, badges etc.)" nofooter>
-            <story-token-slat slot="body" token="--feedback-focus-base" variant="color" output="var(--blue-500)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-plain-base" variant="color" output="var(--black-opacity-50)"></story-token-slat>
-
-            <story-token-slat slot="body" token="--feedback-neutral-base" variant="color" output="var(--grey-600)"></story-token-slat>  
-            <story-token-slat slot="body" token="--feedback-positive-base" variant="color" output="var(--green-600)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-info-base" variant="color" output="var(--blue-600)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-warning-base" variant="color" output="var(--orange-600)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-attention-base" variant="color" output="var(--red-600)"></story-token-slat>
-
-            <story-token-slat slot="body" token="--feedback-focus-stroke-base" variant="border-color" output="var(--feedback-focus-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-plain-stroke-base" variant="border-color" output="var(--feedback-plain-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-neutral-stroke-base" variant="border-color" output="var(--feedback-neutral-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-positive-stroke-base" variant="border-color" output="var(--feedback-positive-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-info-stroke-base" variant="border-color" output="var(--feedback-info-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-warning-stroke-base" variant="border-color" output="var(--feedback-warning-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--feedback-attention-stroke-base" variant="border-color" output="var(--feedback-attention-base)"></story-token-slat>
+            <story-token-slat slot="body" token="--feedback-plain-border-color" variant="color" output="var(--black-opacity-50)"></story-token-slat>
+            <story-token-slat slot="body" token="--feedback-neutral-border-color" variant="color" output="var(--grey-600)"></story-token-slat>  
+            <story-token-slat slot="body" token="--feedback-positive-border-color" variant="color" output="var(--green-600)"></story-token-slat>
+            <story-token-slat slot="body" token="--feedback-info-border-color" variant="color" output="var(--blue-600)"></story-token-slat>
+            <story-token-slat slot="body" token="--feedback-warning-border-color" variant="color" output="var(--orange-600)"></story-token-slat>
+            <story-token-slat slot="body" token="--feedback-attention-border-color" variant="color" output="var(--red-600)"></story-token-slat>
 
             <story-token-slat slot="body" token="--feedback-plain-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
-            var(--feedback-plain-stroke-base)"></story-token-slat>
+            var(--feedback-plain-border-color)"></story-token-slat>
             <story-token-slat slot="body" token="--feedback-neutral-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
-            var(--feedback-neutral-stroke-base)"></story-token-slat>
+            var(--feedback-neutral-border-color)"></story-token-slat>
             <story-token-slat slot="body" token="--feedback-positive-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
-            var(--feedback-positive-stroke-base)"></story-token-slat>
+            var(--feedback-positive-border-color)"></story-token-slat>
             <story-token-slat slot="body" token="--feedback-info-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
-            var(--feedback-info-stroke-base)"></story-token-slat>
+            var(--feedback-info-border-color)"></story-token-slat>
             <story-token-slat slot="body" token="--feedback-warning-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
-            var(--feedback-warning-stroke-base)"></story-token-slat>
+            var(--feedback-warning-border-color)"></story-token-slat>
             <story-token-slat slot="body" token="--feedback-attention-border" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
-            var(--feedback-attention-stroke-base)"></story-token-slat>
+            var(--feedback-attention-border-color)"></story-token-slat>
 
             <story-token-slat slot="body" token="--feedback-plain-background" variant="color" output="var(--white-opacity-0)"></story-token-slat>
             <story-token-slat slot="body" token="--feedback-neutral-background" variant="color" output="var(--grey-100)"></story-token-slat>
@@ -134,4 +124,4 @@ class storyTokensSemantic extends HTMLElement {
   }
 }
 
-customElements.define("story-tokens-semantic", storyTokensSemantic);
+customElements.define('story-tokens-semantic', storyTokensSemantic);

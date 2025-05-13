@@ -1,0 +1,373 @@
+/* NEON FLUX BRAND */
+/* =============================================================================== */
+/* 1. BRAND PRIMITIVES                                                             */
+/* =============================================================================== */
+html[data-brand='neon'] {
+  --font-family: 'Oswald', sans-serif;
+
+  /* Neutral Greys – high contrast for neon aesthetic */
+  --neon-grey-50: #f8f9fa;
+  --neon-grey-100: #e1e1e1;
+  --neon-grey-200: #c4c4c4;
+  --neon-grey-300: #a6a6a6;
+  --neon-grey-400: #888888;
+  --neon-grey-500: #6a6a6a;
+  --neon-grey-600: #4c4c4c;
+  --neon-grey-700: #2e2e2e;
+  --neon-grey-800: #1a1a1a;
+  --neon-grey-900: #0a0a0a;
+  --neon-grey-1000: #000000;
+
+  /* Neon Pink */
+  --neon-pink-50: #ffe6f9;
+  --neon-pink-100: #ffb3ec;
+  --neon-pink-200: #ff99e6;
+  --neon-pink-300: #ff66d9;
+  --neon-pink-400: #ff4dd2;
+  --neon-pink-500: #ff00aa;
+  --neon-pink-600: #e60099;
+  --neon-pink-700: #cc0088;
+  --neon-pink-800: #b30077;
+  --neon-pink-900: #800050;
+  --neon-pink-1000: #4d0033;
+
+  /* Neon Blue */
+  --neon-blue-50: #e0f7ff;
+  --neon-blue-100: #b3ecff;
+  --neon-blue-200: #80e1ff;
+  --neon-blue-300: #4dd6ff;
+  --neon-blue-400: #33ccff;
+  --neon-blue-500: #00bfff;
+  --neon-blue-600: #00ade6;
+  --neon-blue-700: #009acd;
+  --neon-blue-800: #0080b3;
+  --neon-blue-900: #005580;
+  --neon-blue-1000: #00334d;
+
+  /* Neon Green */
+  --neon-green-50: #e6ffe6;
+  --neon-green-100: #b3ffb3;
+  --neon-green-200: #99ff99;
+  --neon-green-300: #66ff66;
+  --neon-green-400: #33ff33;
+  --neon-green-500: #00ff00;
+  --neon-green-600: #00e600;
+  --neon-green-700: #00cc00;
+  --neon-green-800: #00b300;
+  --neon-green-900: #008000;
+  --neon-green-1000: #004d00;
+
+  /* Neon Yellow */
+  --neon-yellow-50: #ffffe0;
+  --neon-yellow-100: #ffffb3;
+  --neon-yellow-200: #ffff99;
+  --neon-yellow-300: #ffff66;
+  --neon-yellow-400: #ffff33;
+  --neon-yellow-500: #ffff00;
+  --neon-yellow-600: #e6e600;
+  --neon-yellow-700: #cccc00;
+  --neon-yellow-800: #b3b300;
+  --neon-yellow-900: #808000;
+  --neon-yellow-1000: #4d4d00;
+
+  /* Neon Red */
+  --neon-red-50: #ffe6e6;
+  --neon-red-100: #ffcccc;
+  --neon-red-200: #ff9999;
+  --neon-red-300: #ff6666;
+  --neon-red-400: #ff3333;
+  --neon-red-500: #ff1a1a;
+  --neon-red-600: #e60000;
+  --neon-red-700: #cc0000;
+  --neon-red-800: #b30000;
+  --neon-red-900: #800000;
+  --neon-red-1000: #4d0000;
+
+  --neon-white: #ffffff;
+  --neon-black: #000000;
+}
+
+/* =============================================================================== */
+/* 2. LIGHT MODE                                                                   */
+/* =============================================================================== */
+html[data-brand='neon'][data-theme='light'] {
+  /* Feedback */
+  --feedback-plain-border-color: var(--neon-pink-400);
+  --feedback-neutral-border-color: var(--neon-grey-300);
+  --feedback-positive-border-color: var(--neon-green-700);
+  --feedback-info-border-color: var(--neon-blue-500);
+  --feedback-warning-border-color: var(--neon-yellow-800);
+  --feedback-attention-border-color: var(--neon-red-300);
+
+  --feedback-plain-background: var(--white-opacity-10);
+  --feedback-neutral-background: var(--neon-grey-100);
+  --feedback-positive-background: var(--neon-green-50);
+  --feedback-info-background: var(--neon-blue-50);
+  --feedback-warning-background: var(--neon-yellow-200);
+  --feedback-attention-background: var(--neon-red-100);
+
+  --feedback-plain-icon: var(--neon-pink-700);
+  --feedback-neutral-icon: var(--neon-grey-700);
+  --feedback-positive-icon: var(--neon-green-700);
+  --feedback-info-icon: var(--neon-blue-600);
+  --feedback-warning-icon: var(--neon-yellow-900);
+  --feedback-attention-icon: var(--neon-red-600);
+  --feedback-plain-text: var(--neon-pink-700);
+  --feedback-neutral-text: var(--neon-grey-900);
+  --feedback-positive-text: var(--neon-green-900);
+  --feedback-info-text: var(--neon-blue-900);
+  --feedback-warning-text: var(--neon-yellow-900);
+  --feedback-attention-text: var(--neon-red-900);
+
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-pink-500);
+  --action-primary-background: var(--neon-pink-500);
+  --action-primary-background-hover: var(--neon-pink-700);
+  --action-primary-background-focus: var(--neon-pink-300);
+  --action-primary-background-disabled: var(--neon-grey-300);
+  --action-primary-text-color: var(--neon-white);
+  --action-primary-text-color-hover: var(--neon-white);
+  --action-primary-text-color-focus: var(--neon-white);
+  --action-primary-text-color-disabled: var(--neon-white);
+
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-pink-500);
+  --action-secondary-background: var(--white-opacity-0);
+  --action-secondary-background-hover: var(--neon-grey-50);
+  --action-secondary-background-focus: var(--neon-grey-200);
+  --action-secondary-background-disabled: var(--neon-grey-400);
+  --action-secondary-text-color: var(--neon-pink-500);
+  --action-secondary-text-color-hover: var(--neon-pink-500);
+  --action-secondary-text-color-focus: var(--neon-pink-500);
+  --action-secondary-text-color-disabled: var(--neon-pink-500);
+
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-background: var(--white-opacity-0);
+  --action-tertiary-background-hover: var(--neon-grey-50);
+  --action-tertiary-background-focus: var(--neon-grey-200);
+  --action-tertiary-background-disabled: var(--neon-grey-400);
+  --action-tertiary-text-color: var(--neon-pink-500);
+  --action-tertiary-text-color-hover: var(--neon-pink-500);
+  --action-tertiary-text-color-focus: var(--neon-pink-500);
+  --action-tertiary-text-color-disabled: var(--neon-pink-500);
+
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-red-500);
+  --action-attention-background: var(--neon-red-500);
+  --action-attention-background-hover: var(--neon-red-300);
+  --action-attention-background-focus: var(--neon-red-100);
+  --action-attention-background-disabled: var(--neon-grey-300);
+  --action-attention-text-color: var(--neon-white);
+  --action-attention-text-color-hover: var(--neon-white);
+  --action-attention-text-color-focus: var(--neon-white);
+  --action-attention-text-color-disabled: var(--neon-white);
+
+  /* Badge */
+  --badge-text-color: var(--neon-white);
+  --badge-background-neutral: var(--neon-grey-300);
+  --badge-background-positive: var(--neon-green-700);
+  --badge-background-warning: var(--neon-yellow-800);
+  --badge-background-attention: var(--neon-red-600);
+
+  /* Outline (Focus) */
+  --outline-color: var(--neon-pink-300);
+
+  /* Icon */
+  --icon-color-default: var(--neon-pink-500);
+  --icon-color-inverted: var(--neon-white);
+
+  /* Type */
+  --text-color: var(--neon-grey-900);
+  --heading-text-color: var(--neon-pink-500);
+
+  /* Card */
+  --card-background: var(--neon-white);
+
+  /* Code */
+  --code-background: var(--neon-white);
+  --code-text-color: var(--neon-black);
+
+  /* Input */
+  --input-background: var(--neon-pink-50);
+
+  /* Table */
+  --table-background: var(--neon-white);
+
+  /* Border */
+  --border-color: var(--neon-grey-200);
+
+  /* Switch */
+  --switch-track-background: var(--neon-grey-300);
+  --switch-track-background-checked: var(--neon-pink-500);
+}
+
+/* =============================================================================== */
+/* 3. DARK MODE                                                                    */
+/* =============================================================================== */
+html[data-brand='neon'][data-theme='dark'] {
+  /* Feedback */
+  --feedback-plain-border-color: var(--white-opacity-60);
+  --feedback-neutral-border-color: var(--neon-grey-500);
+  --feedback-positive-border-color: var(--neon-green-300);
+  --feedback-info-border-color: var(--neon-blue-500);
+  --feedback-warning-border-color: var(--neon-yellow-100);
+  --feedback-attention-border-color: var(--neon-red-300);
+
+  --feedback-plain-background: var(--black-opacity-10);
+  --feedback-neutral-background: var(--neon-grey-700);
+  --feedback-positive-background: var(--neon-green-900);
+  --feedback-info-background: var(--neon-blue-900);
+  --feedback-warning-background: var(--neon-yellow-900);
+  --feedback-attention-background: var(--neon-red-900);
+
+  --feedback-plain-icon: var(--white-opacity-80);
+  --feedback-neutral-icon: var(--neon-grey-300);
+  --feedback-positive-icon: var(--neon-green-500);
+  --feedback-info-icon: var(--neon-blue-300);
+  --feedback-warning-icon: var(--neon-yellow-500);
+  --feedback-attention-icon: var(--neon-red-300);
+
+  --feedback-plain-text: var(--neon-white);
+  --feedback-neutral-text: var(--neon-white);
+  --feedback-positive-text: var(--neon-white);
+  --feedback-info-text: var(--neon-white0);
+  --feedback-warning-text: var(--neon-white);
+  --feedback-attention-text: var(--neon-white);
+
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-pink-500);
+  --action-primary-background: var(--neon-pink-500);
+  --action-primary-background-hover: var(--neon-pink-300);
+  --action-primary-background-focus: var(--neon-pink-100);
+  --action-primary-background-disabled: var(--neon-grey-700);
+  --action-primary-text-color: var(--neon-white);
+  --action-primary-text-color-hover: var(--neon-white);
+  --action-primary-text-color-focus: var(--neon-white);
+  --action-primary-text-color-disabled: var(--neon-white);
+
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-blue-300);
+  --action-secondary-background: var(--white-opacity-0);
+  --action-secondary-background-hover: var(--neon-grey-800);
+  --action-secondary-background-focus: var(--neon-grey-700);
+  --action-secondary-background-disabled: var(--neon-grey-600);
+  --action-secondary-text-color: var(--neon-blue-300);
+  --action-secondary-text-color-hover: var(--neon-blue-300);
+  --action-secondary-text-color-focus: var(--neon-blue-300);
+  --action-secondary-text-color-disabled: var(--neon-blue-300);
+
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-blue-300);
+  --action-tertiary-background: var(--white-opacity-0);
+  --action-tertiary-background-hover: var(--neon-grey-800);
+  --action-tertiary-background-focus: var(--neon-grey-700);
+  --action-tertiary-background-disabled: var(--neon-grey-600);
+  --action-tertiary-text-color: var(--neon-blue-300);
+  --action-tertiary-text-color-hover: var(--neon-blue-300);
+  --action-tertiary-text-color-focus: var(--neon-blue-300);
+  --action-tertiary-text-color-disabled: var(--neon-blue-300);
+
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--neon-red-500);
+  --action-attention-background: var(--neon-red-500);
+  --action-attention-background-hover: var(--neon-red-300);
+  --action-attention-background-focus: var(--neon-red-100);
+  --action-attention-background-disabled: var(--neon-grey-700);
+  --action-attention-text-color: var(--neon-white);
+  --action-attention-text-color-hover: var(--neon-white);
+  --action-attention-text-color-focus: var(--neon-white);
+  --action-attention-text-color-disabled: var(--neon-white);
+
+  /* Badge */
+  --badge-text-color: var(--neon-white);
+  --badge-background-neutral: var(--neon-grey-600);
+  --badge-background-positive: var(--neon-green-900);
+  --badge-background-warning: var(--neon-yellow-900);
+  --badge-background-attention: var(--neon-red-700);
+
+  /* Outline (Focus) */
+  --outline-color: var(--neon-blue-300);
+
+  /* Icon */
+  --icon-color-default: var(--neon-blue-300);
+  --icon-color-inverted: var(--neon-white);
+
+  /* Type */
+  --text-color: var(--neon-grey-100);
+  --heading-text-color: var(--neon-pink-200);
+
+  /* Card */
+  --card-background: var(--neon-grey-1000);
+
+  /* Code */
+  --code-background: var(--neon-grey-1000);
+  --code-text-color: var(--neon-white);
+
+  /* Input */
+  --input-background: var(--neon-pink-1000);
+
+  /* Table */
+  --table-background: var(--neon-grey-900);
+
+  /* Border */
+  --border-color: var(--neon-grey-700);
+
+  /* Switch */
+  --switch-track-background: var(--neon-grey-700);
+  --switch-track-background-checked: var(--neon-pink-500);
+}
+
+/* ================================================================= */
+/* 4. SET THE FOUNDATION                                             */
+/* Map tokens to semantic or component contexts .                    */
+/* ================================================================= */
+html[data-brand='neon'] {
+  --action-padding: var(--space-200) var(--space-500);
+  --action-icon-only-padding: var(--space-000);
+  --action-radius: var(--radius-400);
+  --action-font-size: var(--text-font-size);
+  --action-line-height: var(--text-line-height);
+  --action-font-weight: var(--font-weight-bold);
+
+  /* Feedback • Alerts, Messages, Notifciations */
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-border-color);
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-border-color);
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-border-color);
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-info-border-color);
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-warning-border-color);
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-attention-border-color);
+
+  /* Card */
+  --card-radius: var(--radius-150);
+}
+
+/* =============================================================================== */
+/*   Theme Storefront: Neon Flux                                                       */
+/*   Component theme alignment across storefront                                   */
+/* =============================================================================== */
+html[data-brand='neon'][data-theme='light'] {
+  --app-meta-theme-color: var(--neon-grey-200);
+  --app-skeleton: var(--neon-grey-200);
+  --app-background: var(--neon-pink-50);
+  --app-nav-accent: var(--neon-blue-600);
+  --app-nav-background: var(--neon-white);
+  --app-nav-border: var(--neon-grey-300);
+  --app-nav-home-hover: var(--neon-blue-50);
+  --app-nav-link: var(--neon-pink-600);
+  --app-nav-link-focus: var(--neon-grey-100);
+  --app-nav-group-color: var(--black-opacity-50);
+  --app-theme-toggle-bg: var(--neon-grey-100);
+  --app-story-code-snippet-background: var(--neon-blue-600);
+  --app-story-snippet-code-text: var(--neon-white);
+}
+
+html[data-brand='neon'][data-theme='dark'] {
+  --app-meta-theme-color: var(--neon-grey-900);
+  --app-skeleton: var(--neon-grey-900);
+  --app-background: var(--neon-pink-1000);
+  --app-nav-accent: var(--neon-blue-200);
+  --app-nav-background: var(--neon-black);
+  --app-nav-border: var(--neon-grey-800);
+  --app-nav-home-hover: var(--neon-pink-900);
+  --app-nav-link: var(--neon-pink-200);
+  --app-nav-link-focus: var(--neon-grey-1000);
+  --app-nav-group-color: var(--white-opacity-80);
+  --app-theme-toggle-bg: var(--neon-blue-200);
+  --app-story-code-snippet-background: var(--neon-blue-800);
+  --app-story-snippet-code-text: var(--neon-white);
+  --app-story-card-background: var(--neon-black);
+  --app-story-card-canvas: var(--neon-grey-900);
+}

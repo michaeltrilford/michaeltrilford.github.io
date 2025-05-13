@@ -4,10 +4,12 @@ class ThemeSwitcher extends HTMLElement {
     this.attachShadow({ mode: 'open' });
     // Define brand capabilities
     this.brandCapabilities = {
-      default: { theme: true },
+      mui: { theme: true },
       jal: { theme: true },
+      ana: { theme: true },
       plain: { theme: true },
       neon: { theme: true },
+      template: { theme: true },
     };
 
     // Define font links per brand
@@ -25,7 +27,19 @@ class ThemeSwitcher extends HTMLElement {
             'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap',
         },
       ],
-      // Add more brands as needed
+      neon: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossOrigin: 'anonymous',
+        },
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap',
+        },
+      ],
     };
   }
 
@@ -70,11 +84,12 @@ class ThemeSwitcher extends HTMLElement {
           label="Brand"
           hide-label
           options='[
-            {"value": "default", "label": "Mui"},
+            {"value": "mui", "label": "Mui"},
             {"value": "jal", "label": "JAL"},
             {"value": "ana", "label": "ANA"},
             {"value": "plain", "label": "Plain"},
-            {"value": "neon", "label": "Neon Flux"}
+            {"value": "neon", "label": "Neon Flux"},
+            {"value": "template", "label": "Template"}
           ]'>
         </mui-select>
       </mui-grid>

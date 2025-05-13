@@ -1,0 +1,313 @@
+/* PLAIN BRAND */
+/* =============================================================================== */
+/* 1. BRAND PRIMITIVES                                                             */
+/* =============================================================================== */
+html[data-brand='plain'] {
+  --font-family: 'Courier New';
+  /* Greyscale Palette */
+  --plain-white: #ffffff;
+  --plain-black: #000000;
+  /* Neutral Greys */
+  --plain-grey-100: #f5f5f5;
+  --plain-grey-200: #e0e0e0;
+  --plain-grey-300: #c2c2c2;
+  --plain-grey-400: #a3a3a3;
+  --plain-grey-500: #8a8a8a;
+  --plain-grey-600: #707070;
+  --plain-grey-700: #494949;
+  --plain-grey-800: #2c2c2c;
+  --plain-grey-900: #1a1a1a;
+}
+
+/* =============================================================================== */
+/* 2. LIGHT MODE                                                                   */
+/* =============================================================================== */
+html[data-brand='plain'][data-theme='light'] {
+  /* Feedback */
+  --feedback-plain-border-color: var(--black-opacity-20);
+  --feedback-neutral-border-color: var(--plain-grey-300);
+  --feedback-positive-border-color: var(--plain-grey-300);
+  --feedback-info-border-color: var(--plain-grey-300);
+  --feedback-warning-border-color: var(--plain-grey-300);
+  --feedback-attention-border-color: var(--plain-grey-300);
+
+  --feedback-plain-background: var(--white-opacity-20);
+  --feedback-neutral-background: var(--plain-grey-100);
+  --feedback-positive-background: var(--plain-grey-100);
+  --feedback-info-background: var(--plain-grey-100);
+  --feedback-warning-background: var(--plain-grey-100);
+  --feedback-attention-background: var(--plain-grey-100);
+
+  --feedback-plain-icon: var(--black-opacity-60);
+  --feedback-neutral-icon: var(--plain-black);
+  --feedback-positive-icon: var(--plain-black);
+  --feedback-info-icon: var(--plain-black);
+  --feedback-warning-icon: var(--plain-black);
+  --feedback-attention-icon: var(--plain-black);
+  --feedback-plain-text: var(--plain-black);
+  --feedback-neutral-text: var(--plain-black);
+  --feedback-positive-text: var(--plain-black);
+  --feedback-info-text: var(--plain-black);
+  --feedback-warning-text: var(--plain-black);
+  --feedback-attention-text: var(--plain-black);
+
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-grey-700);
+  --action-primary-background: var(--plain-grey-700);
+  --action-primary-background-hover: var(--plain-grey-900);
+  --action-primary-background-focus: var(--plain-grey-900);
+  --action-primary-background-disabled: var(--plain-grey-600);
+  --action-primary-text-color: var(--plain-white);
+  --action-primary-text-color-hover: var(--plain-white);
+  --action-primary-text-color-focus: var(--plain-white);
+  --action-primary-text-color-disabled: var(--plain-white);
+
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-grey-700);
+  --action-secondary-background: var(--white-opacity-0);
+  --action-secondary-background-hover: var(--plain-grey-100);
+  --action-secondary-background-focus: var(--plain-grey-100);
+  --action-secondary-background-disabled: var(--plain-grey-400);
+  --action-secondary-text-color: var(--plain-grey-700);
+  --action-secondary-text-color-hover: var(--plain-grey-700);
+  --action-secondary-text-color-focus: var(--plain-grey-700);
+  --action-secondary-text-color-disabled: var(--plain-grey-700);
+
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-tertiary-background: var(--white-opacity-0);
+  --action-tertiary-background-hover: var(--plain-grey-100);
+  --action-tertiary-background-focus: var(--plain-grey-100);
+  --action-tertiary-background-disabled: var(--plain-grey-400);
+  --action-tertiary-text-color: var(--plain-grey-700);
+  --action-tertiary-text-color-hover: var(--plain-grey-700);
+  --action-tertiary-text-color-focus: var(--plain-grey-700);
+  --action-tertiary-text-color-disabled: var(--plain-grey-700);
+
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-black);
+  --action-attention-background: var(--plain-black);
+  --action-attention-background-hover: var(--plain-grey-900);
+  --action-attention-background-focus: var(--plain-grey-900);
+  --action-attention-background-disabled: var(--plain-grey-700);
+  --action-attention-text-color: var(--plain-white);
+  --action-attention-text-color-hover: var(--plain-white);
+  --action-attention-text-color-focus: var(--plain-white);
+  --action-attention-text-color-disabled: var(--plain-white);
+
+  /* Badge */
+  --badge-text-color: var(--plain-white);
+  --badge-background-neutral: var(--plain-grey-400);
+  --badge-background-positive: var(--plain-grey-700);
+  --badge-background-warning: var(--plain-black);
+  --badge-background-attention: var(--plain-black);
+
+  /* Outline (Focus) */
+  --outline-color: var(--plain-black);
+
+  /* Icon */
+  --icon-color-default: var(--plain-black);
+  --icon-color-inverted: var(--plain-white);
+
+  /* Type */
+  --text-color: var(--plain-black);
+  --heading-text-color: var(--plain-black);
+
+  /* Card */
+  --card-background: var(--plain-white);
+
+  /* Code */
+  --code-background: var(--plain-white);
+  --code-text-color: var(--plain-black);
+
+  /* Input */
+  --input-background: var(--plain-white);
+
+  /* Table */
+  --table-background: var(--plain-white);
+
+  /* Border */
+  --border-color: var(--plain-grey-300);
+
+  /* Switch */
+  --switch-track-background: var(--plain-grey-300);
+  --switch-track-background-checked: var(--plain-black);
+}
+
+/* =============================================================================== */
+/* 3. DARK MODE                                                                    */
+/* =============================================================================== */
+html[data-brand='plain'][data-theme='dark'] {
+  /* Feedback */
+  --feedback-plain-border-color: var(--white-opacity-20);
+  --feedback-neutral-border-color: var(--plain-grey-300);
+  --feedback-positive-border-color: var(--plain-grey-300);
+  --feedback-info-border-color: var(--plain-grey-300);
+  --feedback-warning-border-color: var(--plain-grey-300);
+  --feedback-attention-border-color: var(--plain-grey-300);
+
+  --feedback-plain-background: var(--black-opacity-20);
+  --feedback-neutral-background: var(--plain-grey-900);
+  --feedback-positive-background: var(--plain-grey-900);
+  --feedback-info-background: var(--plain-grey-900);
+  --feedback-warning-background: var(--plain-grey-900);
+  --feedback-attention-background: var(--plain-grey-900);
+
+  --feedback-plain-icon: var(--white-opacity-60);
+  --feedback-neutral-icon: var(--plain-grey-100);
+  --feedback-positive-icon: var(--plain-grey-100);
+  --feedback-info-icon: var(--plain-grey-100);
+  --feedback-warning-icon: var(--plain-grey-100);
+  --feedback-attention-icon: var(--plain-grey-100);
+  --feedback-plain-text: var(--plain-white);
+  --feedback-neutral-text: var(--plain-white);
+  --feedback-positive-text: var(--plain-white);
+  --feedback-info-text: var(--plain-white);
+  --feedback-warning-text: var(--plain-white);
+  --feedback-attention-text: var(--plain-white);
+
+  --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-grey-300);
+  --action-primary-background: var(--plain-grey-300);
+  --action-primary-background-hover: var(--plain-grey-400);
+  --action-primary-background-focus: var(--plain-grey-400);
+  --action-primary-background-disabled: var(--plain-grey-100);
+  --action-primary-text-color: var(--plain-black);
+  --action-primary-text-color-hover: var(--plain-black);
+  --action-primary-text-color-focus: var(--plain-black);
+  --action-primary-text-color-disabled: var(--plain-black);
+
+  --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-grey-300);
+  --action-secondary-background: var(--white-opacity-0);
+  --action-secondary-background-hover: var(--plain-grey-800);
+  --action-secondary-background-focus: var(--plain-grey-800);
+  --action-secondary-background-disabled: var(--plain-grey-400);
+  --action-secondary-text-color: var(--plain-grey-300);
+  --action-secondary-text-color-hover: var(--plain-grey-300);
+  --action-secondary-text-color-focus: var(--plain-grey-300);
+  --action-secondary-text-color-disabled: var(--plain-grey-300);
+
+  --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-background: var(--white-opacity-0);
+  --action-tertiary-background-hover: var(--plain-grey-800);
+  --action-tertiary-background-focus: var(--plain-grey-800);
+  --action-tertiary-background-disabled: var(--plain-grey-400);
+  --action-tertiary-text-color: var(--plain-grey-300);
+  --action-tertiary-text-color-hover: var(--plain-grey-300);
+  --action-tertiary-text-color-focus: var(--plain-grey-300);
+  --action-tertiary-text-color-disabled: var(--plain-grey-300);
+
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--plain-white);
+  --action-attention-background: var(--plain-white);
+  --action-attention-background-hover: var(--plain-grey-300);
+  --action-attention-background-focus: var(--plain-grey-300);
+  --action-attention-background-disabled: var(--plain-grey-300);
+  --action-attention-text-color: var(--plain-black);
+  --action-attention-text-color-hover: var(--plain-black);
+  --action-attention-text-color-focus: var(--plain-black);
+  --action-attention-text-color-disabled: var(--plain-black);
+
+  /* Badge */
+  --badge-text-color: var(--plain-black);
+  --badge-background-neutral: var(--plain-grey-500);
+  --badge-background-positive: var(--plain-grey-300);
+  --badge-background-warning: var(--plain-white);
+  --badge-background-attention: var(--plain-white);
+
+  /* Outline (Focus) */
+  --outline-color: var(--plain-white);
+
+  /* Icon */
+  --icon-color-default: var(--plain-white);
+  --icon-color-inverted: var(--plain-black);
+
+  /* Type */
+  --text-color: var(--plain-white);
+  --heading-text-color: var(--plain-white);
+
+  /* Card */
+  --card-background: var(--plain-grey-800);
+
+  /* Code */
+  --code-background: var(--plain-grey-800);
+  --code-text-color: var(--plain-white);
+
+  /* Input */
+  --input-background: var(--plain-grey-900);
+
+  /* Table */
+  --table-background: var(--plain-grey-800);
+
+  /* Border */
+  --border-color: var(--plain-grey-700);
+
+  /* Switch */
+  --switch-track-background: var(--plain-grey-500);
+  --switch-track-background-checked: var(--plain-white);
+}
+
+/* ================================================================= */
+/* 4. SET THE FOUNDATION                                             */
+/* Map tokens to semantic or component contexts .                    */
+/* ================================================================= */
+html[data-brand='plain'] {
+  --action-padding: var(--space-200) var(--space-500);
+  --action-icon-only-padding: var(--space-000);
+  --action-radius: var(--radius-100);
+  --action-font-size: var(--text-font-size);
+  --action-line-height: var(--text-line-height);
+  --action-font-weight: var(--font-weight-bold);
+
+  /* Feedback • Alerts, Messages, Notifciations */
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-border-color);
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-border-color);
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-border-color);
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-info-border-color);
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-warning-border-color);
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-attention-border-color);
+
+  /* Card */
+  --card-radius: var(--radius-150);
+}
+
+/* =============================================================================== */
+/*   Theme Storefront: Plain                                                       */
+/*   Component theme alignment across storefront                                   */
+/* =============================================================================== */
+html[data-brand='plain'][data-theme='light'] {
+  --app-meta-theme-color: var(--plain-black);
+  --app-skeleton: var(--plain-black);
+  --app-background: var(--plain-grey-200);
+
+  --app-nav-accent: var(--plain-black);
+  --app-nav-background: var(--plain-white);
+  --app-nav-border: var(--plain-grey-300);
+  --app-nav-home-hover: var(--plain-grey-100);
+  --app-nav-link: var(--plain-black);
+  --app-nav-link-focus: var(--plain-grey-200);
+  --app-nav-group-color: var(--black-opacity-80);
+
+  --app-theme-toggle-bg: var(--plain-grey-200);
+
+  --app-story-code-snippet-background: var(--plain-grey-200);
+  --app-story-snippet-code-text: var(--plain-black);
+  --app-story-card-background: var(--plain-grey-100);
+  --app-story-card-canvas: var(--plain-white);
+}
+
+html[data-brand='plain'][data-theme='dark'] {
+  --app-meta-theme-color: var(--plain-black);
+  --app-skeleton: var(--plain-black);
+  --app-background: var(--plain-grey-900);
+
+  --app-nav-accent: var(--plain-white);
+  --app-nav-background: var(--plain-black);
+  --app-nav-border: var(--plain-grey-700);
+  --app-nav-home-hover: var(--plain-grey-800);
+  --app-nav-link: var(--plain-white);
+  --app-nav-link-focus: var(--plain-grey-800);
+  --app-nav-group-color: var(--white-opacity-40);
+
+  --app-theme-toggle-bg: var(--plain-grey-200);
+
+  --app-story-code-snippet-background: var(--plain-white);
+  --app-story-snippet-code-text: var(--plain-black);
+  --app-story-card-background: var(--plain-grey-800);
+  --app-story-card-canvas: var(--plain-grey-900);
+  --app-nav-group-color: var(--white-opacity-50);
+}

@@ -3,7 +3,7 @@ class appNavbarTheme extends HTMLElement {
   constructor() {
     super();
 
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styles = `
 
@@ -30,4 +30,4 @@ class appNavbarTheme extends HTMLElement {
     `;
   }
 }
-customElements.define("app-navbar-theme", appNavbarTheme);
+customElements.define('app-navbar-theme', appNavbarTheme);

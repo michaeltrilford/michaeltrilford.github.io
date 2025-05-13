@@ -197,52 +197,23 @@
 
   --stroke-solid: solid;
   --stroke-outset: outset;
-
-  /* SEMANTIC TOKENS - Expresses meaning or state                                    */
-  /* =============================================================================== */
-  /* TOKEN STRUCTURE                                                               */
-  /* Token Key: [identifier (Optional)]-[variant]-[property-name]-[state]          */
-  /* =============================================================================== */
-
-  /* Feedback Base • Badges, Borders, Focus */
-  --feedback-focus-stroke-base: var(--feedback-focus-base);
-  --feedback-plain-stroke-base: var(--feedback-plain-base);
-  --feedback-neutral-stroke-base: var(--feedback-neutral-base);
-  --feedback-positive-stroke-base: var(--feedback-positive-base);
-  --feedback-info-stroke-base: var(--feedback-info-base);
-  --feedback-warning-stroke-base: var(--feedback-warning-base);
-  --feedback-attention-stroke-base: var(--feedback-attention-base);
-
-  /* Feedback • Alerts, Messages, Notifciations */
-  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-stroke-base);
-  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-stroke-base);
-  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-stroke-base);
-  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-info-stroke-base);
-  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-warning-stroke-base);
-  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-attention-stroke-base);
-
-  /* Call to Actions • Buttons and Link Buttons */
-
-  /* Space */
-  --action-padding: var(--space-200) var(--space-500);
-  --action-icon-only-padding: var(--space-000);
-  --action-radius: var(--radius-100);
-  --action-font-size: var(--text-font-size);
-  --action-line-height: var(--text-line-height);
-  --action-font-weight: var(--font-weight-medium);
 }
 
-html[data-theme='light'] {
-  /* Feedback Base • Badges, Borders, Focus */
-  --feedback-focus-base: var(--blue-500);
-  --feedback-plain-base: var(--black-opacity-50);
-  --feedback-neutral-base: var(--grey-600);
-  --feedback-positive-base: var(--green-600);
-  --feedback-info-base: var(--blue-600);
-  --feedback-warning-base: var(--orange-600);
-  --feedback-attention-base: var(--red-600);
+/* SEMANTIC TOKENS - Expresses meaning or state                                    */
+/* =============================================================================== */
+/* TOKEN STRUCTURE                                                               */
+/* Token Key: [identifier (Optional)]-[variant]-[property-name]-[state]          */
+/* =============================================================================== */
 
+html[data-theme='light'] {
   /* Feedback • Alerts, Messages, Notifciations */
+  --feedback-plain-border-color: var(--black-opacity-50);
+  --feedback-neutral-border-color: var(--grey-600);
+  --feedback-positive-border-color: var(--green-600);
+  --feedback-info-border-color: var(--blue-600);
+  --feedback-warning-border-color: var(--orange-600);
+  --feedback-attention-border-color: var(--red-600);
+
   --feedback-plain-background: var(--white-opacity-20);
   --feedback-neutral-background: var(--grey-100);
   --feedback-positive-background: var(--green-100);
@@ -307,16 +278,14 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  /* Feedback Base – Badges, Borders, Focus */
-  --feedback-focus-base: var(--blue-300);
-  --feedback-plain-base: var(--white-opacity-50);
-  --feedback-neutral-base: var(--grey-400);
-  --feedback-positive-base: var(--green-400);
-  --feedback-info-base: var(--blue-400);
-  --feedback-warning-base: var(--orange-400);
-  --feedback-attention-base: var(--red-400);
-
   /* Feedback – Alerts, Messages, Notifications */
+  --feedback-plain-border-color: var(--white-opacity-50);
+  --feedback-neutral-border-color: var(--grey-400);
+  --feedback-positive-border-color: var(--green-400);
+  --feedback-info-border-color: var(--blue-400);
+  --feedback-warning-border-color: var(--orange-400);
+  --feedback-attention-border-color: var(--red-400);
+
   --feedback-plain-background: var(--white-opacity-10);
   --feedback-neutral-background: var(--grey-800);
   --feedback-positive-background: var(--green-800);
@@ -380,11 +349,48 @@ html[data-theme='dark'] {
   --action-attention-text-color-disabled: var(--red-300);
 }
 
+:where(html) {
+  /* Feedback • Alerts, Messages, Notifciations */
+  --feedback-plain-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-plain-border-color);
+  --feedback-neutral-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-neutral-border-color);
+  --feedback-positive-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-positive-border-color);
+  --feedback-info-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-info-border-color);
+  --feedback-warning-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-warning-border-color);
+  --feedback-attention-border: var(--stroke-size-200) var(--stroke-solid) var(--feedback-attention-border-color);
+
+  /* Space */
+  --action-padding: var(--space-200) var(--space-500);
+  --action-icon-only-padding: var(--space-000);
+  --action-radius: var(--radius-100);
+  --action-font-size: var(--text-font-size);
+  --action-line-height: var(--text-line-height);
+  --action-font-weight: var(--font-weight-medium);
+}
+
 /* CONTEXTUAL TOKENS - Applies a primitive to a specific use                       */
 /* =============================================================================== */
 /* TOKEN STRUCTURE                                                                 */
 /* Token Key: [context]-[property-name]-[state (Optional)]                         */
 /* =============================================================================== */
+
+html[data-theme='light'] {
+  /* Outline */
+  --outline-color: var(--blue-500);
+  /* Text */
+  --text-color: var(--grey-900);
+  /* Border */
+  --border-color: var(--grey-200);
+}
+
+html[data-theme='dark'] {
+  /* Outline */
+  --outline-color: var(--blue-300);
+  /* Text */
+  --text-color: var(--grey-200);
+  /* Border */
+  --border-color: var(--grey-600);
+}
+
 :where(html) {
   /* Text */
   --text-color: var(--grey-900);
@@ -410,24 +416,9 @@ html[data-theme='dark'] {
   --border-thick: var(--stroke-size-200) var(--stroke-solid) var(--border-color);
 
   /* Outline */
-  --outline-color: var(--feedback-focus-stroke-base);
   --outline-thin: var(--stroke-size-100) var(--stroke-outset) var(--outline-color);
   --outline-medium: var(--stroke-size-300) var(--stroke-outset) var(--outline-color);
   --outline-thick: var(--stroke-size-500) var(--stroke-outset) var(--outline-color);
-}
-
-html[data-theme='light'] {
-  /* Text */
-  --text-color: var(--grey-900);
-  /* Border */
-  --border-color: var(--grey-200);
-}
-
-html[data-theme='dark'] {
-  /* Text */
-  --text-color: var(--grey-200);
-  /* Border */
-  --border-color: var(--grey-600);
 }
 
 /* COMPONENT TOKENS - Tied to specific UI components */
@@ -453,10 +444,6 @@ html[data-theme='dark'] {
   /* Badge */
   --badge-radius: var(--radius-300);
   --badge-font-weight: var(--font-weight-bold);
-  --badge-background-neutral: var(--feedback-neutral-base);
-  --badge-background-positive: var(--feedback-positive-base);
-  --badge-background-warning: var(--feedback-warning-base);
-  --badge-background-attention: var(--feedback-attention-base);
 
   /* Heading */
   --heading-font-weight: var(--font-weight-bold);
@@ -509,6 +496,10 @@ html[data-theme='light'] {
 
   /* Badge */
   --badge-text-color: var(--grey-100);
+  --badge-background-neutral: var(--grey-600);
+  --badge-background-positive: var(--green-600);
+  --badge-background-warning: var(--orange-600);
+  --badge-background-attention: var(--red-600);
 
   /* Heading */
   --heading-text-color: var(--grey-1000);
@@ -554,6 +545,10 @@ html[data-theme='dark'] {
 
   /* Badge */
   --badge-text-color: var(--grey-900);
+  --badge-background-neutral: var(--grey-400);
+  --badge-background-positive: var(--green-400);
+  --badge-background-warning: var(--orange-400);
+  --badge-background-attention: var(--red-400);
 
   /* Heading */
   --heading-text-color: var(--grey-100);

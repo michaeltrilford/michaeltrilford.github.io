@@ -1,7 +1,7 @@
 class storyTokensContextual extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -50,7 +50,7 @@ class storyTokensContextual extends HTMLElement {
           </story-card>
 
           <story-card title="Outline" nofooter>
-          <story-token-slat slot="body" token="--outline-color" variant="outline-color" output="var(--feedback-focus-stroke-base)"></story-token-slat>
+           <story-token-slat slot="body" token="--outline-color" variant="outline-color" output="var(--blue-500)"></story-token-slat>  
           <story-token-slat slot="body" token="--outline-thin" variant="outline" output="var(--stroke-size-100) var(--stroke-outset)
           var(--outline-color)"></story-token-slat>
           <story-token-slat slot="body" token="--outline-medium" variant="outline" output="var(--stroke-size-200) var(--stroke-outset)
@@ -66,4 +66,4 @@ class storyTokensContextual extends HTMLElement {
   }
 }
 
-customElements.define("story-tokens-contextual", storyTokensContextual);
+customElements.define('story-tokens-contextual', storyTokensContextual);

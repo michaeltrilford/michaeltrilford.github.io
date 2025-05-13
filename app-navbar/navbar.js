@@ -2,7 +2,7 @@ class appNavbar extends HTMLElement {
   constructor() {
     super();
 
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styles = `
       :host { 
@@ -73,9 +73,15 @@ class appNavbar extends HTMLElement {
     `;
 
     const Guidelines = `
-      <app-navbar-group id="design-tokens" groupname="Resources">
+      <app-navbar-group id="resources" groupname="Resources">
         <app-navbar-link link="#/ux-guides" title="UX Guides"></app-navbar-link>
         <app-navbar-link link="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=0-1&t=5A8fWmORS1XTiPBQ-1" title="MUI Kit"></app-navbar-link>
+      </app-navbar-group>
+    `;
+
+    const Themes = `
+      <app-navbar-group id="themes" groupname="Themes">
+        <app-navbar-link link="#/template" title="Template"></app-navbar-link>
       </app-navbar-group>
     `;
 
@@ -135,6 +141,7 @@ class appNavbar extends HTMLElement {
         <slot name="skip"></slot>
         ${Theme}
         ${Home}
+        ${Themes}
         ${Guidelines}
         ${Required}
         ${Parts}
@@ -144,6 +151,7 @@ class appNavbar extends HTMLElement {
       <app-navbar-menu mobile id="mobile">
         <slot name="skip"></slot>
         ${Theme}
+        ${Themes}
         ${Guidelines}
         ${Required}
         ${Parts}
@@ -160,56 +168,56 @@ class appNavbar extends HTMLElement {
     `;
 
     // Query elements
-    this.menuIconEl = this.shadowRoot.querySelector("mui-icon-toggle");
-    this.navbarEl = this.shadowRoot.getElementById("mobile");
+    this.menuIconEl = this.shadowRoot.querySelector('mui-icon-toggle');
+    this.navbarEl = this.shadowRoot.getElementById('mobile');
 
     // Helper method to update tabindex
     this.updateTabIndexForMenuLinks = (container, enable) => {
-      const links = container.querySelectorAll("app-navbar-link");
+      const links = container.querySelectorAll('app-navbar-link');
       links.forEach((link) => {
         if (enable) {
-          link.removeAttribute("tabindex");
+          link.removeAttribute('tabindex');
         } else {
-          link.setAttribute("tabindex", "-1");
+          link.setAttribute('tabindex', '-1');
         }
       });
     };
 
     // Close mobile menu when a link is clicked
-    const mobileLinks = this.navbarEl.querySelectorAll("app-navbar-link");
+    const mobileLinks = this.navbarEl.querySelectorAll('app-navbar-link');
     mobileLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        if (this.navbarEl.hasAttribute("open")) {
+      link.addEventListener('click', () => {
+        if (this.navbarEl.hasAttribute('open')) {
           // 1. Close the mobile menu
-          this.navbarEl.removeAttribute("open");
+          this.navbarEl.removeAttribute('open');
 
           // 2. Update tabindex
           this.updateTabIndexForMenuLinks(this.navbarEl, false);
 
           // 3. Reset the menu icon toggle state
           this.menuIconEl.toggle = false;
-          this.menuIconEl.removeAttribute("toggle"); // <-- clear the attribute too if necessary
+          this.menuIconEl.removeAttribute('toggle'); // <-- clear the attribute too if necessary
         }
       });
     });
 
     // Close mobile menu when a home link is clicked
     const homeLinks = this.shadowRoot.querySelectorAll(
-      "mui-link[data-close-menu]"
+      'mui-link[data-close-menu]',
     );
 
     homeLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        if (this.navbarEl.hasAttribute("open")) {
+      link.addEventListener('click', () => {
+        if (this.navbarEl.hasAttribute('open')) {
           // 1. Close the mobile menu
-          this.navbarEl.removeAttribute("open");
+          this.navbarEl.removeAttribute('open');
 
           // 2. Update tabindex
           this.updateTabIndexForMenuLinks(this.navbarEl, false);
 
           // 3. Reset the menu icon toggle state
           this.menuIconEl.toggle = false;
-          this.menuIconEl.removeAttribute("toggle"); // <-- clear the attribute too if necessary
+          this.menuIconEl.removeAttribute('toggle'); // <-- clear the attribute too if necessary
         }
       });
     });
@@ -220,24 +228,24 @@ class appNavbar extends HTMLElement {
       if (isDesktop) {
         this.updateTabIndexForMenuLinks(this.navbarEl, true);
       } else {
-        const isOpen = this.navbarEl.hasAttribute("open");
+        const isOpen = this.navbarEl.hasAttribute('open');
         this.updateTabIndexForMenuLinks(this.navbarEl, isOpen);
       }
     };
 
     // Call initially and on resize
     this.handleResponsiveTabIndex();
-    window.addEventListener("resize", this.handleResponsiveTabIndex);
+    window.addEventListener('resize', this.handleResponsiveTabIndex);
 
     // Reveal navigation on mobile
-    this.menuIconEl.addEventListener("click", () => {
-      this.navbarEl.toggleAttribute("open");
-      const isNowOpen = this.navbarEl.hasAttribute("open");
+    this.menuIconEl.addEventListener('click', () => {
+      this.navbarEl.toggleAttribute('open');
+      const isNowOpen = this.navbarEl.hasAttribute('open');
       this.updateTabIndexForMenuLinks(this.navbarEl, isNowOpen);
 
       if (isNowOpen) {
         requestAnimationFrame(() => {
-          const homeLink = this.shadowRoot.querySelector("app-navbar-home");
+          const homeLink = this.shadowRoot.querySelector('app-navbar-home');
           if (homeLink) homeLink.focus();
         });
       }
@@ -245,4 +253,4 @@ class appNavbar extends HTMLElement {
   }
 }
 
-customElements.define("app-navbar", appNavbar);
+customElements.define('app-navbar', appNavbar);

@@ -1,7 +1,7 @@
 class storyTokensComponents extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -33,10 +33,10 @@ class storyTokensComponents extends HTMLElement {
             <story-token-slat slot="body" token="--badge-text-color" variant="text-color" output="var(--white)"></story-token-slat>
             <story-token-slat slot="body" token="--badge-font-weight" variant="font-weight" output="var(--font-weight-bold)"></story-token-slat>
 
-            <story-token-slat slot="body" token="--badge-background-neutral" variant="color" output="var(--feedback-neutral-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--badge-background-positive" variant="color" output="var(--feedback-positive-base)"></story-token-slat>
-            <story-token-slat slot="body" token="--badge-background-warning" variant="color" output="var(--feedback-warning-base);"></story-token-slat>
-            <story-token-slat slot="body" token="--badge-background-attention" variant="color" output="var(--feedback-attention-base)"></story-token-slat>
+            <story-token-slat slot="body" token="--badge-background-neutral" variant="color" output="var(--grey-600)"></story-token-slat>
+            <story-token-slat slot="body" token="--badge-background-positive" variant="color" output="var(--green-600)"></story-token-slat>
+            <story-token-slat slot="body" token="--badge-background-warning" variant="color" output="var(--orange-600)"></story-token-slat>
+            <story-token-slat slot="body" token="--badge-background-attention" variant="color" output="var(--red-600)"></story-token-slat>
           </story-card>
 
           <story-card title="Table" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-table">
@@ -113,4 +113,4 @@ class storyTokensComponents extends HTMLElement {
   }
 }
 
-customElements.define("story-tokens-components", storyTokensComponents);
+customElements.define('story-tokens-components', storyTokensComponents);
