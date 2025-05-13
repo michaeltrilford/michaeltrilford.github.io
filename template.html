@@ -1,3 +1,45 @@
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////
+
+RECOMMENDED PROJECT STRUCTURE:
+
+Project Root:
+│
+├── css/
+│   ├── mui-tokens.css      # Design tokens for consistency across components
+│   ├── mui-reset.css       # Resets default browser styling
+│   ├── mui-base.css        # Base styles for layout and typography
+│   └── themes/
+│       └── template.css    # Default theme with light and dark mode support
+│
+├── images/
+│   └── mui-logo.svg        # Logo asset
+│
+├── mui-container/          # Custom container component
+│   └── index.js            # Web component script for the container
+│
+├── mui-heading/            # Custom heading component
+│   └── index.js            # Web component script for the heading
+│
+├── mui-body/               # Custom body text component
+│   └── index.js            # Web component script for the body
+│
+├── mui-link/               # Custom link component
+│   └── index.js            # Web component script for the link
+│
+├── mui-stack/              # Stack component for layout
+│   └── mui-vstack/
+│       └── index.js        # Vertical stack layout component
+│
+├── mui-parts/              # Optional feature parts (e.g., text selectors)
+│   └── index.js            # Web component script for optional parts
+│
+└── index.html              # Main entry file for the project. Rename `template.html` to `index.html`.
+
+This file can be served statically or via a basic server. 
+For dynamic page loading with JavaScript, refer to the storefront file.
+
+/////////////////////////////////////////////////////////////////////////////////////////// -->
+
 <!DOCTYPE html>
 <html class="no-js" lang="" data-theme="light">
   <head>
@@ -16,15 +58,15 @@
     <script src="mui-heading/index.js" defer="true" type="module"></script>
     <script src="mui-body/index.js" defer="true" type="module"></script>
     <script src="mui-link/index.js" defer="true" type="module"></script>
-
-    <!-- Option Part Feature | E.g. https://michaeltrilford.github.io/#/text-part-selectors-->
-    <script src="mui-parts/index.js" defer="true" type="module"></script>
-
     <script
       src="mui-stack/mui-vstack/index.js"
       defer="true"
       type="module"
     ></script>
+
+    <!-- Option Part Feature | E.g. https://michaeltrilford.github.io/#/text-part-selectors-->
+    <script src="mui-parts/index.js" defer="true" type="module"></script>
+
     <style>
       body {
         display: grid;
