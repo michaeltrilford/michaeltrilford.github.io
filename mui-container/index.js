@@ -2,7 +2,7 @@
 class muiContainer extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
     let html = `
@@ -15,7 +15,7 @@ class muiContainer extends HTMLElement {
         max-width: 118.0rem;
         padding-top: 2.4rem;
         padding-bottom: 2.4rem;
-        min-width: 30.0rem;
+        min-width: 27.2rem;
         margin: 0 2.4rem; }
 
       /* Center
@@ -55,4 +55,4 @@ class muiContainer extends HTMLElement {
   }
 }
 
-customElements.define("mui-container", muiContainer);
+customElements.define('mui-container', muiContainer);
