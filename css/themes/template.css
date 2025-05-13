@@ -161,6 +161,10 @@ html[data-brand='template'][data-theme='light'] {
   --code-background: var(--template-grey-600);
   --code-text-color: var(--template-white);
 
+  /* Image */
+  --image-text-color: var(--black);
+  --image-background: var(--white);
+
   /* Input */
   --input-background: var(--template-red-50);
 
@@ -268,6 +272,10 @@ html[data-brand='template'][data-theme='dark'] {
   --code-background: var(--template-grey-1000);
   --code-text-color: var(--template-white);
 
+  /* Image */
+  --image-text-color: var(--white);
+  --image-background: var(--black);
+
   /* Input */
   --input-background: var(--template-grey-800);
 
@@ -304,44 +312,4 @@ html[data-brand='template'] {
 
   /* Card */
   --card-radius: var(--radius-400);
-}
-
-/* =============================================================================== */
-/*   Theme Storefront: Plain                                                       */
-/*   Component theme alignment across storefront                                   */
-/* =============================================================================== */
-html[data-brand='template'][data-theme='light'] {
-  --app-meta-theme-color: var(--template-black);
-  --app-skeleton: var(--template-black);
-  --app-background: var(--template-grey-100);
-  --app-nav-accent: var(--template-black);
-  --app-nav-background: var(--template-white);
-  --app-nav-border: var(--template-grey-200);
-  --app-nav-home-hover: var(--template-grey-100);
-  --app-nav-link: var(--template-blue-600);
-  --app-nav-link-focus: var(--template-grey-200);
-  --app-nav-group-color: var(--black-opacity-80);
-  --app-theme-toggle-bg: var(--template-blue-300);
-  --app-story-code-snippet-background: var(--template-grey-200);
-  --app-story-snippet-code-text: var(--template-black);
-  --app-story-card-background: var(--template-grey-100);
-  --app-story-card-canvas: var(--template-white);
-}
-
-html[data-brand='template'][data-theme='dark'] {
-  --app-meta-theme-color: var(--template-black);
-  --app-skeleton: var(--template-black);
-  --app-background: var(--template-grey-900);
-  --app-nav-accent: var(--template-white);
-  --app-nav-background: var(--template-black);
-  --app-nav-border: var(--template-grey-800);
-  --app-nav-home-hover: var(--template-grey-800);
-  --app-nav-link: var(--template-red-200);
-  --app-nav-link-focus: var(--template-grey-800);
-  --app-nav-group-color: var(--white-opacity-50);
-  --app-theme-toggle-bg: var(--template-red-200);
-  --app-story-code-snippet-background: var(--template-white);
-  --app-story-code-text: var(--template-black);
-  --app-story-card-background: var(--template-grey-800);
-  --app-story-card-canvas: var(--template-grey-900);
 }

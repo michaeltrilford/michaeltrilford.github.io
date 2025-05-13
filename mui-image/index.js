@@ -2,7 +2,7 @@
 class muiImage extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
     let html = `
@@ -14,7 +14,7 @@ class muiImage extends HTMLElement {
         display: flex;
       }
       figure {
-        background: #eee;
+        background: var( --image-background);
         display: block;
         width: 100%;
         margin: var(--space-000);
@@ -29,6 +29,7 @@ class muiImage extends HTMLElement {
       }
       ::slotted(figcaption) {
         padding: var(--space-500);
+        color: var( --image-text-color);
         text-align: center;
         display: block;
       }
@@ -43,4 +44,4 @@ class muiImage extends HTMLElement {
   }
 }
 
-customElements.define("mui-image", muiImage);
+customElements.define('mui-image', muiImage);

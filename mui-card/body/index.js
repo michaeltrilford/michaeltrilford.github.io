@@ -1,12 +1,12 @@
 /* Mui Card */
 class muiCardBody extends HTMLElement {
   static get observedAttributes() {
-    return ["footer"];
+    return ['footer'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -24,12 +24,7 @@ class muiCardBody extends HTMLElement {
     `;
 
     this.shadowRoot.innerHTML = html;
-
-    // var hasFooter = document.querySelector('[footer=""]');
-    // if (hasFooter) {
-    //   this.innerHTML = '<mui-card-footer></mui-card-footer>';
-    // }
   }
 }
 
-customElements.define("mui-card-body", muiCardBody);
+customElements.define('mui-card-body', muiCardBody);

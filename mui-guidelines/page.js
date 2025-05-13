@@ -20,7 +20,7 @@ class GuidelinesPage extends HTMLElement {
 
        <page-banner></page-banner>
 
-        <page-card title="Access UX Guides" description="MUI integrates with Guru Guides to provide in-context UX guidance for designers working in Figma.">
+        <page-card noFooter title="Access UX Guides" description="MUI integrates with Guru Guides to provide in-context UX guidance for designers working in Figma.">
           <mui-v-stack slot="body" space="var(--space-600)">  
 
             <mui-responsive breakpoint="900">

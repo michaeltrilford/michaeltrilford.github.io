@@ -184,6 +184,10 @@ html[data-brand='neon'][data-theme='light'] {
   --code-background: var(--neon-white);
   --code-text-color: var(--neon-black);
 
+  /* Image */
+  --image-text-color: var(--black);
+  --image-background: var(--white);
+
   /* Input */
   --input-background: var(--neon-pink-50);
 
@@ -296,6 +300,10 @@ html[data-brand='neon'][data-theme='dark'] {
   --code-background: var(--neon-grey-1000);
   --code-text-color: var(--neon-white);
 
+  /* Image */
+  --image-text-color: var(--white);
+  --image-background: var(--black);
+
   /* Input */
   --input-background: var(--neon-pink-1000);
 
@@ -332,42 +340,4 @@ html[data-brand='neon'] {
 
   /* Card */
   --card-radius: var(--radius-150);
-}
-
-/* =============================================================================== */
-/*   Theme Storefront: Neon Flux                                                       */
-/*   Component theme alignment across storefront                                   */
-/* =============================================================================== */
-html[data-brand='neon'][data-theme='light'] {
-  --app-meta-theme-color: var(--neon-grey-200);
-  --app-skeleton: var(--neon-grey-200);
-  --app-background: var(--neon-pink-50);
-  --app-nav-accent: var(--neon-blue-600);
-  --app-nav-background: var(--neon-white);
-  --app-nav-border: var(--neon-grey-300);
-  --app-nav-home-hover: var(--neon-blue-50);
-  --app-nav-link: var(--neon-pink-600);
-  --app-nav-link-focus: var(--neon-grey-100);
-  --app-nav-group-color: var(--black-opacity-50);
-  --app-theme-toggle-bg: var(--neon-grey-100);
-  --app-story-code-snippet-background: var(--neon-blue-600);
-  --app-story-snippet-code-text: var(--neon-white);
-}
-
-html[data-brand='neon'][data-theme='dark'] {
-  --app-meta-theme-color: var(--neon-grey-900);
-  --app-skeleton: var(--neon-grey-900);
-  --app-background: var(--neon-pink-1000);
-  --app-nav-accent: var(--neon-blue-200);
-  --app-nav-background: var(--neon-black);
-  --app-nav-border: var(--neon-grey-800);
-  --app-nav-home-hover: var(--neon-pink-900);
-  --app-nav-link: var(--neon-pink-200);
-  --app-nav-link-focus: var(--neon-grey-1000);
-  --app-nav-group-color: var(--white-opacity-80);
-  --app-theme-toggle-bg: var(--neon-blue-200);
-  --app-story-code-snippet-background: var(--neon-blue-800);
-  --app-story-snippet-code-text: var(--neon-white);
-  --app-story-card-background: var(--neon-black);
-  --app-story-card-canvas: var(--neon-grey-900);
 }

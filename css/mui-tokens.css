@@ -518,6 +518,10 @@ html[data-theme='light'] {
   --code-text-color: var(--white);
   --code-background: var(--grey-900);
 
+  /* Image */
+  --image-text-color: var(--black);
+  --image-background: var(--white);
+
   /* Table */
   --table-background: var(--white);
   --table-border: var(--border-color);
@@ -566,6 +570,10 @@ html[data-theme='dark'] {
   /* Code */
   --code-text-color: var(--white);
   --code-background: var(--grey-800);
+
+  /* Image */
+  --image-text-color: var(--white);
+  --image-background: var(--black);
 
   /* Table */
   --table-background: var(--grey-800);

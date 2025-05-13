@@ -1,11 +1,11 @@
 class pageCard extends HTMLElement {
   static get observedAttributes() {
-    return ["title", "description", "usage", "accessibility"];
+    return ['title', 'description', 'orderedList', 'unorderedList'];
   }
 
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styles = `
       :host { display: block; }
@@ -35,80 +35,80 @@ class pageCard extends HTMLElement {
 
     `;
 
-    const title = this.getAttribute("title") || "";
-    const description = this.hasAttribute("description")
+    const title = this.getAttribute('title') || '';
+    const description = this.hasAttribute('description')
       ? `<mui-body style="max-width: 86ch;">${this.getAttribute(
-          "description"
+          'description',
         )}</mui-body>`
-      : "";
+      : '';
 
-    // Handle usage list
-    const usageAttr = this.getAttribute("usage");
-    let usageItems = [];
+    // Handle orderedList
+    const orderedListAttr = this.getAttribute('orderedList');
+    let orderedListItems = [];
 
-    if (usageAttr) {
+    if (orderedListAttr) {
       try {
-        usageItems = JSON.parse(usageAttr);
+        orderedListItems = JSON.parse(orderedListAttr);
       } catch {
-        usageItems = usageAttr.split(",").map((usage) => usage.trim());
+        orderedListItems = orderedListAttr
+          .split(',')
+          .map((orderedList) => orderedList.trim());
       }
     }
 
-    const usageContent = usageItems.length
+    const orderedListContent = orderedListItems.length
       ? `
-        <mui-heading size="6" level="3" style="margin-top: var(--space-300); margin-bottom: var(--space-050);">Usage details</mui-heading>
-        <mui-list as="ul" style="max-width: 65ch;">
-          ${usageItems
+        <mui-list as="ol" style="max-width: 65ch; margin-top: var(--space-300);">
+          ${orderedListItems
             .map(
-              (usage) =>
-                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${usage}</mui-list-item>`
+              (orderedList) =>
+                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${orderedList}</mui-list-item>`,
             )
-            .join("")}
+            .join('')}
         </mui-list>
       `
-      : "";
+      : '';
 
     // Handle accessibility list
-    const accessibilityAttr = this.getAttribute("accessibility");
-    let accessibilityItems = [];
+    const unorderedListAttr = this.getAttribute('unorderedList');
+    let unorderedListItems = [];
 
-    if (accessibilityAttr) {
+    if (unorderedListAttr) {
       try {
-        accessibilityItems = JSON.parse(accessibilityAttr);
+        unorderedListItems = JSON.parse(unorderedListAttr);
       } catch {
-        accessibilityItems = accessibilityAttr
-          .split(",")
-          .map((accessibility) => accessibility.trim());
+        unorderedListItems = unorderedListAttr
+          .split(',')
+          .map((unorderedList) => unorderedList.trim());
       }
     }
 
-    const accessibilityContent = accessibilityItems.length
+    const unorderedListContent = unorderedListItems.length
       ? `
-        <mui-heading size="6" level="3" style="margin-top: var(--space-300); margin-bottom: var(--space-050);">Accessibility details</mui-heading>
-        <mui-list as="ul" style="max-width: 65ch;">
-          ${accessibilityItems
+        <mui-list as="ol" style="max-width: 65ch; margin-top: var(--space-300);">
+          ${unorderedListItems
             .map(
-              (accessibility) =>
-                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${accessibility}</mui-list-item>`
+              (unorderedList) =>
+                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${unorderedList}</mui-list-item>`,
             )
-            .join("")}
+            .join('')}
         </mui-list>
       `
-      : "";
+      : '';
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
       <mui-card>
         ${
-          this.hasAttribute("noheader")
-            ? ""
+          this.hasAttribute('noheader')
+            ? ''
             : `
           <mui-card-header>
             <mui-heading size="3" level="2">${title}</mui-heading>
             <mui-v-stack space="var(--space-100)">
               ${description}
-              ${usageContent}
-              ${accessibilityContent}
+              ${orderedListContent}
+              ${unorderedListContent}
             </mui-v-stack>
 
           </mui-card-header>
@@ -120,8 +120,8 @@ class pageCard extends HTMLElement {
           </div>
         </mui-card-body>
         ${
-          this.hasAttribute("nofooter")
-            ? ""
+          this.hasAttribute('nofooter')
+            ? ''
             : `<mui-card-footer><slot name="footer"></slot></mui-card-footer>`
         }
       </mui-card>
@@ -129,4 +129,4 @@ class pageCard extends HTMLElement {
   }
 }
 
-customElements.define("page-card", pageCard);
+customElements.define('page-card', pageCard);

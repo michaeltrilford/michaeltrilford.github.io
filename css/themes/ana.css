@@ -155,6 +155,10 @@ html[data-brand='ana'][data-theme='light'] {
   --code-background: var(--ana-blue-500);
   --code-text-color: var(--ana-white);
 
+  /* Image */
+  --image-text-color: var(--black);
+  --image-background: var(--white);
+
   /* Input */
   --input-background: var(--ana-white);
 
@@ -266,6 +270,10 @@ html[data-brand='ana'][data-theme='dark'] {
   --code-background: var(--ana-grey-800);
   --code-text-color: var(--ana-white);
 
+  /* Image */
+  --image-text-color: var(--white);
+  --image-background: var(--black);
+
   /* Input */
   --input-background: var(--ana-grey-800);
 
@@ -302,42 +310,4 @@ html[data-brand='ana'] {
 
   /* Card */
   --card-radius: var(--radius-150);
-}
-
-/* =============================================================================== */
-/*   Theme Storefront: ANA                                                         */
-/*   Component theme alignment across storefront                                   */
-/* =============================================================================== */
-html[data-brand='ana'][data-theme='light'] {
-  --app-meta-theme-color: var(--ana-grey-200);
-  --app-skeleton: var(--ana-grey-200);
-  --app-background: var(--ana-grey-200);
-  --app-nav-accent: var(--ana-blue-600);
-  --app-nav-background: var(--ana-white);
-  --app-nav-border: var(--ana-grey-300);
-  --app-nav-home-hover: var(--ana-grey-100);
-  --app-nav-link: var(--ana-blue-600);
-  --app-nav-link-focus: var(--ana-grey-100);
-  --app-nav-group-color: var(--black-opacity-50);
-  --app-theme-toggle-bg: var(--ana-grey-200);
-  --app-story-code-snippet-background: var(--ana-blue-500);
-  --app-story-snippet-code-text: var(--ana-white);
-}
-
-html[data-brand='ana'][data-theme='dark'] {
-  --app-meta-theme-color: var(--ana-grey-900);
-  --app-skeleton: var(--ana-grey-900);
-  --app-background: var(--ana-grey-900);
-  --app-nav-accent: var(--ana-blue-200);
-  --app-nav-background: var(--ana-black);
-  --app-nav-border: var(--ana-grey-800);
-  --app-nav-home-hover: var(--ana-grey-1000);
-  --app-nav-link: var(--ana-blue-200);
-  --app-nav-link-focus: var(--ana-grey-1000);
-  --app-nav-group-color: var(--white-opacity-80);
-  --app-theme-toggle-bg: var(--ana-blue-200);
-  --app-story-code-snippet-background: var(--ana-blue-500);
-  --app-story-snippet-code-text: var(--ana-white);
-  --app-story-card-background: var(--ana-black);
-  --app-story-card-canvas: var(--ana-grey-900);
 }

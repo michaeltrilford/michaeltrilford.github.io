@@ -43,6 +43,11 @@ class storyTokensComponents extends HTMLElement {
             <story-token-slat slot="body" token="--table-background" variant="color" output="var(--white)"></story-token-slat>
           </story-card>
 
+          <story-card title="Image" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-table">
+            <story-token-slat slot="body" token="--image-text-color" variant="text-color" output="var(--black)"></story-token-slat>
+            <story-token-slat slot="body" token="--image-background" variant="color" output="var(--white)"></story-token-slat>
+          </story-card>
+
           <story-card title="Code" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-code/index.js">
             <story-token-slat slot="body" token="--code-text-color" variant="text-color" output="var(--white)"></story-token-slat>
             <story-token-slat slot="body" token="--code-background" variant="color" output="var(--grey-900)"></story-token-slat>
