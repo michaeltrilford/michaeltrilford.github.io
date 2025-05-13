@@ -38,6 +38,7 @@ export class AppContainer extends HTMLElement {
       '/ux-guides': 'guidelines-page',
 
       '/template': 'themes-page',
+      '/create-app': 'create-app-page',
 
       '/base-design-tokens': 'story-tokens-base',
       '/semantic-design-tokens': 'story-tokens-semantic',

@@ -173,6 +173,7 @@ const PageArray = [
   'mui-home/page.js',
   'mui-guidelines/page.js',
   'mui-themes/page.js',
+  'mui-create-app/page.js',
   'mui-responsive/story.js',
   'mui-button/story.js',
   'mui-grid/story.js',

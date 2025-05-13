@@ -8,8 +8,8 @@ class muiVStack extends HTMLElement {
     this.attachShadow({ mode: 'open' });
 
     this.space = `var(--space-500)`;
-    this.alignX = `start`; // justify-items
-    this.alignY = `start`; // align-items
+    this.alignX = `normal`; // justify-items
+    this.alignY = `normal`; // align-items
 
     this.styles = `
       :host {
