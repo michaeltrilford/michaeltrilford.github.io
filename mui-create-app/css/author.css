@@ -3,17 +3,17 @@
 /* =============================================================================== */
 
 html[data-theme='light'] {
-  --brand: var(--template-red-100);
-  --brand-hover: var(--template-red-200);
+  --brand: var(--red-100);
+  --brand-hover: var(--red-200);
   --logo-color: initial;
-  --switch-background-unchecked: var(--template-grey-700);
+  --switch-background-unchecked: var(--grey-700);
 }
 
 html[data-theme='dark'] {
   --brand: var(--grey-700);
   --brand-hover: var(--grey-600);
   --logo-color: invert(1);
-  --switch-background-checked: var(--template-red-200);
+  --switch-background-checked: var(--red-200);
 }
 
 body {
