@@ -5,37 +5,39 @@ RECOMMENDED PROJECT STRUCTURE:
 Project Root:
 │
 ├── css/
-│   ├── mui-tokens.css          # Design tokens for consistency across components
-│   ├── mui-reset.css           # Resets default browser styling
-│   ├── mui-base.css            # Base styles for layout and typography
-│   ├── author-theme.css        # Default theme with light and dark mode support
-│   └── author.css              # Custom styles for your website or app
+│   ├── mui-tokens.css              # Design tokens for consistency across components
+│   ├── mui-reset.css               # Resets default browser styling
+│   ├── mui-base.css                # Base styles for layout and typography
+│   ├── author-theme.css            # Default theme with light and dark mode support
+│   └── author.css                  # Custom styles for your website or app
 │
 ├── images/
-│   └── logo.svg                # Logo asset
+│   └── create-app-logo.js          # Logo asset
 │
-├── components/                 # Custom web components
+├── components/                     # Custom web components
 │   ├── mui-container/
-│   │   └── index.js            # Web component script for the container
+│   │   └── index.js                # Web component script for the container
 │   ├── mui-heading/
-│   │   └── index.js            # Web component script for the heading
+│   │   └── index.js                # Web component script for the heading
 │   ├── mui-body/
-│   │   └── index.js            # Web component script for the body
+│   │   └── index.js                # Web component script for the body
 │   ├── mui-link/
-│   │   └── index.js            # Web component script for the link
-│   └── mui-stack/              # Stack components for layout
+│   │   └── index.js                # Web component script for the link
+│   └── mui-stack/                  # Stack components for layout
 │       └── mui-vstack/
-│           └── index.js        # Vertical stack layout component
+│           └── index.js            # Vertical stack layout component
 │
-├── js/                         # Supporting JavaScript files
-│   └── mui-parts/              # Optional feature parts (e.g., text selectors)
-│       └── index.js            # Web component script for optional parts
+├── js/                             # Supporting JavaScript files
+│   ├── mui-parts/                  
+│   │   └── index.js                # Optional feature parts (e.g., text selectors)
+│   └── create-app-theme-toggle/    
+│       └── index.js                # Optional theme toggle
 │
 ├── public/
-│    ├── favicon.ico            # Favicon displayed in browser tabs and bookmarks
-│    └── logo192.png            # Icon used when the site is installed as a PWA (Progressive Web App)
+│   ├── favicon.ico                # Favicon displayed in browser tabs and bookmarks
+│   └── logo192.png                # Icon used when the site is installed as a PWA (Progressive Web App)
 │
-└── index.html                  # Main entry file for the project. Rename `template.html` to `index.html`.
+└── index.html                      # Main entry file for the project. Rename `template.html` to `index.html`.
 
 This file can be served statically or via a basic server. 
 For dynamic page loading with JavaScript, refer to the storefront file.
@@ -52,7 +54,7 @@ For dynamic page loading with JavaScript, refer to the storefront file.
     <link rel="stylesheet" href="css/mui-base.css" />
     <link rel="stylesheet" href="css/author-theme.css" />
     <link rel="stylesheet" href="css/author.css" />
-    <meta name="theme-color" content="var(--brand)" />
+    <meta name="theme-color" content="var(--app-background)" />
     <link rel="icon" type="image/svg+xml" href="public/favicon.ico" />
     <link rel="apple-touch-icon" href="public/logo192.png" />
     <title>MUI Create App</title>
@@ -100,34 +102,28 @@ For dynamic page loading with JavaScript, refer to the storefront file.
       type="module"
     ></script>
 
+    <!-- Create App Logo -->
+    <script src="images/create-app-logo.js" defer="true" type="module"></script>
+
+    <!-- Optional Theme Toggle -->
+    <script
+      src="js/create-app-theme-toggle/index.js"
+      defer="true"
+      type="module"
+    ></script>
+
     <!-- Optional Part Feature | E.g. https://michaeltrilford.github.io/#/text-part-selectors-->
     <script src="js/mui-parts/index.js" defer="true" type="module"></script>
-
-    <!-- Optional Dark Mode -->
-    <!-- Compose new arrangments with Mui Components -->
-    <script src="js/dark-mode/index.js" defer="true" type="module"></script>
   </head>
 
   <body>
     <mui-container small>
       <mui-v-stack space="var(--space-600)" alignX="center">
-        <div class="logo">
-          <img
-            src="images/logo.svg"
-            width="400"
-            height="auto"
-            style="
-              width: 100%;
-              height: auto;
-            "
-          />
-        </div>
-
+        <create-app-logo color="var(--logo-color)"></create-app-logo>
         <mui-body weight="medium" class="introduction">
           Create fast, accessible, and themeable components with MUI styling,
           without the need for React or other dependencies.
         </mui-body>
-
         <mui-h-stack space="var(--space-300)">
           <mui-link
             variant="primary"
@@ -145,11 +141,9 @@ For dynamic page loading with JavaScript, refer to the storefront file.
             View Github
           </mui-link>
         </mui-h-stack>
-
-        <!-- Compose new arrangments with Mui Components -->
         <mui-h-stack space="var(--space-300)" alignY="center">
           <mui-body weight="bold">Toggle Theme</mui-body>
-          <local-ui-theme-toggle></local-ui-theme-toggle>
+          <create-app-theme-toggle></create-app-theme-toggle>
         </mui-h-stack>
       </mui-v-stack>
     </mui-container>

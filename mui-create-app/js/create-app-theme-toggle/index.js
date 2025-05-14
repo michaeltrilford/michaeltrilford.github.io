@@ -37,8 +37,8 @@ class ThemeToggle extends HTMLElement {
         :host {display: block;}
 
         mui-switch {
-        --switch-track-background: var(--switch-background-unchecked);
-        --switch-track-background-checked: var(--switch-background-checked);
+        --switch-track-background: var(--grey-300);
+        --switch-track-background-checked: var(--grey-300);
         }
 
       </style>
@@ -63,4 +63,4 @@ class ThemeToggle extends HTMLElement {
   }
 }
 
-customElements.define('local-ui-theme-toggle', ThemeToggle);
+customElements.define('create-app-theme-toggle', ThemeToggle);

@@ -1,32 +1,22 @@
 /* =============================================================================== */
-/*   Author Styles: Your custom styles                              */
+/*   Author Styles: Your custom styles                                             */
 /* =============================================================================== */
 
 html[data-theme='light'] {
-  --brand: var(--red-100);
-  --brand-hover: var(--red-200);
-  --logo-color: initial;
-  --switch-background-unchecked: var(--grey-700);
+  --app-background: var(--grey-100);
+  --logo-color: var(--black);
 }
 
 html[data-theme='dark'] {
-  --brand: var(--grey-700);
-  --brand-hover: var(--grey-600);
-  --logo-color: invert(1);
-  --switch-background-checked: var(--red-200);
+  --app-background: var(--grey-1000);
+  --logo-color: var(--white);
 }
 
 body {
   display: grid;
   place-items: center;
   text-align: center;
-  background-color: var(--brand);
-}
-
-.logo {
-  width: 200px;
-  height: auto;
-  filter: var(--logo-color);
+  background-color: var(--app-background);
 }
 
 .content {
@@ -34,15 +24,6 @@ body {
   max-width: 38ch;
 }
 
-/* Demo of targeting the host */
 .introduction {
   max-width: 36ch;
-}
-
-/* Demo of Parts */
-mui-link.github-link::part(background) {
-  background: var(--brand);
-}
-mui-link.github-link::part(background):hover {
-  background: var(--brand-hover);
 }
