@@ -2,7 +2,7 @@
 /* =============================================================================== */
 /* 1. BRAND PRIMITIVES                                                             */
 /* =============================================================================== */
-html[data-brand='template'] {
+:where(html) {
   /* Grey scale – cooler, slightly more saturated tones */
   --template-grey-100: #f0f0f5;
   --template-grey-200: #d9d9e0;
@@ -71,7 +71,7 @@ html[data-brand='template'] {
 /* =============================================================================== */
 /* 2. LIGHT MODE                                                                   */
 /* =============================================================================== */
-html[data-brand='template'][data-theme='light'] {
+html[data-theme='light'] {
   /* Feedback */
   --feedback-plain-border-color: var(--black-opacity-50);
   --feedback-neutral-border-color: var(--template-grey-600);
@@ -182,7 +182,7 @@ html[data-brand='template'][data-theme='light'] {
 /* =============================================================================== */
 /* 3. DARK MODE                                                                    */
 /* =============================================================================== */
-html[data-brand='template'][data-theme='dark'] {
+html[data-theme='dark'] {
   /* Feedback */
   --feedback-plain-border-color: var(--white-opacity-50);
   --feedback-neutral-border-color: var(--template-grey-400);
@@ -294,7 +294,7 @@ html[data-brand='template'][data-theme='dark'] {
 /* 4. SET THE FOUNDATION                                             */
 /* Map tokens to semantic or component contexts .                    */
 /* ================================================================= */
-html[data-brand='template'] {
+:where(html) {
   --action-padding: var(--space-200) var(--space-500);
   --action-icon-only-padding: var(--space-000);
   --action-radius: var(--radius-100);

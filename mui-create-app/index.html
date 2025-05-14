@@ -8,8 +8,9 @@ Project Root:
 │   ├── mui-tokens.css          # Design tokens for consistency across components
 │   ├── mui-reset.css           # Resets default browser styling
 │   ├── mui-base.css            # Base styles for layout and typography
-│   └── themes/
-│       └── theme-template.css  # Default theme with light and dark mode support
+│   ├── themes/
+│   │   └── theme-template.css  # Default theme with light and dark mode support
+│   └── author.css              # Custom styles for your website or app
 │
 ├── images/
 │   └── logo.svg                # Logo asset
@@ -51,6 +52,7 @@ For dynamic page loading with JavaScript, refer to the storefront file.
     <link rel="stylesheet" href="css/mui-reset.css" />
     <link rel="stylesheet" href="css/mui-base.css" />
     <link rel="stylesheet" href="css/themes/theme-template.css" />
+    <link rel="stylesheet" href="css/author.css" />
     <meta name="theme-color" content="var(--brand)" />
     <link rel="icon" type="image/svg+xml" href="public/favicon.ico" />
     <link rel="apple-touch-icon" href="public/logo192.png" />
@@ -65,6 +67,11 @@ For dynamic page loading with JavaScript, refer to the storefront file.
     />
     <script
       src="components/mui-container/index.js"
+      defer="true"
+      type="module"
+    ></script>
+    <script
+      src="components/mui-switch/index.js"
       defer="true"
       type="module"
     ></script>
@@ -88,53 +95,23 @@ For dynamic page loading with JavaScript, refer to the storefront file.
       defer="true"
       type="module"
     ></script>
+    <script
+      src="components/mui-stack/mui-hstack/index.js"
+      defer="true"
+      type="module"
+    ></script>
 
-    <!-- Option Part Feature | E.g. https://michaeltrilford.github.io/#/text-part-selectors-->
+    <!-- Optional Part Feature | E.g. https://michaeltrilford.github.io/#/text-part-selectors-->
     <script src="js/mui-parts/index.js" defer="true" type="module"></script>
 
-    <style>
-      :root {
-        --brand: #ffeb3b;
-        --brand-hover: #ffd600;
-      }
-
-      body {
-        display: grid;
-        place-items: center;
-        background-color: var(--brand);
-        text-align: center;
-      }
-
-      .logo {
-        width: 200px;
-        height: auto;
-      }
-
-      .content {
-        text-align: center;
-        max-width: 38ch;
-      }
-
-      /* Demo of targetting the host */
-      mui-body {
-        max-width: 36ch;
-        margin-top: var(--space-300);
-        margin-bottom: var(--space-200);
-      }
-
-      /* Demo of Parts */
-      mui-link.github-link::part(background) {
-        background: var(--brand);
-      }
-      mui-link.github-link::part(background):hover {
-        background: var(--brand-hover);
-      }
-    </style>
+    <!-- Optional Dark Mode -->
+    <!-- Compose new arrangments with Mui Components -->
+    <script src="js/dark-mode/index.js" defer="true" type="module"></script>
   </head>
 
   <body>
     <mui-container small>
-      <mui-v-stack space="var(--space-500)" alignX="center">
+      <mui-v-stack space="var(--space-600)" alignX="center">
         <div class="logo">
           <img
             src="images/logo.svg"
@@ -147,7 +124,7 @@ For dynamic page loading with JavaScript, refer to the storefront file.
           />
         </div>
 
-        <mui-body weight="medium">
+        <mui-body weight="medium" class="introduction">
           Create fast, accessible, and themeable components with MUI styling,
           without the need for React or other dependencies.
         </mui-body>
@@ -168,6 +145,12 @@ For dynamic page loading with JavaScript, refer to the storefront file.
           >
             View Github
           </mui-link>
+        </mui-h-stack>
+
+        <!-- Compose new arrangments with Mui Components -->
+        <mui-h-stack space="var(--space-300)" alignY="center">
+          <mui-body weight="bold">Toggle Theme</mui-body>
+          <local-ui-theme-toggle></local-ui-theme-toggle>
         </mui-h-stack>
       </mui-v-stack>
     </mui-container>

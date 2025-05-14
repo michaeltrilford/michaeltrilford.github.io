@@ -1,0 +1,48 @@
+/* =============================================================================== */
+/*   Author Styles: Your custom styles                              */
+/* =============================================================================== */
+
+html[data-theme='light'] {
+  --brand: var(--template-red-100);
+  --brand-hover: var(--template-red-200);
+  --logo-color: initial;
+  --switch-background-unchecked: var(--template-grey-700);
+}
+
+html[data-theme='dark'] {
+  --brand: var(--grey-700);
+  --brand-hover: var(--grey-600);
+  --logo-color: invert(1);
+  --switch-background-checked: var(--template-red-200);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: var(--brand);
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  filter: var(--logo-color);
+}
+
+.content {
+  text-align: center;
+  max-width: 38ch;
+}
+
+/* Demo of targeting the host */
+.introduction {
+  max-width: 36ch;
+}
+
+/* Demo of Parts */
+mui-link.github-link::part(background) {
+  background: var(--brand);
+}
+mui-link.github-link::part(background):hover {
+  background: var(--brand-hover);
+}
