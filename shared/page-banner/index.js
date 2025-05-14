@@ -6,6 +6,10 @@ class pageBanner extends HTMLElement {
     const styles = `
       :host { display: block; }
 
+      @media (min-width: 1288px) {
+        :host { margin: var(--space-400) 0; } 
+      }
+
       .banner {
         display: flex;
         justify-content: center;
@@ -21,9 +25,9 @@ class pageBanner extends HTMLElement {
           -6px -6px 14px var(--black-opacity-10);
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: 1288px) {
         .banner {
-          padding: var(--space-700) var(--space-800) var(--space-000) var(--space-800);
+          padding: var(--space-700) var(--space-700) var(--space-000) var(--space-700);
         } 
       }
 
@@ -35,7 +39,19 @@ class pageBanner extends HTMLElement {
         align-items: center;
       }
 
-      @media (min-width: 1200px) {
+      @media (min-width: 1288px) {
+
+        mui-grid::part(gap) {
+          gap: var(--space-000);
+        }
+      }
+
+      @media (min-width: 1350px) {
+
+        mui-grid::part(gap) {
+          gap: var(--space-600);
+        }
+
         mui-grid::part(align-items) {
           align-items: start;
         }
@@ -55,7 +71,7 @@ class pageBanner extends HTMLElement {
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-        <mui-responsive breakpoint="1200" class="banner">
+        <mui-responsive breakpoint="1287" class="banner">
           <mui-grid slot="showBelow" gap="var(--space-600)" col="1fr">
             <mui-v-stack space="var(--space-500)" alignY="start">
               <mui-v-stack  space="var(--space-100)">
@@ -65,7 +81,10 @@ class pageBanner extends HTMLElement {
                   </mui-h-stack>
                   <mui-heading size="3" level="2">Guru Guides</mui-heading>
                 </mui-h-stack>
-                <mui-body size="medium">A Figma plugin that delivers UX guidelines and customisable content, seamlessly integrating design system guides into Figma workflows.</mui-body>
+                <mui-v-stack space="var(--space-400)" style="max-width: 50ch;">
+                  <mui-body size="small">A Figma plugin that brings MUI Guidelines direct into Figma, making component guidance easy to access where designers need it most.</mui-body>
+                  <mui-body size="x-small">Log in with your MUI credentials to view the guidelines.</mui-body>
+                </mui-v-stack>
               </mui-v-stack>
               <mui-button-group>
                 <mui-link variant="primary" href="https://www.figma.com/community/plugin/1471341082690554711/guru-guides" target="_blank">Install</mui-link>
@@ -73,8 +92,8 @@ class pageBanner extends HTMLElement {
               <mui-button-group>
             </mui-v-stack>
           </mui-grid>
-          <mui-grid slot="showAbove" gap="var(--space-600)" col="1fr 400px">
-            <mui-v-stack  space="var(--space-600)"  alignY="start" style="max-width: 41ch;">
+          <mui-grid slot="showAbove" col="1fr 440px">
+            <mui-v-stack  space="var(--space-600)"  alignY="start" style="max-width: 41ch; padding-bottom: var(--space-700);">
               <mui-v-stack  space="var(--space-400)">
                 <mui-h-stack space="var(--space-400)" alignY="center">
                   <mui-h-stack style="width: 38px;">
@@ -82,7 +101,10 @@ class pageBanner extends HTMLElement {
                   </mui-h-stack>
                   <mui-heading size="2" level="2">Guru Guides</mui-heading>
                 </mui-h-stack>
-                <mui-body size="medium">A Figma plugin that delivers UX guidelines and customisable content, seamlessly integrating design system guides into Figma workflows.</mui-body>
+                <mui-v-stack space="var(--space-400)" style="max-width: 50ch;">
+                  <mui-body size="medium">A Figma plugin that brings MUI Guidelines direct into Figma, making component guidance easy to access where designers need it most.</mui-body>
+                  <mui-body size="small">Log in with your MUI credentials to view the guidelines.</mui-body>
+                </mui-v-stack>
               </mui-v-stack>
               <mui-button-group>
                 <mui-link variant="primary" href="https://www.figma.com/community/plugin/1471341082690554711/guru-guides" target="_blank">Install</mui-link>

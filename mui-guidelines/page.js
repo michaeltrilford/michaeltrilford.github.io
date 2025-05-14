@@ -49,7 +49,6 @@ class GuidelinesPage extends HTMLElement {
 
             </mui-responsive>
 
-
             <mui-message 
               heading="Sign in to view MUI Guidelines" 
               variant="info"
@@ -57,8 +56,11 @@ class GuidelinesPage extends HTMLElement {
               To view the MUI Guidelines in Guru Guides, you must be logged in.
             </mui-message>
 
-            <mui-v-stack space="var(--space-400)">
+            <mui-v-stack space="var(--space-500)">
+              <mui-v-stack space="var(--space-100)">
               <mui-heading size="4" level="4">Login Credentials</mui-heading>  
+              <mui-body>Copy the credentials and login to Guru Guides</mui-body>
+              </mui-v-stack>
               <mui-v-stack space="var(--space-400)">        
   
                 <mui-input label="Email" id="email-input" name="email" value="mui-web-components@proton.me"></mui-input>
