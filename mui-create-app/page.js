@@ -34,7 +34,7 @@ class CreateAppPage extends HTMLElement {
         title="Create App"
         description="Start building accessible and fast loading interfaces using web components and MUI inspired styling. No frameworks or JavaScript build tools are required."
         demo="/mui-create-app/index.html"
-        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-create-app/index.html"
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-create-app"
       >
 
 
