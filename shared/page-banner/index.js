@@ -21,13 +21,7 @@ class pageBanner extends HTMLElement {
           -6px -6px 14px var(--black-opacity-10);
       }
 
-      @media (min-width: 1150px) {
-        .banner {
-          padding: var(--space-600) var(--space-700) var(--space-000) var(--space-600);
-        } 
-      }
-
-      @media (min-width: 1300px) {
+      @media (min-width: 1200px) {
         .banner {
           padding: var(--space-700) var(--space-800) var(--space-000) var(--space-800);
         } 
@@ -41,7 +35,7 @@ class pageBanner extends HTMLElement {
         align-items: center;
       }
 
-      @media (min-width: 1150px) {
+      @media (min-width: 1200px) {
         mui-grid::part(align-items) {
           align-items: start;
         }
@@ -61,7 +55,7 @@ class pageBanner extends HTMLElement {
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-        <mui-responsive breakpoint="1150" class="banner">
+        <mui-responsive breakpoint="1200" class="banner">
           <mui-grid slot="showBelow" gap="var(--space-600)" col="1fr">
             <mui-v-stack space="var(--space-500)" alignY="start">
               <mui-v-stack  space="var(--space-100)">
