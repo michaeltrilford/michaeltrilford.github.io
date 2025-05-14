@@ -4,6 +4,7 @@ class StoryTemplate extends HTMLElement {
       'title',
       'description',
       'accessibility-items',
+      'demo',
       'github',
       'figma',
       'guides',
@@ -34,6 +35,11 @@ class StoryTemplate extends HTMLElement {
 
     const accessibilityItems = this.getAttribute('accessibility-items');
     let accessibilityArray = [];
+
+    const demoLink = this.getAttribute('demo');
+    const demoContent = demoLink
+      ? `<mui-link class="resources" href="${demoLink}" target="_blank" rel="noopener" variant="secondary">Demo Site</mui-link>`
+      : '';
 
     const githubLink = this.getAttribute('github');
     const githubContent = githubLink
@@ -86,6 +92,7 @@ class StoryTemplate extends HTMLElement {
                 <mui-v-stack slot="showBelow" space="var(--space-300)">
                   <mui-heading size="1" weight="800">${title}</mui-heading>
                   <mui-h-stack space="var(--space-100)">
+                    ${demoContent}
                     ${guidesContent}
                     ${figmaContent}
                     ${githubContent}
@@ -94,6 +101,7 @@ class StoryTemplate extends HTMLElement {
                 <mui-h-stack slot="showAbove" alignX="space-between" alignY="center">
                   <mui-heading size="1" weight="800">${title}</mui-heading>
                   <mui-h-stack space="var(--space-100)">
+                    ${demoContent}
                     ${guidesContent}
                     ${figmaContent}
                     ${githubContent}
