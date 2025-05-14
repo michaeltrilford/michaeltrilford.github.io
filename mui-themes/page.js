@@ -33,13 +33,13 @@ class ThemesPage extends HTMLElement {
       <story-template 
         title="Theme Setup"
         description="Configure brand properties like color, typography, and spacing without changing component code. Access the template on GitHub to apply your brand with light and dark mode support."
-        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/css/themes/template.css"
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/css/themes/theme-template.css"
       >
 
 
       <mui-v-stack space="var(--space-700)">
 
-        <page-card title="Template configuration" noFooter  description="Define brand primitives and apply them consistently across light and dark modes.">
+        <page-card title="Theme configuration" description="Define brand primitives and apply them consistently across light and dark modes.">
           
         <mui-grid slot="body" class="config">
 
@@ -69,9 +69,55 @@ class ThemesPage extends HTMLElement {
 
           <mui-image>
             <img slot="image" src="images/theme-template.jpg" />
-            <figcaption slot="caption">template.css</figcaption>
+            <figcaption slot="caption">theme-template.css</figcaption>
           </mui-image> 
         </mui-grid>
+
+        <mui-code slot="footer">
+          <br />
+          THEME STRUCTURE:
+          <br />
+          <br />
+          &#47;* =========================================================== *&#47;<br />
+          &#47;* 1. BRAND PRIMITIVES<br />
+          &#47;* =========================================================== *&#47;<br />
+          html[data-brand=&#39;template&#39;] {<br />
+          &nbsp;&nbsp;--template-grey-100: #f0f0f5;<br />
+          &nbsp;&nbsp;--template-grey-200: #d9d9e0;<br />
+          &nbsp;&nbsp;...<br />
+          }<br />
+          <br />
+          &#47;* =========================================================== *&#47;<br />
+          &#47;* 2. LIGHT MODE <br />
+          &#47;* =========================================================== *&#47;<br />
+          html[data-brand=&#39;template&#39;][data-theme=&#39;light&#39;] {<br />
+          &nbsp;&nbsp;--feedback-plain-border-color: var(--black-opacity-50);<br />
+          &nbsp;&nbsp;--feedback-neutral-border-color: var(--template-grey-600);<br />
+          &nbsp;&nbsp;...<br />
+          }<br />
+          <br />
+          &#47;* =========================================================== *&#47;<br />
+          &#47;* 3. DARK MODE<br />
+          &#47;* =========================================================== *&#47;<br />
+          html[data-brand=&#39;template&#39;][data-theme=&#39;dark&#39;] {<br />
+          &nbsp;&nbsp;--feedback-plain-border-color: var(--white-opacity-50);<br />
+          &nbsp;&nbsp;--feedback-neutral-border-color: var(--template-grey-400);<br />
+          &nbsp;&nbsp;...<br />
+          }<br />
+          <br />
+          &#47;* =========================================================== *&#47;<br />
+          &#47;* 4. SET THE FOUNDATION<br />
+          &#47;* Map tokens to semantic or component contexts . <br />
+          &#47;* =========================================================== *&#47;<br />
+          html[data-brand=&#39;template&#39;] {<br />
+          &nbsp;&nbsp;--action-padding: var(--space-200) var(--space-500);<br />
+          &nbsp;&nbsp;--action-icon-only-padding: var(--space-000);<br />
+          &nbsp;&nbsp;...<br />
+          }<br />
+          <br />
+          <br />
+
+        </mui-code>
 
 
         </page-card>

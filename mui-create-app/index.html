@@ -1,0 +1,175 @@
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////
+
+RECOMMENDED PROJECT STRUCTURE:
+
+Project Root:
+│
+├── css/
+│   ├── mui-tokens.css          # Design tokens for consistency across components
+│   ├── mui-reset.css           # Resets default browser styling
+│   ├── mui-base.css            # Base styles for layout and typography
+│   └── themes/
+│       └── theme-template.css  # Default theme with light and dark mode support
+│
+├── images/
+│   └── logo.svg                # Logo asset
+│
+├── components/                 # Custom web components
+│   ├── mui-container/
+│   │   └── index.js            # Web component script for the container
+│   ├── mui-heading/
+│   │   └── index.js            # Web component script for the heading
+│   ├── mui-body/
+│   │   └── index.js            # Web component script for the body
+│   ├── mui-link/
+│   │   └── index.js            # Web component script for the link
+│   └── mui-stack/              # Stack components for layout
+│       └── mui-vstack/
+│           └── index.js        # Vertical stack layout component
+│
+├── js/                         # Supporting JavaScript files
+│   └── mui-parts/              # Optional feature parts (e.g., text selectors)
+│       └── index.js            # Web component script for optional parts
+│
+├── public/
+│    ├── favicon.ico            # Favicon displayed in browser tabs and bookmarks
+│    └── logo192.png            # Icon used when the site is installed as a PWA (Progressive Web App)
+│
+└── index.html                  # Main entry file for the project. Rename `template.html` to `index.html`.
+
+This file can be served statically or via a basic server. 
+For dynamic page loading with JavaScript, refer to the storefront file.
+
+/////////////////////////////////////////////////////////////////////////////////////////// -->
+
+<!DOCTYPE html>
+<html class="no-js" lang="" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/mui-tokens.css" />
+    <link rel="stylesheet" href="css/mui-reset.css" />
+    <link rel="stylesheet" href="css/mui-base.css" />
+    <link rel="stylesheet" href="css/themes/theme-template.css" />
+    <meta name="theme-color" content="yellow" />
+    <link rel="icon" type="image/svg+xml" href="public/favicon.ico" />
+    <link rel="apple-touch-icon" href="public/logo192.png" />
+    <title>MUI Create App</title>
+    <meta
+      name="description"
+      content="Start building accessible and fast loading interfaces using web components and MUI inspired styling. No frameworks or JavaScript build tools are required."
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <script
+      src="components/mui-container/index.js"
+      defer="true"
+      type="module"
+    ></script>
+    <script
+      src="components/mui-heading/index.js"
+      defer="true"
+      type="module"
+    ></script>
+    <script
+      src="components/mui-body/index.js"
+      defer="true"
+      type="module"
+    ></script>
+    <script
+      src="components/mui-link/index.js"
+      defer="true"
+      type="module"
+    ></script>
+    <script
+      src="components/mui-stack/mui-vstack/index.js"
+      defer="true"
+      type="module"
+    ></script>
+
+    <!-- Option Part Feature | E.g. https://michaeltrilford.github.io/#/text-part-selectors-->
+    <script src="js/mui-parts/index.js" defer="true" type="module"></script>
+
+    <style>
+      :root {
+        --brand: #ffeb3b;
+        --brand-hover: #ffd600;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+        background-color: var(--brand);
+        text-align: center;
+      }
+
+      .logo {
+        width: 200px;
+        height: auto;
+      }
+
+      .content {
+        text-align: center;
+        max-width: 38ch;
+      }
+
+      /* Demo of targetting the host */
+      mui-body {
+        max-width: 36ch;
+        margin-top: var(--space-300);
+        margin-bottom: var(--space-200);
+      }
+
+      /* Demo of Parts */
+      mui-link.github-link::part(background) {
+        background: var(--brand);
+      }
+      mui-link.github-link::part(background):hover {
+        background: var(--brand-hover);
+      }
+    </style>
+  </head>
+
+  <body>
+    <mui-container small>
+      <mui-v-stack space="var(--space-500)" alignX="center">
+        <div class="logo">
+          <img
+            src="images/logo.svg"
+            width="400"
+            height="auto"
+            style="
+              width: 100%;
+              height: auto;
+            "
+          />
+        </div>
+
+        <mui-body weight="medium">
+          Create fast, accessible, and themeable components with MUI styling,
+          without the need for React or other dependencies.
+        </mui-body>
+
+        <mui-h-stack space="var(--space-300)">
+          <mui-link
+            variant="primary"
+            href="https://michaeltrilford.github.io/"
+            target="_blank"
+          >
+            View Docs
+          </mui-link>
+          <mui-link
+            class="github-link"
+            variant="secondary"
+            href="https://github.com/michaeltrilford/create-mui-app"
+            target="_blank"
+          >
+            View Github
+          </mui-link>
+        </mui-h-stack>
+      </mui-v-stack>
+    </mui-container>
+  </body>
+</html>

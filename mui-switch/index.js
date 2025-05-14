@@ -1,42 +1,52 @@
 class MuiSwitch extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
     this._checked = false;
   }
 
   connectedCallback() {
     this.render();
-    this._thumb = this.shadowRoot.querySelector(".thumb");
-    this._track = this.shadowRoot.querySelector(".track");
+    this._thumb = this.shadowRoot.querySelector('.thumb');
+    this._track = this.shadowRoot.querySelector('.track');
     this._checkbox = this.shadowRoot.querySelector('input[type="checkbox"]');
-    this._checked = this.hasAttribute("checked");
+    this._checked = this.hasAttribute('checked');
     this._checkbox.checked = this._checked;
     this._updateIcons();
+    this._updateDisabledState();
 
-    this._checkbox.addEventListener("change", () => {
+    this._checkbox.addEventListener('change', () => {
       this.checked = this._checkbox.checked;
       this.dispatchEvent(
-        new CustomEvent("change", {
+        new CustomEvent('change', {
           detail: { checked: this.checked },
           bubbles: true,
           composed: true,
-        })
+        }),
       );
     });
   }
 
   static get observedAttributes() {
-    return ["checked"];
+    return ['label', 'disabled', 'checked'];
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === "checked") {
+    if (name === 'checked') {
       this._checked = newValue !== null;
       if (this._checkbox) {
         this._checkbox.checked = this._checked;
         this._updateIcons();
       }
+    }
+
+    if (name === 'disabled') {
+      const isDisabled = newValue !== null;
+      if (this._checkbox) {
+        this._checkbox.disabled = isDisabled;
+        this._checkbox.setAttribute('aria-disabled', isDisabled.toString());
+      }
+      this._updateDisabledState();
     }
   }
 
@@ -49,14 +59,27 @@ class MuiSwitch extends HTMLElement {
     if (this._checked === isChecked) return;
     this._checked = isChecked;
     if (isChecked) {
-      this.setAttribute("checked", "");
+      this.setAttribute('checked', '');
     } else {
-      this.removeAttribute("checked");
+      this.removeAttribute('checked');
     }
     if (this._checkbox) {
       this._checkbox.checked = this._checked;
-      this._checkbox.setAttribute("aria-checked", this._checked.toString());
+      this._checkbox.setAttribute('aria-checked', this._checked.toString());
       this._updateIcons();
+    }
+  }
+
+  _updateDisabledState() {
+    const isDisabled = this.hasAttribute('disabled');
+    if (isDisabled) {
+      this.shadowRoot.host.classList.add('disabled');
+      this._checkbox?.setAttribute('aria-disabled', 'true');
+      this._checkbox?.setAttribute('tabindex', '-1');
+    } else {
+      this.shadowRoot.host.classList.remove('disabled');
+      this._checkbox?.removeAttribute('aria-disabled');
+      this._checkbox?.removeAttribute('tabindex');
     }
   }
 
@@ -67,17 +90,24 @@ class MuiSwitch extends HTMLElement {
       onIcon
         .assignedElements()
         .forEach(
-          (el) => (el.style.display = this._checked ? "inline" : "none")
+          (el) => (el.style.display = this._checked ? 'inline' : 'none'),
         );
     if (offIcon)
       offIcon
         .assignedElements()
         .forEach(
-          (el) => (el.style.display = this._checked ? "none" : "inline")
+          (el) => (el.style.display = this._checked ? 'none' : 'inline'),
         );
   }
 
   render() {
+    const label = this.getAttribute('label');
+    if (!label) {
+      console.warn(
+        "mui-switch Accessibility warning: Provide a 'label' to ensure the switch is described for assistive technologies.",
+      );
+    }
+
     this.shadowRoot.innerHTML = `
       <style>
         :host { display: inline-block; }
@@ -139,9 +169,29 @@ class MuiSwitch extends HTMLElement {
           height: 16px;
           fill: var(--switch-icon);
         }
+
+        ::slotted([slot="on-icon"]),
+        ::slotted([slot="off-icon"]) {
+          aria-hidden: true;
+        }
+
+        :host(.disabled) {
+          cursor: not-allowed;
+        }
+
+        :host(.disabled) .switch {
+          opacity: 0.4;
+          pointer-events: none;
+        }
+
       </style>
       <label class="switch">
-        <input type="checkbox" role="switch" aria-checked="${this._checked}">
+        <input 
+          type="checkbox"
+          role="switch"
+          aria-checked="${this._checked}"
+          ${label ? `aria-label="${label}"` : ''}
+        >
         <span class="track">
           <span class="thumb">
             <slot name="on-icon"></slot>
@@ -153,4 +203,4 @@ class MuiSwitch extends HTMLElement {
   }
 }
 
-customElements.define("mui-switch", MuiSwitch);
+customElements.define('mui-switch', MuiSwitch);

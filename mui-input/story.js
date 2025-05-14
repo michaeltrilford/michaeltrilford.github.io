@@ -44,17 +44,20 @@ class storyInput extends HTMLElement {
       },
       {
         name: 'label',
+        required: true,
         type: 'string',
         options: '{text}',
         default: '',
-        description: 'Provide the input with a unique label',
+        description:
+          'Provide the input with a unique label.  If without, a console warning will remind you to add label.',
       },
       {
         name: 'hide-label',
         type: 'boolean',
         options: 'hide-label',
         default: '',
-        description: 'Hide the label',
+        description:
+          'Hides the label but it is still present for screen readers',
       },
       {
         name: 'disabled',
@@ -132,6 +135,14 @@ class storyInput extends HTMLElement {
         title="Input"
         description="An input component for capturing user text, styled for consistency across your UI."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-input/index.js"
+        accessibility-items='
+          A label is required to support screen reader accessibility. It ensures that users understand the purpose of the input.;
+          When hide-label is set, the visible label is hidden, but an aria-label is generated from the label to maintain screen reader support.;
+          The label is linked to the input via the for and id attributes, enabling screen readers to associate the label text with the input field.;
+          If no id is provided by the user, one is automatically generated to ensure the label remains correctly associated with the input.;
+          The input includes keyboard-accessible focus styles, ensuring visible indication of focus for users navigating via keyboard.;
+          The disabled attribute is applied natively to the input, and is recognized by assistive technologies without additional handling.
+        '
       >
 
       <mui-v-stack space="var(--space-700)">
@@ -148,28 +159,34 @@ class storyInput extends HTMLElement {
         </story-card>
 
 
-        <story-card title="Default">
-
+        <story-card title="Default" description="The label is required, if not set there will be a console warning.">
           <div slot="body">
-            <mui-input></mui-input>
+            <mui-input label="Default"></mui-input>
           </div>
           <mui-code slot="footer">
-            &lt;mui-input&gt;&lt;mui-input&gt;
+            &lt;mui-input label="Default"&gt;&lt;mui-input&gt;
             <br />
           </mui-code>
-
         </story-card>
 
-        <story-card title="Default w/ Label" description="The label and input is connected via the 'for' and 'id' property, enabling the user to click on the label to focus the input.">
-
+        <story-card title="Hide Label" description="The visible label is hidden and an aria-label is generated from the label to maintain screen reader support.">
           <div slot="body">
-            <mui-input label="Name"></mui-input>
+            <mui-input label="Hide Label" hide-label></mui-input>
           </div>
           <mui-code slot="footer">
-            &lt;mui-input&gt;&lt;mui-input&gt;
+            &lt;mui-input label="Hide Label" hide-label&gt;&lt;mui-input&gt;
             <br />
           </mui-code>
+        </story-card>
 
+        <story-card title="Disabled">
+          <div slot="body">
+            <mui-input label="Disabled" disabled></mui-input>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-input label="Disabled" disabled&gt;&lt;mui-input&gt;
+            <br />
+          </mui-code>
         </story-card>
 
         <story-card title="Type: Text" description="The default input type for plain text.">

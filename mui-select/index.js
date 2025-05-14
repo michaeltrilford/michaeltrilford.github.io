@@ -77,6 +77,24 @@ class muiSelect extends HTMLElement {
     const hideLabel = this.hasAttribute('hide-label');
     const disabled = this.hasAttribute('disabled');
     const optionsAttr = this.getAttribute('options') || '[]';
+    const ariaLabel = this.getAttribute('aria-label') || '';
+
+    // Accessibility warning for mui-select: 'hide-label' is set but no 'label' is provided
+    if (hideLabel && !label) {
+      console.warn(
+        "mui-select Accessibility warning: When using 'hide-label', please provide a 'label' attribute so an 'aria-label' can be generated for screen reader support.",
+      );
+    }
+
+    // Accessibility warning for mui-select: No 'label' or 'aria-label' provided
+    if (!label && !ariaLabel) {
+      console.warn(
+        "mui-select Accessibility warning: A 'label' or 'aria-label' attribute is required for screen reader accessibility.",
+      );
+    }
+
+    // Here, we directly use the ariaLabel logic as in the 'input' component
+    const ariaLabelAttr = hideLabel && label ? `aria-label="${label}"` : '';
 
     let options = [];
     try {
@@ -150,7 +168,8 @@ class muiSelect extends HTMLElement {
             }">${label}</label>`
           : ''
       }
-      <select part="${this.partMap || ''}" name="${name}" id="${id}" ${
+    <select part="${this.partMap ||
+      ''}" name="${name}" id="${id}" ${ariaLabelAttr} ${
       disabled ? 'disabled' : ''
     } >
         ${optionsHTML}

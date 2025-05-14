@@ -46,10 +46,12 @@ class storySelect extends HTMLElement {
       },
       {
         name: 'label',
+        required: true,
         type: 'string',
         options: '{text}',
         default: '',
-        description: 'Provide the input with a unique label',
+        description:
+          'Provide the input with a unique label. If without, a console warning will remind you to add label.',
       },
       {
         name: 'hide-label',
@@ -128,6 +130,14 @@ class storySelect extends HTMLElement {
         title="Select" 
         description="A versatile dropdown component for selecting from a list of options, supporting customisable styles and accessibility features."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-select/index.js"
+        accessibility-items='
+          A label is required to support screen reader accessibility. It ensures that users understand the purpose of the select.;
+          When hide-label is set, the visible label is hidden, but an aria-label is generated from the label to maintain screen reader support.;
+          The label is linked to the select via the for and id attributes, enabling screen readers to associate the label text with the select field.;
+          If no id is provided by the user, one is automatically generated to ensure the label remains correctly associated with the select.;
+          The select includes keyboard-accessible focus styles, ensuring visible indication of focus for users navigating via keyboard.;
+          The disabled attribute is applied natively to the select, and is recognized by assistive technologies without additional handling.
+        '
       >
 
       <mui-v-stack space="var(--space-700)">
@@ -146,7 +156,8 @@ class storySelect extends HTMLElement {
 
         <story-card title="Default" description="A select requires a list of options.">
           <div slot="body">
-            <mui-select 
+            <mui-select
+              label="Default"
               options='[
                 {"value": "default", "label": "Mui"},
                 {"value": "jal", "label": "JAL"},
@@ -156,41 +167,7 @@ class storySelect extends HTMLElement {
             </mui-select>
           </div>
           <mui-code slot="footer">
-            &lt;mui-select
-              <br />
-              &nbsp;&nbsp;&nbsp;&nbsp;options='[
-              <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{"value": "default", "label": "Mui"},
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{"value": "jal", "label": "JAL"},
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{"value": "ana", "label": "ANA"},
-                <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;{"value": "plain", "label": "Plain"}
-                <br />
-              &nbsp;&nbsp;]'&gt;
-              <br />
-            &lt;/mui-select&gt;
-
-          </mui-code>
-        </story-card>
-
-        <story-card title="Default w/ Label" description="The label and select is connected via the 'for' and 'id' property, enabling the user to click on the label to focus the select.">
-          <div slot="body">
-            <mui-select 
-              label="Brand"
-              options='[
-                {"value": "default", "label": "Mui"},
-                {"value": "jal", "label": "JAL"},
-                {"value": "ana", "label": "ANA"},
-                {"value": "plain", "label": "Plain"}
-              ]'>
-            </mui-select>
-          </div>
-          <mui-code slot="footer">
-            &lt;mui-select
-              <br />
-              &nbsp;&nbsp;label="Brand"
+            &lt;mui-select label="Default"
               <br />
               &nbsp;&nbsp;&nbsp;&nbsp;options='[
               <br />

@@ -1,20 +1,20 @@
 class muiInput extends HTMLElement {
   static get observedAttributes() {
     return [
-      "type",
-      "name",
-      "value",
-      "placeholder",
-      "id",
-      "label",
-      "disabled",
-      "hide-label",
+      'type',
+      'name',
+      'value',
+      'placeholder',
+      'id',
+      'label',
+      'disabled',
+      'hide-label',
     ];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -24,27 +24,27 @@ class muiInput extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (this.shadowRoot) {
-      const inputEl = this.shadowRoot.querySelector("input");
+      const inputEl = this.shadowRoot.querySelector('input');
 
       if (!inputEl) return;
 
-      if (name === "value") {
-        inputEl.value = newValue || "";
+      if (name === 'value') {
+        inputEl.value = newValue || '';
       }
 
-      if (name === "disabled") {
-        if (newValue === null || newValue === "false") {
-          inputEl.removeAttribute("disabled");
+      if (name === 'disabled') {
+        if (newValue === null || newValue === 'false') {
+          inputEl.removeAttribute('disabled');
         } else {
-          inputEl.setAttribute("disabled", "");
+          inputEl.setAttribute('disabled', '');
         }
       }
 
       if (
-        name === "type" ||
-        name === "placeholder" ||
-        name === "label" ||
-        name === "hide-label"
+        name === 'type' ||
+        name === 'placeholder' ||
+        name === 'label' ||
+        name === 'hide-label'
       ) {
         this.render();
         this.setupListener();
@@ -53,31 +53,31 @@ class muiInput extends HTMLElement {
   }
 
   setupListener() {
-    const inputEl = this.shadowRoot.querySelector("input");
+    const inputEl = this.shadowRoot.querySelector('input');
     if (inputEl) {
       // Remove previous event listener to prevent duplicates
       const newInputEl = inputEl.cloneNode(true);
       inputEl.parentNode.replaceChild(newInputEl, inputEl);
 
       // Add input event listener
-      newInputEl.addEventListener("input", (e) => {
+      newInputEl.addEventListener('input', (e) => {
         this.dispatchEvent(
-          new CustomEvent("input", {
+          new CustomEvent('input', {
             detail: { value: e.target.value },
             bubbles: true,
             composed: true,
-          })
+          }),
         );
       });
 
       // Add change event listener
-      newInputEl.addEventListener("change", (e) => {
+      newInputEl.addEventListener('change', (e) => {
         this.dispatchEvent(
-          new CustomEvent("change", {
+          new CustomEvent('change', {
             detail: { value: e.target.value },
             bubbles: true,
             composed: true,
-          })
+          }),
         );
       });
     }
@@ -85,30 +85,43 @@ class muiInput extends HTMLElement {
 
   render() {
     const allowedTypes = [
-      "text",
-      "password",
-      "email",
-      "number",
-      "search",
-      "tel",
-      "url",
-      "date",
-      "time",
+      'text',
+      'password',
+      'email',
+      'number',
+      'search',
+      'tel',
+      'url',
+      'date',
+      'time',
     ];
 
-    const rawType = this.getAttribute("type") || "text";
-    const type = allowedTypes.includes(rawType) ? rawType : "text";
-    const name = this.getAttribute("name") || "";
-    const value = this.getAttribute("value") || "";
-    const placeholder = this.getAttribute("placeholder") || "";
+    const rawType = this.getAttribute('type') || 'text';
+    const type = allowedTypes.includes(rawType) ? rawType : 'text';
+    const name = this.getAttribute('name') || '';
+    const value = this.getAttribute('value') || '';
+    const placeholder = this.getAttribute('placeholder') || '';
     const id =
-      this.getAttribute("id") ||
+      this.getAttribute('id') ||
       `mui-input-${Math.random()
         .toString(36)
         .substr(2, 9)}`;
-    const label = this.getAttribute("label") || "";
-    const hideLabel = this.hasAttribute("hide-label");
-    const disabled = this.hasAttribute("disabled");
+    const label = this.getAttribute('label') || '';
+    const hideLabel = this.hasAttribute('hide-label');
+    const disabled = this.hasAttribute('disabled');
+    const ariaLabel = hideLabel && label ? `aria-label="${label}"` : '';
+
+    if (hideLabel && !label) {
+      console.warn(
+        "mui-input Accessibility warning: When using 'hide-label', please provide a 'label' attribute so an 'aria-label' can be generated for screen reader support.",
+      );
+    }
+
+    if (!label && !ariaLabel) {
+      console.warn(
+        "mui-input Accessibility warning: A 'label' or 'aria-label' attribute is required for screen reader accessibility.",
+      );
+    }
 
     const html = `
       <style>
@@ -157,9 +170,9 @@ class muiInput extends HTMLElement {
       ${
         label
           ? `<label for="${id}" class="${
-              hideLabel ? "vh" : ""
+              hideLabel ? 'vh' : ''
             }">${label}</label>`
-          : ""
+          : ''
       }
       <input
         type="${type}"
@@ -167,7 +180,8 @@ class muiInput extends HTMLElement {
         id="${id}"
         value="${value}"
         placeholder="${placeholder}"
-        ${disabled ? "disabled" : ""}
+        ${disabled ? 'disabled aria-disabled="true"' : ''}
+        ${ariaLabel}
       />
     `;
 
@@ -175,4 +189,4 @@ class muiInput extends HTMLElement {
   }
 }
 
-customElements.define("mui-input", muiInput);
+customElements.define('mui-input', muiInput);

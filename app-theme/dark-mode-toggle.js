@@ -45,7 +45,7 @@ class DarkModeToggle extends HTMLElement {
 
       </style>
 
-      <mui-switch ${isDark ? 'checked' : ''}>
+      <mui-switch label="Dark mode toggle" ${isDark ? 'checked' : ''}>
         <mui-icon-sun slot="off-icon"></mui-icon-sun>
         <mui-icon-moon slot="on-icon"></mui-icon-moon>
       </mui-switch>
