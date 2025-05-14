@@ -38,7 +38,7 @@ class StoryTemplate extends HTMLElement {
 
     const demoLink = this.getAttribute('demo');
     const demoContent = demoLink
-      ? `<mui-link class="resources" href="${demoLink}" target="_blank" rel="noopener" variant="secondary">Demo Site</mui-link>`
+      ? `<mui-link class="resources" href="${demoLink}" target="_blank" rel="noopener" variant="secondary">Live Demo</mui-link>`
       : '';
 
     const githubLink = this.getAttribute('github');
