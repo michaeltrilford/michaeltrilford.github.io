@@ -187,42 +187,42 @@ html[data-brand='neon'][data-theme='dark'] {
 /*   Theme Storefront: Plain                                                       */
 /*   Component theme alignment across storefront                                   */
 /* =============================================================================== */
-html[data-brand='plain'][data-theme='light'] {
-  --app-logo-color: var(--plain-black);
-  --app-meta-theme-color: var(--plain-black);
-  --app-skeleton: var(--plain-black);
-  --app-background: var(--plain-grey-200);
-  --app-nav-accent: var(--plain-black);
-  --app-nav-background: var(--plain-white);
-  --app-nav-border: var(--plain-grey-300);
-  --app-nav-home-hover: var(--plain-grey-100);
-  --app-nav-link: var(--plain-black);
-  --app-nav-link-focus: var(--plain-grey-200);
+html[data-brand='mono'][data-theme='light'] {
+  --app-logo-color: var(--mono-black);
+  --app-meta-theme-color: var(--mono-black);
+  --app-skeleton: var(--mono-black);
+  --app-background: var(--mono-grey-200);
+  --app-nav-accent: var(--mono-black);
+  --app-nav-background: var(--mono-white);
+  --app-nav-border: var(--mono-grey-300);
+  --app-nav-home-hover: var(--mono-grey-100);
+  --app-nav-link: var(--mono-black);
+  --app-nav-link-focus: var(--mono-grey-200);
   --app-nav-group-color: var(--black-opacity-80);
-  --app-theme-toggle-bg: var(--plain-grey-200);
-  --app-story-code-snippet-background: var(--plain-grey-200);
-  --app-story-snippet-code-text: var(--plain-black);
-  --app-story-card-background: var(--plain-grey-100);
-  --app-story-card-canvas: var(--plain-white);
+  --app-theme-toggle-bg: var(--mono-grey-200);
+  --app-story-code-snippet-background: var(--mono-grey-200);
+  --app-story-snippet-code-text: var(--mono-black);
+  --app-story-card-background: var(--mono-grey-100);
+  --app-story-card-canvas: var(--mono-white);
 }
 
-html[data-brand='plain'][data-theme='dark'] {
-  --app-logo-color: var(--plain-white);
-  --app-meta-theme-color: var(--plain-black);
-  --app-skeleton: var(--plain-black);
-  --app-background: var(--plain-grey-900);
-  --app-nav-accent: var(--plain-white);
-  --app-nav-background: var(--plain-black);
-  --app-nav-border: var(--plain-grey-700);
-  --app-nav-home-hover: var(--plain-grey-800);
-  --app-nav-link: var(--plain-white);
-  --app-nav-link-focus: var(--plain-grey-800);
+html[data-brand='mono'][data-theme='dark'] {
+  --app-logo-color: var(--mono-white);
+  --app-meta-theme-color: var(--mono-black);
+  --app-skeleton: var(--mono-black);
+  --app-background: var(--mono-grey-900);
+  --app-nav-accent: var(--mono-white);
+  --app-nav-background: var(--mono-black);
+  --app-nav-border: var(--mono-grey-700);
+  --app-nav-home-hover: var(--mono-grey-800);
+  --app-nav-link: var(--mono-white);
+  --app-nav-link-focus: var(--mono-grey-800);
   --app-nav-group-color: var(--white-opacity-40);
-  --app-theme-toggle-bg: var(--plain-grey-200);
-  --app-story-code-snippet-background: var(--plain-white);
-  --app-story-snippet-code-text: var(--plain-black);
-  --app-story-card-background: var(--plain-grey-800);
-  --app-story-card-canvas: var(--plain-grey-900);
+  --app-theme-toggle-bg: var(--mono-grey-200);
+  --app-story-code-snippet-background: var(--mono-white);
+  --app-story-snippet-code-text: var(--mono-black);
+  --app-story-card-background: var(--mono-grey-800);
+  --app-story-card-canvas: var(--mono-grey-900);
   --app-nav-group-color: var(--white-opacity-50);
 }
 
@@ -231,7 +231,7 @@ html[data-brand='plain'][data-theme='dark'] {
 /*   Component theme alignment across storefront                                   */
 /* =============================================================================== */
 
-html[data-brand='create-app'][data-theme='light'] {
+html[data-brand='modern'][data-theme='light'] {
   --app-logo-color: var(--black);
   --app-meta-theme-color: var(--black);
   --app-skeleton: var(--black);
@@ -250,7 +250,7 @@ html[data-brand='create-app'][data-theme='light'] {
   --app-story-card-canvas: var(--white);
 }
 
-html[data-brand='create-app'][data-theme='dark'] {
+html[data-brand='modern'][data-theme='dark'] {
   --app-logo-color: var(--white);
   --app-meta-theme-color: var(--black);
   --app-skeleton: var(--black);

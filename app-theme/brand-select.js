@@ -7,9 +7,9 @@ class ThemeSwitcher extends HTMLElement {
       mui: { theme: true },
       jal: { theme: true },
       ana: { theme: true },
-      plain: { theme: true },
+      mono: { theme: true },
       neon: { theme: true },
-      'create-app': { theme: true },
+      modern: { theme: true },
     };
 
     // Define font links per brand
@@ -38,6 +38,19 @@ class ThemeSwitcher extends HTMLElement {
           rel: 'stylesheet',
           href:
             'https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap',
+        },
+      ],
+      modern: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossOrigin: 'anonymous',
+        },
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap',
         },
       ],
     };
@@ -87,9 +100,9 @@ class ThemeSwitcher extends HTMLElement {
             {"value": "mui", "label": "Mui"},
             {"value": "jal", "label": "JAL"},
             {"value": "ana", "label": "ANA"},
-            {"value": "plain", "label": "Plain"},
-            {"value": "neon", "label": "Neon Flux"},
-            {"value": "create-app", "label": "Create App"}
+            {"value": "mono", "label": "Mono"},
+            {"value": "modern", "label": "Modern"},
+            {"value": "neon", "label": "Neon Flux"}
           ]'>
         </mui-select>
       </mui-grid>

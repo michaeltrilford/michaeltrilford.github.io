@@ -11,7 +11,9 @@
 /* =============================================================================== */
 /* 1. BRAND PRIMITIVES                                                             */
 /* =============================================================================== */
-html[data-brand='create-app'] {
+html[data-brand='modern'] {
+  --font-family: 'Golos Text', sans-serif;
+
   /* Grey scale – cooler, slightly more saturated tones */
   --grey-100: #f0f0f5;
   --grey-200: #d9d9e0;
@@ -79,7 +81,7 @@ html[data-brand='create-app'] {
 /* =============================================================================== */
 /* 2. LIGHT MODE                                                                   */
 /* =============================================================================== */
-html[data-brand='create-app'][data-theme='light'] {
+html[data-brand='modern'][data-theme='light'] {
   /* Feedback */
   --feedback-plain-border-color: var(--black-opacity-50);
   --feedback-neutral-border-color: var(--grey-600);
@@ -190,7 +192,7 @@ html[data-brand='create-app'][data-theme='light'] {
 /* =============================================================================== */
 /* 3. DARK MODE                                                                    */
 /* =============================================================================== */
-html[data-brand='create-app'][data-theme='dark'] {
+html[data-brand='modern'][data-theme='dark'] {
   /* Feedback */
   --feedback-plain-border-color: var(--white-opacity-50);
   --feedback-neutral-border-color: var(--grey-400);
@@ -302,7 +304,7 @@ html[data-brand='create-app'][data-theme='dark'] {
 /* 4. SET THE FOUNDATION                                             */
 /* Map tokens to semantic or component contexts .                    */
 /* ================================================================= */
-html[data-brand='create-app'] {
+html[data-brand='modern'] {
   --action-padding: var(--space-200) var(--space-500);
   --action-icon-only-padding: var(--space-000);
   --action-radius: var(--radius-100);
