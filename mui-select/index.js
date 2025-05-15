@@ -126,7 +126,9 @@ class muiSelect extends HTMLElement {
           display: block;
         }
         select {
-          padding: var(--space-300);
+          min-height: 4.4rem;
+          line-height: var(--text-line-height);
+          padding: var(--space-200) var(--space-300);
           font-size: var(--text-font-size);
           border: var(--border-thin);
           border-color: var(--grey-300);

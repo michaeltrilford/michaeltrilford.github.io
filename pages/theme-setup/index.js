@@ -33,7 +33,7 @@ class ThemeSetup extends HTMLElement {
       <story-template 
         title="Theme Setup"
         description="Configure brand properties like color, typography, and spacing without changing component code. Access the template on GitHub to apply your brand with light and dark mode support."
-        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-create-app/css/author-theme.css"
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-create-app/css/author-tokens.css"
       >
 
 
@@ -69,7 +69,7 @@ class ThemeSetup extends HTMLElement {
 
           <mui-image>
             <img slot="image" src="images/theme-template.jpg" />
-            <figcaption slot="caption">author-theme.css</figcaption>
+            <figcaption slot="caption">author-tokens.css</figcaption>
           </mui-image> 
         </mui-grid>
 

@@ -22,40 +22,45 @@ A lightweight starter template for building accessible, fast-loading interfaces 
 
 ## 📁 Recommended Project Structure
 
-```Project Root:
-│
-├── css/
-│ ├── mui-tokens.css → Design tokens (spacing, typography, colors)
-│ ├── mui-reset.css → Basic browser reset
-│ ├── mui-base.css → Base layout and type styles
-│ └── themes/
-│ └── theme-template.css → Light and dark mode support
-│
-├── images/
-│ └── mui-logo.svg → Sample logo asset
-│
-├── components/ → Prebuilt web components (replace as needed)
-│ ├── mui-container/
-│ │ └── index.js
-│ ├── mui-heading/
-│ │ └── index.js
-│ ├── mui-body/
-│ │ └── index.js
-│ ├── mui-link/
-│ │ └── index.js
-│ └── mui-stack/
-│ └── mui-vstack/
-│ └── index.js
-│
-├── js/
-│ └── mui-parts/
-│ └── index.js → Optional feature logic
-│
-├── public/
-│ ├── favicon.ico → Favicon for bookmarks and browser tabs
-│ └── logo192.png → Icon for Progressive Web App (PWA) installs
-│
-└── index.html → Main entry point
+```
+Project Root:
+    │
+    ├── css/
+    │    ├── mui-reset.css → Basic browser reset
+    │    ├── mui-base.css → Base layout and type styles
+    │    ├── author-tokens.css → Design tokens and Light/Dark themes
+    │    ├── author.css → Add additional application styles
+    │
+    ├── assets/
+    │    └── create-app-logo.js → Sample logo asset
+    │
+    ├── components/ → Prebuilt web components (replace as needed)
+    │    ├── mui-container/
+    │    │    └── index.js
+    │    ├── mui-heading/
+    │    │    └── index.js
+    │    ├── mui-body/
+    │    │    └── index.js
+    │    ├── mui-link/
+    │    │    └── index.js
+    │    ├── mui-icons/
+    │    │    └── mui-icon-sun.js
+    │    │    └── mui-icon-moon.js
+    │    └── mui-stack/
+    │        └── mui-vstack/
+    │            └── index.js
+    │
+    ├── js/
+    │    └── mui-parts/
+    │        └── index.js → Optional feature logic
+    │    └── create-app-theme-toggle/
+    │         └── index.js → Optional theme toggle
+    │
+    ├── public/
+    │    ├── favicon.ico → Favicon for bookmarks and browser tabs
+    │    └── logo192.png → Icon for Progressive Web App (PWA) installs
+    │
+    └── index.html → Main entry point
 ```
 
 - ⚠️ **Note:** The component files in the `components/` folder are sample implementations only.

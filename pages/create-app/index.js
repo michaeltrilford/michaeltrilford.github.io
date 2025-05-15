@@ -92,11 +92,10 @@ class CreateApp extends HTMLElement {
             Project Root:<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│<br>
             &nbsp;&nbsp;&nbsp;&nbsp;├── css/<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── mui-tokens.css<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── mui-reset.css<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── mui-base.css<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── author-theme.css<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── author.css<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── author-tokens.css<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── author.css<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│<br>
             &nbsp;&nbsp;&nbsp;&nbsp;├── assets/<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── create-app-logo.js<br>
@@ -119,6 +118,8 @@ class CreateApp extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;│<br>
             &nbsp;&nbsp;&nbsp;&nbsp;├── js/<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── mui-parts/<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── index.js<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── create-app-theme-toggle/<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── index.js<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│<br />
             &nbsp;&nbsp;&nbsp;&nbsp;├── public/<br />
