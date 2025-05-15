@@ -22,7 +22,7 @@ A lightweight starter template for building accessible, fast-loading interfaces 
 
 ## 📁 Recommended Project Structure
 
-Project Root:
+```Project Root:
 │
 ├── css/
 │ ├── mui-tokens.css → Design tokens (spacing, typography, colors)
@@ -56,22 +56,24 @@ Project Root:
 │ └── logo192.png → Icon for Progressive Web App (PWA) installs
 │
 └── index.html → Main entry point
+```
 
-> ⚠️ **Note:** The component files in the `components/` folder are sample implementations only.  
-> You should replace these with components you intend to use in your project.  
-> Please refer to the latest component source code in the main [component library](#) as the included versions may be outdated.
+- ⚠️ **Note:** The component files in the `components/` folder are sample implementations only.
+- You should replace these with components you intend to use in your project.
+- Please refer to the latest component source code in the main [component library](#) as the included versions may be outdated.
 
 ---
 
-## 🛠 Usage
+🛠 Usage
 
 1. Clone or download the project.
 2. Open a terminal and navigate to the project folder.
-3. Run the following command to start the server:
+3. You can open index.html directly in a browser — no server required.
+4. Optional: If you decide to make the application more dynamic (e.g. for routing or API requests), you might need to run a simple local server. For example:
 
-   ```bash
-   python3 -m http.server 8000
-   ```
+```bash
+python3 -m http.server 8000
+```
 
 ---
 
