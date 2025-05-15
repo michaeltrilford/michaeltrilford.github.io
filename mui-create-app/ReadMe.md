@@ -68,12 +68,19 @@ A lightweight starter template for building accessible, fast-loading interfaces 
 
 1. Clone or download the project.
 2. Open a terminal and navigate to the project folder.
-3. You can open index.html directly in a browser — no server required.
-4. Optional: If you decide to make the application more dynamic (e.g. for routing or API requests), you might need to run a simple local server. For example:
+3. Run the following command to start the server:
 
 ```bash
 python3 -m http.server 8000
 ```
+
+4. Open your browser and navigate to:
+
+```bash
+http://localhost:8000
+```
+
+Note: This step is required because some browsers block custom elements and module-based scripts when opened directly from the filesystem (file://). Running a local server ensures everything loads correctly.
 
 ---
 
