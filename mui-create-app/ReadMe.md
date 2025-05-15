@@ -68,6 +68,11 @@ A lightweight starter template for building accessible, fast-loading interfaces 
 
 1. Clone or download the project.
 2. Open a terminal and navigate to the project folder.
+
+```bash
+mui-create-app
+```
+
 3. Run the following command to start the server:
 
 ```bash
