@@ -57,6 +57,22 @@ class CreateApp extends HTMLElement {
               </mui-v-stack>
 
               <mui-v-stack space="var(--space-000)">
+                <mui-heading level="3" size="6">Quick local setup</mui-heading>
+                <mui-body size="small">
+                  For everything to load correctly, the project should be served locally. 
+                  No build tools needed — just a basic server using Python. 
+                  Setup instructions are on 
+                  <mui-link 
+                    size="small" 
+                    weight="medium" 
+                    target="_blank" 
+                    href="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-create-app">
+                      GitHub
+                  </mui-link>.
+                </mui-body>
+              </mui-v-stack>
+
+              <mui-v-stack space="var(--space-000)">
                 <mui-heading level="3" size="6">Flexible architecture</mui-heading>
                 <mui-body size="small">Compose interfaces using layout primitives, design tokens, and semantic elements. Components are designed to work seamlessly in modern browsers, supporting progressive enhancement with full control over structure and styling.</mui-body>
               </mui-v-stack>
