@@ -471,11 +471,6 @@ html[data-theme='dark'] {
   --message-padding: var(--space-400);
   --message-gap-horizontal: var(--space-300);
   --message-gap-vertical: var(--space-100);
-
-  /* Notification */
-  --notification-radius: var(--radius-200);
-  --notification-padding: var(--space-100) var(--space-100) var(--space-100) var(--space-400);
-  --notification-gap-horizontal: var(--space-200);
 }
 
 /* LIGHT THEME - DEFAULT */

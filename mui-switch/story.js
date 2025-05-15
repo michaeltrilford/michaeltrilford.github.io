@@ -113,12 +113,12 @@ class storySwitch extends HTMLElement {
         description="A component that allows users to switch a setting on or off with immediate effect."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-switch/index.js"
         accessibility-items='
-          A "label" is required to support screen reader accessibility. It is applied as an "aria-label" on the switch to describe its purpose.;
-          The label is not rendered visually — the switch is typically paired with iconography or nearby text to convey its function.;
-          The switch uses role="switch" and dynamically updates "aria-checked" to reflect its state for assistive technologies.;
-          The "disabled" attribute disables interaction and sets "aria-disabled", ensuring compatibility with screen readers and other assistive tools.;
-          Keyboard navigation is supported, with visible focus styles to help users navigating by keyboard.;
-          A console warning is triggered if no "label" is provided, reminding developers to include accessible naming.
+          A label is required and applied as aria-label to describe the switch’s purpose.;
+          Uses role="switch" and updates aria-checked for assistive tech.;
+          The label isn’t shown visually—context is provided through icons or nearby text.;
+          disabled sets aria-disabled and blocks interaction.;
+          Supports keyboard navigation with visible focus styles.;
+          Logs a console warning if no label is provided.
         '
       >
 

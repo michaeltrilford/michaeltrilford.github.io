@@ -9,6 +9,7 @@ class ThemeSwitcher extends HTMLElement {
       ana: { theme: true },
       plain: { theme: true },
       neon: { theme: true },
+      'create-app': { theme: true },
     };
 
     // Define font links per brand
@@ -87,7 +88,8 @@ class ThemeSwitcher extends HTMLElement {
             {"value": "jal", "label": "JAL"},
             {"value": "ana", "label": "ANA"},
             {"value": "plain", "label": "Plain"},
-            {"value": "neon", "label": "Neon Flux"}
+            {"value": "neon", "label": "Neon Flux"},
+            {"value": "create-app", "label": "Create App"}
           ]'>
         </mui-select>
       </mui-grid>

@@ -1,4 +1,4 @@
-class CreateAppPage extends HTMLElement {
+class CreateApp extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
@@ -82,8 +82,8 @@ class CreateAppPage extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── author-theme.css<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── author.css<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;├── images/<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── mui-logo.svg<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;├── assets/<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── create-app-logo.js<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│<br>
             &nbsp;&nbsp;&nbsp;&nbsp;├── components/<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── mui-container/<br>
@@ -94,6 +94,9 @@ class CreateAppPage extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── index.js<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── mui-link/<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── index.js<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;├── mui-icons/<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── mui-icon-sun.js<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── mui-icon-moon.js<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── mui-stack/<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── mui-vstack/<br>
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── index.js<br>
@@ -125,4 +128,4 @@ class CreateAppPage extends HTMLElement {
   }
 }
 
-customElements.define('create-app-page', CreateAppPage);
+customElements.define('create-app', CreateApp);

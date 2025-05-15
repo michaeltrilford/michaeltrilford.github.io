@@ -1,4 +1,4 @@
-class ThemesPage extends HTMLElement {
+class ThemeSetup extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
@@ -129,4 +129,4 @@ class ThemesPage extends HTMLElement {
   }
 }
 
-customElements.define('themes-page', ThemesPage);
+customElements.define('theme-setup', ThemeSetup);

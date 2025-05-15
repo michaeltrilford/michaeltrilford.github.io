@@ -136,12 +136,12 @@ class storyInput extends HTMLElement {
         description="An input component for capturing user text, styled for consistency across your UI."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-input/index.js"
         accessibility-items='
-          A label is required to support screen reader accessibility. It ensures that users understand the purpose of the input.;
-          When hide-label is set, the visible label is hidden, but an aria-label is generated from the label to maintain screen reader support.;
-          The label is linked to the input via the for and id attributes, enabling screen readers to associate the label text with the input field.;
-          If no id is provided by the user, one is automatically generated to ensure the label remains correctly associated with the input.;
-          The input includes keyboard-accessible focus styles, ensuring visible indication of focus for users navigating via keyboard.;
-          The disabled attribute is applied natively to the input, and is recognized by assistive technologies without additional handling.
+          A label is required for screen reader support to describe the input’s purpose.;
+          If hide-label is used, the label is visually hidden but accessible via aria-label.;
+          The label and input are linked via for and id. If no id is provided, one is generated.;
+          Clear focus styles are shown for keyboard users.;
+          The native disabled attribute is fully supported by assistive tech.;
+          Logs a console warning if no label is provided.
         '
       >
 

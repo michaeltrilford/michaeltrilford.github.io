@@ -29,6 +29,6 @@
 @media (min-width: 960px) {
   #app {
     grid-template-rows: 1fr;
-    grid-template-columns: 24rem 1fr;
+    grid-template-columns: 26rem 1fr;
   }
 }

@@ -35,12 +35,6 @@ class ThemeToggle extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {display: block;}
-
-        mui-switch {
-        --switch-track-background: var(--grey-300);
-        --switch-track-background-checked: var(--grey-300);
-        }
-
       </style>
 
       <mui-switch label="Dark mode" ${isDark ? 'checked' : ''}>

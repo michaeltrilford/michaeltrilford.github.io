@@ -35,10 +35,9 @@ export class AppContainer extends HTMLElement {
     const routes = {
       '/home': 'home-page',
 
-      '/ux-guides': 'guidelines-page',
-
-      '/template': 'themes-page',
-      '/create-app': 'create-app-page',
+      '/ux-guides': 'ux-guides',
+      '/theme-setup': 'theme-setup',
+      '/create-app': 'create-app',
 
       '/base-design-tokens': 'story-tokens-base',
       '/semantic-design-tokens': 'story-tokens-semantic',
@@ -55,7 +54,6 @@ export class AppContainer extends HTMLElement {
       '/link': 'story-link',
       '/alerts': 'story-alert',
       '/messages': 'story-message',
-      '/notification': 'story-notification',
       '/badge': 'story-badge',
       '/buttons': 'story-button',
       '/responsive': 'story-responsive',

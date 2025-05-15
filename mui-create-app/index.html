@@ -11,7 +11,7 @@ Project Root:
 │   ├── author-theme.css            # Default theme with light and dark mode support
 │   └── author.css                  # Custom styles for your website or app
 │
-├── images/
+├── assets/
 │   └── create-app-logo.js          # Logo asset
 │
 ├── components/                     # Custom web components
@@ -23,6 +23,9 @@ Project Root:
 │   │   └── index.js                # Web component script for the body
 │   ├── mui-link/
 │   │   └── index.js                # Web component script for the link
+│   ├── mui-icons/
+│   │   └── mui-icon-sun.js         # Optional icons for theme toggle
+│   │   └── mui-icon-moon.js        # Optional icons for theme toggle
 │   └── mui-stack/                  # Stack components for layout
 │       └── mui-vstack/
 │           └── index.js            # Vertical stack layout component
@@ -103,11 +106,23 @@ For dynamic page loading with JavaScript, refer to the storefront file.
     ></script>
 
     <!-- Create App Logo -->
-    <script src="images/create-app-logo.js" defer="true" type="module"></script>
+    <script src="assets/create-app-logo.js" defer="true" type="module"></script>
 
     <!-- Optional Theme Toggle -->
     <script
       src="js/create-app-theme-toggle/index.js"
+      defer="true"
+      type="module"
+    ></script>
+
+    <script
+      src="components/mui-icons/mui-icon-sun.js"
+      defer="true"
+      type="module"
+    ></script>
+
+    <script
+      src="components/mui-icons/mui-icon-moon.js"
       defer="true"
       type="module"
     ></script>

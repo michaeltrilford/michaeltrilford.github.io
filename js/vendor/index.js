@@ -85,7 +85,7 @@ const addHeadElements = ({
 const UtilArray = ['mui-utils/index.js'];
 const PartsArray = ['mui-parts/index.js'];
 const ThemeSwitcherArray = ['app-theme/index.js'];
-const AppCompArray = ['app-navbar/index.js'];
+const AppCompArray = ['app-navbar/index.js', 'app-container/index.js'];
 
 const SharedArray = [
   'shared/page-card/index.js',
@@ -101,6 +101,7 @@ const SharedArray = [
 ];
 
 const ImagesArray = [
+  'images/mui-logo.js',
   'images/github-mark.js',
   'images/figma-mark.js',
   'images/guides-mark.js',
@@ -113,7 +114,6 @@ const MuiCompArray = [
   'mui-accordion/accordion-group.js',
   'mui-alert/index.js',
   'mui-message/index.js',
-  'mui-notification/index.js',
   'mui-badge/index.js',
   'mui-button/index.js',
   'mui-button-group/index.js',
@@ -169,11 +169,14 @@ const RecipeArray = ['mui-table/recipe/table.js'];
 
 // New array for those pages
 const PageArray = [
-  'app-container/index.js',
-  'mui-home/page.js',
-  'mui-guidelines/page.js',
-  'mui-themes/page.js',
-  'mui-create-app/page.js',
+  'pages/home-page/index.js',
+  'pages/ux-guides/index.js',
+  'pages/theme-setup/index.js',
+  'pages/create-app/index.js',
+];
+
+// New array for those pages
+const StoryArray = [
   'mui-responsive/story.js',
   'mui-button/story.js',
   'mui-grid/story.js',
@@ -181,7 +184,6 @@ const PageArray = [
   'mui-accordion/story.js',
   'mui-alert/story.js',
   'mui-message/story.js',
-  'mui-notification/story.js',
   'mui-badge/story.js',
   'mui-button-group/story.js',
   'mui-card/story.js',
@@ -223,6 +225,7 @@ Promise.all([
   loadScripts(MuiCompArray),
   loadScripts(RecipeArray),
   loadScripts(PageArray),
+  loadScripts(StoryArray),
 ])
   .then(() => {
     addHeadElements({

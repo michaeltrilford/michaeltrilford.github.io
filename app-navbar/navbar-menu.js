@@ -3,7 +3,7 @@ class appNavbarMenu extends HTMLElement {
   constructor() {
     super();
 
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styles = `
 
@@ -27,7 +27,7 @@ class appNavbarMenu extends HTMLElement {
         text-align: left;
         opacity: 1;
         z-index: 100;
-        width: 24rem;
+        width: 26rem;
         height: 100%;
       }
       :host([desktop])::-webkit-scrollbar {
@@ -43,4 +43,4 @@ class appNavbarMenu extends HTMLElement {
   }
 }
 
-customElements.define("app-navbar-menu", appNavbarMenu);
+customElements.define('app-navbar-menu', appNavbarMenu);

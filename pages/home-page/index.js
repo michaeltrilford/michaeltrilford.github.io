@@ -19,14 +19,14 @@ class HomePage extends HTMLElement {
       :host { 
         display: flex; 
         width: 100%;
-        align-items: start;
-        padding-top: var(--space-800);
+        align-items: stretch;
+
       }
 
-      @media (min-height: 932px) {
+      @media (max-height: 932px) and (max-width: 430px) {
         :host { 
-          padding-top: var(--space-000);
-          align-items: normal;
+          padding-top: var(--space-800);
+          align-items: start;
         }
       }
 
@@ -92,7 +92,6 @@ class HomePage extends HTMLElement {
       /* Grid */
       .logo {
         width: 70%;
-        filter: var(--app-home-logo);
       }
 
       @media (min-width: 640px) {
@@ -202,7 +201,7 @@ class HomePage extends HTMLElement {
           <!-- Main content above -->
           <main slot="showAbove">
             <div class="logo-wrapper">
-              <img class="logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
+              <mui-logo color="var(--app-logo-color)"></mui-logo>
             </div>
 
             <mui-v-stack class="actions" space="var(--space-050)">
@@ -229,7 +228,7 @@ class HomePage extends HTMLElement {
           <main slot="showBelow">
             <mui-v-stack space="var(--space-600)" style="text-align: center;">
               <div class="logo-wrapper">
-                <img class="logo" alt="Mike's User Interface Logo" src="./images/mui-logo.svg" />
+                <mui-logo color="var(--app-logo-color)"></mui-logo>
               </div>
               <mui-v-stack space="var(--space-500)" style="max-width: 31rem; padding-left: var(--space-300); padding-right: var(--space-300);">
                 ${intro}

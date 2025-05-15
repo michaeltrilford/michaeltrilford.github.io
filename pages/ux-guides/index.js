@@ -1,4 +1,4 @@
-class GuidelinesPage extends HTMLElement {
+class UXGuides extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
@@ -78,4 +78,4 @@ class GuidelinesPage extends HTMLElement {
   }
 }
 
-customElements.define('guidelines-page', GuidelinesPage);
+customElements.define('ux-guides', UXGuides);
