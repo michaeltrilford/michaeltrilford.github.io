@@ -127,9 +127,6 @@ class CreateApp extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;&nbsp;└── logo192.png<br />
             &nbsp;&nbsp;&nbsp;&nbsp;│<br>
             &nbsp;&nbsp;&nbsp;&nbsp;└── index.html<br>
-            <br>
-            This file can be served statically or via a basic server.<br>
-            For dynamic page loading with JavaScript, refer to the storefront file.<br>
             <br />
             <br />
 
