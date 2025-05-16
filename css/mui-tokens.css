@@ -422,7 +422,7 @@ html[data-theme='dark'] {
   /* ================================================================================================== */
   /* Switch */
   --switch-track-background: var(--grey-600);
-  --switch-track-background-checked: var(--green-600);
+  --switch-track-background-checked: var(--green-500);
   --switch-thumb-bg: var(--black);
   --switch-icon: var(--icon-color-default);
   /* Icon */
