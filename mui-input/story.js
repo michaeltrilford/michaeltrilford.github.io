@@ -189,6 +189,48 @@ class storyInput extends HTMLElement {
           </mui-code>
         </story-card>
 
+        <story-card title="AddOn: Before">
+          <div slot="body">
+            <mui-input label="Before w/ AddOn">
+              <mui-addon slot="before"><mui-body>USD</mui-body></mui-addon>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-input label="Before w/ AddOn"&gt;
+            <br />
+
+            &nbsp;&nbsp;&lt;mui-addon slot="before"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-check&gt;&lt;mui-icon-check&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-addon&gt;
+            <br />            
+
+            &lt;mui-input&gt;
+            <br />
+          </mui-code>
+        </story-card>
+
+        <story-card title="AddOn: After">
+          <div slot="body">
+            <mui-input label="After w/ AddOn">
+              <mui-addon slot="after"><mui-body>USD</mui-body></mui-input></mui-addon>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-input label="After w/ AddOn"&gt;
+            <br />
+
+            &nbsp;&nbsp;&lt;mui-addon slot="after"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-check&gt;&lt;mui-icon-check&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-addon&gt;
+            <br />            
+
+            &lt;mui-input&gt;
+            <br />
+          </mui-code>
+        </story-card>
+
         <story-card title="Type: Text" description="The default input type for plain text.">
           <div slot="body">
             <mui-input label="Name" type="text" id="name-input" name="name" value="John Doe"></mui-input>

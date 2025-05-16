@@ -323,6 +323,8 @@ html[data-theme='light'] {
   /* Input */
   --input-background: var(--white);
   --input-background-disabled: var(--grey-100);
+  /* Addon */
+  --addon-background: var(--grey-100);
 }
 
 /* ==================================================================================================== */
@@ -337,7 +339,7 @@ html[data-theme='dark'] {
   --form-feedback-success-text-color: var(--green-400);
   --form-feedback-warning-text-color: var(--orange-400);
   --form-feedback-error-text-color: var(--red-400);
-  --form-feedback-default-border-color: var(--grey-200);
+  --form-feedback-default-border-color: var(--grey-600);
   --form-feedback-success-border-color: var(--green-400);
   --form-feedback-warning-border-color: var(--orange-400);
   --form-feedback-error-border-color: var(--red-400);
@@ -451,8 +453,10 @@ html[data-theme='dark'] {
   --table-background: var(--grey-800);
   --table-border: var(--border-color);
   /* Input */
-  --input-background: var(--grey-800);
+  --input-background: var(--grey-900);
   --input-background-disabled: var(--grey-900);
+  /* Addon */
+  --addon-background: var(--grey-1000);
 }
 
 /* ==================================================================================================== */

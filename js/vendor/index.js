@@ -163,6 +163,7 @@ const MuiCompArray = [
   'mui-slat/index.js',
   'mui-field/index.js',
   'mui-input/index.js',
+  'mui-addon/index.js',
   'mui-select/index.js',
   'mui-switch/index.js',
 ];

@@ -115,6 +115,17 @@ class muiInput extends HTMLElement {
     const variant = this.getAttribute('variant') || '';
     const variantClass = variant ? variant : '';
 
+    // ADD-ON
+    const hasBefore = this.querySelector('mui-addon[slot="before"]') !== null;
+    const hasAfter = this.querySelector('mui-addon[slot="after"]') !== null;
+    const inputClasses = [
+      variantClass,
+      hasBefore ? 'before' : '',
+      hasAfter ? 'after' : '',
+    ]
+      .filter(Boolean)
+      .join(' ');
+
     if (hideLabel && !label) {
       console.warn(
         "mui-input Accessibility warning: When using 'hide-label', please provide a 'label' attribute so an 'aria-label' can be generated for screen reader support.",
@@ -140,9 +151,15 @@ class muiInput extends HTMLElement {
           margin-bottom: var(--space-100);
           color: var(--text-color);
         }
+        .input-wrapper {
+          display: flex;
+          width: 100%;
+        }
+
         input {
           min-height: 4.4rem;
           width: 100%;
+          flex: 1;
           line-height: var(--text-line-height);
           padding: var(--space-200) var(--space-300);
           box-sizing: border-box;
@@ -155,6 +172,7 @@ class muiInput extends HTMLElement {
         }
         input:focus {
           outline: var(--outline-thick);
+          z-index: 1;
         }
         input:disabled {
           opacity: 0.4;
@@ -178,6 +196,15 @@ class muiInput extends HTMLElement {
           box-shadow: 0 0 0 2px var(--form-feedback-error-border-color);
         }
 
+        /* Add-On Support */
+        input.before {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        input.after {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
 
         .vh {
           position: absolute;
@@ -198,8 +225,10 @@ class muiInput extends HTMLElement {
             }">${label}</label>`
           : ''
       }
+    <div class="input-wrapper">
+      <slot name="before"></slot>
       <input
-        class="${variantClass}"
+        class="${inputClasses}"
         type="${type}"
         name="${name}"
         id="${id}"
@@ -208,6 +237,8 @@ class muiInput extends HTMLElement {
         ${disabled ? 'disabled aria-disabled="true"' : ''}
         ${ariaLabel}
       />
+      <slot name="after"></slot>
+    </div>
     `;
 
     this.shadowRoot.innerHTML = html;
