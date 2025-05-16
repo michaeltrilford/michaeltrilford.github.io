@@ -165,14 +165,17 @@ class muiInput extends HTMLElement {
         input.success {
           color: var(--form-feedback-success-text-color);
           border-color: var(--form-feedback-success-border-color);
+          box-shadow: 0 0 0 2px var(--form-feedback-success-border-color);
         }
         input.warning {
           color: var(--form-feedback-warning-text-color);
           border-color: var(--form-feedback-warning-border-color);
+          box-shadow: 0 0 0 2px var(--form-feedback-warning-border-color);
         }
         input.error {
           color: var(--form-feedback-error-text-color);
           border-color: var(--form-feedback-error-border-color);
+          box-shadow: 0 0 0 2px var(--form-feedback-error-border-color);
         }
 
 

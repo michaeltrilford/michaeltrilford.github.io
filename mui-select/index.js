@@ -159,14 +159,17 @@ class muiSelect extends HTMLElement {
         select.success {
           color: var(--form-feedback-success-text-color);
           border-color: var(--form-feedback-success-border-color);
+          box-shadow: 0 0 0 2px var(--form-feedback-success-border-color);
         }
         select.warning {
           color: var(--form-feedback-warning-text-color);
           border-color: var(--form-feedback-warning-border-color);
+          box-shadow: 0 0 0 2px var(--form-feedback-warning-border-color);
         }
         select.error {
           color: var(--form-feedback-error-text-color);
           border-color: var(--form-feedback-error-border-color);
+          box-shadow: 0 0 0 2px var(--form-feedback-error-border-color);
         }
 
         .vh {
