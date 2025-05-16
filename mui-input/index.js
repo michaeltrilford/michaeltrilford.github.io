@@ -9,6 +9,7 @@ class muiInput extends HTMLElement {
       'label',
       'disabled',
       'hide-label',
+      'variant',
     ];
   }
 
@@ -111,6 +112,9 @@ class muiInput extends HTMLElement {
     const disabled = this.hasAttribute('disabled');
     const ariaLabel = hideLabel && label ? `aria-label="${label}"` : '';
 
+    const variant = this.getAttribute('variant') || '';
+    const variantClass = variant ? variant : '';
+
     if (hideLabel && !label) {
       console.warn(
         "mui-input Accessibility warning: When using 'hide-label', please provide a 'label' attribute so an 'aria-label' can be generated for screen reader support.",
@@ -130,33 +134,48 @@ class muiInput extends HTMLElement {
           width: 100%;
         }
         label {
+          display: block;
           font-size: var(--text-font-size);
           font-weight: var(--font-weight-medium);
           margin-bottom: var(--space-100);
           color: var(--text-color);
-          display: block;
         }
         input {
           min-height: 4.4rem;
+          width: 100%;
           line-height: var(--text-line-height);
           padding: var(--space-200) var(--space-300);
+          box-sizing: border-box;
           font-size: var(--text-font-size);
-          border: var(--border-thin);
-          border-color: var(--grey-300);
           border-radius: var(--radius-100);
+          border: var(--border-thin);
+          border-color: var(--form-feedback-default-border-color);
           color: var(--text-color);
           background: var(--input-background);
-          width: 100%;
-          box-sizing: border-box;
         }
         input:focus {
           outline: var(--outline-thick);
         }
         input:disabled {
           opacity: 0.4;
-          background-color: var(--input-background-disabled);
           cursor: not-allowed;
+          background-color: var(--input-background-disabled);
         }
+
+        input.success {
+          color: var(--form-feedback-success-text-color);
+          border-color: var(--form-feedback-success-border-color);
+        }
+        input.warning {
+          color: var(--form-feedback-warning-text-color);
+          border-color: var(--form-feedback-warning-border-color);
+        }
+        input.error {
+          color: var(--form-feedback-error-text-color);
+          border-color: var(--form-feedback-error-border-color);
+        }
+
+
         .vh {
           position: absolute;
           width: 1px;
@@ -177,6 +196,7 @@ class muiInput extends HTMLElement {
           : ''
       }
       <input
+        class="${variantClass}"
         type="${type}"
         name="${name}"
         id="${id}"

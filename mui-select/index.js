@@ -8,6 +8,7 @@ class muiSelect extends HTMLElement {
       'options',
       'disabled',
       'hide-label',
+      'variant',
     ];
   }
 
@@ -79,6 +80,9 @@ class muiSelect extends HTMLElement {
     const optionsAttr = this.getAttribute('options') || '[]';
     const ariaLabel = this.getAttribute('aria-label') || '';
 
+    const variant = this.getAttribute('variant') || '';
+    const variantClass = variant ? variant : '';
+
     // Accessibility warning for mui-select: 'hide-label' is set but no 'label' is provided
     if (hideLabel && !label) {
       console.warn(
@@ -131,7 +135,7 @@ class muiSelect extends HTMLElement {
           padding: var(--space-200) var(--space-300);
           font-size: var(--text-font-size);
           border: var(--border-thin);
-          border-color: var(--grey-300);
+          border-color: var(--form-feedback-default-border-color);
           border-radius: var(--radius-100);
           color: var(--text-color);
           background: var(--input-background);
@@ -151,6 +155,20 @@ class muiSelect extends HTMLElement {
           background-color: var(--input-background-disabled);
           cursor: not-allowed;
         }
+
+        select.success {
+          color: var(--form-feedback-success-text-color);
+          border-color: var(--form-feedback-success-border-color);
+        }
+        select.warning {
+          color: var(--form-feedback-warning-text-color);
+          border-color: var(--form-feedback-warning-border-color);
+        }
+        select.error {
+          color: var(--form-feedback-error-text-color);
+          border-color: var(--form-feedback-error-border-color);
+        }
+
         .vh {
           position: absolute;
           width: 1px;
@@ -170,7 +188,7 @@ class muiSelect extends HTMLElement {
             }">${label}</label>`
           : ''
       }
-    <select part="${this.partMap ||
+    <select class="${variantClass}" part="${this.partMap ||
       ''}" name="${name}" id="${id}" ${ariaLabelAttr} ${
       disabled ? 'disabled' : ''
     } >

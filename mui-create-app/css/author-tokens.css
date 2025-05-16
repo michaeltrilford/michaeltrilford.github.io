@@ -179,6 +179,15 @@ html[data-theme='light'] {
   /* ================================================================================================== */
   /* Semantic                                                                                           */
   /* ================================================================================================== */
+  /* Form Feedback */
+  --form-feedback-default-text-color: var(--grey-500);
+  --form-feedback-success-text-color: var(--green-700);
+  --form-feedback-warning-text-color: var(--orange-700);
+  --form-feedback-error-text-color: var(--red-700);
+  --form-feedback-default-border-color: var(--grey-300);
+  --form-feedback-success-border-color: var(--green-600);
+  --form-feedback-warning-border-color: var(--orange-600);
+  --form-feedback-error-border-color: var(--red-600);
   /* Feedback - Border (Alerts & Messages) */
   --feedback-plain-border-color: var(--black-opacity-50);
   --feedback-neutral-border-color: var(--grey-600);
@@ -272,7 +281,6 @@ html[data-theme='light'] {
   --badge-background-attention: var(--red-600);
   /* Heading */
   --heading-text-color: var(--grey-1000);
-  --border-color: var(--grey-200);
   /* Link */
   --link-text-color-default: var(--grey-900);
   --link-text-color-default-hover: var(--grey-1000);
@@ -301,6 +309,15 @@ html[data-theme='dark'] {
   /* ================================================================================================== */
   /* Semantic                                                                                           */
   /* ================================================================================================== */
+  /* Form Feedback */
+  --form-feedback-default-text-color: var(--grey-500);
+  --form-feedback-success-text-color: var(--green-400);
+  --form-feedback-warning-text-color: var(--orange-400);
+  --form-feedback-error-text-color: var(--red-400);
+  --form-feedback-default-border-color: var(--grey-200);
+  --form-feedback-success-border-color: var(--green-400);
+  --form-feedback-warning-border-color: var(--orange-400);
+  --form-feedback-error-border-color: var(--red-400);
   /* Feedback - Border (Alerts & Messages) */
   --feedback-plain-border-color: var(--white-opacity-50);
   --feedback-neutral-border-color: var(--grey-400);
@@ -374,7 +391,7 @@ html[data-theme='dark'] {
   /* ================================================================================================== */
   --outline-color: var(--blue-300);
   --text-color: var(--grey-200);
-  --border-color: var(--grey-600);
+  --border-color: var(--grey-700);
   /* ================================================================================================== */
   /* Components                                                                                         */
   /* ================================================================================================== */
@@ -394,7 +411,6 @@ html[data-theme='dark'] {
   --badge-background-attention: var(--red-400);
   /* Heading */
   --heading-text-color: var(--grey-100);
-  --border-color: var(--grey-700);
   /* Link */
   --link-text-color-default: var(--grey-200);
   --link-text-color-default-hover: var(--grey-100);
@@ -441,7 +457,6 @@ html[data-theme='dark'] {
   /* Contextual                                                                                         */
   /* ================================================================================================== */
   /* Text */
-  --text-color: var(--grey-900);
   --text-line-height-xs: var(--line-height-25);
   --text-line-height-s: var(--line-height-50);
   --text-line-height-m: var(--line-height-100);
