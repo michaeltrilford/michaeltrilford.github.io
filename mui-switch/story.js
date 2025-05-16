@@ -87,7 +87,8 @@ class storySwitch extends HTMLElement {
         const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
 
         return `
-            <mui-accordion-block 
+            <mui-accordion-block
+              style="position: relative; z-index: 1;" 
               size="x-small" 
               heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
               ${isLastChild}>

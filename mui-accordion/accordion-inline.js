@@ -1,12 +1,12 @@
 class muiAccordionInline extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    const headingText = this.getAttribute("heading") || "Heading...";
-    const headingLevel = this.getAttribute("level") || "3";
+    const headingText = this.getAttribute('heading') || 'Heading...';
+    const headingLevel = this.getAttribute('level') || '3';
 
     let html = `
     <style>
@@ -78,13 +78,13 @@ class muiAccordionInline extends HTMLElement {
 
     this.shadowRoot.innerHTML = html;
 
-    this.summaryEl = this.shadowRoot.querySelector(".accordion-summary");
-    this.detailEl = this.shadowRoot.querySelector(".accordion-detail");
-    this.chevronEl = this.shadowRoot.querySelector("mui-icon-right-chevron");
+    this.summaryEl = this.shadowRoot.querySelector('.accordion-summary');
+    this.detailEl = this.shadowRoot.querySelector('.accordion-detail');
+    this.chevronEl = this.shadowRoot.querySelector('mui-icon-right-chevron');
 
-    this.summaryEl.addEventListener("click", this.toggleAccordion.bind(this));
-    this.summaryEl.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
+    this.summaryEl.addEventListener('click', this.toggleAccordion.bind(this));
+    this.summaryEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         this.toggleAccordion();
       }
@@ -92,11 +92,11 @@ class muiAccordionInline extends HTMLElement {
   }
 
   toggleAccordion() {
-    const isOpen = this.detailEl.hasAttribute("open");
-    this.detailEl.toggleAttribute("open");
-    this.chevronEl.toggleAttribute("open");
-    this.summaryEl.setAttribute("aria-expanded", String(!isOpen));
+    const isOpen = this.detailEl.hasAttribute('open');
+    this.detailEl.toggleAttribute('open');
+    this.chevronEl.toggleAttribute('open');
+    this.summaryEl.setAttribute('aria-expanded', String(!isOpen));
   }
 }
 
-customElements.define("mui-accordion-inline", muiAccordionInline);
+customElements.define('mui-accordion-inline', muiAccordionInline);

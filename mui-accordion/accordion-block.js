@@ -2,16 +2,16 @@
 class muiAccordionBlock extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
     this.accordionId = `accordion-detail-${Math.random()
       .toString(36)
       .substring(2, 9)}`;
   }
 
   connectedCallback() {
-    const headingText = this.getAttribute("heading") || "Heading...";
-    const size = this.getAttribute("size") || "medium";
-    const headingLevel = this.getAttribute("level") || "3";
+    const headingText = this.getAttribute('heading') || 'Heading...';
+    const size = this.getAttribute('size') || 'medium';
+    const headingLevel = this.getAttribute('level') || '3';
 
     let html = `
     <style>
@@ -130,14 +130,14 @@ class muiAccordionBlock extends HTMLElement {
 
     this.shadowRoot.innerHTML = html;
 
-    this.summary = this.shadowRoot.querySelector(".accordion-summary");
-    this.detail = this.shadowRoot.querySelector(".accordion-detail");
-    this.chevron = this.shadowRoot.querySelector("mui-icon-right-chevron");
+    this.summary = this.shadowRoot.querySelector('.accordion-summary');
+    this.detail = this.shadowRoot.querySelector('.accordion-detail');
+    this.chevron = this.shadowRoot.querySelector('mui-icon-right-chevron');
 
-    this.summary.addEventListener("click", () => this.toggleAccordion());
+    this.summary.addEventListener('click', () => this.toggleAccordion());
 
-    this.summary.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") {
+    this.summary.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         this.toggleAccordion();
       }
@@ -145,23 +145,23 @@ class muiAccordionBlock extends HTMLElement {
   }
 
   toggleAccordion() {
-    const isOpen = this.detail.hasAttribute("open");
+    const isOpen = this.detail.hasAttribute('open');
     this.setOpen(!isOpen);
   }
 
   setOpen(state) {
     if (state) {
-      this.detail.setAttribute("open", "");
-      this.chevron.setAttribute("open", "");
-      this.summary.setAttribute("aria-expanded", "true");
+      this.detail.setAttribute('open', '');
+      this.chevron.setAttribute('open', '');
+      this.summary.setAttribute('aria-expanded', 'true');
 
       this.dispatchEvent(
-        new CustomEvent("accordion-opened", { bubbles: true, composed: true })
+        new CustomEvent('accordion-opened', { bubbles: true, composed: true }),
       );
     } else {
-      this.detail.removeAttribute("open");
-      this.chevron.removeAttribute("open");
-      this.summary.setAttribute("aria-expanded", "false");
+      this.detail.removeAttribute('open');
+      this.chevron.removeAttribute('open');
+      this.summary.setAttribute('aria-expanded', 'false');
     }
   }
 
@@ -170,4 +170,4 @@ class muiAccordionBlock extends HTMLElement {
   }
 }
 
-customElements.define("mui-accordion-block", muiAccordionBlock);
+customElements.define('mui-accordion-block', muiAccordionBlock);
