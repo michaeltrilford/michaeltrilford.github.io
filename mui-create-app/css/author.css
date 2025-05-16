@@ -4,12 +4,12 @@
 
 html[data-theme='light'] {
   --app-background: var(--grey-100);
-  --logo-color: var(--black);
+  --logo-color: var(--grey-800);
 }
 
 html[data-theme='dark'] {
   --app-background: var(--grey-1000);
-  --logo-color: var(--white);
+  --logo-color: var(--grey-300);
 }
 
 body {
