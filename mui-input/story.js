@@ -200,7 +200,7 @@ class storyInput extends HTMLElement {
 
             &nbsp;&nbsp;&lt;mui-addon slot="before"&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-check&gt;&lt;mui-icon-check&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-body&gt;USD&lt;mui-body&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-addon&gt;
             <br />            
@@ -221,7 +221,7 @@ class storyInput extends HTMLElement {
 
             &nbsp;&nbsp;&lt;mui-addon slot="after"&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-check&gt;&lt;mui-icon-check&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-body&gt;USD&lt;mui-body&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-addon&gt;
             <br />            
@@ -231,11 +231,11 @@ class storyInput extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Select: After" usage="Avoid adding a mui-select in the 'before' slot as it impacts keyboard navigation.">
+        <story-card title="Select: After">
           <div slot="body">
             <mui-input label="After w/ Select">
               <mui-select
-                style="width: 200px;"
+                style="width: 100px;"
                 slot="after"
                 label="Brand"
                 hide-label
