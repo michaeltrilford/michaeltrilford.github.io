@@ -231,6 +231,22 @@ class storyInput extends HTMLElement {
           </mui-code>
         </story-card>
 
+        <story-card title="Select: After" usage="Avoid adding a mui-select in the 'before' slot as it impacts keyboard navigation.">
+          <div slot="body">
+            <mui-input label="After w/ Select">
+              <mui-select
+                style="width: 200px;"
+                slot="after"
+                label="Brand"
+                hide-label
+                  options='[
+                  {"value": "spacious", "label": "Spacious"},
+                  {"value": "compact", "label": "Compact"}
+                ]'>
+              </mui-select>
+          </div>
+        </story-card>
+
         <story-card title="Type: Text" description="The default input type for plain text.">
           <div slot="body">
             <mui-input label="Name" type="text" id="name-input" name="name" value="John Doe"></mui-input>

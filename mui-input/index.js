@@ -116,8 +116,8 @@ class muiInput extends HTMLElement {
     const variantClass = variant ? variant : '';
 
     // ADD-ON
-    const hasBefore = this.querySelector('mui-addon[slot="before"]') !== null;
-    const hasAfter = this.querySelector('mui-addon[slot="after"]') !== null;
+    const hasBefore = this.querySelector('[slot="before"]') !== null;
+    const hasAfter = this.querySelector('[slot="after"]') !== null;
     const inputClasses = [
       variantClass,
       hasBefore ? 'before' : '',
@@ -159,7 +159,6 @@ class muiInput extends HTMLElement {
         input {
           min-height: 4.4rem;
           width: 100%;
-          flex: 1;
           line-height: var(--text-line-height);
           padding: var(--space-200) var(--space-300);
           box-sizing: border-box;
@@ -172,7 +171,7 @@ class muiInput extends HTMLElement {
         }
         input:focus {
           outline: var(--outline-thick);
-          z-index: 1;
+          z-index: 2;
         }
         input:disabled {
           opacity: 0.4;

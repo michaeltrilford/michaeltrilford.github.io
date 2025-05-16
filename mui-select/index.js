@@ -172,6 +172,24 @@ class muiSelect extends HTMLElement {
           box-shadow: 0 0 0 2px var(--form-feedback-error-border-color);
         }
 
+        /* Slotted within Input */
+        :host([slot="before"]) select {
+          border-right: none;
+          border-top-right-radius: var(--radius-000);
+          border-bottom-right-radius: var(--radius-000);
+        }
+        :host([slot="after"]) select {
+          border-left: none;
+          border-top-left-radius: var(--radius-000);
+          border-bottom-left-radius: var(--radius-000);
+        }
+        :host([slot="before"]) {
+          z-index: 0;
+        }
+        :host([slot="after"]) {
+          z-index: 1;
+        }
+
         .vh {
           position: absolute;
           width: 1px;
