@@ -11,7 +11,7 @@ class storyTokensComponents extends HTMLElement {
 
       <story-template 
         title="Components"
-        description="Contextual tokens scoped to a specific UI component and its states."
+        description="Tokens mapped to specific UI components and their states, bridging global tokens with practical implementation for consistency and scalability."
         figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=3-527&t=fSFYVey9aCoE5oQa-1"
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/css/mui-tokens.css"
       >
