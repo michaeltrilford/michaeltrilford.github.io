@@ -13,7 +13,7 @@
 /*   Component theme alignment across storefront                                   */
 /* =============================================================================== */
 html[data-theme='light'] {
-  --app-logo-color: var(--black);
+  --app-logo-color: var(--grey-800);
   --app-meta-theme-color: var(--mui-brand-300);
   --app-skeleton: var(--mui-brand-300);
   --app-background: var(--mui-brand-300);
@@ -68,7 +68,7 @@ html[data-theme='dark'] {
 /*   Component theme alignment across storefront                                   */
 /* =============================================================================== */
 html[data-brand='jal'][data-theme='light'] {
-  --app-logo-color: var(--jal-red-600);
+  --app-logo-color: var(--jal-red-400);
   --app-meta-theme-color: var(--jal-grey-200);
   --app-skeleton: var(--jal-grey-200);
   --app-background: var(--jal-grey-200);
@@ -108,7 +108,7 @@ html[data-brand='jal'][data-theme='dark'] {
 /*   Component theme alignment across storefront                                   */
 /* =============================================================================== */
 html[data-brand='ana'][data-theme='light'] {
-  --app-logo-color: var(--ana-blue-600);
+  --app-logo-color: var(--ana-blue-500);
   --app-meta-theme-color: var(--ana-grey-200);
   --app-skeleton: var(--ana-grey-200);
   --app-background: var(--ana-grey-200);
@@ -188,7 +188,7 @@ html[data-brand='neon'][data-theme='dark'] {
 /*   Component theme alignment across storefront                                   */
 /* =============================================================================== */
 html[data-brand='mono'][data-theme='light'] {
-  --app-logo-color: var(--mono-black);
+  --app-logo-color: var(--mono-grey-700);
   --app-meta-theme-color: var(--mono-black);
   --app-skeleton: var(--mono-black);
   --app-background: var(--mono-grey-200);
@@ -207,7 +207,7 @@ html[data-brand='mono'][data-theme='light'] {
 }
 
 html[data-brand='mono'][data-theme='dark'] {
-  --app-logo-color: var(--mono-white);
+  --app-logo-color: var(--mono-grey-100);
   --app-meta-theme-color: var(--mono-black);
   --app-skeleton: var(--mono-black);
   --app-background: var(--mono-grey-900);
