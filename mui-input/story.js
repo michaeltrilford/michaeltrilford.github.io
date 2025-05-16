@@ -240,8 +240,8 @@ class storyInput extends HTMLElement {
                 label="Brand"
                 hide-label
                   options='[
-                  {"value": "spacious", "label": "Spacious"},
-                  {"value": "compact", "label": "Compact"}
+                  {"value": "jpy", "label": "JPY"},
+                  {"value": "usd", "label": "USD"}
                 ]'>
               </mui-select>
           </div>
