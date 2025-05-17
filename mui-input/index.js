@@ -155,7 +155,6 @@ class muiInput extends HTMLElement {
           display: flex;
           width: 100%;
         }
-
         input {
           min-height: 4.4rem;
           width: 100%;
@@ -171,7 +170,6 @@ class muiInput extends HTMLElement {
         }
         input:focus {
           outline: var(--outline-thick);
-          z-index: 2;
         }
         input:disabled {
           opacity: 0.4;
@@ -194,17 +192,6 @@ class muiInput extends HTMLElement {
           border-color: var(--form-feedback-error-border-color);
           box-shadow: 0 0 0 2px var(--form-feedback-error-border-color);
         }
-
-        /* Add-On Support */
-        input.before {
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
-        input.after {
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-        }
-
         .vh {
           position: absolute;
           width: 1px;
@@ -216,6 +203,53 @@ class muiInput extends HTMLElement {
           white-space: nowrap;
           border: 0;
         }
+
+        /* ========================================================================== */
+        /* STYLES FOR BEFORE & AFTER (ADDON & SELECT)                                 */
+        /* ========================================================================== */
+
+           input.before { border-top-left-radius: 0; border-bottom-left-radius: 0;}
+           input.after { border-top-right-radius: 0; border-bottom-right-radius: 0;}
+
+        /* ========================================================================== */
+        /* LOGIC FOR FOCUS ORDER of BEFORE, AFTER & INPUT                             */
+        /* The goal is to not exceed 1 order to avoid potential UI bugs               */
+        /* when input and the before/after feature is used in compositions.           */
+        /* ========================================================================== */
+
+        /* ========================================================================== */
+        /* 1. BEFORE: Slotted items are Z-INDEX AUTO by default                       */
+        /* ========================================================================== */
+
+        /* If slotted item is BEFORE & FOCUSED then sit ABOVE INPUT                   */
+
+        /* ========================================================================== */
+        /* 2. INPUT: Slotted items are Z-INDEX AUTO by default                        */
+        /* ========================================================================== */
+
+        /* If INPUT is FOCUSED then sit ABOVE BEFORE & AFTER ITEMS                    */
+
+        /* ========================================================================== */
+        /* 3. AFTER: Slotted items are Z-INDEX AUTO by default                        */
+        /* ========================================================================== */
+
+        /* If slotted item is AFTER & FOCUSED then sit ABOVE INPUT                    */
+
+        /* ========================================================================== */
+        /* 4. FINAL CONCLUSION ON APPROACH                                            */
+        /* ========================================================================== */
+        /* Currently only mui-select is slotted, this might be the only               */
+        /* use-case, but for now we will use '*' to ensure any element that           */
+        /* is focusable will be addressed.                                            */
+        /* ========================================================================== */
+
+           slot[name="before"]::slotted(*:focus),
+           input:focus,
+           slot[name="after"]::slotted(*:focus) { z-index: 1; }
+
+        /* ========================================================================== */
+        
+
       </style>
       ${
         label

@@ -155,7 +155,6 @@ class muiSelect extends HTMLElement {
           background-color: var(--input-background-disabled);
           cursor: not-allowed;
         }
-
         select.success {
           color: var(--form-feedback-success-text-color);
           border-color: var(--form-feedback-success-border-color);
@@ -171,25 +170,6 @@ class muiSelect extends HTMLElement {
           border-color: var(--form-feedback-error-border-color);
           box-shadow: 0 0 0 2px var(--form-feedback-error-border-color);
         }
-
-        /* Slotted within Input */
-        :host([slot="before"]) select {
-          border-right: none;
-          border-top-right-radius: var(--radius-000);
-          border-bottom-right-radius: var(--radius-000);
-        }
-        :host([slot="after"]) select {
-          border-left: none;
-          border-top-left-radius: var(--radius-000);
-          border-bottom-left-radius: var(--radius-000);
-        }
-        :host([slot="before"]) {
-          z-index: 0;
-        }
-        :host([slot="after"]) {
-          z-index: 1;
-        }
-
         .vh {
           position: absolute;
           width: 1px;
@@ -201,6 +181,34 @@ class muiSelect extends HTMLElement {
           white-space: nowrap;
           border: 0;
         }
+
+        /* ========================================================================== */
+        /* STYLE ADJUSTMENTS WHEN SELECT IS SLOTTED WITHIN INPUT                      */
+        /* Related styles unique to this usage is found in the mui-input/index.js     */
+        /* ========================================================================== */
+
+        /* ========================================================================== */
+        /* BEFORE: When a SELECT has slot="before" applied to host for INPUT usage    */
+        /* ========================================================================== */
+
+            :host([slot="before"]) select {
+              border-right: none;
+              border-top-right-radius: var(--radius-000);
+              border-bottom-right-radius: var(--radius-000);
+            }
+
+        /* ========================================================================== */
+        /* AFTER: When a SELECT has slot="after" applied to host for INPUT usage      */
+        /* ========================================================================== */
+
+            :host([slot="after"]) select {
+              border-left: none;
+              border-top-left-radius: var(--radius-000);
+              border-bottom-left-radius: var(--radius-000);
+            }
+
+        /* ========================================================================== */
+
       </style>
       ${
         label

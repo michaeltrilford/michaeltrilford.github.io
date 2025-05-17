@@ -4,26 +4,6 @@ class storySwitch extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
-
-      mui-link.custom-wc::part(color) {
-        color: var(--red-600);
-      }
-
-      mui-link.custom-wc::part(color):hover {
-        color: var(--red-800);
-      }
-
-      mui-link.custom-wc::part(font-weight) {
-        font-weight: var(--font-weight-700);
-      }
-
-      mui-link.custom-wc::part(text-decoration) {
-        text-decoration: none;
-      }
-      mui-link.custom-wc::part(text-decoration):hover {
-        text-decoration: underline;
-      }
-
     `;
 
     const propItems = [

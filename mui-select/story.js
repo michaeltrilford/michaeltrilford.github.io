@@ -4,26 +4,6 @@ class storySelect extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
-
-      mui-link.custom-wc::part(color) {
-        color: var(--red-600);
-      }
-
-      mui-link.custom-wc::part(color):hover {
-        color: var(--red-800);
-      }
-
-      mui-link.custom-wc::part(font-weight) {
-        font-weight: var(--font-weight-700);
-      }
-
-      mui-link.custom-wc::part(text-decoration) {
-        text-decoration: none;
-      }
-      mui-link.custom-wc::part(text-decoration):hover {
-        text-decoration: underline;
-      }
-
     `;
 
     const propItems = [
@@ -284,6 +264,68 @@ class storySelect extends HTMLElement {
             &lt;/mui-select&gt;
 
           </mui-code>
+        </story-card>
+
+        <story-card title="Before: Select">
+          <div slot="body">
+            <mui-input type="search" label="Search">
+              <mui-select
+                style="width: 110px;"
+                slot="before"
+                label="Brand"
+                hide-label
+                  options='[
+                  {"value": "all", "label": "All"},
+                  {"value": "images", "label": "Images"},
+                  {"value": "video", "label": "Video"}
+                ]'>
+              </mui-select>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-input type="search" label="Search"&gt;<br>
+            &nbsp;&nbsp;&lt;mui-select<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;slot="before"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;label="Brand"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;hide-label<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;style="width: 110px;"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;options='[<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ "value": "all", "label": "All" },<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ "value": "images", "label": "Images" },<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ "value": "video", "label": "Video" }<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;]'&gt;<br>
+            &nbsp;&nbsp;&lt;/mui-select&gt;<br>
+            &lt;/mui-input&gt;
+          </<mui-code>
+        </story-card>
+
+        <story-card title="After: Select">
+          <div slot="body">
+            <mui-input type="number" label="Amount to transfer">
+              <mui-select
+                style="width: 100px;"
+                slot="after"
+                label="Brand"
+                hide-label
+                  options='[
+                  {"value": "jpy", "label": "JPY"},
+                  {"value": "usd", "label": "USD"}
+                ]'>
+              </mui-select>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-input type="number" label="Amount to transfer"&gt;<br>
+            &nbsp;&nbsp;&lt;mui-select<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;slot="after"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;label="Brand"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;hide-label<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;style="width: 100px;"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;options='[<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ "value": "jpy", "label": "JPY" },<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ "value": "usd", "label": "USD" }<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;]'&gt;<br>
+            &nbsp;&nbsp;&lt;/mui-select&gt;<br>
+            &lt;/mui-input&gt;
+          </<mui-code>
         </story-card>
 
 

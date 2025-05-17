@@ -101,7 +101,8 @@ class appNavbar extends HTMLElement {
 
     const Components = `
       <app-navbar-group id="web-components" groupname="Web Components">
-        <app-navbar-link link="#/field" title="Field"></app-navbar-link>    
+        <app-navbar-link link="#/field" title="Field"></app-navbar-link> 
+        <app-navbar-link link="#/addon" title="Add On"></app-navbar-link>   
         <app-navbar-link link="#/input" title="Input"></app-navbar-link>  
         <app-navbar-link link="#/select" title="Select"></app-navbar-link>  
         <app-navbar-link link="#/switch" title="Switch"></app-navbar-link>  

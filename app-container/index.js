@@ -49,6 +49,7 @@ export class AppContainer extends HTMLElement {
       '/visual-part-selectors': 'story-parts-visual',
 
       '/field': 'story-field',
+      '/addon': 'story-addon',
       '/input': 'story-input',
       '/select': 'story-select',
       '/switch': 'story-switch',

@@ -197,6 +197,7 @@ const StoryArray = [
   'mui-link/story.js',
   'mui-field/story.js',
   'mui-input/story.js',
+  'mui-addon/story.js',
   'mui-select/story.js',
   'mui-switch/story.js',
   'mui-list/story.js',
