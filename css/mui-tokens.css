@@ -325,6 +325,13 @@ html[data-theme='light'] {
   --input-background-disabled: var(--grey-100);
   /* Addon */
   --addon-background: var(--grey-100);
+  /* Tabs */
+  --tab-background: var(--grey-100);
+  --tab-background-active: var(--white);
+  --tab-text-color: var(--grey-700);
+  --tab-icon: var(--grey-700);
+  --tab-icon-active: var(--black);
+  --tab-text-color-active: var(--black);
 }
 
 /* ==================================================================================================== */
@@ -457,6 +464,13 @@ html[data-theme='dark'] {
   --input-background-disabled: var(--grey-900);
   /* Addon */
   --addon-background: var(--grey-1000);
+  /* Tabs */
+  --tab-background: var(--grey-1000);
+  --tab-background-active: var(--black);
+  --tab-text-color: var(--grey-300);
+  --tab-icon: var(--grey-300);
+  --tab-icon-active: var(--white);
+  --tab-text-color-active: var(--white);
 }
 
 /* ==================================================================================================== */

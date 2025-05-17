@@ -61,7 +61,6 @@ class storyTabBar extends HTMLElement {
     const tabData = [
       { label: 'Message', icon: 'mui-icon-message', active: true },
       { label: 'Notification', icon: 'mui-icon-notification' },
-      { label: 'Accessibility', icon: 'mui-icon-accessibility' },
     ];
 
     const tabItemsHTML = tabData
@@ -71,13 +70,7 @@ class storyTabBar extends HTMLElement {
       })
       .join('');
 
-    const tabDataFluid = [
-      { label: 'Message', icon: 'mui-icon-message', active: true },
-      { label: 'Notification', icon: 'mui-icon-notification' },
-      { label: 'Accessibility', icon: 'mui-icon-accessibility' },
-    ];
-
-    const tabItemsHTMLFluid = tabDataFluid
+    const tabItemsHTMLFluid = tabData
       .map(({ label, icon, active }) => {
         const activeAttr = active ? ' active' : '';
         return `<tab-item icon="${icon}"${activeAttr}>${label}</tab-item>`;
@@ -109,16 +102,30 @@ class storyTabBar extends HTMLElement {
 
         <story-card title="Default">
           <tab-bar slot="body">
+            <tab-item active>Item 1</tab-item>
+            <tab-item>Item 2</tab-item>
+          </tab-bar>
+          <mui-code slot="footer">
+            &lt;tab-bar&gt;
+            <br />
+            &nbsp;&nbsp;&lt;tab-bar active&gt;Item One&lt;/tab-bar&gt;
+            <br />
+            &nbsp;&nbsp;&lt;tab-bar&gt;Item two&lt;/tab-bar&gt;
+            <br />
+            &lt;/tab-bar&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Default w/ Icon">
+          <tab-bar slot="body">
             ${tabItemsHTML}
           </tab-bar>
           <mui-code slot="footer">
             const tabData = [
             <br />
-            &nbsp;&nbsp;{ label: 'Done', icon: 'mui-icon-check', active: true },
+            &nbsp;&nbsp;{ label: 'Message', icon: 'mui-icon-message', active: true },
             <br />
-            &nbsp;&nbsp;{ label: 'Settings', icon: 'mui-icon-settings' },
-            <br />
-            &nbsp;&nbsp;{ label: 'Account', icon: 'mui-icon-person' },
+            &nbsp;&nbsp;{ label: 'Notification', icon: 'mui-icon-notification' },
             <br />
             ];
             <br />
@@ -145,15 +152,34 @@ class storyTabBar extends HTMLElement {
         </story-card>
 
         <story-card title="Full width">
-
-
-          <tab-bar style="width: 100%;" slot="body">
+          <tab-bar full-width slot="body">
             ${tabItemsHTMLFluid}
           </tab-bar>
 
           <mui-code slot="footer">
+            const tabData = [
             <br />
-            &lt;tab-bar style="width: 100%;"&gt;
+            &nbsp;&nbsp;{ label: 'Message', icon: 'mui-icon-message', active: true },
+            <br />
+            &nbsp;&nbsp;{ label: 'Notification', icon: 'mui-icon-notification' },
+            <br />
+            ];
+            <br />
+            <br />
+            const tabItemsHTML = tabData
+            <br />
+            &nbsp;&nbsp;.map(({ label, icon, active }) => {
+              <br />
+            &nbsp;&nbsp;const activeAttr = active ? ' active' : '';
+            <br />
+            &nbsp;&nbsp;return &#96;&lt;tab-item icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/tab-item&gt;&#96;;
+            <br />
+            })
+            <br />
+            .join('');
+            <br />
+            <br />
+            &lt;tab-bar full-width&gt;
             <br />
             &nbsp;&#36;{tabItemsHTML}
             <br />
@@ -167,29 +193,29 @@ class storyTabBar extends HTMLElement {
     `;
 
     setTimeout(() => {
-      const tabBar = this.shadowRoot.querySelector('tab-bar');
+      const tabBars = Array.from(this.shadowRoot.querySelectorAll('tab-bar'));
 
-      if (!tabBar) return;
+      tabBars.forEach((tabBar) => {
+        function updateActiveTab(clickedTab) {
+          const allTabs = Array.from(tabBar.querySelectorAll('tab-item'));
+          allTabs.forEach((tab) => tab.removeAttribute('active'));
+          clickedTab.setAttribute('active', '');
+        }
 
-      function updateActiveTab(clickedTab) {
-        const allTabs = Array.from(tabBar.querySelectorAll('tab-item'));
-        allTabs.forEach((tab) => tab.removeAttribute('active'));
-        clickedTab.setAttribute('active', '');
-      }
+        tabBar.addEventListener('click', (e) => {
+          const clicked = e.target.closest('tab-item');
+          if (clicked && tabBar.contains(clicked)) {
+            updateActiveTab(clicked);
+          }
+        });
 
-      tabBar.addEventListener('click', (e) => {
-        const clicked = e.target.closest('tab-item');
-        if (clicked && tabBar.contains(clicked)) {
-          updateActiveTab(clicked);
+        // Initial active state setup
+        const initialActive =
+          tabBar.querySelector('[active]') || tabBar.querySelector('tab-item');
+        if (initialActive) {
+          updateActiveTab(initialActive);
         }
       });
-
-      // Initial active state setup
-      const initialActive =
-        tabBar.querySelector('[active]') || tabBar.querySelector('tab-item');
-      if (initialActive) {
-        updateActiveTab(initialActive);
-      }
     }, 0);
   }
 }

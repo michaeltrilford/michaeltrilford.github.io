@@ -7,6 +7,12 @@ class TabBar extends HTMLElement {
   connectedCallback() {
     const children = Array.from(this.children);
 
+    const shouldBeFullWidth = this.hasAttribute('full-width');
+
+    if (shouldBeFullWidth) {
+      this.classList.add('full-width');
+    }
+
     children.forEach((el, idx) => {
       el.classList.remove('first', 'middle', 'last', 'only');
 
@@ -25,13 +31,19 @@ class TabBar extends HTMLElement {
       <style>
         :host {
           display: inline-flex;
-          border: 1px solid #ccc;
+          border: var(--border-thick);
           border-radius: 8px;
-          overflow: hidden;
         }
+
+        :host(.full-width) {
+          display: flex;
+          width: 100%;
+        }
+
         ::slotted(tab-item) {
           flex: 1;
         }
+
       </style>
       <slot></slot>
     `;

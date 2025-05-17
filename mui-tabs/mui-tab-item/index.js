@@ -29,16 +29,19 @@ class TabItem extends HTMLElement {
         align-items: center;
         padding: var(--space-200) var(--space-400);
         cursor: pointer;
-        font-size: var(--text-font-size-s);
-        line-height: var(--text-line-height-s);
-        color: var(--text-color);
+        font-size: var(--text-font-size);
+        line-height: var(--text-line-height);
+        font-weight: var(--font-weight-bold);
+        color: var(--tab-text-color);
         user-select: none;
-        background: var(--white);
-        border-right: 1px solid #ccc;
+        background: var(--tab-background);
+        border-right: var(--border-thin);
+        white-space: nowrap;
       }
 
       :host(.active) {
-        background: var(--grey-200);
+        background: var(--tab-background-active);
+        color: var(--tab-text-color-active);
       }
 
       :host(.first) {
@@ -64,9 +67,10 @@ class TabItem extends HTMLElement {
 
     if (iconTag) {
       const iconEl = document.createElement(iconTag);
-      iconEl.setAttribute('color', 'var(--grey-700)');
+      iconEl.setAttribute('color', 'var(--tab-icon)');
       iconEl.setAttribute('size', 'small');
       this.shadowRoot.appendChild(iconEl);
+      this.iconEl = iconEl;
     }
 
     const slot = document.createElement('slot');
@@ -78,6 +82,14 @@ class TabItem extends HTMLElement {
   updateActiveState() {
     const isActive = this.hasAttribute('active');
     this.classList.toggle('active', isActive);
+
+    if (this.iconEl) {
+      // Pass the CSS variable itself, not computed values
+      this.iconEl.setAttribute(
+        'color',
+        isActive ? 'var(--tab-icon-active)' : 'var(--tab-icon)',
+      );
+    }
   }
 }
 
