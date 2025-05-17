@@ -216,7 +216,7 @@ class storyInput extends HTMLElement {
           <div slot="body">
             <mui-input type="search" label="Search">
               <mui-select
-                style="width: 116px;"
+                style="width: 120px;"
                 slot="before"
                 label="Brand"
                 hide-label
@@ -233,7 +233,7 @@ class storyInput extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;slot="before"<br>
             &nbsp;&nbsp;&nbsp;&nbsp;label="Brand"<br>
             &nbsp;&nbsp;&nbsp;&nbsp;hide-label<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;style="width: 110px;"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;style="width: 120px;"<br>
             &nbsp;&nbsp;&nbsp;&nbsp;options='[<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ "value": "all", "label": "All" },<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ "value": "images", "label": "Images" },<br>
@@ -248,7 +248,7 @@ class storyInput extends HTMLElement {
           <div slot="body">
             <mui-input type="number" label="Amount to transfer">
               <mui-select
-                style="width: 116px;"
+                style="width: 100px;"
                 slot="after"
                 label="Brand"
                 hide-label
