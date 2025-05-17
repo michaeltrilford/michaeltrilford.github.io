@@ -3,7 +3,7 @@ class StoryTemplate extends HTMLElement {
     return [
       'title',
       'description',
-      'accessibility-items',
+      'accessibility',
       'demo',
       'github',
       'figma',
@@ -33,7 +33,7 @@ class StoryTemplate extends HTMLElement {
       ? `<mui-body large style="letter-spacing: 0.75px; max-width: 75ch;">${descriptionText}</mui-body>`
       : '';
 
-    const accessibilityItems = this.getAttribute('accessibility-items');
+    const accessibilityItems = this.getAttribute('accessibility');
     let accessibilityArray = [];
 
     const demoLink = this.getAttribute('demo');

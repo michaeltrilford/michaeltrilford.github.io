@@ -207,6 +207,13 @@ class muiSelect extends HTMLElement {
               border-bottom-left-radius: var(--radius-000);
             }
 
+            /* Ensure feedback styles appear above INPUT */
+            select.success,
+            select.warning,
+            select.error {
+              z-index: 1;
+            }
+
         /* ========================================================================== */
 
       </style>

@@ -1,7 +1,7 @@
 class storyAccordion extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -13,15 +13,14 @@ class storyAccordion extends HTMLElement {
         title="Accordion"
         description="The Accordion is a component stores content underneath a collapsible heading, revealing it through progressive disclosure in the user interface."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-accordion"
-        accessibility-items='
-          Accordion summary uses role="button" and tabindex="0" for keyboard access.;
+        accessibility="
+          Accordion summary uses role='button' and tabindex='0' for keyboard access.;
           Supports Enter and Space keys for toggling.;
           aria-expanded reflects open/closed state.;
           aria-controls links summary to detail with a unique ID.;
-          mui-heading applies semantic heading with role="heading" and aria-level.;
-          Chevron icon rotates visually; state is conveyed via aria-expanded.
-        '
-        
+          mui-heading applies semantic heading with role='heading' and aria-level.;
+          Chevron icon rotates visually and the state is conveyed via aria-expanded.
+        "
       >
 
       <mui-v-stack space="var(--space-700)">
@@ -145,4 +144,4 @@ class storyAccordion extends HTMLElement {
   }
 }
 
-customElements.define("story-accordion", storyAccordion);
+customElements.define('story-accordion', storyAccordion);

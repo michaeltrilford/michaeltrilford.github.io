@@ -176,7 +176,6 @@ class muiInput extends HTMLElement {
           cursor: not-allowed;
           background-color: var(--input-background-disabled);
         }
-
         input.success {
           color: var(--form-feedback-success-text-color);
           border-color: var(--form-feedback-success-border-color);
@@ -246,6 +245,13 @@ class muiInput extends HTMLElement {
            slot[name="before"]::slotted(*:focus),
            input:focus,
            slot[name="after"]::slotted(*:focus) { z-index: 1; }
+
+          /* Ensure feedback styles appear above SELECT and focusable Items */
+           input.success,
+           input.warning,
+           input.error {
+             z-index: 1;
+           }
 
         /* ========================================================================== */
         

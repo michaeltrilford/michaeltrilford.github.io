@@ -1,43 +1,43 @@
 class storyAlert extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
 
     const propItems = [
       {
-        name: "variant",
-        type: "string",
-        options: "success, info, warning, error",
-        default: "success",
-        description: "Describe the intent or mood of a alert",
+        name: 'variant',
+        type: 'string',
+        options: 'success, info, warning, error',
+        default: 'success',
+        description: 'Describe the intent or mood of a alert',
       },
       {
-        name: "slot",
+        name: 'slot',
         required: true,
-        type: "node",
-        options: "{text}, mui-links",
-        default: "",
+        type: 'node',
+        options: '{text}, mui-links',
+        default: '',
         description:
-          "Content placed inside the component. Can include mui-links and text nodes, or both.",
+          'Content placed inside the component. Can include mui-links and text nodes, or both.',
       },
       {
-        name: "style",
-        type: "string",
-        options: "Valid CSS",
-        default: "",
+        name: 'style',
+        type: 'string',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use styles to add layout based CSS to the host element.",
+          'You are able to use styles to add layout based CSS to the host element.',
       },
       {
-        name: "class",
-        type: "string",
-        options: "Valid CSS",
-        default: "",
+        name: 'class',
+        type: 'string',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use add a classname to add layout based CSS to the host element.",
+          'You are able to use add a classname to add layout based CSS to the host element.',
       },
     ];
 
@@ -45,21 +45,21 @@ class storyAlert extends HTMLElement {
       .map(
         (prop) => `
           <story-type-row
-            ${prop.required ? "required" : ""}
+            ${prop.required ? 'required' : ''}
             name="${prop.name}"
             type="${prop.type}" 
-            options="${prop.options || ""}"
-            default="${prop.default || ""}"
+            options="${prop.options || ''}"
+            default="${prop.default || ''}"
             description="${prop.description}">
           </story-type-row>
-        `
+        `,
       )
-      .join("");
+      .join('');
 
     const accordions = propItems
       .map((prop, index) => {
         // Check if it's the last item in the array
-        const isLastChild = index === propItems.length - 1 ? "last-child" : "";
+        const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
 
         return `
           <mui-accordion-block 
@@ -68,17 +68,17 @@ class storyAlert extends HTMLElement {
             ${isLastChild}>
             <story-type-slat
               slot="detail"
-              ${prop.required ? "required" : ""}
+              ${prop.required ? 'required' : ''}
               name="${prop.name}"
               type="${prop.type}" 
-              options="${prop.options || ""}"
-              default="${prop.default || ""}"
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
               description="${prop.description}">
             </story-type-slat>
           </mui-accordion-block>
         `;
       })
-      .join("");
+      .join('');
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -90,10 +90,10 @@ class storyAlert extends HTMLElement {
         guides
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-alert/index.js"
 
-        accessibility-items='
+        accessibility="
           ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.; 
           The role is set to ALERT for immediate screen reader feedback.
-        '
+        "
       >
 
         <mui-v-stack space="var(--space-700)">
@@ -112,8 +112,8 @@ class storyAlert extends HTMLElement {
           <story-card 
             title="Success" 
             description="Indicates that an operation or action has been completed successfully." 
-            usage="Form submissions that have been processed without errors., Successful data updates or saves.,Confirmation of completed tasks or actions."
-            accessibility="ARIA-live of POLITE is set on this variant."
+            usage="Form submissions that have been processed without errors.;Successful data updates or saves.;Confirmation of completed tasks or actions."
+            accessibility="ARIA-live of POLITE is set on this variant.; ARIA-live of POLITE is set on this variant."
           >
             <div slot="body">
               <mui-alert variant="success">Your message has been sent successfully.</mui-alert>
@@ -130,7 +130,7 @@ class storyAlert extends HTMLElement {
           <story-card
             title="Info"
             description="Provides general information or updates that are helpful but not critical."
-            usage="Announcing new features or updates., Providing contextual information or tips., Informing users about non-urgent system statuses."
+            usage="Announcing new features or updates.; Providing contextual information or tips.; Informing users about non-urgent system statuses."
             accessibility="ARIA-live of POLITE is set on this variant."
           >
             <div slot="body">
@@ -148,7 +148,7 @@ class storyAlert extends HTMLElement {
           <story-card
             title="Warning"
             description="Alerts users to potential issues or situations that require caution."
-            usage="Notifying about unsaved changes., Indicating deprecated features or upcoming changes., Highlighting actions that may have unintended consequences."
+            usage="Notifying about unsaved changes.; Indicating deprecated features or upcoming changes.; Highlighting actions that may have unintended consequences."
             accessibility="ARIA-live of ASSERTIVE is set on this variant."
           >
             <div slot="body">
@@ -166,7 +166,7 @@ class storyAlert extends HTMLElement {
           <story-card
             title="Error"
             description="Indicates that an error has occurred, requiring user attention or action."
-            usage="Form validation errors., System failures or exceptions. Failed operations or transactions."
+            usage="Form validation errors.; System failures or exceptions.; Failed operations or transactions."
             accessibility="ARIA-live of ASSERTIVE is set on this variant."
           >
             <div slot="body">
@@ -188,4 +188,4 @@ class storyAlert extends HTMLElement {
   }
 }
 
-customElements.define("story-alert", storyAlert);
+customElements.define('story-alert', storyAlert);

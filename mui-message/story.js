@@ -104,11 +104,11 @@ class storyMessage extends HTMLElement {
         figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=9-1053&t=ZA9uH4LK37tSuk6r-1"
         guides
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-message/index.js"
-        accessibility-items='
+        accessibility="
             ARIA-live is built in, using POLITE + ASSERTIVE for screen readers.;
             Neutral, Postive, Info support the role of STATUS for screen reader feedback.;
             Warning, Attention support the role of ALERT for screen reader feedback.
-          '
+          "
 
       >
 
@@ -128,7 +128,7 @@ class storyMessage extends HTMLElement {
         <story-card
           title="Default" 
           description="The default uses the neutral state offers a subtle, neutral tone, ideal for conveying general information without drawing undue attention."
-          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+          accessibility="ARIA-live of POLITE is set on this variant.; Role of STATUS is set on this variant."
         >
           <mui-message slot="body"></mui-message>
           <mui-code slot="footer">
@@ -203,8 +203,8 @@ class storyMessage extends HTMLElement {
         <story-card 
           title="Variant: Plain" 
           description="A subtle, transparent style suited for vibrant backgrounds where minimal visual impact is preferred."
-          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
-          usage="Use for passive messages such as accessibility notes system status or routine updates., Best for non-critical information that doesn’t require immediate attention or user action."
+          accessibility="ARIA-live of POLITE is set on this variant.; Role of STATUS is set on this variant."
+          usage="Use for passive messages such as accessibility notes system status or routine updates.; Best for non-critical information that doesn’t require immediate attention or user action."
         >
           <mui-message heading="Accessibility Notes" slot="body" icon="mui-icon-accessibility" variant="plain">
             <mui-list as="ul">
@@ -248,8 +248,9 @@ class storyMessage extends HTMLElement {
 
         <story-card 
           title="Variant: Neutral" 
-          description="A calm, balanced tone for non-critical, persistent messages." usage="Use on settings or system pages to display non-urgent information., Suitable for background status like sync confirmation or feature explanations."
-          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+          description="A calm, balanced tone for non-critical, persistent messages." 
+          usage="Use on settings or system pages to display non-urgent information.; Suitable for background status like sync confirmation or feature explanations."
+          accessibility="ARIA-live of POLITE is set on this variant.; Role of STATUS is set on this variant."
         >
           <mui-message heading="Sync Settings" slot="body" variant="neutral">
               <mui-body size="small">Your preferences are backed up and synced across devices.</mui-body>
@@ -273,8 +274,9 @@ class storyMessage extends HTMLElement {
 
         <story-card 
           title="Variant: Positive" 
-          description="The Positive state conveys successful actions, achievements, or confirmations, fostering a sense of accomplishment and satisfaction." usage="Indicate successful form submissions or completed tasks., Acknowledge user achievements or milestones."
-          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+          description="The Positive state conveys successful actions, achievements, or confirmations, fostering a sense of accomplishment and satisfaction." 
+          usage="Indicate successful form submissions or completed tasks.; Acknowledge user achievements or milestones."
+          accessibility="ARIA-live of POLITE is set on this variant.; Role of STATUS is set on this variant."
         >
           <mui-message heading="Report Ready for Download" slot="body" variant="positive">
             <mui-body>The report has been generated and is ready for download.</mui-body>
@@ -299,8 +301,9 @@ class storyMessage extends HTMLElement {
 
         <story-card 
           title="Variant: Info" 
-          description="The Info state provides informative messages that help users understand system status or feature updates, guiding them without urgency." usage="Use to announce new features | enhancements | system changes., Appropriate for onboarding tips or contextual help."
-          accessibility="ARIA-live of POLITE is set on this variant., Role of STATUS is set on this variant."
+          description="The Info state provides informative messages that help users understand system status or feature updates, guiding them without urgency." 
+          usage="Use to announce new features | enhancements | system changes.; Appropriate for onboarding tips or contextual help."
+          accessibility="ARIA-live of POLITE is set on this variant.; Role of STATUS is set on this variant."
         >
           <mui-message heading="New Feature Available" slot="body" variant="info">
             <mui-body>A new dashboard layout is now available. Explore the enhanced features.</mui-body>
@@ -325,8 +328,9 @@ class storyMessage extends HTMLElement {
 
         <story-card
           title="Variant: Warning"
-          description="The Warning state alerts users to potential issues that may require attention, helping prevent errors or misunderstandings." usage="Notify users of actions that could lead to undesirable outcomes; like unsaved changes.,Warn about system limitations or upcoming expirations."
-          accessibility="ARIA-live of ASSERTIVE is set on this variant., Role of ALERT is set on this variant."
+          description="The Warning state alerts users to potential issues that may require attention, helping prevent errors or misunderstandings." 
+          usage="Notify users of actions that could lead to undesirable outcomes; like unsaved changes.; Warn about system limitations or upcoming expirations."
+          accessibility="ARIA-live of ASSERTIVE is set on this variant.; Role of ALERT is set on this variant."
         >
           <mui-message heading="Password Expiry Warning" slot="body" variant="warning">
             <mui-body>Your password will expire in 3 days. Please update it to maintain account security.</mui-body>
@@ -351,8 +355,9 @@ class storyMessage extends HTMLElement {
 
         <story-card
           title="Variant: Attention"
-          description="The Attention state demands immediate user focus, highlighting critical issues that require prompt action." usage="Alert users to urgent problems; such as system errors or security breaches., Use for time-sensitive notifications that impact user experience."
-          accessibility="ARIA-live of ASSERTIVE is set on this variant., Role of ALERT is set on this variant."
+          description="The Attention state demands immediate user focus, highlighting critical issues that require prompt action." 
+          usage='Alert users to urgent problems; such as system errors or security breaches.; Use for time-sensitive notifications that impact user experience.'
+          accessibility="ARIA-live of ASSERTIVE is set on this variant.; Role of ALERT is set on this variant."
         >
           <mui-message heading="Scheduled Maintenance" slot="body" variant="attention">
             <mui-body>Our website will be undergoing maintenance on [Date] from [Time] to [Time]. Some features may be unavailable during this period.</mui-body>

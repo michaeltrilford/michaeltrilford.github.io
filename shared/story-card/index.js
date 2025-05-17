@@ -1,11 +1,11 @@
 class storyCard extends HTMLElement {
   static get observedAttributes() {
-    return ["title", "description", "usage", "accessibility", "github"];
+    return ['title', 'description', 'usage', 'accessibility', 'github'];
   }
 
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styles = `
       :host { display: block; }
@@ -83,78 +83,83 @@ class storyCard extends HTMLElement {
       }
     `;
 
-    const title = this.getAttribute("title") || "";
-    const description = this.hasAttribute("description")
+    const title = this.getAttribute('title') || '';
+    const description = this.hasAttribute('description')
       ? `<mui-body style="max-width: 86ch;">${this.getAttribute(
-          "description"
+          'description',
         )}</mui-body>`
-      : "";
+      : '';
 
-    const githubLink = this.getAttribute("github");
+    const githubLink = this.getAttribute('github');
     const githubContent = githubLink
       ? `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="tertiary">View Usage<github-mark></github-mark></mui-link>`
-      : "";
+      : '';
 
     // Handle usage list
-    const usageAttr = this.getAttribute("usage");
-    let usageItems = [];
+    const usageItems = this.getAttribute('usage');
+    let usageArray = [];
 
-    if (usageAttr) {
-      try {
-        usageItems = JSON.parse(usageAttr);
-      } catch {
-        usageItems = usageAttr.split(",").map((usage) => usage.trim());
-      }
+    try {
+      const sanitizedItems = usageItems
+        ? usageItems.replace(/(['"])(?=\w)(.*?)(?=\w)\1/g, '$2')
+        : '';
+      usageArray = sanitizedItems ? JSON.parse(sanitizedItems) : [];
+    } catch (e) {
+      usageArray = usageItems ? usageItems.split(';') : [];
     }
 
-    const usageContent = usageItems.length
+    const usageContent = usageArray.length
       ? `
         <mui-heading size="6" level="3" style="margin-top: var(--space-300); margin-bottom: var(--space-050);">Usage details</mui-heading>
         <mui-list as="ul" style="max-width: 65ch;">
-          ${usageItems
+          ${usageArray
             .map(
               (usage) =>
-                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${usage}</mui-list-item>`
+                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${usage.trim()}</mui-list-item>`,
             )
-            .join("")}
+            .join('')}
         </mui-list>
       `
-      : "";
+      : '';
 
     // Handle accessibility list
-    const accessibilityAttr = this.getAttribute("accessibility");
-    let accessibilityItems = [];
+    const accessibilityItems = this.getAttribute('accessibility');
 
-    if (accessibilityAttr) {
-      try {
-        accessibilityItems = JSON.parse(accessibilityAttr);
-      } catch {
-        accessibilityItems = accessibilityAttr
-          .split(",")
-          .map((accessibility) => accessibility.trim());
-      }
+    let accessibilityArray = [];
+
+    try {
+      // Try parse JSON (after cleaning quotes)
+      const sanitizedItems = accessibilityItems
+        ? accessibilityItems.replace(/(['"])(?=\w)(.*?)(?=\w)\1/g, '$2')
+        : '';
+      accessibilityArray = sanitizedItems ? JSON.parse(sanitizedItems) : [];
+    } catch (e) {
+      // Fallback split by semicolon
+      accessibilityArray = accessibilityItems
+        ? accessibilityItems.split(';')
+        : [];
     }
 
-    const accessibilityContent = accessibilityItems.length
+    const accessibilityContent = accessibilityArray.length
       ? `
-        <mui-heading size="6" level="3" style="margin-top: var(--space-300); margin-bottom: var(--space-050);">Accessibility details</mui-heading>
-        <mui-list as="ul" style="max-width: 65ch;">
-          ${accessibilityItems
-            .map(
-              (accessibility) =>
-                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${accessibility}</mui-list-item>`
-            )
-            .join("")}
-        </mui-list>
-      `
-      : "";
+    <mui-heading size="6" level="3" style="margin-top: var(--space-300); margin-bottom: var(--space-050);">Accessibility details</mui-heading>
+    <mui-list as="ul" style="max-width: 65ch;">
+      ${accessibilityArray
+        .map(
+          (accessibility) =>
+            `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${accessibility.trim()}</mui-list-item>`,
+        )
+        .join('')}
+    </mui-list>
+  `
+      : '';
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
       <mui-card>
         ${
-          this.hasAttribute("noheader")
-            ? ""
+          this.hasAttribute('noheader')
+            ? ''
             : `
           <mui-card-header>
             <mui-h-stack alignX="space-between" alignY="center">
@@ -178,8 +183,8 @@ class storyCard extends HTMLElement {
           </section>
         </mui-card-body>
         ${
-          this.hasAttribute("nofooter")
-            ? ""
+          this.hasAttribute('nofooter')
+            ? ''
             : `<mui-card-footer><slot name="footer"></slot></mui-card-footer>`
         }
       </mui-card>
@@ -187,4 +192,4 @@ class storyCard extends HTMLElement {
   }
 }
 
-customElements.define("story-card", storyCard);
+customElements.define('story-card', storyCard);
