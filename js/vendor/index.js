@@ -166,6 +166,8 @@ const MuiCompArray = [
   'mui-addon/index.js',
   'mui-select/index.js',
   'mui-switch/index.js',
+  'mui-tabs/mui-tab-bar/index.js',
+  'mui-tabs/mui-tab-item/index.js',
 ];
 const RecipeArray = ['mui-table/recipe/table.js'];
 
@@ -187,6 +189,7 @@ const StoryArray = [
   'mui-alert/story.js',
   'mui-message/story.js',
   'mui-badge/story.js',
+  'mui-tabs/story.js',
   'mui-button-group/story.js',
   'mui-card/story.js',
   'mui-code/story.js',
