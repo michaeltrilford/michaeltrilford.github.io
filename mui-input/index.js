@@ -184,25 +184,25 @@ class muiInput extends HTMLElement {
           border-color: var(--form-feedback-success-border-color);
           box-shadow: 0 0 0 2px var(--form-feedback-success-border-color);
         }
-        input.success:hover {
-          color: var(--form-feedback-success-text-color-hover);
-          border-color: var(--form-feedback-success-border-color-hover);
-          box-shadow: 0 0 0 2px var(--form-feedback-success-border-color-hover);
-        }
         input.warning {
           color: var(--form-feedback-warning-text-color);
           border-color: var(--form-feedback-warning-border-color);
           box-shadow: 0 0 0 2px var(--form-feedback-warning-border-color);
         }
-        input.warning:hover {
-          color: var(--form-feedback-warning-text-color-hover);
-          border-color: var(--form-feedback-warning-border-color-hover);
-          box-shadow: 0 0 0 2px var(--form-feedback-warning-border-color-hover);
-        }
         input.error {
           color: var(--form-feedback-error-text-color);
           border-color: var(--form-feedback-error-border-color);
           box-shadow: 0 0 0 2px var(--form-feedback-error-border-color);
+        }
+        input.success:hover {
+          color: var(--form-feedback-success-text-color-hover);
+          border-color: var(--form-feedback-success-border-color-hover);
+          box-shadow: 0 0 0 2px var(--form-feedback-success-border-color-hover);
+        }
+        input.warning:hover {
+          color: var(--form-feedback-warning-text-color-hover);
+          border-color: var(--form-feedback-warning-border-color-hover);
+          box-shadow: 0 0 0 2px var(--form-feedback-warning-border-color-hover);
         }
         input.error:hover {
           color: var(--form-feedback-error-text-color-hover);

@@ -2,12 +2,12 @@
 class muiButton extends HTMLElement {
   static get observedAttributes() {
     // return ["onclick", "type", "variant", "weight", "size"];
-    return ["onclick", "type", "aria-label", "disabled", "variant"];
+    return ['onclick', 'type', 'aria-label', 'disabled', 'variant'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
 
     // Set defaults
     // const size = this.getAttribute("size") || "medium";
@@ -19,7 +19,7 @@ class muiButton extends HTMLElement {
   async connectedCallback() {
     await this.waitForPartMap();
 
-    const partMap = getPartMap("text", "spacing", "layout", "visual");
+    const partMap = getPartMap('text', 'spacing', 'layout', 'visual');
 
     let html = `
     <style>
@@ -184,14 +184,66 @@ class muiButton extends HTMLElement {
     }
     /* ===================================== */
 
+
+    /* ========================================================================== */
+    /* STYLE ADJUSTMENTS WHEN BUTTON IS SLOTTED WITHIN INPUT                      */
+    /* Related styles unique to this usage is found in the mui-input/index.js     */
+    /* ========================================================================== */
+
+    /* ========================================================================== */
+    /* BEFORE: When a BUTTON has slot="before" applied to host for INPUT usage    */
+    /* ========================================================================== */
+
+        :host([slot="before"]) button {
+          border: var(--border-thin);
+          min-height: 4.4rem;
+          background: var(--action-secondary-background);
+          color: var(--action-secondary-text-color);
+          border-color: var(--form-feedback-default-border-color);
+          border-right: none;
+          border-top-right-radius: var(--radius-000);
+          border-bottom-right-radius: var(--radius-000);
+        }
+
+        :host([slot="before"]) button:hover {
+          background: var(--action-secondary-background-hover);
+          color: var(--action-secondary-text-color-hover);
+          border-color: var(--form-feedback-default-border-color-hover);
+        }
+
+    /* ========================================================================== */
+    /* AFTER: When a BUTTON has slot="after" applied to host for INPUT usage      */
+    /* ========================================================================== */
+
+        :host([slot="after"]) button {
+          border: var(--border-thin);
+          min-height: 4.4rem;
+          background: var(--action-secondary-background);
+          color: var(--action-secondary-text-color);
+          border-color: var(--form-feedback-default-border-color);
+          border-left: none;
+          border-top-left-radius: var(--radius-000);
+          border-bottom-left-radius: var(--radius-000);
+        }
+
+        :host([slot="after"]) button:hover,
+        :host([slot="after"]) button:focus {
+          background: var(--action-secondary-background-hover);
+          color: var(--action-secondary-text-color-hover);
+          border-color: var(--form-feedback-default-border-color-hover);
+        }
+
+    /* ========================================================================== */
+
+
     </style>
 
     <button 
       part="${partMap}"
-      onclick="${this.getAttribute("onclick")}" 
-      type="${this.getAttribute("type") || "button"}" 
-      aria-label="${this.getAttribute("aria-label") || ""}"
-      ${this.hasAttribute("disabled") ? "disabled" : ""}
+      onclick="${this.getAttribute('onclick')}" 
+      type="${this.getAttribute('type') || 'button'}" 
+      aria-label="${this.getAttribute('aria-label') || ''}"
+      ${this.hasAttribute('disabled') ? 'disabled' : ''}
     >
       <slot></slot>
     </button>
@@ -202,9 +254,9 @@ class muiButton extends HTMLElement {
   }
   waitForPartMap() {
     return new Promise((resolve) => {
-      if (typeof getPartMap === "function") return resolve();
+      if (typeof getPartMap === 'function') return resolve();
       const check = () => {
-        if (typeof getPartMap === "function") {
+        if (typeof getPartMap === 'function') {
           resolve();
         } else {
           requestAnimationFrame(check);
@@ -215,4 +267,4 @@ class muiButton extends HTMLElement {
   }
 }
 
-customElements.define("mui-button", muiButton);
+customElements.define('mui-button', muiButton);

@@ -147,6 +147,9 @@ class muiSelect extends HTMLElement {
           background-position: right var(--space-300) center;
           background-size: 10px 5px;
         }
+        select:hover {
+          border-color: var(--form-feedback-default-border-color-hover);
+        }
         select:focus {
           outline: var(--outline-thick);
         }
@@ -169,6 +172,21 @@ class muiSelect extends HTMLElement {
           color: var(--form-feedback-error-text-color);
           border-color: var(--form-feedback-error-border-color);
           box-shadow: 0 0 0 2px var(--form-feedback-error-border-color);
+        }
+        select.success:hover {
+          color: var(--form-feedback-success-text-color-hover);
+          border-color: var(--form-feedback-success-border-color-hover);
+          box-shadow: 0 0 0 2px var(--form-feedback-success-border-color-hover);
+        }
+        select.warning:hover {
+          color: var(--form-feedback-warning-text-color-hover);
+          border-color: var(--form-feedback-warning-border-color-hover);
+          box-shadow: 0 0 0 2px var(--form-feedback-warning-border-color-hover);
+        }
+        select.error:hover {
+          color: var(--form-feedback-error-text-color-hover);
+          border-color: var(--form-feedback-error-border-color-hover);
+          box-shadow: 0 0 0 2px var(--form-feedback-error-border-color-hover);
         }
         .vh {
           position: absolute;
