@@ -81,9 +81,9 @@ class storyTabBar extends HTMLElement {
       <style>${styles}</style>
 
       <story-template
-        title="Tab Bar (Beta)"
-        description="."
-        github=""
+        title="Tab Bar"
+        description="Allow users to switch between views or content sections by selecting from a group of tabs."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-tabs"
       >
 
       <mui-v-stack space="var(--space-700)">

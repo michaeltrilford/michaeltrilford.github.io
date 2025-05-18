@@ -63,8 +63,8 @@ class storyAddon extends HTMLElement {
 
       <story-template 
         title="Add On"
-        description="Use mui-addon within an input to add additional information the form experience."
-        github=""
+        description="Enhance form inputs by using mui-addon to display supplementary information like units, prefixes, or suffixes."
+        github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-addon/index.js"
 
       >
 

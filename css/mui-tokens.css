@@ -207,10 +207,18 @@ html[data-theme='light'] {
   --form-feedback-success-text-color: var(--green-700);
   --form-feedback-warning-text-color: var(--orange-700);
   --form-feedback-error-text-color: var(--red-700);
+  --form-feedback-default-text-color-hover: var(--grey-600);
+  --form-feedback-success-text-color-hover: var(--green-800);
+  --form-feedback-warning-text-color-hover: var(--orange-800);
+  --form-feedback-error-text-color-hover: var(--red-800);
   --form-feedback-default-border-color: var(--grey-300);
   --form-feedback-success-border-color: var(--green-600);
   --form-feedback-warning-border-color: var(--orange-600);
   --form-feedback-error-border-color: var(--red-600);
+  --form-feedback-default-border-color-hover: var(--grey-400);
+  --form-feedback-success-border-color-hover: var(--green-700);
+  --form-feedback-warning-border-color-hover: var(--orange-700);
+  --form-feedback-error-border-color-hover: var(--red-700);
   /* Feedback - Border (Alerts & Messages) */
   --feedback-plain-border-color: var(--black-opacity-50);
   --feedback-neutral-border-color: var(--grey-600);
@@ -346,10 +354,18 @@ html[data-theme='dark'] {
   --form-feedback-success-text-color: var(--green-400);
   --form-feedback-warning-text-color: var(--orange-400);
   --form-feedback-error-text-color: var(--red-400);
+  --form-feedback-default-text-color-hover: var(--grey-400);
+  --form-feedback-success-text-color-hover: var(--green-300);
+  --form-feedback-warning-text-color-hover: var(--orange-300);
+  --form-feedback-error-text-color-hover: var(--red-300);
   --form-feedback-default-border-color: var(--grey-600);
   --form-feedback-success-border-color: var(--green-400);
   --form-feedback-warning-border-color: var(--orange-400);
   --form-feedback-error-border-color: var(--red-400);
+  --form-feedback-default-border-color-hover: var(--grey-500);
+  --form-feedback-success-border-color-hover: var(--green-300);
+  --form-feedback-warning-border-color-hover: var(--orange-300);
+  --form-feedback-error-border-color-hover: var(--red-300);
   /* Feedback - Border (Alerts & Messages) */
   --feedback-plain-border-color: var(--white-opacity-50);
   --feedback-neutral-border-color: var(--grey-400);

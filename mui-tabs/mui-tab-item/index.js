@@ -33,14 +33,14 @@ class TabItem extends HTMLElement {
         line-height: var(--text-line-height);
         font-weight: var(--font-weight-bold);
         color: var(--tab-text-color);
-        background: var(--tab-background);
+        background: transparent;
         border-right: var(--border-thin);
         white-space: nowrap;
         cursor: pointer;
       }
 
       :host(.active) {
-        background: var(--tab-background-active);
+        background: transparent;
         color: var(--tab-text-color-active);
       }
 
