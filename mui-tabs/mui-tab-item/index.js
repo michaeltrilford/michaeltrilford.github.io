@@ -29,8 +29,8 @@ class TabItem extends HTMLElement {
         gap: var(--space-100);
         align-items: center;
         padding: var(--space-200) var(--space-400);
-        font-size: var(--text-font-size);
-        line-height: var(--text-line-height);
+        font-size: var(--text-font-size-s);
+        line-height: var(--text-line-height-s);
         font-weight: var(--font-weight-bold);
         color: var(--tab-text-color);
         background: transparent;
@@ -42,19 +42,21 @@ class TabItem extends HTMLElement {
       :host(.active) {
         background: transparent;
         color: var(--tab-text-color-active);
+        font-weight: var(--font-weight-bold);
+        box-shadow: inset 0 0 0 2px var(--tab-inset-active);
       }
 
       :host(.first) {
-        border-radius: 8px 0 0 8px;
+        border-radius: calc(var(--radius-200) - 0.2rem) 0 0 calc(var(--radius-200) - 0.2rem);
       }
 
       :host(.last) {
-        border-radius: 0 8px 8px 0;
+        border-radius: 0 calc(var(--radius-200) - 0.2rem) calc(var(--radius-200) - 0.2rem) 0;
         border-right: none;
       }
 
       :host(.only) {
-        border-radius: 8px;
+        border-radius: calc(var(--radius-200) - 0.2rem);
         border-right: none;
       }
 

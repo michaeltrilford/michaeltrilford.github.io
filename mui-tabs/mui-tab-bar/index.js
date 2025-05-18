@@ -2,6 +2,7 @@ class TabBar extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+    this._handleResize = this._handleResize.bind(this);
   }
 
   connectedCallback() {
@@ -39,7 +40,7 @@ class TabBar extends HTMLElement {
         position: relative;
           display: inline-flex;
           border: var(--border-thick);
-          border-radius: 8px;
+          border-radius: var(--radius-200);
           overflow: hidden;
           background: var(--tab-background);
         }
@@ -76,7 +77,9 @@ class TabBar extends HTMLElement {
       <slot></slot>
     `;
 
-    // Initial highlight positioning without animation
+    window.addEventListener('resize', this._handleResize);
+
+    // Initial highlight positioning
     requestAnimationFrame(() => {
       const highlight = this.shadowRoot.querySelector('.highlight');
       highlight.style.transition = 'none';
@@ -90,10 +93,29 @@ class TabBar extends HTMLElement {
       });
     });
   }
+  disconnectedCallback() {
+    window.removeEventListener('resize', this._handleResize);
+  }
+
+  _handleResize() {
+    const highlight = this.shadowRoot.querySelector('.highlight');
+    if (!highlight || !this._activeTab) return;
+
+    // Temporarily hide highlight
+    highlight.style.visibility = 'hidden';
+
+    clearTimeout(this._resizeTimeout);
+    this._resizeTimeout = setTimeout(() => {
+      this.setActiveTab(this._activeTab);
+      highlight.style.visibility = '';
+    }, 150); // Slight delay to let resizing settle
+  }
+
   setActiveTab(el) {
     const children = Array.from(this.children);
     children.forEach((child) => child.removeAttribute('active'));
     el.setAttribute('active', '');
+    this._activeTab = el;
 
     const highlight = this.shadowRoot.querySelector('.highlight');
     const elRect = el.getBoundingClientRect();
@@ -103,7 +125,6 @@ class TabBar extends HTMLElement {
     const width = elRect.width;
 
     if (this._hasInitialized) {
-      // Only animate and blur if already initialized
       highlight.classList.add('blur');
       highlight.style.left = `${left}px`;
       highlight.style.width = `${width}px`;
@@ -113,16 +134,12 @@ class TabBar extends HTMLElement {
         highlight.classList.remove('blur');
       }, 300);
     } else {
-      // First-time render: position instantly without transition
       highlight.style.transition = 'none';
       highlight.style.left = `${left}px`;
       highlight.style.width = `${width}px`;
 
-      // Force reflow, then re-enable transition
       void highlight.offsetWidth;
-      highlight.style.transition = ''; // revert to default
-
-      // Mark as initialized
+      highlight.style.transition = '';
       this._hasInitialized = true;
     }
   }
