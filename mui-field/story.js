@@ -331,7 +331,7 @@ class storyField extends HTMLElement {
             <mui-input type="number">
               <mui-select
                 slot="after"
-                label="Brand"
+                label="Currency"
                 hide-label
                 style="width: 100px;"
                 options='[
@@ -359,7 +359,7 @@ class storyField extends HTMLElement {
             &nbsp;&nbsp;&lt;mui-input type=&quot;number&quot;&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-select<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slot=&quot;after&quot;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label=&quot;Brand&quot;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;label=&quot;Currency&quot;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hide-label<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style=&quot;width: 100px;&quot;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;options='[<br>
