@@ -3,6 +3,12 @@ class TabBar extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this._handleResize = this._handleResize.bind(this);
+
+    this._resizeObserver = new ResizeObserver(() => {
+      if (this._activeTab) {
+        this.setActiveTab(this._activeTab);
+      }
+    });
   }
 
   connectedCallback() {
@@ -97,6 +103,9 @@ class TabBar extends HTMLElement {
   }
   disconnectedCallback() {
     window.removeEventListener('resize', this._handleResize);
+    if (this._observedTab) {
+      this._resizeObserver.unobserve(this._observedTab);
+    }
   }
 
   _handleResize() {
@@ -118,6 +127,15 @@ class TabBar extends HTMLElement {
     children.forEach((child) => child.removeAttribute('active'));
     el.setAttribute('active', '');
     this._activeTab = el;
+
+    // Stop observing the previous tab
+    if (this._observedTab && this._observedTab !== el) {
+      this._resizeObserver.unobserve(this._observedTab);
+    }
+
+    // Observe the new active tab
+    this._observedTab = el;
+    this._resizeObserver.observe(el);
 
     const highlight = this.shadowRoot.querySelector('.highlight');
     const elRect = el.getBoundingClientRect();
