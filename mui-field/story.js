@@ -171,7 +171,7 @@ class storyField extends HTMLElement {
             <br />
             &lt;mui-field&gt;
             <br />
-            &nbsp;&nbsp;&lt;mui-input value="••••••••"&gt;&lt;/mui-input&gt;
+            &nbsp;&nbsp;&lt;mui-input type="password" value="••••••••"&gt;&lt;/mui-input&gt;
             <br />
             &lt;/mui-field&gt;
           </mui-code>

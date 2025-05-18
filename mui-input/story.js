@@ -8,6 +8,13 @@ class storyInput extends HTMLElement {
 
     const propItems = [
       {
+        name: 'variant',
+        type: 'string',
+        options: 'default, success, warning, error',
+        default: 'default',
+        description: '',
+      },
+      {
         name: 'types',
         type: 'string',
         options: 'text, password, email, number, search, tel, url, date, time',
@@ -146,6 +153,36 @@ class storyInput extends HTMLElement {
           </div>
           <mui-code slot="footer">
             &lt;mui-input label="Default"&gt;&lt;mui-input&gt;
+            <br />
+          </mui-code>
+        </story-card>
+
+        <story-card title="Variant: Success" description="The label is required, if not set there will be a console warning.">
+          <div slot="body">
+            <mui-input variant="success"  value="value" type="password" label="Password"></mui-input>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-input variant="success" value="value" type="password" label="Password"&gt;&lt;mui-input&gt;
+            <br />
+          </mui-code>
+        </story-card>
+
+        <story-card title="Variant: Warning" description="The label is required, if not set there will be a console warning.">
+          <div slot="body">
+            <mui-input variant="warning" value="michael.mui.com" label="Email"></mui-input>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-input variant="warning" value="michael.mui.com" label="Email"&gt;&lt;mui-input&gt;
+            <br />
+          </mui-code>
+        </story-card>
+
+        <story-card title="Variant: Error" description="The label is required, if not set there will be a console warning.">
+          <div slot="body">
+            <mui-input variant="error" value="michael.mui.com" label="Email"></mui-input>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-input variant="error" value="michael.mui.com" label="Email"&gt;&lt;mui-input&gt;
             <br />
           </mui-code>
         </story-card>

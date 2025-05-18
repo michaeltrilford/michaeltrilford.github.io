@@ -23,20 +23,20 @@ class TabItem extends HTMLElement {
     const style = document.createElement('style');
     style.textContent = `
       :host {
+        user-select: none;
         display: flex;
         justify-content: center;
         gap: var(--space-100);
         align-items: center;
         padding: var(--space-200) var(--space-400);
-        cursor: pointer;
         font-size: var(--text-font-size);
         line-height: var(--text-line-height);
         font-weight: var(--font-weight-bold);
         color: var(--tab-text-color);
-        user-select: none;
         background: var(--tab-background);
         border-right: var(--border-thin);
         white-space: nowrap;
+        cursor: pointer;
       }
 
       :host(.active) {
