@@ -341,6 +341,7 @@ html[data-theme='light'] {
   --tab-icon-active: var(--black);
   --tab-text-color-active: var(--black);
   --tab-inset-active: var(--white);
+  --tab-shadow-active: var(--black-opacity-10);
 }
 
 /* ==================================================================================================== */
@@ -489,6 +490,7 @@ html[data-theme='dark'] {
   --tab-icon-active: var(--white);
   --tab-text-color-active: var(--white);
   --tab-inset-active: var(--black);
+  --tab-shadow-active: var(--white-opacity-10);
 }
 
 /* ==================================================================================================== */

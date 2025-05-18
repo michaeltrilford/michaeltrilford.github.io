@@ -55,17 +55,19 @@ class TabBar extends HTMLElement {
           top: 0;
           bottom: 0;
           background: var(--tab-background-active);
-          transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+          transition: left 0.3s ease-in-out, width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
           z-index: 0;
           transform: scaleX(1);
           transform-origin: center;
+          padding: var(--space-200) var(--space-400);
+          box-sizing: border-box;
+          box-shadow: 0 0 4px 0 var(--tab-shadow-active);
         }
         .highlight.blur {
           filter: blur(6px);
           transform: scaleY(2);
           transition: left 0.3s ease, width 0.3s ease, filter 0.3s ease, transform 0.3s ease;
         }
-
         ::slotted(tab-item) {
         position: relative;
         z-index: 1;

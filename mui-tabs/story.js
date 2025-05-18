@@ -112,11 +112,11 @@ class storyTabBar extends HTMLElement {
             <br />
             &nbsp;&nbsp;&lt;tab-bar active&gt;Item One&lt;/tab-bar&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-bar&gt;Item two&lt;/tab-bar&gt;
+            &nbsp;&nbsp;&lt;tab-item&gt;Item two&lt;/tab-item&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-bar&gt;Item three&lt;/tab-bar&gt;
+            &nbsp;&nbsp;&lt;tab-item&gt;Item three&lt;/tab-item&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-bar&gt;Item four&lt;/tab-bar&gt;
+            &nbsp;&nbsp;&lt;tab-item&gt;Item four&lt;/tab-item&gt;
             <br />
             &lt;/tab-bar&gt;
           </mui-code>

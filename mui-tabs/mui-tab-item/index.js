@@ -37,10 +37,11 @@ class TabItem extends HTMLElement {
         border-right: var(--border-thin);
         white-space: nowrap;
         cursor: pointer;
+        transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
       }
 
       :host(.active) {
-        background: transparent;
+        background: var(--tab-background-active);
         color: var(--tab-text-color-active);
         font-weight: var(--font-weight-bold);
         box-shadow: inset 0 0 0 2px var(--tab-inset-active);
