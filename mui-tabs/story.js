@@ -6,19 +6,18 @@ class storyTabBar extends HTMLElement {
       :host { display: block; }
     `;
 
-    const propItems = [
+    const propItemsTabBar = [
       {
-        name: 'label',
+        name: 'slot',
         required: true,
-        type: 'string',
-        options: '{text}',
+        type: 'node',
+        options: 'tab-item',
         default: '',
-        description:
-          'Provide the switch with a unique label. If without, a console warning will remind you to add label.',
+        description: 'Pass in the tab-item element',
       },
     ];
 
-    const rows = propItems
+    const tabBarRows = propItemsTabBar
       .map(
         (prop) => `
           <story-type-row
@@ -33,10 +32,11 @@ class storyTabBar extends HTMLElement {
       )
       .join('');
 
-    const accordions = propItems
+    const tabBarAccordions = propItemsTabBar
       .map((prop, index) => {
         // Check if it's the last item in the array
-        const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
+        const isLastChild =
+          index === propItemsTabBar.length - 1 ? 'last-child' : '';
 
         return `
             <mui-accordion-block
@@ -55,6 +55,73 @@ class storyTabBar extends HTMLElement {
               </story-type-slat>
             </mui-accordion-block>
           `;
+      })
+      .join('');
+
+    const propItemsTabItem = [
+      {
+        name: 'slot',
+        required: true,
+        type: 'node',
+        options: '{text}',
+        default: '',
+        description: 'Pass in text to the tab item',
+      },
+      {
+        name: 'icon',
+        type: 'string',
+        options: 'mui-icon-[name]',
+        default: '',
+        description: 'Pass in optional icon',
+      },
+      {
+        name: 'active',
+        type: 'boolean',
+        options: 'active',
+        default: '',
+        description: 'Set the active tab state',
+      },
+    ];
+
+    const tabItemRows = propItemsTabItem
+      .map(
+        (prop) => `
+            <story-type-row
+              ${prop.required ? 'required' : ''}
+              name="${prop.name}"
+              type="${prop.type}" 
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
+              description="${prop.description}">
+            </story-type-row>
+          `,
+      )
+      .join('');
+
+    const tabItemAccordions = propItemsTabItem
+      .map((prop, index) => {
+        // Check if it's the last item in the array
+        const isLastChild =
+          index === propItemsTabItem.length - 1 ? 'last-child' : '';
+
+        return `
+              <mui-accordion-block
+                style="position: relative; z-index: 1;" 
+                size="x-small" 
+                heading=${prop.name.charAt(0).toUpperCase() +
+                  prop.name.slice(1)} 
+                ${isLastChild}>
+                <story-type-slat
+                  slot="detail"
+                  ${prop.required ? 'required' : ''}
+                  name="${prop.name}"
+                  type="${prop.type}" 
+                  options="${prop.options || ''}"
+                  default="${prop.default || ''}"
+                  description="${prop.description}">
+                </story-type-slat>
+              </mui-accordion-block>
+            `;
       })
       .join('');
 
@@ -88,13 +155,24 @@ class storyTabBar extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types" nofooter>
+        <story-card title="Prop Types: Tab bar" nofooter>
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
-              ${rows}
+              ${tabBarRows}
             </story-type-table>
             <mui-accordion-group exclusive slot="showBelow">
-              ${accordions}
+              ${tabBarAccordions}
+            </mui-accordion-group>
+          </mui-responsive>
+        </story-card>
+
+        <story-card title="Prop Types: Tab item" nofooter>
+          <mui-responsive breakpoint="768" slot="body">
+            <story-type-table slot="showAbove">
+              ${tabItemRows}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${tabItemAccordions}
             </mui-accordion-group>
           </mui-responsive>
         </story-card>
