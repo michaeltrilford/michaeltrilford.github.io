@@ -334,13 +334,13 @@ html[data-theme='light'] {
   /* Addon */
   --addon-background: var(--grey-100);
   /* Tabs */
-  --tab-background: var(--white);
-  --tab-background-active: var(--grey-100);
-  --tab-text-color: var(--grey-700);
-  --tab-icon: var(--grey-700);
+  --tab-border-color: var(--grey-300);
+  --tab-background: var(--grey-200);
+  --tab-icon: var(--grey-900);
+  --tab-text-color: var(--grey-900);
+  --tab-background-active: var(--white);
   --tab-icon-active: var(--black);
   --tab-text-color-active: var(--black);
-  --tab-inset-active: var(--white);
   --tab-shadow-active: var(--black-opacity-10);
 }
 
@@ -483,14 +483,14 @@ html[data-theme='dark'] {
   /* Addon */
   --addon-background: var(--grey-1000);
   /* Tabs */
+  --tab-border-color: var(--grey-800);
   --tab-background: var(--grey-1100);
-  --tab-background-active: var(--grey-900);
-  --tab-text-color: var(--grey-400);
   --tab-icon: var(--grey-400);
+  --tab-text-color: var(--grey-400);
+  --tab-background-active: var(--grey-700);
   --tab-icon-active: var(--white);
   --tab-text-color-active: var(--white);
-  --tab-inset-active: var(--black);
-  --tab-shadow-active: var(--white-opacity-10);
+  --tab-shadow-active: var(--black);
 }
 
 /* ==================================================================================================== */

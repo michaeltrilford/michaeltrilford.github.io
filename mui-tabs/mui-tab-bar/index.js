@@ -45,7 +45,9 @@ class TabBar extends HTMLElement {
         :host {
         position: relative;
           display: inline-flex;
-          border: var(--border-thick);
+          border-width: var(--stroke-size-100);
+          border-style: var(--stroke-solid);
+          border-color: var(--tab-border-color);
           border-radius: var(--radius-200);
           overflow: hidden;
           background: var(--tab-background);
@@ -57,6 +59,7 @@ class TabBar extends HTMLElement {
         }
 
         .highlight {
+          border-radius: calc(var(--radius-200) - 0.2rem);
           position: absolute;
           top: 0;
           bottom: 0;
@@ -141,7 +144,7 @@ class TabBar extends HTMLElement {
     const elRect = el.getBoundingClientRect();
     const barRect = this.getBoundingClientRect();
 
-    const left = elRect.left - barRect.left - 2;
+    const left = elRect.left - barRect.left - 1;
     const width = elRect.width;
 
     if (this._hasInitialized) {
