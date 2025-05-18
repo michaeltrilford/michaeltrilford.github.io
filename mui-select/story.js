@@ -272,7 +272,7 @@ class storySelect extends HTMLElement {
               <mui-select
                 style="width: 120px;"
                 slot="before"
-                label="Brand"
+                label="Filter"
                 hide-label
                   options='[
                   {"value": "all", "label": "All"},
@@ -285,7 +285,7 @@ class storySelect extends HTMLElement {
             &lt;mui-input type="search" label="Search"&gt;<br>
             &nbsp;&nbsp;&lt;mui-select<br>
             &nbsp;&nbsp;&nbsp;&nbsp;slot="before"<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;label="Brand"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;label="Filter"<br>
             &nbsp;&nbsp;&nbsp;&nbsp;hide-label<br>
             &nbsp;&nbsp;&nbsp;&nbsp;style="width: 120px;"<br>
             &nbsp;&nbsp;&nbsp;&nbsp;options='[<br>
@@ -304,7 +304,7 @@ class storySelect extends HTMLElement {
               <mui-select
                 style="width: 100px;"
                 slot="after"
-                label="Brand"
+                label="Currency"
                 hide-label
                   options='[
                   {"value": "jpy", "label": "JPY"},
@@ -316,7 +316,7 @@ class storySelect extends HTMLElement {
             &lt;mui-input type="number" label="Amount to transfer"&gt;<br>
             &nbsp;&nbsp;&lt;mui-select<br>
             &nbsp;&nbsp;&nbsp;&nbsp;slot="after"<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;label="Brand"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;label="Currency"<br>
             &nbsp;&nbsp;&nbsp;&nbsp;hide-label<br>
             &nbsp;&nbsp;&nbsp;&nbsp;style="width: 100px;"<br>
             &nbsp;&nbsp;&nbsp;&nbsp;options='[<br>
