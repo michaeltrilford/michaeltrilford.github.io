@@ -151,6 +151,7 @@ class storyTabBar extends HTMLElement {
         title="Tab Bar"
         description="Allow users to switch between views or content sections by selecting from a group of tabs."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-tabs"
+        figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=126-560&t=ZfvVjZFxH7mQ72pi-1"
       >
 
       <mui-v-stack space="var(--space-700)">
