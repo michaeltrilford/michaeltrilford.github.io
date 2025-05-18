@@ -37,7 +37,7 @@ class TabItem extends HTMLElement {
         white-space: nowrap;
         cursor: pointer;
         transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
-        min-height: 4.4rem;
+        min-height: 4.2rem;
         box-sizing: border-box;
         border-radius: calc(var(--radius-200) - 0.2rem);
       }
