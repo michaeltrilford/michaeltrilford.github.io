@@ -102,6 +102,7 @@ const SharedArray = [
 
 const ImagesArray = [
   'images/mui-logo.js',
+  'images/mui-logo-mobile.js',
   'images/github-mark.js',
   'images/figma-mark.js',
   'images/guides-mark.js',

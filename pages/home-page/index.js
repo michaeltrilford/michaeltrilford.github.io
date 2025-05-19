@@ -228,7 +228,7 @@ class HomePage extends HTMLElement {
           <main slot="showBelow">
             <mui-v-stack space="var(--space-600)" style="text-align: center;">
               <div class="logo-wrapper">
-                <mui-logo color="var(--app-logo-color)"></mui-logo>
+                <mui-logo-mobile color="var(--app-logo-color)"></mui-logo-mobile>
               </div>
               <mui-v-stack space="var(--space-500)" style="max-width: 31rem; padding-left: var(--space-300); padding-right: var(--space-300);">
                 ${intro}
