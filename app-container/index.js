@@ -35,7 +35,7 @@ export class AppContainer extends HTMLElement {
     const routes = {
       '/home': 'home-page',
 
-      '/ux-guides': 'ux-guides',
+      '/design-guidelines': 'design-guidelines',
       '/theme-setup': 'theme-setup',
       '/create-app': 'create-app',
 

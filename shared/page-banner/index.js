@@ -75,15 +75,15 @@ class pageBanner extends HTMLElement {
           <mui-grid slot="showBelow" gap="var(--space-600)" col="1fr">
             <mui-v-stack space="var(--space-500)" alignY="start">
               <mui-v-stack  space="var(--space-100)">
-                <mui-h-stack space="var(--space-200)" alignY="center">
+                <mui-h-stack space="var(--space-100)" alignY="center">
                   <mui-h-stack style="width: 28px;">
                     <guides-logo size="small"></guides-logo>
                   </mui-h-stack>
-                  <mui-heading size="3" level="2">Guru Guides</mui-heading>
+                  <mui-heading size="3" level="2">Guides</mui-heading>
                 </mui-h-stack>
                 <mui-v-stack space="var(--space-400)" style="max-width: 50ch;">
-                  <mui-body size="small">A Figma plugin that brings MUI Guidelines direct into Figma, making component guidance easy to access where designers need it most.</mui-body>
-                  <mui-body size="x-small">Log in with your MUI credentials to view the guidelines.</mui-body>
+                  <mui-body size="small">MUI integrates with Guru Guides to provide in-context design guidelines direct in Figma, making component guidance easy to access where designers need it most.</mui-body>
+                  <mui-body size="x-small">Log in with your <strong>MUI credentials</strong> to view the guidelines.</mui-body>
                 </mui-v-stack>
               </mui-v-stack>
               <mui-button-group>
@@ -95,15 +95,15 @@ class pageBanner extends HTMLElement {
           <mui-grid slot="showAbove" col="1fr 440px">
             <mui-v-stack  space="var(--space-600)"  alignY="start" style="max-width: 41ch; padding-bottom: var(--space-700);">
               <mui-v-stack  space="var(--space-400)">
-                <mui-h-stack space="var(--space-400)" alignY="center">
+                <mui-h-stack space="var(--space-200)" alignY="center">
                   <mui-h-stack style="width: 38px;">
                     <guides-logo size="medium"></guides-logo>
                   </mui-h-stack>
-                  <mui-heading size="2" level="2">Guru Guides</mui-heading>
+                  <mui-heading size="2" level="2">Guides</mui-heading>
                 </mui-h-stack>
                 <mui-v-stack space="var(--space-400)" style="max-width: 50ch;">
-                  <mui-body size="medium">A Figma plugin that brings MUI Guidelines direct into Figma, making component guidance easy to access where designers need it most.</mui-body>
-                  <mui-body size="small">Log in with your MUI credentials to view the guidelines.</mui-body>
+                  <mui-body size="medium">MUI integrates with Guru Guides to provide in-context design guidelines direct in Figma, making component guidance easy to access where designers need it most.</mui-body>
+                  <mui-body size="small">Log in with your <strong>MUI credentials</strong> to view the guidelines.</mui-body>
                 </mui-v-stack>
               </mui-v-stack>
               <mui-button-group>

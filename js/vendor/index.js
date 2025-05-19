@@ -174,7 +174,7 @@ const RecipeArray = ['mui-table/recipe/table.js'];
 // New array for those pages
 const PageArray = [
   'pages/home-page/index.js',
-  'pages/ux-guides/index.js',
+  'pages/design-guidelines/index.js',
   'pages/theme-setup/index.js',
   'pages/create-app/index.js',
 ];
