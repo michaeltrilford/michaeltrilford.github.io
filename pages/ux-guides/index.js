@@ -63,8 +63,12 @@ class UXGuides extends HTMLElement {
               </mui-v-stack>
               <mui-v-stack space="var(--space-400)">        
   
-                <mui-input label="Email" id="email-input" name="email" value="mui-web-components@proton.me"></mui-input>
-                <mui-input label="Password" id="password-input" name="password" value="muikit"></mui-input>
+                <mui-input label="Email" id="email-input" name="email" value="mui-web-components@proton.me">
+                  <mui-button slot="after">Copy</mui-button>
+                </mui-input>
+                <mui-input label="Password" id="password-input" name="password" value="muikit">
+                  <mui-button slot="after">Copy</mui-button>
+                </mui-input>
 
               </mui-v-stack>
             </mui-v-stack>
@@ -75,6 +79,34 @@ class UXGuides extends HTMLElement {
 
       </story-template>
     `;
+
+    // Wait for the DOM to render
+    requestAnimationFrame(() => {
+      const copyButtons = shadowRoot.querySelectorAll('mui-button');
+
+      copyButtons.forEach((button) => {
+        button.addEventListener('click', async () => {
+          const parentInput = button.closest('mui-input');
+          const value = parentInput?.getAttribute('value');
+
+          if (value) {
+            try {
+              await navigator.clipboard.writeText(value);
+              button.innerText = 'Copied!';
+              setTimeout(() => {
+                button.innerText = 'Copy';
+              }, 1500);
+            } catch (err) {
+              console.error('Failed to copy text: ', err);
+              button.innerText = 'Error';
+              setTimeout(() => {
+                button.innerText = 'Copy';
+              }, 1500);
+            }
+          }
+        });
+      });
+    });
   }
 }
 

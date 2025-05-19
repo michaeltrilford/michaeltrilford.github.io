@@ -329,7 +329,7 @@ class storyInput extends HTMLElement {
             <br />
             &gt;
             <br>
-            &nbsp;&nbsp;&lt;mui-button&gt;Copy&lt;/mui-button&gt;<br>
+            &nbsp;&nbsp;&lt;mui-button slot="after"&gt;Copy&lt;/mui-button&gt;<br>
             &lt;/mui-input&gt;
           </<mui-code>
         </story-card>
