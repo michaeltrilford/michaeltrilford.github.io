@@ -28,6 +28,68 @@ class TabBar extends HTMLElement {
       this.classList.add('full-width');
     }
 
+    this.setAttribute('role', 'tablist');
+
+    const orientation = this.getAttribute('orientation') || 'horizontal';
+    this.setAttribute('aria-orientation', orientation);
+
+    this.addEventListener('keydown', (e) => {
+      const children = Array.from(this.children);
+      const activeIndex = children.findIndex((el) => el.hasAttribute('active'));
+      const orientation = this.getAttribute('aria-orientation') || 'horizontal';
+
+      let nextIndex = activeIndex;
+
+      switch (e.key) {
+        case 'ArrowRight':
+          if (orientation === 'horizontal') {
+            nextIndex = (activeIndex + 1) % children.length;
+            e.preventDefault();
+          }
+          break;
+
+        case 'ArrowLeft':
+          if (orientation === 'horizontal') {
+            nextIndex = (activeIndex - 1 + children.length) % children.length;
+            e.preventDefault();
+          }
+          break;
+
+        case 'ArrowDown':
+          if (orientation === 'vertical') {
+            nextIndex = (activeIndex + 1) % children.length;
+            e.preventDefault();
+          }
+          break;
+
+        case 'ArrowUp':
+          if (orientation === 'vertical') {
+            nextIndex = (activeIndex - 1 + children.length) % children.length;
+            e.preventDefault();
+          }
+          break;
+
+        case 'Home':
+          nextIndex = 0;
+          e.preventDefault();
+          break;
+
+        case 'End':
+          nextIndex = children.length - 1;
+          e.preventDefault();
+          break;
+
+        default:
+          return;
+      }
+
+      const nextTab = children[nextIndex];
+      if (nextTab) {
+        this.setActiveTab(nextTab);
+        nextTab.focus();
+      }
+    });
+
     children.forEach((el, idx) => {
       el.classList.remove('first', 'middle', 'last', 'only');
 
@@ -58,7 +120,6 @@ class TabBar extends HTMLElement {
           border-style: var(--stroke-solid);
           border-color: var(--tab-border-color);
           border-radius: var(--tab-radius);
-          overflow: hidden;
           background: var(--tab-background);
           will-change: transform;
           box-sizing: border-box;

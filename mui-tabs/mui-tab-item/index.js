@@ -17,6 +17,7 @@ class TabItem extends HTMLElement {
   connectedCallback() {
     const iconTag = this.getAttribute('icon');
 
+    this.setAttribute('tabindex', this.hasAttribute('active') ? '0' : '-1');
     // Clear existing shadow DOM content
     this.shadowRoot.innerHTML = '';
 
@@ -45,6 +46,10 @@ class TabItem extends HTMLElement {
         color: var(--tab-text-color-active);
       }
 
+      :host(.active:focus-visible) {
+        outline: var(--outline-thick);
+      }
+
       ::slotted(*) {
         margin-left: var(--space-100);
       }
@@ -69,6 +74,10 @@ class TabItem extends HTMLElement {
   updateActiveState() {
     const isActive = this.hasAttribute('active');
     this.classList.toggle('active', isActive);
+
+    this.setAttribute('role', 'tab');
+    this.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    this.setAttribute('tabindex', isActive ? '0' : '-1');
 
     if (this.iconEl) {
       // Pass the CSS variable itself, not computed values
