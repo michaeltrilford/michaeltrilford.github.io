@@ -40,35 +40,26 @@ class DesignGuidelines extends HTMLElement {
 
        <page-banner></page-banner>
 
-        <page-card noFooter title="MUI Credentials">
+        <page-card noFooter title="MUI Credentials" description="To view the MUI Guidelines in Guru Guides, you must be logged in.">
           <mui-v-stack slot="body" space="var(--space-600)">  
 
-            <mui-v-stack space="var(--space-500)">
-              <mui-v-stack space="var(--space-100)">
 
-              <mui-message 
-              heading="Copy the credentials" 
-              variant="info"
-            >
-              To view the MUI Guidelines in Guru Guides, you must be logged in.
-            </mui-message>
 
-              </mui-v-stack>
-              <mui-v-stack space="var(--space-400)">        
-  
-                <mui-input label="Email" id="email-input" name="email" value="mui-web-components@proton.me">
-                  <mui-button slot="after">Copy</mui-button>
-                </mui-input>
-                <mui-input label="Password" id="password-input" name="password" value="muikit">
-                  <mui-button slot="after">Copy</mui-button>
-                </mui-input>
+            <mui-v-stack space="var(--space-400)">        
 
-              </mui-v-stack>
+              <mui-input label="Email" id="email-input" name="email" value="mui-web-components@proton.me">
+                <mui-button slot="after">Copy</mui-button>
+              </mui-input>
+              <mui-input label="Password" id="password-input" name="password" value="muikit">
+                <mui-button slot="after">Copy</mui-button>
+              </mui-input>
+
             </mui-v-stack>
 
-            <mui-responsive breakpoint="900">
 
-              <mui-grid gap="var(--space-700)" slot="showAbove">
+            <mui-responsive breakpoint="1080">
+
+              <mui-grid gap="var(--space-500)" slot="showAbove">
                 ${figmaContent}
                 ${websiteContent}
               </mui-grid>
