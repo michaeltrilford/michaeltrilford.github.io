@@ -3,10 +3,15 @@ class TabBar extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
     this._handleResize = this._handleResize.bind(this);
+    this._hasInitialized = false;
+    this._resizeTimeout = null;
+    this._observedTab = null;
+    this._activeTab = null;
 
+    // Use a more performant approach with transform instead of left/width adjustments
     this._resizeObserver = new ResizeObserver(() => {
       if (this._activeTab) {
-        this.setActiveTab(this._activeTab);
+        this._updateHighlight(this._activeTab);
       }
     });
   }
@@ -55,6 +60,8 @@ class TabBar extends HTMLElement {
           border-radius: var(--tab-radius);
           overflow: hidden;
           background: var(--tab-background);
+          will-change: transform;
+          box-sizing: border-box;
         }
 
         :host(.full-width) {
@@ -68,61 +75,133 @@ class TabBar extends HTMLElement {
           top: 0;
           bottom: 0;
           background: var(--tab-background-active);
-          transition: left var(--tab-animation-speed) ease-in-out, width var(--tab-animation-speed) ease-in-out;
+          transition: transform var(--tab-animation-speed) cubic-bezier(0.25, 1, 0.5, 1), width var(--tab-animation-speed) cubic-bezier(0.25, 1, 0.5, 1);
           z-index: 0;
-          transform: scaleX(1);
-          transform-origin: center;
           padding: var(--space-200) var(--space-400);
           box-sizing: border-box;
           box-shadow: 0 0 4px 4px var(--tab-shadow-active);
+          will-change: transform, width;
+          transform: translateX(0);
+          width: 0;
         }
 
         ::slotted(tab-item) {
-        position: relative;
-        z-index: 1;
+          position: relative;
+          z-index: 1;
           flex: 1;
+          contain: content; /* Performance optimization */
         }
-
       </style>
       <div class="highlight"></div>
       <slot></slot>
     `;
 
+    // Attach resize handler
     window.addEventListener('resize', this._handleResize);
 
-    // Initial highlight positioning
+    // Start observing the component itself for resize events
+    this._resizeObserver.observe(this);
+
+    // Initial highlight positioning with requestAnimationFrame for smoother initialization
     requestAnimationFrame(() => {
       const highlight = this.shadowRoot.querySelector('.highlight');
       highlight.style.transition = 'none';
 
+      // Find the active tab or use the first tab
       const active =
         children.find((el) => el.hasAttribute('active')) || children[0];
-      this.setActiveTab(active);
+
+      if (active) {
+        this._activeTab = active;
+        active.setAttribute('active', '');
+        this._updateHighlight(active);
+
+        // Start observing this tab
+        this._observedTab = active;
+        this._resizeObserver.observe(active);
+      }
+
+      // Force a repaint before enabling transitions
+      void highlight.offsetWidth;
 
       requestAnimationFrame(() => {
         highlight.style.transition = '';
+        this._hasInitialized = true;
       });
     });
   }
+
   disconnectedCallback() {
     window.removeEventListener('resize', this._handleResize);
+
+    // Clean up all ResizeObserver observations
     if (this._observedTab) {
       this._resizeObserver.unobserve(this._observedTab);
     }
+
+    // Stop observing the component itself
+    this._resizeObserver.unobserve(this);
+
+    // Clean up any pending timeouts
+    if (this._resizeTimeout) {
+      clearTimeout(this._resizeTimeout);
+    }
+
+    // Disconnect the observer completely
+    this._resizeObserver.disconnect();
   }
 
   _handleResize() {
+    if (!this._activeTab) return;
+
+    // Cancel any previous resize timeouts
+    if (this._resizeTimeout) {
+      clearTimeout(this._resizeTimeout);
+    }
+
+    // Ensure the active tab maintains its active state
+    if (this._activeTab) {
+      Array.from(this.children).forEach((child) => {
+        if (child === this._activeTab) {
+          child.setAttribute('active', '');
+        } else {
+          child.removeAttribute('active');
+        }
+      });
+    }
+
     const highlight = this.shadowRoot.querySelector('.highlight');
-    if (!highlight || !this._activeTab) return;
+    if (!highlight) return;
 
-    // Temporarily hide highlight
-    highlight.style.visibility = 'hidden';
+    // Temporarily pause transitions during resize for better performance
+    highlight.style.transition = 'none';
 
-    clearTimeout(this._resizeTimeout);
+    // Update immediately with current position for smoother experience
+    this._updateHighlight(this._activeTab);
+
+    // Force reflow
+    void highlight.offsetWidth;
+
+    // Re-enable transitions after short delay
     this._resizeTimeout = setTimeout(() => {
-      this.setActiveTab(this._activeTab);
-      highlight.style.visibility = '';
-    }, 150); // Slight delay to let resizing settle
+      highlight.style.transition = '';
+      this._updateHighlight(this._activeTab);
+    }, 100); // Short delay for better performance
+  }
+
+  _updateHighlight(el) {
+    const highlight = this.shadowRoot.querySelector('.highlight');
+    const elRect = el.getBoundingClientRect();
+    const barRect = this.getBoundingClientRect();
+
+    // Use precise floating-point values to avoid rounding issues
+    // Account for the border width by adjusting for border-width
+    const borderWidth = parseFloat(getComputedStyle(this).borderWidth) || 0;
+    const leftPosition = elRect.left - barRect.left - borderWidth;
+
+    // Update position with transform and exact width with CSS calc for better performance and precision
+    highlight.style.transform = `translateX(${leftPosition}px)`;
+    highlight.style.width = `${elRect.width}px`;
   }
 
   setActiveTab(el) {
@@ -140,22 +219,14 @@ class TabBar extends HTMLElement {
     this._observedTab = el;
     this._resizeObserver.observe(el);
 
-    const highlight = this.shadowRoot.querySelector('.highlight');
-    const elRect = el.getBoundingClientRect();
-    const barRect = this.getBoundingClientRect();
-
-    const left = elRect.left - barRect.left - 1;
-    const width = elRect.width;
-
+    // Update highlight with proper transitions
     if (this._hasInitialized) {
-      // Update position and width with transition
-      highlight.style.left = `${left}px`;
-      highlight.style.width = `${width}px`;
+      this._updateHighlight(el);
     } else {
-      // Instantly place the highlight on first run
+      // Handle first initialization
+      const highlight = this.shadowRoot.querySelector('.highlight');
       highlight.style.transition = 'none';
-      highlight.style.left = `${left}px`;
-      highlight.style.width = `${width}px`;
+      this._updateHighlight(el);
 
       void highlight.offsetWidth; // Force reflow
       highlight.style.transition = '';

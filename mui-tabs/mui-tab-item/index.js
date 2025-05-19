@@ -36,16 +36,13 @@ class TabItem extends HTMLElement {
         background: transparent;
         white-space: nowrap;
         cursor: pointer;
-        transition: background var(--tab-animation-speed) ease-in-out;
         min-height: 4.2rem;
         box-sizing: border-box;
         border-radius: calc(var(--tab-radius) - 0.2rem);
       }
 
       :host(.active) {
-        background: var(--tab-background-active);
         color: var(--tab-text-color-active);
-        font-weight: var(--font-weight-bold);
       }
 
       ::slotted(*) {

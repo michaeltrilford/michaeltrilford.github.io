@@ -208,8 +208,8 @@ class storyTabBar extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Animation Speed 300ms">
-          <tab-bar slot="body" speed="300">
+        <story-card title="Animation Speed 500ms">
+          <tab-bar slot="body" speed="500">
             <tab-item active>Item 1</tab-item>
             <tab-item>Item 2</tab-item>
             <tab-item>Item 3</tab-item>
