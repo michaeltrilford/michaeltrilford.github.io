@@ -197,6 +197,18 @@ html[data-brand='jal'][data-theme='light'] {
   /* Switch */
   --switch-track-background: var(--jal-grey-300);
   --switch-track-background-checked: var(--jal-red-400);
+
+  /* Tabs */
+  --tab-border-color: var(--jal-red-800);
+
+  --tab-background: var(--jal-red-500);
+  --tab-icon: var(--jal-white);
+  --tab-text-color: var(--jal-white);
+
+  --tab-background-active: var(--jal-white);
+  --tab-icon-active: var(--jal-red-500);
+  --tab-text-color-active: var(--jal-red-500);
+  --tab-shadow-active: var(--jal-red-600);
 }
 
 /* =============================================================================== */
@@ -310,6 +322,18 @@ html[data-brand='jal'][data-theme='dark'] {
   /* Switch */
   --switch-track-background: var(--jal-grey-500);
   --switch-track-background-checked: var(--jal-red-300);
+
+  /* Tabs */
+  --tab-border-color: var(--jal-grey-700);
+
+  --tab-background: var(--jal-red-1000);
+  --tab-icon: var(--jal-white);
+  --tab-text-color: var(--jal-white);
+
+  --tab-background-active: var(--jal-red-500);
+  --tab-icon-active: var(--jal-white);
+  --tab-text-color-active: var(--jal-white);
+  --tab-shadow-active: var(--jal-black);
 }
 
 /* ================================================================= */

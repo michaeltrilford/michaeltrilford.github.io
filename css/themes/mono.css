@@ -142,6 +142,18 @@ html[data-brand='mono'][data-theme='light'] {
   /* Switch */
   --switch-track-background: var(--mono-grey-300);
   --switch-track-background-checked: var(--mono-black);
+
+  /* Tabs */
+  --tab-border-color: var(--mono-grey-500);
+
+  --tab-background: var(--mono-grey-100);
+  --tab-icon: var(--mono-grey-900);
+  --tab-text-color: var(--mono-grey-900);
+
+  --tab-background-active: var(--mono-grey-900);
+  --tab-icon-active: var(--mono-grey-100);
+  --tab-text-color-active: var(--mono-grey-100);
+  --tab-shadow-active: var(--mono-grey-200);
 }
 
 /* =============================================================================== */
@@ -257,6 +269,18 @@ html[data-brand='mono'][data-theme='dark'] {
   /* Switch */
   --switch-track-background: var(--mono-grey-500);
   --switch-track-background-checked: var(--mono-white);
+
+  /* Tabs */
+  --tab-border-color: var(--mono-grey-500);
+
+  --tab-background: var(--mono-grey-900);
+  --tab-icon: var(--mono-grey-100);
+  --tab-text-color: var(--mono-grey-100);
+
+  --tab-background-active: var(--mono-grey-100);
+  --tab-icon-active: var(--mono-grey-900);
+  --tab-text-color-active: var(--mono-grey-900);
+  --tab-shadow-active: var(--mono-black);
 }
 
 /* ================================================================= */

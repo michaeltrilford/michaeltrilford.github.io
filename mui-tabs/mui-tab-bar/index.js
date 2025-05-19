@@ -12,6 +12,9 @@ class TabBar extends HTMLElement {
   }
 
   connectedCallback() {
+    const animationSpeed = this.getAttribute('speed') || '200';
+    this._animationSpeed = parseInt(animationSpeed, 10);
+
     const children = Array.from(this.children);
 
     const shouldBeFullWidth = this.hasAttribute('full-width');
@@ -43,12 +46,13 @@ class TabBar extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         :host {
-        position: relative;
+          --tab-animation-speed: ${this._animationSpeed}ms;
+          position: relative;
           display: inline-flex;
           border-width: var(--stroke-size-100);
           border-style: var(--stroke-solid);
           border-color: var(--tab-border-color);
-          border-radius: var(--radius-200);
+          border-radius: var(--tab-radius);
           overflow: hidden;
           background: var(--tab-background);
         }
@@ -59,24 +63,20 @@ class TabBar extends HTMLElement {
         }
 
         .highlight {
-          border-radius: calc(var(--radius-200) - 0.2rem);
+          border-radius: calc(var(--tab-radius) - 0.2rem);
           position: absolute;
           top: 0;
           bottom: 0;
           background: var(--tab-background-active);
-          transition: left 0.3s ease-in-out, width 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          transition: left var(--tab-animation-speed) ease-in-out, width var(--tab-animation-speed) ease-in-out;
           z-index: 0;
           transform: scaleX(1);
           transform-origin: center;
           padding: var(--space-200) var(--space-400);
           box-sizing: border-box;
-          box-shadow: 0 0 4px 0 var(--tab-shadow-active);
+          box-shadow: 0 0 4px 4px var(--tab-shadow-active);
         }
-        .highlight.blur {
-          filter: blur(6px);
-          transform: scaleY(2);
-          transition: left 0.3s ease, width 0.3s ease, filter 0.3s ease, transform 0.3s ease;
-        }
+
         ::slotted(tab-item) {
         position: relative;
         z-index: 1;
@@ -148,20 +148,16 @@ class TabBar extends HTMLElement {
     const width = elRect.width;
 
     if (this._hasInitialized) {
-      highlight.classList.add('blur');
+      // Update position and width with transition
       highlight.style.left = `${left}px`;
       highlight.style.width = `${width}px`;
-
-      clearTimeout(this._blurTimeout);
-      this._blurTimeout = setTimeout(() => {
-        highlight.classList.remove('blur');
-      }, 300);
     } else {
+      // Instantly place the highlight on first run
       highlight.style.transition = 'none';
       highlight.style.left = `${left}px`;
       highlight.style.width = `${width}px`;
 
-      void highlight.offsetWidth;
+      void highlight.offsetWidth; // Force reflow
       highlight.style.transition = '';
       this._hasInitialized = true;
     }

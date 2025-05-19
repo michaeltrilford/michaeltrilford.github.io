@@ -182,6 +182,18 @@ html[data-brand='ana'][data-theme='light'] {
   /* Switch */
   --switch-track-background: var(--ana-grey-300);
   --switch-track-background-checked: var(--ana-blue-400);
+
+  /* Tabs */
+  --tab-border-color: var(--ana-blue-800);
+
+  --tab-background: var(--ana-blue-50);
+  --tab-icon: var(--ana-blue-500);
+  --tab-text-color: var(--ana-blue-500);
+
+  --tab-background-active: var(--ana-blue-500);
+  --tab-icon-active: var(--ana-blue-50);
+  --tab-text-color-active: var(--ana-blue-50);
+  --tab-shadow-active: var(--black-opacity-10);
 }
 
 /* =============================================================================== */
@@ -297,6 +309,18 @@ html[data-brand='ana'][data-theme='dark'] {
   /* Switch */
   --switch-track-background: var(--ana-grey-700);
   --switch-track-background-checked: var(--ana-blue-400);
+
+  /* Tabs */
+  --tab-border-color: var(--ana-blue-500);
+
+  --tab-background: var(--ana-blue-800);
+  --tab-icon: var(--ana-blue-100);
+  --tab-text-color: var(--ana-blue-100);
+
+  --tab-background-active: var(--ana-blue-100);
+  --tab-icon-active: var(--ana-blue-800);
+  --tab-text-color-active: var(--ana-blue-800);
+  --tab-shadow-active: var(--black-opacity-10);
 }
 
 /* ================================================================= */
@@ -321,4 +345,6 @@ html[data-brand='ana'] {
 
   /* Card */
   --card-radius: var(--radius-150);
+  /* Tab */
+  --tab-radius: var(--radius-400);
 }

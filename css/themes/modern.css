@@ -187,6 +187,18 @@ html[data-brand='modern'][data-theme='light'] {
   /* Switch */
   --switch-track-background: var(--grey-300);
   --switch-track-background-checked: var(--grey-300);
+
+  /* Tabs */
+  --tab-border-color: var(--grey-500);
+
+  --tab-background: var(--grey-100);
+  --tab-icon: var(--grey-900);
+  --tab-text-color: var(--grey-900);
+
+  --tab-background-active: var(--grey-900);
+  --tab-icon-active: var(--grey-100);
+  --tab-text-color-active: var(--grey-100);
+  --tab-shadow-active: var(--grey-200);
 }
 
 /* =============================================================================== */
@@ -298,6 +310,18 @@ html[data-brand='modern'][data-theme='dark'] {
   /* Switch */
   --switch-track-background: var(--grey-300);
   --switch-track-background-checked: var(--grey-300);
+
+  /* Tabs */
+  --tab-border-color: var(--grey-700);
+
+  --tab-background: var(--grey-800);
+  --tab-icon: var(--grey-100);
+  --tab-text-color: var(--grey-100);
+
+  --tab-background-active: var(--grey-100);
+  --tab-icon-active: var(--grey-800);
+  --tab-text-color-active: var(--grey-800);
+  --tab-shadow-active: var(--grey-900);
 }
 
 /* ================================================================= */

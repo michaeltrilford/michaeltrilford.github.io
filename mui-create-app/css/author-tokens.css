@@ -312,9 +312,11 @@ html[data-theme='light'] {
   --addon-background: var(--grey-100);
   /* Tabs */
   --tab-border-color: var(--grey-300);
+
   --tab-background: var(--grey-200);
   --tab-icon: var(--grey-900);
   --tab-text-color: var(--grey-900);
+
   --tab-background-active: var(--white);
   --tab-icon-active: var(--black);
   --tab-text-color-active: var(--black);
@@ -461,9 +463,11 @@ html[data-theme='dark'] {
   --addon-background: var(--grey-1000);
   /* Tabs */
   --tab-border-color: var(--grey-800);
+
   --tab-background: var(--grey-1100);
   --tab-icon: var(--grey-400);
   --tab-text-color: var(--grey-400);
+
   --tab-background-active: var(--grey-700);
   --tab-icon-active: var(--white);
   --tab-text-color-active: var(--white);
@@ -554,4 +558,6 @@ html[data-theme='dark'] {
   --message-padding: var(--space-400);
   --message-gap-horizontal: var(--space-300);
   --message-gap-vertical: var(--space-100);
+  /* Tab */
+  --tab-radius: var(--radius-200);
 }

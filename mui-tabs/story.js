@@ -15,6 +15,13 @@ class storyTabBar extends HTMLElement {
         default: '',
         description: 'Pass in the tab-item element',
       },
+      {
+        name: 'speed',
+        type: 'string',
+        options: '',
+        default: '200ms',
+        description: 'Adjust the timing of the tab animation',
+      },
     ];
 
     const tabBarRows = propItemsTabBar
@@ -189,7 +196,29 @@ class storyTabBar extends HTMLElement {
           <mui-code slot="footer">
             &lt;tab-bar&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-bar active&gt;Item One&lt;/tab-bar&gt;
+            &nbsp;&nbsp;&lt;tab-item active&gt;Item One&lt;/tab-item&gt;
+            <br />
+            &nbsp;&nbsp;&lt;tab-item&gt;Item two&lt;/tab-item&gt;
+            <br />
+            &nbsp;&nbsp;&lt;tab-item&gt;Item three&lt;/tab-item&gt;
+            <br />
+            &nbsp;&nbsp;&lt;tab-item&gt;Item four&lt;/tab-item&gt;
+            <br />
+            &lt;/tab-bar&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Animation Speed 300ms">
+          <tab-bar slot="body" speed="300">
+            <tab-item active>Item 1</tab-item>
+            <tab-item>Item 2</tab-item>
+            <tab-item>Item 3</tab-item>
+            <tab-item>Item 4</tab-item>
+          </tab-bar>
+          <mui-code slot="footer">
+            &lt;tab-bar speed="300"&gt;
+            <br />
+            &nbsp;&nbsp;&lt;tab-item active&gt;Item One&lt;/tab-item&gt;
             <br />
             &nbsp;&nbsp;&lt;tab-item&gt;Item two&lt;/tab-item&gt;
             <br />
