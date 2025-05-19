@@ -471,7 +471,7 @@ html[data-theme='dark'] {
   --tab-background-active: var(--grey-700);
   --tab-icon-active: var(--white);
   --tab-text-color-active: var(--white);
-  --tab-shadow-active: var(--black);
+  --tab-shadow-active: var(--black-opacity-40);
 }
 
 /* ==================================================================================================== */
