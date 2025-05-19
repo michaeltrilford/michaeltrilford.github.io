@@ -123,6 +123,7 @@ class TabBar extends HTMLElement {
           background: var(--tab-background);
           will-change: transform;
           box-sizing: border-box;
+          overflow: hidden;
         }
 
         :host(.full-width) {

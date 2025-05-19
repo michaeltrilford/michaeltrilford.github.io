@@ -48,6 +48,7 @@ class TabItem extends HTMLElement {
 
       :host(.active:focus-visible) {
         outline: var(--outline-thick);
+        outline-offset: -5px;
       }
 
       ::slotted(*) {
