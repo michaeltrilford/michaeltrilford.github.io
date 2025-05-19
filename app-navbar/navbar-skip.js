@@ -3,7 +3,7 @@ class appNavbarSkip extends HTMLElement {
   constructor() {
     super();
 
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styles = `
 
@@ -67,15 +67,22 @@ class appNavbarSkip extends HTMLElement {
       <mui-button variant="primary" class="skip-to-main" role="button">Skip Nav</mui-button>
     `;
 
-    // Expose the button by dispatching a custom event
-    const skipButton = shadowRoot.querySelector(".skip-to-main");
+    const skipButton = shadowRoot.querySelector('.skip-to-main');
     if (skipButton) {
-      const event = new CustomEvent("skip-link-ready", {
+      skipButton.addEventListener('click', () => {
+        const main = document.querySelector('app-container');
+        if (main) {
+          main.setAttribute('tabindex', '0'); // Make it tabbable
+          main.focus(); // Focus the container
+        }
+      });
+
+      const event = new CustomEvent('skip-link-ready', {
         detail: { skipButton },
       });
-      window.dispatchEvent(event); // Dispatch the event to the global window
+      window.dispatchEvent(event);
     }
   }
 }
 
-customElements.define("app-navbar-skip", appNavbarSkip);
+customElements.define('app-navbar-skip', appNavbarSkip);

@@ -3,7 +3,7 @@ export class AppContainer extends HTMLElement {
     super();
     this.attachShadow({ mode: 'open' });
 
-    this.setAttribute('tabindex', '-1'); // Make the app-container focusable
+    this.setAttribute('tabindex', '0'); // Make the app-container focusable
     this.setAttribute('role', 'main'); // Helps with screen reader navigation
 
     const style = document.createElement('style');
@@ -115,6 +115,9 @@ export class AppContainer extends HTMLElement {
 
   connectedCallback() {
     window.addEventListener('hashchange', () => this.loadComponent());
+    this.addEventListener('blur', () => {
+      this.setAttribute('tabindex', '-1'); // Reset after user tabs away
+    });
     this.loadComponent();
   }
 
