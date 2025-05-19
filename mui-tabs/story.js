@@ -159,6 +159,15 @@ class storyTabBar extends HTMLElement {
         description="Allow users to switch between views or content sections by selecting from a group of tabs."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-tabs"
         figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=126-560&t=ZfvVjZFxH7mQ72pi-1"
+        accessibility="
+          ArrowLeft/ArrowRight, Home and End keys let keyboard users navigate between tab-items.; 
+          aria-selected and tabindex attributes are updated on each tab-item when it becomes active or inactive.; 
+          Each active tab-item can receive focus and shows a focus-visible outline.; 
+          The tab-bar uses role=tablist to group related tab-items and each tab-item uses role=tab within the tab-bar.; 
+          The tab-bar can be labelled using aria-label or aria-labelledby.;
+          aria-orientation is set on the tab-bar to inform assistive technology of its layout.
+        "
+
       >
 
       <mui-v-stack space="var(--space-700)">
