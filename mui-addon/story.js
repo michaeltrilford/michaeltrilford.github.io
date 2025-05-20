@@ -65,7 +65,7 @@ class storyAddon extends HTMLElement {
         title="Add On"
         description="Enhance form inputs by using mui-addon to display supplementary information like units, prefixes, or suffixes."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-addon/index.js"
-
+        figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=133-588&t=a1UUlxRE4ZIJUKwJ-1"
       >
 
       <mui-v-stack space="var(--space-700)">
