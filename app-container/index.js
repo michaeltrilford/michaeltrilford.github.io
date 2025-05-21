@@ -50,6 +50,7 @@ export class AppContainer extends HTMLElement {
 
       '/field': 'story-field',
       '/tab-bar': 'story-tab-bar',
+      '/carousel': 'story-carousel',
       '/addon': 'story-addon',
       '/input': 'story-input',
       '/select': 'story-select',

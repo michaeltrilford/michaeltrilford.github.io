@@ -58,7 +58,8 @@ class TabItem extends HTMLElement {
 
     this.shadowRoot.appendChild(style);
 
-    if (iconTag) {
+    // Defensive check: only create if a valid tag name and custom element is defined
+    if (iconTag && iconTag.trim() !== '' && customElements.get(iconTag)) {
       const iconEl = document.createElement(iconTag);
       iconEl.setAttribute('color', 'var(--tab-icon)');
       iconEl.setAttribute('size', 'small');
