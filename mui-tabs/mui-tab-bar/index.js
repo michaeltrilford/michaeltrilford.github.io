@@ -294,6 +294,15 @@ class TabBar extends HTMLElement {
       highlight.style.transition = '';
       this._hasInitialized = true;
     }
+
+    // Dispatch the tab-change event
+    this.dispatchEvent(
+      new CustomEvent('tab-change', {
+        bubbles: true,
+        composed: true,
+        detail: { activeId: el.id },
+      }),
+    );
   }
 }
 

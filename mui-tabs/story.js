@@ -133,21 +133,14 @@ class storyTabBar extends HTMLElement {
       .join('');
 
     const tabData = [
-      { label: 'Message', icon: 'mui-icon-message', active: true },
-      { label: 'Notification', icon: 'mui-icon-notification' },
+      { id: 'item1', label: 'Message', icon: 'mui-icon-message', active: true },
+      { id: 'item2', label: 'Notification', icon: 'mui-icon-notification' },
     ];
 
     const tabItemsHTML = tabData
-      .map(({ label, icon, active }) => {
+      .map(({ id, label, icon, active }) => {
         const activeAttr = active ? ' active' : '';
-        return `<tab-item icon="${icon}"${activeAttr}>${label}</tab-item>`;
-      })
-      .join('');
-
-    const tabItemsHTMLFluid = tabData
-      .map(({ label, icon, active }) => {
-        const activeAttr = active ? ' active' : '';
-        return `<tab-item icon="${icon}"${activeAttr}>${label}</tab-item>`;
+        return `<tab-item id="${id}" icon="${icon}"${activeAttr}>${label}</tab-item>`;
       })
       .join('');
 
@@ -163,8 +156,8 @@ class storyTabBar extends HTMLElement {
           Left/Right arrows, Home and End keys let keyboard users navigate between tab-items.; 
           aria-selected and tabindex attributes are updated on each tab-item when it becomes active or inactive.; 
           Each active tab-item can receive focus and shows a focus-visible outline.; 
-          The tab-bar uses role=tablist to group related tab-items and each tab-item uses role=tab within the tab-bar.; 
-          The tab-bar can be labelled using aria-label or aria-labelledby.;
+          tab-bar uses role=tablist to group related tab-items and each tab-item uses role=tab within the tab-bar.; 
+          tab-bar can be labelled using aria-label or aria-labelledby.;
           aria-orientation is set on the tab-bar to inform assistive technology of its layout.
         "
 
@@ -197,43 +190,84 @@ class storyTabBar extends HTMLElement {
 
         <story-card title="Default">
           <tab-bar slot="body">
-            <tab-item active>Item 1</tab-item>
-            <tab-item>Item 2</tab-item>
-            <tab-item>Item 3</tab-item>
-            <tab-item>Item 4</tab-item>
+            <tab-item active id="item1">Item 1</tab-item>
+            <tab-item id="item2">Item 2</tab-item>
+            <tab-item id="item3">Item 3</tab-item>
+            <tab-item id="item4">Item 4</tab-item>
           </tab-bar>
           <mui-code slot="footer">
             &lt;tab-bar&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-item active&gt;Item One&lt;/tab-item&gt;
+            &nbsp;&nbsp;&lt;tab-item active id="item1"&gt;Item One&lt;/tab-item&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-item&gt;Item two&lt;/tab-item&gt;
+            &nbsp;&nbsp;&lt;tab-item id="item2"&gt;Item two&lt;/tab-item&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-item&gt;Item three&lt;/tab-item&gt;
+            &nbsp;&nbsp;&lt;tab-item id="item3"&gt;Item three&lt;/tab-item&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-item&gt;Item four&lt;/tab-item&gt;
+            &nbsp;&nbsp;&lt;tab-item id="item4"&gt;Item four&lt;/tab-item&gt;
             <br />
             &lt;/tab-bar&gt;
           </mui-code>
         </story-card>
 
+        <story-card title="Tab Controller and Tab Panel">
+          <tab-controller slot="body">
+            <tab-bar>
+              <tab-item active id="item1">Item 1</tab-item>
+              <tab-item id="item2">Item 2</tab-item>
+              <tab-item id="item3">Item 3</tab-item>
+            </tab-bar>
+
+            <tab-panel item="item1">Content 1</tab-panel>
+            <tab-panel item="item2">Content 2</tab-panel>
+            <tab-panel item="item3">Content 3</tab-panel>
+          </tab-controller>
+
+          <mui-code slot="footer">
+            &lt;tab-controller&gt;
+            <br />
+            &nbsp;&nbsp;&lt;tab-bar&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="item1"&gt;Item 1&lt;/tab-item&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item id="item2"&gt;Item 2&lt;/tab-item&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item id="item3"&gt;Item 3&lt;/tab-item&gt;<br />
+            &nbsp;&nbsp;&lt;/tab-bar&gt;<br />
+            &nbsp;&nbsp;&lt;tab-panel item="item1"&gt;Content 1&lt;/tab-panel&gt;<br />
+            &nbsp;&nbsp;&lt;tab-panel item="item2"&gt;Content 2&lt;/tab-panel&gt;<br />
+            &nbsp;&nbsp;&lt;tab-panel item="item3"&gt;Content 3&lt;/tab-panel&gt;<br />
+            &lt;/tab-controller&gt;
+          </mui-code>
+        </story-card>
+
         <story-card title="Animation Speed 500ms">
           <tab-bar slot="body" speed="500">
-            <tab-item active>Item 1</tab-item>
-            <tab-item>Item 2</tab-item>
-            <tab-item>Item 3</tab-item>
-            <tab-item>Item 4</tab-item>
+            ${tabItemsHTML}
           </tab-bar>
           <mui-code slot="footer">
-            &lt;tab-bar speed="300"&gt;
+            const tabData = [
             <br />
-            &nbsp;&nbsp;&lt;tab-item active&gt;Item One&lt;/tab-item&gt;
+            &nbsp;&nbsp;{ id: 'item1', label: 'Message', icon: 'mui-icon-message', active: true },
             <br />
-            &nbsp;&nbsp;&lt;tab-item&gt;Item two&lt;/tab-item&gt;
+            &nbsp;&nbsp;{ id: 'item2', label: 'Notification', icon: 'mui-icon-notification' },
             <br />
-            &nbsp;&nbsp;&lt;tab-item&gt;Item three&lt;/tab-item&gt;
+            ];
             <br />
-            &nbsp;&nbsp;&lt;tab-item&gt;Item four&lt;/tab-item&gt;
+            <br />
+            const tabItemsHTML = tabData
+            <br />
+            &nbsp;&nbsp;.map(({ label, icon, active }) => {
+              <br />
+            &nbsp;&nbsp;const activeAttr = active ? ' active' : '';
+            <br />
+            &nbsp;&nbsp;return &#96;&lt;tab-item id="&#36;{id}" icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/tab-item&gt;&#96;;
+            <br />
+            })
+            <br />
+            .join('');
+            <br />
+            <br />
+            &lt;tab-bar full-width&gt;
+            <br />
+            &nbsp;&#36;{tabItemsHTML}
             <br />
             &lt;/tab-bar&gt;
           </mui-code>
@@ -246,9 +280,9 @@ class storyTabBar extends HTMLElement {
           <mui-code slot="footer">
             const tabData = [
             <br />
-            &nbsp;&nbsp;{ label: 'Message', icon: 'mui-icon-message', active: true },
+            &nbsp;&nbsp;{ id: 'item1', label: 'Message', icon: 'mui-icon-message', active: true },
             <br />
-            &nbsp;&nbsp;{ label: 'Notification', icon: 'mui-icon-notification' },
+            &nbsp;&nbsp;{ id: 'item2', label: 'Notification', icon: 'mui-icon-notification' },
             <br />
             ];
             <br />
@@ -259,7 +293,7 @@ class storyTabBar extends HTMLElement {
               <br />
             &nbsp;&nbsp;const activeAttr = active ? ' active' : '';
             <br />
-            &nbsp;&nbsp;return &#96;&lt;tab-item icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/tab-item&gt;&#96;;
+            &nbsp;&nbsp;return &#96;&lt;tab-item id="&#36;{id}" icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/tab-item&gt;&#96;;
             <br />
             })
             <br />
@@ -276,15 +310,15 @@ class storyTabBar extends HTMLElement {
 
         <story-card title="Full width">
           <tab-bar full-width slot="body">
-            ${tabItemsHTMLFluid}
+            ${tabItemsHTML}
           </tab-bar>
 
           <mui-code slot="footer">
             const tabData = [
             <br />
-            &nbsp;&nbsp;{ label: 'Message', icon: 'mui-icon-message', active: true },
+            &nbsp;&nbsp;{ id: 'item1', label: 'Message', icon: 'mui-icon-message', active: true },
             <br />
-            &nbsp;&nbsp;{ label: 'Notification', icon: 'mui-icon-notification' },
+            &nbsp;&nbsp;{ id: 'item2', label: 'Notification', icon: 'mui-icon-notification' },
             <br />
             ];
             <br />
@@ -295,7 +329,7 @@ class storyTabBar extends HTMLElement {
               <br />
             &nbsp;&nbsp;const activeAttr = active ? ' active' : '';
             <br />
-            &nbsp;&nbsp;return &#96;&lt;tab-item icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/tab-item&gt;&#96;;
+            &nbsp;&nbsp;return &#96;&lt;tab-item id="&#36;{id}" icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/tab-item&gt;&#96;;
             <br />
             })
             <br />
@@ -314,32 +348,6 @@ class storyTabBar extends HTMLElement {
 
       </story-template>
     `;
-
-    setTimeout(() => {
-      const tabBars = Array.from(this.shadowRoot.querySelectorAll('tab-bar'));
-
-      tabBars.forEach((tabBar) => {
-        function updateActiveTab(clickedTab) {
-          const allTabs = Array.from(tabBar.querySelectorAll('tab-item'));
-          allTabs.forEach((tab) => tab.removeAttribute('active'));
-          clickedTab.setAttribute('active', '');
-        }
-
-        tabBar.addEventListener('click', (e) => {
-          const clicked = e.target.closest('tab-item');
-          if (clicked && tabBar.contains(clicked)) {
-            updateActiveTab(clicked);
-          }
-        });
-
-        // Initial active state setup
-        const initialActive =
-          tabBar.querySelector('[active]') || tabBar.querySelector('tab-item');
-        if (initialActive) {
-          updateActiveTab(initialActive);
-        }
-      });
-    }, 0);
   }
 }
 

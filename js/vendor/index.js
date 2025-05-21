@@ -167,8 +167,10 @@ const MuiCompArray = [
   'mui-addon/index.js',
   'mui-select/index.js',
   'mui-switch/index.js',
+  'mui-tabs/mui-tab-controller/index.js',
   'mui-tabs/mui-tab-bar/index.js',
   'mui-tabs/mui-tab-item/index.js',
+  'mui-tabs/mui-tab-panel/index.js',
 ];
 const RecipeArray = ['mui-table/recipe/table.js'];
 
