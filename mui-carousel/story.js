@@ -17,14 +17,45 @@ class storyCarousel extends HTMLElement {
     `;
 
     const tabData = [
-      { id: 'one', label: '1', active: true },
-      { id: 'two', label: '2' },
+      {
+        id: 'one',
+        label: '1',
+        active: true,
+        heading: 'Guides',
+        description:
+          'A Figma plugin that delivers UX guidelines and customisable content, seamlessly integrating design system guides into Figma workflows.',
+        image: './images/hero.png',
+      },
+      {
+        id: 'two',
+        label: '2',
+        heading: 'Outcomes',
+        description:
+          'Track objectives and key results in an outcome-based roadmap. Organise tasks into Upcoming, Doing, and Finished columns to drive meaningful progress.',
+        image: './images/hero-outcomes.png',
+      },
     ];
 
-    const tabItemsHTML = tabData
+    const tabItems = tabData
       .map(({ id, label, icon, active }) => {
         const activeAttr = active ? ' active' : '';
         return `<tab-item id="${id}" icon="${icon}"${activeAttr}>${label}</tab-item>`;
+      })
+      .join('');
+
+    const carouselItems = tabData
+      .map(({ id, heading, description, image }) => {
+        return `
+        <carousel-panel slot="carousel-panel" item="${id}">
+          <mui-grid class="grid">
+            <img style="width: 100%; height: auto;" src="${image}" /> 
+            <mui-v-stack class="content">
+              <mui-heading size="1" level="3">${heading}</mui-heading>
+              <mui-body>${description}</mui-body>
+            </mui-v-stack>
+          </mui-grid>
+        </carousel-panel>
+        `;
       })
       .join('');
 
@@ -52,27 +83,9 @@ class storyCarousel extends HTMLElement {
         <story-card title="Carousel">
           <carousel-controller slot="body">
             <tab-bar slot="carousel-bar">
-              ${tabItemsHTML}
+              ${tabItems}
             </tab-bar>
-
-            <carousel-panel slot="carousel-panel" item="one">
-              <mui-grid class="grid">
-                <img style="width: 100%; height: auto;" src="./images/hero.png" /> 
-                <mui-v-stack class="content">
-                  <mui-heading size="1" level="3">Guides</mui-heading>
-                  <mui-body>A Figma plugin that delivers UX guidelines and customisable content, seamlessly integrating design system guides into Figma workflows.</mui-body>
-                </mui-v-stack>
-              </mui-grid>
-            </carousel-panel>
-            <carousel-panel slot="carousel-panel" item="two">
-              <mui-grid class="grid">
-                <img style="width: 100%; height: auto;" src="./images/hero-outcomes.png" /> 
-                <mui-v-stack class="content">
-                  <mui-heading size="1" level="3">Outcomes</mui-heading>
-                  <mui-body>Track objectives and key results in an outcome-based roadmap. Organise tasks into Upcoming, Doing, and Finished columns to drive meaningful progress.</mui-body>
-                </mui-v-stack>
-              </mui-grid>
-            </carousel-panel>
+            ${carouselItems}
           </carousel-controller>
 
           <mui-code slot="footer">
@@ -90,12 +103,7 @@ class storyCarousel extends HTMLElement {
             &lt;/carousel-controller&gt;
           </mui-code>
         </story-card>
-
-
-
-
-
-
+  
       </mui-v-stack>
 
       </story-template>
