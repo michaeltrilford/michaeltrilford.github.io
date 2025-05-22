@@ -1,46 +1,60 @@
 class CarouselController extends HTMLElement {
   constructor() {
     super();
+    if (!this.hasAttribute('direction')) {
+      this.setAttribute('direction', 'horizontal');
+    }
     this.handleTabChange = this.handleTabChange.bind(this);
     this.shadow = this.attachShadow({ mode: 'open' });
 
     this.shadow.innerHTML = `
-      <style>
-        :host {
-          display: block;
-          position: relative;
-          border-radius: var(--radius-400);
-          padding: var(--space-800);
-          padding-bottom: 0;
-          background: var(--grey-200);
-        }
-
-        .panel-slot {
-          width: 100%;
-        }
-
-        .bar-slot {
-          position: absolute;
-          bottom: var(--space-400);
-          right: var(--space-400);
-        }
-
-        ::slotted([slot="carousel-panel"]) {
-          display: none;
-        }
-
-        ::slotted([slot="carousel-panel"].active) {
-          display: block;
-        }
-      </style>
-
-      <div class="bar-slot">
-        <slot name="carousel-bar"></slot>
-      </div>
-      <div class="panel-slot">
+    <style>
+      :host {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        background: var(--carousel-background);
+        border-radius: var(--carousel-radius);
+      }
+  
+      .panel-slot {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+  
+      .carousel-track {
+        display: grid;
+        transition: transform 0.4s ease-in-out;
+        width: 100%;
+        height: 100%;
+        grid-auto-flow: column;
+        grid-auto-columns: 100%;
+      }
+  
+      ::slotted([slot="carousel-panel"]) {
+        width: 100%;
+        height: 100%;
+      }
+  
+      .bar-slot {
+        display: flex;
+        position: absolute;
+        bottom: var(--space-400);
+        right: var(--space-400);
+        z-index: 10;
+      }
+    </style>
+  
+    <div class="bar-slot">
+      <slot name="carousel-bar"></slot>
+    </div>
+    <div class="panel-slot">
+      <div class="carousel-track">
         <slot name="carousel-panel"></slot>
       </div>
-    `;
+    </div>
+  `;
   }
 
   connectedCallback() {
@@ -62,13 +76,15 @@ class CarouselController extends HTMLElement {
 
   updatePanels(activeId) {
     const panels = this.querySelectorAll('carousel-panel');
-    panels.forEach((panel) => {
-      if (panel.getAttribute('item') === activeId) {
-        panel.classList.add('active');
-      } else {
-        panel.classList.remove('active');
-      }
-    });
+    const track = this.shadow.querySelector('.carousel-track');
+
+    const index = Array.from(panels).findIndex(
+      (panel) => panel.getAttribute('item') === activeId,
+    );
+
+    if (index === -1) return;
+
+    track.style.transform = `translateX(-${index * 100}%)`;
   }
 }
 

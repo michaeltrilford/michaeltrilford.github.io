@@ -12,14 +12,12 @@ class CarouselPanel extends HTMLElement {
       <style>
         :host {
           display: block;
-        }
-        .inner {
-          padding: var(--tab-panel-padding, 0);
+          padding: var(--carousel-padding);
+          box-sizing: border-box;
+          overflow: hidden;
         }
       </style>
-      <div class="inner">
-        <slot></slot>
-      </div>
+      <slot></slot>
     `;
   }
 

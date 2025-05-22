@@ -349,6 +349,9 @@ html[data-theme='light'] {
   --tab-icon-active: var(--black);
   --tab-text-color-active: var(--black);
   --tab-shadow-active: var(--black-opacity-10);
+
+  /* Carousel */
+  --carousel-background: var(--grey-100);
 }
 
 /* ==================================================================================================== */
@@ -500,6 +503,9 @@ html[data-theme='dark'] {
   --tab-icon-active: var(--white);
   --tab-text-color-active: var(--white);
   --tab-shadow-active: var(--black-opacity-40);
+
+  /* Carousel */
+  --carousel-background: var(--grey-700);
 }
 
 /* ==================================================================================================== */
@@ -588,4 +594,7 @@ html[data-theme='dark'] {
   --message-gap-vertical: var(--space-100);
   /* Tab */
   --tab-radius: var(--radius-200);
+  /* Carousel */
+  --carousel-padding: var(--space-600);
+  --carousel-radius: var(--radius-300);
 }
