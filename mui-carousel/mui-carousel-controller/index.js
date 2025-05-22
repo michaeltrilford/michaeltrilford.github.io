@@ -40,19 +40,21 @@ class CarouselController extends HTMLElement {
       .bar-slot {
         display: flex;
         position: absolute;
-        bottom: var(--space-400);
-        right: var(--space-400);
+        bottom: var(--carousel-tab-position);
+        right: var(--carousel-tab-position);
         z-index: 10;
       }
+
     </style>
   
-    <div class="bar-slot">
-      <slot name="carousel-bar"></slot>
-    </div>
+
     <div class="panel-slot">
       <div class="carousel-track">
         <slot name="carousel-panel"></slot>
       </div>
+    </div>
+    <div class="bar-slot" part="tab-bar">
+      <slot name="carousel-tab-bar"></slot>
     </div>
   `;
   }

@@ -595,6 +595,7 @@ html[data-theme='dark'] {
   /* Tab */
   --tab-radius: var(--radius-200);
   /* Carousel */
-  --carousel-padding: var(--space-600);
   --carousel-radius: var(--radius-300);
+  --carousel-tab-position: var(--space-400);
+  --carousel-tab-offset: 4.4rem; /* Tab Height */
 }

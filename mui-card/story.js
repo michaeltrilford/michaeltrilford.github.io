@@ -1,7 +1,7 @@
 class storyCards extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -105,7 +105,7 @@ class storyCards extends HTMLElement {
               </mui-card-header>
               <mui-card-body>
                 <mui-image>
-                  <img slot="image" src="images/image.png" />
+                  <img slot="image" src="images/image-1080.png" />
                 </mui-image>
               </mui-card-body>
             </mui-card>
@@ -123,7 +123,7 @@ class storyCards extends HTMLElement {
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-image&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img slot="image" src="images/image.png" /&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img slot="image" src="images/image-1080.png" /&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-image&gt;
             <br />
@@ -140,4 +140,4 @@ class storyCards extends HTMLElement {
   }
 }
 
-customElements.define("story-cards", storyCards);
+customElements.define('story-cards', storyCards);

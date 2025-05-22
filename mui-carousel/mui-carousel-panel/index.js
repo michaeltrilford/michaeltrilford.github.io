@@ -12,7 +12,6 @@ class CarouselPanel extends HTMLElement {
       <style>
         :host {
           display: block;
-          padding: var(--carousel-padding);
           box-sizing: border-box;
           overflow: hidden;
         }

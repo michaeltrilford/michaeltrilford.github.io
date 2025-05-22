@@ -1,19 +1,19 @@
 class muiGrid extends HTMLElement {
   static get observedAttributes() {
-    return ["col", "gap"];
+    return ['col', 'gap'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   async connectedCallback() {
     await this.waitForPartMap();
 
-    const col = this.getAttribute("col") || "1fr 1fr";
-    const gap = this.getAttribute("gap") || "var(--space-500)";
-    const partMap = getPartMap("layout", "spacing");
+    const col = this.getAttribute('col') || '1fr 1fr';
+    const gap = this.getAttribute('gap') || 'var(--space-000)';
+    const partMap = getPartMap('layout', 'spacing');
 
     const styles = `
       :host {
@@ -36,9 +36,9 @@ class muiGrid extends HTMLElement {
 
   waitForPartMap() {
     return new Promise((resolve) => {
-      if (typeof getPartMap === "function") return resolve();
+      if (typeof getPartMap === 'function') return resolve();
       const check = () => {
-        if (typeof getPartMap === "function") {
+        if (typeof getPartMap === 'function') {
           resolve();
         } else {
           requestAnimationFrame(check);
@@ -49,4 +49,4 @@ class muiGrid extends HTMLElement {
   }
 }
 
-customElements.define("mui-grid", muiGrid);
+customElements.define('mui-grid', muiGrid);

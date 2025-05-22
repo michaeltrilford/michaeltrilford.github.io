@@ -1,7 +1,7 @@
 class storyImage extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -21,7 +21,7 @@ class storyImage extends HTMLElement {
           <story-card title="Single image">
             <div slot="body">
               <mui-image>
-                <img slot="image" src="images/image.png" />
+                <img slot="image" src="images/image-1080.png" />
               </mui-image>
             </div>
             <mui-code slot="footer">
@@ -36,7 +36,7 @@ class storyImage extends HTMLElement {
           <story-card title="Image with caption">
             <div slot="body">
               <mui-image>
-                <img slot="image" src="images/image.png" />
+                <img slot="image" src="images/image-1080.png" />
                 <figcaption slot="caption">Example image</figcaption>
               </mui-image>
             </div>
@@ -59,4 +59,4 @@ class storyImage extends HTMLElement {
   }
 }
 
-customElements.define("story-image", storyImage);
+customElements.define('story-image', storyImage);
