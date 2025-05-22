@@ -32,25 +32,93 @@ class CarouselController extends HTMLElement {
         grid-auto-columns: 100%;
       }
   
-      ::slotted([slot="carousel-panel"]) {
-        width: 100%;
-        height: 100%;
-      }
-  
-      .bar-slot {
-        display: flex;
+      ::slotted([slot="carousel-panel"]) { width: 100%; height: 100%; }
+      .controls { display: flex; }
+
+      /* Base positioning for all control slots */
+      ::slotted([slot="controls"]) {
         position: absolute;
+        z-index: 10;
+      }
+
+      /* Bottom positions */
+      ::slotted([slot="controls"][controlsPosition="bottom-right"]) {
         bottom: var(--carousel-tab-position);
         right: var(--carousel-tab-position);
-        z-index: 10;
+      }
+
+      ::slotted([slot="controls"][controlsPosition="bottom-left"]) {
+        bottom: var(--carousel-tab-position);
+        left: var(--carousel-tab-position);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="bottom"]) {
+        bottom: var(--carousel-tab-position);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* Top positions */
+      ::slotted([slot="controls"][controlsPosition="top-right"]) {
+        top: var(--carousel-tab-position);
+        right: var(--carousel-tab-position);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="top-left"]) {
+        top: var(--carousel-tab-position);
+        left: var(--carousel-tab-position);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="top"]) {
+        top: var(--carousel-tab-position);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* Left positions */
+      ::slotted([slot="controls"][controlsPosition="left-top"]) {
+        top: var(--carousel-tab-position);
+        left: var(--carousel-tab-position);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="left-bottom"]) {
+        bottom: var(--carousel-tab-position);
+        left: var(--carousel-tab-position);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="left"]) {
+        top: 50%;
+        left: var(--carousel-tab-position);
+        transform: translateY(-50%);
+      }
+
+      /* Right positions */
+      ::slotted([slot="controls"][controlsPosition="right-top"]) {
+        top: var(--carousel-tab-position);
+        right: var(--carousel-tab-position);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="right-bottom"]) {
+        bottom: var(--carousel-tab-position);
+        right: var(--carousel-tab-position);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="right"]) {
+        top: 50%;
+        right: var(--carousel-tab-position);
+        transform: translateY(-50%);
+      }
+
+      /* Fallback (center bottom) if no controlsPosition specified */
+      ::slotted([slot="controls"]:not([controlsPosition])) {
+        bottom: var(--carousel-tab-position);
+        left: 50%;
+        transform: translateX(-50%);
       }
 
     </style>
   
-
-    <div class="bar-slot" part="tab-bar">
-      <slot name="carousel-tab-bar"></slot>
-    </div>
+    <slot name="controls"></slot>
     <div class="panel-slot">
       <div class="carousel-track">
         <slot name="carousel-panel"></slot>

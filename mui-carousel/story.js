@@ -5,16 +5,6 @@ class storyCarousel extends HTMLElement {
     const styles = `
       :host { display: block; }
 
-      /* Customised Tab Bar Position */ 
-      .custom-tab-bar-story::part(tab-bar) {
-        position: absolute;
-        bottom: initial;
-        right: initial;
-        top: var(--carousel-tab-position);
-        left: var(--carousel-tab-position);
-      }
-
-
       /* Customised Carousel */ 
       .grid {
         display: grid;
@@ -142,46 +132,53 @@ class storyCarousel extends HTMLElement {
         <story-card 
           title="Default"
           description="A flexible, composable carousel that gives you full control over the content and internal layout."
-          github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/1f82bea661d34805fb37bff2607e82bfcee91cf6/mui-carousel/story.js"  
+          github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/1f82bea661d34805fb37bff2607e82bfcee91cf6/mui-carousel/story.js"
+          usage="
+            Carousel controls are set to bottom-center by default.;
+            Internal padding is required.;
+            The var(--carousel-tab-offset) is available to help with control spacing - though, not required.;
+            You will need knowledge of CSS to add your specific custom content.
+          "  
         >
           <carousel-controller slot="body">
-            <tab-bar slot="carousel-tab-bar">
+            <tab-bar slot="controls">
               <tab-item active id="one">1</tab-item>
               <tab-item id="two">2</tab-item>
             </tab-bar>
             <carousel-panel slot="carousel-panel" item="one" >
-              <mui-grid col="repeat(auto-fit, minmax(400px, 1fr))">
-                <img style="width: 100%; height: auto;" width="500" height="500" src="./images/image-500.png" />
-                <mui-v-stack style="padding: var(--space-600); margin-bottom: var(--carousel-tab-offset);">
+              <mui-grid col="1fr" style="padding-bottom: var(--carousel-tab-offset);">
+                <mui-v-stack style="padding: var(--space-500) var(--space-600);">
                   <mui-heading level="3" size="2">Item 1</mui-heading>
                   <mui-body>The default carousel is a flexible canvas. Your content defines the layout and spacing.</mui-body>
                   <mui-code>
-                  &lt;mui-v-stack style="
+                  &lt;mui-grid col="1fr" style="padding-bottom: var(--carousel-tab-offset);"&gt;
                   <br />
-                  &nbsp;&nbsp;padding: var(--space-600);  
+                  &nbsp;&nbsp;&lt;mui-v-stack style="padding: var(--space-600);"&gt;
                   <br />
-                  &nbsp;&nbsp;margin-bottom: var(--carousel-tab-offset);"&gt;
+                  &nbsp;&nbsp;&nbsp;&nbsp;...
                   <br />
-                  &lt;/mui-v-stack
+                  &nbsp;&nbsp;&lt;/mui-v-stack
+                  <br />
+                  &lt;/mui-grid&gt;
                   </mui-code>
                 </mui-v-stack>
               </mui-grid>  
             </carousel-panel>
-
             <carousel-panel slot="carousel-panel" item="two" >
-              <mui-grid col="repeat(auto-fit, minmax(400px, 1fr))">
-                <img style="width: 100%; height: auto;" width="500" height="500" src="./images/image-500.png" />
-                <mui-v-stack style="padding: var(--space-600); margin-bottom: var(--carousel-tab-offset);">
+              <mui-grid col="1fr" style="padding-bottom: var(--carousel-tab-offset);">
+                <mui-v-stack style="padding: var(--space-500) var(--space-600);">
                   <mui-heading level="3" size="2">Item 2</mui-heading>
                   <mui-body>The default carousel is a flexible canvas. Your content defines the layout and spacing.</mui-body>
                   <mui-code>
-                  &lt;mui-v-stack style="
+                  &lt;mui-grid col="1fr" style="padding-bottom: var(--carousel-tab-offset);"&gt;
                   <br />
-                  &nbsp;&nbsp;padding: var(--space-600);  
+                  &nbsp;&nbsp;&lt;mui-v-stack style="padding: var(--space-600);"&gt;
                   <br />
-                  &nbsp;&nbsp;margin-bottom: var(--carousel-tab-offset);"&gt;
+                  &nbsp;&nbsp;&nbsp;&nbsp;...
                   <br />
-                  &lt;/mui-v-stack
+                  &nbsp;&nbsp;&lt;/mui-v-stack
+                  <br />
+                  &lt;/mui-grid&gt;
                   </mui-code>
                 </mui-v-stack>
               </mui-grid>  
@@ -190,7 +187,7 @@ class storyCarousel extends HTMLElement {
 
           <mui-code slot="footer">
             &lt;carousel-controller&gt;<br />
-            &nbsp;&nbsp;&lt;tab-bar slot="carousel-tab-bar"&gt;<br />
+            &nbsp;&nbsp;&lt;tab-bar slot="controls"&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="one"&gt;1&lt;/tab-item&gt;<br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;// ADD TAB ITEMS 
@@ -202,24 +199,14 @@ class storyCarousel extends HTMLElement {
             <br />
             <br />
             &nbsp;&nbsp;&lt;carousel-panel slot="carousel-panel" item="one"&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-grid col="repeat(auto-fit, minmax(400px, 1fr))&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style="width: 100%; height: auto;"
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width="500"
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height="500"
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;src="./images/image-500.png"
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-v-stack style="padding: var(--space-600); margin-bottom: var(--carousel-tab-offset);"&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-grid col="1fr" style="padding-bottom: var(--carousel-tab-offset);"&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-v-stack style="padding: var(--space-500) var(--space-600);"&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-heading level="3" size="2"&gt;Item 1&lt;/mui-heading&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-body&gt;Content...&lt;/mui-body&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-v-stack&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-grid&gt;<br />
+            <br />
             &nbsp;&nbsp;&lt;/carousel-panel&gt;<br />
             <br />
             &nbsp;&nbsp;// ADD CAROUSEL PANELS
@@ -236,121 +223,12 @@ class storyCarousel extends HTMLElement {
         </story-card>
 
         <story-card 
-          title="Tab Position"
-          description="Customise tab-bar position with the CSS part selector; Scope styles with class or encapsulated component."
-          github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/1f82bea661d34805fb37bff2607e82bfcee91cf6/mui-carousel/story.js"  
-        >
-          <carousel-controller slot="body" class="custom-tab-bar-story">
-
-            <tab-bar slot="carousel-tab-bar">
-              <tab-item active id="one">1</tab-item>
-              <tab-item id="two">2</tab-item>
-            </tab-bar>
-
-            <carousel-panel slot="carousel-panel" item="one">
-              <mui-grid col="repeat(auto-fit, minmax(400px, 1fr))">
-                <img style="width: 100%; height: auto;" width="500" height="500" src="./images/image-500.png" />
-                <mui-v-stack style="padding: var(--space-600);">
-                  <mui-heading level="3" size="2">Item 1</mui-heading>
-                  <mui-body>You can control the carousel tab bar to keep content unobstructed. Use the ::part selector to reposition it as needed. The examples demonstrate different layout strategies.</mui-body>
-                  <mui-code>
-                    carousel-controller::part(tab-bar) {
-                    <br />
-                    &nbsp;&nbsp;bottom: initial;
-                    <br />
-                    &nbsp;&nbsp;right: initial;
-                    <br />
-                    &nbsp;&nbsp;top: var(--carousel-tab-position);
-                    <br />
-                    &nbsp;&nbsp;left: var(--carousel-tab-position);
-                    <br />
-                    }
-                  </mui-code>
-                </mui-v-stack>
-              </mui-grid> 
-            </carousel-panel>
-
-            <carousel-panel slot="carousel-panel" item="two">
-              <mui-grid col="repeat(auto-fit, minmax(400px, 1fr))">
-                <img style="width: 100%; height: auto;" width="500" height="500" src="./images/image-500.png" />
-                <mui-v-stack style="padding: var(--space-600);">
-                  <mui-heading level="3" size="2">Item 2</mui-heading>
-                  <mui-body>You can control the carousel tab bar to keep content unobstructed. Use the ::part selector to reposition it as needed. The examples demonstrate different layout strategies.</mui-body>
-                  <mui-code>
-                    carousel-controller::part(tab-bar) {
-                    <br />
-                    &nbsp;&nbsp;bottom: initial;
-                    <br />
-                    &nbsp;&nbsp;right: initial;
-                    <br />
-                    &nbsp;&nbsp;top: var(--carousel-tab-position);
-                    <br />
-                    &nbsp;&nbsp;left: var(--carousel-tab-position);
-                    <br />
-                    }
-                  </mui-code>
-                </mui-v-stack>
-              </mui-grid>  
-            </carousel-panel>
-          </carousel-controller>
-
-          <mui-code slot="footer">
-
-            <br />
-            // Customise tab-bar position via ::part selector
-            <br />
-            // Scope styles with class or encapsulated component
-            <br />
-            <br />
-
-            carousel-controller::part(tab-bar) {
-            <br />
-            &nbsp;&nbsp;right: initial;
-            <br />
-            &nbsp;&nbsp;bottom: var(--space-600);
-            <br />
-            &nbsp;&nbsp;left: var(--space-600);
-            <br />
-            }
-            <br />
-            <br />
-
-
-            &lt;carousel-controller&gt;<br />
-            &nbsp;&nbsp;&lt;tab-bar slot="carousel-tab-bar"&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="one"&gt;...&lt;/tab-item&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;...
-            <br />
-            &nbsp;&nbsp;&lt;/tab-bar&gt;
-            <br />
-            <br />
-            &nbsp;&nbsp;&lt;carousel-panel slot="carousel-panel" item="one"&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-grid 
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;col="repeat(auto-fit, minmax(460px, 1fr))" 
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// ADD CONTENT
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-grid&gt;
-            <br />
-            &nbsp;&nbsp;&lt;/carousel-panel&gt;
-            <br />
-            <br />
-            &lt;/carousel-controller&gt;
-          </mui-code>
-        </story-card>
-
-        <story-card 
           title="Custom Layout" 
           description="Demonstrates how to add custom compositions and layouts within the carousel panels."
           github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/1f82bea661d34805fb37bff2607e82bfcee91cf6/mui-carousel/story.js"  
         >
           <carousel-controller slot="body">
-            <tab-bar slot="carousel-tab-bar">
+            <tab-bar slot="controls" controlsPosition="bottom-right">
               ${carouselTabItems}
             </tab-bar>
             ${carouselItems}
@@ -387,7 +265,7 @@ class storyCarousel extends HTMLElement {
             <br />
             <br />
             &lt;carousel-controller&gt;<br />
-            &nbsp;&nbsp;&lt;tab-bar slot="carousel-tab-bar"&gt;<br />
+            &nbsp;&nbsp;&lt;tab-bar slot="controls"&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="one"&gt;1&lt;/tab-item&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;...
@@ -445,7 +323,7 @@ class storyCarousel extends HTMLElement {
           github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/1f82bea661d34805fb37bff2607e82bfcee91cf6/mui-carousel/story.js"  
         >
           <carousel-controller slot="body">
-            <tab-bar slot="carousel-tab-bar">
+            <tab-bar slot="controls" controlsPosition="bottom-right">
               ${carouselTabItems}
             </tab-bar>
             ${carouselItems}
@@ -554,7 +432,7 @@ class storyCarousel extends HTMLElement {
             <br />
             &lt;carousel-controller&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-bar slot="carousel-tab-bar"&gt;
+            &nbsp;&nbsp;&lt;tab-bar slot="controls"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&#36;{carouselTabItems}
             <br />
