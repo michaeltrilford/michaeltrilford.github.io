@@ -188,34 +188,26 @@ class storyCarousel extends HTMLElement {
           <mui-code slot="footer">
             &lt;carousel-controller&gt;<br />
             &nbsp;&nbsp;&lt;tab-bar slot="controls"&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="one"&gt;1&lt;/tab-item&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="one"&gt;1&lt;/tab-item&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;// ADD TAB ITEMS 
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item id="two"&gt;...&lt;/tab-item&gt;
-            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;... Add other tabs ...
             <br />
             &nbsp;&nbsp;&lt;/tab-bar&gt;
             <br />
             <br />
-            &nbsp;&nbsp;&lt;carousel-panel slot="carousel-panel" item="one"&gt;<br />
+            &nbsp;&nbsp;&lt;carousel-panel slot="carousel-panel" item="one"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-grid col="1fr" style="padding-bottom: var(--carousel-tab-offset);"&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-v-stack style="padding: var(--space-500) var(--space-600);"&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-heading level="3" size="2"&gt;Item 1&lt;/mui-heading&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-body&gt;Content...&lt;/mui-body&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-v-stack&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-grid&gt;<br />
-            <br />
-            &nbsp;&nbsp;&lt;/carousel-panel&gt;<br />
-            <br />
-            &nbsp;&nbsp;// ADD CAROUSEL PANELS
-            <br />
-            &nbsp;&nbsp;&lt;carousel-panel slot="carousel-panel" item="two"&gt;
-            <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;...
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-grid&gt;
             <br />
             &nbsp;&nbsp;&lt;/carousel-panel&gt;
+            <br />
+            <br />
+            &nbsp;&nbsp;... Add other panels ...
             <br />
             <br />
             &lt;/carousel-controller&gt;
@@ -265,7 +257,7 @@ class storyCarousel extends HTMLElement {
             <br />
             <br />
             &lt;carousel-controller&gt;<br />
-            &nbsp;&nbsp;&lt;tab-bar slot="controls"&gt;<br />
+            &nbsp;&nbsp;&lt;tab-bar slot="controls" controlsPosition="bottom-right"&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="one"&gt;1&lt;/tab-item&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;...
