@@ -48,13 +48,13 @@ class CarouselController extends HTMLElement {
     </style>
   
 
+    <div class="bar-slot" part="tab-bar">
+      <slot name="carousel-tab-bar"></slot>
+    </div>
     <div class="panel-slot">
       <div class="carousel-track">
         <slot name="carousel-panel"></slot>
       </div>
-    </div>
-    <div class="bar-slot" part="tab-bar">
-      <slot name="carousel-tab-bar"></slot>
     </div>
   `;
   }

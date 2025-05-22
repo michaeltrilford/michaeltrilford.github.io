@@ -236,7 +236,7 @@ class storyCarousel extends HTMLElement {
         </story-card>
 
         <story-card 
-          title="Tab Bar w/ Custom Position"
+          title="Tab Position"
           description="Customise tab-bar position with the CSS part selector; Scope styles with class or encapsulated component."
           github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/1f82bea661d34805fb37bff2607e82bfcee91cf6/mui-carousel/story.js"  
         >
