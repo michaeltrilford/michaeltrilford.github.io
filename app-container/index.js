@@ -77,6 +77,8 @@ export class AppContainer extends HTMLElement {
       '/accordion': 'story-accordion',
       '/table': 'story-table',
       '/slat': 'story-slat',
+
+      '/agent': 'comp-agent-ui',
     };
 
     // ✨ NEW CHECK ✨

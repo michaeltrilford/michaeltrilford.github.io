@@ -133,6 +133,12 @@ class appNavbar extends HTMLElement {
       </app-navbar-group>
     `;
 
+    const Compositions = `
+      <app-navbar-group id="compositions" groupname="Compositions">
+        <app-navbar-link link="#/agent" title="Agent UI"></app-navbar-link>  
+      </app-navbar-group>
+    `;
+
     // We provide the shadow root with some HTML
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -145,6 +151,7 @@ class appNavbar extends HTMLElement {
         ${Required}
         ${Parts}
         ${Components}
+        ${Compositions}
       </app-navbar-menu>
       
       <app-navbar-menu mobile id="mobile">
@@ -154,6 +161,7 @@ class appNavbar extends HTMLElement {
         ${Required}
         ${Parts}
         ${Components}
+        ${Compositions}
       </app-navbar-menu>
 
       <app-navbar-toggle>

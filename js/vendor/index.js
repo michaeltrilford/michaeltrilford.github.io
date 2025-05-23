@@ -226,6 +226,7 @@ const StoryArray = [
   'mui-parts/story-parts-spacing.js',
   'mui-parts/story-parts-layout.js',
   'mui-parts/story-parts-visual.js',
+  'comp-agent-ui/story.js',
 ];
 
 // Load all resources asynchronously
