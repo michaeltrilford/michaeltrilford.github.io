@@ -10,7 +10,7 @@ class storyAddon extends HTMLElement {
       {
         name: 'slot',
         required: true,
-        type: 'string',
+        type: 'HTML attribute',
         options: 'mui-body, mui-icons-[name], elements',
         default: '',
         description:

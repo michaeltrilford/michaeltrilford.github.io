@@ -10,7 +10,7 @@ class storyTabBar extends HTMLElement {
       {
         name: 'slot',
         required: true,
-        type: 'tab-item',
+        type: 'HTML attribute',
         options: 'tab-item',
         default: '',
         description: 'Pass in the tab-item element',
@@ -69,7 +69,7 @@ class storyTabBar extends HTMLElement {
       {
         name: 'slot',
         required: true,
-        type: 'node',
+        type: 'HTML attribute',
         options: '{text}',
         default: 'Required',
         description: 'Pass in text to the tab item',

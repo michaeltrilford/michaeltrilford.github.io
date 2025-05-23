@@ -32,8 +32,9 @@ class CarouselController extends HTMLElement {
         grid-auto-columns: 100%;
       }
   
-      ::slotted([slot="carousel-panel"]) { width: 100%; height: 100%; }
+      ::slotted([slot="item"]) { width: 100%; height: 100%; }
       .controls { display: flex; }
+
 
       /* Base positioning for all control slots */
       ::slotted([slot="controls"]) {
@@ -41,7 +42,40 @@ class CarouselController extends HTMLElement {
         z-index: 10;
       }
 
-      /* Bottom positions */
+      ::slotted([slot="controls"][controlsPosition="top"]) {
+        top: var(--carousel-tab-position);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="right"]) {
+        top: 50%;
+        right: var(--carousel-tab-position);
+        transform: translateY(-50%);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="bottom"]) {
+        bottom: var(--carousel-tab-position);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+        
+      ::slotted([slot="controls"][controlsPosition="left"]) {
+        top: 50%;
+        left: var(--carousel-tab-position);
+        transform: translateY(-50%);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="top-left"]) {
+        top: var(--carousel-tab-position);
+        left: var(--carousel-tab-position);
+      }
+
+      ::slotted([slot="controls"][controlsPosition="top-right"]) {
+        top: var(--carousel-tab-position);
+        right: var(--carousel-tab-position);
+      }
+
       ::slotted([slot="controls"][controlsPosition="bottom-right"]) {
         bottom: var(--carousel-tab-position);
         right: var(--carousel-tab-position);
@@ -52,64 +86,7 @@ class CarouselController extends HTMLElement {
         left: var(--carousel-tab-position);
       }
 
-      ::slotted([slot="controls"][controlsPosition="bottom"]) {
-        bottom: var(--carousel-tab-position);
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      /* Top positions */
-      ::slotted([slot="controls"][controlsPosition="top-right"]) {
-        top: var(--carousel-tab-position);
-        right: var(--carousel-tab-position);
-      }
-
-      ::slotted([slot="controls"][controlsPosition="top-left"]) {
-        top: var(--carousel-tab-position);
-        left: var(--carousel-tab-position);
-      }
-
-      ::slotted([slot="controls"][controlsPosition="top"]) {
-        top: var(--carousel-tab-position);
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      /* Left positions */
-      ::slotted([slot="controls"][controlsPosition="left-top"]) {
-        top: var(--carousel-tab-position);
-        left: var(--carousel-tab-position);
-      }
-
-      ::slotted([slot="controls"][controlsPosition="left-bottom"]) {
-        bottom: var(--carousel-tab-position);
-        left: var(--carousel-tab-position);
-      }
-
-      ::slotted([slot="controls"][controlsPosition="left"]) {
-        top: 50%;
-        left: var(--carousel-tab-position);
-        transform: translateY(-50%);
-      }
-
-      /* Right positions */
-      ::slotted([slot="controls"][controlsPosition="right-top"]) {
-        top: var(--carousel-tab-position);
-        right: var(--carousel-tab-position);
-      }
-
-      ::slotted([slot="controls"][controlsPosition="right-bottom"]) {
-        bottom: var(--carousel-tab-position);
-        right: var(--carousel-tab-position);
-      }
-
-      ::slotted([slot="controls"][controlsPosition="right"]) {
-        top: 50%;
-        right: var(--carousel-tab-position);
-        transform: translateY(-50%);
-      }
-
-      /* Fallback (center bottom) if no controlsPosition specified */
+      /* Fallback (bottom-center) if no controlsPosition specified */
       ::slotted([slot="controls"]:not([controlsPosition])) {
         bottom: var(--carousel-tab-position);
         left: 50%;
@@ -121,7 +98,7 @@ class CarouselController extends HTMLElement {
     <slot name="controls"></slot>
     <div class="panel-slot">
       <div class="carousel-track">
-        <slot name="carousel-panel"></slot>
+        <slot name="item"></slot>
       </div>
     </div>
   `;
@@ -145,7 +122,7 @@ class CarouselController extends HTMLElement {
   }
 
   updatePanels(activeId) {
-    const panels = this.querySelectorAll('carousel-panel');
+    const panels = this.querySelectorAll('mui-carousel-panel');
     const track = this.shadow.querySelector('.carousel-track');
 
     const index = Array.from(panels).findIndex(
@@ -158,4 +135,4 @@ class CarouselController extends HTMLElement {
   }
 }
 
-customElements.define('carousel-controller', CarouselController);
+customElements.define('mui-carousel-controller', CarouselController);

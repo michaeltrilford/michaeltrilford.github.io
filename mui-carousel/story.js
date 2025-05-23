@@ -64,6 +64,181 @@ class storyCarousel extends HTMLElement {
 
     `;
 
+    // Controller
+    const propItemsController = [
+      {
+        name: 'slot',
+        required: true,
+        type: 'HTML attribute',
+        options: 'mui-tab, mui-carousel-panel',
+        default: '',
+        description:
+          'Assigns the element to a named slot in the Carousel Controller. Required for light DOM content like tabs and panels.',
+      },
+    ];
+
+    const rowsController = propItemsController
+      .map(
+        (prop) => `
+      <story-type-row
+        ${prop.required ? 'required' : ''}
+        name="${prop.name}"
+        type="${prop.type}" 
+        options="${prop.options || ''}"
+        default="${prop.default || ''}"
+        description="${prop.description}">
+      </story-type-row>
+    `,
+      )
+      .join('');
+
+    const accordionsController = propItemsController
+      .map((prop, index) => {
+        // Check if it's the last item in the array
+        const isLastChild =
+          index === propItemsController.length - 1 ? 'last-child' : '';
+
+        return `
+      <mui-accordion-block 
+        size="x-small" 
+        heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
+        ${isLastChild}>
+        <story-type-slat
+          slot="detail"
+          ${prop.required ? 'required' : ''}
+          name="${prop.name}"
+          type="${prop.type}" 
+          options="${prop.options || ''}"
+          default="${prop.default || ''}"
+          description="${prop.description}">
+        </story-type-slat>
+      </mui-accordion-block>
+    `;
+      })
+      .join('');
+
+    // TAB BAR
+    const propItemsTabBar = [
+      {
+        name: 'slot',
+        required: true,
+        type: 'HTML attribute',
+        options: 'slot=&#8220;controls&#8221;',
+        default: '',
+        description:
+          'Used when placing mui-tab-bar inside carousel-controller. Required to inject this element into the controls slot.',
+      },
+      {
+        name: 'controlsPosition',
+        type: 'string',
+        options:
+          'top, right, bottom, left, top-right, top-left, bottom-right, bottom-left',
+        default: 'bottom',
+        description: 'Define the position of the controls for the Carousel',
+      },
+    ];
+
+    const rowsTabBar = propItemsTabBar
+      .map(
+        (prop) => `
+          <story-type-row
+            ${prop.required ? 'required' : ''}
+            name="${prop.name}"
+            type="${prop.type}" 
+            options="${prop.options || ''}"
+            default="${prop.default || ''}"
+            description="${prop.description}">
+          </story-type-row>
+        `,
+      )
+      .join('');
+
+    const accordionsTabBar = propItemsTabBar
+      .map((prop, index) => {
+        // Check if it's the last item in the array
+        const isLastChild =
+          index === propItemsTabBar.length - 1 ? 'last-child' : '';
+
+        return `
+          <mui-accordion-block 
+            size="x-small" 
+            heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
+            ${isLastChild}>
+            <story-type-slat
+              slot="detail"
+              ${prop.required ? 'required' : ''}
+              name="${prop.name}"
+              type="${prop.type}" 
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
+              description="${prop.description}">
+            </story-type-slat>
+          </mui-accordion-block>
+        `;
+      })
+      .join('');
+
+    // Panel
+
+    const propItemsPanel = [
+      {
+        name: 'slot',
+        required: true,
+        type: 'HTML attribute',
+        options: 'slot=&#8220;item&#8221;',
+        default: '',
+        description: 'Slot in the tab controls to the Carousel',
+      },
+      {
+        name: 'item',
+        type: 'string',
+        options: 'any',
+        default: '',
+        description:
+          'Maps to the corresponding id of a tab-item in the tab bar. Controls which panel is shown based on the selected tab.',
+      },
+    ];
+
+    const rowsPanel = propItemsPanel
+      .map(
+        (prop) => `
+            <story-type-row
+              ${prop.required ? 'required' : ''}
+              name="${prop.name}"
+              type="${prop.type}" 
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
+              description="${prop.description}">
+            </story-type-row>
+          `,
+      )
+      .join('');
+
+    const accordionsPanel = propItemsPanel
+      .map((prop, index) => {
+        // Check if it's the last item in the array
+        const isLastChild =
+          index === propItemsPanel.length - 1 ? 'last-child' : '';
+
+        return `
+          <mui-accordion-block 
+            size="x-small" 
+            heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
+            ${isLastChild}>
+            <story-type-slat
+              slot="detail"
+              ${prop.required ? 'required' : ''}
+              name="${prop.name}"
+              type="${prop.type}" 
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
+              description="${prop.description}">
+            </story-type-slat>
+          </mui-accordion-block>
+        `;
+      })
+      .join('');
+
     const carouselData = [
       {
         id: 'one',
@@ -94,7 +269,7 @@ class storyCarousel extends HTMLElement {
     const carouselItems = carouselData
       .map(({ id, heading, description, image }) => {
         return `
-        <carousel-panel slot="carousel-panel" item="${id}">
+        <mui-carousel-panel slot="item" item="${id}">
           <div class="grid">
             <div class="hero">
               <img style="width: 100%; height: auto;" width="400" height="376" src="${image}" />
@@ -104,7 +279,7 @@ class storyCarousel extends HTMLElement {
               <mui-body>${description}</mui-body>
             </mui-v-stack>
           </div>
-        </carousel-panel>
+        </mui-carousel-panel>
         `;
       })
       .join('');
@@ -116,18 +291,50 @@ class storyCarousel extends HTMLElement {
         title="Carousel"
         description="A carousel component with tab-based navigation, enabling users to switch between views or content sections with ease."
         github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/1f82bea661d34805fb37bff2607e82bfcee91cf6/mui-carousel"
-        figma="https://www.figma.com/design/l0mt1lXu97XoHJCEdnrWLp/Mui-Design-System?node-id=126-560&t=ZfvVjZFxH7mQ72pi-1"
+        figma=""
         accessibility="
           Left/Right arrows, Home and End keys let keyboard users navigate between carousel items.; 
           aria-selected and tabindex attributes are updated on each tab-item when it becomes active or inactive.; 
           Each active tab-item can receive focus and shows a focus-visible outline.; 
-          tab-bar uses role=tablist to group related tab-items and each tab-item uses role=tab within the tab-bar.; 
-          tab-bar can be labelled using aria-label or aria-labelledby.
+          tab-bar uses role=tablist to group related tab-items and each tab-item uses role=tab within the tab-bar.
         "
 
       >
 
       <mui-v-stack space="var(--space-700)">
+
+        <story-card title="Prop Types: Carousel Controller" nofooter description="The carousel-controller handles layout and transitions. Slotted children like tab-bar and carousel-panel must include the correct slot attributes to integrate properly.">
+          <mui-responsive breakpoint="768" slot="body">
+            <story-type-table slot="showAbove">
+              ${rowsController}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${accordionsController}
+            </mui-accordion-group>
+          </mui-responsive>
+        </story-card>
+
+        <story-card title="Prop Types: Tab Bar" nofooter description="When used inside carousel-controller, mui-tab-bar can accept additional props to control placement and integration within the carousel layout.">
+          <mui-responsive breakpoint="768" slot="body">
+            <story-type-table slot="showAbove">
+              ${rowsTabBar}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${accordionsTabBar}
+            </mui-accordion-group>
+          </mui-responsive>
+        </story-card>
+
+        <story-card title="Prop Types: Carousel Panel " nofooter description="Used to display the content for each carousel item. This component is typically slotted into a mui-carousel-controller and responds to tab selection based on the item mapping.">
+          <mui-responsive breakpoint="768" slot="body">
+            <story-type-table slot="showAbove">
+              ${rowsPanel}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${accordionsPanel}
+            </mui-accordion-group>
+          </mui-responsive>
+        </story-card>
 
         <story-card 
           title="Default"
@@ -140,12 +347,12 @@ class storyCarousel extends HTMLElement {
             You will need knowledge of CSS to add your specific custom content.
           "  
         >
-          <carousel-controller slot="body">
+          <mui-carousel-controller slot="body">
             <tab-bar slot="controls">
               <tab-item active id="one">1</tab-item>
               <tab-item id="two">2</tab-item>
             </tab-bar>
-            <carousel-panel slot="carousel-panel" item="one" >
+            <mui-carousel-panel slot="item" item="one" >
               <mui-grid col="1fr" style="padding-bottom: var(--carousel-tab-offset);">
                 <mui-v-stack style="padding: var(--space-500) var(--space-600);">
                   <mui-heading level="3" size="2">Item 1</mui-heading>
@@ -163,8 +370,8 @@ class storyCarousel extends HTMLElement {
                   </mui-code>
                 </mui-v-stack>
               </mui-grid>  
-            </carousel-panel>
-            <carousel-panel slot="carousel-panel" item="two" >
+            </mui-carousel-panel>
+            <mui-carousel-panel slot="item" item="two" >
               <mui-grid col="1fr" style="padding-bottom: var(--carousel-tab-offset);">
                 <mui-v-stack style="padding: var(--space-500) var(--space-600);">
                   <mui-heading level="3" size="2">Item 2</mui-heading>
@@ -182,11 +389,11 @@ class storyCarousel extends HTMLElement {
                   </mui-code>
                 </mui-v-stack>
               </mui-grid>  
-            </carousel-panel>
-          </carousel-controller>
+            </mui-carousel-panel>
+          </mui-carousel-controller>
 
           <mui-code slot="footer">
-            &lt;carousel-controller&gt;<br />
+            &lt;mui-carousel-controller&gt;<br />
             &nbsp;&nbsp;&lt;tab-bar slot="controls"&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="one"&gt;1&lt;/tab-item&gt;
             <br />
@@ -195,7 +402,7 @@ class storyCarousel extends HTMLElement {
             &nbsp;&nbsp;&lt;/tab-bar&gt;
             <br />
             <br />
-            &nbsp;&nbsp;&lt;carousel-panel slot="carousel-panel" item="one"&gt;
+            &nbsp;&nbsp;&lt;mui-carousel-panel slot="item" item="one"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-grid col="1fr" style="padding-bottom: var(--carousel-tab-offset);"&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-v-stack style="padding: var(--space-500) var(--space-600);"&gt;<br />
@@ -204,13 +411,13 @@ class storyCarousel extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-v-stack&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-grid&gt;
             <br />
-            &nbsp;&nbsp;&lt;/carousel-panel&gt;
+            &nbsp;&nbsp;&lt;/mui-carousel-panel&gt;
             <br />
             <br />
             &nbsp;&nbsp;... Add other panels ...
             <br />
             <br />
-            &lt;/carousel-controller&gt;
+            &lt;/mui-carousel-controller&gt;
           </mui-code>
         </story-card>
 
@@ -219,12 +426,12 @@ class storyCarousel extends HTMLElement {
           description="Demonstrates how to add custom compositions and layouts within the carousel panels."
           github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/1f82bea661d34805fb37bff2607e82bfcee91cf6/mui-carousel/story.js"  
         >
-          <carousel-controller slot="body">
+          <mui-carousel-controller slot="body">
             <tab-bar slot="controls" controlsPosition="bottom-right">
               ${carouselTabItems}
             </tab-bar>
             ${carouselItems}
-          </carousel-controller>
+          </mui-carousel-controller>
           <mui-code slot="footer">
             /* === Author Styles ================= */
             <br />
@@ -256,7 +463,7 @@ class storyCarousel extends HTMLElement {
             /* === Component Usage =============== */
             <br />
             <br />
-            &lt;carousel-controller&gt;<br />
+            &lt;mui-carousel-controller&gt;<br />
             &nbsp;&nbsp;&lt;tab-bar slot="controls" controlsPosition="bottom-right"&gt;<br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="one"&gt;1&lt;/tab-item&gt;
             <br />
@@ -265,7 +472,7 @@ class storyCarousel extends HTMLElement {
             &nbsp;&nbsp;&lt;/tab-bar&gt;
             <br />
             <br />
-            &nbsp;&nbsp;&lt;carousel-panel slot="carousel-panel" item="one"&gt;
+            &nbsp;&nbsp;&lt;mui-carousel-panel slot="item" item="one"&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="grid"&gt;
             <br />
@@ -300,12 +507,12 @@ class storyCarousel extends HTMLElement {
             <br />
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
-            &nbsp;&nbsp;&lt;/carousel-panel&gt;<br />
+            &nbsp;&nbsp;&lt;/mui-carousel-panel&gt;<br />
             <br />
             &nbsp;&nbsp;...
             <br />
             <br />
-            &lt;/carousel-controller&gt;
+            &lt;/mui-carousel-controller&gt;
           </mui-code>
         </story-card>
 
@@ -314,12 +521,12 @@ class storyCarousel extends HTMLElement {
           description="Map dynamic data to generate carousel tabs and panels."
           github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/1f82bea661d34805fb37bff2607e82bfcee91cf6/mui-carousel/story.js"  
         >
-          <carousel-controller slot="body">
+          <mui-carousel-controller slot="body">
             <tab-bar slot="controls" controlsPosition="bottom-right">
               ${carouselTabItems}
             </tab-bar>
             ${carouselItems}
-          </carousel-controller>
+          </mui-carousel-controller>
           <mui-code slot="footer">
             /* === Carousel Data =================== */
             <br />
@@ -400,9 +607,9 @@ class storyCarousel extends HTMLElement {
             <br />
             &nbsp;&nbsp;return &#96;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;carousel-panel 
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-carousel-panel 
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slot="carousel-panel" 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;slot="item" 
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item="&#36;{id}" 
             <br />
@@ -410,7 +617,7 @@ class storyCarousel extends HTMLElement {
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/carousel-panel&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-carousel-panel&gt;
             <br />
             &nbsp;&nbsp;&#96;;
             <br />
@@ -422,7 +629,7 @@ class storyCarousel extends HTMLElement {
             /* === Component Usage =============== */
             <br />
             <br />
-            &lt;carousel-controller&gt;
+            &lt;mui-carousel-controller&gt;
             <br />
             &nbsp;&nbsp;&lt;tab-bar slot="controls"&gt;
             <br />
@@ -432,7 +639,7 @@ class storyCarousel extends HTMLElement {
             <br />
             &nbsp;&nbsp;&#36;{carouselItems}
             <br />
-            &lt;/carousel-controller&gt;
+            &lt;/mui-carousel-controller&gt;
           </mui-code>
         </story-card>
   

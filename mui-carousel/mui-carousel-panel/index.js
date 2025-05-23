@@ -33,4 +33,4 @@ class CarouselPanel extends HTMLElement {
   }
 }
 
-customElements.define('carousel-panel', CarouselPanel);
+customElements.define('mui-carousel-panel', CarouselPanel);
