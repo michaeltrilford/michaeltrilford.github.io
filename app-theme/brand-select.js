@@ -8,7 +8,6 @@ class ThemeSwitcher extends HTMLElement {
       jal: { theme: true },
       ana: { theme: true },
       mono: { theme: true },
-      neon: { theme: true },
       modern: { theme: true },
     };
 
@@ -25,19 +24,6 @@ class ThemeSwitcher extends HTMLElement {
           rel: 'stylesheet',
           href:
             'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap',
-        },
-      ],
-      neon: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
-          crossOrigin: 'anonymous',
-        },
-        {
-          rel: 'stylesheet',
-          href:
-            'https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap',
         },
       ],
       modern: [
@@ -101,8 +87,7 @@ class ThemeSwitcher extends HTMLElement {
             {"value": "jal", "label": "JAL"},
             {"value": "ana", "label": "ANA"},
             {"value": "mono", "label": "Mono"},
-            {"value": "modern", "label": "Modern"},
-            {"value": "neon", "label": "Neon Flux"}
+            {"value": "modern", "label": "Modern"}
           ]'>
         </mui-select>
       </mui-grid>
