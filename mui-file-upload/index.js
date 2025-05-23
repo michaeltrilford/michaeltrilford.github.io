@@ -26,11 +26,10 @@ class FileUpload extends HTMLElement {
           background-color: var(--input-background);
           cursor: pointer;
           transition: background-color 0.3s ease;
-          min-height: 4.4rem;
+          min-height: 4.2rem;
         }
         .wrapper:hover {
-          background-color: var(--grey-100);
-          border: 1px dashed var(--grey-600);
+          border-color: var(--form-feedback-default-border-color-hover);
         }
         .label {
           width: 240px;
@@ -44,7 +43,7 @@ class FileUpload extends HTMLElement {
         }
 
         mui-button::part(height) {
-          height: 4.2rem;
+          height: 4rem;
           padding-top: var(--space-000);
           padding-bottom: var(--space-000);
         }
