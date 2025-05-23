@@ -62,7 +62,7 @@ class pageBanner extends HTMLElement {
       }
 
       .hero {
-        margin-top: -10rem;
+        margin-top: -8rem;
         width: 100%;
         height: auto;
       }
