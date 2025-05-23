@@ -6,6 +6,59 @@ class storyTabBar extends HTMLElement {
       :host { display: block; }
     `;
 
+    // Controller
+    const propItemsController = [
+      {
+        name: 'slot',
+        required: true,
+        type: 'HTML attribute',
+        options: 'mui-tab-bar, mui-tab-panel',
+        default: '',
+        description:
+          'Assigns the elements to a named slot in the Carousel Controller. Required for light DOM content like tabs and panels.',
+      },
+    ];
+
+    const tabBarControllerRows = propItemsController
+      .map(
+        (prop) => `
+      <story-type-row
+        ${prop.required ? 'required' : ''}
+        name="${prop.name}"
+        type="${prop.type}" 
+        options="${prop.options || ''}"
+        default="${prop.default || ''}"
+        description="${prop.description}">
+      </story-type-row>
+    `,
+      )
+      .join('');
+
+    const tabBarControllerAccordions = propItemsController
+      .map((prop, index) => {
+        // Check if it's the last item in the array
+        const isLastChild =
+          index === propItemsController.length - 1 ? 'last-child' : '';
+
+        return `
+      <mui-accordion-block 
+        size="x-small" 
+        heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
+        ${isLastChild}>
+        <story-type-slat
+          slot="detail"
+          ${prop.required ? 'required' : ''}
+          name="${prop.name}"
+          type="${prop.type}" 
+          options="${prop.options || ''}"
+          default="${prop.default || ''}"
+          description="${prop.description}">
+        </story-type-slat>
+      </mui-accordion-block>
+    `;
+      })
+      .join('');
+
     const propItemsTabBar = [
       {
         name: 'slot',
@@ -88,6 +141,14 @@ class storyTabBar extends HTMLElement {
         default: '',
         description: 'Set the active tab state',
       },
+      {
+        name: 'id',
+        type: 'string',
+        options: 'any',
+        default: '',
+        description:
+          'Unique identifier for the tab item. Used to link the tab with its corresponding panel.',
+      },
     ];
 
     const tabItemRows = propItemsTabItem
@@ -132,6 +193,59 @@ class storyTabBar extends HTMLElement {
       })
       .join('');
 
+    // Panel
+
+    const propItemsPanel = [
+      {
+        name: 'item',
+        type: 'string',
+        options: 'any',
+        default: '',
+        description:
+          'Maps to the corresponding id of a tab-item in the tab bar. Controls which panel is shown based on the selected tab.',
+      },
+    ];
+
+    const panelRows = propItemsPanel
+      .map(
+        (prop) => `
+            <story-type-row
+              ${prop.required ? 'required' : ''}
+              name="${prop.name}"
+              type="${prop.type}" 
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
+              description="${prop.description}">
+            </story-type-row>
+          `,
+      )
+      .join('');
+
+    const panelAccordions = propItemsPanel
+      .map((prop, index) => {
+        // Check if it's the last item in the array
+        const isLastChild =
+          index === propItemsPanel.length - 1 ? 'last-child' : '';
+
+        return `
+          <mui-accordion-block 
+            size="x-small" 
+            heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
+            ${isLastChild}>
+            <story-type-slat
+              slot="detail"
+              ${prop.required ? 'required' : ''}
+              name="${prop.name}"
+              type="${prop.type}" 
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
+              description="${prop.description}">
+            </story-type-slat>
+          </mui-accordion-block>
+        `;
+      })
+      .join('');
+
     const tabData = [
       { id: 'item1', label: 'Message', icon: 'mui-icon-message', active: true },
       { id: 'item2', label: 'Notification', icon: 'mui-icon-notification' },
@@ -140,7 +254,7 @@ class storyTabBar extends HTMLElement {
     const tabItemsHTML = tabData
       .map(({ id, label, icon, active }) => {
         const activeAttr = active ? ' active' : '';
-        return `<tab-item id="${id}" icon="${icon}"${activeAttr}>${label}</tab-item>`;
+        return `<mui-tab-item id="${id}" icon="${icon}"${activeAttr}>${label}</mui-tab-item>`;
       })
       .join('');
 
@@ -156,16 +270,25 @@ class storyTabBar extends HTMLElement {
           Left/Right arrows, Home and End keys let keyboard users navigate between tab-items.; 
           aria-selected and tabindex attributes are updated on each tab-item when it becomes active or inactive.; 
           Each active tab-item can receive focus and shows a focus-visible outline.; 
-          tab-bar uses role=tablist to group related tab-items and each tab-item uses role=tab within the tab-bar.; 
-          tab-bar can be labelled using aria-label or aria-labelledby.;
-          aria-orientation is set on the tab-bar to inform assistive technology of its layout.
+          tab-bar uses role=tablist to group related tab-items and each tab-item uses role=tab within the tab-bar.
         "
 
       >
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types: Tab bar" nofooter>
+        <story-card title="Prop Types: Tab Controller" nofooter>
+          <mui-responsive breakpoint="768" slot="body">
+            <story-type-table slot="showAbove">
+              ${tabBarControllerRows}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${tabBarControllerAccordions}
+            </mui-accordion-group>
+          </mui-responsive>
+        </story-card>
+
+        <story-card title="Prop Types: Tab Bar" nofooter>
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${tabBarRows}
@@ -176,7 +299,7 @@ class storyTabBar extends HTMLElement {
           </mui-responsive>
         </story-card>
 
-        <story-card title="Prop Types: Tab item" nofooter>
+        <story-card title="Prop Types: Tab Item" nofooter>
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${tabItemRows}
@@ -187,61 +310,72 @@ class storyTabBar extends HTMLElement {
           </mui-responsive>
         </story-card>
 
+        <story-card title="Prop Types: Tab Panel" nofooter>
+          <mui-responsive breakpoint="768" slot="body">
+            <story-type-table slot="showAbove">
+              ${panelRows}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${panelAccordions}
+            </mui-accordion-group>
+          </mui-responsive>
+        </story-card>
+
 
         <story-card title="Default">
-          <tab-bar slot="body">
-            <tab-item active id="item1">Item 1</tab-item>
-            <tab-item id="item2">Item 2</tab-item>
-            <tab-item id="item3">Item 3</tab-item>
-            <tab-item id="item4">Item 4</tab-item>
-          </tab-bar>
+          <mui-tab-bar slot="body">
+            <mui-tab-item active id="item1">Item 1</mui-tab-item>
+            <mui-tab-item id="item2">Item 2</mui-tab-item>
+            <mui-tab-item id="item3">Item 3</mui-tab-item>
+            <mui-tab-item id="item4">Item 4</mui-tab-item>
+          </mui-tab-bar>
           <mui-code slot="footer">
-            &lt;tab-bar&gt;
+            &lt;mui-tab-bar&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-item active id="item1"&gt;Item One&lt;/tab-item&gt;
+            &nbsp;&nbsp;&lt;mui-tab-item active id="item1"&gt;Item One&lt;/mui-tab-item&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-item id="item2"&gt;Item two&lt;/tab-item&gt;
+            &nbsp;&nbsp;&lt;mui-tab-item id="item2"&gt;Item two&lt;/mui-tab-item&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-item id="item3"&gt;Item three&lt;/tab-item&gt;
+            &nbsp;&nbsp;&lt;mui-tab-item id="item3"&gt;Item three&lt;/mui-tab-item&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-item id="item4"&gt;Item four&lt;/tab-item&gt;
+            &nbsp;&nbsp;&lt;mui-tab-item id="item4"&gt;Item four&lt;/mui-tab-item&gt;
             <br />
-            &lt;/tab-bar&gt;
+            &lt;/mui-tab-bar&gt;
           </mui-code>
         </story-card>
 
         <story-card title="Tab Controller and Tab Panel">
-          <tab-controller slot="body">
-            <tab-bar>
-              <tab-item active id="item1">Item 1</tab-item>
-              <tab-item id="item2">Item 2</tab-item>
-              <tab-item id="item3">Item 3</tab-item>
-            </tab-bar>
+          <mui-tab-controller slot="body">
+            <mui-tab-bar>
+              <mui-tab-item active id="item1">Item 1</mui-tab-item>
+              <mui-tab-item id="item2">Item 2</mui-tab-item>
+              <mui-tab-item id="item3">Item 3</mui-tab-item>
+            </mui-tab-bar>
 
-            <tab-panel item="item1">Content 1</tab-panel>
-            <tab-panel item="item2">Content 2</tab-panel>
-            <tab-panel item="item3">Content 3</tab-panel>
-          </tab-controller>
+            <mui-tab-panel item="item1">Content 1</mui-tab-panel>
+            <mui-tab-panel item="item2">Content 2</mui-tab-panel>
+            <mui-tab-panel item="item3">Content 3</mui-tab-panel>
+          </mui-tab-controller>
 
           <mui-code slot="footer">
-            &lt;tab-controller&gt;
+            &lt;mui-tab-controller&gt;
             <br />
-            &nbsp;&nbsp;&lt;tab-bar&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item active id="item1"&gt;Item 1&lt;/tab-item&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item id="item2"&gt;Item 2&lt;/tab-item&gt;<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tab-item id="item3"&gt;Item 3&lt;/tab-item&gt;<br />
-            &nbsp;&nbsp;&lt;/tab-bar&gt;<br />
-            &nbsp;&nbsp;&lt;tab-panel item="item1"&gt;Content 1&lt;/tab-panel&gt;<br />
-            &nbsp;&nbsp;&lt;tab-panel item="item2"&gt;Content 2&lt;/tab-panel&gt;<br />
-            &nbsp;&nbsp;&lt;tab-panel item="item3"&gt;Content 3&lt;/tab-panel&gt;<br />
-            &lt;/tab-controller&gt;
+            &nbsp;&nbsp;&lt;mui-tab-bar&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-tab-item active id="item1"&gt;Item 1&lt;/mui-tab-item&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-tab-item id="item2"&gt;Item 2&lt;/mui-tab-item&gt;<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-tab-item id="item3"&gt;Item 3&lt;/mui-tab-item&gt;<br />
+            &nbsp;&nbsp;&lt;/mui-tab-bar&gt;<br />
+            &nbsp;&nbsp;&lt;mui-tab-panel item="item1"&gt;Content 1&lt;/mui-tab-panel&gt;<br />
+            &nbsp;&nbsp;&lt;mui-tab-panel item="item2"&gt;Content 2&lt;/mui-tab-panel&gt;<br />
+            &nbsp;&nbsp;&lt;mui-tab-panel item="item3"&gt;Content 3&lt;/mui-tab-panel&gt;<br />
+            &lt;/mui-tab-controller&gt;
           </mui-code>
         </story-card>
 
         <story-card title="Animation Speed 500ms">
-          <tab-bar slot="body" speed="500">
+          <mui-tab-bar slot="body" speed="500">
             ${tabItemsHTML}
-          </tab-bar>
+          </mui-tab-bar>
           <mui-code slot="footer">
             const tabData = [
             <br />
@@ -258,25 +392,25 @@ class storyTabBar extends HTMLElement {
               <br />
             &nbsp;&nbsp;const activeAttr = active ? ' active' : '';
             <br />
-            &nbsp;&nbsp;return &#96;&lt;tab-item id="&#36;{id}" icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/tab-item&gt;&#96;;
+            &nbsp;&nbsp;return &#96;&lt;mui-tab-item id="&#36;{id}" icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/mui-tab-item&gt;&#96;;
             <br />
             })
             <br />
             .join('');
             <br />
             <br />
-            &lt;tab-bar full-width&gt;
+            &lt;mui-tab-bar full-width&gt;
             <br />
             &nbsp;&#36;{tabItemsHTML}
             <br />
-            &lt;/tab-bar&gt;
+            &lt;/mui-tab-bar&gt;
           </mui-code>
         </story-card>
 
         <story-card title="Default w/ Icon">
-          <tab-bar slot="body">
+          <mui-tab-bar slot="body">
             ${tabItemsHTML}
-          </tab-bar>
+          </mui-tab-bar>
           <mui-code slot="footer">
             const tabData = [
             <br />
@@ -293,25 +427,25 @@ class storyTabBar extends HTMLElement {
               <br />
             &nbsp;&nbsp;const activeAttr = active ? ' active' : '';
             <br />
-            &nbsp;&nbsp;return &#96;&lt;tab-item id="&#36;{id}" icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/tab-item&gt;&#96;;
+            &nbsp;&nbsp;return &#96;&lt;mui-tab-item id="&#36;{id}" icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/mui-tab-item&gt;&#96;;
             <br />
             })
             <br />
             .join('');
             <br />
             <br />
-            &lt;tab-bar&gt;
+            &lt;mui-tab-bar&gt;
             <br />
             &nbsp;&#36;{tabItemsHTML}
             <br />
-            &lt;/tab-bar&gt;
+            &lt;/mui-tab-bar&gt;
           </mui-code>
         </story-card>
 
         <story-card title="Full width">
-          <tab-bar full-width slot="body">
+          <mui-tab-bar full-width slot="body">
             ${tabItemsHTML}
-          </tab-bar>
+          </mui-tab-bar>
 
           <mui-code slot="footer">
             const tabData = [
@@ -329,18 +463,18 @@ class storyTabBar extends HTMLElement {
               <br />
             &nbsp;&nbsp;const activeAttr = active ? ' active' : '';
             <br />
-            &nbsp;&nbsp;return &#96;&lt;tab-item id="&#36;{id}" icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/tab-item&gt;&#96;;
+            &nbsp;&nbsp;return &#96;&lt;mui-tab-item id="&#36;{id}" icon="&#36;{icon}"&#36;{activeAttr}&gt;&#36;{label}&lt;/mui-tab-item&gt;&#96;;
             <br />
             })
             <br />
             .join('');
             <br />
             <br />
-            &lt;tab-bar full-width&gt;
+            &lt;mui-tab-bar full-width&gt;
             <br />
             &nbsp;&#36;{tabItemsHTML}
             <br />
-            &lt;/tab-bar&gt;
+            &lt;/mui-tab-bar&gt;
           </mui-code>
         </story-card>
 

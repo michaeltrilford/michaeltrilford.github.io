@@ -36,4 +36,4 @@ class TabPanel extends HTMLElement {
   }
 }
 
-customElements.define('tab-panel', TabPanel);
+customElements.define('mui-tab-panel', TabPanel);

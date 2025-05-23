@@ -147,7 +147,7 @@ class TabBar extends HTMLElement {
           width: 0;
         }
 
-        ::slotted(tab-item) {
+        ::slotted(mui-tab-item) {
           position: relative;
           z-index: 1;
           flex: 1;
@@ -306,4 +306,4 @@ class TabBar extends HTMLElement {
   }
 }
 
-customElements.define('tab-bar', TabBar);
+customElements.define('mui-tab-bar', TabBar);

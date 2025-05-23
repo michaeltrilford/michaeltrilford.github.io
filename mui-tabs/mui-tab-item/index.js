@@ -91,4 +91,4 @@ class TabItem extends HTMLElement {
   }
 }
 
-customElements.define('tab-item', TabItem);
+customElements.define('mui-tab-item', TabItem);
