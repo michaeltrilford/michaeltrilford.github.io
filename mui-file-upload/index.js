@@ -32,10 +32,25 @@ class FileUpload extends HTMLElement {
           border-color: var(--form-feedback-default-border-color-hover);
         }
         .label {
-          width: 240px;
+          width: 90px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+        }
+        @media (min-width: 340px) {
+          .label {
+            width: 115px;
+          }
+        }
+        @media (min-width: 440px) {
+          .label {
+            width: 175px;
+          }
+        }
+        @media (min-width: 600px) {
+          .label {
+            width: 220px;
+          }
         }
 
         mui-button::part(height) {
@@ -44,8 +59,10 @@ class FileUpload extends HTMLElement {
 
         mui-button::part(height) {
           height: 4rem;
+          padding: var(--space-400);
           padding-top: var(--space-000);
           padding-bottom: var(--space-000);
+
         }
 
         mui-button::part(border-radius) {
