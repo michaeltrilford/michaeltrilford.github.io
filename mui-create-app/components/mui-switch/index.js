@@ -137,7 +137,7 @@ class MuiSwitch extends HTMLElement {
           right: 0;
           bottom: 0;
           background-color: var(--switch-track-background);
-          transition: background-color 0.2s;
+          transition: background-color var(--speed-200);
           border-radius: var(--switch-height);
         }
 
@@ -148,7 +148,7 @@ class MuiSwitch extends HTMLElement {
           width: var(--switch-thumb-size);
           height: var(--switch-thumb-size);
           background-color: var(--switch-thumb-bg);
-          transition: transform 0.2s;
+          transition: transform var(--speed-200);
           border-radius: 50%;
           display: flex;
           align-items: center;

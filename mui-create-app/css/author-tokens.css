@@ -170,6 +170,11 @@
   --stroke-size-500: 5px;
   --stroke-solid: solid;
   --stroke-outset: outset;
+  /* Animation */
+  --speed-100: 0.1s;
+  --speed-200: 0.2s;
+  --speed-300: 0.3s;
+  --speed-400: 0.4s;
 }
 
 /* ==================================================================================================== */
@@ -321,6 +326,9 @@ html[data-theme='light'] {
   --tab-icon-active: var(--black);
   --tab-text-color-active: var(--black);
   --tab-shadow-active: var(--black-opacity-10);
+
+  /* Carousel */
+  --carousel-background: var(--grey-100);
 }
 
 /* ==================================================================================================== */
@@ -472,6 +480,9 @@ html[data-theme='dark'] {
   --tab-icon-active: var(--white);
   --tab-text-color-active: var(--white);
   --tab-shadow-active: var(--black-opacity-40);
+
+  /* Carousel */
+  --carousel-background: var(--grey-700);
 }
 
 /* ==================================================================================================== */
@@ -560,4 +571,8 @@ html[data-theme='dark'] {
   --message-gap-vertical: var(--space-100);
   /* Tab */
   --tab-radius: var(--radius-200);
+  /* Carousel */
+  --carousel-radius: var(--radius-300);
+  --carousel-tab-position: var(--space-400);
+  --carousel-tab-offset: calc(4.4rem + var(--carousel-tab-position)); /* Tab Height */
 }

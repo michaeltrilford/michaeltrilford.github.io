@@ -33,7 +33,7 @@ class muiAccordionInline extends HTMLElement {
 
       mui-icon-right-chevron {
         margin-right: var(--space-100);
-        transition: 0.2s ease-in-out;
+        transition: var(--speed-200) ease-in-out;
         fill: var(--grey-700);
       }
 
@@ -45,13 +45,13 @@ class muiAccordionInline extends HTMLElement {
         display: block;
         margin-bottom: var(--space-000);
         max-height: 0;
-        transition: max-height 0.1s ease-in-out;
+        transition: max-height var(--speed-100) ease-in-out;
         overflow-y: hidden;
       }
 
       .accordion-detail[open] {
         max-height: 200vh;
-        transition: max-height 0.4s ease-in-out;
+        transition: max-height var(--speed-400) ease-in-out;
       }
 
       .accordion-detail-inner {

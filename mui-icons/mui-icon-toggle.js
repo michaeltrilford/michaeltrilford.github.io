@@ -103,7 +103,7 @@ class muiIconToggle extends HTMLElement {
           top: auto;
           left: auto;
           transform-origin: 50% 50%;
-          transition: 0.2s ease-in-out;
+          transition: var(--speed-200) ease-in-out;
           fill: var(--icon-color-map);
         }
 

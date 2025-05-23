@@ -25,7 +25,7 @@ class CarouselController extends HTMLElement {
   
       .carousel-track {
         display: grid;
-        transition: transform 0.4s ease-in-out;
+        transition: transform var(--speed-400) ease-in-out;
         width: 100%;
         height: 100%;
         grid-auto-flow: column;

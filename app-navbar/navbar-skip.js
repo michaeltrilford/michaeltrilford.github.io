@@ -18,7 +18,7 @@ class appNavbarSkip extends HTMLElement {
         left: 0;
         top: -54px;
         z-index: 1000;
-        transition: top 0.2s;
+        transition: top var(--speed-200);
         width: 100%;
       }
       mui-button:focus {

@@ -35,7 +35,7 @@ class muiAccordionBlock extends HTMLElement {
       }
 
       mui-icon-right-chevron {
-        transition: transform 0.2s ease-in-out;
+        transition: transform var(--speed-200) ease-in-out;
         fill: var(--grey-700);
         transform: rotate(90deg);
         padding: var(--space-200);
@@ -53,7 +53,7 @@ class muiAccordionBlock extends HTMLElement {
       .accordion-detail {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: max-height var(--speed-300) ease;
         box-shadow: inset 0 -1px 0 0 var(--border-color);
       }
 
