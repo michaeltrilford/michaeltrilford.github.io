@@ -55,7 +55,7 @@ export class AppContainer extends HTMLElement {
       '/input': 'story-input',
       '/select': 'story-select',
       '/switch': 'story-switch',
-      '/link': 'story-link',
+      '/file-upload': 'story-file-upload',
       '/alerts': 'story-alert',
       '/messages': 'story-message',
       '/badge': 'story-badge',

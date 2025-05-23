@@ -1,12 +1,12 @@
 class storyTypeTable extends HTMLElement {
   static get observedAttributes() {
-    return ["type", "name", "options", "required", "description", "default"];
+    return ['type', 'name', 'options', 'required', 'description', 'default'];
   }
 
   constructor() {
     super();
 
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styles = `
       :host { 
@@ -14,19 +14,19 @@ class storyTypeTable extends HTMLElement {
       }
     `;
 
-    const name = this.getAttribute("name") || "—";
-    const options = this.getAttribute("options") || "—";
-    const required = this.hasAttribute("required");
-    const type = this.getAttribute("type") || "undefined";
-    const defaultVal = this.getAttribute("default") || "-";
-    const description = this.getAttribute("description") || "";
+    const name = this.getAttribute('name') || '—';
+    const options = this.getAttribute('options') || '—';
+    const required = this.hasAttribute('required');
+    const type = this.getAttribute('type') || 'undefined';
+    const defaultVal = this.getAttribute('default') || '-';
+    const description = this.getAttribute('description') || '';
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
       <mui-table>  
         <mui-row-group heading>
-          <mui-row columns="minmax(10rem, 0.5fr) minmax(10rem, 1fr) minmax(10rem, 2fr) minmax(5rem, 0.5fr) 2fr">
+          <mui-row columns="minmax(12rem, 0.5fr) minmax(10rem, 1fr) minmax(10rem, 2fr) minmax(5rem, 0.5fr) 2fr">
             <mui-cell heading>Name</mui-cell>
             <mui-cell heading>Default</mui-cell>
             <mui-cell heading>Options</mui-cell>
@@ -41,4 +41,4 @@ class storyTypeTable extends HTMLElement {
   }
 }
 
-customElements.define("story-type-table", storyTypeTable);
+customElements.define('story-type-table', storyTypeTable);

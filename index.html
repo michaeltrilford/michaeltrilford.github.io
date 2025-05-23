@@ -7,19 +7,31 @@
     <link rel="stylesheet" href="css/mui-reset.css" />
     <link rel="stylesheet" href="css/mui-base.css" />
     <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/skeleton.css" />
     <link rel="stylesheet" href="css/themes/jal.css" />
     <link rel="stylesheet" href="css/themes/ana.css" />
     <link rel="stylesheet" href="css/themes/mono.css" />
     <link rel="stylesheet" href="css/themes/modern.css" />
     <link rel="stylesheet" href="css/app-theme.css" />
     <meta name="theme-color" content="var(--app-meta-theme-color)" />
-    <script src="js/vendor/index.js" type="module" defer></script>
-    <script src="mui-utils/index.js" type="module" defer></script>
+    <script src="js/vendor/index.js" type="module" defer="true"></script>
+    <script src="mui-utils/index.js" type="module" defer="true"></script>
   </head>
 
   <body>
-    <div id="loader" class="skeleton"></div>
+    <div
+      id="loader"
+      style="
+        display: flex; 
+        width: 100%; 
+        height: 100vh; 
+        position: fixed; 
+        opacity: 100%; 
+        z-index: 10000; 
+        background: var(--app-skeleton); 
+        left: 0; 
+        top: 0;
+      "
+    ></div>
     <div id="app">
       <app-navbar>
         <app-navbar-skip slot="skip"></app-navbar-skip>
