@@ -17,15 +17,22 @@ class FileUpload extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         .wrapper {
-          border: 1px dashed var(--grey-300);
-          border-radius: 8px;
+          transition: background-color var(--speed-300) ease;
+          cursor: pointer;
+          align-items: center;
+          justify-content: space-between;
           padding-left: 16px;
           display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: var(--input-background);
-          cursor: pointer;
-          transition: background-color 0.3s ease;
+          width: 100%;
+          line-height: var(--text-line-height-s);
+          box-sizing: border-box;
+          font-size: var(--text-font-size-s);
+          border-radius: var(--radius-100);
+          border: var(--border-thin);
+          border-style: dashed;
+          border-color: var(--form-feedback-default-border-color);
+          color: var(--text-color);
+          background: var(--input-background);
           min-height: 4.2rem;
         }
         .wrapper:hover {
