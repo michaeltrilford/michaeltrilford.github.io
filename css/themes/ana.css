@@ -184,7 +184,7 @@ html[data-brand='ana'][data-theme='light'] {
   --switch-track-background-checked: var(--ana-blue-400);
 
   /* Tabs */
-  --tab-border-color: var(--ana-blue-800);
+  --tab-border-color: var(--ana-blue-300);
 
   --tab-background: var(--ana-blue-50);
   --tab-icon: var(--ana-blue-500);
@@ -194,6 +194,9 @@ html[data-brand='ana'][data-theme='light'] {
   --tab-icon-active: var(--ana-blue-50);
   --tab-text-color-active: var(--ana-blue-50);
   --tab-shadow-active: var(--black-opacity-10);
+
+  /* Carousel */
+  --carousel-background: var(--ana-grey-100);
 }
 
 /* =============================================================================== */
@@ -321,6 +324,9 @@ html[data-brand='ana'][data-theme='dark'] {
   --tab-icon-active: var(--ana-blue-800);
   --tab-text-color-active: var(--ana-blue-800);
   --tab-shadow-active: var(--black-opacity-10);
+
+  /* Carousel */
+  --carousel-background: var(--ana-grey-800);
 }
 
 /* ================================================================= */

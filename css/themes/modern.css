@@ -199,6 +199,9 @@ html[data-brand='modern'][data-theme='light'] {
   --tab-icon-active: var(--grey-100);
   --tab-text-color-active: var(--grey-100);
   --tab-shadow-active: var(--grey-200);
+
+  /* Carousel */
+  --carousel-background: var(--grey-100);
 }
 
 /* =============================================================================== */
@@ -322,6 +325,9 @@ html[data-brand='modern'][data-theme='dark'] {
   --tab-icon-active: var(--grey-800);
   --tab-text-color-active: var(--grey-800);
   --tab-shadow-active: var(--grey-900);
+
+  /* Carousel */
+  --carousel-background: var(--grey-700);
 }
 
 /* ================================================================= */

@@ -154,6 +154,9 @@ html[data-brand='mono'][data-theme='light'] {
   --tab-icon-active: var(--mono-grey-100);
   --tab-text-color-active: var(--mono-grey-100);
   --tab-shadow-active: var(--mono-grey-200);
+
+  /* Carousel */
+  --carousel-background: var(--mono-grey-100);
 }
 
 /* =============================================================================== */
@@ -271,7 +274,7 @@ html[data-brand='mono'][data-theme='dark'] {
   --switch-track-background-checked: var(--mono-white);
 
   /* Tabs */
-  --tab-border-color: var(--mono-grey-500);
+  --tab-border-color: var(--mono-grey-600);
 
   --tab-background: var(--mono-grey-900);
   --tab-icon: var(--mono-grey-100);
@@ -281,6 +284,9 @@ html[data-brand='mono'][data-theme='dark'] {
   --tab-icon-active: var(--mono-grey-900);
   --tab-text-color-active: var(--mono-grey-900);
   --tab-shadow-active: var(--mono-black);
+
+  /* Carousel */
+  --carousel-background: var(--mono-grey-700);
 }
 
 /* ================================================================= */

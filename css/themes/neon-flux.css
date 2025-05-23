@@ -212,7 +212,7 @@ html[data-brand='neon'][data-theme='light'] {
   --switch-track-background-checked: var(--neon-pink-500);
 
   /* Tabs */
-  --tab-border-color: var(--neon-blue-500);
+  --tab-border-color: var(--neon-blue-600);
 
   --tab-background: var(--neon-blue-50);
   --tab-icon: var(--neon-pink-700);
@@ -222,6 +222,9 @@ html[data-brand='neon'][data-theme='light'] {
   --tab-icon-active: var(--neon-pink-50);
   --tab-text-color-active: var(--neon-pink-50);
   --tab-shadow-active: var(--black-opacity-10);
+
+  /* Carousel */
+  --carousel-background: var(--neon-grey-100);
 }
 
 /* =============================================================================== */
@@ -350,6 +353,9 @@ html[data-brand='neon'][data-theme='dark'] {
   --tab-icon-active: var(--neon-blue-900);
   --tab-text-color-active: var(--neon-blue-900);
   --tab-shadow-active: var(--black-opacity-10);
+
+  /* Carousel */
+  --carousel-background: var(--neon-grey-800);
 }
 
 /* ================================================================= */

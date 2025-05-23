@@ -209,6 +209,9 @@ html[data-brand='jal'][data-theme='light'] {
   --tab-icon-active: var(--jal-red-500);
   --tab-text-color-active: var(--jal-red-500);
   --tab-shadow-active: var(--jal-red-600);
+
+  /* Carousel */
+  --carousel-background: var(--jal-grey-100);
 }
 
 /* =============================================================================== */
@@ -297,7 +300,7 @@ html[data-brand='jal'][data-theme='dark'] {
 
   /* Type */
   --text-color: var(--jal-grey-200);
-  --heading-text-color: var(--jal-red-100);
+  --heading-text-color: var(--jal-red-200);
 
   /* Card */
   --card-background: var(--jal-black);
@@ -324,16 +327,19 @@ html[data-brand='jal'][data-theme='dark'] {
   --switch-track-background-checked: var(--jal-red-300);
 
   /* Tabs */
-  --tab-border-color: var(--jal-grey-700);
+  --tab-border-color: var(--jal-red-800);
 
-  --tab-background: var(--jal-red-1000);
+  --tab-background: var(--jal-red-900);
   --tab-icon: var(--jal-white);
   --tab-text-color: var(--jal-white);
 
   --tab-background-active: var(--jal-red-500);
   --tab-icon-active: var(--jal-white);
   --tab-text-color-active: var(--jal-white);
-  --tab-shadow-active: var(--jal-black);
+  --tab-shadow-active: var(--black-opacity-20);
+
+  /* Carousel */
+  --carousel-background: var(--jal-grey-900);
 }
 
 /* ================================================================= */
