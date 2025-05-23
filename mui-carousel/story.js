@@ -273,7 +273,7 @@ class storyCarousel extends HTMLElement {
         <mui-carousel-panel slot="item" item="${id}">
           <div class="grid">
             <div class="hero">
-              <img style="width: 100%; height: auto;" width="400" height="376" src="${image}" />
+              <img style="width: 100%; height: auto;" width="400" height="376" src="${image}" alt="${heading}" />
             </div>
             <mui-v-stack class="content">
               <mui-heading size="2" level="3">${heading}</mui-heading>

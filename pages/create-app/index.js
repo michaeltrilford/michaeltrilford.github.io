@@ -80,7 +80,7 @@ class CreateApp extends HTMLElement {
             </mui-v-stack>
 
             <mui-image>
-              <img slot="image" src="images/create-app.jpg" />
+              <img slot="image" src="images/create-app.jpg" alt="Create App Code" />
               <figcaption slot="caption">mui-create-app/index.html</figcaption>
             </mui-image> 
           </mui-grid>

@@ -105,7 +105,7 @@ class storyCards extends HTMLElement {
               </mui-card-header>
               <mui-card-body>
                 <mui-image>
-                  <img slot="image" src="images/image-1080.png" />
+                  <img slot="image" src="images/image-1080.png" alt="image-1080" />
                 </mui-image>
               </mui-card-body>
             </mui-card>
@@ -123,7 +123,7 @@ class storyCards extends HTMLElement {
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-image&gt;
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img slot="image" src="images/image-1080.png" /&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img slot="image" src="images/image-1080.png" alt="image-1080" /&gt;
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-image&gt;
             <br />

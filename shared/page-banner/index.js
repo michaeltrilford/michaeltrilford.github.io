@@ -111,7 +111,7 @@ class pageBanner extends HTMLElement {
                 <mui-link class="mui-button-secondary" variant="secondary" href="https://gurusuite.xyz/guides" target="_blank">Learn more</mui-link>
               <mui-button-group>
             </mui-v-stack>
-            <img class="hero" src="./images/hero.png" />
+            <img class="hero" src="./images/hero.png" alt="Hero" />
           </mui-grid>
         </mui-responsive>
     `;

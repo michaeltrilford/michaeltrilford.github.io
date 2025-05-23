@@ -68,7 +68,7 @@ class ThemeSetup extends HTMLElement {
           </mui-v-stack>
 
           <mui-image>
-            <img slot="image" src="images/author-tokens.jpg" />
+            <img slot="image" src="images/author-tokens.jpg" alt="Author Tokens" />
             <figcaption slot="caption">author-tokens.css</figcaption>
           </mui-image> 
         </mui-grid>
