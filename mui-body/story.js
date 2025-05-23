@@ -1,7 +1,7 @@
 class storyBody extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -36,19 +36,19 @@ class storyBody extends HTMLElement {
             <div slot="body">
               <mui-v-stack space="var(--space-500)">
                 <div>
-                  <mui-heading size="4" tinymargin>X-Small</mui-heading>
+                  <mui-heading size="4">X-Small</mui-heading>
                   <mui-body size="x-small">Risus Mollis Dapibus</mui-body>
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Small</mui-heading>
+                  <mui-heading size="4">Small</mui-heading>
                   <mui-body size="small">Risus Mollis Dapibus</mui-body>
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Medium</mui-heading>
+                  <mui-heading size="4">Medium</mui-heading>
                   <mui-body size="medium">Risus Mollis Dapibus</mui-body>
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Large</mui-heading>
+                  <mui-heading size="4">Large</mui-heading>
                   <mui-body size="large">Risus Mollis Dapibus</mui-body>
                 </div>
               </mui-v-stack>
@@ -66,6 +66,35 @@ class storyBody extends HTMLElement {
 
           </story-card>
 
+          <story-card title="Variants">
+
+            <div slot="body">
+              <mui-v-stack space="var(--space-500)">
+                <div>
+                  <mui-heading size="4">Success</mui-heading>
+                  <mui-body variant="success">Risus Mollis Dapibus</mui-body>
+                </div>
+                <div>
+                  <mui-heading size="4">Warning</mui-heading>
+                  <mui-body variant="warning">Risus Mollis Dapibus</mui-body>
+                </div>
+                <div>
+                  <mui-heading size="4">Error</mui-heading>
+                  <mui-body variant="error">Risus Mollis Dapibus</mui-body>
+                </div>
+              </mui-v-stack>
+            </div>
+
+            <mui-code slot="footer">
+              &lt;mui-body variant="success"&gt; ... &lt;/mui-body&gt;
+              <br />
+              &lt;mui-body variant="warning"&gt; ... &lt;/mui-body&gt;
+              <br />
+              &lt;mui-body variant="error"&gt; ... &lt;/mui-body&gt;
+            </mui-code>
+
+          </story-card>
+
         </mui-v-stack>
 
       </story-template>
@@ -73,4 +102,4 @@ class storyBody extends HTMLElement {
   }
 }
 
-customElements.define("story-body", storyBody);
+customElements.define('story-body', storyBody);

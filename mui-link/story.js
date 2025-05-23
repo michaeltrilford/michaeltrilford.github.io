@@ -1,7 +1,7 @@
 class storyLink extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
 
@@ -43,19 +43,19 @@ class storyLink extends HTMLElement {
             <div slot="body">
               <mui-v-stack space="var(--space-500)">
                 <div>
-                  <mui-heading size="4" tinymargin>X-Small</mui-heading>
+                  <mui-heading size="4" >X-Small</mui-heading>
                   <mui-link size="x-small">Link text</mui-link>
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Small</mui-heading>
+                  <mui-heading size="4" >Small</mui-heading>
                   <mui-link size="small">Link text</mui-link>
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Medium</mui-heading>
+                  <mui-heading size="4" >Medium</mui-heading>
                   <mui-link size="medium">Link text</mui-link>
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Large</mui-heading>
+                  <mui-heading size="4" >Large</mui-heading>
                   <mui-link size="large">Link text</mui-link>
                 </div>
               </mui-v-stack>
@@ -223,4 +223,4 @@ class storyLink extends HTMLElement {
   }
 }
 
-customElements.define("story-link", storyLink);
+customElements.define('story-link', storyLink);

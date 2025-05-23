@@ -296,8 +296,15 @@ html[data-theme='light'] {
   /* Contextual                                                                                         */
   /* ================================================================================================== */
   --outline-color: var(--blue-500);
-  --text-color: var(--grey-900);
   --border-color: var(--grey-200);
+
+  --optional-text-color: var(--grey-600);
+
+  --text-color: var(--grey-900);
+  --text-color-success: var(--green-600);
+  --text-color-warning: var(--orange-600);
+  --text-color-error: var(--red-600);
+
   /* ================================================================================================== */
   /* Components                                                                                         */
   /* ================================================================================================== */
@@ -450,8 +457,14 @@ html[data-theme='dark'] {
   /* Contextual                                                                                         */
   /* ================================================================================================== */
   --outline-color: var(--blue-300);
-  --text-color: var(--grey-200);
   --border-color: var(--grey-700);
+
+  --optional-text-color: var(--grey-300);
+
+  --text-color: var(--grey-200);
+  --text-color-success: var(--green-400);
+  --text-color-warning: var(--orange-400);
+  --text-color-error: var(--red-400);
   /* ================================================================================================== */
   /* Components                                                                                         */
   /* ================================================================================================== */

@@ -6,6 +6,9 @@ class muiField extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
+
+    const variant = this.getAttribute('variant') || 'default';
+    this.setAttribute('variant', variant);
   }
 
   connectedCallback() {
@@ -46,16 +49,17 @@ class muiField extends HTMLElement {
           display: block;
         }
 
-        .message {
+        mui-body {
           margin-top: var(--space-100);
-          color: var(--form-feedback-${variant || 'default'}-text-color);
-          font-size: var(--text-font-size-s);
-          line-height: var(--text-line-height);
         }
       </style>
 
       <slot></slot>
-      ${message ? `<div class="message">${message}</div>` : ''}
+      ${
+        message
+          ? `<mui-body size="small" variant="${variant}">${message}</mui-body>`
+          : ''
+      }
     `;
   }
 }

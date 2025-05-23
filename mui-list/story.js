@@ -1,7 +1,7 @@
 class storyList extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -22,7 +22,7 @@ class storyList extends HTMLElement {
             <div slot="body">
               <mui-v-stack space="var(--space-500)">
                 <div>
-                  <mui-heading size="4" tinymargin>X-Small</mui-heading>
+                  <mui-heading size="4" >X-Small</mui-heading>
 
                   <mui-list as="ol">
                     <mui-list-item size="x-small">Coffee</mui-list-item>
@@ -32,7 +32,7 @@ class storyList extends HTMLElement {
 
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Small</mui-heading>
+                  <mui-heading size="4" >Small</mui-heading>
 
                   <mui-list as="ol">
                     <mui-list-item size="small">Coffee</mui-list-item>
@@ -42,7 +42,7 @@ class storyList extends HTMLElement {
 
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Medium</mui-heading>
+                  <mui-heading size="4" >Medium</mui-heading>
 
                   <mui-list as="ol">
                     <mui-list-item size="medium">Coffee</mui-list-item>
@@ -52,7 +52,7 @@ class storyList extends HTMLElement {
 
                 </div>
                 <div>
-                  <mui-heading size="4" tinymargin>Large</mui-heading>
+                  <mui-heading size="4" >Large</mui-heading>
 
                   <mui-list as="ol">
                     <mui-list-item size="large">Coffee</mui-list-item>
@@ -151,4 +151,4 @@ class storyList extends HTMLElement {
   }
 }
 
-customElements.define("story-list", storyList);
+customElements.define('story-list', storyList);
