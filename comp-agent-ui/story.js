@@ -87,15 +87,16 @@ class compAgentUI extends HTMLElement {
           border-radius: var(--radius-300);
         }
         .avatar {
-          width: 6rem;
-          height: 6rem;
+          width: 4.8rem;
+          flex: 0 0 4.8rem;
+          height: 4.8rem;
           background: var(--mui-brand-300);
           display: flex;
           justify-content: center;
           align-content: center;
-          border-radius: 6rem;
+          border-radius: 4.8rem;
         }
-        mui-logo-mobile { max-width: 3rem; margin-top: 4px; }
+        mui-logo-mobile { max-width: 2.4rem; margin-top: 4px; }
 
       </style>
       <div class="conversation-background">
@@ -103,7 +104,7 @@ class compAgentUI extends HTMLElement {
           <div class="avatar">
             <mui-logo-mobile style="width: 100%; height: auto;"></mui-logo-mobile>
           </div>
-          <mui-body size="large">Review my website <mui-link size="large" href="https://michaeltrilford.github.io/" target="_blank">https://michaeltrilford.github.io/</mui-link></mui-body>
+          <mui-body size="Medium">Review my website <mui-link size="Medium" href="https://michaeltrilford.github.io/" target="_blank">https://michaeltrilford.github.io/</mui-link></mui-body>
         </mui-h-stack>
       </div>
     `;
@@ -134,7 +135,7 @@ class compAgentUI extends HTMLElement {
             <br />
             <mui-body size="x-small">Learn about <mui-Link size="x-small" href="/#/surface-design-tokens">Surface Tokens</mui-link></mui-body>
             <br />
-            /* ===================================================== */
+            /* =================================== */
             <br />
             <br />
             mui-button::part(background):hover {
@@ -164,7 +165,7 @@ class compAgentUI extends HTMLElement {
             <br />
             <mui-body size="x-small">Learn about <mui-Link size="x-small" href="/#/surface-design-tokens">Surface Tokens</mui-link></mui-body>
             <br />
-            /* ===================================================== */
+            /* =================================== */
             <br />
             <br />
             .conversation-background {
