@@ -231,7 +231,7 @@ class storyStack extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types: HStack">
+        <props-card title="Prop Types: HStack">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsHStack}
@@ -240,7 +240,7 @@ class storyStack extends HTMLElement {
               ${accordionsHStack}
             </mui-accordion-group>
           </mui-responsive>
-        </story-card>
+        </props-card>
 
         <story-card title="Horizontal: Default">
           ${DefaultHStack}
@@ -255,7 +255,7 @@ class storyStack extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Prop Types: VStack">
+        <props-card title="Prop Types: VStack">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsVStack}
@@ -264,7 +264,7 @@ class storyStack extends HTMLElement {
               ${accordionsVStack}
             </mui-accordion-group>
           </mui-responsive>
-        </story-card>
+        </props-card>
 
         <story-card title="Vertical: Default">
           ${DefaultVStack}

@@ -136,7 +136,7 @@ class storyInput extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types">
+        <props-card title="Prop Types">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rows}
@@ -145,7 +145,7 @@ class storyInput extends HTMLElement {
               ${accordions}
             </mui-accordion-group>
           </mui-responsive>
-        </story-card>
+        </props-card>
 
 
         <story-card title="Default" description="The label is required, if not set there will be a console warning.">

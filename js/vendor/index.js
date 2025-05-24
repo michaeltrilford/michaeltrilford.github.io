@@ -90,6 +90,7 @@ const AppCompArray = ['app-navbar/index.js', 'app-container/index.js'];
 const SharedArray = [
   'shared/page-card/index.js',
   'shared/page-banner/index.js',
+  'shared/props-card/index.js',
   'shared/story-template/index.js',
   'shared/story-card/index.js',
   'shared/story-demo/index.js',

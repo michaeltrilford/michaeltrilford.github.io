@@ -100,7 +100,7 @@ class storyField extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types">
+        <props-card title="Prop Types">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rows}
@@ -109,7 +109,7 @@ class storyField extends HTMLElement {
               ${accordions}
             </mui-accordion-group>
           </mui-responsive>
-        </story-card>
+        </props-card>
 
         <story-card title="Input: Default" description="The label prop is forwarded from the parent field to the input element to associate the label with the input correctly.">
           <mui-field label="Email" slot="body">
