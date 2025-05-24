@@ -15,7 +15,12 @@ class muiCardBody extends HTMLElement {
       :host {
         display: block;
         box-sizing: border-box;
-        padding: var(--space-600);
+        padding: var(--space-500);
+      }
+      @media (min-width: 600px) {
+        :host {
+          padding: var(--space-600);
+        } 
       }
     </style>
     <slot></slot>

@@ -38,8 +38,14 @@ class muiCode extends HTMLElement {
         font-family: monospace;
         color: var(--text-color);
         background: var(--surface-elevated-200);
-        padding: var(--space-500) var(--space-600);
+        padding: var(--space-400) var(--space-500);
         box-sizing: border-box;
+      }
+
+      @media (min-width: 600px) {
+        code {
+          padding: var(--space-500) var(--space-600);
+        } 
       }
 
     `;
