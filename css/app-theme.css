@@ -25,9 +25,7 @@ html[data-theme='light'] {
   --app-nav-link-focus: var(--grey-900);
   --app-nav-group-color: var(--white-opacity-80);
   --app-theme-toggle-bg: var(--black);
-  --app-story-card-background: var(--grey-100);
-  --app-story-card-canvas: var(--white);
-  --app-story-code-snippet-background: var(--mui-brand-300);
+  --app-story-snippet-code-bg: var(--mui-brand-300);
   --app-story-snippet-code-text: var(--black);
   --app-story-banner-gradient-start: var(--black-opacity-10);
   --app-story-banner-gradient-end: var(--white-opacity-20);
@@ -50,9 +48,7 @@ html[data-theme='dark'] {
   --app-nav-link-focus: var(--grey-900);
   --app-nav-group-color: var(--white-opacity-80);
   --app-theme-toggle-bg: var(--mui-brand-300);
-  --app-story-card-background: var(--grey-900);
-  --app-story-card-canvas: var(--grey-1000);
-  --app-story-code-snippet-background: var(--mui-brand-300);
+  --app-story-snippet-code-bg: var(--mui-brand-300);
   --app-story-snippet-code-text: var(--black);
   --app-story-banner-gradient-start: var(--white-opacity-10);
   --app-story-banner-gradient-end: var(--black-opacity-20);
@@ -80,7 +76,7 @@ html[data-brand='jal'][data-theme='light'] {
   --app-nav-link-focus: var(--jal-grey-100);
   --app-nav-group-color: var(--black-opacity-50);
   --app-theme-toggle-bg: var(--jal-grey-200);
-  --app-story-code-snippet-background: var(--jal-red-300);
+  --app-story-snippet-code-bg: var(--jal-red-300);
   --app-story-snippet-code-text: var(--jal-white);
 }
 
@@ -97,10 +93,8 @@ html[data-brand='jal'][data-theme='dark'] {
   --app-nav-link-focus: var(--jal-grey-1000);
   --app-nav-group-color: var(--white-opacity-80);
   --app-theme-toggle-bg: var(--jal-red-200);
-  --app-story-code-snippet-background: var(--jal-red-300);
+  --app-story-snippet-code-bg: var(--jal-red-300);
   --app-story-snippet-code-text: var(--jal-white);
-  --app-story-card-background: var(--jal-black);
-  --app-story-card-canvas: var(--jal-grey-900);
 }
 
 /* =============================================================================== */
@@ -120,7 +114,7 @@ html[data-brand='ana'][data-theme='light'] {
   --app-nav-link-focus: var(--ana-grey-100);
   --app-nav-group-color: var(--black-opacity-50);
   --app-theme-toggle-bg: var(--ana-grey-200);
-  --app-story-code-snippet-background: var(--ana-blue-500);
+  --app-story-snippet-code-bg: var(--ana-blue-500);
   --app-story-snippet-code-text: var(--ana-white);
 }
 
@@ -137,10 +131,8 @@ html[data-brand='ana'][data-theme='dark'] {
   --app-nav-link-focus: var(--ana-grey-1000);
   --app-nav-group-color: var(--white-opacity-80);
   --app-theme-toggle-bg: var(--ana-blue-200);
-  --app-story-code-snippet-background: var(--ana-blue-500);
+  --app-story-snippet-code-bg: var(--ana-blue-500);
   --app-story-snippet-code-text: var(--ana-white);
-  --app-story-card-background: var(--ana-black);
-  --app-story-card-canvas: var(--ana-grey-900);
 }
 
 /* =============================================================================== */
@@ -160,10 +152,8 @@ html[data-brand='mono'][data-theme='light'] {
   --app-nav-link-focus: var(--mono-grey-200);
   --app-nav-group-color: var(--black-opacity-80);
   --app-theme-toggle-bg: var(--mono-grey-200);
-  --app-story-code-snippet-background: var(--mono-grey-200);
+  --app-story-snippet-code-bg: var(--mono-grey-200);
   --app-story-snippet-code-text: var(--mono-black);
-  --app-story-card-background: var(--mono-grey-100);
-  --app-story-card-canvas: var(--mono-white);
 }
 
 html[data-brand='mono'][data-theme='dark'] {
@@ -179,10 +169,8 @@ html[data-brand='mono'][data-theme='dark'] {
   --app-nav-link-focus: var(--mono-grey-800);
   --app-nav-group-color: var(--white-opacity-40);
   --app-theme-toggle-bg: var(--mono-grey-200);
-  --app-story-code-snippet-background: var(--mono-white);
+  --app-story-snippet-code-bg: var(--mono-white);
   --app-story-snippet-code-text: var(--mono-black);
-  --app-story-card-background: var(--mono-grey-800);
-  --app-story-card-canvas: var(--mono-grey-900);
   --app-nav-group-color: var(--white-opacity-50);
 }
 
@@ -204,10 +192,8 @@ html[data-brand='modern'][data-theme='light'] {
   --app-nav-link-focus: var(--grey-200);
   --app-nav-group-color: var(--black-opacity-80);
   --app-theme-toggle-bg: var(--grey-300);
-  --app-story-code-snippet-background: var(--grey-200);
+  --app-story-snippet-code-bg: var(--grey-200);
   --app-story-snippet-code-text: var(--black);
-  --app-story-card-background: var(--grey-100);
-  --app-story-card-canvas: var(--white);
 }
 
 html[data-brand='modern'][data-theme='dark'] {
@@ -223,8 +209,6 @@ html[data-brand='modern'][data-theme='dark'] {
   --app-nav-link-focus: var(--grey-800);
   --app-nav-group-color: var(--white-opacity-50);
   --app-theme-toggle-bg: var(--grey-300);
-  --app-story-code-snippet-background: var(--white);
+  --app-story-snippet-code-bg: var(--white);
   --app-story-code-text: var(--black);
-  --app-story-card-background: var(--grey-800);
-  --app-story-card-canvas: var(--grey-900);
 }

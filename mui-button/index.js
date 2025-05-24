@@ -199,7 +199,7 @@ class muiButton extends HTMLElement {
           min-height: 4.4rem;
           background: var(--action-secondary-background);
           color: var(--action-secondary-text-color);
-          border-color: var(--form-feedback-default-border-color);
+          border-color: var(--form-default-border-color);
           border-right: none;
           border-top-right-radius: var(--radius-000);
           border-bottom-right-radius: var(--radius-000);
@@ -208,7 +208,7 @@ class muiButton extends HTMLElement {
         :host([slot="before"]) button:hover {
           background: var(--action-secondary-background-hover);
           color: var(--action-secondary-text-color-hover);
-          border-color: var(--form-feedback-default-border-color-hover);
+          border-color: var(--form-default-border-color-hover);
         }
 
     /* ========================================================================== */
@@ -220,7 +220,7 @@ class muiButton extends HTMLElement {
           min-height: 4.4rem;
           background: var(--action-secondary-background);
           color: var(--action-secondary-text-color);
-          border-color: var(--form-feedback-default-border-color);
+          border-color: var(--form-default-border-color);
           border-left: none;
           border-top-left-radius: var(--radius-000);
           border-bottom-left-radius: var(--radius-000);
@@ -230,7 +230,7 @@ class muiButton extends HTMLElement {
         :host([slot="after"]) button:focus {
           background: var(--action-secondary-background-hover);
           color: var(--action-secondary-text-color-hover);
-          border-color: var(--form-feedback-default-border-color-hover);
+          border-color: var(--form-default-border-color-hover);
         }
 
     /* ========================================================================== */

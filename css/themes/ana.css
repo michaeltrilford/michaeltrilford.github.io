@@ -159,22 +159,8 @@ html[data-brand='ana'][data-theme='light'] {
   --text-color: var(--ana-grey-900);
   --heading-text-color: var(--ana-blue-600);
 
-  /* Card */
-  --card-background: var(--ana-white);
-
-  /* Code */
-  --code-background: var(--ana-blue-500);
-  --code-text-color: var(--ana-white);
-
-  /* Image */
-  --image-text-color: var(--black);
-  --image-background: var(--white);
-
   /* Input */
   --input-background: var(--ana-white);
-
-  /* Table */
-  --table-background: var(--ana-white);
 
   /* Border */
   --border-color: var(--ana-grey-200);
@@ -289,22 +275,8 @@ html[data-brand='ana'][data-theme='dark'] {
   --text-color: var(--ana-grey-100);
   --heading-text-color: var(--ana-blue-200);
 
-  /* Card */
-  --card-background: var(--ana-grey-800);
-
-  /* Code */
-  --code-background: var(--ana-grey-800);
-  --code-text-color: var(--ana-white);
-
-  /* Image */
-  --image-text-color: var(--white);
-  --image-background: var(--black);
-
   /* Input */
   --input-background: var(--ana-grey-800);
-
-  /* Table */
-  --table-background: var(--ana-grey-800);
 
   /* Border */
   --border-color: var(--ana-grey-700);

@@ -119,22 +119,8 @@ html[data-brand='mono'][data-theme='light'] {
   --text-color: var(--mono-black);
   --heading-text-color: var(--mono-black);
 
-  /* Card */
-  --card-background: var(--mono-white);
-
-  /* Code */
-  --code-background: var(--mono-white);
-  --code-text-color: var(--mono-black);
-
-  /* Image */
-  --image-text-color: var(--black);
-  --image-background: var(--white);
-
   /* Input */
   --input-background: var(--mono-white);
-
-  /* Table */
-  --table-background: var(--mono-white);
 
   /* Border */
   --border-color: var(--mono-grey-300);
@@ -249,22 +235,8 @@ html[data-brand='mono'][data-theme='dark'] {
   --text-color: var(--mono-white);
   --heading-text-color: var(--mono-white);
 
-  /* Card */
-  --card-background: var(--mono-grey-800);
-
-  /* Code */
-  --code-background: var(--mono-grey-800);
-  --code-text-color: var(--mono-white);
-
-  /* Image */
-  --image-text-color: var(--white);
-  --image-background: var(--black);
-
   /* Input */
   --input-background: var(--mono-grey-900);
-
-  /* Table */
-  --table-background: var(--mono-grey-800);
 
   /* Border */
   --border-color: var(--mono-grey-700);

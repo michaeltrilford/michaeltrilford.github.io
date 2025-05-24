@@ -1,16 +1,16 @@
 /* Mui Code */
 class muiCode extends HTMLElement {
   static get observedAttributes() {
-    return ["size"];
+    return ['size'];
   }
 
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     // Set defaults
-    const size = this.getAttribute("size") || "x-small";
-    this.setAttribute("size", size);
+    const size = this.getAttribute('size') || 'x-small';
+    this.setAttribute('size', size);
 
     const styles = `
       :host {
@@ -36,8 +36,8 @@ class muiCode extends HTMLElement {
         display: block;
         border-radius: inherit;
         font-family: monospace;
-        color: var(--code-text-color);
-        background: var(--code-background);
+        color: var(--text-color);
+        background: var(--surface-elevated-200);
         padding: var(--space-400) var(--space-500);
         box-sizing: border-box;
       }
@@ -50,4 +50,4 @@ class muiCode extends HTMLElement {
   }
 }
 
-customElements.define("mui-code", muiCode);
+customElements.define('mui-code', muiCode);

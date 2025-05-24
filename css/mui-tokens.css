@@ -207,23 +207,23 @@ html[data-theme='light'] {
   /* ================================================================================================== */
   /* Semantic                                                                                           */
   /* ================================================================================================== */
-  /* Form Feedback */
-  --form-feedback-default-text-color: var(--grey-500);
-  --form-feedback-success-text-color: var(--green-700);
-  --form-feedback-warning-text-color: var(--orange-700);
-  --form-feedback-error-text-color: var(--red-700);
-  --form-feedback-default-text-color-hover: var(--grey-600);
-  --form-feedback-success-text-color-hover: var(--green-800);
-  --form-feedback-warning-text-color-hover: var(--orange-800);
-  --form-feedback-error-text-color-hover: var(--red-800);
-  --form-feedback-default-border-color: var(--grey-300);
-  --form-feedback-success-border-color: var(--green-600);
-  --form-feedback-warning-border-color: var(--orange-600);
-  --form-feedback-error-border-color: var(--red-600);
-  --form-feedback-default-border-color-hover: var(--grey-400);
-  --form-feedback-success-border-color-hover: var(--green-700);
-  --form-feedback-warning-border-color-hover: var(--orange-700);
-  --form-feedback-error-border-color-hover: var(--red-700);
+  /* Form */
+  --form-default-text-color: var(--grey-500);
+  --form-success-text-color: var(--green-700);
+  --form-warning-text-color: var(--orange-700);
+  --form-error-text-color: var(--red-700);
+  --form-default-text-color-hover: var(--grey-600);
+  --form-success-text-color-hover: var(--green-800);
+  --form-warning-text-color-hover: var(--orange-800);
+  --form-error-text-color-hover: var(--red-800);
+  --form-default-border-color: var(--grey-300);
+  --form-success-border-color: var(--green-600);
+  --form-warning-border-color: var(--orange-600);
+  --form-error-border-color: var(--red-600);
+  --form-default-border-color-hover: var(--grey-400);
+  --form-success-border-color-hover: var(--green-700);
+  --form-warning-border-color-hover: var(--orange-700);
+  --form-error-border-color-hover: var(--red-700);
   /* Feedback - Border (Alerts & Messages) */
   --feedback-plain-border-color: var(--black-opacity-50);
   --feedback-neutral-border-color: var(--grey-600);
@@ -295,6 +295,14 @@ html[data-theme='light'] {
   /* ================================================================================================== */
   /* Contextual                                                                                         */
   /* ================================================================================================== */
+  --surface: var(--grey-200);
+  --surface-elevated-alpha: var(--white-opacity-50);
+  --surface-elevated-100: var(--grey-100);
+  --surface-elevated-200: var(--white);
+  --surface-recessed-alpha: var(--black-opacity-10);
+  --surface-recessed-100: var(--grey-300);
+  --surface-recessed-200: var(--grey-400);
+
   --outline-color: var(--blue-500);
   --border-color: var(--grey-200);
 
@@ -329,17 +337,6 @@ html[data-theme='light'] {
   --link-text-color-default-hover: var(--grey-1000);
   --link-text-color-default-focus: var(--grey-1000);
   --link-text-color-default-disabled: var(--grey-800);
-  /* Card */
-  --card-background: var(--white);
-  /* Code */
-  --code-text-color: var(--white);
-  --code-background: var(--grey-900);
-  /* Image */
-  --image-text-color: var(--black);
-  --image-background: var(--white);
-  /* Table */
-  --table-background: var(--white);
-  --table-border: var(--border-color);
   /* Input */
   --input-background: var(--white);
   --input-background-disabled: var(--grey-100);
@@ -368,23 +365,23 @@ html[data-theme='dark'] {
   /* ================================================================================================== */
   /* Semantic                                                                                           */
   /* ================================================================================================== */
-  /* Form Feedback */
-  --form-feedback-default-text-color: var(--grey-500);
-  --form-feedback-success-text-color: var(--green-400);
-  --form-feedback-warning-text-color: var(--orange-400);
-  --form-feedback-error-text-color: var(--red-400);
-  --form-feedback-default-text-color-hover: var(--grey-400);
-  --form-feedback-success-text-color-hover: var(--green-300);
-  --form-feedback-warning-text-color-hover: var(--orange-300);
-  --form-feedback-error-text-color-hover: var(--red-300);
-  --form-feedback-default-border-color: var(--grey-600);
-  --form-feedback-success-border-color: var(--green-400);
-  --form-feedback-warning-border-color: var(--orange-400);
-  --form-feedback-error-border-color: var(--red-400);
-  --form-feedback-default-border-color-hover: var(--grey-500);
-  --form-feedback-success-border-color-hover: var(--green-300);
-  --form-feedback-warning-border-color-hover: var(--orange-300);
-  --form-feedback-error-border-color-hover: var(--red-300);
+  /* Form */
+  --form-default-text-color: var(--grey-500);
+  --form-success-text-color: var(--green-400);
+  --form-warning-text-color: var(--orange-400);
+  --form-error-text-color: var(--red-400);
+  --form-default-text-color-hover: var(--grey-400);
+  --form-success-text-color-hover: var(--green-300);
+  --form-warning-text-color-hover: var(--orange-300);
+  --form-error-text-color-hover: var(--red-300);
+  --form-default-border-color: var(--grey-600);
+  --form-success-border-color: var(--green-400);
+  --form-warning-border-color: var(--orange-400);
+  --form-error-border-color: var(--red-400);
+  --form-default-border-color-hover: var(--grey-500);
+  --form-success-border-color-hover: var(--green-300);
+  --form-warning-border-color-hover: var(--orange-300);
+  --form-error-border-color-hover: var(--red-300);
   /* Feedback - Border (Alerts & Messages) */
   --feedback-plain-border-color: var(--white-opacity-50);
   --feedback-neutral-border-color: var(--grey-400);
@@ -456,6 +453,14 @@ html[data-theme='dark'] {
   /* ================================================================================================== */
   /* Contextual                                                                                         */
   /* ================================================================================================== */
+  --surface: var(--grey-900);
+  --surface-elevated-alpha: var(--white-opacity-10);
+  --surface-elevated-100: var(--grey-800);
+  --surface-elevated-200: var(--grey-900);
+  --surface-recessed-alpha: var(--black-opacity-30);
+  --surface-recessed-100: var(--grey-1000);
+  --surface-recessed-200: var(--grey-1100);
+
   --outline-color: var(--blue-300);
   --border-color: var(--grey-700);
 
@@ -489,17 +494,6 @@ html[data-theme='dark'] {
   --link-text-color-default-hover: var(--grey-100);
   --link-text-color-default-focus: var(--grey-100);
   --link-text-color-default-disabled: var(--grey-600);
-  /* Card */
-  --card-background: var(--grey-900);
-  /* Code */
-  --code-text-color: var(--white);
-  --code-background: var(--grey-800);
-  /* Image */
-  --image-text-color: var(--white);
-  --image-background: var(--black);
-  /* Table */
-  --table-background: var(--grey-800);
-  --table-border: var(--border-color);
   /* Input */
   --input-background: var(--grey-900);
   --input-background-disabled: var(--grey-900);

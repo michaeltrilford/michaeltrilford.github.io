@@ -2,11 +2,11 @@
 class muiRowGroup extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    this.setAttribute("role", "rowgroup");
+    this.setAttribute('role', 'rowgroup');
     this.shadowRoot.innerHTML = `
     <style>
       :host {
@@ -14,7 +14,7 @@ class muiRowGroup extends HTMLElement {
       }
       :host([heading]) {
         display: block;
-        border-bottom: 1px solid var(--table-border);
+        border-bottom: var(--border-thin);
       }
     </style>
     <slot></slot>
@@ -22,4 +22,4 @@ class muiRowGroup extends HTMLElement {
   }
 }
 
-customElements.define("mui-row-group", muiRowGroup);
+customElements.define('mui-row-group', muiRowGroup);

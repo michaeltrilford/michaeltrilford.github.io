@@ -14,10 +14,12 @@ class muiImage extends HTMLElement {
         display: flex;
       }
       figure {
-        background: var( --image-background);
+        background: var(--surface-elevated-200);
         display: block;
         width: 100%;
         margin: var(--space-000);
+        border-radius: var(--radius-300);
+        overflow: hidden;
       }
       ::slotted(img) {
         width: 100%;
@@ -29,7 +31,7 @@ class muiImage extends HTMLElement {
       }
       ::slotted(figcaption) {
         padding: var(--space-500);
-        color: var( --image-text-color);
+        color: var( --text-color);
         text-align: center;
         display: block;
       }

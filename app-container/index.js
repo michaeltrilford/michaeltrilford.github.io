@@ -42,6 +42,7 @@ export class AppContainer extends HTMLElement {
       '/base-design-tokens': 'story-tokens-base',
       '/semantic-design-tokens': 'story-tokens-semantic',
       '/contextual-design-tokens': 'story-tokens-contextual',
+      '/surface-design-tokens': 'story-tokens-surface',
       '/components-design-tokens': 'story-tokens-components',
       '/text-part-selectors': 'story-parts-text',
       '/spacing-part-selectors': 'story-parts-spacing',

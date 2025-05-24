@@ -135,7 +135,7 @@ class muiSelect extends HTMLElement {
           padding: var(--space-200) var(--space-300);
           font-size: var(--text-font-size);
           border: var(--border-thin);
-          border-color: var(--form-feedback-default-border-color);
+          border-color: var(--form-default-border-color);
           border-radius: var(--radius-100);
           color: var(--text-color);
           background: var(--input-background);
@@ -148,7 +148,7 @@ class muiSelect extends HTMLElement {
           background-size: 10px 5px;
         }
         select:hover {
-          border-color: var(--form-feedback-default-border-color-hover);
+          border-color: var(--form-default-border-color-hover);
         }
         select:focus {
           outline: var(--outline-thick);
@@ -159,34 +159,34 @@ class muiSelect extends HTMLElement {
           cursor: not-allowed;
         }
         select.success {
-          color: var(--form-feedback-success-text-color);
-          border-color: var(--form-feedback-success-border-color);
-          box-shadow: 0 0 0 2px var(--form-feedback-success-border-color);
+          color: var(--form-success-text-color);
+          border-color: var(--form-success-border-color);
+          box-shadow: 0 0 0 2px var(--form-success-border-color);
         }
         select.warning {
-          color: var(--form-feedback-warning-text-color);
-          border-color: var(--form-feedback-warning-border-color);
-          box-shadow: 0 0 0 2px var(--form-feedback-warning-border-color);
+          color: var(--form-warning-text-color);
+          border-color: var(--form-warning-border-color);
+          box-shadow: 0 0 0 2px var(--form-warning-border-color);
         }
         select.error {
-          color: var(--form-feedback-error-text-color);
-          border-color: var(--form-feedback-error-border-color);
-          box-shadow: 0 0 0 2px var(--form-feedback-error-border-color);
+          color: var(--form-error-text-color);
+          border-color: var(--form-error-border-color);
+          box-shadow: 0 0 0 2px var(--form-error-border-color);
         }
         select.success:hover {
-          color: var(--form-feedback-success-text-color-hover);
-          border-color: var(--form-feedback-success-border-color-hover);
-          box-shadow: 0 0 0 2px var(--form-feedback-success-border-color-hover);
+          color: var(--form-success-text-color-hover);
+          border-color: var(--form-success-border-color-hover);
+          box-shadow: 0 0 0 2px var(--form-success-border-color-hover);
         }
         select.warning:hover {
-          color: var(--form-feedback-warning-text-color-hover);
-          border-color: var(--form-feedback-warning-border-color-hover);
-          box-shadow: 0 0 0 2px var(--form-feedback-warning-border-color-hover);
+          color: var(--form-warning-text-color-hover);
+          border-color: var(--form-warning-border-color-hover);
+          box-shadow: 0 0 0 2px var(--form-warning-border-color-hover);
         }
         select.error:hover {
-          color: var(--form-feedback-error-text-color-hover);
-          border-color: var(--form-feedback-error-border-color-hover);
-          box-shadow: 0 0 0 2px var(--form-feedback-error-border-color-hover);
+          color: var(--form-error-text-color-hover);
+          border-color: var(--form-error-border-color-hover);
+          box-shadow: 0 0 0 2px var(--form-error-border-color-hover);
         }
         .vh {
           position: absolute;

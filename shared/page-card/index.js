@@ -22,7 +22,6 @@ class pageCard extends HTMLElement {
       }
 
       mui-card-body {
-        background: var(--app-story-card-background);
         padding: var(--space-500);
         padding-bottom: var(--space-600);
         border-bottom-right-radius: var(--radius-200);

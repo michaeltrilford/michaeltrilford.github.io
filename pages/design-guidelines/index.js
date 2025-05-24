@@ -9,7 +9,7 @@ class DesignGuidelines extends HTMLElement {
         border: var(--feedback-neutral-border);
         border: var(--border-thick);
         border-radius: var(--radius-400);
-        background: linear-gradient(0deg, var(--app-story-banner-gradient-start) 0%, var(--app-story-banner-gradient-end) 100%);
+        background: var(--surface-elevated-alpha);
       }
     
     `;

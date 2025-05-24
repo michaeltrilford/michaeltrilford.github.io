@@ -174,22 +174,8 @@ html[data-brand='jal'][data-theme='light'] {
   --text-color: var(--jal-grey-900);
   --heading-text-color: var(--jal-red-500);
 
-  /* Card */
-  --card-background: var(--jal-white);
-
-  /* Code */
-  --code-background: var(--jal-red-500);
-  --code-text-color: var(--jal-white);
-
-  /* Image */
-  --image-text-color: var(--black);
-  --image-background: var(--white);
-
   /* Input */
   --input-background: var(--jal-white);
-
-  /* Table */
-  --table-background: var(--jal-white);
 
   /* Border */
   --border-color: var(--jal-grey-200);
@@ -292,7 +278,7 @@ html[data-brand='jal'][data-theme='dark'] {
   --badge-background-attention: var(--jal-red-400);
 
   /* Outline (Focus) */
-  --outline-color: var(--jal-red-100);
+  --outline-color: var(--jal-red-200);
 
   /* Icon */
   --icon-color-default: var(--jal-red-200);
@@ -302,22 +288,8 @@ html[data-brand='jal'][data-theme='dark'] {
   --text-color: var(--jal-grey-200);
   --heading-text-color: var(--jal-red-200);
 
-  /* Card */
-  --card-background: var(--jal-black);
-
-  /* Code */
-  --code-background: var(--jal-grey-1000);
-  --code-text-color: var(--jal-white);
-
-  /* Image */
-  --image-text-color: var(--white);
-  --image-background: var(--black);
-
   /* Input */
   --input-background: var(--jal-grey-800);
-
-  /* Table */
-  --table-background: var(--jal-grey-700);
 
   /* Border */
   --border-color: var(--jal-grey-700);

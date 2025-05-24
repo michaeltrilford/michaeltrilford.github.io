@@ -37,7 +37,7 @@ class MuiAddon extends HTMLElement {
           padding: var(--space-200) var(--space-400);
           background: var(--addon-background);
           border: var(--border-thin);
-          border-color: var(--form-feedback-default-border-color);
+          border-color: var(--form-default-border-color);
           height: 4.4rem;
           min-width: 4.4rem;
           white-space: nowrap;

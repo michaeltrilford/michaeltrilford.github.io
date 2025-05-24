@@ -30,13 +30,13 @@ class FileUpload extends HTMLElement {
           border-radius: var(--radius-100);
           border: var(--border-thin);
           border-style: dashed;
-          border-color: var(--form-feedback-default-border-color);
+          border-color: var(--form-default-border-color);
           color: var(--text-color);
           background: var(--input-background);
           min-height: 4.2rem;
         }
         .wrapper:hover {
-          border-color: var(--form-feedback-default-border-color-hover);
+          border-color: var(--form-default-border-color-hover);
         }
         .label {
           width: 90px;

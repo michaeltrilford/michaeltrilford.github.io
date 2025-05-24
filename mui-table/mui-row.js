@@ -1,25 +1,25 @@
 /* Mui Rule */
 class muiRow extends HTMLElement {
   static get observedAttributes() {
-    return ["columns"];
+    return ['columns'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    this.setAttribute("role", "row");
+    this.setAttribute('role', 'row');
     this.shadowRoot.innerHTML = `
     <style>
       :host {
         display: grid;
-        grid-template-columns: ${this.getAttribute("columns")};
+        grid-template-columns: ${this.getAttribute('columns')};
         grid-gap: var(--space-500);
         margin-bottom: var(--space-000);
         padding: var(--space-300) var(--space-000);
-        border-bottom: 1px solid var(--table-border);
+        border-bottom: var(--border-thin);
         align-items: center;
       }
     </style>
@@ -28,4 +28,4 @@ class muiRow extends HTMLElement {
   }
 }
 
-customElements.define("mui-row", muiRow);
+customElements.define('mui-row', muiRow);

@@ -15,7 +15,7 @@ class storyCodeSnippet extends HTMLElement {
       }
 
       code {
-        background: var(--app-story-code-snippet-background);
+        background: var(--app-story-snippet-code-bg);
         border-radius: var(--radius-100);
         color: var(--app-story-snippet-code-text);
         padding: var(--space-025) var(--space-100);

@@ -86,6 +86,7 @@ class appNavbar extends HTMLElement {
         <app-navbar-link link="#/base-design-tokens" title="Base"></app-navbar-link>
         <app-navbar-link link="#/semantic-design-tokens" title="Semantic"></app-navbar-link>
         <app-navbar-link link="#/contextual-design-tokens" title="Contextual"></app-navbar-link>
+        <app-navbar-link link="#/surface-design-tokens" title="Surface"></app-navbar-link>
         <app-navbar-link link="#/components-design-tokens" title="Components"></app-navbar-link>
       </app-navbar-group>
     `;
@@ -150,8 +151,8 @@ class appNavbar extends HTMLElement {
         ${Resources}
         ${Required}
         ${Parts}
-        ${Components}
         ${Compositions}
+        ${Components}
       </app-navbar-menu>
       
       <app-navbar-menu mobile id="mobile">
@@ -160,8 +161,8 @@ class appNavbar extends HTMLElement {
         ${Resources}
         ${Required}
         ${Parts}
-        ${Components}
         ${Compositions}
+        ${Components}
       </app-navbar-menu>
 
       <app-navbar-toggle>

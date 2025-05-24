@@ -22,7 +22,6 @@ class storyCard extends HTMLElement {
       }
 
       mui-card-body {
-        background: var(--app-story-card-background);
         padding: var(--space-500);
       }
 
@@ -31,7 +30,7 @@ class storyCard extends HTMLElement {
       }
 
       section {
-        background: var(--app-story-card-canvas);
+        background: var(--surface-elevated-200);
         position: relative;
       }
 
@@ -74,7 +73,6 @@ class storyCard extends HTMLElement {
         height: calc(4px + 100% + 6px);
         right: 0;
       }
-
 
       .github::part(display) {
         display: flex;

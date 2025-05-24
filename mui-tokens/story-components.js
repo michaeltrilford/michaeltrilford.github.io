@@ -24,7 +24,7 @@ class storyTokensComponents extends HTMLElement {
 
           <story-card title="Card" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-card">
             <story-token-slat slot="body" token="--card-radius" variant="radius" output="var(--radius-150)"></story-token-slat>
-            <story-token-slat slot="body" token="--card-background" variant="color" output="var(--white)"></story-token-slat>
+            <mui-body size="x-small" style="padding: var(--space-300); border-top: var(--border-thin);" slot="body">Refer to <mui-link size="x-small" href="/#/surface-design-tokens">Surface</mui-link> tokens</mui-body>
           </story-card>
 
           <story-card title="Badge" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-badge/index.js">
@@ -40,17 +40,17 @@ class storyTokensComponents extends HTMLElement {
           </story-card>
 
           <story-card title="Table" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-table">
-            <story-token-slat slot="body" token="--table-background" variant="color" output="var(--white)"></story-token-slat>
+            <mui-body size="x-small" style="padding: var(--space-300);" slot="body">Refer to <mui-link size="x-small" href="/#/contextual-design-tokens">Border Contextual</mui-link> tokens</mui-body>
           </story-card>
 
           <story-card title="Image" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/tree/master/mui-table">
-            <story-token-slat slot="body" token="--image-text-color" variant="text-color" output="var(--black)"></story-token-slat>
-            <story-token-slat slot="body" token="--image-background" variant="color" output="var(--white)"></story-token-slat>
+            <mui-body size="x-small" style="padding: var(--space-300);" slot="body">Refer to <mui-link size="x-small" href="/#/contextual-design-tokens">Text Contextual</mui-link> tokens</mui-body>
+            <mui-body size="x-small" style="padding: var(--space-300); border-top: var(--border-thin);" slot="body">Refer to <mui-link size="x-small" href="/#/surface-design-tokens">Surface</mui-link> tokens</mui-body>
           </story-card>
 
           <story-card title="Code" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-code/index.js">
-            <story-token-slat slot="body" token="--code-text-color" variant="text-color" output="var(--white)"></story-token-slat>
-            <story-token-slat slot="body" token="--code-background" variant="color" output="var(--grey-900)"></story-token-slat>
+            <mui-body size="x-small" style="padding: var(--space-300);" slot="body">Refer to <mui-link size="x-small" href="/#/contextual-design-tokens">Text Contextual</mui-link> tokens</mui-body>
+            <mui-body size="x-small" style="padding: var(--space-300); border-top: var(--border-thin);" slot="body">Refer to <mui-link size="x-small" href="/#/surface-design-tokens">Surface</mui-link> tokens</mui-body>
           </story-card>
 
           <story-card title="Alert" nofooter github="https://github.com/michaeltrilford/michaeltrilford.github.io/blob/master/mui-alert/index.js">

@@ -1,12 +1,12 @@
 /* Mui Card */
 class muiCard extends HTMLElement {
   static get observedAttributes() {
-    return ["footer"];
+    return ['footer'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -16,7 +16,7 @@ class muiCard extends HTMLElement {
         display: block;
         border-radius: var(--card-radius);
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-        background: var(--card-background);
+        background: var(--surface-elevated-100);
       }
       ::slotted(*:last-child) {
         margin-bottom: 0;
@@ -31,4 +31,4 @@ class muiCard extends HTMLElement {
   }
 }
 
-customElements.define("mui-card", muiCard);
+customElements.define('mui-card', muiCard);

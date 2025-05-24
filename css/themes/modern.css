@@ -164,22 +164,8 @@ html[data-brand='modern'][data-theme='light'] {
   --text-color: var(--grey-900);
   --heading-text-color: var(--grey-1000);
 
-  /* Card */
-  --card-background: var(--white);
-
-  /* Code */
-  --code-background: var(--grey-800);
-  --code-text-color: var(--white);
-
-  /* Image */
-  --image-text-color: var(--black);
-  --image-background: var(--white);
-
   /* Input */
   --input-background: var(--red-50);
-
-  /* Table */
-  --table-background: var(--white);
 
   /* Border */
   --border-color: var(--grey-200);
@@ -290,22 +276,8 @@ html[data-brand='modern'][data-theme='dark'] {
   --text-color: var(--grey-100);
   --heading-text-color: var(--grey-200);
 
-  /* Card */
-  --card-background: var(--grey-900);
-
-  /* Code */
-  --code-background: var(--black);
-  --code-text-color: var(--white);
-
-  /* Image */
-  --image-text-color: var(--white);
-  --image-background: var(--grey-900);
-
   /* Input */
   --input-background: var(--grey-800);
-
-  /* Table */
-  --table-background: var(--grey-900);
 
   /* Border */
   --border-color: var(--grey-700);
