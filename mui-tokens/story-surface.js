@@ -130,7 +130,7 @@ class storyTokensSurface extends HTMLElement {
               <br />
               <mui-body size="x-small">Learn about <mui-Link size="x-small" href="/#/surface-design-tokens">Surface Tokens</mui-link></mui-body>
               <br />
-              /* ===================================================== */
+              /* =================================== */
               <br />
               <br />
               .surface {
@@ -158,7 +158,7 @@ class storyTokensSurface extends HTMLElement {
               <br />
               <mui-body size="x-small">Learn about <mui-Link size="x-small" href="/#/surface-design-tokens">Surface Tokens</mui-link></mui-body>
               <br />
-              /* ===================================================== */
+              /* =================================== */
               <br />
               <br />
               .surface {
