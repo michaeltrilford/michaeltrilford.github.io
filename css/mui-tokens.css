@@ -355,7 +355,7 @@ html[data-theme='light'] {
   --tab-shadow-active: var(--black-opacity-10);
 
   /* Carousel */
-  --carousel-background: var(--grey-200);
+  --carousel-background: var(--white);
 }
 
 /* ==================================================================================================== */
