@@ -22,7 +22,7 @@ class muiAccordionBlock extends HTMLElement {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: var(--border-thin);
+        border-top: var(--border-thin);
         cursor: pointer;
         background: var(--surface-elevated-100);
       }
@@ -55,7 +55,8 @@ class muiAccordionBlock extends HTMLElement {
         max-height: 0;
         overflow: hidden;
         transition: max-height var(--speed-300) ease;
-        background: var(--surface-elevated-alpha);
+        box-shadow: inset 0 1px 0 0 var(--border-color);
+        background: var(--surface-elevated-200);
       }
 
       .accordion-detail[open] {
@@ -112,7 +113,7 @@ class muiAccordionBlock extends HTMLElement {
       aria-expanded="false"
       aria-controls="${this.accordionId}"
     >
-      <mui-heading nomargin size="5" level="${headingLevel}">${headingText}</mui-heading>
+      <mui-heading size="6" level="${headingLevel}">${headingText}</mui-heading>
       <mui-icon-right-chevron size="x-small"></mui-icon-right-chevron>
     </div>
 

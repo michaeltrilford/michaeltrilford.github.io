@@ -54,8 +54,7 @@ class storyTypeSlat extends HTMLElement {
             <mui-v-stack space="var(--space-100)" slot="end">
               <mui-body size="x-small"><span class="title">Usage:</span> ${usage}</mui-body>
               <mui-body size="x-small"><span class="title">Description:</span> ${description}</mui-body>
-
-              </mui-v-stack>
+            </mui-v-stack>
           </mui-slat>
         </mui-v-stack>
 

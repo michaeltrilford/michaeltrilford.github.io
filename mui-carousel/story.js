@@ -311,7 +311,7 @@ class storyCarousel extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <props-card title="Props: Carousel Controller" description="The carousel-controller handles layout and transitions. Slotted children like tab-bar and carousel-panel must include the correct slot attributes to integrate properly.">
+        <spec-card title="Props: Carousel Controller" description="The carousel-controller handles layout and transitions. Slotted children like tab-bar and carousel-panel must include the correct slot attributes to integrate properly.">
           <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${rowsController}
@@ -320,9 +320,9 @@ class storyCarousel extends HTMLElement {
               ${accordionsController}
             </mui-accordion-group>
           </mui-responsive>
-        </props-card>
+        </spec-card>
 
-        <props-card title="Props: Tab Bar" description="When used inside carousel-controller, mui-tab-bar can accept additional props to control placement and integration within the carousel layout.">
+        <spec-card title="Props: Tab Bar" description="When used inside carousel-controller, mui-tab-bar can accept additional props to control placement and integration within the carousel layout.">
           <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${rowsTabBar}
@@ -331,9 +331,9 @@ class storyCarousel extends HTMLElement {
               ${accordionsTabBar}
             </mui-accordion-group>
           </mui-responsive>
-        </props-card>
+        </spec-card>
 
-        <props-card title="Props: Carousel Panel " description="Used to display the content for each carousel item. This component is typically slotted into a mui-carousel-controller and responds to tab selection based on the item mapping.">
+        <spec-card title="Props: Carousel Panel " description="Used to display the content for each carousel item. This component is typically slotted into a mui-carousel-controller and responds to tab selection based on the item mapping.">
           <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${rowsPanel}
@@ -342,7 +342,7 @@ class storyCarousel extends HTMLElement {
               ${accordionsPanel}
             </mui-accordion-group>
           </mui-responsive>
-        </props-card>
+        </spec-card>
 
         <story-card 
           title="Default"

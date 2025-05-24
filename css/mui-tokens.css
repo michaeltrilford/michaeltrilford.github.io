@@ -304,7 +304,7 @@ html[data-theme='light'] {
   --surface-recessed-200: var(--grey-400);
 
   --outline-color: var(--blue-500);
-  --border-color: var(--grey-300);
+  --border-color: var(--black-opacity-20);
 
   --optional-text-color: var(--grey-600);
 
@@ -462,7 +462,7 @@ html[data-theme='dark'] {
   --surface-recessed-200: var(--grey-1100);
 
   --outline-color: var(--blue-300);
-  --border-color: var(--grey-600);
+  --border-color: var(--white-opacity-20);
 
   --optional-text-color: var(--grey-300);
 

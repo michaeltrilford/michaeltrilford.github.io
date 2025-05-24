@@ -277,7 +277,7 @@ class storyTabBar extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <props-card title="Props: Tab Controller">
+        <spec-card title="Props: Tab Controller">
           <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${tabBarControllerRows}
@@ -286,9 +286,9 @@ class storyTabBar extends HTMLElement {
               ${tabBarControllerAccordions}
             </mui-accordion-group>
           </mui-responsive>
-        </props-card>
+        </spec-card>
 
-        <props-card title="Props: Tab Bar">
+        <spec-card title="Props: Tab Bar">
           <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${tabBarRows}
@@ -297,9 +297,9 @@ class storyTabBar extends HTMLElement {
               ${tabBarAccordions}
             </mui-accordion-group>
           </mui-responsive>
-        </props-card>
+        </spec-card>
 
-        <props-card title="Props: Tab Item">
+        <spec-card title="Props: Tab Item">
           <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${tabItemRows}
@@ -308,9 +308,9 @@ class storyTabBar extends HTMLElement {
               ${tabItemAccordions}
             </mui-accordion-group>
           </mui-responsive>
-        </props-card>
+        </spec-card>
 
-        <props-card title="Props: Tab Panel">
+        <spec-card title="Props: Tab Panel">
           <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${panelRows}
@@ -319,7 +319,7 @@ class storyTabBar extends HTMLElement {
               ${panelAccordions}
             </mui-accordion-group>
           </mui-responsive>
-        </props-card>
+        </spec-card>
 
 
         <story-card title="Default">

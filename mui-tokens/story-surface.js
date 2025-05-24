@@ -66,7 +66,7 @@ class storyTokensSurface extends HTMLElement {
 
         return `
           <mui-accordion-block 
-            size="small" 
+            size="medium" 
             heading=${prop.token.charAt(0).toUpperCase() + prop.token.slice(1)} 
             ${isLastChild}>
             <story-token-type-slat
@@ -89,7 +89,7 @@ class storyTokensSurface extends HTMLElement {
       >
         <mui-v-stack space="var(--space-700)">
 
-          <props-card title="Token Details">
+          <spec-card title="Token Details">
             <mui-responsive breakpoint="768" slot="body">
               <story-token-type-table slot="showAbove">
                 ${rows}
@@ -98,9 +98,9 @@ class storyTokensSurface extends HTMLElement {
                 ${accordions}
               </mui-accordion-group>
             </mui-responsive>
-          </props-card>
+          </spec-card>
 
-          <tokens-card title="Surface: Light">
+          <spec-card title="Surface: Light">
             <story-token-slat slot="body" token="--surface" variant="color" output="var(--grey-200)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-elevated-alpha" variant="color" output="var(--white-opacity-50)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-elevated-100" variant="color" output="var(--white)"></story-token-slat>
@@ -108,9 +108,9 @@ class storyTokensSurface extends HTMLElement {
             <story-token-slat slot="body" token="--surface-recessed-alpha" variant="color" output="var(--black-opacity-10)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-100" variant="color" output="var(--grey-300)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-200" variant="color" output="var(--grey-400)"></story-token-slat>
-          </tokens-card>
+          </spec-card>
 
-          <tokens-card title="Surface: Dark">
+          <spec-card title="Surface: Dark">
             <story-token-slat slot="body" token="--surface" variant="color" output="var(--grey-900)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-elevated-alpha" variant="color" output="var(--white-opacity-10)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-elevated-100" variant="color" output="var(--grey-900)"></story-token-slat>
@@ -118,7 +118,7 @@ class storyTokensSurface extends HTMLElement {
             <story-token-slat slot="body" token="--surface-recessed-alpha" variant="color" output="var(--black-opacity-30)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-100" variant="color" output="var(--grey-1000)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-200" variant="color" output="var(--grey-1100)"></story-token-slat>
-          </tokens-card>
+          </spec-card>
 
           <story-card title="Example: Elevated" description="The Surface tokens are tailored to have a great tone for both light and dark settings">
             <div slot="body">

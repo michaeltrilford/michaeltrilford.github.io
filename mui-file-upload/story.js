@@ -72,7 +72,7 @@ class storyFileUpload extends HTMLElement {
 
         <mui-v-stack space="var(--space-700)">
 
-          <props-card title="Props">
+          <spec-card title="Props">
             <mui-responsive breakpoint="768" slot="body">
               <story-type-table slot="showAbove">
                 ${rows}
@@ -81,7 +81,7 @@ class storyFileUpload extends HTMLElement {
                 ${accordions}
               </mui-accordion-group>
             </mui-responsive>
-          </props-card>
+          </spec-card>
 
           <story-card 
             title="Default" 

@@ -1,4 +1,4 @@
-class propsCard extends HTMLElement {
+class specCard extends HTMLElement {
   static get observedAttributes() {
     return ['title', 'description', 'usage', 'accessibility', 'github'];
   }
@@ -26,8 +26,7 @@ class propsCard extends HTMLElement {
         padding: var(--space-200) var(--space-300);
       }
 
-      ::slotted(mui-responsive) {
-        background: var(--surface-elevated-200);
+      section {
         border-bottom-left-radius: var(--card-radius);
         border-bottom-right-radius: var(--card-radius);
         overflow: hidden;
@@ -138,4 +137,4 @@ class propsCard extends HTMLElement {
   }
 }
 
-customElements.define('props-card', propsCard);
+customElements.define('spec-card', specCard);

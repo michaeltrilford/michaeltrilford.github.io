@@ -66,7 +66,7 @@ class muiAccordionInline extends HTMLElement {
 
     <div class="accordion-summary" tabindex="0" role="button" aria-expanded="false">
       <mui-icon-right-chevron size="x-small"></mui-icon-right-chevron>
-      <mui-heading nomargin size="5" level="${headingLevel}">${headingText}</mui-heading>
+      <mui-heading size="6" level="${headingLevel}">${headingText}</mui-heading>
     </div>
 
     <div class="accordion-detail">
