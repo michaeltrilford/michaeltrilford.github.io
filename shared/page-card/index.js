@@ -11,25 +11,13 @@ class pageCard extends HTMLElement {
       :host { display: block; }
 
       mui-card {
-        border-radius: var(--radius-200);
         box-shadow:
           6px 6px 16px var(--black-opacity-10),
           -6px -6px 14px var(--black-opacity-10);
       }
 
-      mui-card-header {
-        padding: var(--space-500);
-      }
-
-      mui-card-body {
-        padding: var(--space-500);
-        padding-bottom: var(--space-600);
-        border-bottom-right-radius: var(--radius-200);
-        border-bottom-left-radius: var(--radius-200);
-      }
-
       .story-body {
-        padding: 4px;
+        padding: var(--space-400);
       }
 
     `;

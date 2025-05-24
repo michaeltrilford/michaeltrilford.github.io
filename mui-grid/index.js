@@ -1,6 +1,6 @@
 class muiGrid extends HTMLElement {
   static get observedAttributes() {
-    return ['col', 'gap'];
+    return ['col', 'space'];
   }
 
   constructor() {
@@ -12,7 +12,7 @@ class muiGrid extends HTMLElement {
     await this.waitForPartMap();
 
     const col = this.getAttribute('col') || '1fr 1fr';
-    const gap = this.getAttribute('gap') || 'var(--space-000)';
+    const space = this.getAttribute('space') || 'var(--space-000)';
     const partMap = getPartMap('layout', 'spacing');
 
     const styles = `
@@ -28,7 +28,7 @@ class muiGrid extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <div part="${partMap}" style="--col: ${col}; --gap: ${gap};">
+      <div part="${partMap}" style="--col: ${col}; --gap: ${space};">
         <slot></slot>
       </div>
     `;

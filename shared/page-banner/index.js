@@ -72,7 +72,7 @@ class pageBanner extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>${styles}</style>
         <mui-responsive breakpoint="1287" class="banner">
-          <mui-grid slot="showBelow" gap="var(--space-600)" col="1fr">
+          <mui-grid slot="showBelow" space="var(--space-600)" col="1fr">
             <mui-v-stack space="var(--space-500)" alignY="start">
               <mui-v-stack  space="var(--space-100)">
                 <mui-h-stack space="var(--space-100)" alignY="center">

@@ -2,7 +2,7 @@
 class muiCardHeader extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
     let html = `
@@ -12,7 +12,6 @@ class muiCardHeader extends HTMLElement {
         width: 100%;
         box-sizing: border-box;
         padding: var(--space-500) var(--space-600);
-        border-bottom: var(--border-thin);
       }
     </style>
     <slot></slot>
@@ -22,4 +21,4 @@ class muiCardHeader extends HTMLElement {
   }
 }
 
-customElements.define("mui-card-header", muiCardHeader);
+customElements.define('mui-card-header', muiCardHeader);

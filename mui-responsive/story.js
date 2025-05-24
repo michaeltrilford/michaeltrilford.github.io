@@ -1,14 +1,14 @@
 class storyResponsive extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
       .local-ring {
-        height: 5rem;
-        -webkit-transform: scale(1.2157);
-        transform: scale(1.2157);
-        width: 5rem;
+        height: 6rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
       }
       .local-ring_text {
         fill: #1b2830;
@@ -20,7 +20,7 @@ class storyResponsive extends HTMLElement {
     `;
 
     const LocalRing = `
-      <div class="local-ring" style="margin: 0 auto;">
+      <div class="local-ring">
         <svg 
           width="100%" 
           height="100%" 
@@ -35,7 +35,7 @@ class storyResponsive extends HTMLElement {
       </div>
     `;
 
-    const ProgressTableColumns = `1fr 1fr 1fr 92px`;
+    const ProgressTableColumns = `1fr 1fr 1fr 106px`;
 
     const ProgressTableView = `
       <mui-table> 
@@ -155,4 +155,4 @@ class storyResponsive extends HTMLElement {
   }
 }
 
-customElements.define("story-responsive", storyResponsive);
+customElements.define('story-responsive', storyResponsive);

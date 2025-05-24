@@ -59,7 +59,7 @@ class DesignGuidelines extends HTMLElement {
 
             <mui-responsive breakpoint="1080">
 
-              <mui-grid gap="var(--space-500)" slot="showAbove">
+              <mui-grid space="var(--space-500)" slot="showAbove">
                 ${figmaContent}
                 ${websiteContent}
               </mui-grid>

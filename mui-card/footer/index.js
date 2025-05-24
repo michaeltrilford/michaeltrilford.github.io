@@ -2,7 +2,7 @@
 class muiCardFooter extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
     let html = `
@@ -10,8 +10,11 @@ class muiCardFooter extends HTMLElement {
       :host {
         display: block;
         width: 100%;
-        border-top: var(--border-thin);
         box-sizing: border-box;
+      }
+      ::slotted(mui-code) {
+        border-bottom-right-radius: calc(var(--card-radius) + 1px);
+        border-bottom-left-radius: calc(var(--card-radius) + 1px);
       }
     </style>
     <slot></slot>
@@ -21,4 +24,4 @@ class muiCardFooter extends HTMLElement {
   }
 }
 
-customElements.define("mui-card-footer", muiCardFooter);
+customElements.define('mui-card-footer', muiCardFooter);

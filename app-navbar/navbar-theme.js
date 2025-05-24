@@ -23,7 +23,7 @@ class appNavbarTheme extends HTMLElement {
     // We provide the shadow root with some HTML
     shadowRoot.innerHTML = `
       <style>${styles}</style>
-      <mui-grid col="1fr auto" gap="var(--space-400)">
+      <mui-grid col="1fr auto" space="var(--space-400)">
         <theme-switcher></theme-switcher>
         <dark-mode-toggle></dark-mode-toggle>
       </mui-grid>

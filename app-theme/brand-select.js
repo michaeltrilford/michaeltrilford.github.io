@@ -77,7 +77,7 @@ class ThemeSwitcher extends HTMLElement {
           color: var(--app-nav-link);
         }
       </style>
-      <mui-grid class="grid" col="1fr" gap="var(--space-100)">
+      <mui-grid class="grid" col="1fr" space="var(--space-100)">
         <mui-select
           id="brand-switcher" 
           label="Brand"

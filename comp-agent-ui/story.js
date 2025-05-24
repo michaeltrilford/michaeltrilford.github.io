@@ -31,7 +31,6 @@ class compAgentUI extends HTMLElement {
           border: var(--border-thin);
           border-color: var(--form-default-border-color);
           border-radius: var(--radius-300);
-          box-shadow: 0 0 2px 0 var(--black-opacity-10);
         }
 
         .prompt-toolbar::part(justify-content) {

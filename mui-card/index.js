@@ -15,19 +15,41 @@ class muiCard extends HTMLElement {
       :host {
         display: block;
         border-radius: var(--card-radius);
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-        background: var(--surface-elevated-100);
+        background: var(--surface-elevated-200);
       }
       ::slotted(*:last-child) {
         margin-bottom: 0;
       }
+      ::slotted(.mui-card-header) {
+      padding-top: 0;
+      }
     </style>
     <slot></slot>
-    
-
     `;
 
     this.shadowRoot.innerHTML = html;
+
+    const slot = this.shadowRoot.querySelector('slot');
+
+    if (slot) {
+      slot.addEventListener('slotchange', () => {
+        const nodes = slot.assignedElements();
+        const hasHeader = nodes.some(
+          (node) => node.tagName?.toLowerCase() === 'mui-card-header',
+        );
+        const body = nodes.find(
+          (node) => node.tagName?.toLowerCase() === 'mui-card-body',
+        );
+
+        if (body) {
+          if (hasHeader) {
+            body.classList.add('mui-card-header');
+          } else {
+            body.classList.remove('mui-card-header');
+          }
+        }
+      });
+    }
   }
 }
 

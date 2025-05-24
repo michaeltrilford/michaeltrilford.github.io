@@ -1,7 +1,7 @@
 class storyGrid extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `:host { display: block; }`;
 
     const Box = `
@@ -23,13 +23,13 @@ class storyGrid extends HTMLElement {
       
         <story-card title="Default">
         
-          <mui-grid slot="body">
+          <mui-grid slot="body" space="var(--space-200)">
             ${Box}
             ${Box}
           </mui-grid>
           
           <mui-code slot="footer">
-            &lt;mui-grid col="1fr 1fr"&gt;
+            &lt;mui-grid col="1fr 1fr" space="var(--space-200)"&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />
@@ -39,32 +39,16 @@ class storyGrid extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Three column">
-          <mui-grid col="1fr 1fr 1fr" slot="body">
+        <story-card title="Three Column">
+          <mui-grid col="1fr 1fr 1fr" slot="body" space="var(--space-200)">
             ${Box}
             ${Box}
             ${Box}
           </mui-grid>
           <mui-code slot="footer">
-            &lt;mui-grid col="1fr 1fr 1fr"&gt;
+            &lt;mui-grid col="1fr 1fr 1fr" space="var(--space-200)"&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
-            <br />
-            &lt;/mui-grid&gt;
-          </mui-code>
-        </story-card>
-
-        <story-card title="Custom gap">
-          <mui-grid col="1fr 1fr 1fr" gap="var(--space-800)" slot="body">
-            ${Box}
-            ${Box}
-          </mui-grid>
-          <mui-code slot="footer">
-            &lt;mui-grid col="1fr 1fr 1fr" gap="var(--space-800)"&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-card&gt;...&lt;/mui-card&gt;
             <br />
@@ -81,4 +65,4 @@ class storyGrid extends HTMLElement {
   }
 }
 
-customElements.define("story-grid", storyGrid);
+customElements.define('story-grid', storyGrid);
