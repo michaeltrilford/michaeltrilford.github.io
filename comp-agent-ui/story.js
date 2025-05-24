@@ -87,16 +87,16 @@ class compAgentUI extends HTMLElement {
           border-radius: var(--radius-300);
         }
         .avatar {
-          width: 4.8rem;
-          flex: 0 0 4.8rem;
-          height: 4.8rem;
+          width: 3.6rem;
+          flex: 0 0 3.6rem;
+          height: 3.6rem;
           background: var(--mui-brand-300);
           display: flex;
           justify-content: center;
           align-content: center;
-          border-radius: 4.8rem;
+          border-radius: 3.6rem;
         }
-        mui-logo-mobile { max-width: 2.4rem; margin-top: 4px; }
+        mui-logo-mobile { max-width: 1.6rem; margin-top: 4px; }
 
       </style>
       <div class="conversation-background">
@@ -104,7 +104,7 @@ class compAgentUI extends HTMLElement {
           <div class="avatar">
             <mui-logo-mobile style="width: 100%; height: auto;"></mui-logo-mobile>
           </div>
-          <mui-body size="Medium">Review my website <mui-link size="Medium" href="https://michaeltrilford.github.io/" target="_blank">https://michaeltrilford.github.io/</mui-link></mui-body>
+          <mui-body size="small">Review my website <mui-link size="small" href="https://michaeltrilford.github.io/" target="_blank">michaeltrilford.github.io</mui-link></mui-body>
         </mui-h-stack>
       </div>
     `;
