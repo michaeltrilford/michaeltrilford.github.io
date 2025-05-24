@@ -327,7 +327,6 @@ class storyTabBar extends HTMLElement {
             <mui-tab-item active id="item1">Item 1</mui-tab-item>
             <mui-tab-item id="item2">Item 2</mui-tab-item>
             <mui-tab-item id="item3">Item 3</mui-tab-item>
-            <mui-tab-item id="item4">Item 4</mui-tab-item>
           </mui-tab-bar>
           <mui-code slot="footer">
             &lt;mui-tab-bar&gt;
@@ -337,8 +336,6 @@ class storyTabBar extends HTMLElement {
             &nbsp;&nbsp;&lt;mui-tab-item id="item2"&gt;Item two&lt;/mui-tab-item&gt;
             <br />
             &nbsp;&nbsp;&lt;mui-tab-item id="item3"&gt;Item three&lt;/mui-tab-item&gt;
-            <br />
-            &nbsp;&nbsp;&lt;mui-tab-item id="item4"&gt;Item four&lt;/mui-tab-item&gt;
             <br />
             &lt;/mui-tab-bar&gt;
           </mui-code>
