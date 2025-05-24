@@ -15,7 +15,7 @@ class muiCard extends HTMLElement {
       :host {
         display: block;
         border-radius: var(--card-radius);
-        background: var(--surface-elevated-200);
+        background: var(--surface-elevated-100);
       }
       ::slotted(*:last-child) {
         margin-bottom: 0;

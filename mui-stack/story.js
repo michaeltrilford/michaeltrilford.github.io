@@ -1,7 +1,7 @@
 class storyStack extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `:host { display: block; }`;
 
     const BlockBox = `
@@ -58,85 +58,85 @@ class storyStack extends HTMLElement {
 
     const propItemsHStack = [
       {
-        name: "space",
-        type: "string",
-        options: "var(--space-100) etc...",
-        default: "var(--space-500)",
+        name: 'space',
+        type: 'string',
+        options: 'var(--space-100) etc...',
+        default: 'var(--space-500)',
         description:
-          "Apply a design tokens to apply a gap between slotted elements",
+          'Apply a design tokens to apply a gap between slotted elements',
       },
       {
-        name: "alignX",
-        type: "string",
-        options: "flex-start etc...",
-        default: "message",
-        description: "Horizontal align using CSS flex properties.",
+        name: 'alignX',
+        type: 'string',
+        options: 'flex-start etc...',
+        default: 'message',
+        description: 'Horizontal align using CSS flex properties.',
       },
       {
-        name: "alignY",
-        type: "string",
-        options: "flex-start etc...",
-        default: "neutral",
-        description: "Vertical align using CSS flex properties.",
+        name: 'alignY',
+        type: 'string',
+        options: 'flex-start etc...',
+        default: 'neutral',
+        description: 'Vertical align using CSS flex properties.',
       },
       {
-        name: "slot",
+        name: 'slot',
         required: true,
-        type: "node",
-        options: "elements",
-        default: "",
-        description: "Slot in any elements",
+        type: 'node',
+        options: 'elements',
+        default: '',
+        description: 'Slot in any elements',
       },
       {
-        name: "style",
-        type: "string",
-        options: "Valid CSS",
-        default: "",
+        name: 'style',
+        type: 'string',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use styles to add layout based CSS to the host element.",
+          'You are able to use styles to add layout based CSS to the host element.',
       },
       {
-        name: "class",
-        type: "string",
-        options: "Valid CSS",
-        default: "",
+        name: 'class',
+        type: 'string',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use add a classname to add layout based CSS to the host element.",
+          'You are able to use add a classname to add layout based CSS to the host element.',
       },
     ];
 
     const propItemsVStack = [
       {
-        name: "space",
-        type: "string",
-        options: "var(--space-100) etc...",
-        default: "var(--space-500)",
+        name: 'space',
+        type: 'string',
+        options: 'var(--space-100) etc...',
+        default: 'var(--space-500)',
         description:
-          "Apply a design tokens to apply a gap between slotted elements",
+          'Apply a design tokens to apply a gap between slotted elements',
       },
       {
-        name: "slot",
+        name: 'slot',
         required: true,
-        type: "node",
-        options: "elements",
-        default: "",
-        description: "Slot in any elements",
+        type: 'node',
+        options: 'elements',
+        default: '',
+        description: 'Slot in any elements',
       },
       {
-        name: "style",
-        type: "string",
-        options: "Valid CSS",
-        default: "",
+        name: 'style',
+        type: 'string',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use styles to add layout based CSS to the host element.",
+          'You are able to use styles to add layout based CSS to the host element.',
       },
       {
-        name: "class",
-        type: "string",
-        options: "Valid CSS",
-        default: "",
+        name: 'class',
+        type: 'string',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use add a classname to add layout based CSS to the host element.",
+          'You are able to use add a classname to add layout based CSS to the host element.',
       },
     ];
 
@@ -144,22 +144,22 @@ class storyStack extends HTMLElement {
       .map(
         (prop) => `
         <story-type-row
-          ${prop.required ? "required" : ""}
+          ${prop.required ? 'required' : ''}
           name="${prop.name}"
           type="${prop.type}" 
-          options="${prop.options || ""}"
-          default="${prop.default || ""}"
+          options="${prop.options || ''}"
+          default="${prop.default || ''}"
           description="${prop.description}">
         </story-type-row>
-      `
+      `,
       )
-      .join("");
+      .join('');
 
     const accordionsHStack = propItemsHStack
       .map((prop, index) => {
         // Check if it's the last item in the array
         const isLastChild =
-          index === propItemsHStack.length - 1 ? "last-child" : "";
+          index === propItemsHStack.length - 1 ? 'last-child' : '';
 
         return `
           <mui-accordion-block 
@@ -168,38 +168,38 @@ class storyStack extends HTMLElement {
             ${isLastChild}>
             <story-type-slat
               slot="detail"
-              ${prop.required ? "required" : ""}
+              ${prop.required ? 'required' : ''}
               name="${prop.name}"
               type="${prop.type}" 
-              options="${prop.options || ""}"
-              default="${prop.default || ""}"
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
               description="${prop.description}">
             </story-type-slat>
           </mui-accordion-block>
         `;
       })
-      .join("");
+      .join('');
 
     const rowsVStack = propItemsVStack
       .map(
         (prop) => `
         <story-type-row
-          ${prop.required ? "required" : ""}
+          ${prop.required ? 'required' : ''}
           name="${prop.name}"
           type="${prop.type}" 
-          options="${prop.options || ""}"
-          default="${prop.default || ""}"
+          options="${prop.options || ''}"
+          default="${prop.default || ''}"
           description="${prop.description}">
         </story-type-row>
-      `
+      `,
       )
-      .join("");
+      .join('');
 
     const accordionsVStack = propItemsVStack
       .map((prop, index) => {
         // Check if it's the last item in the array
         const isLastChild =
-          index === propItemsVStack.length - 1 ? "last-child" : "";
+          index === propItemsVStack.length - 1 ? 'last-child' : '';
 
         return `
           <mui-accordion-block 
@@ -208,17 +208,17 @@ class storyStack extends HTMLElement {
             ${isLastChild}>
             <story-type-slat
               slot="detail"
-              ${prop.required ? "required" : ""}
+              ${prop.required ? 'required' : ''}
               name="${prop.name}"
               type="${prop.type}" 
-              options="${prop.options || ""}"
-              default="${prop.default || ""}"
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
               description="${prop.description}">
             </story-type-slat>
           </mui-accordion-block>
         `;
       })
-      .join("");
+      .join('');
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -231,7 +231,7 @@ class storyStack extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types: HStack" nofooter>
+        <story-card title="Prop Types: HStack">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsHStack}
@@ -255,7 +255,7 @@ class storyStack extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Prop Types: VStack" nofooter>
+        <story-card title="Prop Types: VStack">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsVStack}
@@ -312,4 +312,4 @@ class storyStack extends HTMLElement {
   }
 }
 
-customElements.define("story-stack", storyStack);
+customElements.define('story-stack', storyStack);

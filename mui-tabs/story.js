@@ -277,7 +277,7 @@ class storyTabBar extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types: Tab Controller" nofooter>
+        <story-card title="Prop Types: Tab Controller">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${tabBarControllerRows}
@@ -288,7 +288,7 @@ class storyTabBar extends HTMLElement {
           </mui-responsive>
         </story-card>
 
-        <story-card title="Prop Types: Tab Bar" nofooter>
+        <story-card title="Prop Types: Tab Bar">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${tabBarRows}
@@ -299,7 +299,7 @@ class storyTabBar extends HTMLElement {
           </mui-responsive>
         </story-card>
 
-        <story-card title="Prop Types: Tab Item" nofooter>
+        <story-card title="Prop Types: Tab Item">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${tabItemRows}
@@ -310,7 +310,7 @@ class storyTabBar extends HTMLElement {
           </mui-responsive>
         </story-card>
 
-        <story-card title="Prop Types: Tab Panel" nofooter>
+        <story-card title="Prop Types: Tab Panel">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${panelRows}

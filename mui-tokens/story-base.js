@@ -1,7 +1,7 @@
 class storyTokensBase extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
@@ -18,7 +18,7 @@ class storyTokensBase extends HTMLElement {
 
         <mui-v-stack space="var(--space-700)">
 
-          <story-card title="Font Family" nofooter>
+          <story-card title="Font Family">
             <story-token-slat 
               slot="body" 
               token="--font-family"
@@ -27,7 +27,7 @@ class storyTokensBase extends HTMLElement {
             </story-token-slat>
           </story-card>
             
-          <story-card title="Font Scale" nofooter description="The font size scale follows a consistent type ramp, using fluid rem values to establish visual hierarchy. Each step in the scale pairs directly with a calculated line-height, enabling predictable, harmonious typography across components and layouts." usage="E.g. --font-size-15 and --line-height-15 is paired.">
+          <story-card title="Font Scale" description="The font size scale follows a consistent type ramp, using fluid rem values to establish visual hierarchy. Each step in the scale pairs directly with a calculated line-height, enabling predictable, harmonious typography across components and layouts." usage="E.g. --font-size-15 and --line-height-15 is paired.">
             <story-token-slat slot="body" token="--font-size-15" variant="text-size" line-height="--line-height-15" output="1.1rem"></story-token-slat>
             <story-token-slat slot="body" token="--font-size-25" variant="text-size" line-height="--line-height-25" output="1.2rem"></story-token-slat>
             <story-token-slat slot="body" token="--font-size-50" variant="text-size" line-height="--line-height-50" output="1.4rem"></story-token-slat>
@@ -43,7 +43,7 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--font-size-1000" variant="text-size" line-height="--line-height-1000" output="9.6rem"></story-token-slat>
           </story-card>
 
-          <story-card title="Line-height" nofooter description="Line heights are ratio-based and mapped to their corresponding font sizes, ensuring clear vertical rhythm and legibility. This alignment supports scalable, accessible typography that remains balanced at any size." usage="E.g. --font-size-15 and --line-height-15 is paired.">
+          <story-card title="Line-height" description="Line heights are ratio-based and mapped to their corresponding font sizes, ensuring clear vertical rhythm and legibility. This alignment supports scalable, accessible typography that remains balanced at any size." usage="E.g. --font-size-15 and --line-height-15 is paired.">
             <story-token-slat slot="body" token="--line-height-15" variant="line-height" font-size="--font-size-15" output="2.18181818"></story-token-slat>
             <story-token-slat slot="body" token="--line-height-25" variant="line-height" font-size="--font-size-25" output="2"></story-token-slat>
             <story-token-slat slot="body" token="--line-height-50" variant="line-height" font-size="--font-size-50" output="1.71428571"></story-token-slat>
@@ -59,14 +59,14 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--line-height-1000" variant="line-height" font-size="--font-size-1000" output="1.125"></story-token-slat>
           </story-card>
 
-          <story-card title="Font Weight" nofooter>
+          <story-card title="Font Weight">
             <story-token-slat slot="body" token="--font-weight-400" variant="font-weight" output="400"></story-token-slat>
             <story-token-slat slot="body" token="--font-weight-500" variant="font-weight" output="500"></story-token-slat>
             <story-token-slat slot="body" token="--font-weight-600" variant="font-weight" output="600"></story-token-slat>
             <story-token-slat slot="body" token="--font-weight-700" variant="font-weight" output="700"></story-token-slat>
           </story-card>
 
-          <story-card title="Colors / Black" nofooter>
+          <story-card title="Colors / Black">
             <story-token-slat slot="body" token="--black" variant="color" output="#000000"></story-token-slat>
             <story-token-slat slot="body" token="--black-opacity-0" variant="color" output="hsla(0, 0%, 0%, 0)"></story-token-slat>
             <story-token-slat slot="body" token="--black-opacity-10" variant="color" output="hsla(0, 0%, 0%, 0.1)"></story-token-slat>
@@ -82,7 +82,7 @@ class storyTokensBase extends HTMLElement {
           </story-card>
 
 
-          <story-card title="Colors / White" nofooter>
+          <story-card title="Colors / White">
             <story-token-slat slot="body" token="--white" variant="color" output="#FFFFFF"></story-token-slat>
             <story-token-slat slot="body" token="--white-opacity-0" variant="color" output="hsla(0, 0%, 100%, 0)"></story-token-slat>
             <story-token-slat slot="body" token="--white-opacity-10" variant="color" output="hsla(0, 0%, 100%, 0.1)"></story-token-slat>
@@ -98,7 +98,7 @@ class storyTokensBase extends HTMLElement {
           </story-card>
 
 
-          <story-card title="Colors / Grey" nofooter>
+          <story-card title="Colors / Grey">
 
             <story-token-slat slot="body" token="--grey-100" variant="color" output="#F5F5F5">
               <div slot="visual" style="width: 16px; height: 16px; background: var(--grey-100); border-radius: 4px;"></div>
@@ -115,7 +115,7 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--grey-1000" variant="color" output="#222222"></story-token-slat>
           </story-card>
 
-          <story-card title="Colors / Red" nofooter>
+          <story-card title="Colors / Red">
             <story-token-slat slot="body" token="--red-100" variant="color" output="#FFE5E5"></story-token-slat>
             <story-token-slat slot="body" token="--red-200" variant="color" output="#FBBCBC"></story-token-slat>
             <story-token-slat slot="body" token="--red-300" variant="color" output="#F79494"></story-token-slat>
@@ -128,7 +128,7 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--red-1000" variant="color" output="#6A2323"></story-token-slat>
           </story-card>
 
-          <story-card title="Colors / Orange" nofooter>
+          <story-card title="Colors / Orange">
             <story-token-slat slot="body" token="--orange-100" variant="color" output="#FFF2CC"></story-token-slat>
             <story-token-slat slot="body" token="--orange-200" variant="color" output="#FFE0A3"></story-token-slat>
             <story-token-slat slot="body" token="--orange-300" variant="color" output="#FFCC80"></story-token-slat>
@@ -141,7 +141,7 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--orange-1000" variant="color" output="#805100"></story-token-slat>
           </story-card>
 
-          <story-card title="Colors / Green" nofooter>
+          <story-card title="Colors / Green">
             <story-token-slat slot="body" token="--green-100" variant="color" output="#E5F9E5"></story-token-slat>
             <story-token-slat slot="body" token="--green-200" variant="color" output="#C6F3C6"></story-token-slat>
             <story-token-slat slot="body" token="--green-300" variant="color" output="#A6EDA6"></story-token-slat>
@@ -154,7 +154,7 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--green-1000" variant="color" output="#005700"></story-token-slat>
           </story-card>
 
-          <story-card title="Colors / Blue" nofooter>
+          <story-card title="Colors / Blue">
             <story-token-slat slot="body" token="--blue-100" variant="color" output="#E6F2FF"></story-token-slat>
             <story-token-slat slot="body" token="--blue-200" variant="color" output="#CCE4FF"></story-token-slat>
             <story-token-slat slot="body" token="--blue-300" variant="color" output="#99CAFF"></story-token-slat>
@@ -167,7 +167,7 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--blue-1000" variant="color" output="#005FB1"></story-token-slat> 
           </story-card>
 
-          <story-card title="Radius" nofooter>
+          <story-card title="Radius">
             <story-token-slat slot="body" token="--radius-000" variant="radius" output="0"></story-token-slat>
             <story-token-slat slot="body" token="--radius-100" variant="radius" output="4px"></story-token-slat>
             <story-token-slat slot="body" token="--radius-150" variant="radius" output="6px"></story-token-slat>
@@ -176,7 +176,7 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--radius-400" variant="radius" output="24px"></story-token-slat>
           </story-card>
 
-          <story-card title="Spacing" nofooter>
+          <story-card title="Spacing">
             <story-token-slat slot="body" token="--space-000" variant="size" output="0"></story-token-slat>
             <story-token-slat slot="body" token="--space-025" variant="size" output="0.2rem"></story-token-slat>
             <story-token-slat slot="body" token="--space-050" variant="size" output="0.4rem"></story-token-slat>
@@ -190,7 +190,7 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--space-800" variant="size" output="6rem"></story-token-slat>
           </story-card>
 
-          <story-card title="Stroke" nofooter>
+          <story-card title="Stroke">
             <story-token-slat slot="body" token="--stroke-size-100" variant="border-width" output="1px"></story-token-slat>
             <story-token-slat slot="body" token="--stroke-size-200" variant="border-width" output="2px"></story-token-slat>
             <story-token-slat slot="body" token="--stroke-size-300" variant="border-width" output="3px"></story-token-slat>
@@ -205,4 +205,4 @@ class storyTokensBase extends HTMLElement {
   }
 }
 
-customElements.define("story-tokens-base", storyTokensBase);
+customElements.define('story-tokens-base', storyTokensBase);

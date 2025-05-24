@@ -89,7 +89,7 @@ class storyTokensSurface extends HTMLElement {
       >
         <mui-v-stack space="var(--space-700)">
 
-          <story-card title="Token Details" nofooter>
+          <story-card title="Token Details">
             <mui-responsive breakpoint="768" slot="body">
               <story-token-type-table slot="showAbove">
                 ${rows}
@@ -100,21 +100,21 @@ class storyTokensSurface extends HTMLElement {
             </mui-responsive>
           </story-card>
 
-          <story-card title="Surface: Light" nofooter>
+          <story-card title="Surface: Light">
             <story-token-slat slot="body" token="--surface" variant="color" output="var(--grey-200)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-elevated-alpha" variant="color" output="var(--white-opacity-50)"></story-token-slat>
-            <story-token-slat slot="body" token="--surface-elevated-100" variant="color" output="var(--grey-100)"></story-token-slat>
-            <story-token-slat slot="body" token="--surface-elevated-200" variant="color" output="var(--white)"></story-token-slat>
+            <story-token-slat slot="body" token="--surface-elevated-100" variant="color" output="var(--white)"></story-token-slat>
+            <story-token-slat slot="body" token="--surface-elevated-200" variant="color" output="var(--grey-100)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-alpha" variant="color" output="var(--black-opacity-10)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-100" variant="color" output="var(--grey-300)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-200" variant="color" output="var(--grey-400)"></story-token-slat>
           </story-card>
 
-          <story-card title="Surface: Dark" nofooter>
+          <story-card title="Surface: Dark">
             <story-token-slat slot="body" token="--surface" variant="color" output="var(--grey-900)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-elevated-alpha" variant="color" output="var(--white-opacity-10)"></story-token-slat>
-            <story-token-slat slot="body" token="--surface-elevated-100" variant="color" output="var(--grey-800)"></story-token-slat>
-            <story-token-slat slot="body" token="--surface-elevated-200" variant="color" output="var(--grey-900)"></story-token-slat>
+            <story-token-slat slot="body" token="--surface-elevated-100" variant="color" output="var(--grey-900)"></story-token-slat>
+            <story-token-slat slot="body" token="--surface-elevated-200" variant="color" output="var(--grey-800)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-alpha" variant="color" output="var(--black-opacity-30)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-100" variant="color" output="var(--grey-1000)"></story-token-slat>
             <story-token-slat slot="body" token="--surface-recessed-200" variant="color" output="var(--grey-1100)"></story-token-slat>
@@ -142,7 +142,7 @@ class storyTokensSurface extends HTMLElement {
               <br />
               .surface-elevated {
               <br />
-              &nbsp;&nbsp;background: var(--surface-elevated-100);
+              &nbsp;&nbsp;background: var(--surface-elevated-200);
               <br />
               }
             </mui-code>

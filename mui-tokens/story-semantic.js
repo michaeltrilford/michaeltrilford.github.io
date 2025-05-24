@@ -17,7 +17,7 @@ class storyTokensSemantic extends HTMLElement {
       >
         <mui-v-stack space="var(--space-700)">
   
-          <story-card title="Feedback States" description="User feedback (alerts, messages, forms, badges etc.)" nofooter>
+          <story-card title="Feedback States" description="User feedback (alerts, messages, forms, badges etc.)">
             <story-token-slat slot="body" token="--feedback-plain-border-color" variant="color" output="var(--black-opacity-50)"></story-token-slat>
             <story-token-slat slot="body" token="--feedback-neutral-border-color" variant="color" output="var(--grey-600)"></story-token-slat>  
             <story-token-slat slot="body" token="--feedback-positive-border-color" variant="color" output="var(--green-600)"></story-token-slat>
@@ -61,14 +61,14 @@ class storyTokensSemantic extends HTMLElement {
 
           </story-card>
 
-          <story-card title="Action" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+          <story-card title="Action" description="Action tokens define the visual behavior of call-to-action button and link button elements.">
             <story-token-slat slot="body" token="--action-font-size" variant="text-size" output="var(--text-font-size)"></story-token-slat>
             <story-token-slat slot="body" token="--action-line-height" variant="line-height" output="var(--text-line-height)"></story-token-slat>
             <story-token-slat slot="body" token="--action-font-weight" variant="font-weight" output="var(--font-weight-medium)"></story-token-slat>
             <story-token-slat slot="body" token="--action-radius" variant="radius" output="var(--radius-100)"></story-token-slat>
           </story-card>
 
-          <story-card title="Action / Primary" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+          <story-card title="Action / Primary" description="Action tokens define the visual behavior of call-to-action button and link button elements.">
             <story-token-slat slot="body" token="--action-primary-stroke" variant="border-color" output="var(--black-opacity-0)"></story-token-slat>
             <story-token-slat slot="body" token="--action-primary-background" variant="color" output="var(--grey-900)"></story-token-slat>
             <story-token-slat slot="body" token="--action-primary-background-hover" variant="color" output="var(--grey-1000)"></story-token-slat>
@@ -81,7 +81,7 @@ class storyTokensSemantic extends HTMLElement {
           </story-card>
 
 
-          <story-card title="Action / Secondary" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+          <story-card title="Action / Secondary" description="Action tokens define the visual behavior of call-to-action button and link button elements.">
             <story-token-slat slot="body" token="--action-secondary-stroke" variant="border-color" output="var(--grey-800)"></story-token-slat>
             <story-token-slat slot="body" token="--action-secondary-background" variant="color" output="var(--white)"></story-token-slat>
             <story-token-slat slot="body" token="--action-secondary-background-hover" variant="color" output="var(--grey-100)"></story-token-slat>
@@ -93,7 +93,7 @@ class storyTokensSemantic extends HTMLElement {
             <story-token-slat slot="body" token="--action-secondary-text-color-disabled" variant="text-color" output="var(--grey-400)"></story-token-slat>
           </story-card>
 
-          <story-card title="Action / Tertiary" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+          <story-card title="Action / Tertiary" description="Action tokens define the visual behavior of call-to-action button and link button elements.">
             <story-token-slat slot="body" token="--action-tertiary-stroke" variant="border-color" output="var(--white-opacity-0)"></story-token-slat>
             <story-token-slat slot="body" token="--action-tertiary-background" variant="color" output="var(--white-opacity-0)"></story-token-slat>
             <story-token-slat slot="body" token="--action-tertiary-background-hover" variant="color" output="var(--black-opacity-10)"></story-token-slat>
@@ -105,7 +105,7 @@ class storyTokensSemantic extends HTMLElement {
             <story-token-slat slot="body" token="--action-tertiary-text-color-disabled" variant="text-color" output="var(--grey-400)"></story-token-slat>
           </story-card>
 
-          <story-card title="Action / Attention" description="Action tokens define the visual behavior of call-to-action button and link button elements." nofooter>
+          <story-card title="Action / Attention" description="Action tokens define the visual behavior of call-to-action button and link button elements.">
             <story-token-slat slot="body" token="--action-attention-stroke" variant="border-color" output="var(--black-opacity-0)"></story-token-slat>
             <story-token-slat slot="body" token="--action-attention-background" variant="color" output="var(--red-500)"></story-token-slat>
             <story-token-slat slot="body" token="--action-attention-background-hover" variant="color" output="var(--red-600)"></story-token-slat>

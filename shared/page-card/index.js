@@ -16,10 +16,6 @@ class pageCard extends HTMLElement {
           -6px -6px 14px var(--black-opacity-10);
       }
 
-      .story-body {
-        padding: var(--space-400);
-      }
-
     `;
 
     const title = this.getAttribute('title') || '';
@@ -102,15 +98,9 @@ class pageCard extends HTMLElement {
         `
         }
         <mui-card-body>
-          <div class="story-body">
-            <slot name="body"></slot>
-          </div>
+          <slot name="body"></slot>
         </mui-card-body>
-        ${
-          this.hasAttribute('nofooter')
-            ? ''
-            : `<mui-card-footer><slot name="footer"></slot></mui-card-footer>`
-        }
+        <mui-card-footer><slot name="footer"></slot></mui-card-footer>
       </mui-card>
     `;
   }

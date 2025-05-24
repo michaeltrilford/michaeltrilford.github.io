@@ -78,7 +78,7 @@ class compAgentUI extends HTMLElement {
           box-sizing: border-box;
         }
         .conversation-reply {
-          background: var(--surface-elevated-100);
+          background: var(--surface-elevated-alpha);
           padding: var(--space-400);
           width: 100%;
           box-sizing: border-box;
@@ -178,7 +178,7 @@ class compAgentUI extends HTMLElement {
             <br />
             .conversation-reply {
             <br />
-            &nbsp;&nbsp;background: var(--surface-elevated-100);
+            &nbsp;&nbsp;background: var(--surface-elevated-alpha);
             <br />
             &nbsp;&nbsp;border: var(--border-thin);
             <br />

@@ -1,57 +1,57 @@
 class storyButton extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
 
     const propItems = [
       {
-        name: "slot",
+        name: 'slot',
         required: true,
-        type: "node",
-        options: "{text}, mui-icon-[name]",
-        default: "",
-        description: "Slot in text or icon for the call-to-action",
+        type: 'node',
+        options: '{text}, mui-icon-[name]',
+        default: '',
+        description: 'Slot in text or icon for the call-to-action',
       },
       {
-        name: "variant",
-        type: "string",
-        options: "primary, secondary, tertiary, attention",
-        default: "primary",
-        description: "Describe the intent or mood of a message",
+        name: 'variant',
+        type: 'string',
+        options: 'primary, secondary, tertiary, attention',
+        default: 'primary',
+        description: 'Describe the intent or mood of a message',
       },
       {
-        name: "iconOnly",
-        type: "boolean",
-        options: "iconOnly",
-        default: "",
-        description: "Utilise a compact button with a mui-icon option.",
+        name: 'iconOnly',
+        type: 'boolean',
+        options: 'iconOnly',
+        default: '',
+        description: 'Utilise a compact button with a mui-icon option.',
       },
       {
-        name: "style",
-        type: "string",
-        options: "Valid CSS",
-        default: "",
+        name: 'style',
+        type: 'string',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use styles to add layout based CSS to the host element.",
+          'You are able to use styles to add layout based CSS to the host element.',
       },
       {
-        name: "class",
-        type: "CSS",
-        options: "Valid CSS",
-        default: "",
+        name: 'class',
+        type: 'CSS',
+        options: 'Valid CSS',
+        default: '',
         description:
-          "You are able to use add a classname to add layout based CSS to the host element.",
+          'You are able to use add a classname to add layout based CSS to the host element.',
       },
       {
-        name: "part",
-        type: "CSS",
-        options: "E.g. mui-link::part(display)",
-        default: "",
+        name: 'part',
+        type: 'CSS',
+        options: 'E.g. mui-link::part(display)',
+        default: '',
         description:
-          "Controlled trust-based customisation for modifying internal aspects of a button.",
+          'Controlled trust-based customisation for modifying internal aspects of a button.',
       },
     ];
 
@@ -59,21 +59,21 @@ class storyButton extends HTMLElement {
       .map(
         (prop) => `
           <story-type-row
-            ${prop.required ? "required" : ""}
+            ${prop.required ? 'required' : ''}
             name="${prop.name}"
             type="${prop.type}" 
-            options="${prop.options || ""}"
-            default="${prop.default || ""}"
+            options="${prop.options || ''}"
+            default="${prop.default || ''}"
             description="${prop.description}">
           </story-type-row>
-        `
+        `,
       )
-      .join("");
+      .join('');
 
     const accordions = propItems
       .map((prop, index) => {
         // Check if it's the last item in the array
-        const isLastChild = index === propItems.length - 1 ? "last-child" : "";
+        const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
 
         return `
           <mui-accordion-block 
@@ -82,17 +82,17 @@ class storyButton extends HTMLElement {
             ${isLastChild}>
             <story-type-slat
               slot="detail"
-              ${prop.required ? "required" : ""}
+              ${prop.required ? 'required' : ''}
               name="${prop.name}"
               type="${prop.type}" 
-              options="${prop.options || ""}"
-              default="${prop.default || ""}"
+              options="${prop.options || ''}"
+              default="${prop.default || ''}"
               description="${prop.description}">
             </story-type-slat>
           </mui-accordion-block>
         `;
       })
-      .join("");
+      .join('');
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -106,7 +106,7 @@ class storyButton extends HTMLElement {
       <mui-v-stack space="var(--space-700)">
 
 
-        <story-card title="Prop Types" nofooter>
+        <story-card title="Prop Types">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rows}
@@ -268,4 +268,4 @@ class storyButton extends HTMLElement {
   }
 }
 
-customElements.define("story-button", storyButton);
+customElements.define('story-button', storyButton);

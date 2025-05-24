@@ -304,7 +304,7 @@ class storyCarousel extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <story-card title="Prop Types: Carousel Controller" nofooter description="The carousel-controller handles layout and transitions. Slotted children like tab-bar and carousel-panel must include the correct slot attributes to integrate properly.">
+        <story-card title="Prop Types: Carousel Controller" description="The carousel-controller handles layout and transitions. Slotted children like tab-bar and carousel-panel must include the correct slot attributes to integrate properly.">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsController}
@@ -315,7 +315,7 @@ class storyCarousel extends HTMLElement {
           </mui-responsive>
         </story-card>
 
-        <story-card title="Prop Types: Tab Bar" nofooter description="When used inside carousel-controller, mui-tab-bar can accept additional props to control placement and integration within the carousel layout.">
+        <story-card title="Prop Types: Tab Bar" description="When used inside carousel-controller, mui-tab-bar can accept additional props to control placement and integration within the carousel layout.">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsTabBar}
@@ -326,7 +326,7 @@ class storyCarousel extends HTMLElement {
           </mui-responsive>
         </story-card>
 
-        <story-card title="Prop Types: Carousel Panel " nofooter description="Used to display the content for each carousel item. This component is typically slotted into a mui-carousel-controller and responds to tab selection based on the item mapping.">
+        <story-card title="Prop Types: Carousel Panel " description="Used to display the content for each carousel item. This component is typically slotted into a mui-carousel-controller and responds to tab selection based on the item mapping.">
           <mui-responsive breakpoint="768" slot="body">
             <story-type-table slot="showAbove">
               ${rowsPanel}

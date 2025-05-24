@@ -21,7 +21,7 @@ class storyCard extends HTMLElement {
       }
 
       section {
-        background: var(--surface-elevated-100);
+        background: var(--surface-elevated-200);
         position: relative;
       }
 
@@ -171,11 +171,7 @@ class storyCard extends HTMLElement {
             </div>
           </section>
         </mui-card-body>
-        ${
-          this.hasAttribute('nofooter')
-            ? ''
-            : `<mui-card-footer><slot name="footer"></slot></mui-card-footer>`
-        }
+        <mui-card-footer><slot name="footer"></slot></mui-card-footer>
       </mui-card>
     `;
   }

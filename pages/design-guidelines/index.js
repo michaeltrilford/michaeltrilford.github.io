@@ -6,10 +6,9 @@ class DesignGuidelines extends HTMLElement {
       :host { display: block; }
       .panel {
         padding: var(--space-600);
-        border: var(--feedback-neutral-border);
-        border: var(--border-thick);
+        border: var(--border-thin);
         border-radius: var(--radius-400);
-        background: var(--surface-elevated-alpha);
+        background: var(--surface-elevated-200);
       }
     
     `;
@@ -40,10 +39,8 @@ class DesignGuidelines extends HTMLElement {
 
        <page-banner></page-banner>
 
-        <page-card noFooter title="MUI Credentials" description="To view the MUI Guidelines in Guru Guides, you must be logged in.">
+        <page-card title="MUI Credentials" description="To view the MUI Guidelines in Guru Guides, you must be logged in.">
           <mui-v-stack slot="body" space="var(--space-600)">  
-
-
 
             <mui-v-stack space="var(--space-400)">        
 
