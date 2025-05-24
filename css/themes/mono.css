@@ -239,7 +239,7 @@ html[data-brand='mono'][data-theme='dark'] {
   --input-background: var(--mono-grey-900);
 
   /* Border */
-  --border-color: var(--mono-grey-700);
+  --border-color: var(--mono-grey-600);
 
   /* Switch */
   --switch-track-background: var(--mono-grey-500);

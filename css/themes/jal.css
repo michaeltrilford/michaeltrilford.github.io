@@ -292,7 +292,7 @@ html[data-brand='jal'][data-theme='dark'] {
   --input-background: var(--jal-grey-800);
 
   /* Border */
-  --border-color: var(--jal-grey-700);
+  --border-color: var(--jal-grey-600);
 
   /* Switch */
   --switch-track-background: var(--jal-grey-500);

@@ -496,7 +496,7 @@ html[data-theme='dark'] {
   --link-text-color-default-disabled: var(--grey-600);
   /* Input */
   --input-background: var(--grey-900);
-  --input-background-disabled: var(--grey-900);
+  --input-background-disabled: var(--grey-800);
   /* Addon */
   --addon-background: var(--grey-1000);
   /* Tabs */

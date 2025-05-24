@@ -279,7 +279,7 @@ html[data-brand='ana'][data-theme='dark'] {
   --input-background: var(--ana-grey-800);
 
   /* Border */
-  --border-color: var(--ana-grey-700);
+  --border-color: var(--ana-grey-600);
 
   /* Switch */
   --switch-track-background: var(--ana-grey-700);

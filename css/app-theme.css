@@ -203,7 +203,7 @@ html[data-brand='modern'][data-theme='dark'] {
   --app-background: var(--grey-1000);
   --app-nav-accent: var(--white);
   --app-nav-background: var(--grey-900);
-  --app-nav-border: var(--grey-800);
+  --app-nav-border: var(--grey-700);
   --app-nav-home-hover: var(--black-opacity-20);
   --app-nav-link: var(--grey-100);
   --app-nav-link-focus: var(--grey-800);
