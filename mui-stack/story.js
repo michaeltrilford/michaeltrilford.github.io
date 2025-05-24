@@ -163,7 +163,7 @@ class storyStack extends HTMLElement {
 
         return `
           <mui-accordion-block 
-            size="x-small" 
+            size="small" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
             ${isLastChild}>
             <story-type-slat
@@ -203,7 +203,7 @@ class storyStack extends HTMLElement {
 
         return `
           <mui-accordion-block 
-            size="x-small" 
+            size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
             ${isLastChild}>
             <story-type-slat
@@ -231,8 +231,8 @@ class storyStack extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <props-card title="Prop Types: HStack">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props: HStack">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${rowsHStack}
             </story-type-table>
@@ -255,8 +255,8 @@ class storyStack extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <props-card title="Prop Types: VStack">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props: VStack">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${rowsVStack}
             </story-type-table>

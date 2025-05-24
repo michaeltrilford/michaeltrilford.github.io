@@ -69,7 +69,7 @@ class storySwitch extends HTMLElement {
         return `
             <mui-accordion-block
               style="position: relative; z-index: 1;" 
-              size="x-small" 
+              size="medium" 
               heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
               ${isLastChild}>
               <story-type-slat
@@ -105,8 +105,8 @@ class storySwitch extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <props-card title="Prop Types">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${rows}
             </story-type-table>

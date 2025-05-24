@@ -13,7 +13,7 @@ class muiCardHeader extends HTMLElement {
         box-sizing: border-box;
         padding: var(--space-400) var(--space-500);
       }
-      @media (min-width: 600px) {
+      @media (min-width: 768px) {
         :host {
           padding: var(--space-500) var(--space-600);
         } 

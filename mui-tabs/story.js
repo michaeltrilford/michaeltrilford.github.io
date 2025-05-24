@@ -42,7 +42,7 @@ class storyTabBar extends HTMLElement {
 
         return `
       <mui-accordion-block 
-        size="x-small" 
+        size="medium" 
         heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
         ${isLastChild}>
         <story-type-slat
@@ -101,7 +101,7 @@ class storyTabBar extends HTMLElement {
         return `
             <mui-accordion-block
               style="position: relative; z-index: 1;" 
-              size="x-small" 
+              size="medium" 
               heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
               ${isLastChild}>
               <story-type-slat
@@ -175,7 +175,7 @@ class storyTabBar extends HTMLElement {
         return `
               <mui-accordion-block
                 style="position: relative; z-index: 1;" 
-                size="x-small" 
+                size="medium" 
                 heading=${prop.name.charAt(0).toUpperCase() +
                   prop.name.slice(1)} 
                 ${isLastChild}>
@@ -229,7 +229,7 @@ class storyTabBar extends HTMLElement {
 
         return `
           <mui-accordion-block 
-            size="x-small" 
+            size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
             ${isLastChild}>
             <story-type-slat
@@ -277,8 +277,8 @@ class storyTabBar extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <props-card title="Prop Types: Tab Controller">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props: Tab Controller">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${tabBarControllerRows}
             </story-type-table>
@@ -288,8 +288,8 @@ class storyTabBar extends HTMLElement {
           </mui-responsive>
         </props-card>
 
-        <props-card title="Prop Types: Tab Bar">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props: Tab Bar">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${tabBarRows}
             </story-type-table>
@@ -299,8 +299,8 @@ class storyTabBar extends HTMLElement {
           </mui-responsive>
         </props-card>
 
-        <props-card title="Prop Types: Tab Item">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props: Tab Item">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${tabItemRows}
             </story-type-table>
@@ -310,8 +310,8 @@ class storyTabBar extends HTMLElement {
           </mui-responsive>
         </props-card>
 
-        <props-card title="Prop Types: Tab Panel">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props: Tab Panel">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${panelRows}
             </story-type-table>

@@ -1,33 +1,40 @@
 class storyTokenSlat extends HTMLElement {
   static get observedAttributes() {
     return [
-      "token",
-      "output",
-      "variant",
-      "font-size",
-      "line-height",
-      "font-weight",
+      'token',
+      'output',
+      'variant',
+      'font-size',
+      'line-height',
+      'font-weight',
     ];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    const token = this.getAttribute("token");
-    const output = this.getAttribute("output");
-    const variant = this.getAttribute("variant");
-    const fontSize = this.getAttribute("font-size");
-    const lineHeight = this.getAttribute("line-height");
-    const fontWeight = this.getAttribute("font-weight");
+    const token = this.getAttribute('token');
+    const output = this.getAttribute('output');
+    const variant = this.getAttribute('variant');
+    const fontSize = this.getAttribute('font-size');
+    const lineHeight = this.getAttribute('line-height');
+    const fontWeight = this.getAttribute('font-weight');
 
     const styles = `
       :host {
         display: block;
-        padding: var(--space-200) var(--space-300);
-        border-bottom: var(--border-thin);
+        padding: var(--space-400) var(--space-500);
+        border-top: var(--border-thin);
+        background: var(--surface-elevated-100);
+      }
+
+      @media (min-width: 768px) {
+        :host {
+          padding: var(--space-400) var(--space-600);
+        }
       }
 
       :host(:last-of-type) {
@@ -71,15 +78,15 @@ class storyTokenSlat extends HTMLElement {
     `;
 
     // Create preview element depending on variant
-    let visualPreview = "";
+    let visualPreview = '';
     switch (variant) {
-      case "color":
+      case 'color':
         visualPreview = `<div class="swatch" style="background: ${output};"></div>`;
         break;
-      case "text-color":
+      case 'text-color':
         visualPreview = `<div class="text-preview" style="color: ${output};">Aa</div>`;
         break;
-      case "text-size":
+      case 'text-size':
         visualPreview = `
             <div 
               class="text-preview" 
@@ -89,7 +96,7 @@ class storyTokenSlat extends HTMLElement {
             </div>`;
         break;
 
-      case "line-height":
+      case 'line-height':
         visualPreview = `
             <div 
               class="line-height-preview" 
@@ -99,34 +106,34 @@ class storyTokenSlat extends HTMLElement {
             </div>`;
         break;
 
-      case "font-weight":
+      case 'font-weight':
         visualPreview = `<div class="text-preview" style="font-weight: ${output};">Aa</div>`;
         break;
-      case "font-family":
+      case 'font-family':
         visualPreview = `<div class="text-preview" style="font-family: ${output};">Aa</div>`;
         break;
-      case "size":
+      case 'size':
         visualPreview = `<div class="spacer" style="height: ${output}; width: ${output};"></div>`;
         break;
-      case "radius":
+      case 'radius':
         visualPreview = `<div class="radius-preview" style="border-radius: ${output};"></div>`;
         break;
-      case "border-width":
+      case 'border-width':
         visualPreview = `<div class="border-preview" style="border: var(--border-thin); border-width: ${output};"></div>`;
         break;
-      case "border-color":
+      case 'border-color':
         visualPreview = `<div class="border-preview" style="border: var(--border-thin); border-color: ${output};"></div>`;
         break;
-      case "border":
+      case 'border':
         visualPreview = `<div class="border-preview" style="border: ${output};"></div>`;
         break;
-      case "outline-width":
+      case 'outline-width':
         visualPreview = `<div class="outline-preview" style="outline: var(--outline-thin); outline-width: ${output};"></div>`;
         break;
-      case "outline-color":
+      case 'outline-color':
         visualPreview = `<div class="outline-preview" style="outline: var(--outline-thin); outline-color: ${output};"></div>`;
         break;
-      case "outline":
+      case 'outline':
         visualPreview = `<div class="outline-preview" style="outline: ${output};"></div>`;
         break;
     }
@@ -164,4 +171,4 @@ class storyTokenSlat extends HTMLElement {
   }
 }
 
-customElements.define("story-token-slat", storyTokenSlat);
+customElements.define('story-token-slat', storyTokenSlat);

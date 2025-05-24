@@ -2,11 +2,11 @@
 class muiSlat extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    this.setAttribute("role", "table");
+    this.setAttribute('role', 'table');
     this.shadowRoot.innerHTML = `
     <style>
       :host {
@@ -22,4 +22,4 @@ class muiSlat extends HTMLElement {
   }
 }
 
-customElements.define("mui-slat", muiSlat);
+customElements.define('mui-slat', muiSlat);

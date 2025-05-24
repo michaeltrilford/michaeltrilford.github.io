@@ -17,7 +17,7 @@ class storyTokensContextual extends HTMLElement {
       >
         <mui-v-stack space="var(--space-700)">
 
-          <story-card title="Text">
+          <tokens-card title="Text">
             <story-token-slat slot="body" token="--text-color" variant="text-color" output="var(--grey-900)"></story-token-slat>
 
             <story-token-slat slot="body" token="--text-font-size" variant="text-size" line-height="--text-line-height" output="var(--text-font-size-m)"></story-token-slat>
@@ -32,24 +32,24 @@ class storyTokensContextual extends HTMLElement {
             <story-token-slat slot="body" token="--text-font-size-s" variant="text-size" line-height="--text-line-height-s" output="var(--font-size-50)"></story-token-slat>
             <story-token-slat slot="body" token="--text-font-size-m" variant="text-size" line-height="--text-line-height-m" output="var(--font-size-100)"></story-token-slat>
             <story-token-slat slot="body" token="--text-font-size-l" variant="text-size" line-height="--text-line-height-l" output="var(--font-size-200)"></story-token-slat>
-          </story-card>
+          </tokens-card>
 
-          <story-card title="Font Weight">
+          <tokens-card title="Font Weight">
             <story-token-slat slot="body" token="--font-weight-regular" variant="font-weight" output="var(--font-weight-400)"></story-token-slat>
             <story-token-slat slot="body" token="--font-weight-medium" variant="font-weight" output="var(--font-weight-500)"></story-token-slat>
             <story-token-slat slot="body" token="--font-weight-semi-bold" variant="font-weight" output="var(--font-weight-600)"></story-token-slat>
             <story-token-slat slot="body" token="--font-weight-bold" variant="font-weight" output="var(--font-weight-700)"></story-token-slat>
-          </story-card>
+          </tokens-card>
 
-          <story-card title="Border">
+          <tokens-card title="Border">
           <story-token-slat slot="body" token="--border-color" variant="border-color" output="var(--grey-200)"></story-token-slat>
           <story-token-slat slot="body" token="--border-thin" variant="border" output="var(--stroke-size-100) var(--stroke-solid)
           var(--border-color)"></story-token-slat>
           <story-token-slat slot="body" token="--border-thick" variant="border" output="var(--stroke-size-200) var(--stroke-solid)
           var(--border-color)"></story-token-slat>
-          </story-card>
+          </tokens-card>
 
-          <story-card title="Outline">
+          <tokens-card title="Outline">
            <story-token-slat slot="body" token="--outline-color" variant="outline-color" output="var(--blue-500)"></story-token-slat>  
           <story-token-slat slot="body" token="--outline-thin" variant="outline" output="var(--stroke-size-100) var(--stroke-outset)
           var(--outline-color)"></story-token-slat>
@@ -57,7 +57,7 @@ class storyTokensContextual extends HTMLElement {
           var(--outline-color)"></story-token-slat>
           <story-token-slat slot="body" token="--outline-thick" variant="outline" output="var(--stroke-size-300) var(--stroke-outset)
           var(--outline-color)"></story-token-slat>
-          </story-card>
+          </tokens-card>
 
         </mui-v-stack>
 

@@ -24,6 +24,7 @@ class muiAccordionBlock extends HTMLElement {
         justify-content: space-between;
         border-bottom: var(--border-thin);
         cursor: pointer;
+        background: var(--surface-elevated-100);
       }
 
       .accordion-summary:focus-visible {
@@ -54,7 +55,7 @@ class muiAccordionBlock extends HTMLElement {
         max-height: 0;
         overflow: hidden;
         transition: max-height var(--speed-300) ease;
-        box-shadow: inset 0 -1px 0 0 var(--border-color);
+        background: var(--surface-elevated-alpha);
       }
 
       .accordion-detail[open] {
@@ -68,11 +69,6 @@ class muiAccordionBlock extends HTMLElement {
       .accordion-detail-inner > *:last-child {
         margin-bottom: 0;
       }
-
-      .size-x-small-summary {
-        padding: var(--space-200) var(--space-300);
-      }
-
 
       .size-small-summary {
         padding: var(--space-300) var(--space-400);

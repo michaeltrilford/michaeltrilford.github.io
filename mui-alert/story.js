@@ -63,7 +63,7 @@ class storyAlert extends HTMLElement {
 
         return `
           <mui-accordion-block 
-            size="x-small" 
+            size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
             ${isLastChild}>
             <story-type-slat
@@ -98,7 +98,7 @@ class storyAlert extends HTMLElement {
 
         <mui-v-stack space="var(--space-700)">
 
-          <props-card title="Prop Types">
+          <props-card title="Props">
             <mui-responsive breakpoint="768" slot="body">
               <story-type-table slot="showAbove">
                 ${rows}

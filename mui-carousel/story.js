@@ -107,7 +107,7 @@ class storyCarousel extends HTMLElement {
 
         return `
       <mui-accordion-block 
-        size="x-small" 
+        size="medium" 
         heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
         ${isLastChild}>
         <story-type-slat
@@ -168,7 +168,7 @@ class storyCarousel extends HTMLElement {
 
         return `
           <mui-accordion-block 
-            size="x-small" 
+            size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
             ${isLastChild}>
             <story-type-slat
@@ -230,7 +230,7 @@ class storyCarousel extends HTMLElement {
 
         return `
           <mui-accordion-block 
-            size="x-small" 
+            size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
             ${isLastChild}>
             <story-type-slat
@@ -311,8 +311,8 @@ class storyCarousel extends HTMLElement {
 
       <mui-v-stack space="var(--space-700)">
 
-        <props-card title="Prop Types: Carousel Controller" description="The carousel-controller handles layout and transitions. Slotted children like tab-bar and carousel-panel must include the correct slot attributes to integrate properly.">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props: Carousel Controller" description="The carousel-controller handles layout and transitions. Slotted children like tab-bar and carousel-panel must include the correct slot attributes to integrate properly.">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${rowsController}
             </story-type-table>
@@ -322,8 +322,8 @@ class storyCarousel extends HTMLElement {
           </mui-responsive>
         </props-card>
 
-        <props-card title="Prop Types: Tab Bar" description="When used inside carousel-controller, mui-tab-bar can accept additional props to control placement and integration within the carousel layout.">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props: Tab Bar" description="When used inside carousel-controller, mui-tab-bar can accept additional props to control placement and integration within the carousel layout.">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${rowsTabBar}
             </story-type-table>
@@ -333,8 +333,8 @@ class storyCarousel extends HTMLElement {
           </mui-responsive>
         </props-card>
 
-        <props-card title="Prop Types: Carousel Panel " description="Used to display the content for each carousel item. This component is typically slotted into a mui-carousel-controller and responds to tab selection based on the item mapping.">
-          <mui-responsive breakpoint="768" slot="body">
+        <props-card title="Props: Carousel Panel " description="Used to display the content for each carousel item. This component is typically slotted into a mui-carousel-controller and responds to tab selection based on the item mapping.">
+          <mui-responsive breakpoint="767" slot="body">
             <story-type-table slot="showAbove">
               ${rowsPanel}
             </story-type-table>

@@ -14,6 +14,11 @@ class muiRowGroup extends HTMLElement {
       }
       :host([heading]) {
         display: block;
+        background: var(--surface-elevated-200);
+      }
+
+      :host([heading]) ::slotted(mui-row) {
+        border: none;
       }
     </style>
     <slot></slot>

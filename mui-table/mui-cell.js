@@ -1,25 +1,25 @@
 /* Mui Rule */
 class muiCell extends HTMLElement {
   static get observedAttributes() {
-    return ["align-y"];
+    return ['align-y'];
   }
 
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    this.setAttribute("role", "cell");
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+    this.setAttribute('role', 'cell');
     const styles = `
     :host {
       display: flex;
       justify-content: space-between;
-      align-self: ${this.getAttribute("align-y") || "initial"};
+      align-self: ${this.getAttribute('align-y') || 'initial'};
       text-align: left;
     }
     :host(*:first-of-type) {
-      padding-left: var(--space-400);
+      padding-left: var(--space-600);
     }
     :host(*:last-of-type) {
-      padding-right: var(--space-400);
+      padding-right: var(--space-600);
     }
 
     :host([checkbox]) {
@@ -45,4 +45,4 @@ class muiCell extends HTMLElement {
   }
 }
 
-customElements.define("mui-cell", muiCell);
+customElements.define('mui-cell', muiCell);

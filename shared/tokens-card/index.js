@@ -1,4 +1,4 @@
-class propsCard extends HTMLElement {
+class tokensCard extends HTMLElement {
   static get observedAttributes() {
     return ['title', 'description', 'usage', 'accessibility', 'github'];
   }
@@ -26,8 +26,7 @@ class propsCard extends HTMLElement {
         padding: var(--space-200) var(--space-300);
       }
 
-      ::slotted(mui-responsive) {
-        background: var(--surface-elevated-200);
+      ::slotted(story-token-slat) {
         border-bottom-left-radius: var(--card-radius);
         border-bottom-right-radius: var(--card-radius);
         overflow: hidden;
@@ -128,9 +127,7 @@ class propsCard extends HTMLElement {
         `
         }
         <mui-card-body>
-          <section>
             <slot name="body"></slot>
-          </section>
         </mui-card-body>
         <mui-card-footer><slot name="footer"></slot></mui-card-footer>
       </mui-card>
@@ -138,4 +135,4 @@ class propsCard extends HTMLElement {
   }
 }
 
-customElements.define('props-card', propsCard);
+customElements.define('tokens-card', tokensCard);
