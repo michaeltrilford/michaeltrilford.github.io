@@ -65,7 +65,7 @@ class FileUpload extends HTMLElement {
         }
 
         mui-button::part(height) {
-          height: 4rem;
+          height: calc(4.2rem - 0.4rem);
           padding: var(--space-400);
           padding-top: var(--space-000);
           padding-bottom: var(--space-000);
@@ -73,7 +73,7 @@ class FileUpload extends HTMLElement {
         }
 
         mui-button::part(border-radius) {
-          border-radius: calc(8px - 2px);
+          border-radius: calc(var(--radius-100) - 2px);
         }
 
         input[type="file"] {
