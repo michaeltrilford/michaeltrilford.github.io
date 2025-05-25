@@ -63,10 +63,10 @@ class compAgentUI extends HTMLElement {
             </mui-h-stack>
             <mui-h-stack space="var(--space-200)">
               <mui-button variant="tertiary" icon-only>
-                <mui-icon-message
+                <mui-icon-stop
                   variant="tertiary"
                   size="x-small">
-                </mui-icon-message>
+                </mui-icon-stop>
               </mui-button>
             </mui-h-stack>
           </mui-h-stack>
