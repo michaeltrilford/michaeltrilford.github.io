@@ -120,6 +120,7 @@ class specCard extends HTMLElement {
           </mui-card-header>
         `
         }
+        <mui-rule></mui-rule>
         <mui-card-body>
           <slot name="body"></slot>
         </mui-card-body>

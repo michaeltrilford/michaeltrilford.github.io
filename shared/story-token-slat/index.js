@@ -36,6 +36,10 @@ class storyTokenSlat extends HTMLElement {
         }
       }
 
+      :host(:first-of-type) {
+        border-top: none;
+      }
+
       :host(:last-of-type) {
         border-bottom: none;
       }
