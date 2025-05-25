@@ -174,7 +174,7 @@ class muiButton extends HTMLElement {
 
     /* Icon only
     ========================================= */
-    :host([iconOnly]) button {
+    :host([icon-only]) button {
       display: flex;
       justify-content: center;
       align-items: center;

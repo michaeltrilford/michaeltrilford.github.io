@@ -23,9 +23,9 @@ class storyButton extends HTMLElement {
         description: 'Describe the intent or mood of a message',
       },
       {
-        name: 'iconOnly',
+        name: 'icon-only',
         type: 'boolean',
-        options: 'iconOnly',
+        options: 'icon-only',
         default: '',
         description: 'Utilise a compact button with a mui-icon option.',
       },
@@ -178,11 +178,11 @@ class storyButton extends HTMLElement {
         </story-card>
 
         <story-card title="Primary Icon-Only">
-          <mui-button variant="primary" iconOnly slot="body">
+          <mui-button variant="primary" icon-only slot="body">
             <mui-icon-add variant="primary" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="primary" iconOnly&gt;
+            &lt;mui-button variant="primary" icon-only&gt;
             <br />
             <br />
             &nbsp;&nbsp;&lt;mui-icon-add
@@ -199,11 +199,11 @@ class storyButton extends HTMLElement {
         </story-card>
 
         <story-card title="Secondary Icon-Only">
-          <mui-button variant="secondary" iconOnly slot="body">
+          <mui-button variant="secondary" icon-only slot="body">
             <mui-icon-add variant="secondary" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="secondary" iconOnly&gt;
+            &lt;mui-button variant="secondary" icon-only&gt;
             <br />
             <br />
             &nbsp;&nbsp;&lt;mui-icon-add
@@ -220,11 +220,11 @@ class storyButton extends HTMLElement {
         </story-card>
 
         <story-card title="Tertiary Icon-Only">
-          <mui-button variant="tertiary" iconOnly slot="body">
+          <mui-button variant="tertiary" icon-only slot="body">
             <mui-icon-add variant="tertiary" size="x-small"></mui-icon-add>
           </mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="tertiary" iconOnly&gt;
+            &lt;mui-button variant="tertiary" icon-only&gt;
             <br />
             <br />
             &nbsp;&nbsp;&lt;mui-icon-add
@@ -241,11 +241,11 @@ class storyButton extends HTMLElement {
         </story-card>
 
         <story-card title="Attention Icon-Only">
-          <mui-button variant="attention" iconOnly slot="body">
+          <mui-button variant="attention" icon-only slot="body">
             <mui-icon-close variant="attention" size="x-small"></mui-icon-close>
           </mui-button>
           <mui-code slot="footer">
-            &lt;mui-button variant="attention" iconOnly&gt;
+            &lt;mui-button variant="attention" icon-only&gt;
             <br />
             <br />
             &nbsp;&nbsp;&lt;mui-icon-add

@@ -48,13 +48,13 @@ class compAgentUI extends HTMLElement {
 
           <mui-h-stack class="prompt-toolbar" space="var(--space-200)">
             <mui-h-stack space="var(--space-000)">
-              <mui-button variant="tertiary" iconOnly>
+              <mui-button variant="tertiary" icon-only>
                 <mui-icon-add
                   variant="tertiary"
                   size="x-small">
                 </mui-icon-add>
               </mui-button>
-              <mui-button variant="tertiary" iconOnly>
+              <mui-button variant="tertiary" icon-only>
                 <mui-icon-grid
                   variant="tertiary"
                   size="x-small">
@@ -62,7 +62,7 @@ class compAgentUI extends HTMLElement {
               </mui-button>
             </mui-h-stack>
             <mui-h-stack space="var(--space-200)">
-              <mui-button variant="tertiary" iconOnly>
+              <mui-button variant="tertiary" icon-only>
                 <mui-icon-message
                   variant="tertiary"
                   size="x-small">

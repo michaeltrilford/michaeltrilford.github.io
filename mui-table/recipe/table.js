@@ -1,7 +1,7 @@
 class appTable extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const Columns = `1fr 1fr 1fr auto`;
 
@@ -22,7 +22,7 @@ class appTable extends HTMLElement {
             <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
             <mui-cell data-label="Cost:">$1,100.00</mui-cell>
             <mui-cell data-label="" action>
-              <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+              <mui-button variant="tertiary" icon-only> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
             </mui-cell>
           </mui-row>
           <mui-row columns="${Columns}">
@@ -30,7 +30,7 @@ class appTable extends HTMLElement {
             <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
             <mui-cell data-label="Cost:">$1,100.00</mui-cell>
             <mui-cell data-label="" action>
-              <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+              <mui-button variant="tertiary" icon-only> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
             </mui-cell>
           </mui-row>
         </mui-row-group>
@@ -48,4 +48,4 @@ class appTable extends HTMLElement {
   }
 }
 
-customElements.define("app-table", appTable);
+customElements.define('app-table', appTable);

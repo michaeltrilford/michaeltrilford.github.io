@@ -155,7 +155,7 @@ class storyCards extends HTMLElement {
                       <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
                       <mui-cell data-label="Cost:">$1,100.00</mui-cell>
                       <mui-cell data-label="" action>
-                        <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+                        <mui-button variant="tertiary" icon-only> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
                       </mui-cell>
                     </mui-row>
                     <mui-row columns="${Columns}">
@@ -163,7 +163,7 @@ class storyCards extends HTMLElement {
                       <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
                       <mui-cell data-label="Cost:">$1,100.00</mui-cell>
                       <mui-cell data-label="" action>
-                        <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+                        <mui-button variant="tertiary" icon-only> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
                       </mui-cell>
                     </mui-row>
                   </mui-row-group>
@@ -191,7 +191,7 @@ class storyCards extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Revenue:"&gt;$4,400.00&lt;/mui-cell&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Cost:"&gt;$1,100.00&lt;/mui-cell&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="" action&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" iconOnly&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" icon-only&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-add size="x-small"&gt;&lt;/mui-icon-add&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-cell&gt;<br>
@@ -201,7 +201,7 @@ class storyCards extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Revenue:"&gt;$4,400.00&lt;/mui-cell&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Cost:"&gt;$1,100.00&lt;/mui-cell&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="" action&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" iconOnly&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" icon-only&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-add size="x-small"&gt;&lt;/mui-icon-add&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-cell&gt;<br>
@@ -240,7 +240,7 @@ class storyCards extends HTMLElement {
                       <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
                       <mui-cell data-label="Cost:">$1,100.00</mui-cell>
                       <mui-cell data-label="" action>
-                        <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+                        <mui-button variant="tertiary" icon-only> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
                       </mui-cell>
                     </mui-row>
                     <mui-row columns="${Columns}">
@@ -248,7 +248,7 @@ class storyCards extends HTMLElement {
                       <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
                       <mui-cell data-label="Cost:">$1,100.00</mui-cell>
                       <mui-cell data-label="" action>
-                        <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+                        <mui-button variant="tertiary" icon-only> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
                       </mui-cell>
                     </mui-row>
                   </mui-row-group>
@@ -280,7 +280,7 @@ class storyCards extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Revenue:"&gt;$4,400.00&lt;/mui-cell&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Cost:"&gt;$1,100.00&lt;/mui-cell&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="" action&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" iconOnly&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" icon-only&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-add size="x-small"&gt;&lt;/mui-icon-add&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-cell&gt;<br>
@@ -290,7 +290,7 @@ class storyCards extends HTMLElement {
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Revenue:"&gt;$4,400.00&lt;/mui-cell&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Cost:"&gt;$1,100.00&lt;/mui-cell&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="" action&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" iconOnly&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" icon-only&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-add size="x-small"&gt;&lt;/mui-icon-add&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button&gt;<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-cell&gt;<br>
