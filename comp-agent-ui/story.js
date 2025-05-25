@@ -12,7 +12,6 @@ class compAgentUI extends HTMLElement {
 
       <style>
         .canvas {
-          background: var(--surface);
           padding: var(--space-400);
         }
 
@@ -73,7 +72,6 @@ class compAgentUI extends HTMLElement {
     const AgentConversationReply = `
       <style>
         .conversation-background {
-          background: var(--surface);
           padding: var(--space-400);
           box-sizing: border-box;
         }

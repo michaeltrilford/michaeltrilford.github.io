@@ -7,7 +7,6 @@ class storyTokensSurface extends HTMLElement {
 
       .surface {
         background: var(--surface);
-        padding: var(--space-400);
         box-sizing: border-box;
       }
       .surface-elevated,
@@ -24,7 +23,7 @@ class storyTokensSurface extends HTMLElement {
       }
 
       .surface-recessed {
-        background: var(--surface-recessed-100);
+        background: var(--surface-recessed-200);
       }
 
     `;
@@ -170,7 +169,7 @@ class storyTokensSurface extends HTMLElement {
               <br />
               .surface-recessed {
               <br />
-              &nbsp;&nbsp;background: var(--surface-recessed-100);
+              &nbsp;&nbsp;background: var(--surface-recessed-200);
               <br />
               }
             </mui-code>
