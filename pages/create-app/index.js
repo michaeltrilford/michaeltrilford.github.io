@@ -42,7 +42,7 @@ class CreateApp extends HTMLElement {
 
         <page-card title="App configuration" description="Integrate a lightweight scaffold with prebuilt web components, layout, and styling conventions to kickstart your project.">
           
-          <mui-grid slot="body" class="config">
+          <mui-grid slot="body" class="config" space="var(--space-600)">
 
             <mui-v-stack space="var(--space-400)">
 

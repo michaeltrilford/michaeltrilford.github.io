@@ -41,7 +41,7 @@ class ThemeSetup extends HTMLElement {
 
         <page-card title="Theme configuration" description="Define brand primitives and apply them consistently across light and dark modes.">
           
-        <mui-grid slot="body" class="config">
+        <mui-grid slot="body" class="config"  space="var(--space-400)">
 
           <mui-v-stack space="var(--space-400)">
 
