@@ -20,7 +20,7 @@ class muiCard extends HTMLElement {
       ::slotted(*:last-child) {
         margin-bottom: 0;
       }
-      ::slotted(.mui-card-header) {
+      ::slotted(.inner-space-top) {
       padding-top: 0;
       }
     </style>
@@ -43,9 +43,9 @@ class muiCard extends HTMLElement {
 
         if (body) {
           if (hasHeader) {
-            body.classList.add('mui-card-header');
+            body.classList.add('inner-space-top');
           } else {
-            body.classList.remove('mui-card-header');
+            body.classList.remove('inner-space-top');
           }
         }
       });

@@ -28,7 +28,6 @@ class storyTokenSlat extends HTMLElement {
         display: block;
         padding: var(--space-400) var(--space-500);
         border-top: var(--border-thin);
-        background: var(--surface-elevated-100);
       }
 
       @media (min-width: 768px) {

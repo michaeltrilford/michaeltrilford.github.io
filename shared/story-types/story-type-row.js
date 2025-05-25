@@ -55,7 +55,7 @@ class storyTypeRow extends HTMLElement {
 
       <mui-row-group>
         <mui-row columns="minmax(12rem, 0.5fr) minmax(10rem, 1fr) minmax(10rem, 2fr) minmax(5rem, 0.5fr)  2fr">
-          <mui-cell>
+          <mui-cell class="card-slot">
             <mui-body size="x-small">
               <mui-h-stack space="var(--space-050)">
               ${name} ${
@@ -65,10 +65,10 @@ class storyTypeRow extends HTMLElement {
     }
             </mui-h-stack></mui-body>
           </mui-cell>
-          <mui-cell><mui-body size="x-small">${defaultVal}<mui-body></mui-cell>
-          <mui-cell><mui-body size="x-small">${optionList}</mui-body></mui-cell>
-          <mui-cell><mui-body size="x-small">${type}</mui-body></mui-cell>
-          <mui-cell><mui-body size="x-small">${description}</mui-body></mui-cell>
+          <mui-cell class="card-slot"><mui-body size="x-small">${defaultVal}<mui-body></mui-cell>
+          <mui-cell class="card-slot"><mui-body size="x-small">${optionList}</mui-body></mui-cell>
+          <mui-cell class="card-slot"><mui-body size="x-small">${type}</mui-body></mui-cell>
+          <mui-cell class="card-slot"><mui-body size="x-small">${description}</mui-body></mui-cell>
         </mui-row>
       </mui-row-group>
     `;

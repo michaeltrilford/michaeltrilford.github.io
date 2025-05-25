@@ -21,7 +21,7 @@ class storyCard extends HTMLElement {
       }
 
       section {
-        background: var(--surface-elevated-200);
+        background: var(--surface-recessed-alpha);
         position: relative;
       }
 

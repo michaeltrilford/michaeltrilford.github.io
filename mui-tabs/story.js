@@ -41,7 +41,8 @@ class storyTabBar extends HTMLElement {
           index === propItemsController.length - 1 ? 'last-child' : '';
 
         return `
-      <mui-accordion-block 
+      <mui-accordion-block
+        class="card-slot"
         size="medium" 
         heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
         ${isLastChild}>
@@ -100,6 +101,7 @@ class storyTabBar extends HTMLElement {
 
         return `
             <mui-accordion-block
+              class="card-slot"
               style="position: relative; z-index: 1;" 
               size="medium" 
               heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
@@ -174,6 +176,7 @@ class storyTabBar extends HTMLElement {
 
         return `
               <mui-accordion-block
+                class="card-slot"
                 style="position: relative; z-index: 1;" 
                 size="medium" 
                 heading=${prop.name.charAt(0).toUpperCase() +
@@ -228,7 +231,8 @@ class storyTabBar extends HTMLElement {
           index === propItemsPanel.length - 1 ? 'last-child' : '';
 
         return `
-          <mui-accordion-block 
+          <mui-accordion-block
+            class="card-slot"
             size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
             ${isLastChild}>

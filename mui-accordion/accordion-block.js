@@ -24,7 +24,6 @@ class muiAccordionBlock extends HTMLElement {
         justify-content: space-between;
         border-top: var(--border-thin);
         cursor: pointer;
-        background: var(--surface-elevated-100);
       }
 
       .accordion-summary:focus-visible {
@@ -56,7 +55,6 @@ class muiAccordionBlock extends HTMLElement {
         overflow: hidden;
         transition: max-height var(--speed-300) ease;
         box-shadow: inset 0 1px 0 0 var(--border-color);
-        background: var(--surface-elevated-200);
       }
 
       .accordion-detail[open] {
@@ -74,34 +72,47 @@ class muiAccordionBlock extends HTMLElement {
       .size-small-summary {
         padding: var(--space-300) var(--space-400);
       }
-
       .size-medium-summary {
         padding: var(--space-400) var(--space-500);
       }
-
       .size-large-summary {
         padding: var(--space-500) var(--space-600);
       }
-
-      .size-x-small-detail {
-        padding: var(--space-300);
-      }
-
+        
       .size-small-detail {
         padding: var(--space-400);
       }
-
       .size-medium-detail {
         padding: var(--space-500);
       }
-
       .size-large-detail {
         padding: var(--space-600);
       }
 
-      :host([last-child]) .accordion-summary,
-      :host([last-child]) .accordion-detail {
-        border-bottom: none;
+      :host([first-child]) .accordion-summary {
+        border-top: none;
+      }
+
+      /* Card Slot (Supports: Table Cell, Accordion Block) */
+      :host(.card-slot) .accordion-summary {
+        padding-left: var(--space-500);
+        padding-right: var(--space-500);
+      }
+      @media (min-width: 768px) {
+        :host(.card-slot) .accordion-summary {
+          padding-left: var(--space-600);
+          padding-right: var(--space-600);
+        }
+      }
+      :host(.card-slot) .accordion-detail-inner {
+        padding-left: var(--space-500);
+        padding-right: var(--space-500);
+      }
+      @media (min-width: 768px) {
+        :host(.card-slot) .accordion-detail-inner {
+          padding-left: var(--space-600);
+          padding-right: var(--space-600);
+        }
       }
 
     </style>

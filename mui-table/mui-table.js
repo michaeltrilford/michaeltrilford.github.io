@@ -15,7 +15,6 @@ class muiTable extends HTMLElement {
         text-indent: initial;
         width: 100%;
         margin: var(--space-000);
-        background: var(--surface-elevated-100);
       }
     </style>
     <slot></slot>

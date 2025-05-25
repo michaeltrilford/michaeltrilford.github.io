@@ -40,7 +40,7 @@ class storyIcon extends HTMLElement {
 
           <story-card title="Default" description="The icons have the size 'small' set by default." >
 
-            <mui-grid slot="body">
+            <mui-grid space="var(--space-400)" slot="body">
 
               <story-icon-grid>              
                 <mui-icon-menu slot="body"></mui-icon-menu>
@@ -83,7 +83,7 @@ class storyIcon extends HTMLElement {
 
           <story-card title="Color Options" description="The icons have default color of var(--black). The color can be inverted or a custom color applied." >
 
-            <mui-grid col="1fr 1fr" slot="body">
+            <mui-grid col="1fr 1fr" space="var(--space-400)" slot="body">
 
               <story-icon-grid>              
                 <mui-icon-menu slot="body"></mui-icon-menu>
@@ -109,7 +109,7 @@ class storyIcon extends HTMLElement {
 
           <story-card title="Variant" description="The icons have variant states for specific component use, such as icon-only buttons." >
 
-            <mui-grid col="1fr 1fr" slot="body">
+            <mui-grid col="1fr 1fr" space="var(--space-400)" slot="body">
 
               <story-icon-grid theme="primary">              
                 <mui-icon-add slot="body" variant="primary"></mui-icon-add>
@@ -141,7 +141,7 @@ class storyIcon extends HTMLElement {
 
           <story-card title="Icon Toggle: Default" description="Transition between two icons with a scale effect." >
 
-            <mui-grid col="1fr" slot="body">
+            <mui-grid col="1fr" space="var(--space-400)" slot="body">
 
               <story-icon-grid>
                 <mui-icon-toggle size="small" slot="body">
@@ -229,7 +229,7 @@ class storyIcon extends HTMLElement {
 
           <story-card title="Icon Toggle: Rotate" description="Transition between two icons with a rotation effect." >
             
-            <mui-grid col="1fr" slot="body">
+            <mui-grid col="1fr" space="var(--space-400)" slot="body">
 
               <story-icon-grid>            
               
@@ -317,7 +317,7 @@ class storyIcon extends HTMLElement {
 
           <story-card title="Icon Toggle: Color Options" description="Easily set the color property on the parent and the icons will adopt the defined style." >
 
-            <mui-grid col="1fr 1fr" slot="body">
+            <mui-grid col="1fr 1fr" space="var(--space-400)" slot="body">
 
               <story-icon-grid>
                 <mui-icon-toggle size="small" color="default" slot="body">

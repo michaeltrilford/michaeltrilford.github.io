@@ -6,6 +6,81 @@ class storyAccordion extends HTMLElement {
       :host { display: block; }
     `;
 
+    const propItems = [
+      {
+        name: 'heading',
+        required: true,
+        type: 'string',
+        options: '{text}',
+        default: '',
+        description: 'Provides the accordion element with a heading',
+      },
+      {
+        name: 'size',
+        type: 'string',
+        options: 'small, medium, large',
+        default: 'medium',
+        description: 'Adjust the size of the Accordion',
+      },
+      {
+        name: 'slot',
+        required: true,
+        type: 'HTML attribute',
+        options: 'slot=“detail”',
+        default: '',
+        description:
+          'Hides the label but it is still present for screen readers',
+      },
+      {
+        name: 'class',
+        type: 'CSS class',
+        options: 'card-slot',
+        default: '',
+        description:
+          'By default, when Accordion is slotted into the mui-card, padding is automatically added. However, if the mui-accordion is nested within a shadow dom, you have to apply the class for correct padding',
+      },
+    ];
+
+    const rows = propItems
+      .map(
+        (prop) => `
+          <story-type-row
+            ${prop.required ? 'required' : ''}
+            name="${prop.name}"
+            type="${prop.type}" 
+            options="${prop.options || ''}"
+            default="${prop.default || ''}"
+            description="${prop.description}">
+          </story-type-row>
+        `,
+      )
+      .join('');
+
+    const accordions = propItems
+      .map((prop, index) => {
+        // Check if it's the last item in the array
+        const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
+
+        return `
+            <mui-accordion-block
+              style="position: relative; z-index: 1;" 
+              size="medium" 
+              heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
+              ${isLastChild}>
+              <story-type-slat
+                slot="detail"
+                ${prop.required ? 'required' : ''}
+                name="${prop.name}"
+                type="${prop.type}" 
+                options="${prop.options || ''}"
+                default="${prop.default || ''}"
+                description="${prop.description}">
+              </story-type-slat>
+            </mui-accordion-block>
+          `;
+      })
+      .join('');
+
     shadowRoot.innerHTML = `
       <style>${styles}</style>
 
@@ -24,6 +99,18 @@ class storyAccordion extends HTMLElement {
       >
 
       <mui-v-stack space="var(--space-700)">
+
+
+        <spec-card title="Props: Accordion Block">
+          <mui-responsive breakpoint="767" slot="body">
+            <story-type-table slot="showAbove">
+              ${rows}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${accordions}
+            </mui-accordion-group>
+          </mui-responsive>
+        </spec-card>
 
         <story-card 
           title="Accordion Inline" 
@@ -134,6 +221,92 @@ class storyAccordion extends HTMLElement {
             &nbsp;&nbsp;&lt;/mui-accordion-block&gt;
             <br />
             &lt;mui-accordion-group&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Card w/ Accordion">
+          <div slot="body">
+            <mui-card>
+              <mui-card-body>
+                <mui-accordion-group exclusive>
+                  <mui-accordion-block heading="Heading">
+                    <div slot="detail">
+                        Content
+                    </div>
+                  </mui-accordion-block>
+                  <mui-accordion-block heading="Heading">
+                    <div slot="detail">
+                        Content
+                    </div>
+                  </mui-accordion-block>
+                </mui-accordion-group>
+              </mui-card-body>
+            </mui-card>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-card&gt;<br>
+            &nbsp;&nbsp;&lt;mui-card-body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-accordion-group exclusive&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-accordion-block heading="Heading"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Content<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-accordion-block&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-accordion-block heading="Heading"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Content<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-accordion-block&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-accordion-group&gt;<br>
+            &nbsp;&nbsp;&lt;/mui-card-body&gt;<br>
+            &lt;/mui-card&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Card Header w/ Accordion" description="You can add in a mui-rule to help add a division between the header and body of the card">
+          <div slot="body">
+            <mui-card>
+              <mui-card-header>
+                <mui-heading size="3">Title</mui-heading>
+              </mui-card-header>
+              <mui-rule></mui-rule>
+              <mui-card-body>
+                <mui-accordion-group exclusive>
+                  <mui-accordion-block heading="Heading">
+                    <div slot="detail">
+                        Content
+                    </div>
+                  </mui-accordion-block>
+                  <mui-accordion-block heading="Heading">
+                    <div slot="detail">
+                        Content
+                    </div>
+                  </mui-accordion-block>
+                </mui-accordion-group>
+              </mui-card-body>
+            </mui-card>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-card&gt;<br>
+            &nbsp;&nbsp;&lt;mui-card-header&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-heading size="3"&gt;Title&lt;/mui-heading&gt;<br>
+            &nbsp;&nbsp;&lt;/mui-card-header&gt;<br>
+            &nbsp;&nbsp;&lt;mui-rule&gt;&lt;/mui-rule&gt;<br>
+            &nbsp;&nbsp;&lt;mui-card-body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-accordion-group exclusive&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-accordion-block heading="Heading"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Content<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-accordion-block&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-accordion-block heading="Heading"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div slot="detail"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Content<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-accordion-block&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-accordion-group&gt;<br>
+            &nbsp;&nbsp;&lt;/mui-card-body&gt;<br>
+            &lt;/mui-card&gt;
           </mui-code>
         </story-card>
 

@@ -1,10 +1,78 @@
 class storyTable extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     const styles = `
       :host { display: block; }
     `;
+
+    const Columns = `1fr 1fr 1fr auto`;
+
+    const propItems = [
+      {
+        name: 'text',
+        required: true,
+        type: 'string',
+        options: '{text}',
+        default: '',
+        description: 'Provides the text for the cell element',
+      },
+      {
+        name: 'heading',
+        type: 'boolean',
+        options: '',
+        default: '',
+        description: 'Define the heading styles for the table',
+      },
+      {
+        name: 'class',
+        type: 'CSS class',
+        options: 'card-slot',
+        default: '',
+        description:
+          'By default, when Table is slotted into the mui-card, padding is automatically added. However, if the mui-accordion is nested within a shadow dom, you have to apply the class for correct padding',
+      },
+    ];
+
+    const rows = propItems
+      .map(
+        (prop) => `
+          <story-type-row
+            ${prop.required ? 'required' : ''}
+            name="${prop.name}"
+            type="${prop.type}" 
+            options="${prop.options || ''}"
+            default="${prop.default || ''}"
+            description="${prop.description}">
+          </story-type-row>
+        `,
+      )
+      .join('');
+
+    const accordions = propItems
+      .map((prop, index) => {
+        // Check if it's the last item in the array
+        const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
+
+        return `
+            <mui-accordion-block
+              style="position: relative; z-index: 1;" 
+              size="medium" 
+              heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
+              ${isLastChild}>
+              <story-type-slat
+                slot="detail"
+                ${prop.required ? 'required' : ''}
+                name="${prop.name}"
+                type="${prop.type}" 
+                options="${prop.options || ''}"
+                default="${prop.default || ''}"
+                description="${prop.description}">
+              </story-type-slat>
+            </mui-accordion-block>
+          `;
+      })
+      .join('');
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -16,6 +84,17 @@ class storyTable extends HTMLElement {
       >
 
         <mui-v-stack space="var(--space-700)">
+
+        <spec-card title="Props: Cell">
+          <mui-responsive breakpoint="767" slot="body">
+            <story-type-table slot="showAbove">
+              ${rows}
+            </story-type-table>
+            <mui-accordion-group exclusive slot="showBelow">
+              ${accordions}
+            </mui-accordion-group>
+          </mui-responsive>
+        </spec-card>
 
           <story-card title="Table">
             <app-table slot="body"></app-table>
@@ -169,6 +248,173 @@ class storyTable extends HTMLElement {
 
           </story-card>
 
+        <story-card title="Card w/ Table">
+          <div slot="body">
+            <mui-card>
+              <mui-card-body>
+                <mui-table>
+                  <mui-row-group heading>
+                    <mui-row columns="${Columns}">
+                      <mui-cell heading>Office</mui-cell>
+                      <mui-cell heading>Revenue</mui-cell>
+                      <mui-cell heading>Cost</mui-cell>
+                      <mui-cell heading action>
+                      </mui-cell>
+                    </mui-row>
+                  </mui-row-group>
+                  <mui-row-group>
+                    <mui-row columns="${Columns}">
+                      <mui-cell data-label="Office:">Whalen</mui-cell>
+                      <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
+                      <mui-cell data-label="Cost:">$1,100.00</mui-cell>
+                      <mui-cell data-label="" action>
+                        <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+                      </mui-cell>
+                    </mui-row>
+                    <mui-row columns="${Columns}">
+                      <mui-cell data-label="Office:">Whalen</mui-cell>
+                      <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
+                      <mui-cell data-label="Cost:">$1,100.00</mui-cell>
+                      <mui-cell data-label="" action>
+                        <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+                      </mui-cell>
+                    </mui-row>
+                  </mui-row-group>
+                </mui-table>
+              </mui-card-body>
+            </mui-card>
+          </div>
+          <mui-code slot="footer">
+            const Columns = &#96;1fr 1fr 1fr auto&#96;;<br>
+            <br>
+            &lt;mui-card&gt;<br>
+            &nbsp;&nbsp;&lt;mui-card-body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-table&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row-group heading&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row columns="\${Columns}"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell heading&gt;Office&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell heading&gt;Revenue&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell heading&gt;Cost&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell heading action&gt;&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row-group&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row-group&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row columns="\${Columns}"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Office:"&gt;Whalen&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Revenue:"&gt;$4,400.00&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Cost:"&gt;$1,100.00&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="" action&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" iconOnly&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-add size="x-small"&gt;&lt;/mui-icon-add&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row columns="\${Columns}"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Office:"&gt;Whalen&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Revenue:"&gt;$4,400.00&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Cost:"&gt;$1,100.00&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="" action&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" iconOnly&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-add size="x-small"&gt;&lt;/mui-icon-add&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row-group&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-table&gt;<br>
+            &nbsp;&nbsp;&lt;/mui-card-body&gt;<br>
+            &nbsp;&nbsp;&lt;mui-card-footer&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-code&gt;&lt;/mui-code&gt;<br>
+            &nbsp;&nbsp;&lt;/mui-card-footer&gt;<br>
+            &lt;/mui-card&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Card Header w/ Table" description="You can add in a mui-rule to help add a division between the header and body of the card">
+          <div slot="body">
+            <mui-card>
+              <mui-card-header>
+                <mui-heading size="3">Title</mui-heading>
+              </mui-card-header>
+              <mui-rule></mui-rule>
+              <mui-card-body>
+                <mui-table>
+                  <mui-row-group heading>
+                    <mui-row columns="${Columns}">
+                      <mui-cell heading>Office</mui-cell>
+                      <mui-cell heading>Revenue</mui-cell>
+                      <mui-cell heading>Cost</mui-cell>
+                      <mui-cell heading action>
+                      </mui-cell>
+                    </mui-row>
+                  </mui-row-group>
+                  <mui-row-group>
+                    <mui-row columns="${Columns}">
+                      <mui-cell data-label="Office:">Whalen</mui-cell>
+                      <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
+                      <mui-cell data-label="Cost:">$1,100.00</mui-cell>
+                      <mui-cell data-label="" action>
+                        <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+                      </mui-cell>
+                    </mui-row>
+                    <mui-row columns="${Columns}">
+                      <mui-cell data-label="Office:">Whalen</mui-cell>
+                      <mui-cell data-label="Revenue:">$4,400.00</mui-cell>
+                      <mui-cell data-label="Cost:">$1,100.00</mui-cell>
+                      <mui-cell data-label="" action>
+                        <mui-button variant="tertiary" iconOnly> <mui-icon-add size="x-small"></mui-icon-add></mui-button>
+                      </mui-cell>
+                    </mui-row>
+                  </mui-row-group>
+                </mui-table>
+              </mui-card-body>
+            </mui-card>
+          </div>
+          <mui-code slot="footer">
+            const Columns = &#96;1fr 1fr 1fr auto&#96;;<br>
+            <br>
+            &lt;mui-card&gt;<br>
+            &nbsp;&nbsp;&lt;mui-card-header&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-heading size="3"&gt;Title&lt;/mui-heading&gt;<br>
+            &nbsp;&nbsp;&lt;/mui-card-header&gt;<br>
+            &nbsp;&nbsp;&lt;mui-rule&gt;&lt;/mui-rule&gt;<br>
+            &nbsp;&nbsp;&lt;mui-card-body&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-table&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row-group heading&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row columns="\${Columns}"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell heading&gt;Office&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell heading&gt;Revenue&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell heading&gt;Cost&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell heading action&gt;&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row-group&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row-group&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row columns="\${Columns}"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Office:"&gt;Whalen&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Revenue:"&gt;$4,400.00&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Cost:"&gt;$1,100.00&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="" action&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" iconOnly&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-add size="x-small"&gt;&lt;/mui-icon-add&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-row columns="\${Columns}"&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Office:"&gt;Whalen&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Revenue:"&gt;$4,400.00&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="Cost:"&gt;$1,100.00&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-cell data-label="" action&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-button variant="tertiary" iconOnly&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;mui-icon-add size="x-small"&gt;&lt;/mui-icon-add&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-button&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-cell&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-row-group&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/mui-table&gt;<br>
+            &nbsp;&nbsp;&lt;/mui-card-body&gt;<br>
+            &lt;/mui-card&gt;
+          </mui-code>
+        </story-card>
+
         </mui-v-stack>
 
       </story-template>
@@ -176,4 +422,4 @@ class storyTable extends HTMLElement {
   }
 }
 
-customElements.define("story-table", storyTable);
+customElements.define('story-table', storyTable);

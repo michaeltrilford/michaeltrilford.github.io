@@ -20,11 +20,11 @@ class storyTypeTable extends HTMLElement {
       <mui-table>  
         <mui-row-group heading>
           <mui-row columns="minmax(12rem, 0.5fr) minmax(10rem, 1fr) minmax(10rem, 2fr) minmax(5rem, 0.5fr) 2fr">
-            <mui-cell heading>Name</mui-cell>
-            <mui-cell heading>Default</mui-cell>
-            <mui-cell heading>Options</mui-cell>
-            <mui-cell heading>Type</mui-cell>
-            <mui-cell heading>Description</mui-cell>
+            <mui-cell class="card-slot" heading>Name</mui-cell>
+            <mui-cell class="card-slot" heading>Default</mui-cell>
+            <mui-cell class="card-slot" heading>Options</mui-cell>
+            <mui-cell class="card-slot" heading>Type</mui-cell>
+            <mui-cell class="card-slot" heading>Description</mui-cell>
           </mui-row>
         </mui-row-group>
         <slot></slot>

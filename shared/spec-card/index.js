@@ -26,12 +26,6 @@ class specCard extends HTMLElement {
         padding: var(--space-200) var(--space-300);
       }
 
-      section {
-        border-bottom-left-radius: var(--card-radius);
-        border-bottom-right-radius: var(--card-radius);
-        overflow: hidden;
-      }
-
     `;
 
     const title = this.getAttribute('title') || '';
@@ -127,9 +121,7 @@ class specCard extends HTMLElement {
         `
         }
         <mui-card-body>
-          <section>
-            <slot name="body"></slot>
-          </section>
+          <slot name="body"></slot>
         </mui-card-body>
         <mui-card-footer><slot name="footer"></slot></mui-card-footer>
       </mui-card>

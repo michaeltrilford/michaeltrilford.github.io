@@ -22,6 +22,22 @@ class muiCell extends HTMLElement {
       padding-right: var(--space-600);
     }
 
+    /* Card Slot (Supports: Table Cell, Accordion Block) */
+    :host(.card-slot:first-of-type) {
+      padding-left: var(--space-500);
+    }
+    :host(.card-slot:last-of-type) {
+      padding-right: var(--space-500);
+    }
+    @media (min-width: 768px) {
+      :host(.card-slot:first-of-type) {
+        padding-left: var(--space-600);
+      }
+      :host(.card-slot:last-of-type) {
+        padding-right: var(--space-600);
+      }
+    }
+
     :host([checkbox]) {
       width: auto;
       padding: 0;
