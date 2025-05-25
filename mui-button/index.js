@@ -84,16 +84,19 @@ class muiButton extends HTMLElement {
     :host([variant="primary"]) button:hover {
       background: var(--action-primary-background-hover);
       color: var(--action-primary-text-color-hover);
+      border: var(--action-primary-stroke-hover); 
     }
 
     :host([variant="primary"]) button:focus {
       background: var(--action-primary-background-focus);
       color: var(--action-primary-text-color-focus);
+      border: var(--action-primary-stroke-focus); 
     }
 
     :host([variant="primary"]) button:disabled {
       background: var(--action-primary-background-disabled);
       color: var(--action-primary-text-color-disabled);
+      border: var(--action-primary-stroke-disabled); 
       cursor: not-allowed;
     }
 
@@ -109,16 +112,19 @@ class muiButton extends HTMLElement {
     :host([variant="secondary"]) button:hover {
       background: var(--action-secondary-background-hover);
       color: var(--action-secondary-text-color-hover);
+      border: var(--action-secondary-stroke-hover); 
     }
 
     :host([variant="secondary"]) button:focus {
       background: var(--action-secondary-background-focus);
       color: var(--action-secondary-text-color-focus);
+      border: var(--action-secondary-stroke-focus); 
     }
 
     :host([variant="secondary"]) button:disabled {
       background: var(--action-secondary-background-disabled);
       color: var(--action-secondary-text-color-disabled);
+      border: var(--action-secondary-stroke-disabled); 
       cursor: not-allowed;
     }
 
@@ -134,19 +140,21 @@ class muiButton extends HTMLElement {
     :host([variant="tertiary"]) button:hover {
       background: var(--action-tertiary-background-hover);
       color: var(--action-tertiary-text-color-hover);
+      border: var(--action-tertiary-stroke-hover);
     }
 
     :host([variant="tertiary"]) button:focus {
       background: var(--action-tertiary-background-focus);
       color: var(--action-tertiary-text-color-focus);
+      border: var(--action-tertiary-stroke-focus);
     }
 
     :host([variant="tertiary"]) button:disabled {
       background: var(--action-tertiary-background-disabled);
       color: var(--action-tertiary-text-color-disabled);
+      border: var(--action-tertiary-stroke-disabled);
       cursor: not-allowed;
     }
-
 
     /* Warning
     ========================================= */
@@ -159,16 +167,19 @@ class muiButton extends HTMLElement {
     :host([variant="attention"]) button:hover {
       background: var(--action-attention-background-hover);
       color: var(--action-attention-text-color-hover);
+      border: var(--action-attention-stroke-hover); 
     }
 
     :host([variant="attention"]) button:focus {
       background: var(--action-attention-background-focus);
       color: var(--action-attention-text-color-focus);
+      border: var(--action-attention-stroke-focus); 
     }
 
     :host([variant="attention"]) button:disabled {
       background: var(--action-attention-background-disabled);
       color: var(--action-attention-text-color-disabled);
+      border: var(--action-attention-stroke-disabled); 
       cursor: not-allowed;
     }
 

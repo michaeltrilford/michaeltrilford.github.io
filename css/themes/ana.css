@@ -102,6 +102,9 @@ html[data-brand='ana'][data-theme='light'] {
   --feedback-attention-text: var(--ana-red-600);
 
   --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-600);
+  --action-primary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-600);
+  --action-primary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-600);
+  --action-primary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-600);
   --action-primary-background: var(--ana-blue-600);
   --action-primary-background-hover: var(--ana-blue-500);
   --action-primary-background-focus: var(--ana-blue-500);
@@ -112,6 +115,9 @@ html[data-brand='ana'][data-theme='light'] {
   --action-primary-text-color-disabled: var(--ana-white);
 
   --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-600);
+  --action-secondary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-600);
+  --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-600);
+  --action-secondary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-600);
   --action-secondary-background: var(--white-opacity-0);
   --action-secondary-background-hover: var(--ana-grey-100);
   --action-secondary-background-focus: var(--ana-grey-100);
@@ -122,6 +128,9 @@ html[data-brand='ana'][data-theme='light'] {
   --action-secondary-text-color-disabled: var(--ana-blue-600);
 
   --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-background: var(--white-opacity-0);
   --action-tertiary-background-hover: var(--ana-grey-100);
   --action-tertiary-background-focus: var(--ana-grey-100);
@@ -132,6 +141,9 @@ html[data-brand='ana'][data-theme='light'] {
   --action-tertiary-text-color-disabled: var(--ana-blue-600);
 
   --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-red-400);
+  --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--ana-red-400);
+  --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--ana-red-400);
+  --action-attention-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--ana-red-400);
   --action-attention-background: var(--ana-red-400);
   --action-attention-background-hover: var(--ana-red-500);
   --action-attention-background-focus: var(--ana-red-500);
@@ -227,6 +239,9 @@ html[data-brand='ana'][data-theme='dark'] {
   --feedback-attention-text: var(--ana-red-100);
 
   --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-500);
+  --action-primary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-500);
+  --action-primary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-500);
+  --action-primary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-500);
   --action-primary-background: var(--ana-blue-500);
   --action-primary-background-hover: var(--ana-blue-600);
   --action-primary-background-focus: var(--ana-blue-600);
@@ -237,6 +252,9 @@ html[data-brand='ana'][data-theme='dark'] {
   --action-primary-text-color-disabled: var(--ana-white);
 
   --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-300);
+  --action-secondary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-300);
+  --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-300);
+  --action-secondary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--ana-blue-300);
   --action-secondary-background: var(--white-opacity-0);
   --action-secondary-background-hover: var(--ana-grey-800);
   --action-secondary-background-focus: var(--ana-grey-800);
@@ -247,6 +265,9 @@ html[data-brand='ana'][data-theme='dark'] {
   --action-secondary-text-color-disabled: var(--ana-blue-300);
 
   --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-background: var(--white-opacity-0);
   --action-tertiary-background-hover: var(--ana-grey-800);
   --action-tertiary-background-focus: var(--ana-grey-800);
@@ -257,6 +278,9 @@ html[data-brand='ana'][data-theme='dark'] {
   --action-tertiary-text-color-disabled: var(--ana-blue-300);
 
   --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--ana-red-600);
+  --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--ana-red-600);
+  --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--ana-red-600);
+  --action-attention-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--ana-red-600);
   --action-attention-background: var(--ana-red-600);
   --action-attention-background-hover: var(--ana-red-700);
   --action-attention-background-focus: var(--ana-red-700);

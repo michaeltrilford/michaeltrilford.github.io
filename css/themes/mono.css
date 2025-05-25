@@ -62,6 +62,9 @@ html[data-brand='mono'][data-theme='light'] {
   --feedback-attention-text: var(--mono-black);
 
   --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-700);
+  --action-primary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-700);
+  --action-primary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-700);
+  --action-primary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-700);
   --action-primary-background: var(--mono-grey-700);
   --action-primary-background-hover: var(--mono-grey-900);
   --action-primary-background-focus: var(--mono-grey-900);
@@ -72,6 +75,9 @@ html[data-brand='mono'][data-theme='light'] {
   --action-primary-text-color-disabled: var(--mono-white);
 
   --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-700);
+  --action-secondary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-700);
+  --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-700);
+  --action-secondary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-700);
   --action-secondary-background: var(--white-opacity-0);
   --action-secondary-background-hover: var(--mono-grey-100);
   --action-secondary-background-focus: var(--mono-grey-100);
@@ -82,6 +88,9 @@ html[data-brand='mono'][data-theme='light'] {
   --action-secondary-text-color-disabled: var(--mono-grey-700);
 
   --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-tertiary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-tertiary-background: var(--white-opacity-0);
   --action-tertiary-background-hover: var(--mono-grey-100);
   --action-tertiary-background-focus: var(--mono-grey-100);
@@ -92,6 +101,9 @@ html[data-brand='mono'][data-theme='light'] {
   --action-tertiary-text-color-disabled: var(--mono-grey-700);
 
   --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--mono-black);
+  --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--mono-black);
+  --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--mono-black);
+  --action-attention-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--mono-black);
   --action-attention-background: var(--mono-black);
   --action-attention-background-hover: var(--mono-grey-900);
   --action-attention-background-focus: var(--mono-grey-900);
@@ -187,6 +199,9 @@ html[data-brand='mono'][data-theme='dark'] {
   --feedback-attention-text: var(--mono-white);
 
   --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-300);
+  --action-primary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-300);
+  --action-primary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-300);
+  --action-primary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-300);
   --action-primary-background: var(--mono-grey-300);
   --action-primary-background-hover: var(--mono-grey-400);
   --action-primary-background-focus: var(--mono-grey-400);
@@ -197,6 +212,9 @@ html[data-brand='mono'][data-theme='dark'] {
   --action-primary-text-color-disabled: var(--mono-black);
 
   --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-300);
+  --action-secondary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-300);
+  --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-300);
+  --action-secondary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--mono-grey-300);
   --action-secondary-background: var(--white-opacity-0);
   --action-secondary-background-hover: var(--mono-grey-800);
   --action-secondary-background-focus: var(--mono-grey-800);
@@ -207,6 +225,9 @@ html[data-brand='mono'][data-theme='dark'] {
   --action-secondary-text-color-disabled: var(--mono-grey-300);
 
   --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-background: var(--white-opacity-0);
   --action-tertiary-background-hover: var(--mono-grey-800);
   --action-tertiary-background-focus: var(--mono-grey-800);
@@ -217,6 +238,9 @@ html[data-brand='mono'][data-theme='dark'] {
   --action-tertiary-text-color-disabled: var(--mono-grey-300);
 
   --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--mono-white);
+  --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--mono-white);
+  --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--mono-white);
+  --action-attention-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--mono-white);
   --action-attention-background: var(--mono-white);
   --action-attention-background-hover: var(--mono-grey-300);
   --action-attention-background-focus: var(--mono-grey-300);

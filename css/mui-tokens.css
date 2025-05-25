@@ -254,6 +254,9 @@ html[data-theme='light'] {
   --feedback-attention-text: var(--red-900);
   /* Action - Primary (Button & Link) */
   --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-primary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-primary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-primary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-background: var(--grey-900);
   --action-primary-background-hover: var(--grey-1000);
   --action-primary-background-focus: var(--grey-1000);
@@ -264,6 +267,9 @@ html[data-theme='light'] {
   --action-primary-text-color-disabled: var(--grey-400);
   /* Action - Secondary (Button & Link) */
   --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--grey-800);
+  --action-secondary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--grey-800);
+  --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--grey-800);
+  --action-secondary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--grey-800);
   --action-secondary-background: var(--white-opacity-0);
   --action-secondary-background-hover: var(--grey-100);
   --action-secondary-background-focus: var(--grey-100);
@@ -274,6 +280,9 @@ html[data-theme='light'] {
   --action-secondary-text-color-disabled: var(--grey-400);
   /* Action - Tertiary (Button & Link) */
   --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
+  --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-background: var(--white-opacity-0);
   --action-tertiary-background-hover: var(--black-opacity-10);
   --action-tertiary-background-focus: var(--black-opacity-10);
@@ -284,6 +293,9 @@ html[data-theme='light'] {
   --action-tertiary-text-color-disabled: var(--grey-400);
   /* Action - Attention (Button & Link) */
   --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-attention-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-attention-background: var(--red-500);
   --action-attention-background-hover: var(--red-600);
   --action-attention-background-focus: var(--red-600);
@@ -412,6 +424,9 @@ html[data-theme='dark'] {
   --feedback-attention-text: var(--red-100);
   /* Action - Primary (Button & Link) */
   --action-primary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-primary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-primary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-primary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-background: var(--grey-200);
   --action-primary-background-hover: var(--grey-100);
   --action-primary-background-focus: var(--grey-100);
@@ -422,6 +437,9 @@ html[data-theme='dark'] {
   --action-primary-text-color-disabled: var(--grey-400);
   /* Action - Secondary (Button & Link) */
   --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--grey-200);
+  --action-secondary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--grey-200);
+  --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--grey-200);
+  --action-secondary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--grey-200);
   --action-secondary-background: var(--black-opacity-0);
   --action-secondary-background-hover: var(--grey-800);
   --action-secondary-background-focus: var(--grey-800);
@@ -432,6 +450,9 @@ html[data-theme='dark'] {
   --action-secondary-text-color-disabled: var(--grey-600);
   /* Action - Tertiary (Button & Link) */
   --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-tertiary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-tertiary-background: transparent;
   --action-tertiary-background-hover: var(--white-opacity-10);
   --action-tertiary-background-focus: var(--white-opacity-10);
@@ -442,6 +463,9 @@ html[data-theme='dark'] {
   --action-tertiary-text-color-disabled: var(--grey-600);
   /* Action - Attention (Button & Link) */
   --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
+  --action-attention-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-attention-background: var(--red-600);
   --action-attention-background-hover: var(--red-700);
   --action-attention-background-focus: var(--red-700);
