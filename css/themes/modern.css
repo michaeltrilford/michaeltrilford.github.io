@@ -168,7 +168,16 @@ html[data-brand='modern'][data-theme='light'] {
   --input-background: var(--red-50);
 
   /* Border */
-  --border-color: var(--grey-200);
+  --border-color: var(--black-opacity-20);
+
+  /* Surface */
+  --surface: var(--grey-200);
+  --surface-elevated-alpha: var(--white-opacity-50);
+  --surface-elevated-100: var(--white);
+  --surface-elevated-200: var(--grey-100);
+  --surface-recessed-alpha: var(--black-opacity-10);
+  --surface-recessed-100: var(--grey-300);
+  --surface-recessed-200: var(--grey-400);
 
   /* Switch */
   --switch-track-background: var(--grey-300);
@@ -280,7 +289,16 @@ html[data-brand='modern'][data-theme='dark'] {
   --input-background: var(--grey-800);
 
   /* Border */
-  --border-color: var(--grey-700);
+  --border-color: var(--white-opacity-20);
+
+  /* Surface */
+  --surface: var(--grey-800);
+  --surface-elevated-alpha: var(--white-opacity-10);
+  --surface-elevated-100: var(--grey-600);
+  --surface-elevated-200: var(--grey-700);
+  --surface-recessed-alpha: var(--black-opacity-30);
+  --surface-recessed-100: var(--grey-800);
+  --surface-recessed-200: var(--grey-900);
 
   /* Switch */
   --switch-track-background: var(--grey-300);

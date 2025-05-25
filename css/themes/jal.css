@@ -178,7 +178,16 @@ html[data-brand='jal'][data-theme='light'] {
   --input-background: var(--jal-white);
 
   /* Border */
-  --border-color: var(--jal-grey-200);
+  --border-color: var(--black-opacity-20);
+
+  /* Surface */
+  --surface: var(--jal-grey-200);
+  --surface-elevated-alpha: var(--white-opacity-50);
+  --surface-elevated-100: var(--white);
+  --surface-elevated-200: var(--jal-grey-100);
+  --surface-recessed-alpha: var(--black-opacity-10);
+  --surface-recessed-100: var(--jal-grey-300);
+  --surface-recessed-200: var(--jal-grey-400);
 
   /* Switch */
   --switch-track-background: var(--jal-grey-300);
@@ -292,7 +301,16 @@ html[data-brand='jal'][data-theme='dark'] {
   --input-background: var(--jal-grey-800);
 
   /* Border */
-  --border-color: var(--jal-grey-600);
+  --border-color: var(--white-opacity-20);
+
+  /* Surface */
+  --surface: var(--jal-grey-800);
+  --surface-elevated-alpha: var(--white-opacity-10);
+  --surface-elevated-100: var(--jal-grey-600);
+  --surface-elevated-200: var(--jal-grey-700);
+  --surface-recessed-alpha: var(--black-opacity-30);
+  --surface-recessed-100: var(--jal-grey-800);
+  --surface-recessed-200: var(--jal-grey-900);
 
   /* Switch */
   --switch-track-background: var(--jal-grey-500);
