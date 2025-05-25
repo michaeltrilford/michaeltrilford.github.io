@@ -12,7 +12,12 @@ class compAgentUI extends HTMLElement {
 
       <style>
         .canvas {
+          background: var(--surface);
           padding: var(--space-400);
+          margin-top: calc(var(--space-400) * -1);
+          margin-bottom: calc(var(--space-400) * -1);
+          margin-left: calc(var(--space-400) * -1);
+          margin-right: calc(var(--space-400) * -1);
         }
 
         mui-button::part(background) {
@@ -72,8 +77,13 @@ class compAgentUI extends HTMLElement {
     const AgentConversationReply = `
       <style>
         .conversation-background {
+          background: var(--surface);
           padding: var(--space-400);
           box-sizing: border-box;
+          margin-top: calc(var(--space-400) * -1);
+          margin-bottom: calc(var(--space-400) * -1);
+          margin-left: calc(var(--space-400) * -1);
+          margin-right: calc(var(--space-400) * -1);
         }
         .conversation-reply {
           background: var(--surface-elevated-alpha);

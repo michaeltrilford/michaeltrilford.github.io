@@ -8,6 +8,11 @@ class storyTokensSurface extends HTMLElement {
       .surface {
         background: var(--surface);
         box-sizing: border-box;
+        padding: var(--space-400);
+        margin-top: calc(var(--space-400) * -1);
+        margin-bottom: calc(var(--space-400) * -1);
+        margin-left: calc(var(--space-400) * -1);
+        margin-right: calc(var(--space-400) * -1);
       }
       .surface-elevated,
       .surface-recessed {
