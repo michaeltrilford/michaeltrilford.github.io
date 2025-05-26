@@ -50,7 +50,7 @@ class PaymentCard extends HTMLElement {
           padding: 24px;
           display: grid;
           grid-template-rows: 1fr auto;
-          font-family: AxLLCircular, Helvetica, Arial, sans-serif;
+          font-family: Helvetica, Arial, sans-serif;
           -webkit-font-smoothing: antialiased;
           font-size: 14px;
           box-shadow: 0 0px 8px rgb(0 0 0 / 12%), 0 2px 16px rgb(0 0 0 / 12%),
