@@ -1,11 +1,11 @@
 class muiIconAdd extends HTMLElement {
   static get observedAttributes() {
-    return ["size", "color", "variant"];
+    return ['size', 'color'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -13,49 +13,36 @@ class muiIconAdd extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (
-      (name === "size" || name === "color" || name === "variant") &&
-      oldValue !== newValue
-    ) {
+    if ((name === 'size' || name === 'color') && oldValue !== newValue) {
       this.render();
     }
   }
 
   render() {
-    const size = this.getAttribute("size") || "small"; // Default size
-    const rawColor = this.getAttribute("color"); // Raw color
-    const variant = this.getAttribute("variant"); // Variant name
+    const size = this.getAttribute('size') || 'small'; // Default size
+    const rawColor = this.getAttribute('color'); // Raw color
 
     // Color map for predefined color options
     const colorMap = {
-      default: "var(--icon-color-default)",
-      inverted: "var(--icon-color-inverted)",
-    };
-
-    // Variant-to-color map for variants
-    const variantColorMap = {
-      primary: "var(--icon-color-inverted)",
-      secondary: "var(--icon-color-default)",
-      tertiary: "var(--icon-color-default)",
-      attention: "var(--icon-color-inverted)",
+      default: 'var(--icon-color-default)',
+      inverted: 'var(--icon-color-inverted)',
     };
 
     // Resolve color based on the provided variant or color attribute
     let iconColor =
-      variantColorMap[variant] ||
-      colorMap[rawColor] ||
-      rawColor ||
-      "var(--icon-color-default)";
+      colorMap[rawColor] || rawColor || 'var(--icon-color-default)';
 
     // Map size to actual values
     const sizeMap = {
-      "x-small": "1.6rem",
-      small: "2.4rem",
-      medium: "3.6rem",
-      large: "4.8rem",
+      'x-small': '1.6rem',
+      small: '2.4rem',
+      medium: '3.6rem',
+      large: '4.8rem',
     };
 
     const sizeStyleMap = sizeMap[size] || sizeMap.small;
+
+    this.classList.add('mui-icon');
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -78,9 +65,9 @@ class muiIconAdd extends HTMLElement {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 36 36"
       >
-        <path
-          d="M3 18.009c0-1.748 1.422-3.17 3.152-3.17h8.687v-8.67A3.173 3.173 0 0 1 18.009 3c1.73 0 3.152 1.422 3.152 3.17v8.669h8.686c1.731 0 3.153 1.422 3.153 3.17a3.155 3.155 0 0 1-3.152 3.152H21.16v8.686A3.155 3.155 0 0 1 18.01 33a3.16 3.16 0 0 1-3.17-3.152V21.16H6.152A3.155 3.155 0 0 1 3 18.01"
-        ></path>
+      <path
+        d="M6 18.507a2.536 2.536 0 0 1 2.522-2.536h6.95V9.036A2.54 2.54 0 0 1 18.006 6.5a2.536 2.536 0 0 1 2.522 2.536v6.935h6.949A2.536 2.536 0 0 1 30 18.507a2.524 2.524 0 0 1-2.522 2.522h-6.95v6.949a2.524 2.524 0 0 1-2.521 2.522 2.527 2.527 0 0 1-2.536-2.522v-6.95H8.522A2.524 2.524 0 0 1 6 18.508"
+      ></path>
       </svg>
 
 
@@ -88,4 +75,4 @@ class muiIconAdd extends HTMLElement {
   }
 }
 
-customElements.define("mui-icon-add", muiIconAdd);
+customElements.define('mui-icon-add', muiIconAdd);

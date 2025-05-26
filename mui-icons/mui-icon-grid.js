@@ -1,11 +1,11 @@
 class muiIconGrid extends HTMLElement {
   static get observedAttributes() {
-    return ["size", "color", "variant"];
+    return ['size', 'color'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -13,49 +13,36 @@ class muiIconGrid extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (
-      (name === "size" || name === "color" || name === "variant") &&
-      oldValue !== newValue
-    ) {
+    if ((name === 'size' || name === 'color') && oldValue !== newValue) {
       this.render();
     }
   }
 
   render() {
-    const size = this.getAttribute("size") || "small"; // Default size
-    const rawColor = this.getAttribute("color"); // Raw color
-    const variant = this.getAttribute("variant"); // Variant name
+    const size = this.getAttribute('size') || 'small'; // Default size
+    const rawColor = this.getAttribute('color'); // Raw color
 
     // Color map for predefined color options
     const colorMap = {
-      default: "var(--icon-color-default)",
-      inverted: "var(--icon-color-inverted)",
-    };
-
-    // Variant-to-color map for variants
-    const variantColorMap = {
-      primary: "var(--icon-color-inverted)",
-      secondary: "var(--icon-color-default)",
-      tertiary: "var(--icon-color-default)",
-      attention: "var(--icon-color-inverted)",
+      default: 'var(--icon-color-default)',
+      inverted: 'var(--icon-color-inverted)',
     };
 
     // Resolve color based on the provided variant or color attribute
     let iconColor =
-      variantColorMap[variant] ||
-      colorMap[rawColor] ||
-      rawColor ||
-      "var(--icon-color-default)";
+      colorMap[rawColor] || rawColor || 'var(--icon-color-default)';
 
     // Map size to actual values
     const sizeMap = {
-      "x-small": "1.6rem",
-      small: "2.4rem",
-      medium: "3.6rem",
-      large: "4.8rem",
+      'x-small': '1.6rem',
+      small: '2.4rem',
+      medium: '3.6rem',
+      large: '4.8rem',
     };
 
     const sizeStyleMap = sizeMap[size] || sizeMap.small;
+
+    this.classList.add('mui-icon');
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -79,7 +66,7 @@ class muiIconGrid extends HTMLElement {
         viewBox="0 0 36 36"
       >
         <path
-          d="M5.737 12.102C4.045 12.102 3 11.06 3 9.34V6.263C3 4.543 4.045 3.5 5.737 3.5h3.252c1.693 0 2.737 1.043 2.737 2.763V9.34c0 1.72-1.044 2.763-2.737 2.763zm10.63 0c-1.692 0-2.737-1.042-2.737-2.763V6.263c0-1.72 1.045-2.763 2.737-2.763h3.253c1.692 0 2.736 1.043 2.736 2.763V9.34c0 1.72-1.044 2.763-2.736 2.763zm10.644 0c-1.693 0-2.737-1.042-2.737-2.763V6.263c0-1.72 1.044-2.763 2.737-2.763h3.252C31.955 3.5 33 4.543 33 6.263V9.34c0 1.72-1.044 2.763-2.737 2.763zM5.737 22.308C4.045 22.308 3 21.252 3 19.544v-3.088c0-1.708 1.045-2.764 2.737-2.764h3.252c1.693 0 2.737 1.056 2.737 2.764v3.089c0 1.707-1.044 2.763-2.737 2.763zm10.63 0c-1.692 0-2.737-1.056-2.737-2.764v-3.088c0-1.708 1.045-2.764 2.737-2.764h3.253c1.692 0 2.736 1.056 2.736 2.764v3.089c0 1.707-1.044 2.763-2.736 2.763zm10.644 0c-1.693 0-2.737-1.056-2.737-2.764v-3.088c0-1.708 1.044-2.764 2.737-2.764h3.252c1.692 0 2.737 1.056 2.737 2.764v3.089c0 1.707-1.044 2.763-2.737 2.763zM5.737 32.5C4.045 32.5 3 31.444 3 29.737V26.66c0-1.72 1.045-2.776 2.737-2.776h3.252c1.693 0 2.737 1.055 2.737 2.776v3.076c0 1.707-1.044 2.763-2.737 2.763zm10.63 0c-1.692 0-2.737-1.056-2.737-2.763V26.66c0-1.72 1.045-2.776 2.737-2.776h3.253c1.692 0 2.736 1.055 2.736 2.776v3.076c0 1.707-1.044 2.763-2.736 2.763zm10.644 0c-1.693 0-2.737-1.056-2.737-2.763V26.66c0-1.72 1.044-2.776 2.737-2.776h3.252c1.692 0 2.737 1.055 2.737 2.776v3.076c0 1.707-1.044 2.763-2.737 2.763z"
+          d="M7.372 13.212C5.905 13.212 5 12.278 5 10.735V7.977C5 6.435 5.905 5.5 7.372 5.5h2.819c1.467 0 2.372.935 2.372 2.477v2.758c0 1.543-.905 2.477-2.372 2.477zm9.213 0c-1.467 0-2.372-.934-2.372-2.477V7.977c0-1.542.905-2.477 2.372-2.477h2.819c1.466 0 2.372.935 2.372 2.477v2.758c0 1.543-.906 2.477-2.372 2.477zm9.224 0c-1.467 0-2.372-.934-2.372-2.477V7.977c0-1.542.905-2.477 2.372-2.477h2.819C30.095 5.5 31 6.435 31 7.977v2.758c0 1.543-.905 2.477-2.372 2.477zm-18.437 9.15C5.905 22.362 5 21.416 5 19.885v-2.77c0-1.53.905-2.477 2.372-2.477h2.819c1.467 0 2.372.947 2.372 2.477v2.77c0 1.53-.905 2.477-2.372 2.477zm9.213 0c-1.467 0-2.372-.946-2.372-2.477v-2.77c0-1.53.905-2.477 2.372-2.477h2.819c1.466 0 2.372.947 2.372 2.477v2.77c0 1.53-.906 2.477-2.372 2.477zm9.224 0c-1.467 0-2.372-.946-2.372-2.477v-2.77c0-1.53.905-2.477 2.372-2.477h2.819c1.467 0 2.372.947 2.372 2.477v2.77c0 1.53-.905 2.477-2.372 2.477zM7.372 31.5C5.905 31.5 5 30.553 5 29.023v-2.758c0-1.543.905-2.489 2.372-2.489h2.819c1.467 0 2.372.947 2.372 2.489v2.758c0 1.53-.905 2.477-2.372 2.477zm9.213 0c-1.467 0-2.372-.947-2.372-2.477v-2.758c0-1.543.905-2.489 2.372-2.489h2.819c1.466 0 2.372.947 2.372 2.489v2.758c0 1.53-.906 2.477-2.372 2.477zm9.224 0c-1.467 0-2.372-.947-2.372-2.477v-2.758c0-1.543.905-2.489 2.372-2.489h2.819c1.467 0 2.372.947 2.372 2.489v2.758c0 1.53-.905 2.477-2.372 2.477z"
         ></path>
       </svg>
 
@@ -87,4 +74,4 @@ class muiIconGrid extends HTMLElement {
   }
 }
 
-customElements.define("mui-icon-grid", muiIconGrid);
+customElements.define('mui-icon-grid', muiIconGrid);

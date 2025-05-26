@@ -1,6 +1,6 @@
 class muiIconStop extends HTMLElement {
   static get observedAttributes() {
-    return ['size', 'color', 'variant'];
+    return ['size', 'color'];
   }
 
   constructor() {
@@ -13,10 +13,7 @@ class muiIconStop extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (
-      (name === 'size' || name === 'color' || name === 'variant') &&
-      oldValue !== newValue
-    ) {
+    if ((name === 'size' || name === 'color') && oldValue !== newValue) {
       this.render();
     }
   }
@@ -24,7 +21,6 @@ class muiIconStop extends HTMLElement {
   render() {
     const size = this.getAttribute('size') || 'small'; // Default size
     const rawColor = this.getAttribute('color'); // Raw color
-    const variant = this.getAttribute('variant'); // Variant name
 
     // Color map for predefined color options
     const colorMap = {
@@ -32,20 +28,9 @@ class muiIconStop extends HTMLElement {
       inverted: 'var(--icon-color-inverted)',
     };
 
-    // Variant-to-color map for variants
-    const variantColorMap = {
-      primary: 'var(--icon-color-inverted)',
-      secondary: 'var(--icon-color-default)',
-      tertiary: 'var(--icon-color-default)',
-      attention: 'var(--icon-color-inverted)',
-    };
-
     // Resolve color based on the provided variant or color attribute
     let iconColor =
-      variantColorMap[variant] ||
-      colorMap[rawColor] ||
-      rawColor ||
-      'var(--icon-color-default)';
+      colorMap[rawColor] || rawColor || 'var(--icon-color-default)';
 
     // Map size to actual values
     const sizeMap = {
@@ -56,6 +41,8 @@ class muiIconStop extends HTMLElement {
     };
 
     const sizeStyleMap = sizeMap[size] || sizeMap.small;
+
+    this.classList.add('mui-icon');
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -79,7 +66,7 @@ class muiIconStop extends HTMLElement {
         viewBox="0 0 36 36"
         >
         <path
-          d="M3 29.066V7.934C3 5.25 4.869 3.5 7.774 3.5h20.453C31.114 3.5 33 5.25 33 7.934v21.132c0 2.701-1.886 4.434-4.773 4.434H7.774C4.868 33.5 3 31.767 3 29.066"
+          d="M17.992 35.5C8.65 35.5 1 27.85 1 18.508S8.65 1.5 17.992 1.5 35 9.166 35 18.508 27.334 35.5 17.992 35.5m0-4.932c6.686 0 12.06-5.39 12.06-12.06 0-6.686-5.39-12.06-12.06-12.06s-12.06 5.374-12.06 12.06c0 6.67 5.39 12.06 12.06 12.06m-3.92-6.37c-1.09 0-1.802-.648-1.802-1.675v-8.077c0-1.012.711-1.66 1.802-1.66h7.824c1.091 0 1.802.648 1.802 1.66v8.077c0 1.027-.711 1.675-1.802 1.675z"
         ></path>
       </svg>
 

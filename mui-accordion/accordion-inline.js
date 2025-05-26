@@ -34,7 +34,6 @@ class muiAccordionInline extends HTMLElement {
       mui-icon-right-chevron {
         margin-right: var(--space-100);
         transition: var(--speed-200) ease-in-out;
-        fill: var(--grey-700);
       }
 
       mui-icon-right-chevron[open] {

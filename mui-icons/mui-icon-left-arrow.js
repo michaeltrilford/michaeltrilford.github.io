@@ -1,11 +1,11 @@
 class muiIconLeftArrow extends HTMLElement {
   static get observedAttributes() {
-    return ["size", "color", "variant"];
+    return ['size', 'color'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -13,49 +13,36 @@ class muiIconLeftArrow extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (
-      (name === "size" || name === "color" || name === "variant") &&
-      oldValue !== newValue
-    ) {
+    if ((name === 'size' || name === 'color') && oldValue !== newValue) {
       this.render();
     }
   }
 
   render() {
-    const size = this.getAttribute("size") || "small"; // Default size
-    const rawColor = this.getAttribute("color"); // Raw color
-    const variant = this.getAttribute("variant"); // Variant name
+    const size = this.getAttribute('size') || 'small'; // Default size
+    const rawColor = this.getAttribute('color'); // Raw color
 
     // Color map for predefined color options
     const colorMap = {
-      default: "var(--icon-color-default)",
-      inverted: "var(--icon-color-inverted)",
-    };
-
-    // Variant-to-color map for variants
-    const variantColorMap = {
-      primary: "var(--icon-color-inverted)",
-      secondary: "var(--icon-color-default)",
-      tertiary: "var(--icon-color-default)",
-      attention: "var(--icon-color-inverted)",
+      default: 'var(--icon-color-default)',
+      inverted: 'var(--icon-color-inverted)',
     };
 
     // Resolve color based on the provided variant or color attribute
     let iconColor =
-      variantColorMap[variant] ||
-      colorMap[rawColor] ||
-      rawColor ||
-      "var(--icon-color-default)";
+      colorMap[rawColor] || rawColor || 'var(--icon-color-default)';
 
     // Map size to actual values
     const sizeMap = {
-      "x-small": "1.6rem",
-      small: "2.4rem",
-      medium: "3.6rem",
-      large: "4.8rem",
+      'x-small': '1.6rem',
+      small: '2.4rem',
+      medium: '3.6rem',
+      large: '4.8rem',
     };
 
     const sizeStyleMap = sizeMap[size] || sizeMap.small;
+
+    this.classList.add('mui-icon');
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -79,7 +66,7 @@ class muiIconLeftArrow extends HTMLElement {
         viewBox="0 0 36 36"
       >
         <path
-          d="M3 18c0-.78.332-1.61.863-2.125L14.555 5.184c.597-.598 1.311-.897 2.009-.897 1.71 0 2.855 1.179 2.855 2.723 0 .896-.399 1.56-.946 2.075l-3.72 3.719-2.688 2.49 3.436-.183h14.46C31.789 15.111 33 16.273 33 18c0 1.743-1.212 2.905-3.038 2.905H15.5l-3.436-.182 2.689 2.49 3.719 3.702c.547.515.946 1.179.946 2.075 0 1.544-1.146 2.723-2.855 2.723-.698 0-1.412-.316-2.01-.897L3.865 20.142C3.331 19.627 3 18.78 3 18"
+          d="M5 18.5c0-.683.288-1.41.748-1.86l9.266-9.355c.518-.524 1.137-.785 1.741-.785 1.482 0 2.475 1.031 2.475 2.383 0 .784-.346 1.365-.82 1.816l-3.223 3.254-2.331 2.179 2.978-.16h12.533C29.95 15.972 31 16.99 31 18.5c0 1.525-1.05 2.542-2.633 2.542H15.834l-2.978-.16 2.33 2.18 3.224 3.24c.474.45.82 1.03.82 1.815 0 1.351-.993 2.383-2.475 2.383-.604 0-1.223-.276-1.74-.785l-9.267-9.34C5.288 19.923 5 19.182 5 18.5"
         ></path>
       </svg>
 
@@ -88,4 +75,4 @@ class muiIconLeftArrow extends HTMLElement {
   }
 }
 
-customElements.define("mui-icon-left-arrow", muiIconLeftArrow);
+customElements.define('mui-icon-left-arrow', muiIconLeftArrow);

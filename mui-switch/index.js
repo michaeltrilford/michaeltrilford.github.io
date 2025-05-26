@@ -170,11 +170,6 @@ class MuiSwitch extends HTMLElement {
           fill: var(--switch-icon);
         }
 
-        ::slotted([slot="on-icon"]),
-        ::slotted([slot="off-icon"]) {
-          aria-hidden: true;
-        }
-
         :host(.disabled) {
           cursor: not-allowed;
         }

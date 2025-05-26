@@ -31,12 +31,11 @@ class muiAccordionBlock extends HTMLElement {
       }
 
       .accordion-summary:hover mui-icon-right-chevron {
-        background: rgba(0 0 0 / 5%);
+        background: var(--surface-elevated-200);
       }
 
       mui-icon-right-chevron {
         transition: transform var(--speed-200) ease-in-out;
-        fill: var(--grey-700);
         transform: rotate(90deg);
         padding: var(--space-200);
         border-radius: var(--radius-200);
@@ -125,7 +124,7 @@ class muiAccordionBlock extends HTMLElement {
       aria-controls="${this.accordionId}"
     >
       <mui-heading size="6" level="${headingLevel}">${headingText}</mui-heading>
-      <mui-icon-right-chevron size="x-small"></mui-icon-right-chevron>
+      <mui-icon-right-chevron size="small"></mui-icon-right-chevron>
     </div>
 
     <div id="${this.accordionId}" class="accordion-detail">

@@ -121,9 +121,9 @@ html[data-brand='jal'][data-theme='light'] {
   --action-primary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-background: var(--jal-red-500);
-  --action-primary-background-hover: var(--brand-gold-500);
-  --action-primary-background-focus: var(--brand-gold-500);
-  --action-primary-background-disabled: var(--jal-red-800);
+  --action-primary-background-hover: var(--jal-red-400);
+  --action-primary-background-focus: var(--jal-red-400);
+  --action-primary-background-disabled: var(--jal-red-400);
   --action-primary-text-color: var(--jal-white);
   --action-primary-text-color-hover: var(--jal-white);
   --action-primary-text-color-focus: var(--jal-white);
@@ -134,9 +134,9 @@ html[data-brand='jal'][data-theme='light'] {
   --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-300);
   --action-secondary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-300);
   --action-secondary-background: var(--white-opacity-0);
-  --action-secondary-background-hover: var(--jal-grey-100);
-  --action-secondary-background-focus: var(--jal-grey-100);
-  --action-secondary-background-disabled: var(--jal-grey-600);
+  --action-secondary-background-hover: var(--white-opacity-40);
+  --action-secondary-background-focus: var(--white-opacity-40);
+  --action-secondary-background-disabled: var(--white-opacity-40);
   --action-secondary-text-color: var(--jal-red-300);
   --action-secondary-text-color-hover: var(--jal-red-300);
   --action-secondary-text-color-focus: var(--jal-red-300);
@@ -147,22 +147,22 @@ html[data-brand='jal'][data-theme='light'] {
   --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-background: var(--white-opacity-0);
-  --action-tertiary-background-hover: var(--jal-grey-100);
-  --action-tertiary-background-focus: var(--jal-grey-100);
-  --action-tertiary-background-disabled: var(--jal-grey-600);
+  --action-tertiary-background-hover: var(--white-opacity-40);
+  --action-tertiary-background-focus: var(--white-opacity-40);
+  --action-tertiary-background-disabled: var(--white-opacity-40);
   --action-tertiary-text-color: var(--jal-red-300);
   --action-tertiary-text-color-hover: var(--jal-red-300);
   --action-tertiary-text-color-focus: var(--jal-red-300);
   --action-tertiary-text-color-disabled: var(--jal-red-300);
 
-  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-400);
-  --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-400);
-  --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-400);
-  --action-attention-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-400);
-  --action-attention-background: var(--jal-red-500);
-  --action-attention-background-hover: var(--jal-red-600);
-  --action-attention-background-focus: var(--jal-red-600);
-  --action-attention-background-disabled: var(--jal-red-100);
+  --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-500);
+  --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-700);
+  --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-700);
+  --action-attention-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-700);
+  --action-attention-background: var(--jal-red-300);
+  --action-attention-background-hover: var(--jal-red-500);
+  --action-attention-background-focus: var(--jal-red-500);
+  --action-attention-background-disabled: var(--jal-red-500);
   --action-attention-text-color: var(--jal-white);
   --action-attention-text-color-hover: var(--jal-white);
   --action-attention-text-color-focus: var(--jal-white);
@@ -256,9 +256,9 @@ html[data-brand='jal'][data-theme='dark'] {
   --action-primary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-background: var(--jal-red-300);
-  --action-primary-background-hover: var(--brand-gold-300);
-  --action-primary-background-focus: var(--brand-gold-300);
-  --action-primary-background-disabled: var(--jal-red-100);
+  --action-primary-background-hover: var(--jal-red-400);
+  --action-primary-background-focus: var(--jal-red-400);
+  --action-primary-background-disabled: var(--jal-red-400);
   --action-primary-text-color: var(--jal-white);
   --action-primary-text-color-hover: var(--jal-white);
   --action-primary-text-color-focus: var(--jal-white);
@@ -269,9 +269,9 @@ html[data-brand='jal'][data-theme='dark'] {
   --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-200);
   --action-secondary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--jal-red-200);
   --action-secondary-background: var(--white-opacity-0);
-  --action-secondary-background-hover: var(--jal-black);
-  --action-secondary-background-focus: var(--jal-black);
-  --action-secondary-background-disabled: var(--jal-grey-200);
+  --action-secondary-background-hover: var(--black-opacity-20);
+  --action-secondary-background-focus: var(--black-opacity-20);
+  --action-secondary-background-disabled: var(--black-opacity-20);
   --action-secondary-text-color: var(--jal-red-200);
   --action-secondary-text-color-hover: var(--jal-red-200);
   --action-secondary-text-color-focus: var(--jal-red-200);
@@ -282,9 +282,9 @@ html[data-brand='jal'][data-theme='dark'] {
   --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-background: var(--white-opacity-0);
-  --action-tertiary-background-hover: var(--jal-black);
-  --action-tertiary-background-focus: var(--jal-black);
-  --action-tertiary-background-disabled: var(--jal-grey-300);
+  --action-tertiary-background-hover: var(--black-opacity-20);
+  --action-tertiary-background-focus: var(--black-opacity-20);
+  --action-tertiary-background-disabled: var(--black-opacity-20);
   --action-tertiary-text-color: var(--jal-red-200);
   --action-tertiary-text-color-hover: var(--jal-red-200);
   --action-tertiary-text-color-focus: var(--jal-red-200);
@@ -325,16 +325,16 @@ html[data-brand='jal'][data-theme='dark'] {
   --input-background: var(--jal-grey-800);
 
   /* Border */
-  --border-color: var(--white-opacity-20);
+  --border-color: var(--white-opacity-10);
 
   /* Surface */
-  --surface: var(--jal-grey-800);
+  --surface: var(--jal-grey-900);
   --surface-elevated-alpha: var(--white-opacity-10);
-  --surface-elevated-100: var(--jal-grey-600);
-  --surface-elevated-200: var(--jal-grey-700);
+  --surface-elevated-100: var(--jal-grey-700);
+  --surface-elevated-200: var(--jal-grey-800);
   --surface-recessed-alpha: var(--black-opacity-30);
-  --surface-recessed-100: var(--jal-grey-800);
-  --surface-recessed-200: var(--jal-grey-900);
+  --surface-recessed-100: var(--jal-grey-900);
+  --surface-recessed-200: var(--jal-grey-1000);
 
   /* Switch */
   --switch-track-background: var(--jal-grey-500);

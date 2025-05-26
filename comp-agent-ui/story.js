@@ -20,14 +20,6 @@ class compAgentUI extends HTMLElement {
           margin-right: calc(var(--space-400) * -1);
         }
 
-        mui-button::part(background) {
-          background: transparent;
-        }
-          
-        mui-button::part(background):hover {
-          background: var(--surface-recessed-alpha);
-        }
-
         .prompt-input { 
           padding: var(--space-400);
           padding-bottom: var(--space-200);
@@ -49,24 +41,15 @@ class compAgentUI extends HTMLElement {
           <mui-h-stack class="prompt-toolbar" space="var(--space-200)">
             <mui-h-stack space="var(--space-000)">
               <mui-button variant="tertiary" icon-only>
-                <mui-icon-add
-                  variant="tertiary"
-                  size="x-small">
-                </mui-icon-add>
+                <mui-icon-add></mui-icon-add>
               </mui-button>
               <mui-button variant="tertiary" icon-only>
-                <mui-icon-grid
-                  variant="tertiary"
-                  size="x-small">
-                </mui-icon-grid>
+                <mui-icon-globe></mui-icon-globe>
               </mui-button>
             </mui-h-stack>
             <mui-h-stack space="var(--space-200)">
               <mui-button variant="tertiary" icon-only>
-                <mui-icon-stop
-                  variant="tertiary"
-                  size="x-small">
-                </mui-icon-stop>
+                <mui-icon-stop></mui-icon-stop>
               </mui-button>
             </mui-h-stack>
           </mui-h-stack>

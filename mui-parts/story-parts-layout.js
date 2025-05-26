@@ -16,7 +16,7 @@ class storyPartsLayout extends HTMLElement {
         >
         <mui-v-stack space="var(--space-700)">
 
-          <story-card title="Display">
+          <spec-card title="Display">
             <story-part-slat slot="body" token="part(display)" usage="Links, Buttons, Stacks, Body" output="Defines the display type of the element." ></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(display) {
@@ -25,9 +25,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Flex">
+          <spec-card title="Flex">
             <story-part-slat slot="body" token="part(flex)" usage="Links, Buttons, Stacks, Body" output="..."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(flex) {
@@ -36,9 +36,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Flex Direction">
+          <spec-card title="Flex Direction">
             <story-part-slat slot="body" token="part(flex-direction)" usage="Links, Buttons, Stacks, Body" output="..."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(flex-direction) {
@@ -47,9 +47,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Flex Wrap">
+          <spec-card title="Flex Wrap">
             <story-part-slat slot="body" token="part(flex-wrap)" usage="Links, Buttons, Stacks, Body" output="..."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(flex-wrap) {
@@ -58,9 +58,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Justify Content">
+          <spec-card title="Justify Content">
             <story-part-slat slot="body" token="part(justify-content)" usage="Links, Buttons, Stacks, Body" output="..."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(justify-content) {
@@ -69,9 +69,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Align Items">
+          <spec-card title="Align Items">
             <story-part-slat slot="body" token="part(align-items)" usage="Links, Buttons, Stacks, Body" output="Defines the line-height of the element."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(align-items) {
@@ -80,9 +80,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Align Content">
+          <spec-card title="Align Content">
             <story-part-slat slot="body" token="part(align-content)" usage="Links, Buttons, Stacks, Body" output="Defines the case of the element."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(align-content) {
@@ -91,9 +91,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Align Self">
+          <spec-card title="Align Self">
             <story-part-slat slot="body" token="part(align-self)" usage="Links, Buttons, Stacks, Body" output="Controls the text decoration style (e.g., underline, none)."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(align-self) {
@@ -103,9 +103,9 @@ class storyPartsLayout extends HTMLElement {
               }
               <br />
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Grid Template Columns">
+          <spec-card title="Grid Template Columns">
             <story-part-slat slot="body" token="part(grid-template-columns)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(grid-template-columns) {
@@ -114,10 +114,10 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
 
-          <story-card title="Grid Template Rows">
+          <spec-card title="Grid Template Rows">
             <story-part-slat slot="body" token="part(grid-template-rows)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the element."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(grid-template-rows) {
@@ -126,10 +126,10 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
 
-          <story-card title="Grid Column">
+          <spec-card title="Grid Column">
             <story-part-slat slot="body" token="part(grid-column)" usage="Links, Buttons, Stacks, Body" output="grid-column defines a grid item’s horizontal position and span within a CSS Grid layout. It specifies which columns the item starts and ends on."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(grid-column) {
@@ -138,9 +138,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Grid Row">
+          <spec-card title="Grid Row">
             <story-part-slat slot="body" token="part(grid-row)" usage="Links, Buttons, Stacks, Body" output="grid-row defines a grid item’s vertical position and span within a CSS Grid layout. It sets which rows the item starts and ends on."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(grid-row) {
@@ -149,9 +149,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Place Items">
+          <spec-card title="Place Items">
             <story-part-slat slot="body" token="part(place-items)" usage="Links, Buttons, Stacks, Body" output="place-items sets how items are aligned inside their grid or flex container both vertically and horizontally."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(place-items) {
@@ -160,9 +160,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Place Content">
+          <spec-card title="Place Content">
             <story-part-slat slot="body" token="part(place-content)" usage="Links, Buttons, Stacks, Body" output="place-content sets how grid content is aligned vertically and horizontally."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(place-content) {
@@ -171,9 +171,9 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Text Align">
+          <spec-card title="Text Align">
             <story-part-slat slot="body" token="part(text-align)" usage="Links, Buttons, Stacks, Body" output="Defines the horizontal alignment of the text."></story-part-slat>
             <mui-code slot="footer">
               mui-v-stack::part(text-align) {
@@ -182,7 +182,7 @@ class storyPartsLayout extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
         </mui-v-stack>
 

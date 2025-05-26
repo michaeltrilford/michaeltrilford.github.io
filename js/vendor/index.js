@@ -141,6 +141,7 @@ const MuiCompArray = [
   'mui-icons/mui-icon-close.js',
   'mui-icons/mui-icon-grid.js',
   'mui-icons/mui-icon-menu.js',
+  'mui-icons/mui-icon-globe.js',
   'mui-icons/mui-icon-left-arrow.js',
   'mui-icons/mui-icon-up-chevron.js',
   'mui-icons/mui-icon-right-chevron.js',

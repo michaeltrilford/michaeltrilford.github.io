@@ -166,7 +166,7 @@ class appNavbar extends HTMLElement {
       </app-navbar-menu>
 
       <app-navbar-toggle>
-        <mui-icon-toggle color="var(--app-nav-accent)" rotate>
+        <mui-icon-toggle variant="tertiary" rotate>
           <mui-icon-menu slot="start"></mui-icon-menu>
           <mui-icon-close slot="end"></mui-icon-close>
         </mui-icon-toggle>

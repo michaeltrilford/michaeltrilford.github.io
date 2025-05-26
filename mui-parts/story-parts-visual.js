@@ -16,7 +16,7 @@ class storyPartsVisual extends HTMLElement {
         >
         <mui-v-stack space="var(--space-700)">
 
-          <story-card title="Background">
+          <spec-card title="Background">
             <story-part-slat slot="body" token="part(background)" usage="Links, Buttons, Select" output="Defines the background of the element." ></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(background) {
@@ -25,9 +25,9 @@ class storyPartsVisual extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Border">
+          <spec-card title="Border">
             <story-part-slat slot="body" token="part(border)" usage="Links, Buttons, Select" output="Defines the border of the element."></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(border) {
@@ -39,9 +39,9 @@ class storyPartsVisual extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Border Radius">
+          <spec-card title="Border Radius">
             <story-part-slat slot="body" token="part(border-radius)" usage="Links, Buttons, Select" output="Defines the border radius of the element."></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(border-radius) {
@@ -50,9 +50,9 @@ class storyPartsVisual extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Box Shadow">
+          <spec-card title="Box Shadow">
             <story-part-slat slot="body" token="part(box-shadow)" usage="Links, Buttons, Select" output="Defines the box-shadow of the element."></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(box-shadow) {
@@ -61,9 +61,9 @@ class storyPartsVisual extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Opacity">
+          <spec-card title="Opacity">
             <story-part-slat slot="body" token="part(opacity)" usage="Links, Buttons, Select" output="Defines the opacity of the element."></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(opacity) {
@@ -72,9 +72,9 @@ class storyPartsVisual extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Transition">
+          <spec-card title="Transition">
             <story-part-slat slot="body" token="part(transition)" usage="Links, Buttons, Select" output="Defines the transition of the element when animation is used."></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(transition) {
@@ -83,9 +83,9 @@ class storyPartsVisual extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
-          <story-card title="Outline">
+          <spec-card title="Outline">
             <story-part-slat slot="body" token="part(outline)" usage="Links, Buttons, Select" output="Defines the outline of the element, typically for focus states."></story-part-slat>
             <mui-code slot="footer">
               mui-link::part(outline) {
@@ -94,7 +94,7 @@ class storyPartsVisual extends HTMLElement {
               <br />
               }
             </mui-code>
-          </story-card>
+          </spec-card>
 
         </mui-v-stack>
 

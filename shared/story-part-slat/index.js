@@ -1,18 +1,24 @@
 class storyPartSlat extends HTMLElement {
   static get observedAttributes() {
-    return ["token", "output", "usage"];
+    return ['token', 'output', 'usage'];
   }
 
   constructor() {
     super();
 
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const styles = `
       :host { 
         display: block;
-        padding: var(--space-300);
+        padding: var(--space-500) var(--space-500);
         border-bottom: var(--border-thin);
+      }
+
+      @media (min-width: 768px) {
+        :host {
+          padding: var(--space-500) var(--space-600);
+        }
       }
 
       :host(:last-of-type) { 
@@ -29,18 +35,18 @@ class storyPartSlat extends HTMLElement {
 
     `;
 
-    const usageAttr = this.getAttribute("usage") || "";
+    const usageAttr = this.getAttribute('usage') || '';
     const usageItems = usageAttr
-      .split(",")
+      .split(',')
       .map((item) => item.trim())
       .filter((item) => item.length > 0);
 
     const usageLinks = usageItems
       .map((label) => {
-        const url = `#/${label.toLowerCase().replace(/\s+/g, "")}`;
+        const url = `#/${label.toLowerCase().replace(/\s+/g, '')}`;
         return `<mui-link size="x-small" weight="bold" href="${url}">${label}</mui-link>`;
       })
-      .join("");
+      .join('');
 
     shadowRoot.innerHTML = `
       <style>${styles}</style>
@@ -48,11 +54,11 @@ class storyPartSlat extends HTMLElement {
       <mui-v-stack space="var(--space-100)">
 
         <mui-body size="x-small">
-          <story-code-snippet>${this.getAttribute("token")}</story-code-snippet>
+          <story-code-snippet>${this.getAttribute('token')}</story-code-snippet>
         </mui-body>
 
         <mui-body size="x-small">
-          ${this.getAttribute("output")}
+          ${this.getAttribute('output')}
         </mui-body>
 
         <mui-h-stack space="var(--space-100)">
@@ -66,4 +72,4 @@ class storyPartSlat extends HTMLElement {
   }
 }
 
-customElements.define("story-part-slat", storyPartSlat);
+customElements.define('story-part-slat', storyPartSlat);

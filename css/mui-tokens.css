@@ -445,8 +445,8 @@ html[data-theme='dark'] {
   --action-secondary-background-focus: var(--grey-800);
   --action-secondary-background-disabled: var(--grey-900);
   --action-secondary-text-color: var(--grey-100);
-  --action-secondary-text-color-hover: var(--grey-50);
-  --action-secondary-text-color-focus: var(--grey-50);
+  --action-secondary-text-color-hover: var(--grey-100);
+  --action-secondary-text-color-focus: var(--grey-100);
   --action-secondary-text-color-disabled: var(--grey-600);
   /* Action - Tertiary (Button & Link) */
   --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
@@ -458,8 +458,8 @@ html[data-theme='dark'] {
   --action-tertiary-background-focus: var(--white-opacity-10);
   --action-tertiary-background-disabled: var(--grey-900);
   --action-tertiary-text-color: var(--grey-100);
-  --action-tertiary-text-color-hover: var(--grey-50);
-  --action-tertiary-text-color-focus: var(--grey-50);
+  --action-tertiary-text-color-hover: var(--grey-100);
+  --action-tertiary-text-color-focus: var(--grey-100);
   --action-tertiary-text-color-disabled: var(--grey-600);
   /* Action - Attention (Button & Link) */
   --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);

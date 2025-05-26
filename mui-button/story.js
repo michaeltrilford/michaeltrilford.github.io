@@ -178,9 +178,26 @@ class storyButton extends HTMLElement {
         </story-card>
 
         <story-card title="Primary Icon-Only">
-          <mui-button variant="primary" icon-only slot="body">
-            <mui-icon-add variant="primary" size="x-small"></mui-icon-add>
-          </mui-button>
+          <mui-h-stack slot="body" space="var(--space-100)">
+            <mui-button variant="primary" icon-only>
+              <mui-icon-add size="small"></mui-icon-add>
+            </mui-button>
+            <mui-button variant="primary" icon-only>
+              <mui-icon-subtract size="small"></mui-icon-subtract>
+            </mui-button>
+            <mui-button variant="primary" icon-only>
+              <mui-icon-grid size="small"></mui-icon-grid>
+            </mui-button>
+            <mui-button variant="primary" icon-only>
+              <mui-icon-notification size="small"></mui-icon-notification>
+            </mui-button>
+            <mui-button variant="primary" icon-only>
+              <mui-icon-menu size="small"></mui-icon-menu>
+            </mui-button>
+            <mui-button variant="primary" icon-only>
+              <mui-icon-message size="small"></mui-icon-message>
+            </mui-button>
+          </mui-h-stack>
           <mui-code slot="footer">
             &lt;mui-button variant="primary" icon-only&gt;
             <br />
@@ -189,7 +206,7 @@ class storyButton extends HTMLElement {
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;variant="primary" 
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;size="x-small"&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;size="small"&gt;
             <br />
             &nbsp;&nbsp;&lt;/mui-icon-add&gt;
             <br />
@@ -199,20 +216,37 @@ class storyButton extends HTMLElement {
         </story-card>
 
         <story-card title="Secondary Icon-Only">
-          <mui-button variant="secondary" icon-only slot="body">
-            <mui-icon-add variant="secondary" size="x-small"></mui-icon-add>
-          </mui-button>
+          <mui-h-stack slot="body" space="var(--space-100)">
+            <mui-button variant="secondary" icon-only>
+              <mui-icon-add variant="secondary" size="small"></mui-icon-add>
+            </mui-button>
+            <mui-button variant="secondary" icon-only>
+              <mui-icon-subtract variant="secondary" size="small"></mui-icon-subtract>
+            </mui-button>
+            <mui-button variant="secondary" icon-only>
+              <mui-icon-grid variant="secondary" size="small"></mui-icon-grid>
+            </mui-button>
+            <mui-button variant="secondary" icon-only>
+              <mui-icon-notification variant="secondary" size="small"></mui-icon-notification>
+            </mui-button>
+            <mui-button variant="secondary" icon-only>
+              <mui-icon-menu variant="secondary" size="small"></mui-icon-menu>
+            </mui-button>
+            <mui-button variant="secondary" icon-only>
+              <mui-icon-message variant="secondary" size="small"></mui-icon-message>
+            </mui-button>
+          </mui-h-stack>
           <mui-code slot="footer">
             &lt;mui-button variant="secondary" icon-only&gt;
             <br />
             <br />
-            &nbsp;&nbsp;&lt;mui-icon-add
+            &nbsp;&nbsp;&lt;mui-icon-message
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;variant="secondary" 
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;size="x-small"&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;size="small"&gt;
             <br />
-            &nbsp;&nbsp;&lt;/mui-icon-add&gt;
+            &nbsp;&nbsp;&lt;/mui-icon-message&gt;
             <br />
             <br />
             &lt;/mui-button&gt;
@@ -220,20 +254,37 @@ class storyButton extends HTMLElement {
         </story-card>
 
         <story-card title="Tertiary Icon-Only">
-          <mui-button variant="tertiary" icon-only slot="body">
-            <mui-icon-add variant="tertiary" size="x-small"></mui-icon-add>
-          </mui-button>
+          <mui-h-stack slot="body" space="var(--space-100)">
+            <mui-button variant="tertiary" icon-only>
+              <mui-icon-add variant="tertiary" size="small"></mui-icon-add>
+            </mui-button>
+            <mui-button variant="tertiary" icon-only>
+              <mui-icon-subtract variant="tertiary" size="small"></mui-icon-subtract>
+            </mui-button>
+            <mui-button variant="tertiary" icon-only>
+              <mui-icon-grid variant="tertiary" size="small"></mui-icon-grid>
+            </mui-button>
+            <mui-button variant="tertiary" icon-only>
+              <mui-icon-notification variant="tertiary" size="small"></mui-icon-notification>
+            </mui-button>
+            <mui-button variant="tertiary" icon-only>
+              <mui-icon-menu variant="tertiary" size="small"></mui-icon-menu>
+            </mui-button>
+            <mui-button variant="tertiary" icon-only>
+              <mui-icon-message variant="tertiary" size="small"></mui-icon-message>
+            </mui-button>
+          </mui-h-stack>
           <mui-code slot="footer">
             &lt;mui-button variant="tertiary" icon-only&gt;
             <br />
             <br />
-            &nbsp;&nbsp;&lt;mui-icon-add
+            &nbsp;&nbsp;&lt;mui-icon-accessibility
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;variant="tertiary" 
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;size="x-small"&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;size="small"&gt;
             <br />
-            &nbsp;&nbsp;&lt;/mui-icon-add&gt;
+            &nbsp;&nbsp;&lt;/mui-icon-accessibility&gt;
             <br />
             <br />
             &lt;/mui-button&gt;
@@ -241,9 +292,26 @@ class storyButton extends HTMLElement {
         </story-card>
 
         <story-card title="Attention Icon-Only">
-          <mui-button variant="attention" icon-only slot="body">
-            <mui-icon-close variant="attention" size="x-small"></mui-icon-close>
-          </mui-button>
+          <mui-h-stack slot="body" space="var(--space-100)">
+            <mui-button variant="attention" icon-only>
+              <mui-icon-add variant="attention" size="small"></mui-icon-add>
+            </mui-button>
+            <mui-button variant="attention" icon-only>
+              <mui-icon-subtract variant="attention" size="small"></mui-icon-subtract>
+            </mui-button>
+            <mui-button variant="attention" icon-only>
+              <mui-icon-grid variant="attention" size="small"></mui-icon-grid>
+            </mui-button>
+            <mui-button variant="attention" icon-only>
+              <mui-icon-notification variant="attention" size="small"></mui-icon-notification>
+            </mui-button>
+            <mui-button variant="attention" icon-only>
+              <mui-icon-menu variant="attention" size="small"></mui-icon-menu>
+            </mui-button>
+            <mui-button variant="attention" icon-only>
+              <mui-icon-message variant="attention" size="small"></mui-icon-message>
+            </mui-button>
+          </mui-h-stack>
           <mui-code slot="footer">
             &lt;mui-button variant="attention" icon-only&gt;
             <br />
@@ -252,7 +320,7 @@ class storyButton extends HTMLElement {
             <br />
             &nbsp;&nbsp;&nbsp;&nbsp;variant="attention" 
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;size="x-small"&gt;
+            &nbsp;&nbsp;&nbsp;&nbsp;size="small"&gt;
             <br />
             &nbsp;&nbsp;&lt;/mui-icon-add&gt;
             <br />

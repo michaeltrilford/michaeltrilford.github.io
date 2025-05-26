@@ -1,11 +1,11 @@
 class muiIconDownChevron extends HTMLElement {
   static get observedAttributes() {
-    return ["size", "color", "variant"];
+    return ['size', 'color'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -13,49 +13,36 @@ class muiIconDownChevron extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (
-      (name === "size" || name === "color" || name === "variant") &&
-      oldValue !== newValue
-    ) {
+    if ((name === 'size' || name === 'color') && oldValue !== newValue) {
       this.render();
     }
   }
 
   render() {
-    const size = this.getAttribute("size") || "small"; // Default size
-    const rawColor = this.getAttribute("color"); // Raw color
-    const variant = this.getAttribute("variant"); // Variant name
+    const size = this.getAttribute('size') || 'small'; // Default size
+    const rawColor = this.getAttribute('color'); // Raw color
 
     // Map semantic names to actual token values
     const colorMap = {
-      default: "var(--icon-color-default)",
-      inverted: "var(--icon-color-inverted)",
-    };
-
-    // Variant-to-color map for variants
-    const variantColorMap = {
-      primary: "var(--icon-color-inverted)",
-      secondary: "var(--icon-color-default)",
-      tertiary: "var(--icon-color-default)",
-      attention: "var(--icon-color-inverted)",
+      default: 'var(--icon-color-default)',
+      inverted: 'var(--icon-color-inverted)',
     };
 
     // Resolve color based on the provided variant or color attribute
     let iconColor =
-      variantColorMap[variant] ||
-      colorMap[rawColor] ||
-      rawColor ||
-      "var(--icon-color-default)";
+      colorMap[rawColor] || rawColor || 'var(--icon-color-default)';
 
     // Size map for different size options
     const sizeMap = {
-      "x-small": "1.6rem",
-      small: "2.4rem",
-      medium: "3.6rem",
-      large: "4.8rem",
+      'x-small': '1.6rem',
+      small: '2.4rem',
+      medium: '3.6rem',
+      large: '4.8rem',
     };
 
     const sizeStyleMap = sizeMap[size] || sizeMap.small;
+
+    this.classList.add('mui-icon');
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -79,7 +66,7 @@ class muiIconDownChevron extends HTMLElement {
         viewBox="0 0 36 36"
         >
         <path
-          d="M18 27c-.988 0-1.785-.346-2.614-1.179L3.876 14.235c-.59-.613-.876-1.29-.876-2.122C3 10.415 4.403 9 6.108 9c.861 0 1.658.362 2.312 1.022l9.612 9.794 9.564-9.794C28.25 9.346 29.046 9 29.892 9 31.597 9 33 10.415 33 12.113c0 .833-.271 1.525-.877 2.106L20.63 25.821C19.801 26.638 19.02 27 18 27"
+          d="M18 25.5c-.79 0-1.428-.269-2.091-.917L6.7 15.572C6.23 15.095 6 14.569 6 13.92c0-1.32 1.122-2.421 2.487-2.421.688 0 1.326.281 1.849.795l7.69 7.617 7.65-7.617c.524-.526 1.161-.795 1.837-.795 1.365 0 2.487 1.1 2.487 2.421 0 .648-.217 1.186-.701 1.638l-9.195 9.024c-.663.636-1.288.917-2.104.917"
         ></path>
       </svg>
 
@@ -87,4 +74,4 @@ class muiIconDownChevron extends HTMLElement {
   }
 }
 
-customElements.define("mui-icon-down-chevron", muiIconDownChevron);
+customElements.define('mui-icon-down-chevron', muiIconDownChevron);

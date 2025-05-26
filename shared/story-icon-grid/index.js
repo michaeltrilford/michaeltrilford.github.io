@@ -1,11 +1,11 @@
 class storyIconGrid extends HTMLElement {
   static get observedAttributes() {
-    return ["theme"];
+    return ['theme'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -13,22 +13,18 @@ class storyIconGrid extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === "theme" && oldValue !== newValue) {
+    if (name === 'theme' && oldValue !== newValue) {
       this.render();
     }
   }
 
   render() {
-    const theme = this.getAttribute("theme") || "default";
+    const theme = this.getAttribute('theme') || 'default';
 
     // Map semantic theme names to token values
     const colorMap = {
-      default: "var(--app-story-icon-grid-background)",
-      inverted: "var(--app-story-icon-grid-background-inverted)",
-      primary: "var(--action-primary-background)",
-      secondary: "var(--action-secondary-background)",
-      tertiary: "var(--action-tertiary-background)",
-      attention: "var(--action-attention-background)",
+      default: 'var(--app-story-icon-grid-background)',
+      inverted: 'var(--app-story-icon-grid-background-inverted)',
     };
 
     const backgroundColor = colorMap[theme] || colorMap.default;
@@ -38,6 +34,10 @@ class storyIconGrid extends HTMLElement {
       mui-card {
         background-color: ${backgroundColor};
         display: block;
+      }
+
+      :host([center]) {
+        text-align: center;
       }
     `;
 
@@ -55,4 +55,4 @@ class storyIconGrid extends HTMLElement {
   }
 }
 
-customElements.define("story-icon-grid", storyIconGrid);
+customElements.define('story-icon-grid', storyIconGrid);

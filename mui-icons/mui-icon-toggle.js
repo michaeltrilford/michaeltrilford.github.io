@@ -1,6 +1,6 @@
 class muiIconToggle extends HTMLElement {
   static get observedAttributes() {
-    return ['size', 'color'];
+    return ['variant'];
   }
 
   constructor() {
@@ -11,7 +11,7 @@ class muiIconToggle extends HTMLElement {
       this.toggleAttribute('toggle');
 
       // Blur the button after click to remove persistent focus
-      const button = this.shadowRoot.querySelector('button');
+      const button = this.shadowRoot.querySelector('mui-button');
       if (button) {
         button.blur();
         requestAnimationFrame(() => {
@@ -29,73 +29,25 @@ class muiIconToggle extends HTMLElement {
   }
 
   connectedCallback() {
+    if (!this.hasAttribute('variant')) {
+      this.setAttribute('variant', 'primary');
+    }
     this.render();
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if ((name === 'size' || name === 'color') && oldValue !== newValue) {
+    if (name === 'variant' && oldValue !== newValue) {
       this.render();
     }
   }
 
   render() {
-    const size = this.getAttribute('size') || 'small';
-    const rawColor = this.getAttribute('color');
-
-    // Map semantic names to actual token values
-    const colorMap = {
-      default: 'var(--icon-color-default)',
-      inverted: 'var(--icon-color-inverted)',
-    };
-
-    // If rawColor matches a semantic key, use it; otherwise use the raw value or default
-    const iconColor =
-      colorMap[rawColor] || rawColor || 'var(--icon-color-default)';
-
-    const sizeMap = {
-      small: '4.4rem',
-    };
-
-    const sizeStyleMap = sizeMap[size] || sizeMap.small;
+    const variant = this.getAttribute('variant') || 'primary';
 
     this.shadowRoot.innerHTML = `
       <style>
         :host {
           display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: ${sizeStyleMap};
-          height: ${sizeStyleMap};
-          --icon-color-map: ${iconColor};
-        }
-
-        button {
-          width: 100%;
-          height: 100%;
-          position: relative;
-          background: transparent;
-          border: none;
-          padding: 0;
-          line-height: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: var(--action-radius);
-        }
-
-        button:focus {
-          box-shadow: none;
-          outline: none;
-          box-shadow: none;
-        }
-
-        button:focus-visible {
-          outline: var(--outline-medium);
-        }
-
-        /* Show outline only if user is tabbing */
-        :host-context(body[data-user-is-tabbing]) button:focus {
-          outline: var(--outline-medium);
         }
 
         ::slotted(*) {
@@ -104,7 +56,6 @@ class muiIconToggle extends HTMLElement {
           left: auto;
           transform-origin: 50% 50%;
           transition: var(--speed-200) ease-in-out;
-          fill: var(--icon-color-map);
         }
 
         ::slotted([slot="start"]) {
@@ -133,10 +84,10 @@ class muiIconToggle extends HTMLElement {
 
       </style>
 
-      <button>
+     <mui-button icon-only ${variant ? `variant="${variant}"` : ''}>
         <slot name="start"></slot>
         <slot name="end"></slot>
-      </button>
+      </mui-button>
     `;
   }
 }

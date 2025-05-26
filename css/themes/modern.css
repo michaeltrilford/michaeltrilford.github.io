@@ -121,6 +121,7 @@ html[data-brand='modern'][data-theme='light'] {
   --action-primary-text-color-hover: var(--white);
   --action-primary-text-color-focus: var(--white);
   --action-primary-text-color-disabled: var(--grey-400);
+
   --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--grey-800);
   --action-secondary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--grey-800);
   --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--grey-800);
@@ -133,18 +134,20 @@ html[data-brand='modern'][data-theme='light'] {
   --action-secondary-text-color-hover: var(--grey-1000);
   --action-secondary-text-color-focus: var(--grey-1000);
   --action-secondary-text-color-disabled: var(--grey-400);
+
   --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--white-opacity-0);
   --action-tertiary-background: var(--white-opacity-0);
-  --action-tertiary-background-hover: var(--black-opacity-10);
-  --action-tertiary-background-focus: var(--black-opacity-10);
-  --action-tertiary-background-disabled: var(--grey-100);
+  --action-tertiary-background-hover: var(--white-opacity-50);
+  --action-tertiary-background-focus: var(--white-opacity-50);
+  --action-tertiary-background-disabled: var(--white-opacity-50);
   --action-tertiary-text-color: var(--grey-900);
   --action-tertiary-text-color-hover: var(--grey-1000);
   --action-tertiary-text-color-focus: var(--grey-1000);
   --action-tertiary-text-color-disabled: var(--grey-400);
+
   --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
@@ -247,37 +250,40 @@ html[data-brand='modern'][data-theme='dark'] {
   --action-primary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-primary-background: var(--white);
-  --action-primary-background-hover: var(--grey-200);
-  --action-primary-background-focus: var(--grey-200);
-  --action-primary-background-disabled: var(--grey-800);
+  --action-primary-background-hover: var(--grey-100);
+  --action-primary-background-focus: var(--grey-100);
+  --action-primary-background-disabled: var(--grey-100);
   --action-primary-text-color: var(--grey-900);
   --action-primary-text-color-hover: var(--grey-900);
   --action-primary-text-color-focus: var(--grey-900);
   --action-primary-text-color-disabled: var(--grey-400);
+
   --action-secondary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--grey-200);
   --action-secondary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--grey-200);
   --action-secondary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--grey-200);
   --action-secondary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--grey-200);
   --action-secondary-background: var(--black-opacity-0);
-  --action-secondary-background-hover: var(--black-opacity-30);
-  --action-secondary-background-focus: var(--black-opacity-30);
-  --action-secondary-background-disabled: var(--grey-900);
+  --action-secondary-background-hover: var(--black-opacity-20);
+  --action-secondary-background-focus: var(--black-opacity-20);
+  --action-secondary-background-disabled: var(--black-opacity-20);
   --action-secondary-text-color: var(--grey-100);
-  --action-secondary-text-color-hover: var(--grey-50);
-  --action-secondary-text-color-focus: var(--grey-50);
+  --action-secondary-text-color-hover: var(--grey-100);
+  --action-secondary-text-color-focus: var(--grey-100);
   --action-secondary-text-color-disabled: var(--grey-600);
+
   --action-tertiary-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-tertiary-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-tertiary-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-tertiary-stroke-disabled: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-tertiary-background: transparent;
-  --action-tertiary-background-hover: var(--white-opacity-10);
-  --action-tertiary-background-focus: var(--white-opacity-10);
-  --action-tertiary-background-disabled: var(--grey-900);
+  --action-tertiary-background-hover: var(--black-opacity-20);
+  --action-tertiary-background-focus: var(--black-opacity-20);
+  --action-tertiary-background-disabled: var(--black-opacity-20);
   --action-tertiary-text-color: var(--grey-100);
-  --action-tertiary-text-color-hover: var(--grey-50);
-  --action-tertiary-text-color-focus: var(--grey-50);
+  --action-tertiary-text-color-hover: var(--grey-100);
+  --action-tertiary-text-color-focus: var(--grey-100);
   --action-tertiary-text-color-disabled: var(--grey-600);
+
   --action-attention-stroke: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-attention-stroke-hover: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
   --action-attention-stroke-focus: var(--stroke-size-200) var(--stroke-solid) var(--black-opacity-0);
