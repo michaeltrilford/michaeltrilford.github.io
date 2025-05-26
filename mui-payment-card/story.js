@@ -93,12 +93,12 @@ class storyPaymentCard extends HTMLElement {
           </mui-responsive>
         </spec-card>
 
-        <story-card title="Primary">
+        <story-card title="Virtual">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
             <mui-payment-card name="Mike Trilford"></mui-payment-card>
           </mui-v-stack>
           <mui-code slot="footer">
-            &lt;mui-payment-card 
+            &lt;mui-payment-card type="virtual" 
             <br />
             &nbsp;&nbsp;name="Mike Trilford"
             <br />
@@ -106,12 +106,12 @@ class storyPaymentCard extends HTMLElement {
           </mui-code>
         </story-card>
 
-        <story-card title="Frozen">
+        <story-card title="Virtual / Frozen">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
             <mui-payment-card name="Mike Trilford" state="frozen"></mui-payment-card>
           </mui-v-stack>
           <mui-code slot="footer">
-            &lt;mui-payment-card 
+            &lt;mui-payment-card type="virtual" 
             <br />
             &nbsp;&nbsp;name="Mike Trilford" 
             <br />
