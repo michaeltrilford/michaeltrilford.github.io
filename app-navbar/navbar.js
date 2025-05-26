@@ -21,6 +21,10 @@ class appNavbar extends HTMLElement {
         display: block;
       }
 
+      .color-icon {
+        fill: var(--app-nav-accent);
+      }
+
       @media (min-width: 960px) {
 
       :host { 
@@ -167,8 +171,8 @@ class appNavbar extends HTMLElement {
 
       <app-navbar-toggle>
         <mui-icon-toggle variant="tertiary" rotate>
-          <mui-icon-menu slot="start"></mui-icon-menu>
-          <mui-icon-close slot="end"></mui-icon-close>
+          <mui-icon-menu class="color-icon" slot="start"></mui-icon-menu>
+          <mui-icon-close class="color-icon" slot="end"></mui-icon-close>
         </mui-icon-toggle>
         <mui-link slot="home-link" data-close-menu link="#/home-page">michael.ui</mui-link>
       </app-navbar-toggle>
