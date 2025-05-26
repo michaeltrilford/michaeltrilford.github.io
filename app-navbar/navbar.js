@@ -106,6 +106,7 @@ class appNavbar extends HTMLElement {
 
     const Components = `
       <app-navbar-group id="web-components" groupname="Web Components">
+        <app-navbar-link link="#/payment-card" title="Payment Card"></app-navbar-link>   
         <app-navbar-link link="#/tab-bar" title="Tab Bar"></app-navbar-link>  
         <app-navbar-link link="#/carousel" title="Carousel"></app-navbar-link>  
         <app-navbar-link link="#/field" title="Field"></app-navbar-link> 

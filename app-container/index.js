@@ -49,6 +49,7 @@ export class AppContainer extends HTMLElement {
       '/layout-part-selectors': 'story-parts-layout',
       '/visual-part-selectors': 'story-parts-visual',
 
+      '/payment-card': 'story-payment-card',
       '/field': 'story-field',
       '/tab-bar': 'story-tab-bar',
       '/carousel': 'story-carousel',
