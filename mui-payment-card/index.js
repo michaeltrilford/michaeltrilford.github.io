@@ -9,6 +9,8 @@ class PaymentCard extends HTMLElement {
       'logo',
       'logo-width',
       'logo-height',
+      'background-color',
+      'background-image',
     ];
   }
 
@@ -28,6 +30,8 @@ class PaymentCard extends HTMLElement {
   render() {
     const state = this.getAttribute('state') || 'default';
     const number = this.getAttribute('number') || '0000';
+    const background = this.getAttribute('background-color');
+    const backgroundImage = this.getAttribute('background-image');
     const variant = this.getAttribute('variant') || 'physical';
     const provider = this.getAttribute('provider') || 'visa';
     const type = this.getAttribute('type') || '';
@@ -46,19 +50,26 @@ class PaymentCard extends HTMLElement {
     }
 
     let cardClass = 'card';
-    let backgroundStyle = '';
+    let surfaceStyle = '';
 
-    switch (variant) {
-      case 'virtual':
-        cardClass += ' virtual';
-        backgroundStyle = 'background-image: url(./images/buttercup.png);';
-        break;
-      case 'physical':
-      default:
-        cardClass += ' physical';
-        backgroundStyle =
+    if (variant === 'virtual') {
+      cardClass += ' virtual';
+    } else {
+      cardClass += ' physical';
+    }
+
+    if (background) {
+      surfaceStyle = `background: ${background};`;
+    } else if (backgroundImage) {
+      surfaceStyle = `background-image: url(${backgroundImage}); background-size: cover; background-position: center;`;
+    } else {
+      if (variant === 'virtual') {
+        surfaceStyle =
+          'background-image: url(./images/buttercup.png); background-size: cover; background-position: center;';
+      } else if (variant === 'physical') {
+        surfaceStyle =
           'background: linear-gradient(180deg, var(--grey-200) 0%, var(--white) 100%);';
-        break;
+      }
     }
 
     const providerLogos = {
@@ -101,6 +112,8 @@ class PaymentCard extends HTMLElement {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
+          padding: calc(var(--space-300) + var(--space-025));
+          padding-bottom: 0;
         }
 
         /* Type */
@@ -210,8 +223,13 @@ class PaymentCard extends HTMLElement {
           max-height: 248px;
           min-width: 247px;
           aspect-ratio: 1014 / 638;
-          padding: calc(var(--space-300) + var(--space-025));
+        }
 
+        .inner {
+          display: grid;
+          grid-template-rows: 1fr auto;
+          box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 90%), 0 1px 0 0 rgb(0 0 0 / 20%);
+          border-radius: var(--radius-300);
         }
 
         /* Variant - Phyiscal */
@@ -222,7 +240,7 @@ class PaymentCard extends HTMLElement {
 
         /* Variant - Virtual */
         /* =========================================== */
-        .card.virtual {
+        .card.virtual .inner {
           background-size: 400px;
           animation-name: cardAnimation;
           animation-duration: 10s;
@@ -232,17 +250,16 @@ class PaymentCard extends HTMLElement {
           position: relative;
           background-image: url("./images/buttercup.png");
         }
-        .card.virtual::before {
+        .card.virtual .inner::before {
           content: "";
           width: 100%;
           height: 100%;
-          box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 90%), 0 1px 0 0 rgb(0 0 0 / 20%);
           position: absolute;
           z-index: 1;
           border-radius: 16px;
         }
 
-        .card.virtual::after {
+        .card.virtual .inner::after {
           content: "";
           width: 100%;
           height: 100%;
@@ -266,20 +283,14 @@ class PaymentCard extends HTMLElement {
           transition: filter 0.2s ease-in-out;
           position: relative;
         }
-        .frozen .card-top,
-        .frozen .card-number,
-        .frozen .card-provider,
-        .frozen .logo {
-          filter: blur(6px);
+        .frozen .inner {
+          filter: blur(16px);
           transition: filter 0.2s ease-in-out;
         }
         .frozen:hover {
           filter: grayscale(0%);
         }
-        .frozen:hover .card-top,
-        .frozen:hover .card-number,
-        .frozen:hover .card-provider,
-        .frozen:hover .logo {
+        .frozen:hover .inner {
           filter: blur(0);
         }
         mui-badge {
@@ -296,22 +307,33 @@ class PaymentCard extends HTMLElement {
 
       </style>
 
-      <div class="${cardClass} ${
-      isFrozen ? 'frozen' : ''
-    }" style="${backgroundStyle}">
+      <div
+
+        class="${cardClass} 
+        ${isFrozen ? 'frozen' : ''}" 
+        >
         ${isFrozen ? `<mui-badge>Frozen</mui-badge>` : ''}
-        <div class="card-top">
-          ${type ? `<span class="type">${type}</span>` : ''}
-          ${
-            logo
-              ? `<div class="logo"><img src="${logo}" class="logo-img" /></div>`
-              : ''
-          }
+
+        <div class="inner" style="${surfaceStyle}">
+          <div class="card-top">
+            ${type ? `<span class="type">${type}</span>` : ''}
+            ${
+              logo
+                ? `
+                  <div class="logo">
+                    <img src="${logo}" class="logo-img" />
+                  </div>`
+                : ''
+            }
+          </div>
+
+          <mui-body class="card-number"><span>••••</span><span>${number}</span></mui-body>
+
+          <div class="card-provider">
+            <img src="${providerLogoSrc}" alt="${provider} logo">
+          </div>
         </div>
-        <mui-body class="card-number"><span>••••</span><span>${number}</span></mui-body>
-        <div class="card-provider">
-          <img src="${providerLogoSrc}" alt="${provider} logo">
-        </div>
+
       </div>
     `;
   }
