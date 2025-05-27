@@ -31,19 +31,17 @@ class PaymentCard extends HTMLElement {
     const variant = this.getAttribute('variant') || 'physical';
     const provider = this.getAttribute('provider') || 'visa';
     const type = this.getAttribute('type') || '';
-    const logo = this.getAttribute('logo') || '';
-    const logoWidth = parseInt(this.getAttribute('logo-width') || '220', 10);
-    const logoHeight = parseInt(this.getAttribute('logo-height') || 'auto', 10);
     const isFrozen = state === 'frozen';
+    const logo = this.getAttribute('logo') || '';
+    const logoHeightAttr = this.getAttribute('logo-height');
+    const logoHeight =
+      logoHeightAttr && !isNaN(parseInt(logoHeightAttr, 10))
+        ? parseInt(logoHeightAttr, 10)
+        : undefined;
 
-    if (logoWidth > 220) {
+    if (logoHeight && logoHeight > 126) {
       console.warn(
-        `[mui-payment-card] The logo width (${logoWidth}px) exceeds the recommended maximum of 220px. This may affect layout or visual consistency.`,
-      );
-    }
-    if (logoHeight > 126) {
-      console.warn(
-        `[mui-payment-card] The logo height (${logoHeight}px) exceeds the recommended maximum of 126px. This may affect layout or visual consistency.`,
+        `[mui-payment-card] The logo height (${logoHeight}px) exceeds the recommended maximum of 126px. This may affect vertical alignment or visual consistency.`,
       );
     }
 
@@ -104,15 +102,19 @@ class PaymentCard extends HTMLElement {
           justify-content: space-between;
           align-items: flex-start;
         }
-        .card-top span {
+
+        /* Type */
+        /* =========================================== */
+        .type {
           font-size: var(--text-font-size-xs);
           line-height: var(--text-line-height-xs);
           text-transform: uppercase;
           letter-spacing: var(--space-025);
           font-weight: var(--font-weight-medium);
+          color: var(--black);
         }
         @media (min-width: 550px) {
-          .card-top span {
+          .type {
             font-size: var(--text-font-size-s);
             line-height: var(--text-line-height-s);
          }    
@@ -133,15 +135,14 @@ class PaymentCard extends HTMLElement {
           max-width: 100%;
           max-height: 100%;
           object-fit: contain;
-          height: auto;
           display: block;
-          width: calc(${logoWidth}px / 1.8);
-          height: ${logoHeight ? `calc(${logoHeight}px / 1.8)` : 'auto'};
+          width: auto;
+          height: ${logoHeight ? `calc(${logoHeight}px / 1.5)` : 'auto'};
         }
 
         @media (min-width: 550px) {
           .logo img {
-            width: ${logoWidth}px;
+            width: auto;
             height: ${logoHeight ? `${logoHeight}px` : 'auto'};
           }   
         }
@@ -287,7 +288,12 @@ class PaymentCard extends HTMLElement {
           top: 50%;
           left: 50%;
           transform: translateX(-50%) translateY(-50%);
+          opacity: 1;
+          transition: opacity 0.2s ease-in-out;
         }
+
+        .frozen:hover mui-badge { opacity: 0; }
+
       </style>
 
       <div class="${cardClass} ${
@@ -295,7 +301,7 @@ class PaymentCard extends HTMLElement {
     }" style="${backgroundStyle}">
         ${isFrozen ? `<mui-badge>Frozen</mui-badge>` : ''}
         <div class="card-top">
-          ${type ? `<span>${type}</span>` : '<span></span>'}
+          ${type ? `<span class="type">${type}</span>` : ''}
           ${
             logo
               ? `<div class="logo"><img src="${logo}" class="logo-img" /></div>`
