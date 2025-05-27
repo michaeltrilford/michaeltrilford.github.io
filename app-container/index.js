@@ -81,6 +81,7 @@ export class AppContainer extends HTMLElement {
       '/slat': 'story-slat',
 
       '/agent': 'comp-agent-ui',
+      '/wallet': 'comp-wallet',
     };
 
     // ✨ NEW CHECK ✨

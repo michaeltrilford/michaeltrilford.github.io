@@ -234,6 +234,7 @@ const StoryArray = [
   'mui-parts/story-parts-layout.js',
   'mui-parts/story-parts-visual.js',
   'comp-agent-ui/story.js',
+  'comp-wallet/story.js',
 ];
 
 // Load all resources asynchronously
