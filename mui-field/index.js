@@ -43,7 +43,7 @@ class muiField extends HTMLElement {
     const message = this.getAttribute('message');
     const variant = this.getAttribute('variant');
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         :host {
           display: block;

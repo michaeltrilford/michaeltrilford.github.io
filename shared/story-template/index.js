@@ -17,7 +17,7 @@ class StoryTemplate extends HTMLElement {
   }
 
   connectedCallback() {
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; width: 100%; }
 
       .resources::part(display) {
@@ -30,7 +30,7 @@ class StoryTemplate extends HTMLElement {
     const title = this.getAttribute('title') || '';
     const descriptionText = this.getAttribute('description') || '';
     const description = descriptionText
-      ? `<mui-body large style="letter-spacing: 0.75px; max-width: 75ch;">${descriptionText}</mui-body>`
+      ? /*html*/ `<mui-body large style="letter-spacing: 0.75px; max-width: 75ch;">${descriptionText}</mui-body>`
       : '';
 
     const accessibilityItems = this.getAttribute('accessibility');
@@ -38,22 +38,22 @@ class StoryTemplate extends HTMLElement {
 
     const demoLink = this.getAttribute('demo');
     const demoContent = demoLink
-      ? `<mui-link class="resources" href="${demoLink}" target="_blank" rel="noopener" variant="secondary">Live Demo</mui-link>`
+      ? /*html*/ `<mui-link class="resources" href="${demoLink}" target="_blank" rel="noopener" variant="secondary">Live Demo</mui-link>`
       : '';
 
     const githubLink = this.getAttribute('github');
     const githubContent = githubLink
-      ? `<mui-link class="resources" href="${githubLink}" target="_blank" rel="noopener" variant="secondary">Github<github-mark></github-mark></mui-link>`
+      ? /*html*/ `<mui-link class="resources" href="${githubLink}" target="_blank" rel="noopener" variant="secondary">Github<github-mark></github-mark></mui-link>`
       : '';
 
     const figmaLink = this.getAttribute('figma');
     const figmaContent = figmaLink
-      ? `<mui-link class="resources" href="${figmaLink}" target="_blank" rel="noopener" variant="secondary">Figma<figma-mark></figma-mark></mui-link>`
+      ? /*html*/ `<mui-link class="resources" href="${figmaLink}" target="_blank" rel="noopener" variant="secondary">Figma<figma-mark></figma-mark></mui-link>`
       : '';
 
     const guidesLink = this.hasAttribute('guides');
     const guidesContent = guidesLink
-      ? `<mui-link class="resources" href="/#/design-guidelines" variant="secondary">Guides<guides-mark></guides-mark></mui-link>`
+      ? /*html*/ `<mui-link class="resources" href="/#/design-guidelines" variant="secondary">Guides<guides-mark></guides-mark></mui-link>`
       : '';
 
     try {
@@ -68,7 +68,7 @@ class StoryTemplate extends HTMLElement {
     }
 
     const accessibilitySection = accessibilityArray.length
-      ? `
+      ? /*html*/ `
         <mui-message heading="Accessibility Notes" icon="mui-icon-accessibility" variant="plain">
             <mui-list as="ul">
               ${accessibilityArray
@@ -82,7 +82,7 @@ class StoryTemplate extends HTMLElement {
       `
       : '';
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <mui-container center>
         <mui-v-stack space="var(--space-700)">

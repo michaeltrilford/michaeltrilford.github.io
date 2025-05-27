@@ -44,7 +44,7 @@ class muiIconToggle extends HTMLElement {
   render() {
     const variant = this.getAttribute('variant') || 'primary';
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         :host {
           display: inline-flex;

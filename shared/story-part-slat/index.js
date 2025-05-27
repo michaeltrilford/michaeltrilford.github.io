@@ -8,7 +8,7 @@ class storyPartSlat extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
       :host { 
         display: block;
         padding: var(--space-500) var(--space-500);
@@ -44,11 +44,11 @@ class storyPartSlat extends HTMLElement {
     const usageLinks = usageItems
       .map((label) => {
         const url = `#/${label.toLowerCase().replace(/\s+/g, '')}`;
-        return `<mui-link size="x-small" weight="bold" href="${url}">${label}</mui-link>`;
+        return /*html*/ `<mui-link size="x-small" weight="bold" href="${url}">${label}</mui-link>`;
       })
       .join('');
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <mui-v-stack space="var(--space-100)">

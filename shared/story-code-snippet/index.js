@@ -8,7 +8,7 @@ class storyCodeSnippet extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
       :host { 
         display: inline-flex;
         margin:  var(--space-025) var(--space-000);
@@ -24,7 +24,7 @@ class storyCodeSnippet extends HTMLElement {
 
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <code><slot></slot></code>

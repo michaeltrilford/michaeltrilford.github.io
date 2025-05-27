@@ -8,13 +8,13 @@ class storyTypeTable extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
       :host { 
         display: block;
       }
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <mui-table>  

@@ -2,10 +2,10 @@
 class muiQuote extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
     <style>
       @import url("./css/mui-reset.css");
       :host { display: block; }
@@ -25,4 +25,4 @@ class muiQuote extends HTMLElement {
   }
 }
 
-customElements.define("mui-quote", muiQuote);
+customElements.define('mui-quote', muiQuote);

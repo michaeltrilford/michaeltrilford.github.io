@@ -44,7 +44,7 @@ class muiIconUpArrow extends HTMLElement {
 
     this.classList.add('mui-icon');
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         :host {
           width: ${sizeStyleMap};

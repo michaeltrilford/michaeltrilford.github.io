@@ -5,7 +5,7 @@ class muiCardFooter extends HTMLElement {
   }
 
   connectedCallback() {
-    const html = `
+    const html = /*html*/ `
       <style>
         :host {
           display: block;

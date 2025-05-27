@@ -2,21 +2,21 @@ class storyStack extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `:host { display: block; }`;
+    const styles = /*css*/ `:host { display: block; }`;
 
-    const BlockBox = `
+    const BlockBox = /*html*/ `
       <mui-card>
         <mui-card-body>{content}</mui-card-body>
       </mui-card>
     `;
 
-    const Box = `
+    const Box = /*html*/ `
       <mui-card>
         <mui-card-body>{content}</mui-card-body>
       </mui-card>
     `;
 
-    const DefaultHStack = `
+    const DefaultHStack = /*html*/ `
       <mui-v-stack slot="body">
         <mui-v-stack space="8px">
           <mui-code style="border-radius: 8px;">
@@ -30,7 +30,7 @@ class storyStack extends HTMLElement {
       </mui-v-stack>
     `;
 
-    const DefaultVStack = `
+    const DefaultVStack = /*html*/ `
       <mui-v-stack slot="body">
         <mui-v-stack space="8px">
           <mui-code style="border-radius: 8px;">Default Size: space="var(--space-500)"</mui-code>
@@ -42,14 +42,14 @@ class storyStack extends HTMLElement {
       </mui-v-stack>
   `;
 
-    const HStackSpace = `
+    const HStackSpace = /*html*/ `
     <mui-h-stack  space="var(--space-400)" slot="body">
       ${Box}
       ${Box}
     </mui-h-stack>
   `;
 
-    const VStackSpace = `
+    const VStackSpace = /*html*/ `
     <mui-v-stack slot="body" space="var(--space-400)">
       ${BlockBox}
       ${BlockBox}
@@ -142,7 +142,7 @@ class storyStack extends HTMLElement {
 
     const rowsHStack = propItemsHStack
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
         <story-type-row
           ${prop.required ? 'required' : ''}
           name="${prop.name}"
@@ -161,7 +161,7 @@ class storyStack extends HTMLElement {
         const isLastChild =
           index === propItemsHStack.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
           <mui-accordion-block 
             size="small" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
@@ -182,7 +182,7 @@ class storyStack extends HTMLElement {
 
     const rowsVStack = propItemsVStack
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
         <story-type-row
           ${prop.required ? 'required' : ''}
           name="${prop.name}"
@@ -201,7 +201,7 @@ class storyStack extends HTMLElement {
         const isLastChild =
           index === propItemsVStack.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
           <mui-accordion-block 
             size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
@@ -220,7 +220,7 @@ class storyStack extends HTMLElement {
       })
       .join('');
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 

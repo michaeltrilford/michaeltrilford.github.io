@@ -4,7 +4,7 @@ class appNavbar extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
       :host { 
         display: grid;
         position: fixed;
@@ -68,15 +68,15 @@ class appNavbar extends HTMLElement {
 
     `;
 
-    const Home = `
+    const Home = /*html*/ `
       <app-navbar-home  link="#/home" title="michael.ui"></app-navbar-home>
     `;
 
-    const Theme = `
+    const Theme = /*html*/ `
       <app-navbar-theme></app-navbar-theme>
     `;
 
-    const Resources = `
+    const Resources = /*html*/ `
       <app-navbar-group id="resources" groupname="Resources">
         <app-navbar-link link="#/create-app" title="Create App"></app-navbar-link>
         <app-navbar-link link="#/theme-setup" title="Theme Setup"></app-navbar-link>
@@ -85,7 +85,7 @@ class appNavbar extends HTMLElement {
       </app-navbar-group>
     `;
 
-    const Required = `
+    const Required = /*html*/ `
       <app-navbar-group id="design-tokens" groupname="Design Tokens">
         <app-navbar-link link="#/base-design-tokens" title="Base"></app-navbar-link>
         <app-navbar-link link="#/semantic-design-tokens" title="Semantic"></app-navbar-link>
@@ -95,7 +95,7 @@ class appNavbar extends HTMLElement {
       </app-navbar-group>
     `;
 
-    const Parts = `
+    const Parts = /*html*/ `
       <app-navbar-group id="part-types" groupname="Part Selectors">
         <app-navbar-link link="#/text-part-selectors" title="Text"></app-navbar-link>
         <app-navbar-link link="#/spacing-part-selectors" title="Spacing"></app-navbar-link>
@@ -104,7 +104,7 @@ class appNavbar extends HTMLElement {
       </app-navbar-group>
     `;
 
-    const Components = `
+    const Components = /*html*/ `
       <app-navbar-group id="web-components" groupname="Web Components">
         <app-navbar-link link="#/payment-card" title="Payment Card"></app-navbar-link>   
         <app-navbar-link link="#/tab-bar" title="Tab Bar"></app-navbar-link>  
@@ -139,14 +139,14 @@ class appNavbar extends HTMLElement {
       </app-navbar-group>
     `;
 
-    const Compositions = `
+    const Compositions = /*html*/ `
       <app-navbar-group id="compositions" groupname="Compositions">
         <app-navbar-link link="#/agent" title="Agent UI"></app-navbar-link>  
       </app-navbar-group>
     `;
 
     // We provide the shadow root with some HTML
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <app-navbar-menu desktop id="desktop">

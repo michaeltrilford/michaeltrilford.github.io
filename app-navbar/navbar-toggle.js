@@ -2,11 +2,11 @@
 class appNavbarToggle extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
     <style>
 
       :host {
@@ -38,4 +38,4 @@ class appNavbarToggle extends HTMLElement {
   }
 }
 
-customElements.define("app-navbar-toggle", appNavbarToggle);
+customElements.define('app-navbar-toggle', appNavbarToggle);

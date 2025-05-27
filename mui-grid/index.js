@@ -15,7 +15,7 @@ class muiGrid extends HTMLElement {
     const space = this.getAttribute('space') || 'var(--space-000)';
     const partMap = getPartMap('layout', 'spacing');
 
-    const styles = `
+    const styles = /*css*/ `
       :host {
         display: block;
       }
@@ -26,7 +26,7 @@ class muiGrid extends HTMLElement {
       }
     `;
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <div part="${partMap}" style="--col: ${col}; --gap: ${space};">
         <slot></slot>

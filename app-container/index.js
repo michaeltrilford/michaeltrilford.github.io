@@ -7,7 +7,7 @@ export class AppContainer extends HTMLElement {
     this.setAttribute('role', 'main'); // Helps with screen reader navigation
 
     const style = document.createElement('style');
-    style.textContent = `
+    style.textContent = /*css*/ `
       :host {
         display: grid;
       }

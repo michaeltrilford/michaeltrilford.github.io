@@ -108,7 +108,7 @@ class MuiSwitch extends HTMLElement {
       );
     }
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         :host { display: inline-block; }
 

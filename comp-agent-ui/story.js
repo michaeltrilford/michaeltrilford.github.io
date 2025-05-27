@@ -2,13 +2,13 @@ class compAgentUI extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `
+    const styles = /*css*/ `
       :host { 
         display: block;
       }
     `;
 
-    const AgentPrompt = `
+    const AgentPrompt = /*html*/ `
 
       <style>
         .canvas {
@@ -59,7 +59,7 @@ class compAgentUI extends HTMLElement {
       </div>
     `;
 
-    const AgentConversationReply = `
+    const AgentConversationReply = /*html*/ `
       <style>
         .conversation-background {
           background: var(--surface);
@@ -101,7 +101,7 @@ class compAgentUI extends HTMLElement {
       </div>
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 

@@ -12,7 +12,7 @@ class muiCode extends HTMLElement {
     const size = this.getAttribute('size') || 'x-small';
     this.setAttribute('size', size);
 
-    const styles = `
+    const styles = /*css*/ `
       :host {
         display: block;
       }
@@ -49,7 +49,7 @@ class muiCode extends HTMLElement {
       }
 
     `;
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <code><slot></slot></code>
   `;

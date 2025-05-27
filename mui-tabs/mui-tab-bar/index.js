@@ -110,7 +110,7 @@ class TabBar extends HTMLElement {
       });
     });
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         :host {
           --tab-animation-speed: ${this._animationSpeed}ms;

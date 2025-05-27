@@ -2,15 +2,15 @@ class storyGrid extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `:host { display: block; }`;
+    const styles = /*css*/ `:host { display: block; }`;
 
-    const Box = `
+    const Box = /*html*/ `
       <mui-card>
         <mui-card-body>.</mui-card-body>
       </mui-card>
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 

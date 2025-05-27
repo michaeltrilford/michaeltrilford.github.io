@@ -8,7 +8,7 @@ class storyTypeRow extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
       :host { 
         display: block;
       }
@@ -32,7 +32,7 @@ class storyTypeRow extends HTMLElement {
     const description = this.getAttribute('description') || '';
     const usage = this.getAttribute('usage') || 'undefined';
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <mui-row-group>

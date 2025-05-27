@@ -8,7 +8,7 @@ class CarouselPanel extends HTMLElement {
     const shadow = this.attachShadow({ mode: 'open' });
 
     // Template
-    shadow.innerHTML = `
+    shadow.innerHTML = /*html*/ `
       <style>
         :host {
           display: block;

@@ -1,14 +1,14 @@
 class storyTypeSlat extends HTMLElement {
   static get observedAttributes() {
-    return ["type", "name", "options", "required", "description", "default"];
+    return ['type', 'name', 'options', 'required', 'description', 'default'];
   }
 
   constructor() {
     super();
 
-    const shadowRoot = this.attachShadow({ mode: "open" });
+    const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
       :host { 
         display: block;
       }
@@ -32,29 +32,29 @@ class storyTypeSlat extends HTMLElement {
 
     `;
 
-    const name = this.getAttribute("name") || "—";
-    const required = this.hasAttribute("required");
-    const type = this.getAttribute("type") || "undefined";
-    const description = this.getAttribute("description") || "";
+    const name = this.getAttribute('name') || '—';
+    const required = this.hasAttribute('required');
+    const type = this.getAttribute('type') || 'undefined';
+    const description = this.getAttribute('description') || '';
 
-    const rawOptions = this.getAttribute("options") || "-";
+    const rawOptions = this.getAttribute('options') || '-';
     const optionList =
-      rawOptions !== "-"
+      rawOptions !== '-'
         ? rawOptions
-            .split(",")
+            .split(',')
             .map(
-              (opt) => `<story-code-snippet>${opt.trim()}</story-code-snippet>`
+              (opt) => `<story-code-snippet>${opt.trim()}</story-code-snippet>`,
             )
-            .join(" ")
-        : "-";
+            .join(' ')
+        : '-';
 
-    const rawDefault = this.getAttribute("default") || "-";
+    const rawDefault = this.getAttribute('default') || '-';
     const defaultVal =
-      rawDefault !== "-"
+      rawDefault !== '-'
         ? `<story-code-snippet>${rawDefault}</story-code-snippet>`
-        : "-";
+        : '-';
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
 
@@ -68,7 +68,7 @@ class storyTypeSlat extends HTMLElement {
                 ${
                   required
                     ? '<span aria-hidden="true" style="color: var(--red-500)">*</span><span class="visually-hidden">(required)</span>'
-                    : ""
+                    : ''
                 }
                 </mui-h-stack></mui-body>
                 <mui-body size="x-small"><span class="title">Description:</span><br /> ${description}</mui-body>
@@ -89,7 +89,7 @@ class storyTypeSlat extends HTMLElement {
                 ${
                   required
                     ? '<span aria-hidden="true" style="color: var(--red-500)">*</span><span class="visually-hidden">(required)</span>'
-                    : ""
+                    : ''
                 }
                 </mui-h-stack></mui-body>
             <mui-body size="x-small">${description}</mui-body>
@@ -106,4 +106,4 @@ class storyTypeSlat extends HTMLElement {
   }
 }
 
-customElements.define("story-type-slat", storyTypeSlat);
+customElements.define('story-type-slat', storyTypeSlat);

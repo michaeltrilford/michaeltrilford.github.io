@@ -2,12 +2,12 @@
 class muiList extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    this.setAttribute("role", "list");
-    this.shadowRoot.innerHTML = `
+    this.setAttribute('role', 'list');
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
 
         :host { 
@@ -32,4 +32,4 @@ class muiList extends HTMLElement {
   }
 }
 
-customElements.define("mui-list", muiList);
+customElements.define('mui-list', muiList);

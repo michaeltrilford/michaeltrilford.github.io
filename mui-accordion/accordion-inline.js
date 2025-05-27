@@ -8,7 +8,7 @@ class muiAccordionInline extends HTMLElement {
     const headingText = this.getAttribute('heading') || 'Heading...';
     const headingLevel = this.getAttribute('level') || '3';
 
-    let html = `
+    let html = /*html*/ `
     <style>
       :host { 
         display: inline-flex;

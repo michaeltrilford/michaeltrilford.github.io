@@ -1,11 +1,11 @@
 class muiIconMoon extends HTMLElement {
   static get observedAttributes() {
-    return ["size", "color", "variant"];
+    return ['size', 'color', 'variant'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
@@ -14,7 +14,7 @@ class muiIconMoon extends HTMLElement {
 
   attributeChangedCallback(name, oldValue, newValue) {
     if (
-      (name === "size" || name === "color" || name === "variant") &&
+      (name === 'size' || name === 'color' || name === 'variant') &&
       oldValue !== newValue
     ) {
       this.render();
@@ -22,22 +22,22 @@ class muiIconMoon extends HTMLElement {
   }
 
   render() {
-    const size = this.getAttribute("size") || "small"; // Default size
-    const rawColor = this.getAttribute("color"); // Raw color
-    const variant = this.getAttribute("variant"); // Variant name
+    const size = this.getAttribute('size') || 'small'; // Default size
+    const rawColor = this.getAttribute('color'); // Raw color
+    const variant = this.getAttribute('variant'); // Variant name
 
     // Color map for predefined color options
     const colorMap = {
-      default: "var(--icon-color-default)",
-      inverted: "var(--icon-color-inverted)",
+      default: 'var(--icon-color-default)',
+      inverted: 'var(--icon-color-inverted)',
     };
 
     // Variant-to-color map for variants
     const variantColorMap = {
-      primary: "var(--icon-color-inverted)",
-      secondary: "var(--icon-color-default)",
-      tertiary: "var(--icon-color-default)",
-      attention: "var(--icon-color-inverted)",
+      primary: 'var(--icon-color-inverted)',
+      secondary: 'var(--icon-color-default)',
+      tertiary: 'var(--icon-color-default)',
+      attention: 'var(--icon-color-inverted)',
     };
 
     // Resolve color based on the provided variant or color attribute
@@ -45,19 +45,19 @@ class muiIconMoon extends HTMLElement {
       variantColorMap[variant] ||
       colorMap[rawColor] ||
       rawColor ||
-      "var(--icon-color-default)";
+      'var(--icon-color-default)';
 
     // Map size to actual values
     const sizeMap = {
-      "x-small": "1.6rem",
-      small: "2.4rem",
-      medium: "3.6rem",
-      large: "4.8rem",
+      'x-small': '1.6rem',
+      small: '2.4rem',
+      medium: '3.6rem',
+      large: '4.8rem',
     };
 
     const sizeStyleMap = sizeMap[size] || sizeMap.small;
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         :host {
           width: ${sizeStyleMap};
@@ -89,4 +89,4 @@ class muiIconMoon extends HTMLElement {
   }
 }
 
-customElements.define("mui-icon-moon", muiIconMoon);
+customElements.define('mui-icon-moon', muiIconMoon);

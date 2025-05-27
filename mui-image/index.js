@@ -5,7 +5,7 @@ class muiImage extends HTMLElement {
     this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
 
     <style>
 

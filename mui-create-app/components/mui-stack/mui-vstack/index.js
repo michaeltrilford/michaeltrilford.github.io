@@ -11,7 +11,7 @@ class muiVStack extends HTMLElement {
     this.alignX = `normal`; // justify-items
     this.alignY = `normal`; // align-items
 
-    this.styles = `
+    this.styles = /*css*/ `
       :host {
         display: block;
       }
@@ -29,7 +29,7 @@ class muiVStack extends HTMLElement {
 
     const partMap = getPartMap('spacing', 'layout', 'visual');
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>${this.styles}</style>
       <slot 
         part="${partMap}" 

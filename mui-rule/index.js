@@ -13,7 +13,7 @@ class muiRule extends HTMLElement {
     this.setAttribute('direction', this.getAttribute('direction') || direction);
     this.setAttribute('length', this.getAttribute('length') || length);
     this.setAttribute('weight', this.getAttribute('weight') || weight);
-    const styles = `
+    const styles = /*css*/ `
       :host {
         display: block;
         background: var(--border-color);

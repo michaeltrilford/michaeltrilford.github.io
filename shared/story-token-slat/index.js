@@ -23,7 +23,7 @@ class storyTokenSlat extends HTMLElement {
     const lineHeight = this.getAttribute('line-height');
     const fontWeight = this.getAttribute('font-weight');
 
-    const styles = `
+    const styles = /*css*/ `
       :host {
         display: block;
         padding: var(--space-400) var(--space-500);
@@ -84,13 +84,13 @@ class storyTokenSlat extends HTMLElement {
     let visualPreview = '';
     switch (variant) {
       case 'color':
-        visualPreview = `<div class="swatch" style="background: ${output};"></div>`;
+        visualPreview = /*html*/ `<div class="swatch" style="background: ${output};"></div>`;
         break;
       case 'text-color':
-        visualPreview = `<div class="text-preview" style="color: ${output};">Aa</div>`;
+        visualPreview = /*html*/ `<div class="text-preview" style="color: ${output};">Aa</div>`;
         break;
       case 'text-size':
-        visualPreview = `
+        visualPreview = /*html*/ `
             <div 
               class="text-preview" 
               style="font-size: ${output}; line-height: var(${lineHeight}); font-weight: var(${fontWeight});"
@@ -100,7 +100,7 @@ class storyTokenSlat extends HTMLElement {
         break;
 
       case 'line-height':
-        visualPreview = `
+        visualPreview = /*html*/ `
             <div 
               class="line-height-preview" 
               style="line-height: ${output}; font-size: var(${fontSize}); font-weight: var(${fontWeight});"
@@ -110,38 +110,38 @@ class storyTokenSlat extends HTMLElement {
         break;
 
       case 'font-weight':
-        visualPreview = `<div class="text-preview" style="font-weight: ${output};">Aa</div>`;
+        visualPreview = /*html*/ `<div class="text-preview" style="font-weight: ${output};">Aa</div>`;
         break;
       case 'font-family':
-        visualPreview = `<div class="text-preview" style="font-family: ${output};">Aa</div>`;
+        visualPreview = /*html*/ `<div class="text-preview" style="font-family: ${output};">Aa</div>`;
         break;
       case 'size':
-        visualPreview = `<div class="spacer" style="height: ${output}; width: ${output};"></div>`;
+        visualPreview = /*html*/ `<div class="spacer" style="height: ${output}; width: ${output};"></div>`;
         break;
       case 'radius':
-        visualPreview = `<div class="radius-preview" style="border-radius: ${output};"></div>`;
+        visualPreview = /*html*/ `<div class="radius-preview" style="border-radius: ${output};"></div>`;
         break;
       case 'border-width':
-        visualPreview = `<div class="border-preview" style="border: var(--border-thin); border-width: ${output};"></div>`;
+        visualPreview = /*html*/ `<div class="border-preview" style="border: var(--border-thin); border-width: ${output};"></div>`;
         break;
       case 'border-color':
-        visualPreview = `<div class="border-preview" style="border: var(--border-thin); border-color: ${output};"></div>`;
+        visualPreview = /*html*/ `<div class="border-preview" style="border: var(--border-thin); border-color: ${output};"></div>`;
         break;
       case 'border':
-        visualPreview = `<div class="border-preview" style="border: ${output};"></div>`;
+        visualPreview = /*html*/ `<div class="border-preview" style="border: ${output};"></div>`;
         break;
       case 'outline-width':
-        visualPreview = `<div class="outline-preview" style="outline: var(--outline-thin); outline-width: ${output};"></div>`;
+        visualPreview = /*html*/ `<div class="outline-preview" style="outline: var(--outline-thin); outline-width: ${output};"></div>`;
         break;
       case 'outline-color':
-        visualPreview = `<div class="outline-preview" style="outline: var(--outline-thin); outline-color: ${output};"></div>`;
+        visualPreview = /*html*/ `<div class="outline-preview" style="outline: var(--outline-thin); outline-color: ${output};"></div>`;
         break;
       case 'outline':
-        visualPreview = `<div class="outline-preview" style="outline: ${output};"></div>`;
+        visualPreview = /*html*/ `<div class="outline-preview" style="outline: ${output};"></div>`;
         break;
     }
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <mui-responsive breakpoint="767">

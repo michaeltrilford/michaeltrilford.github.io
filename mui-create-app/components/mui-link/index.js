@@ -1,26 +1,26 @@
 /* Mui Link */
 class muiLink extends HTMLElement {
   static get observedAttributes() {
-    return ["target", "href", "variant", "weight", "size"];
+    return ['target', 'href', 'variant', 'weight', 'size'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
 
     // Set defaults
-    const size = this.getAttribute("size") || "medium";
-    const weight = this.getAttribute("weight") || "regular";
-    this.setAttribute("size", size);
-    this.setAttribute("weight", weight);
+    const size = this.getAttribute('size') || 'medium';
+    const weight = this.getAttribute('weight') || 'regular';
+    this.setAttribute('size', size);
+    this.setAttribute('weight', weight);
   }
 
   async connectedCallback() {
     await this.waitForPartMap();
 
-    const partMap = getPartMap("text", "spacing", "layout", "visual");
+    const partMap = getPartMap('text', 'spacing', 'layout', 'visual');
 
-    let html = `
+    let html = /*html*/ `
     <style>
 
       :host { display: inline-flex; }
@@ -202,8 +202,8 @@ class muiLink extends HTMLElement {
 
     <a
       part="${partMap}" 
-      target="${this.getAttribute("target") || "_self"}" 
-      href="${this.getAttribute("href") || "#"}"
+      target="${this.getAttribute('target') || '_self'}" 
+      href="${this.getAttribute('href') || '#'}"
       >
       <slot></slot>
     </a>
@@ -213,9 +213,9 @@ class muiLink extends HTMLElement {
   }
   waitForPartMap() {
     return new Promise((resolve) => {
-      if (typeof getPartMap === "function") return resolve();
+      if (typeof getPartMap === 'function') return resolve();
       const check = () => {
-        if (typeof getPartMap === "function") {
+        if (typeof getPartMap === 'function') {
           resolve();
         } else {
           requestAnimationFrame(check);
@@ -226,4 +226,4 @@ class muiLink extends HTMLElement {
   }
 }
 
-customElements.define("mui-link", muiLink);
+customElements.define('mui-link', muiLink);

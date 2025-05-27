@@ -7,7 +7,7 @@ class muiRowGroup extends HTMLElement {
 
   connectedCallback() {
     this.setAttribute('role', 'rowgroup');
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
     <style>
       :host {
         display: block;

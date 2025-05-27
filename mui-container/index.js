@@ -5,7 +5,7 @@ class muiContainer extends HTMLElement {
     this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
     <style>
 
       :host {

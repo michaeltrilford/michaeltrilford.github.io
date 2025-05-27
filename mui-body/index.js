@@ -21,7 +21,7 @@ class muiBody extends HTMLElement {
 
     const partMap = getPartMap('spacing', 'layout', 'visual');
 
-    let html = `
+    let html = /*html*/ `
     <style>
       :host { display: block; }
 

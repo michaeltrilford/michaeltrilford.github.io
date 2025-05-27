@@ -10,7 +10,7 @@ class appNavbarHome extends HTMLElement {
   }
 
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
     <style>
 
       :host { 

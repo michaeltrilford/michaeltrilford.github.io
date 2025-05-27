@@ -49,7 +49,7 @@ class ThemeSwitcher extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         :host {display: block;}
         .grid {gap: var(--space-000);}

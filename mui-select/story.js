@@ -2,7 +2,7 @@ class storySelect extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
     `;
 
@@ -66,7 +66,7 @@ class storySelect extends HTMLElement {
 
     const rows = propItems
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
           <story-type-row
             ${prop.required ? 'required' : ''}
             name="${prop.name}"
@@ -84,7 +84,7 @@ class storySelect extends HTMLElement {
         // Check if it's the last item in the array
         const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
             <mui-accordion-block
               style="position: relative; z-index: 1;" 
               size="medium" 
@@ -104,7 +104,7 @@ class storySelect extends HTMLElement {
       })
       .join('');
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template

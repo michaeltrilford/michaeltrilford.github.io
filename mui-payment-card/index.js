@@ -21,9 +21,8 @@ class PaymentCard extends HTMLElement {
     const name = this.getAttribute('name') || 'Cardholder';
     const isFrozen = state === 'frozen';
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
-        /* --- Same CSS from your example but scoped to the component --- */
         @keyframes cardAnimation {
           60% {
             background-size: 400px 267px;

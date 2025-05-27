@@ -5,7 +5,7 @@ class appNavbarMenu extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
 
       :host {
         display: block;
@@ -36,7 +36,7 @@ class appNavbarMenu extends HTMLElement {
     `;
 
     // We provide the shadow root with some HTML
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <slot></slot>
     `;

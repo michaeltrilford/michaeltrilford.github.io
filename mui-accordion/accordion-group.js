@@ -6,7 +6,7 @@ class muiAccordionGroup extends HTMLElement {
   }
 
   connectedCallback() {
-    this.shadowRoot.innerHTML = `<slot></slot>`;
+    this.shadowRoot.innerHTML = /*html*/ `<slot></slot>`;
 
     requestAnimationFrame(() => {
       const slot = this.shadowRoot.querySelector('slot');

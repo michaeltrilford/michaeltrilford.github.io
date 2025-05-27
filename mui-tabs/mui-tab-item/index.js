@@ -22,7 +22,7 @@ class TabItem extends HTMLElement {
     this.shadowRoot.innerHTML = '';
 
     const style = document.createElement('style');
-    style.textContent = `
+    style.textContent = /*html*/ `
       :host {
         user-select: none;
         display: flex;

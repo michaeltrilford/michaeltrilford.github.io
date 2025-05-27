@@ -1,25 +1,25 @@
 class muiBody extends HTMLElement {
   static get observedAttributes() {
-    return ["size, weight"];
+    return ['size, weight'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
 
     // Set defaults
-    const size = this.getAttribute("size") || "medium";
-    const weight = this.getAttribute("weight") || "regular";
-    this.setAttribute("size", size);
-    this.setAttribute("weight", weight);
+    const size = this.getAttribute('size') || 'medium';
+    const weight = this.getAttribute('weight') || 'regular';
+    this.setAttribute('size', size);
+    this.setAttribute('weight', weight);
   }
 
   async connectedCallback() {
     await this.waitForPartMap();
 
-    const partMap = getPartMap("spacing", "layout", "visual");
+    const partMap = getPartMap('spacing', 'layout', 'visual');
 
-    let html = `
+    let html = /*html*/ `
     <style>
       :host { display: block; }
 
@@ -64,9 +64,9 @@ class muiBody extends HTMLElement {
   }
   waitForPartMap() {
     return new Promise((resolve) => {
-      if (typeof getPartMap === "function") return resolve();
+      if (typeof getPartMap === 'function') return resolve();
       const check = () => {
-        if (typeof getPartMap === "function") {
+        if (typeof getPartMap === 'function') {
           resolve();
         } else {
           requestAnimationFrame(check);
@@ -77,4 +77,4 @@ class muiBody extends HTMLElement {
   }
 }
 
-customElements.define("mui-body", muiBody);
+customElements.define('mui-body', muiBody);

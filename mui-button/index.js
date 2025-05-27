@@ -21,7 +21,7 @@ class muiButton extends HTMLElement {
 
     const partMap = getPartMap('text', 'spacing', 'layout', 'visual');
 
-    let html = `
+    let html = /*html*/ `
     <style>
 
 

@@ -14,7 +14,7 @@ class FileUpload extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         .wrapper {
           transition: background-color var(--speed-300) ease;

@@ -138,7 +138,7 @@ class muiInput extends HTMLElement {
       );
     }
 
-    const html = `
+    const html = /*html*/ `
       <style>
         :host {
           display: inline-block;

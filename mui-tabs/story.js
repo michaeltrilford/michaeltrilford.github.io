@@ -2,7 +2,7 @@ class storyTabBar extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
     `;
 
@@ -21,7 +21,7 @@ class storyTabBar extends HTMLElement {
 
     const tabBarControllerRows = propItemsController
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
       <story-type-row
         ${prop.required ? 'required' : ''}
         name="${prop.name}"
@@ -40,7 +40,7 @@ class storyTabBar extends HTMLElement {
         const isLastChild =
           index === propItemsController.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
       <mui-accordion-block
         class="card-slot"
         size="medium" 
@@ -80,7 +80,7 @@ class storyTabBar extends HTMLElement {
 
     const tabBarRows = propItemsTabBar
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
           <story-type-row
             ${prop.required ? 'required' : ''}
             name="${prop.name}"
@@ -99,7 +99,7 @@ class storyTabBar extends HTMLElement {
         const isLastChild =
           index === propItemsTabBar.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
             <mui-accordion-block
               class="card-slot"
               style="position: relative; z-index: 1;" 
@@ -155,7 +155,7 @@ class storyTabBar extends HTMLElement {
 
     const tabItemRows = propItemsTabItem
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
             <story-type-row
               ${prop.required ? 'required' : ''}
               name="${prop.name}"
@@ -174,7 +174,7 @@ class storyTabBar extends HTMLElement {
         const isLastChild =
           index === propItemsTabItem.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
               <mui-accordion-block
                 class="card-slot"
                 style="position: relative; z-index: 1;" 
@@ -211,7 +211,7 @@ class storyTabBar extends HTMLElement {
 
     const panelRows = propItemsPanel
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
             <story-type-row
               ${prop.required ? 'required' : ''}
               name="${prop.name}"
@@ -230,7 +230,7 @@ class storyTabBar extends HTMLElement {
         const isLastChild =
           index === propItemsPanel.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
           <mui-accordion-block
             class="card-slot"
             size="medium" 
@@ -258,11 +258,11 @@ class storyTabBar extends HTMLElement {
     const tabItemsHTML = tabData
       .map(({ id, label, icon, active }) => {
         const activeAttr = active ? ' active' : '';
-        return `<mui-tab-item id="${id}" icon="${icon}"${activeAttr}>${label}</mui-tab-item>`;
+        return /*html*/ `<mui-tab-item id="${id}" icon="${icon}"${activeAttr}>${label}</mui-tab-item>`;
       })
       .join('');
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template

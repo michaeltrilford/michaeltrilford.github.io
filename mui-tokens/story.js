@@ -1,14 +1,14 @@
 class storyTokens extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    const styles = `
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+    const styles = /*css*/ `
       :host { display: block; }
     `;
 
     const Columns = `1fr 1fr`;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 
@@ -33,4 +33,4 @@ class storyTokens extends HTMLElement {
   }
 }
 
-customElements.define("story-tokens", storyTokens);
+customElements.define('story-tokens', storyTokens);

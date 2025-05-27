@@ -1,18 +1,18 @@
 /* Mui H Stack */
 class muiHStack extends HTMLElement {
   static get observedAttributes() {
-    return ["space", "alignY", "alignX"];
+    return ['space', 'alignY', 'alignX'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
 
     this.space = `var(--space-500)`;
     this.alignY = `flex-start`;
     this.alignX = `flex-start`;
 
-    this.styles = `
+    this.styles = /*css*/ `
       :host {
         display: block;
       }
@@ -28,16 +28,16 @@ class muiHStack extends HTMLElement {
   async connectedCallback() {
     await this.waitForPartMap();
 
-    const partMap = getPartMap("spacing", "layout", "visual");
+    const partMap = getPartMap('spacing', 'layout', 'visual');
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>${this.styles}</style>
       <slot 
         part="${partMap}" 
         style="
-          --space: ${this.getAttribute("space") || this.space};
-          --alignY: ${this.getAttribute("alignY") || this.alignY};
-          --alignX: ${this.getAttribute("alignX") || this.alignX};
+          --space: ${this.getAttribute('space') || this.space};
+          --alignY: ${this.getAttribute('alignY') || this.alignY};
+          --alignX: ${this.getAttribute('alignX') || this.alignX};
         ">
       </slot>
     `;
@@ -45,9 +45,9 @@ class muiHStack extends HTMLElement {
 
   waitForPartMap() {
     return new Promise((resolve) => {
-      if (typeof getPartMap === "function") return resolve();
+      if (typeof getPartMap === 'function') return resolve();
       const check = () => {
-        if (typeof getPartMap === "function") {
+        if (typeof getPartMap === 'function') {
           resolve();
         } else {
           requestAnimationFrame(check);
@@ -58,4 +58,4 @@ class muiHStack extends HTMLElement {
   }
 }
 
-customElements.define("mui-h-stack", muiHStack);
+customElements.define('mui-h-stack', muiHStack);

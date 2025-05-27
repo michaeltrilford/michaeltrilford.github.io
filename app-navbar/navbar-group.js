@@ -1,16 +1,16 @@
 /* myApp */
 class appNavbarGroup extends HTMLElement {
   static get observedAttributes() {
-    return ["groupname"];
+    return ['groupname'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
     <style>
 
       :host {
@@ -42,7 +42,7 @@ class appNavbarGroup extends HTMLElement {
 
     </style>
 
-    <span>${this.getAttribute("groupname")}</span>
+    <span>${this.getAttribute('groupname')}</span>
     <slot></slot>
 
     `;
@@ -51,4 +51,4 @@ class appNavbarGroup extends HTMLElement {
   }
 }
 
-customElements.define("app-navbar-group", appNavbarGroup);
+customElements.define('app-navbar-group', appNavbarGroup);

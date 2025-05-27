@@ -2,7 +2,7 @@ class storyCarousel extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
 
       /* Customised Carousel */ 
@@ -86,7 +86,7 @@ class storyCarousel extends HTMLElement {
 
     const rowsController = propItemsController
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
       <story-type-row
         ${prop.required ? 'required' : ''}
         name="${prop.name}"
@@ -105,7 +105,7 @@ class storyCarousel extends HTMLElement {
         const isLastChild =
           index === propItemsController.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
       <mui-accordion-block 
         size="medium" 
         heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
@@ -147,7 +147,7 @@ class storyCarousel extends HTMLElement {
 
     const rowsTabBar = propItemsTabBar
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
           <story-type-row
             ${prop.required ? 'required' : ''}
             name="${prop.name}"
@@ -166,7 +166,7 @@ class storyCarousel extends HTMLElement {
         const isLastChild =
           index === propItemsTabBar.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
           <mui-accordion-block 
             size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
@@ -209,7 +209,7 @@ class storyCarousel extends HTMLElement {
 
     const rowsPanel = propItemsPanel
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
             <story-type-row
               ${prop.required ? 'required' : ''}
               name="${prop.name}"
@@ -228,7 +228,7 @@ class storyCarousel extends HTMLElement {
         const isLastChild =
           index === propItemsPanel.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
           <mui-accordion-block 
             size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
@@ -276,7 +276,7 @@ class storyCarousel extends HTMLElement {
 
     const carouselItems = carouselData
       .map(({ id, heading, description, image }) => {
-        return `
+        return /*html*/ `
         <mui-carousel-panel slot="item" item="${id}">
           <div class="grid">
             <div class="hero">
@@ -292,7 +292,7 @@ class storyCarousel extends HTMLElement {
       })
       .join('');
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template

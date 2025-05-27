@@ -7,7 +7,7 @@ class muiTable extends HTMLElement {
 
   connectedCallback() {
     this.setAttribute('role', 'table');
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
     <style>
       :host {
         display: block;

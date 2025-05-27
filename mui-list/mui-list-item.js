@@ -1,21 +1,21 @@
 /* Mui List Item */
 class muiListItem extends HTMLElement {
   static get observedAttributes() {
-    return ["variant", "size", "weight"];
+    return ['variant', 'size', 'weight'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
-    this.setAttribute("role", "listitem");
+    this.attachShadow({ mode: 'open' });
+    this.setAttribute('role', 'listitem');
 
     // Set default attributes if they’re not provided
-    if (!this.hasAttribute("size")) {
-      this.setAttribute("size", "medium");
+    if (!this.hasAttribute('size')) {
+      this.setAttribute('size', 'medium');
     }
 
-    if (!this.hasAttribute("weight")) {
-      this.setAttribute("weight", "regular");
+    if (!this.hasAttribute('weight')) {
+      this.setAttribute('weight', 'regular');
     }
 
     this.render();
@@ -26,10 +26,10 @@ class muiListItem extends HTMLElement {
   }
 
   render() {
-    const size = this.getAttribute("size") || "medium";
-    const weight = this.getAttribute("weight") || "regular";
+    const size = this.getAttribute('size') || 'medium';
+    const weight = this.getAttribute('weight') || 'regular';
 
-    const styles = `
+    const styles = /*css*/ `
       :host {
         display: list-item;
         margin: var(--space-000);
@@ -73,11 +73,11 @@ class muiListItem extends HTMLElement {
       }
     `;
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <slot></slot>
     `;
   }
 }
 
-customElements.define("mui-list-item", muiListItem);
+customElements.define('mui-list-item', muiListItem);

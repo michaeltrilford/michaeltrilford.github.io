@@ -7,7 +7,7 @@ class CarouselController extends HTMLElement {
     this.handleTabChange = this.handleTabChange.bind(this);
     this.shadow = this.attachShadow({ mode: 'open' });
 
-    this.shadow.innerHTML = `
+    this.shadow.innerHTML = /*html*/ `
     <style>
       :host {
         display: block;

@@ -5,7 +5,7 @@ class appNavbarTheme extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
 
       :host {
         display: block;
@@ -21,7 +21,7 @@ class appNavbarTheme extends HTMLElement {
     `;
 
     // We provide the shadow root with some HTML
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <mui-grid col="1fr auto" space="var(--space-400)">
         <theme-switcher></theme-switcher>

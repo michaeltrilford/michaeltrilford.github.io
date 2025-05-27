@@ -13,7 +13,7 @@ class muiAccordionBlock extends HTMLElement {
     const size = this.getAttribute('size') || 'medium';
     const headingLevel = this.getAttribute('level') || '3';
 
-    let html = `
+    let html = /*html*/ `
     <style>
 
       :host { display: block; }

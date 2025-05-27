@@ -8,7 +8,7 @@ class storyTypeRow extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
       :host { 
         display: block;
       }
@@ -39,7 +39,8 @@ class storyTypeRow extends HTMLElement {
         ? rawOptions
             .split(',')
             .map(
-              (opt) => `<story-code-snippet>${opt.trim()}</story-code-snippet>`,
+              (opt) =>
+                /*html*/ `<story-code-snippet>${opt.trim()}</story-code-snippet>`,
             )
             .join(' ')
         : '-';
@@ -47,10 +48,10 @@ class storyTypeRow extends HTMLElement {
     const rawDefault = this.getAttribute('default') || '-';
     const defaultVal =
       rawDefault !== '-'
-        ? `<story-code-snippet>${rawDefault}</story-code-snippet>`
+        ? /*html*/ `<story-code-snippet>${rawDefault}</story-code-snippet>`
         : '-';
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <mui-row-group>
@@ -60,7 +61,7 @@ class storyTypeRow extends HTMLElement {
               <mui-h-stack space="var(--space-050)">
               ${name} ${
       required
-        ? '<span aria-hidden="true" style="color: var(--red-500)">*</span><span class="visually-hidden">(required)</span>'
+        ? /*html*/ '<span aria-hidden="true" style="color: var(--red-500)">*</span><span class="visually-hidden">(required)</span>'
         : ''
     }
             </mui-h-stack></mui-body>

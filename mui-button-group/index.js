@@ -2,10 +2,10 @@
 class muiButtonGroup extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
     <style>
 
       @import url("./css/mui-reset.css");
@@ -24,4 +24,4 @@ class muiButtonGroup extends HTMLElement {
   }
 }
 
-customElements.define("mui-button-group", muiButtonGroup);
+customElements.define('mui-button-group', muiButtonGroup);

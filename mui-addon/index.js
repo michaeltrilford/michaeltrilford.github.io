@@ -27,7 +27,7 @@ class MuiAddon extends HTMLElement {
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         :host {
           display: inline-flex;

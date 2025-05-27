@@ -1,20 +1,20 @@
 class muiHeading extends HTMLElement {
   static get observedAttributes() {
-    return ["size", "level"];
+    return ['size', 'level'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    const size = this.getAttribute("size") || "1";
-    const level = this.getAttribute("level") || size; // fallback if level isn't provided
+    const size = this.getAttribute('size') || '1';
+    const level = this.getAttribute('level') || size; // fallback if level isn't provided
 
     const tag = `h${level}`;
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         @import url("./css/mui-reset.css");
         :host { display: block; }
@@ -39,4 +39,4 @@ class muiHeading extends HTMLElement {
   }
 }
 
-customElements.define("mui-heading", muiHeading);
+customElements.define('mui-heading', muiHeading);

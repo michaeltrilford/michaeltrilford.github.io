@@ -1,16 +1,16 @@
 /* myApp */
 class appNavbarLink extends HTMLElement {
   static get observedAttributes() {
-    return ["link", "title"];
+    return ['link', 'title'];
   }
 
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
 
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
     <style>
 
       :host {
@@ -64,8 +64,8 @@ class appNavbarLink extends HTMLElement {
 
     </style>
 
-    <mui-link href="${this.getAttribute("link")}">${this.getAttribute(
-      "title"
+    <mui-link href="${this.getAttribute('link')}">${this.getAttribute(
+      'title',
     )}</mui-link> 
 
     `;
@@ -74,4 +74,4 @@ class appNavbarLink extends HTMLElement {
   }
 }
 
-customElements.define("app-navbar-link", appNavbarLink);
+customElements.define('app-navbar-link', appNavbarLink);

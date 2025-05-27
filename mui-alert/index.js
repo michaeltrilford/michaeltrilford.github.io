@@ -66,7 +66,7 @@ class muiAlert extends HTMLElement {
         attention: 'Error!',
       }[variant] || 'Success!';
 
-    const styles = `
+    const styles = /*css*/ `
       :host {
         border-radius: var(--alert-radius);
         padding: var(--alert-padding);
@@ -105,7 +105,7 @@ class muiAlert extends HTMLElement {
 
       ${['positive', 'info', 'warning', 'attention']
         .map(
-          (v) => `
+          (v) => /*css*/ `
         :host([variant="${v}"]) {
           border: var(--feedback-${v}-border);
           background: var(--feedback-${v}-background);
@@ -117,7 +117,7 @@ class muiAlert extends HTMLElement {
 
     // Add the feedback states to body
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <${iconTag} size="small" color="var(${iconColor})" class="icon"></${iconTag}>
       <mui-body>

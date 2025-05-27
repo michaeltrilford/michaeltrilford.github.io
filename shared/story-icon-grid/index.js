@@ -29,7 +29,7 @@ class storyIconGrid extends HTMLElement {
 
     const backgroundColor = colorMap[theme] || colorMap.default;
 
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
       mui-card {
         background-color: ${backgroundColor};
@@ -41,7 +41,7 @@ class storyIconGrid extends HTMLElement {
       }
     `;
 
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <mui-card>
         <mui-card-body style="text-align: center;">

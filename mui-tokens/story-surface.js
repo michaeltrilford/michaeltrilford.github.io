@@ -2,7 +2,7 @@ class storyTokensSurface extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
 
       .surface {
@@ -53,7 +53,7 @@ class storyTokensSurface extends HTMLElement {
 
     const rows = propItems
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
           <story-token-type-row
             token="${prop.token}"
             usage="${prop.usage}" 
@@ -68,7 +68,7 @@ class storyTokensSurface extends HTMLElement {
         // Check if it's the last item in the array
         const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
           <mui-accordion-block 
             size="medium" 
             heading=${prop.token.charAt(0).toUpperCase() + prop.token.slice(1)} 
@@ -84,7 +84,7 @@ class storyTokensSurface extends HTMLElement {
       })
       .join('');
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 

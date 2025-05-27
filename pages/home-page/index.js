@@ -3,19 +3,19 @@ class HomePage extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const intro = `
+    const intro = /*html*/ `
       <mui-body class="introduction" size="small" weight="bold">
         An experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS.
       </mui-body>
     `;
 
-    const subcontent = `
+    const subcontent = /*html*/ `
       <mui-body class="subcontent" size="small" weight="bold">
         The Web Components are based on past exploration at <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">codepen.io/trilm</mui-link>
       </mui-body>
     `;
 
-    const styles = `
+    const styles = /*css*/ `
       :host { 
         display: flex; 
         width: 100%;
@@ -192,7 +192,7 @@ class HomePage extends HTMLElement {
 
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <mui-container slot="main-content" center fluid>

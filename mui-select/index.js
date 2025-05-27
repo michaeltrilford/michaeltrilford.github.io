@@ -116,7 +116,7 @@ class muiSelect extends HTMLElement {
       )
       .join('');
 
-    const html = `
+    const html = /*html*/ `
       <style>
         :host {
           display: inline-block;
@@ -237,7 +237,7 @@ class muiSelect extends HTMLElement {
       </style>
       ${
         label
-          ? `<label for="${id}" class="${
+          ? /*html*/ `<label for="${id}" class="${
               hideLabel ? 'vh' : ''
             }">${label}</label>`
           : ''

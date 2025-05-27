@@ -1,14 +1,14 @@
 class storyRule extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    const styles = `
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+    const styles = /*css*/ `
       :host { display: block; }
     `;
 
     const TableColumns = `1fr 1fr`;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 
@@ -115,4 +115,4 @@ class storyRule extends HTMLElement {
   }
 }
 
-customElements.define("story-rule", storyRule);
+customElements.define('story-rule', storyRule);

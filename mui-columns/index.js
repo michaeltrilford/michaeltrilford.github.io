@@ -2,10 +2,10 @@
 class muiColumns extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
     <style>
 
       @import url("./css/mui-reset.css");
@@ -45,4 +45,4 @@ class muiColumns extends HTMLElement {
   }
 }
 
-customElements.define("mui-columns", muiColumns);
+customElements.define('mui-columns', muiColumns);

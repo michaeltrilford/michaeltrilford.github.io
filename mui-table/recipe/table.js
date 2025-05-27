@@ -5,7 +5,7 @@ class appTable extends HTMLElement {
 
     const Columns = `1fr 1fr 1fr auto`;
 
-    const Table = `
+    const Table = /*html*/ `
       <mui-table>
         <mui-row-group heading>
           <mui-row columns="${Columns}">
@@ -38,7 +38,7 @@ class appTable extends HTMLElement {
     `;
 
     // We provide the shadow root with some HTML
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
     <style>
       :host {
         display: block;

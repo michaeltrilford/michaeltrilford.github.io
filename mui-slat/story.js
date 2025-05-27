@@ -1,12 +1,12 @@
 class storySlat extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    const styles = `
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+    const styles = /*css*/ `
       :host { display: block; }
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 
@@ -49,4 +49,4 @@ class storySlat extends HTMLElement {
   }
 }
 
-customElements.define("story-slat", storySlat);
+customElements.define('story-slat', storySlat);

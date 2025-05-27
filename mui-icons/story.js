@@ -2,7 +2,7 @@ class storyIcon extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
 
       mui-grid::part(internal) {
@@ -40,7 +40,7 @@ class storyIcon extends HTMLElement {
 
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 

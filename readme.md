@@ -38,3 +38,10 @@ Refer to the main documentation for guidance on:
 ## License
 
 MIT — free to use, modify, and distribute.
+
+## Syntax Highlighting with Template Literals
+
+es6-string-html plugin
+
+- `/*html*/`
+- `/*css*/`

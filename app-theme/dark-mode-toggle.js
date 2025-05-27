@@ -32,7 +32,7 @@ class DarkModeToggle extends HTMLElement {
 
   render(theme) {
     const isDark = theme === 'dark';
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
       <style>
         :host {
         display: block;

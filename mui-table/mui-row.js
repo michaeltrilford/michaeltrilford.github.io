@@ -11,7 +11,7 @@ class muiRow extends HTMLElement {
 
   connectedCallback() {
     this.setAttribute('role', 'row');
-    this.shadowRoot.innerHTML = `
+    this.shadowRoot.innerHTML = /*html*/ `
     <style>
       :host {
         display: grid;

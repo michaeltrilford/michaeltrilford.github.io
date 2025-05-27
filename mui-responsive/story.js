@@ -2,7 +2,7 @@ class storyResponsive extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
       .local-ring {
         height: 6rem;
@@ -19,7 +19,7 @@ class storyResponsive extends HTMLElement {
       }
     `;
 
-    const LocalRing = `
+    const LocalRing = /*html*/ `
       <div class="local-ring">
         <svg 
           width="100%" 
@@ -37,7 +37,7 @@ class storyResponsive extends HTMLElement {
 
     const ProgressTableColumns = `1fr 1fr 1fr 106px`;
 
-    const ProgressTableView = `
+    const ProgressTableView = /*html*/ `
       <mui-table> 
         <mui-row-group heading> 
           <mui-row columns="${ProgressTableColumns}"> 
@@ -58,7 +58,7 @@ class storyResponsive extends HTMLElement {
       </mui-table>
     `;
 
-    const ProgressSlatView = `
+    const ProgressSlatView = /*html*/ `
         <mui-v-stack space="var(--space-400)">
           ${LocalRing}
           <mui-heading 
@@ -88,7 +88,7 @@ class storyResponsive extends HTMLElement {
         </mui-v-stack>
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 

@@ -1,12 +1,12 @@
 class storyHeading extends HTMLElement {
   constructor() {
     super();
-    const shadowRoot = this.attachShadow({ mode: "open" });
-    const styles = `
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+    const styles = /*css*/ `
       :host { display: block; }
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template 
@@ -79,4 +79,4 @@ class storyHeading extends HTMLElement {
   }
 }
 
-customElements.define("story-heading", storyHeading);
+customElements.define('story-heading', storyHeading);

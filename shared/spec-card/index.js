@@ -7,7 +7,7 @@ class specCard extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
 
       mui-card {
@@ -30,14 +30,14 @@ class specCard extends HTMLElement {
 
     const title = this.getAttribute('title') || '';
     const description = this.hasAttribute('description')
-      ? `<mui-body style="max-width: 86ch;">${this.getAttribute(
+      ? /*html*/ `<mui-body style="max-width: 86ch;">${this.getAttribute(
           'description',
         )}</mui-body>`
       : '';
 
     const githubLink = this.getAttribute('github');
     const githubContent = githubLink
-      ? `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="tertiary">View Usage<github-mark></github-mark></mui-link>`
+      ? /*html*/ `<mui-link class="github" href="${githubLink}" target="_blank" rel="noopener" variant="tertiary">View Usage<github-mark></github-mark></mui-link>`
       : '';
 
     // Handle usage list
@@ -54,13 +54,13 @@ class specCard extends HTMLElement {
     }
 
     const usageContent = usageArray.length
-      ? `
+      ? /*html*/ `
         <mui-heading size="6" level="3" style="margin-top: var(--space-300); margin-bottom: var(--space-050);">Usage details</mui-heading>
         <mui-list as="ul" style="max-width: 65ch;">
           ${usageArray
             .map(
               (usage) =>
-                `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${usage.trim()}</mui-list-item>`,
+                /*html*/ `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${usage.trim()}</mui-list-item>`,
             )
             .join('')}
         </mui-list>
@@ -86,26 +86,26 @@ class specCard extends HTMLElement {
     }
 
     const accessibilityContent = accessibilityArray.length
-      ? `
+      ? /*html*/ `
     <mui-heading size="6" level="3" style="margin-top: var(--space-300); margin-bottom: var(--space-050);">Accessibility details</mui-heading>
     <mui-list as="ul" style="max-width: 65ch;">
       ${accessibilityArray
         .map(
           (accessibility) =>
-            `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${accessibility.trim()}</mui-list-item>`,
+            /*html*/ `<mui-list-item size="small" weight="medium" style="margin-bottom: var(--space-050)">${accessibility.trim()}</mui-list-item>`,
         )
         .join('')}
     </mui-list>
   `
       : '';
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <mui-card>
         ${
           this.hasAttribute('noheader')
             ? ''
-            : `
+            : /*html*/ `
           <mui-card-header>
             <mui-h-stack alignX="space-between" alignY="center">
               <mui-heading size="3" level="2">${title}</mui-heading>

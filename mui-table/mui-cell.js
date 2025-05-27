@@ -8,7 +8,7 @@ class muiCell extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
     this.setAttribute('role', 'cell');
-    const styles = `
+    const styles = /*css*/ `
     :host {
       display: flex;
       justify-content: space-between;
@@ -54,7 +54,7 @@ class muiCell extends HTMLElement {
     }
   `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
     <style>${styles}</style>
     <slot></slot>
   `;

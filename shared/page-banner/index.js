@@ -3,7 +3,7 @@ class pageBanner extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
 
       @media (min-width: 1288px) {
@@ -69,7 +69,7 @@ class pageBanner extends HTMLElement {
 
     `;
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
         <mui-responsive breakpoint="1287" class="banner">
           <mui-grid slot="showBelow" space="var(--space-600)" col="1fr">

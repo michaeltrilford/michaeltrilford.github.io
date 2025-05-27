@@ -5,7 +5,7 @@ class appNavbarSkip extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
-    const styles = `
+    const styles = /*css*/ `
 
       :host {
         display: flex;
@@ -62,7 +62,7 @@ class appNavbarSkip extends HTMLElement {
     `;
 
     // We provide the shadow root with some HTML
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
       <mui-button variant="primary" class="skip-to-main" role="button">Skip Nav</mui-button>
     `;

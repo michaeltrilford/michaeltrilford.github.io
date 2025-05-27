@@ -2,7 +2,7 @@ class storyFileUpload extends HTMLElement {
   constructor() {
     super();
     const shadowRoot = this.attachShadow({ mode: 'open' });
-    const styles = `
+    const styles = /*css*/ `
       :host { display: block; }
     `;
 
@@ -25,7 +25,7 @@ class storyFileUpload extends HTMLElement {
 
     const rows = propItems
       .map(
-        (prop) => `
+        (prop) => /*html*/ `
           <story-type-row
             ${prop.required ? 'required' : ''}
             name="${prop.name}"
@@ -43,7 +43,7 @@ class storyFileUpload extends HTMLElement {
         // Check if it's the last item in the array
         const isLastChild = index === propItems.length - 1 ? 'last-child' : '';
 
-        return `
+        return /*html*/ `
           <mui-accordion-block 
             size="medium" 
             heading=${prop.name.charAt(0).toUpperCase() + prop.name.slice(1)} 
@@ -62,7 +62,7 @@ class storyFileUpload extends HTMLElement {
       })
       .join('');
 
-    shadowRoot.innerHTML = `
+    shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
       <story-template

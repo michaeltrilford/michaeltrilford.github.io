@@ -5,7 +5,7 @@ class muiCardHeader extends HTMLElement {
     this.attachShadow({ mode: 'open' });
   }
   connectedCallback() {
-    let html = `
+    let html = /*html*/ `
     <style>
       :host {
         display: block;
