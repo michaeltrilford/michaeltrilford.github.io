@@ -152,7 +152,7 @@ class storyTokensBase extends HTMLElement {
             <story-token-slat slot="body" token="--green-800" variant="color" output="#007F00"></story-token-slat>
             <story-token-slat slot="body" token="--green-900" variant="color" output="#006B00"></story-token-slat>
             <story-token-slat slot="body" token="--green-1000" variant="color" output="#005700"></story-token-slat>
-          </tokens-card>
+          </spec-card>
 
           <spec-card title="Colors / Blue">
             <story-token-slat slot="body" token="--blue-100" variant="color" output="#E6F2FF"></story-token-slat>

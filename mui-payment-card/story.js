@@ -8,12 +8,13 @@ class storyPaymentCard extends HTMLElement {
 
     const propItems = [
       {
-        name: 'name',
+        name: 'number',
         required: true,
-        type: 'string',
-        options: '{text}, mui-icon-[name]',
+        type: 'number',
+        options: '',
         default: '',
-        description: '',
+        description:
+          'Only the last 4 digits are shown (no full card number for security)',
       },
       {
         name: 'state',
@@ -23,11 +24,40 @@ class storyPaymentCard extends HTMLElement {
         description: '',
       },
       {
-        name: 'type',
+        name: 'logo',
         type: 'string',
-        options: 'physical, virtual',
+        options: '',
+        default: '',
+        description: 'Add a logo to the card',
+      },
+      {
+        name: 'logo-width',
+        type: 'number',
+        options: '',
+        default: '',
+        description: 'Define the base width',
+      },
+      {
+        name: 'logo-height',
+        type: 'number',
+        options: '',
+        default: '',
+        description: 'Define the base height',
+      },
+      {
+        name: 'variant',
+        type: 'string',
+        options: 'Physical, Virtual',
         default: '',
         description: '',
+      },
+      {
+        name: 'type',
+        type: 'string',
+        options: 'Debit, Credit, etc',
+        default: '',
+        description:
+          'Used to visually or semantically describe the card’s usage.',
       },
     ];
 
@@ -93,31 +123,180 @@ class storyPaymentCard extends HTMLElement {
           </mui-responsive>
         </spec-card>
 
-        <story-card title="Virtual">
+        <story-card title="Physical" description="The max-width is 220px with a max-height of 126px.">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
-            <mui-payment-card name="Mike Trilford"></mui-payment-card>
+          <mui-payment-card
+            variant="physical"
+            type="Debit"
+            number="1234"
+            logo="./images/image-220.png"
+          >
+          </mui-payment-card>
           </mui-v-stack>
           <mui-code slot="footer">
-            &lt;mui-payment-card type="virtual" 
-            <br />
-            &nbsp;&nbsp;name="Mike Trilford"
-            <br />
-            &gt;&lt;/mui-payment-card&gt;
+            &lt;mui-payment-card<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;variant="physical"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;type="Debit"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;number="1234"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo="./images/image-220.png"<br>
+            &gt;<br>
+            &lt;/mui-payment-card&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Logo Width" description="The component will resize the logo on smaller viewports">
+          <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
+          <mui-payment-card
+            variant="physical"
+            provider="mastercard"
+            type="Debit"
+            number="1234"
+            logo="./images/mui-card-black.svg"
+            logo-width="180"
+          >
+          </mui-payment-card>
+          </mui-v-stack>
+            <mui-code slot="footer">
+              &lt;mui-payment-card<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;variant="virtual"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;provider="mastercard"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;type="Debit"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;number="1234"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;logo="./images/mui-card-black.svg"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;logo-width="180"<br>
+              &gt;<br>
+              &lt;/mui-payment-card&gt;
+            </mui-code>
+        </story-card>
+
+        <story-card title="Logo Width & Height" description="The height should not exceed 126px">
+          <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
+          <mui-payment-card
+            variant="physical"
+            provider="mastercard"
+            type="Debit"
+            number="1234"
+            logo="./images/guides.svg"
+            logo-width="80"
+            logo-height="80"
+          >
+          </mui-payment-card>
+          </mui-v-stack>
+          <mui-code slot="footer">
+            &lt;mui-payment-card<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;variant="virtual"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;provider="mastercard"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;type="Debit"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;number="1234"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo="./images/guides.svg"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo-width="80"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo-height="80"<br>
+            &gt;<br>
+            &lt;/mui-payment-card&gt;
+          </mui-code>
+        </story-card>
+
+
+        <story-card title="Virtual" description="The max-width is 220px with a max-height of 126px.">
+          <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
+
+          <mui-payment-card
+            variant="virtual"
+            number="1234"
+            type="Debit"
+            logo="./images/image-220.png"
+          >
+          </mui-payment-card>
+          </mui-v-stack>
+          <mui-code slot="footer">
+            &lt;mui-payment-card<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;variant="virtual"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;number="1234"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;type="Debit"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo="./images/image-220.png"<br>
+            &gt;<br>
+            &lt;/mui-payment-card&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Logo Width">
+          <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
+          <mui-payment-card
+            variant="virtual"
+            provider="mastercard"
+            type="Debit"
+            number="1234"
+            logo="./images/mui-card-black.svg"
+            logo-width="180"
+          >
+          </mui-payment-card>
+          </mui-v-stack>
+            <mui-code slot="footer">
+              &lt;mui-payment-card<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;variant="virtual"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;provider="mastercard"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;type="Debit"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;number="1234"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;logo="./images/mui-card-black.svg"<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;logo-width="180"<br>
+              &gt;<br>
+              &lt;/mui-payment-card&gt;
+            </mui-code>
+        </story-card>
+
+        <story-card title="Logo Height & Width" description="The height should not exceed 126px">
+          <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
+          <mui-payment-card
+            variant="virtual"
+            provider="mastercard"
+            type="Debit"
+            number="1234"
+            logo="./images/guides.svg"
+            logo-width="80"
+            logo-height="80"
+          >
+          </mui-payment-card>
+          </mui-v-stack>
+          <mui-code slot="footer">
+            &lt;mui-payment-card<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;variant="virtual"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;provider="mastercard"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;type="Debit"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;number="1234"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo="./images/guides.svg"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo-width="80"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo-height="80"<br>
+            &gt;<br>
+            &lt;/mui-payment-card&gt;
           </mui-code>
         </story-card>
 
         <story-card title="Virtual / Frozen">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
-            <mui-payment-card name="Mike Trilford" state="frozen"></mui-payment-card>
+
+            <mui-payment-card
+              variant="virtual"
+              provider="visa"
+              number="1234"
+              type="Debit"
+              state="frozen"
+              logo="./images/mui-card-black.svg"
+              logo-width="180"
+            >
+            </mui-payment-card>
+
           </mui-v-stack>
           <mui-code slot="footer">
-            &lt;mui-payment-card type="virtual" 
-            <br />
-            &nbsp;&nbsp;name="Mike Trilford" 
-            <br />
-            &nbsp;&nbsp;state="frozen"
-            <br />
-            &gt;&lt;/mui-payment-card&gt;
+            &lt;mui-payment-card<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;variant="virtual"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;provider="visa"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;number="1234"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;type="Debit"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;state="frozen"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo="./images/mui-card-black.svg"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;logo-width="180"<br>
+            &gt;<br>
+            &lt;/mui-payment-card&gt;
           </mui-code>
         </story-card>
 
