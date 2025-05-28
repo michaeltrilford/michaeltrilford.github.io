@@ -114,7 +114,7 @@ class compWallet extends HTMLElement {
         <story-card title="Transactions">
 
           <mui-v-stack alignX="stretch" slot="body" style="max-width: 365px; margin: 0 auto; padding-top: var(--space-700); padding-bottom: var(--space-700)">
-            <mui-payment-card
+            <mui-smart-card
               variant="virtual"
               provider="visa"
               type="Debit"
@@ -122,7 +122,7 @@ class compWallet extends HTMLElement {
               logo="./images/mui-card-black.svg"
               logo-height="100"
             >
-            </mui-payment-card>
+            </mui-smart-card>
 
             <mui-slat style="padding-left: var(--space-400); padding-right: var(--space-400);">
               <mui-v-stack slot="start" space="0" slot="end">
@@ -170,14 +170,14 @@ class compWallet extends HTMLElement {
           &nbsp;&nbsp;"<br>
           &gt;<br><br>
 
-          &nbsp;&nbsp;&lt;mui-payment-card<br>
+          &nbsp;&nbsp;&lt;mui-smart-card<br>
           &nbsp;&nbsp;&nbsp;&nbsp;variant="virtual"<br>
           &nbsp;&nbsp;&nbsp;&nbsp;provider="visa"<br>
           &nbsp;&nbsp;&nbsp;&nbsp;type="Debit"<br>
           &nbsp;&nbsp;&nbsp;&nbsp;number="1234"<br>
           &nbsp;&nbsp;&nbsp;&nbsp;logo="./images/mui-card-black.svg"<br>
           &nbsp;&nbsp;&nbsp;&nbsp;logo-height="100"<br>
-          &nbsp;&nbsp;&gt;&lt;/mui-payment-card&gt;<br><br>
+          &nbsp;&nbsp;&gt;&lt;/mui-smart-card&gt;<br><br>
 
           &nbsp;&nbsp;&lt;mui-slat<br>
           &nbsp;&nbsp;&nbsp;&nbsp;style="padding-left: var(--space-400);<br>

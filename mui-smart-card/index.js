@@ -1,16 +1,17 @@
-class PaymentCard extends HTMLElement {
+class SmartCard extends HTMLElement {
   static get observedAttributes() {
     return [
       'state',
       'number',
       'variant',
-      'provider',
+      'partner',
       'type',
       'logo',
       'logo-width',
       'logo-height',
-      'background-color',
-      'background-image',
+      'bg-color',
+      'bg-image',
+      'invert',
     ];
   }
 
@@ -30,10 +31,11 @@ class PaymentCard extends HTMLElement {
   render() {
     const state = this.getAttribute('state') || 'default';
     const number = this.getAttribute('number') || '0000';
-    const background = this.getAttribute('background-color');
-    const backgroundImage = this.getAttribute('background-image');
-    const variant = this.getAttribute('variant') || 'physical';
-    const provider = this.getAttribute('provider') || 'visa';
+    const background = this.getAttribute('bg-color');
+    const backgroundImage = this.getAttribute('bg-image');
+    const variant = this.getAttribute('variant') || 'plain';
+    const invert = this.hasAttribute('invert');
+    const partner = this.getAttribute('partner') || 'visa';
     const type = this.getAttribute('type') || '';
     const isFrozen = state === 'frozen';
     const logo = this.getAttribute('logo') || '';
@@ -45,17 +47,17 @@ class PaymentCard extends HTMLElement {
 
     if (logoHeight && logoHeight > 126) {
       console.warn(
-        `[mui-payment-card] The logo height (${logoHeight}px) exceeds the recommended maximum of 126px. This may affect vertical alignment or visual consistency.`,
+        `[mui-smart-card] The logo height (${logoHeight}px) exceeds the recommended maximum of 126px. This may affect vertical alignment or visual consistency.`,
       );
     }
 
     let cardClass = 'card';
     let surfaceStyle = '';
 
-    if (variant === 'virtual') {
-      cardClass += ' virtual';
+    if (variant === 'animated') {
+      cardClass += ' animated';
     } else {
-      cardClass += ' physical';
+      cardClass += ' plain';
     }
 
     if (background) {
@@ -63,30 +65,40 @@ class PaymentCard extends HTMLElement {
     } else if (backgroundImage) {
       surfaceStyle = `background-image: url(${backgroundImage}); background-size: cover; background-position: center;`;
     } else {
-      if (variant === 'virtual') {
+      if (variant === 'animated') {
         surfaceStyle =
           'background-image: url(./images/buttercup.png); background-size: cover; background-position: center;';
-      } else if (variant === 'physical') {
+      } else if (variant === 'plain') {
         surfaceStyle =
           'background: linear-gradient(180deg, var(--grey-200) 0%, var(--white) 100%);';
       }
     }
 
-    const providerLogos = {
-      visa: './images/visa.svg',
-      mastercard: './images/mastercard.svg',
-    };
-
-    const providerLogoSrc =
-      providerLogos[provider.toLowerCase()] || providerLogos['visa'];
+    let partnerLogoSrc =
+      typeof partner === 'string' &&
+      (partner.startsWith('/') ||
+        partner.startsWith('./') ||
+        partner.endsWith('.svg'))
+        ? partner
+        : '';
 
     this.shadowRoot.innerHTML = /*html*/ `
       <style>
         @keyframes cardAnimation {
+          0% {
+            background-size: 400px auto;
+            background-position-x: 0%;
+            background-position-y: 0%;
+          }
           60% {
             background-size: 400px auto;
             background-position-x: 60%;
             background-position-y: 60%;
+          }
+          100% {
+            background-size: 400px auto;
+            background-position-x: 0%;
+            background-position-y: 0%;
           }
         }
 
@@ -106,31 +118,12 @@ class PaymentCard extends HTMLElement {
             0 4px 20px rgb(0 0 0 / 12%), 0 12px 28px rgb(0 0 0 / 12%);
         }
 
-        img { filter: drop-shadow(0px 1px 0px var(--white-opacity-60));}
-
         .card-top {
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
           padding: calc(var(--space-300) + var(--space-025));
           padding-bottom: 0;
-        }
-
-        /* Type */
-        /* =========================================== */
-        .type {
-          font-size: var(--text-font-size-xs);
-          line-height: var(--text-line-height-xs);
-          text-transform: uppercase;
-          letter-spacing: var(--space-025);
-          font-weight: var(--font-weight-medium);
-          color: var(--black);
-        }
-        @media (min-width: 550px) {
-          .type {
-            font-size: var(--text-font-size-s);
-            line-height: var(--text-line-height-s);
-         }    
         }
 
         /* Company */
@@ -160,6 +153,59 @@ class PaymentCard extends HTMLElement {
           }   
         }
 
+        /* Invert Logic */
+        /* =========================================== */
+        .type,
+        .card-number::part(display) {
+          color: ${invert ? 'var(--white)' : 'var(--black)'};
+          text-shadow: ${
+            invert
+              ? '0 0px 8px rgb(0 0 0 / 12%);'
+              : '0 0px 8px rgb(0 0 0 / 12%);'
+          };
+        }
+
+        img { 
+          filter: ${
+            invert
+              ? 'drop-shadow(0px 1px 0px var(--white-opacity-60))'
+              : 'drop-shadow(0px 1px 0px var(--white-opacity-60))'
+          };
+        }
+
+
+        .inner {
+          box-shadow: ${
+            invert
+              ? 'inset 0 1px 0 0 rgb(255 255 255 / 20%), 0 1px 0 0 rgb(0 0 0 / 10%)'
+              : 'inset 0 1px 0 0 rgb(255 255 255 / 60%), 0 1px 0 0 rgb(0 0 0 / 40%)'
+          };
+        }
+
+        .card.animated .inner::after {
+          background: linear-gradient(${
+            invert
+              ? '120deg, rgb(255 255 255 / 2%) 30%, rgb(255 255 255 / 8%) 40%, rgb(255 255 255 / 4%) 40%'
+              : '120deg, rgb(255 255 255 / 2%) 30%, rgb(255 255 255 / 25%) 40%, rgb(255 255 255 / 8%) 40%'
+          });
+        }
+
+        /* Type */
+        /* =========================================== */
+        .type {
+          font-size: var(--text-font-size-xs);
+          line-height: var(--text-line-height-xs);
+          text-transform: uppercase;
+          letter-spacing: var(--space-025);
+          font-weight: var(--font-weight-medium);
+        }
+        @media (min-width: 550px) {
+          .type {
+            font-size: var(--text-font-size-s);
+            line-height: var(--text-line-height-s);
+         }    
+        }
+
         /* Card Number */
         /* =========================================== */
         .card-number {
@@ -169,13 +215,10 @@ class PaymentCard extends HTMLElement {
           z-index: 1;
         }
 
-
         .card-number::part(display) {
           display: flex;
           gap: var(--space-100);
-          text-shadow: 0 0px 8px rgb(0 0 0 / 12%);
           box-sizing: border-box;
-          color: var(--black);
           font-size: var(--text-font-size-xs);
           line-height: var(--text-line-height-xs);
           font-weight: var(--font-weight-medium);
@@ -190,10 +233,9 @@ class PaymentCard extends HTMLElement {
 
         /* Provider */
         /* =========================================== */
-        .card-provider {
-          max-width: 81px;
+        .card-partner {
           height: auto;
-          width: 23%;
+          width: auto;
           display: flex;
           justify-content: end;
           align-items: end;
@@ -203,8 +245,7 @@ class PaymentCard extends HTMLElement {
           z-index: 1;
         }
 
-        .card-provider img {
-          max-width: 81px;
+        .card-partner img {
           width: 100%;
           height: auto;
         }
@@ -228,29 +269,30 @@ class PaymentCard extends HTMLElement {
         .inner {
           display: grid;
           grid-template-rows: 1fr auto;
-          box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 90%), 0 1px 0 0 rgb(0 0 0 / 20%);
           border-radius: var(--radius-300);
         }
 
         /* Variant - Phyiscal */
         /* =========================================== */
-        .card.physical {
+        .card.plain {
           
         }
 
         /* Variant - Virtual */
         /* =========================================== */
-        .card.virtual .inner {
-          background-size: 400px;
+        .card.animated .inner {
+          background-size: 400px auto;
           animation-name: cardAnimation;
           animation-duration: 10s;
-          animation-iteration-count: infinite;
           transform: translateZ(0);
           color: black;
           position: relative;
           background-image: url("./images/buttercup.png");
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+          animation-timing-function: ease-in-out;
         }
-        .card.virtual .inner::before {
+        .card.animated .inner::before {
           content: "";
           width: 100%;
           height: 100%;
@@ -259,17 +301,11 @@ class PaymentCard extends HTMLElement {
           border-radius: 16px;
         }
 
-        .card.virtual .inner::after {
+        .card.animated .inner::after {
           content: "";
           width: 100%;
           height: 100%;
           border-radius: 16px;
-          background: linear-gradient(
-              120deg,
-              rgb(255 255 255 / 2%) 30%,
-              rgb(255 255 255 / 25%) 40%,
-              rgb(255 255 255 / 8%) 40%
-            );
           background-size: 150% 150%;
           animation: cardGradient 45s ease-in-out infinite;
           transform: translateZ(0);
@@ -316,7 +352,7 @@ class PaymentCard extends HTMLElement {
 
         <div class="inner" style="${surfaceStyle}">
           <div class="card-top">
-            ${type ? `<span class="type">${type}</span>` : ''}
+            <span class="type">${type ? `${type}` : ''}</span>
             ${
               logo
                 ? `
@@ -329,8 +365,8 @@ class PaymentCard extends HTMLElement {
 
           <mui-body class="card-number"><span>••••</span><span>${number}</span></mui-body>
 
-          <div class="card-provider">
-            <img src="${providerLogoSrc}" alt="${provider} logo">
+          <div class="card-partner">
+            <img src="${partnerLogoSrc}" alt="${partner} logo">
           </div>
         </div>
 
@@ -339,4 +375,4 @@ class PaymentCard extends HTMLElement {
   }
 }
 
-customElements.define('mui-payment-card', PaymentCard);
+customElements.define('mui-smart-card', SmartCard);
