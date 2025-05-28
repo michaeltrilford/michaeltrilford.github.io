@@ -115,12 +115,13 @@ class compWallet extends HTMLElement {
 
           <mui-v-stack alignX="stretch" slot="body" style="max-width: 365px; margin: 0 auto; padding-top: var(--space-700); padding-bottom: var(--space-700)">
             <mui-smart-card
-              variant="virtual"
-              provider="visa"
+              variant="animated"
+              partner="./images/networks/visa.svg"
               type="Debit"
               number="1234"
-              logo="./images/mui-card-black.svg"
+              logo="./images/card/mui.svg"
               logo-height="100"
+              bg-image="./images/mesh/snowy-mint.png"
             >
             </mui-smart-card>
 

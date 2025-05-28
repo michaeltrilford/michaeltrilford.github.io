@@ -40,7 +40,7 @@ class storySmartCard extends HTMLElement {
       {
         name: 'variant',
         type: 'string',
-        options: 'Plain, Animated',
+        options: 'plain, animated',
         default: '',
         description: '',
       },
@@ -173,6 +173,7 @@ class storySmartCard extends HTMLElement {
             variant="animated"
             number="1234"
             type="Debit"
+            bg-image="./images/mesh/buttercup.png"
             logo="./images/card/image-220.png"
             partner="./images/networks/visa.svg"
           >
@@ -182,6 +183,7 @@ class storySmartCard extends HTMLElement {
             &lt;mui-smart-card<br>
             &nbsp;&nbsp;number="1234"<br>
             &nbsp;&nbsp;type="Debit"<br>
+            &nbsp;&nbsp;bg-image="./images/mesh/buttercup.png"<br>
             &nbsp;&nbsp;logo="./images/card/image-220.png"<br>
             &nbsp;&nbsp;partner="./images/networks/visa.svg"<br>
             &nbsp;&nbsp;variant="animated"<br>
@@ -211,6 +213,7 @@ class storySmartCard extends HTMLElement {
               number="1234"
               logo="./images/card/guides.svg"
               logo-height="80"
+              bg-image="./images/mesh/buttercup.png"
             >
             </mui-smart-card>
             <mui-smart-card
@@ -229,6 +232,7 @@ class storySmartCard extends HTMLElement {
               number="1234"
               logo="./images/card/mui.svg"
               logo-height="100"
+              bg-image="./images/mesh/buttercup.png"
             >
             </mui-smart-card>
           </mui-v-stack>

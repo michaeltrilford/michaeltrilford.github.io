@@ -60,18 +60,19 @@ class SmartCard extends HTMLElement {
       cardClass += ' plain';
     }
 
-    if (background) {
+    if (backgroundImage) {
+      surfaceStyle = `
+        background-image: url(${backgroundImage});
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      `;
+    } else if (background) {
       surfaceStyle = `background: ${background};`;
-    } else if (backgroundImage) {
-      surfaceStyle = `background-image: url(${backgroundImage}); background-size: cover; background-position: center;`;
     } else {
-      if (variant === 'animated') {
-        surfaceStyle =
-          'background-image: url(./images/buttercup.png); background-size: cover; background-position: center;';
-      } else if (variant === 'plain') {
-        surfaceStyle =
-          'background: linear-gradient(180deg, var(--grey-200) 0%, var(--white) 100%);';
-      }
+      surfaceStyle = `
+        background: linear-gradient(180deg, var(--grey-200) 0%, var(--white) 100%);
+      `;
     }
 
     let partnerLogoSrc =
