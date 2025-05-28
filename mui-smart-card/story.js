@@ -398,7 +398,7 @@ class storySmartCard extends HTMLElement {
           <mui-smart-card
             invert
             variant="animated"
-            partner="./images/alliance/oneworld/emerald.svg"
+            partner="./images/alliance/emerald.svg"
             type="Diamond"
             number="1234"
             bg-image="./images/jal/diamond.png"
@@ -406,7 +406,7 @@ class storySmartCard extends HTMLElement {
           </mui-smart-card>
           <mui-smart-card
             variant="animated"
-            partner="./images/alliance/oneworld/emerald.svg"
+            partner="./images/alliance/emerald.svg"
             type="Premier"
             number="1234"
             bg-image="./images/jal/premier.png"
@@ -414,7 +414,7 @@ class storySmartCard extends HTMLElement {
           </mui-smart-card>
           <mui-smart-card
             variant="animated"
-            partner="./images/alliance/oneworld/sapphire.svg"
+            partner="./images/alliance/sapphire.svg"
             type="Sapphire"
             number="1234"
             bg-image="./images/jal/sapphire.png"
@@ -422,7 +422,7 @@ class storySmartCard extends HTMLElement {
           </mui-smart-card>
           <mui-smart-card
             variant="animated"
-            partner="./images/alliance/oneworld/ruby.svg"
+            partner="./images/alliance/ruby.svg"
             type="Crystal"
             number="1234"
             bg-image="./images/jal/crystal.png"
@@ -431,7 +431,7 @@ class storySmartCard extends HTMLElement {
           <mui-smart-card
             invert
             variant="plain"
-            partner="./images/alliance/oneworld/emerald.svg"
+            partner="./images/alliance/emerald.svg"
             type="Diamond"
             number="1234"
             bg-image="./images/jal/diamond.png"
@@ -439,7 +439,7 @@ class storySmartCard extends HTMLElement {
           </mui-smart-card>
           <mui-smart-card
             variant="plain"
-            partner="./images/alliance/oneworld/emerald.svg"
+            partner="./images/alliance/emerald.svg"
             type="Premier"
             number="1234"
             bg-image="./images/jal/premier.png"
@@ -447,7 +447,7 @@ class storySmartCard extends HTMLElement {
           </mui-smart-card>
           <mui-smart-card
             variant="plain"
-            partner="./images/alliance/oneworld/sapphire.svg"
+            partner="./images/alliance/sapphire.svg"
             type="Sapphire"
             number="1234"
             bg-image="./images/jal/sapphire.png"
@@ -455,7 +455,7 @@ class storySmartCard extends HTMLElement {
           </mui-smart-card>
           <mui-smart-card
             variant="plain"
-            partner="./images/alliance/oneworld/ruby.svg"
+            partner="./images/alliance/ruby.svg"
             type="Crystal"
             number="1234"
             bg-image="./images/jal/crystal.png"
@@ -469,7 +469,7 @@ class storySmartCard extends HTMLElement {
             &lt;mui-smart-card<br>
             &nbsp;&nbsp;invert<br>
             &nbsp;&nbsp;type="Diamond"<br>
-            &nbsp;&nbsp;partner="./images/alliance/oneworld/emerald.svg"<br>
+            &nbsp;&nbsp;partner="./images/alliance/emerald.svg"<br>
             &nbsp;&nbsp;bg-image="./images/jal/diamond.png"<br>
             &nbsp;&nbsp;...<br>
             &gt;
@@ -483,7 +483,7 @@ class storySmartCard extends HTMLElement {
             <br>
             &lt;mui-smart-card<br>
             &nbsp;&nbsp;type="Premier"<br>
-            &nbsp;&nbsp;partner="./images/alliance/oneworld/emerald.svg"<br>
+            &nbsp;&nbsp;partner="./images/alliance/emerald.svg"<br>
             &nbsp;&nbsp;bg-image="./images/jal/premier.png"<br>
             &nbsp;&nbsp;...<br>
             &gt;<br>
@@ -496,7 +496,7 @@ class storySmartCard extends HTMLElement {
             <br>
             &lt;mui-smart-card<br>
             &nbsp;&nbsp;type="Sapphire"<br>
-            &nbsp;&nbsp;partner="./images/alliance/oneworld/sapphire.svg"<br>
+            &nbsp;&nbsp;partner="./images/alliance/sapphire.svg"<br>
             &nbsp;&nbsp;bg-image="./images/jal/sapphire.png"<br>
             &nbsp;&nbsp;...<br>
             &gt;
@@ -510,7 +510,7 @@ class storySmartCard extends HTMLElement {
             <br>
             &lt;mui-smart-card<br>
             &nbsp;&nbsp;type="Crystal"<br>
-            &nbsp;&nbsp;partner="./images/alliance/oneworld/ruby.svg"<br>
+            &nbsp;&nbsp;partner="./images/alliance/ruby.svg"<br>
             &nbsp;&nbsp;bg-image="./images/jal/crystal.png"<br>
             &nbsp;&nbsp;...<br>
             &gt;<br>
