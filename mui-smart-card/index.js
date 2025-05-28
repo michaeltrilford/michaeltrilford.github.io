@@ -71,7 +71,11 @@ class SmartCard extends HTMLElement {
       surfaceStyle = `background: ${background};`;
     } else {
       surfaceStyle = `
-        background: linear-gradient(180deg, var(--grey-200) 0%, var(--white) 100%);
+        background: ${
+          invert
+            ? 'linear-gradient(180deg, var(--grey-900) 0%, var(--black) 100%)'
+            : 'linear-gradient(180deg, var(--grey-200) 0%, var(--white) 100%)'
+        };
       `;
     }
 
@@ -85,7 +89,22 @@ class SmartCard extends HTMLElement {
 
     this.shadowRoot.innerHTML = /*html*/ `
       <style>
-        @keyframes cardAnimation {
+        @keyframes cardAnimationMobile {
+          0% {
+            background-size: 101.265823% auto;
+            background-position: center;
+          }
+          60% {
+            background-size: 106.329114% auto;
+            background-position: center;
+          }
+          100% {
+            background-size: 101.265823% auto;
+            background-position: center;
+          }
+        }
+
+        @keyframes cardAnimationDesktop {
           0% {
             background-size: 400px auto;
             background-position: center;
@@ -144,7 +163,7 @@ class SmartCard extends HTMLElement {
           height: ${logoHeight ? `calc(${logoHeight}px / 1.5)` : 'auto'};
         }
 
-        @media (min-width: 550px) {
+        @media (min-width: 500px) {
           .logo img {
             width: auto;
             height: ${logoHeight ? `${logoHeight}px` : 'auto'};
@@ -159,14 +178,14 @@ class SmartCard extends HTMLElement {
           text-shadow: ${
             invert
               ? '0 0px 8px rgb(0 0 0 / 12%);'
-              : '0 0px 8px rgb(0 0 0 / 12%);'
+              : '0 0px 8px rgb(255 255 255 / 12%);'
           };
         }
 
         img { 
           filter: ${
             invert
-              ? 'drop-shadow(0px 1px 0px var(--white-opacity-60))'
+              ? 'drop-shadow(0px 1px 0px var(--black-opacity-60))'
               : 'drop-shadow(0px 1px 0px var(--white-opacity-60))'
           };
         }
@@ -197,7 +216,7 @@ class SmartCard extends HTMLElement {
           letter-spacing: var(--space-025);
           font-weight: var(--font-weight-medium);
         }
-        @media (min-width: 550px) {
+        @media (min-width: 500px) {
           .type {
             font-size: var(--text-font-size-s);
             line-height: var(--text-line-height-s);
@@ -222,7 +241,7 @@ class SmartCard extends HTMLElement {
           font-weight: var(--font-weight-medium);
         }
 
-        @media (min-width: 550px) {
+        @media (min-width: 500px) {
           .card-number::part(display) {
             font-size: var(--text-font-size-s);
             line-height: var(--text-line-height-s);
@@ -244,8 +263,14 @@ class SmartCard extends HTMLElement {
         }
 
         .card-partner img {
-          width: 100%;
+          width: calc(100% / 1.5);
           height: auto;
+        }
+
+        @media (min-width: 500px) {
+          .card-partner img {
+            width: 100%;
+          } 
         }
 
         /* Variant - Base */
@@ -270,26 +295,24 @@ class SmartCard extends HTMLElement {
           border-radius: var(--radius-300);
         }
 
-        /* Variant - Phyiscal */
-        /* =========================================== */
-        .card.plain {
-          
-        }
-
         /* Variant - Virtual */
         /* =========================================== */
         .card.animated .inner {
-          background-size: 400px auto;
-          animation-name: cardAnimation;
+          animation-name: cardAnimationMobile;
           animation-duration: 10s;
           transform: translateZ(0);
-          color: black;
           position: relative;
-          background-image: url("./images/buttercup.png");
           animation-iteration-count: infinite;
           animation-direction: alternate;
           animation-timing-function: ease-in-out;
         }
+
+        @media (min-width: 500px) {
+          .card.animated .inner {
+            animation-name: cardAnimationDesktop;
+          }
+        }
+
         .card.animated .inner::before {
           content: "";
           width: 100%;

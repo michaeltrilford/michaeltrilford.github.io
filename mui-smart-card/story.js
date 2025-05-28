@@ -144,12 +144,12 @@ class storySmartCard extends HTMLElement {
           </mui-responsive>
         </spec-card>
 
-        <story-card title="Plain">
+        <story-card title="Plain / Inverted">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
           <mui-smart-card
             type="Debit"
             number="1234"
-            partner="./images/networks/visa.svg"
+            partner="./images/networks/visa-black.svg"
             logo="./images/card/image-220.png"
             variant="plain"
           >
@@ -160,7 +160,32 @@ class storySmartCard extends HTMLElement {
             &nbsp;&nbsp;number="1234"<br>
             &nbsp;&nbsp;type="Debit"<br>
             &nbsp;&nbsp;logo="./images/card/image-220.png"<br>
-            &nbsp;&nbsp;partner="./images/networks/visa.svg"<br>
+            &nbsp;&nbsp;partner="./images/networks/visa-black.svg"<br>
+            &nbsp;&nbsp;variant="plain"<br>
+            &gt;<br>
+            &lt;/mui-smart-card&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card title="Plain / Inverted">
+          <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
+          <mui-smart-card
+            invert
+            type="Debit"
+            number="1234"
+            partner="./images/networks/visa-white.svg"
+            logo="./images/card/image-220.png"
+            variant="plain"
+          >
+          </mui-smart-card>
+          </mui-v-stack>
+          <mui-code slot="footer">
+            &lt;mui-smart-card<br>
+            &nbsp;&nbsp;inverted<br>
+            &nbsp;&nbsp;number="1234"<br>
+            &nbsp;&nbsp;type="Debit"<br>
+            &nbsp;&nbsp;logo="./images/card/image-220.png"<br>
+            &nbsp;&nbsp;partner="./images/networks/visa-white.svg"<br>
             &nbsp;&nbsp;variant="plain"<br>
             &gt;<br>
             &lt;/mui-smart-card&gt;
@@ -175,7 +200,7 @@ class storySmartCard extends HTMLElement {
             type="Debit"
             bg-image="./images/mesh/buttercup.png"
             logo="./images/card/image-220.png"
-            partner="./images/networks/visa.svg"
+            partner="./images/networks/visa-black.svg"
           >
           </mui-smart-card>
           </mui-v-stack>
@@ -185,7 +210,7 @@ class storySmartCard extends HTMLElement {
             &nbsp;&nbsp;type="Debit"<br>
             &nbsp;&nbsp;bg-image="./images/mesh/buttercup.png"<br>
             &nbsp;&nbsp;logo="./images/card/image-220.png"<br>
-            &nbsp;&nbsp;partner="./images/networks/visa.svg"<br>
+            &nbsp;&nbsp;partner="./images/networks/visa-black.svg"<br>
             &nbsp;&nbsp;variant="animated"<br>
             &gt;<br>
             &lt;/mui-smart-card&gt;
@@ -195,11 +220,16 @@ class storySmartCard extends HTMLElement {
         <story-card 
           title="Logo" 
           description="The logo area, positioned at the top-right of the card, has a maximum size of 220×126px and scales down responsively on smaller devices." 
-          usage="Import the logo using the logo property; Set the logo-height to an appropriate size no larger than 126px">
+          usage="
+            Import the logo using the logo property; 
+            Set the logo-height to an appropriate size no larger than 126px; 
+            If your SVG is at intended height, then logo-height isn't required; 
+            When using a 2x/3x PNGs and resize with logo-height
+          ">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
             <mui-smart-card
               variant="plain"
-              partner="./images/networks/visa.svg"
+              partner="./images/networks/visa-black.svg"
               type="Debit"
               number="1234"
               logo="./images/card/guides.svg"
@@ -208,7 +238,7 @@ class storySmartCard extends HTMLElement {
             </mui-smart-card>
             <mui-smart-card
               variant="animated"
-              partner="./images/networks/visa.svg"
+              partner="./images/networks/visa-black.svg"
               type="Debit"
               number="1234"
               logo="./images/card/guides.svg"
@@ -231,7 +261,7 @@ class storySmartCard extends HTMLElement {
         <story-card title="Frozen">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
             <mui-smart-card
-              partner="./images/networks/visa.svg"
+              partner="./images/networks/visa-black.svg"
               number="1234"
               type="Debit"
               logo="./images/card/mui.svg"
@@ -254,7 +284,7 @@ class storySmartCard extends HTMLElement {
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
             <mui-smart-card
               variant="plain"
-              partner="./images/networks/visa.svg"
+              partner="./images/networks/visa-black.svg"
               type="Debit"
               number="1234"
               bg-image="./images/card/image-395.png"
@@ -262,7 +292,7 @@ class storySmartCard extends HTMLElement {
             </mui-smart-card>
             <mui-smart-card
               variant="animated"
-              partner="./images/networks/visa.svg"
+              partner="./images/networks/visa-black.svg"
               type="Debit"
               number="1234"
               bg-image="./images/card/image-395.png"
@@ -298,7 +328,7 @@ class storySmartCard extends HTMLElement {
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
             <mui-smart-card
               variant="plain"
-              partner="./images/networks/visa.svg"
+              partner="./images/networks/visa-black.svg"
               type="Debit"
               number="1234"
               logo="./images/card/guides.svg"
@@ -308,7 +338,7 @@ class storySmartCard extends HTMLElement {
             </mui-smart-card>
             <mui-smart-card
               variant="animated"
-              partner="./images/networks/visa.svg"
+              partner="./images/networks/visa-black.svg"
               type="Debit"
               number="1234"
               logo="./images/card/guides.svg"
