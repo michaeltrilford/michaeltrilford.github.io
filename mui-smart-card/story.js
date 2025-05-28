@@ -216,25 +216,6 @@ class storySmartCard extends HTMLElement {
               bg-image="./images/mesh/buttercup.png"
             >
             </mui-smart-card>
-            <mui-smart-card
-              variant="plain"
-              partner="./images/networks/visa.svg"
-              type="Debit"
-              number="1234"
-              logo="./images/card/mui.svg"
-              logo-height="100"
-            >
-            </mui-smart-card>
-            <mui-smart-card
-              variant="animated"
-              partner="./images/networks/visa.svg"
-              type="Debit"
-              number="1234"
-              logo="./images/card/mui.svg"
-              logo-height="100"
-              bg-image="./images/mesh/buttercup.png"
-            >
-            </mui-smart-card>
           </mui-v-stack>
             <mui-code slot="footer">
               /* Max-Height: 126px */<br>
@@ -242,13 +223,6 @@ class storySmartCard extends HTMLElement {
               &lt;mui-smart-card<br>
               &nbsp;&nbsp;logo="./images/card/guides.svg"<br>
               &nbsp;&nbsp;logo-height="80"<br>
-              &nbsp;&nbsp;...<br>
-              &gt;&lt;/mui-smart-card&gt;
-              <br>
-              <br>
-              &lt;mui-smart-card<br>
-              &nbsp;&nbsp;logo="./images/card/mui.svg"<br>
-              &nbsp;&nbsp;logo-height="100"<br>
               &nbsp;&nbsp;...<br>
               &gt;&lt;/mui-smart-card&gt;
             </mui-code>
