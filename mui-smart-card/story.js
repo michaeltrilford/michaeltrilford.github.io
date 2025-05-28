@@ -74,7 +74,7 @@ class storySmartCard extends HTMLElement {
         description: 'Add a logo to the card',
       },
       {
-        name: 'invert',
+        name: 'inverted',
         type: 'boolean',
         options: '',
         default: '',
@@ -144,7 +144,7 @@ class storySmartCard extends HTMLElement {
           </mui-responsive>
         </spec-card>
 
-        <story-card title="Plain / Inverted">
+        <story-card title="Plain">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
           <mui-smart-card
             type="Debit"
@@ -170,7 +170,7 @@ class storySmartCard extends HTMLElement {
         <story-card title="Plain / Inverted">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
           <mui-smart-card
-            invert
+            inverted
             type="Debit"
             number="1234"
             partner="./images/networks/visa-white.svg"
@@ -400,7 +400,7 @@ class storySmartCard extends HTMLElement {
         <story-card title="Reward Cards" description="Utilising the provided props to create bespoke digital cards.">
           <mui-v-stack alignX="center" slot="body" style="padding-top: var(--space-400); padding-bottom: var(--space-400);">
           <mui-smart-card
-            invert
+            inverted
             variant="animated"
             partner="./images/alliance/emerald.svg"
             type="Diamond"
@@ -433,7 +433,7 @@ class storySmartCard extends HTMLElement {
           >
           </mui-smart-card>
           <mui-smart-card
-            invert
+            inverted
             variant="plain"
             partner="./images/alliance/emerald.svg"
             type="Diamond"
@@ -471,7 +471,7 @@ class storySmartCard extends HTMLElement {
             /* ======================== */<br>
             <br>
             &lt;mui-smart-card<br>
-            &nbsp;&nbsp;invert<br>
+            &nbsp;&nbsp;inverted<br>
             &nbsp;&nbsp;type="Diamond"<br>
             &nbsp;&nbsp;partner="./images/alliance/emerald.svg"<br>
             &nbsp;&nbsp;bg-image="./images/jal/diamond.png"<br>

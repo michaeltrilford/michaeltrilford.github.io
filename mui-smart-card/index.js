@@ -11,7 +11,7 @@ class SmartCard extends HTMLElement {
       'logo-height',
       'bg-color',
       'bg-image',
-      'invert',
+      'inverted',
     ];
   }
 
@@ -34,7 +34,7 @@ class SmartCard extends HTMLElement {
     const background = this.getAttribute('bg-color');
     const backgroundImage = this.getAttribute('bg-image');
     const variant = this.getAttribute('variant') || 'plain';
-    const invert = this.hasAttribute('invert');
+    const inverted = this.hasAttribute('inverted');
     const partner = this.getAttribute('partner') || 'visa';
     const type = this.getAttribute('type') || '';
     const isFrozen = state === 'frozen';
@@ -72,7 +72,7 @@ class SmartCard extends HTMLElement {
     } else {
       surfaceStyle = `
         background: ${
-          invert
+          inverted
             ? 'linear-gradient(180deg, var(--grey-900) 0%, var(--black) 100%)'
             : 'linear-gradient(180deg, var(--grey-200) 0%, var(--white) 100%)'
         };
@@ -174,9 +174,9 @@ class SmartCard extends HTMLElement {
         /* =========================================== */
         .type,
         .card-number::part(display) {
-          color: ${invert ? 'var(--white)' : 'var(--black)'};
+          color: ${inverted ? 'var(--white)' : 'var(--black)'};
           text-shadow: ${
-            invert
+            inverted
               ? '0 0px 8px rgb(0 0 0 / 12%);'
               : '0 0px 8px rgb(255 255 255 / 12%);'
           };
@@ -184,7 +184,7 @@ class SmartCard extends HTMLElement {
 
         img { 
           filter: ${
-            invert
+            inverted
               ? 'drop-shadow(0px 1px 0px var(--black-opacity-60))'
               : 'drop-shadow(0px 1px 0px var(--white-opacity-60))'
           };
@@ -193,7 +193,7 @@ class SmartCard extends HTMLElement {
 
         .inner {
           box-shadow: ${
-            invert
+            inverted
               ? 'inset 0 1px 0 0 rgb(255 255 255 / 20%), 0 1px 0 0 rgb(0 0 0 / 10%)'
               : 'inset 0 1px 0 0 rgb(255 255 255 / 60%), 0 1px 0 0 rgb(0 0 0 / 40%)'
           };
@@ -201,7 +201,7 @@ class SmartCard extends HTMLElement {
 
         .card.animated .inner::after {
           background: linear-gradient(${
-            invert
+            inverted
               ? '120deg, rgb(255 255 255 / 2%) 30%, rgb(255 255 255 / 8%) 40%, rgb(255 255 255 / 4%) 40%'
               : '120deg, rgb(255 255 255 / 2%) 30%, rgb(255 255 255 / 25%) 40%, rgb(255 255 255 / 8%) 40%'
           });
