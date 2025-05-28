@@ -88,18 +88,15 @@ class SmartCard extends HTMLElement {
         @keyframes cardAnimation {
           0% {
             background-size: 400px auto;
-            background-position-x: 0%;
-            background-position-y: 0%;
+            background-position: center;
           }
           60% {
-            background-size: 400px auto;
-            background-position-x: 60%;
-            background-position-y: 60%;
+            background-size: 420px auto;
+            background-position: center;
           }
           100% {
             background-size: 400px auto;
-            background-position-x: 0%;
-            background-position-y: 0%;
+            background-position: center;
           }
         }
 
