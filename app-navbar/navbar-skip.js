@@ -50,10 +50,7 @@ class appNavbarSkip extends HTMLElement {
       }
 
       mui-button::part(background) {
-        background: var(--app-nav-background);
-      }
-      mui-button::part(color) {
-        color: var(--app-nav-link);
+        background: var(--surface-elevated-200);
       }
       mui-button::part(border) {
         border: none;

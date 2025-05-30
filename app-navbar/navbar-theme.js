@@ -10,8 +10,12 @@ class appNavbarTheme extends HTMLElement {
       :host {
         display: block;
         padding: var(--space-500);
-        background: var(--app-nav-background);
-        border-bottom: var(--stroke-size-100) var(--stroke-solid) var(--app-nav-border);
+        box-shadow: 0 1px 0 0 var(--border-color);
+        margin-bottom: -1px;
+        background: var(--surface-elevated-100);
+        z-index: 3;
+        position: sticky;
+        top: 0;
       }
 
       mui-grid::part(align-items) {

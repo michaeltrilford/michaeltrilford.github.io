@@ -11,8 +11,7 @@ class appNavbarMenu extends HTMLElement {
         display: block;
         overflow-x: hidden;
         overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-        background: var(--app-nav-background);
+        background: var(--surface-elevated-100);
         position: fixed;
         bottom: 0;
         top: 0;
@@ -32,7 +31,7 @@ class appNavbarMenu extends HTMLElement {
       }
       :host([desktop])::-webkit-scrollbar {
         display: none; 
-      } 
+      }
     `;
 
     // We provide the shadow root with some HTML
