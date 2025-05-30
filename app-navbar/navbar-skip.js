@@ -61,7 +61,7 @@ class appNavbarSkip extends HTMLElement {
     // We provide the shadow root with some HTML
     shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
-      <mui-button variant="primary" class="skip-to-main" role="button">Skip Nav</mui-button>
+      <mui-button variant="tertiary" class="skip-to-main" role="button">Skip Nav</mui-button>
     `;
 
     const skipButton = shadowRoot.querySelector('.skip-to-main');
