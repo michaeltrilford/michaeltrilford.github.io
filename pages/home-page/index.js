@@ -5,13 +5,13 @@ class HomePage extends HTMLElement {
 
     const intro = /*html*/ `
       <mui-body class="introduction" size="small" weight="bold">
-        An experimental UI built with native Web Components using Vanilla JS, HTML, and scoped CSS.
+        Michael UI is a personal design system built with native Web Components using Vanilla JS, HTML, and scoped CSS.
       </mui-body>
     `;
 
     const subcontent = /*html*/ `
       <mui-body class="subcontent" size="small" weight="bold">
-        The Web Components are based on past exploration at <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">codepen.io/trilm</mui-link>
+        Started as small experiments on <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">Codepen</mui-link>, it evolved into a system focused on clarity, reuse, and speed.
       </mui-body>
     `;
 
@@ -33,13 +33,6 @@ class HomePage extends HTMLElement {
       mui-responsive {
         display: grid;
         min-height: 100%;
-      }
-
-      .introduction {
-        max-width: 45ch;
-      }
-      .subcontent {
-        max-width: 35ch;
       }
 
       main {
