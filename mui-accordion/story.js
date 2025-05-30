@@ -113,6 +113,54 @@ class storyAccordion extends HTMLElement {
         </spec-card>
 
         <story-card 
+          title="Tab Scenarios: Button" 
+          description="The inline accordion is typically used within a block layout as a secondary UI element to a block element."
+        >
+          <div slot="body">
+            <mui-accordion-inline heading="Heading">
+              <div slot="detail">
+                <mui-button variant="primary">Focus on Open</mui-button>
+              </div>
+            </mui-accordion-inline>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-accordion-inline heading="Heading"&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-list as="ul" slot="detail"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;...
+            <br />
+            &nbsp;&nbsp;&lt;/mui-list&gt;
+            <br />
+            &lt;/mui-accordion-inline&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card 
+          title="Tab Scenarios: Link" 
+          description="The inline accordion is typically used within a block layout as a secondary UI element to a block element."
+        >
+          <div slot="body">
+            <mui-accordion-inline heading="Heading">
+              <div slot="detail">
+                <mui-link variant="primary">Focus on Open</mui-link>
+              </div>
+            </mui-accordion-inline>
+          </div>
+          <mui-code slot="footer">
+            &lt;mui-accordion-inline heading="Heading"&gt;
+            <br />
+            &nbsp;&nbsp;&lt;mui-list as="ul" slot="detail"&gt;
+            <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;...
+            <br />
+            &nbsp;&nbsp;&lt;/mui-list&gt;
+            <br />
+            &lt;/mui-accordion-inline&gt;
+          </mui-code>
+        </story-card>
+
+        <story-card 
           title="Accordion Inline" 
           description="The inline accordion is typically used within a block layout as a secondary UI element to a block element."
         >
@@ -122,6 +170,7 @@ class storyAccordion extends HTMLElement {
                 <mui-list-item>Coffee</mui-list-item>
                 <mui-list-item>Tea</mui-list-item>
                 <mui-list-item>Milk</mui-list-item>
+
               </mui-list>
             </mui-accordion-inline>
           </div>

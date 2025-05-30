@@ -128,7 +128,7 @@ class muiAccordionBlock extends HTMLElement {
     </div>
 
     <div id="${this.accordionId}" class="accordion-detail">
-      <div class="accordion-detail-inner size-${size}-detail">
+      <div class="accordion-detail-inner size-${size}-detail" inert>
         <slot name="detail">Insert Content</slot>
       </div>
     </div>
@@ -157,18 +157,34 @@ class muiAccordionBlock extends HTMLElement {
   }
 
   setOpen(state) {
+    const detailEl = this.detail;
+    const chevronEl = this.chevron;
+    const summaryEl = this.summary;
+
+    if (!detailEl || !chevronEl || !summaryEl) return;
+
+    const innerDetail = detailEl.querySelector('.accordion-detail-inner');
+
     if (state) {
-      this.detail.setAttribute('open', '');
-      this.chevron.setAttribute('open', '');
-      this.summary.setAttribute('aria-expanded', 'true');
+      detailEl.setAttribute('open', '');
+      chevronEl.setAttribute('open', '');
+      summaryEl.setAttribute('aria-expanded', 'true');
+
+      if (innerDetail) {
+        innerDetail.removeAttribute('inert');
+      }
 
       this.dispatchEvent(
         new CustomEvent('accordion-opened', { bubbles: true, composed: true }),
       );
     } else {
-      this.detail.removeAttribute('open');
-      this.chevron.removeAttribute('open');
-      this.summary.setAttribute('aria-expanded', 'false');
+      detailEl.removeAttribute('open');
+      chevronEl.removeAttribute('open');
+      summaryEl.setAttribute('aria-expanded', 'false');
+
+      if (innerDetail) {
+        innerDetail.setAttribute('inert', '');
+      }
     }
   }
 

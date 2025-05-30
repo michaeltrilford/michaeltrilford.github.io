@@ -6,10 +6,7 @@ class muiButtonGroup extends HTMLElement {
   }
   connectedCallback() {
     let html = /*html*/ `
-    <style>
-
-      @import url("./css/mui-reset.css");
-      
+    <style>      
       :host {
         display: flex;
         gap: var(--space-200);

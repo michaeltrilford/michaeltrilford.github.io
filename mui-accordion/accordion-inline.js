@@ -69,7 +69,7 @@ class muiAccordionInline extends HTMLElement {
     </div>
 
     <div class="accordion-detail">
-      <div class="accordion-detail-inner">
+      <div class="accordion-detail-inner" inert>
         <slot name="detail">Insert Content</slot>
       </div>
     </div>
@@ -91,10 +91,21 @@ class muiAccordionInline extends HTMLElement {
   }
 
   toggleAccordion() {
+    if (!this.detailEl || !this.chevronEl || !this.summaryEl) return;
+
     const isOpen = this.detailEl.hasAttribute('open');
     this.detailEl.toggleAttribute('open');
     this.chevronEl.toggleAttribute('open');
     this.summaryEl.setAttribute('aria-expanded', String(!isOpen));
+
+    const inner = this.detailEl.querySelector('.accordion-detail-inner');
+    if (inner) {
+      if (isOpen) {
+        inner.setAttribute('inert', '');
+      } else {
+        inner.removeAttribute('inert');
+      }
+    }
   }
 }
 

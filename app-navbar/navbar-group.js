@@ -12,39 +12,14 @@ class appNavbarGroup extends HTMLElement {
   connectedCallback() {
     let html = /*html*/ `
     <style>
-
-      :host {
-        display: block;
-        margin-top: var(--space-500); 
-      }
-
-      :host(:last-of-type) {
-        padding-bottom: 6rem;
-      }
-
-      span {
-        display: block;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: var(--app-nav-group-color);
-        padding: 0 var(--space-500);
-        font-size: var(--font-size-50);
-        
-      }
-      @media (min-width: 961px) {
-        :host {
-          margin-top: var(--space-500); 
-        }
-        span {
-          font-size: var(--font-size-50);
-        } 
-      }
-
+      :host { display: block; }
+      :host(:last-of-type) { padding-bottom: 6rem; }
     </style>
 
-    <span>${this.getAttribute('groupname')}</span>
-    <slot></slot>
-
+    <mui-accordion-block heading="${this.getAttribute('groupname')}">
+      <slot slot="detail"></slot>
+    </mui-accordion-block>
+    
     `;
 
     this.shadowRoot.innerHTML = html;

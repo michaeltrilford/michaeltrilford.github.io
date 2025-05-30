@@ -9,21 +9,13 @@ class MuiAddon extends HTMLElement {
   }
 
   connectedCallback() {
-    this.updateSlotState();
     this.render();
   }
 
   attributeChangedCallback(name, oldVal, newVal) {
     if (name === 'slot' && oldVal !== newVal) {
-      this.updateSlotState();
       this.render();
     }
-  }
-
-  updateSlotState() {
-    const slotAttr = this.getAttribute('slot');
-    this.isBefore = slotAttr === 'before';
-    this.isAfter = slotAttr === 'after';
   }
 
   render() {

@@ -28,7 +28,6 @@ class appNavbarLink extends HTMLElement {
       }
 
       mui-link:focus { 
-        background: var(--app-nav-link-focus);
         opacity: 1; 
       }
 
@@ -39,16 +38,13 @@ class appNavbarLink extends HTMLElement {
       } 
 
       /* Text Parts */
-      mui-link::part(color) {
-        color: var(--app-nav-link);
-      }
       mui-link::part(text-decoration) {
         text-decoration: none;
       }
 
       /* Spacing Parts */
       mui-link::part(padding) {
-        padding: var(--space-200) var(--space-500);
+        padding: var(--space-200) var(--space-000);
       }
       mui-link::part(margin) {
         margin: var(--space-000);
@@ -64,7 +60,7 @@ class appNavbarLink extends HTMLElement {
 
     </style>
 
-    <mui-link href="${this.getAttribute('link')}">${this.getAttribute(
+    <mui-link  href="${this.getAttribute('link')}">${this.getAttribute(
       'title',
     )}</mui-link> 
 
