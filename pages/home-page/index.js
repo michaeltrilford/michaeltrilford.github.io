@@ -5,13 +5,13 @@ class HomePage extends HTMLElement {
 
     const intro = /*html*/ `
       <mui-body class="introduction" size="small" weight="bold">
-        Michael UI is a personal design system built with native Web Components using Vanilla JS, HTML, and scoped CSS.
+        Michael UI is a design system built consists of native Web Components. It promotes clean, composable patterns that help others write less code.
       </mui-body>
     `;
 
     const subcontent = /*html*/ `
       <mui-body class="subcontent" size="small" weight="bold">
-        Started as small experiments on <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">Codepen</mui-link>, it evolved into a system focused on clarity, reuse, and speed.
+        Built with Vanilla JS, HTML, and scoped CSS, it started as small experiments on <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">Codepen</mui-link> and grew into a reliable system.
       </mui-body>
     `;
 
