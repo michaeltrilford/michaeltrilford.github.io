@@ -4,15 +4,7 @@ class HomePage extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' });
 
     const intro = /*html*/ `
-      <mui-body class="introduction" size="small" weight="bold">
-        Michael UI is a design system built consists of native Web Components. It promotes clean, composable patterns that help others write less code.
-      </mui-body>
-    `;
-
-    const subcontent = /*html*/ `
-      <mui-body class="subcontent" size="small" weight="bold">
-        Built with Vanilla JS, HTML, and scoped CSS, it started as small experiments on <mui-link target="_blank" href="https://codepen.io/trilm/" size="small" weight="bold">Codepen</mui-link> and grew into a reliable system.
-      </mui-body>
+      Muibook is the home of the Mui Design System <span style="opacity: 0.5;">(MichaelUI)</span>  — native Web Components with clean, composable patterns that help you write less code
     `;
 
     const styles = /*css*/ `
@@ -20,14 +12,6 @@ class HomePage extends HTMLElement {
         display: flex; 
         width: 100%;
         align-items: stretch;
-
-      }
-
-      @media (max-height: 932px) and (max-width: 430px) {
-        :host { 
-          padding-top: var(--space-800);
-          align-items: start;
-        }
       }
 
       mui-responsive {
@@ -82,7 +66,6 @@ class HomePage extends HTMLElement {
         justify-content: center;
       }
 
-      /* Grid */
       .logo {
         width: 70%;
       }
@@ -95,90 +78,53 @@ class HomePage extends HTMLElement {
 
       @media (min-width: 961px) {
         .logo-wrapper {
-          grid-column: 5 / 13;
+          grid-column: 4 / 13;
         }
       }
 
       @media (min-width: 1400px) {
         .logo-wrapper {
-          grid-column: 6 / 12;
-        }
-      }
-
-      @media (min-width: 961px) {
-        .actions {
-          grid-column: 1 / 5;
-          grid-row: 2 / 4;
-        }
-      }
-
-      @media (min-width: 1100px) {
-        .actions {
-          grid-row: initial;
+          grid-column: 5 / 12;
         }
       }
 
       @media (min-width: 961px) {
         .introduction {
-          grid-column: 5 / 13;
+          grid-column: 4 / 13;
           grid-row: 2 / 3;
         }
       }
 
       @media (min-width: 1100px) {
         .introduction {
-          grid-column: 5 / 9;
           grid-row: initial;
+          align-content: end;
         }
       }
 
       @media (min-width: 1400px) {
         .introduction {
-          grid-column: 6 / 9;
+          grid-column: 5 / 12;
         }
       }
-
-      @media (min-width: 961px) {
-        .subcontent {
-          grid-column: 5 / 13;
-          grid-row: 3 / 4;
-        }
-      }
-
-      @media (min-width: 1100px) {
-        .subcontent {
-          grid-column: 9 / 13;
-          grid-row: initial;
-        }
-      }
-
-      @media (min-width: 1400px) {
-        .subcontent {
-          grid-column: 9 / 12;
-        }
-      }
-
-      /* END - Grid */
 
       .logo,
-      .introduction,
-      .subcontent {
+      .introduction {
         margin-bottom: 0;
       }
 
-      .actions {
-        width: auto;
-        text-align: center;
-        margin-top: var(--space-200);
+      .alert {
+        position: fixed; 
+        top: var(--space-500); 
+        right: var(--space-500); 
+        width: calc(100% - (var(--space-500) * 2));
       }
+
       @media (min-width: 961px) {
-        .actions {
-          text-align: left;
-          margin-top: var(--space-000);
-        }
-        .actions__secondary {
-          margin-top: var(--space-200);
-          padding-left: var(--space-200);
+        .alert {
+          top: var(--space-500); 
+          right: var(--space-500); 
+          width: calc(100% - (26rem + (var(--space-500) * 2)));
         }
       }
 
@@ -188,6 +134,8 @@ class HomePage extends HTMLElement {
     shadowRoot.innerHTML = /*html*/ `
       <style>${styles}</style>
 
+      <mui-alert class="alert" variant="warning">This website is deprecated. Please visit <mui-link target="_blank" href="https://muibook.com/">muibook.com</mui-link> for the latest content.</mui-alert>
+
       <mui-container slot="main-content" center fluid>
         <mui-responsive breakpoint="960">
           
@@ -196,25 +144,18 @@ class HomePage extends HTMLElement {
             <div class="logo-wrapper">
               <mui-logo color="var(--app-logo-color)"></mui-logo>
             </div>
-
-            <mui-v-stack class="actions" space="var(--space-050)">
+            <mui-grid class="introduction" col="1fr auto" space="var(--space-600)">
+              <mui-body size="medium" weight="bold" style="max-width: 72ch;">
+                ${intro}
+              </mui-body> 
               <mui-link 
-                class="github-link" 
-                target="_blank" 
-                href="https://github.com/michaeltrilford/michaeltrilford.github.io"
+                href="https://muibook.com/"
                 variant="primary" 
                 rounded>
-                Fork on GitHub
+                Get Started
               </mui-link>
+            </mui-grid>
 
-              <mui-v-stack class="actions__secondary" space="var(--space-000)">
-                <mui-body size="small" weight="medium">
-                  <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
-                </mui-body>
-              </mui-v-stack>
-            </mui-v-stack>
-            ${intro}
-            ${subcontent}
           </main>
 
           <!-- Main content below -->
@@ -224,23 +165,15 @@ class HomePage extends HTMLElement {
                 <mui-logo-mobile color="var(--app-logo-color)"></mui-logo-mobile>
               </div>
               <mui-v-stack space="var(--space-500)" style="max-width: 31rem; padding-left: var(--space-300); padding-right: var(--space-300);">
-                ${intro}
-                ${subcontent}
+                <mui-body size="small" weight="bold">
+                  ${intro}
+                </mui-body> 
               </mui-v-stack>
-              <mui-v-stack class="actions" space="var(--space-300)">
-                <mui-link 
-                  class="github-link" 
-                  target="_blank" 
-                  href="https://github.com/michaeltrilford/michaeltrilford.github.io" 
-                  variant="primary">
-                  Fork on GitHub
-                </mui-link>
-                <mui-v-stack class="actions__secondary" space="var(--space-050)">
-                  <mui-body size="small" weight="medium">
-                    <mui-link target="_blank" href="https://michaeltrilford.co.nz">michaeltrilford.co.nz</mui-link>
-                  </mui-body>
-                </mui-v-stack>
-              </mui-v-stack>
+              <mui-link 
+                href="https://muibook.com/" 
+                variant="primary">
+                Get Started
+              </mui-link>
             </mui-v-stack>
           </main>
 

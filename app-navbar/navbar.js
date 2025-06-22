@@ -69,7 +69,7 @@ class appNavbar extends HTMLElement {
     `;
 
     const Home = /*html*/ `
-      <app-navbar-home  link="#/home" title="michael.ui"></app-navbar-home>
+      <app-navbar-home  link="https://muibook.com/" title="muibook.com"></app-navbar-home>
     `;
 
     const Theme = /*html*/ `
@@ -176,7 +176,7 @@ class appNavbar extends HTMLElement {
           <mui-icon-menu class="color-icon" slot="start"></mui-icon-menu>
           <mui-icon-close class="color-icon" slot="end"></mui-icon-close>
         </mui-icon-toggle>
-        <mui-link slot="home-link" data-close-menu link="#/home-page">michael.ui</mui-link>
+        <mui-link slot="home-link" data-close-menu link="https://muibook.com/">muibook.com</mui-link>
       </app-navbar-toggle>
     `;
 
